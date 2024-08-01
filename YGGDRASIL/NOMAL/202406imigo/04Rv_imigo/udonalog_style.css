@@ -133,3 +133,9 @@ p {
 .maintext{
     word-break: break-word;
     }
+
+.withyou {
+    width: 100%;
+    background-image: url('withyou.jpg');
+    background-color: rgba(255, 255, 255, 0.5);
+    }
