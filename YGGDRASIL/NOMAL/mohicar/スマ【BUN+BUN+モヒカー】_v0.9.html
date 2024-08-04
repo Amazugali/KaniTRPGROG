@@ -1,0 +1,958 @@
+<script type="text/javascript">
+<!--
+function ShowHide(chkElm){
+	chkStat = chkElm.checked;
+	target = document.getElementsByClassName(chkElm.value);
+	for( ii=0; ii<target.length; ii++ ){
+		classNames = target[ii].className.split(" ");
+		chkStat = chkElm.checked;
+		for( jj=0; jj<classNames.length; jj++ ){
+			elm = document.getElementById(classNames[jj]);
+			if( !elm  ){
+				continue;
+			}
+			chkStat &= elm.checked;
+		}
+		stat = chkStat ? "" : "none";
+		target[ii].style.display = stat;
+	}
+}
+-->
+</script>
+	<style>
+	body{ margin:0; padding:0 20px; background:#fff;}
+	table {
+		border-collapse: collapse;
+	}
+	td {
+		border: none;
+		padding: 4px;
+	}
+	#main{ margin-left:210px; }
+	#sub{
+		background:#fff;
+		font-size:85%;
+		width:200px; position:fixed; top:0; left:10px;
+		border-radius:0 0 8px 8px; border:1px solid #999; }
+	#subTitle{
+		background:#999; font-weight:bold; color:#fff; text-align:center;
+	}
+	#colFilter{ background:#fff; position:fixed; width:100%;}
+	#filter{ padding:5px; }
+	</style>
+	</head>
+<body><table border=0 id="main">
+<tr id="colFilter">
+<td nowrap width="100"><label><input type="checkbox" id="tab0" value="tab0" onclick="ShowHide(this)" checked>[メイン]</label></td>
+<td nowrap width="100"><label><input type="checkbox" id="tab1" value="tab1" onclick="ShowHide(this)" checked>[会場]</label></td>
+<td nowrap width="100"><label><input type="checkbox" id="tab2" value="tab2" onclick="ShowHide(this)" checked>[雑談]</label></td>
+<td nowrap width="100"><label><input type="checkbox" id="tab3" value="tab3" onclick="ShowHide(this)" checked>[見学席]</label></td>
+<td nowrap><label><input type="checkbox" id="tab4" value="tab4" onclick="ShowHide(this)" checked>[その他]</label></td>
+</tr>
+<tr>
+<td width="100"><BR></td><td width="100"><BR></td><td width="100"><BR></td><td width="100"><BR></td><td><BR></td></tr>
+
+<html xmlns='http://www.w3.org/1999/xhtml' lang='ja'>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+<title>スマ【BUN BUN モヒカー】</title>
+<style type="text/css">/*<![CDATA[*/
+body{ 
+}
+/*]]>*/</style>
+<link rel="stylesheet" href="user_ddntf_chatlog.css" type="text/css" />
+</head>
+<body>
+
+<tr class="tab0 char0"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#00aa00'><b>どどんとふ</b>：[2021/02/09 18:53 JST] (AIR) 「名もなきクエント人」がログインしました。</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：もうＡＡだと見づら過ぎるから諦めて画像にしました</font></br></td></tr>
+
+<tr class="tab0 char0"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#00aa00'><b>どどんとふ</b>：[2021/02/09 20:47 JST] (AIR) 「ゲルハムト」がログインしました。</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：さてコンディションと４ｄ６以上か、やっときますかね</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：2d6+2d6 HP　PP<br />DiceBot : (2D6+2D6) → 4[1,3]+7[2,5] → 11</font></br></td></tr>
+
+<tr class="tab3 char2"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#660000'><b>ゲルハムト</b>：がんばれー</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：うーん……</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：まあ余裕もある方だし振り直しとくか</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の因子Dを1消費（因子D：5→4）</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：2d6+2d6<br />DiceBot : (2D6+2D6) → 10[5,5]+6[3,3] → 16</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：これで</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』のHPを10回復（HP：5→15）</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』のPPが6増加（PP：16→22）</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の暴走率が6増加（暴走率：13→19）</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：暴走どうすっかな…普通に最低値でいいか　４Ｄで</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：4d6<br />DiceBot : (4D6) → 9[1,2,1,5] → 9</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：ひっく</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の暴走率が9増加（暴走率：19→28）</font></br></td></tr>
+
+<tr class="tab0 char0"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#00aa00'><b>どどんとふ</b>：[2021/02/09 20:53 JST] (AIR) 「アーロン」がログインしました。</font></br></td></tr>
+
+<tr class="tab3 char3"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#006600'><b>妹の『アデル』</b>：がんばれー</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：ラーメンの方も一緒に開いておこうかと思ったけどＢＧＭ問題とかあるしやめとこ</font></br></td></tr>
+
+<tr class="tab0 char4"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#000000'><b>GM</b>：【スネ夫が自慢話をするときに流れている曲】</font></br></td></tr>
+
+<tr class="tab3 char3"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#006600'><b>妹の『アデル』</b>：部室に投げた絵師のやつは表情差分もあってオススメだよお兄ちゃん</font></br></td></tr>
+
+<tr class="tab3 char2"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#660000'><b>ゲルハムト</b>：ラーメンのほうのBGM切れば…</font></br></td></tr>
+
+<tr class="tab3 char1"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#006600'><b>妹の『アロレイン』</b>：どこだっけ……</font></br></td></tr>
+
+<tr class="tab3 char1"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#006600'><b>妹の『アロレイン』</b>：ラーメンの方はユドナリリィは確か個別に音量変えれないとかどうとかじゃなかったっけ</font></br></td></tr>
+
+<tr class="tab3 char3"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#006600'><b>妹の『アデル』</b>：<u><a href='https://www.pixiv.net/artworks/22076726' target='_blank'>https://www.pixiv.net/artworks/22076726</a></u> <br />ブラウザ側の設定でミュートするとか</font></br></td></tr>
+
+<tr class="tab3 char1"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#006600'><b>妹の『アロレイン』</b>：これか、サンクス</font></br></td></tr>
+
+<tr class="tab0 char4"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#000000'><b>GM</b>：点呼開始！</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：準備完了！（1/1）<br />全員準備完了しましたっ！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：それでは、鋼鉄のユグドラシルシナリオ「BUN BUN モヒカー」を開始します</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：よろしくお願いします！</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：よろしくお願いします！</font></br></td></tr>
+
+<tr class="tab0 char4"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#000000'><b>GM</b>：【聞き慣れたメロディー】</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では、あなたは人通りの無い道を歩いています。</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：何かの用事の帰りかもしれないし、ただ散歩しているだけかもしれない。</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：今日は朝から特にトラブルも無く平和な日常を享受できています＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：探し人であるお兄ちゃんの特徴が書かれた首から吊り看板を下げ、肩にはプラカードを担ぎ人通りの多い方へと歩いています<br />「今日も日課の兄探し！今日こそは見つかると良いな～」<br />ちなみに特徴の部分も顔の部分も空白です＠</font></br></td></tr>
+
+<tr class="tab3 char3"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#006600'><b>妹の『アデル』</b>：こわい</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：吊り看板を首から下げ、だ</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：良いですね。とても有意義な日課です。</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：今日見つかるかもしれないし見つからないかもしれない。しかしその行為にはきっと意味があるはず。</font></br></td></tr>
+
+<tr class="tab3 char3"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#996633'><b>金魚鉢</b>：後から観返したらややこしそうだから名前の色変えとこう</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：あるある</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あなたは頑張ってお兄ちゃんを探して街を歩くでしょう。がんばれ！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では背後から走ってきた車が急カーブし、目の前で壁に激突します＠</font></br></td></tr>
+
+<tr class="tab0 char4"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#000000'><b>GM</b>：【エマージェンシー】</font></br></td></tr>
+
+<tr class="tab3 char4"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#000000'><b>GM</b>：ユドナリリィはむしろPL側で個別に音量調整するタイプですよ。</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「きゃっ！？」プラカードを取り落とし、尻餅を突きます＠</font></br></td></tr>
+
+<tr class="tab3 char3"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#000000'><b>金魚鉢</b>：そーなの！？</font></br></td></tr>
+
+<tr class="tab3 char1"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#006600'><b>妹の『アロレイン』</b>：そーなの！？</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あなたが驚いていると、車の中から満身創痍な状態の男が這い出てきます。</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>男</b>：「ぐっ…がはっ…！くっ、私としたことがハンドル操作を誤ってしまうとは…！」＠</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：どっかで見た事あるゥ～</font></br></td></tr>
+
+<tr class="tab3 char3"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#000000'><b>金魚鉢</b>：ＰＬがいじったら部屋全体の音量変わったような……</font></br></td></tr>
+
+<tr class="tab3 char4"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#000000'><b>GM</b>：再生/停止したら他の人のBGMも一緒に再生/停止するってことですね</font></br></td></tr>
+
+<tr class="tab3 char4"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#000000'><b>GM</b>：カットインでなく部屋自体にBGMが流れている感じなので</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：お尻を擦りながら立ち上がり、出てきた男を見るや否や驚愕します<br />「……お兄ちゃん？もしかしてお兄ちゃんなの？大丈夫！？」心配で駆け寄ります＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>男</b>：「お、お兄ちゃん…？いや、私は君の兄ではないが…」＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「チッ、即答かよ、兄じゃないならとっとと消えろ」唾を吐き捨てます＠</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あなたがそうした時、能力によるものか男の手元にベルトが出現し、あなたの腕に巻き付いた！＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「きゃあ！何するの！？お兄ちゃんでもない赤の他人のペットになった覚えは無いよ！？」外そうと試みます＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>男</b>：「そ、そうか！すまないそこの君！私の話を聞いてくれ！」</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ベルトは割と簡単に外れますね＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：外れるんかーい</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：べしっとベルトを地面に叩きつけます<br />「もー！兄でもないし人に紐付けようとするしその上話まで聞けって勝手過ぎるわ！ワタクシは兄上様探しと言う崇高な目的のために行かなきゃならないのに！」おこです＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>男</b>：「うう…君の邪魔をしてしまって申し訳なく思う。だが、私の能力が君を指し示しているんだ！君に託すべきなのだと！」</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そう言うと男はUSBメモリを取り出し、アロレインに押し付けるように渡す＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「えっ、なにこれ……ハッ、ま、まさか…お兄ちゃんの隠し撮りとか…！？」受け取ります＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>男</b>：「私の名前はカッティーニ・タックス。YDFの者だ」</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>タックス</b>：「実は仕事でとある重要機密を手にしたのだが、それをチーム世紀末の奴らに知られてしまってね…今、追われているというわけだ」</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：勝手に託すな</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>タックス</b>：「頼む！私の代わりにこれをYDFに届けてくれ！君ならできる！」＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「お兄ちゃんの画像じゃないの…えーＹＤＦに？ガードへのお届け物を私にしろって言うの？えー……」凄い嫌そうな顔をしますが少し考えます<br />（……待って、もしかしたらこの区域のＹＤＦにお兄ちゃんが居るかもしれない…つまりこれを口実にすればＹＤＦ内でもお兄ちゃん探しが出来る！？）<br />キュピーンと何かを閃いたかと思うと喜色満面の顔で<br />「やる！任せて！」＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>タックス</b>：「ありがとう…頼んだ…ぞ…」</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：タックスは気絶します＠</font></br></td></tr>
+
+<tr class="tab0 char0"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#00aa00'><b>どどんとふ</b>：[2021/02/09 21:23 JST] (AIR) 「見学少女」がログインしました。</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：届け先となるＹＤＦの署とか交番とかどの辺か分かりますか？</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：普段から兄探しで街を歩いてるでしょうしわかっていいですよ。</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ただ一番近いところでも少し歩かないといけない距離にありますね＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：やったぁ</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：んじゃあとクリーチャー召喚しても良いですかね</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：いいですよ</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「ＹＤＦはそう遠くは無いけどこの兄ではないものはチーム世紀末とか言うパンク集団に追われてるって言ってたし…しょうがないか」<br />紐で縛った自身の日記を取り出し、パラパラと開くと同時に日記が光り始めます<br />「来たれ、私！」<br />【質量を持った妹】をＰＰ１創造、複製、かつ攻撃型で召喚します＠　消費ＰＰは４</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』のPPが4減少（PP：22→18）</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の暴走率が4増加（暴走率：28→32）</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はい！</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「さ、さっさと行くよ、ＹＤＦにお兄ちゃん探し！あと後ろ警戒お願いね」と召喚された妹に話しかけつつ向かいます＠</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ではそうですね。あなたが妹を妹して妹が妹した時</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：背後からあなたの耳に何者かの声が届く。</font></br></td></tr>
+
+<tr class="tab1 char8"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>？？？</b>：「ブブンブンブンブン！ブンブーン！ブブブンブブン！」</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：後ろから車がやってきました＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：むせた</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：「なんか気持ち悪いのが来たよアロレイン、アレはお兄ちゃんじゃないよ間違いなく」</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：兄判定外れる事あるんだ…（妹見るのほぼ初めて）</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「えっ…うわ、アレはちょっと兄と見間違えようは無いわ……造形キモ過ぎでしょ……」引いてます＠</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：外さないと収拾が着かないし……</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：車はあなた達の目の前で止まります。</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そして、車についているモヒカン部分が開いて一人のモヒカンが顔を出す。</font></br></td></tr>
+
+<tr class="tab3 char3"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#000000'><b>金魚鉢</b>：かたつむりを兄と見間違えることもあるのに……</font></br></td></tr>
+
+<tr class="tab0 char4"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#000000'><b>GM</b>：【WILD BOYS】</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：モヒカン部分が開くってどういうことだよ</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>モヒカン</b>：「おい！そこのお前たち！その男から何か受け取ったか！？」＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「………」</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：「………」</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「お兄ちゃん！？もしかしてパンクお兄ちゃんですか！？あんな気持ち悪いのから出てくるとは思わなかったわ！」近寄ります</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>モヒカー</b>：「てめえら！車輪轟さんの質問に答えな～っ！」</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：「これはどこからどう見てもおにいちゃーん！」近寄ります＠</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>モヒカン</b>：「お兄ちゃん？俺に妹はいない！……はずだッ！！」＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「ペッ」</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：「ケッ」</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>モヒカン</b>：「！？」</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「時間の無駄だったわ」無視してＹＤＦに向かいます</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：「ホントホント」無視してＹＤＦに向かいます</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：＠</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>モヒカー</b>：「待て待て待て待て！」＠回り込む</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>モヒカン</b>：「この俺、車輪轟 軋軌（しゃりんごう あつき）をコケにするとはな…」</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>モヒカン</b>：「小娘ながら、秘めたるモヒリティが感じられる…潜在モヒリティは40といったところか」＠</font></br></td></tr>
+
+<tr class="tab3 char3"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#000000'><b>金魚鉢</b>：草</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「お兄ちゃんでもお姉ちゃんでも無い存在に構ってる暇はないの！私はお兄ちゃん探しのためにＹＤＦに向かう必要があるの、邪魔しないでよね！」<br />「あと勝手に変な数値付けないで！」</font></br></td></tr>
+
+<tr class="tab3 char12"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#ff0000'><b>見学少女</b>：潜在…？</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：「兄と認めて居れば話は早かったものを、理解力の無い人ってきらーい」＠</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：「理解力が無いのはお前たちの方だ！俺の質問に答えてもらおう！」</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：「そこの男から何かを受け取ったか！？」＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：「遺言」</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「胸糞悪さ」＠</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：「ふむ…」</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：車輪轟が自分のモヒカンを整え始めました。どうやらあなたたちの発言の真偽をより詳しく知ろうとしているようです。</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：妹の【隠密】と車輪轟の【読心】の対抗判定、もしくは【話術】で目標値１４の判定ができます＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：これは一切隠してない本音の事を言ってるので若干補正を貰えませんか？</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：1d6<br />DiceBot : (1D6) → 2</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：2倍になります</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：二倍になるの！？</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：妹が二人なのでさらに倍にして4倍になります</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：待ってください</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はい</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：ハクラトに申し訳が無いので二倍で良いです</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では妹は二人いるので２倍です</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：よし</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：話術１２で判定します！！！！！！！！！！！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：どうぞ</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：12+1d6<br />DiceBot : (12+1D6) → 12+2[2] → 14</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：倍になって丁度２８です！！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：２８ですね倍差因子どうぞ</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：ありがとうございます！！！</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の因子Dが1増加（因子D：4→5）</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：「む…感度が悪いな。嘘は言っていないようだが…」</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：「まあいい。そこの男が持っているかどうかを調べれば済む事だ。おい！逃げようなどと考えるなよ！」</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>モヒカー</b>：「見張るぜヒャッハー！」</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：車輪轟はタックスの服や車の中を漁り始め、モヒカーはあなたたちを見張っています。</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「さてと」妹の日記を取り出し、モヒカーの顔面を狙います</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：「よいしょっと」包丁を取り出し車輪轟の背中を狙います</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：攻撃出来ますか！？</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そうですね。</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ではまず、モヒカーへの攻撃が成功すれば、車輪轟は何も気づけずに攻撃を受けます。</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：日記を取り出すだけなら攻撃の意志があるとわからないが、包丁見たら流石のモヒカーもヒエ～ッ！って声を出すので</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：草</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：というわけで、モヒカーが包丁を見つける前に攻撃出来たかどうか</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：【俊敏】か【隠密】14で判定をどうぞ</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：隠密１３　コンセ５＠</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』のPPが5減少（PP：18→13）</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の暴走率が5増加（暴走率：32→37）</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：どうぞ</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：振ります</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：13+5+1d6<br />DiceBot : (13+5+1D6) → 13+5+3[3] → 21</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では気づきません</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>モヒカー</b>：「お？なんだ、本でも読むのかあ～？」＠呑気</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の日記が光り、モヒカーの顔面に向けて妹が足からすっ飛んでいきます<br />【妹弾】攻撃発動で＠</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』のPPが1減少（PP：13→12）</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の暴走率が1増加（暴走率：37→38）</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はい</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>モヒカー</b>：「ッッぶ！」＠大声を上げる間もなく攻撃を受けます</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：車輪轟は気づいていません！</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：飛んでいった妹はモヒカーの顔面に当たり砕け散ります！そこら辺が血の海になります、妹の<br />「よし」＠</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：「ぬう…どこだ？やはりあの娘どもに渡して…」＠ブツブツ言いながら物色中</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：無表情でひたひたと近づき背中から包丁を振り下ろそうと試みます！！＠</font></br></td></tr>
+
+<tr class="tab0 char4"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#000000'><b>GM</b>：【コールドフィッシュ】</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では消費無しでAE【不意打ち】が宣言出来ます。</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：クリーチャーの消費分は消費しますか！？それも無しですか！？</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：いや技能判定してないから無しか</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：特に無いです</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：鉄の包丁を振り降ろします！！ＡＥ【不意打ち】！命中ブースト１！＠</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』のPPが3減少（PP：12→9）</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の暴走率が3増加（暴走率：38→41）</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：対抗なし</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の因子Dが3増加（因子D：5→8）</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の因子Dを1消費（因子D：8→7）</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：9+1d6+1d6<br />DiceBot : (9+1D6+1D6) → 9+3[3]+1[1] → 13</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：ゲッ</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：13-1d6<br />DiceBot : (13-1D6) → 13-4[4] → 9</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：ぐぬぬ</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：何やってんねん</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：6+1d6<br />DiceBot : (6+1D6) → 6+2[2] → 8</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：セーフ！</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：セーフ！</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：4d6+3<br />DiceBot : (4D6+3) → 15[5,2,6,2]+3 → 18</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：両手に持った包丁でズバッと背後から斬り付けます</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：bougyo </font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：防御3、半減して1</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：17ダメ</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：「よし」</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「ナイス」＠</font></br></td></tr>
+
+<tr class="tab0 char4"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#000000'><b>GM</b>：車輪轟 軋軌に17のダメージ（HP：0→-17）</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では、あなたが振り下ろした包丁は何も気づかない車輪轟の背を深々と傷つける</font></br></td></tr>
+
+<tr class="tab0 char4"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#000000'><b>GM</b>：【殺戮マシン】</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：不穏な曲過ぎる……</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：「うぐおおっ！？な、なんだ！包丁だと！？」</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：「ぐっ…油断したか…潜在モヒリティからして只者ではないはずだったのだ！」＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：「いちいち後ろから来られたら困るからとっととここで倒れてもらおう…我が兄探しの邪魔をした罪は重い！」</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「じゃ、あとは任せるね」スタスタとＹＤＦに向かおうとします</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：「えっ」＠</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：「ぐぐ…どちらも逃がすか！」</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：「こうなっては仕方があるまい…【猛将秘封拳】！」</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：車輪轟が構えを取ると同時に、モヒカーが変形する！</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：モヒバスか？？？？？</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そして変形したモヒカーのモヒカンに、車輪轟が飛び乗る！</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：モヒカーのモヒカンって何？？？</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：「この技はモヒリティを代償にするため使いたくなかったが…お前たちを叩き潰すためならば構わん！」＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「あっちょっ…道を塞がないでよ！」</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>モヒカー</b>：「車輪轟さん！あいつらやべえぜ～！」＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：「何一人逃げようとしてるわけ？」背後から包丁をアロレインの首元に突きつけます</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「アンタだってどうせ抜け駆けできるならするつもりでしょ！」</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：「当たり前でしょ！！」</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「あーもう！分かったわよ！あの邪魔者共蹴散らしてとっととＹＤＦに一緒に行けばいいんでしょ！」</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：「分かれば良いんだよアロレインちゃん…さ、行くよ」＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：と言うわけで戦闘態勢に入ります！！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はい！</font></br></td></tr>
+
+<tr class="tab0 char4"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#000000'><b>GM</b>：【黄金の王 ～FGO～】</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では戦闘開始です！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：戦闘前ラウンドとして強度感知やアイテムの使用が出来ます</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ラウンド数は無限です＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：質問です！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はい</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：煙幕使って離脱出来ますか！？！？！？！？！？！？！？！？</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：は？</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：！！！！！！！！！！！！！！！！！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：出来るね！</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：出来るのか……</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：その後追いかけられますか！？</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そうですね。行動次第で何かしらの判定が発生します。</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：もしくは提案など</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：どうするかなー！</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：そうだな……まずこの道は一本道ですか！？</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：細い裏路地がありますね。</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ただそこを通り抜けて逃げられるかはわかりません</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：裏路地か…</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：いや違うな</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：裏路地に入る事は出来ます。</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ただ入った先ですぐ曲がって隠れる事が出来るかもしれないし、一本道ですぐモヒカーに見つかるかもしれない</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そこは入るまでわからない＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：じゃあですね、提案なのですが</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：テリトリーに妹を大量に出す回避マイナステリがあるんですよね<br />これをバラバラの方向に逃がします！！そこに紛れて逃げるというのはいかがか！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：いいよ！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では演出どうぞ</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「複数の私よ…来たれシスターズ！」<br />日記から大量の妹が現れまくります！見分けが付くかどうかは非常に難しいです、何故ならそれは全て「妹」なのですから＠</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：BGMどんなのがいいですか…？</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006666'><b>妹の『妹』</b>：「えっ、ちょっ！」埋もれます</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：どんなのが良いか！？</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：お好きにしてください！！！</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：はい！</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：………あっ、ＳＯするわこれ　クリーチャーも消せますか！？</font></br></td></tr>
+
+<tr class="tab0 char4"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#000000'><b>GM</b>：【おしおきロケット】</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：じゃあ埋もれて消えて見分けがつかなくなります。</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：妹は妹に混じり妹となり妹へ還り妹が妹して妹のために妹となり妹ました</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>モヒカー</b>：「ひえ～っ！？」</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：「な、なんだこれは！？」</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では車輪轟が本物を見つけられるか【幸運】対抗です「</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』のPPが4減少（PP：9→5）</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の暴走率が4増加（暴走率：41→45）</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：テリトリー分の消費をしてと……</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：幸運８、さあどうすっかなぁ……</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：寵愛間に合いますか！？</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：カルマです！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：お兄ちゃんのアイドルたる妹の寵愛が間に合わないわけがないでしょう</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：やったぁ</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：行くぞカルマ寵愛！</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：2d6<br />DiceBot : (2D6) → 2[1,1] → 2</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：しょっぺえ！！！！！！！！！！！！！！！！！</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』のPPが2増加（PP：5→7）</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：判定ででなくてよかったね！！！</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の暴走率が2回復（暴走率：45→43）</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：よーし行くぞ！コンセ５！ライズも使う！幸運８で合計＋１０！</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』のPPが5減少（PP：7→2）</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の暴走率が5増加（暴走率：43→48）</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：対抗、幸運値シークレット、カルマ【無頼漢】宣言ブースト2</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：チィッ！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：無頼漢でブースト２が乗るということで、無頼漢に追加でブースト２するわけじゃないです</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：判定Ｂ１！</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：対抗なし</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：合計１８＋２ｄで行くぞ！</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：8+10+1d6+1d6<br />DiceBot : (8+10+1D6+1D6) → 8+10+5[5]+3[3] → 26</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：よしッ</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：5+1d6+2d6<br />DiceBot : (5+1D6+2D6) → 5+5[5]+10[6,4] → 20</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：20+1d6<br />DiceBot : (20+1D6) → 20+4[4] → 24</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：ゲッ</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：届かず</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：よっしゃセーフ！！！！！</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：リテイク宣言！</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：5+3d6<br />DiceBot : (5+3D6) → 5+9[4,1,4] → 14</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：草</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：14-1d6<br />DiceBot : (14-1D6) → 14-1[1] → 13</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：リテイク２回め</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：5+3d6<br />DiceBot : (5+3D6) → 5+11[4,1,6] → 16</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：16+1d6<br />DiceBot : (16+1D6) → 16+3[3] → 19</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：届きませんでした</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：妹ってどれくらい出てきてます？</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：一応ファンブルの方もお願いします！</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：19-1d6<br />DiceBot : (19-1D6) → 19-4[4] → 15</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：倍差ならず</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ファンブル気づかなかった</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：うじゃうじゃ日記から湧いて出て来てます</font></br></td></tr>
+
+<tr class="tab0 char4"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#000000'><b>GM</b>：【こち亀BGM万能説】</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：「くっ、奴の能力か！？どこだ！どこにいる！？」</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>モヒカー</b>：「ひぃ～！あの娘が大量に～！」＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「フハハハハハ！！どれが我か分かるまい！いや！どれもがこの我々なのだからな！さあ皆！一斉にバラけろ！」<br />と妹の軍勢の中で大声で叫ぶと同時に、あっちやこっちやにバラバラにおにいちゃーんと万歳突撃していきます</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：たまにスッ転んだ妹が踏まれて破裂して肉片と血をまき散らし、辺りは大惨事になります＠</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：「そこかっ！」</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：車輪轟が手を振ると、モヒカーから小型のモヒカーが分離し、裏路地に入ろうとした妹に突撃します！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：が…本体ではありません！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：小型モヒカーは勢い余って裏路地の壁にぶつかります！</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>モヒカー（小型）</b>：「ぶべらっ！」＠</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>ただの妹</b>：「お兄ちゃん？もしかしてお兄ちゃんですか！？おにいちゃーん！！」何体かの妹が逆に向かってへばりついていきます！</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>モヒカー</b>：「や、やめろ！くっつくんじゃない！」</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>車輪轟 軋軌</b>：「ぐううううう！俺はお兄ちゃんなどではない！や…やめ…やめろおおおおおお！！！」</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>３番目に妹な妹</b>：「さあ観念して……私の兄となれお兄ちゃん！！！！」</font></br></td></tr>
+
+<tr class="tab3 char3"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#000000'><b>金魚鉢</b>：例のＢＧＭ聞こえてきたなと思ったら地獄絵図になってた</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「さてＹＤＦ行こーっと」ＵＳＢを持った本体がＹＤＦに向かいます！！！同じ方面に何体か妹も着いてきます＠</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では、あなたはモヒカーと車輪轟の悲鳴に背を向け、その場を後にしました。</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：戦闘？終了です！</font></br></td></tr>
+
+<tr class="tab0 char4"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#000000'><b>GM</b>：【Clock】</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>ほぼ妹</b>：「あ、このお兄様怪我してる……手当しないと…」倒れてるタックスにも何体か傍に着きました</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：他に何かやりたいことはありますか？</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：特には無いかな！！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はい。ではエンディング</font></br></td></tr>
+
+<tr class="tab0 char4"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#000000'><b>GM</b>：【絆】</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ではこうしてあなたは、日常に突然降り掛かったトラブルを無事に解決した。</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：兄と感動的な対面をしそうですね</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：後日退院したタックスが改めて礼をしに伺い、御礼の品をあなたに渡す。</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：その傍らに、数名の妹がいたかもしれないしいなかったかもしれない。</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：なんにしてもあなたは、兄探しをYDF内部まで広げる取っ掛かりを手に入れることが出来た。</font></br></td></tr>
+
+<tr class="tab3 char12"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#ff0000'><b>見学少女</b>：憑かれてる…</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：それを活かせるかどうかは、今後のあなた次第だろう＠</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：というわけで「BUN BUN モヒカー」クリアです！おめでとうございます！！！</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：ありがとうございます！！！！！！！！！！！</font></br></td></tr>
+
+<tr class="tab3 char3"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#000000'><b>金魚鉢</b>：一時的に兄と再開したけどその兄が何らかの理由で死んで別の兄を捜す旅に出たはぐれ妹とかいそうだな</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ではクリア処理ですね</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：はい</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：クリア報酬<br />○シナリオクリア＋２ｄ６<br />×車輪轟を倒す＋２ｄ６<br />○車輪轟から逃げる＋２ｄ６<br />×車輪轟を騙す＋２ｄ６<br />×モヒカーを利用する＋２ｄ６<br />×車輪轟に信用される＋１ｄ６<br />×事件に関わらない＋１ｄ６</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：<br />ボーナス<br />タックスの名前の由来を当てる（回答権１度きり）＋１ｄ６</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：勝手に託す！！！！！！！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：正解！！！！！！！！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：というわけで合計5D6どうぞ！！！！！！</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：何なら名前出た時点で言うたわありがとうございます！！！！！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：総評書きますのでカルマなど先に見ちゃってもいいですよ</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：抑制は要らんしな……</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の因子Dが5増加（因子D：7→12）</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の因子Dが1増加（因子D：12→13）</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：煙幕って使った判定になったかなぁ……まあ使ったことにしよう　どうせ買えるし</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の暴走率が3増加（暴走率：48→51）</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：1d6<br />DiceBot : (1D6) → 6</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：自制った</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の因子Dを3消費（因子D：13→10）</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：では煙幕とライズを再度購入！　残り５Ｄは兄様募金に寄付します</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：カルマは……カルマ……賞系受けるかどうかで変わるぞこれ！？</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：総評</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：妹の『アロレイン』　【バトル賞】【探索賞】<br />兄を探して彷徨う妹。そしてその妹から生み出される妹。妹。妹。<br />兄かな？と思って心配するも、兄じゃないとわかればぞんざいに扱う。<br />しかし、兄じゃない奴からの頼みでも兄に繋がるとわかればちゃんと受ける一面も。良い子ですね。<br />隙を突けると見れば躊躇う事なく包丁を取り出し攻撃する妹！<br />戦闘前の状況にも関わらずその積極的な殺意に【バトル賞】をあげます！実際の戦闘してないけどな！<br />そしてバトルに入ったかと思いきや離脱を宣言し、大量の妹で目眩まし。<br />辺り一面が地獄絵図になり、車輪轟やモヒカーも呑まれました。能力を使って上手く切り抜けた機転に【探索賞】も授与。<br />果たして彼らはどうなったのか。妹の血肉にまぎれてモヒカンたちのものが混ざってないか、それは誰にもわかりません。</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：ありがとうございます！！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では抑制フェイズはすっ飛ばして、アイテム購入と持ち越し因子、カルマ選択をどうぞ！</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：んー</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：カルマは【交渉人】行けますか！？</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：良いRP…良いRP！？</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では「ここが交渉人！」というアピールをどうぞ</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：「胸糞悪さ」</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#003333'><b>妹の『妹』</b>：「遺言」</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：どちらかというと二枚舌案件では…？</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：ウソは着いて無……遺言じゃねえからウソになったわチクショウ</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：じゃあ二枚舌で！！！！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はい！！！</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#003333'><b>妹の『妹』</b>：丁度二枚舌あったし</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="5" style="font-size:80%;background:#f2ffff;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『アロレイン』の因子Dが3増加（因子D：10→13）</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：使った煙幕とライズを補充して持ち越し因子は５Ｄ　残り８Ｄはにいさま募金に寄付<br />既に持ってたのがマグタフＥＸ×４　ライズ　ハイウェイ×１なのでこれで丁度１０Ｄです</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：OKです！</font></br></td></tr>
+
+<tr class="tab1 char4"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ではこれにて完全クリア！お疲れさまでした！</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：逃げる気は無かったんだけどこの能力だと逃げれそうだと思ってしまった……</font></br></td></tr>
+
+<tr class="tab1 char1"><td colspan="5" style="font-size:100%;background:#ffffff;"><font color='#006600'><b>妹の『アロレイン』</b>：お疲れさまでした！！！</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：まあ逃亡は一応想定内ではあるので…</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：卓の感想は苦情等はここもしくはネタバレ部屋で受け付けます！</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：妹の『妹』残して本体すたこらサッサしたろかと思ったけどいやそもそもこの能力でアレ出来るやろと！みたいな！<br />はい！</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：モヒバス笑うんですけど</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：やってることがホラーなのでシリアスなBGMで行こうと思ったんですが、大量の妹が出たらこち亀BGMしか浮かばなくて…</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：なんでや！！！</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：徹頭徹尾バイオレンス風味にボケ倒したつもりですよ！？</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：裏で包丁持ち出すのはホラー！！！</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：武器だからしょうがないだろう！？！？！？！？</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：想定では「戦闘による撃破」か「技能判定３回成功」でクリアでした。</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：煙幕と大量の妹出されたら…まあ逃げられるよなって…</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：自分っぽい存在を大量に生み出すもんだから……</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：ステータスってどんなもんでした？</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：車輪轟 軋軌<br />HP：並　PP：並　暴走：安定状態<br />発動スペック:4 能力精度:7 活性タイプ:増強型<br />火力：やや高　防御：3　精神抵抗：2　行動値：4<br />SS：低　命中：並　回避：並<br />活性タイプ：増強型<br />SPE：【リテイク】<br />カルマ：【無頼漢】<br />ボス特性：【発動スペック+2】【気絶無効】【因子覚醒】等<br /><br />能力：猛卑漢轟（モスト・ヒール・カー）<br />トランサー能力<br />モヒカンを車に変える能力<br /><br />オリジナルボス特性<br />【ヒャッハーの習性】…？？？？？？？？？時、命中及び回避及び技能判定に-3<br />【テンション爆走】…攻撃宣言時、内容に関わらずオルレロールを行う。失敗の場合攻撃が失敗する</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：ちなみにHP30なので包丁で半分以上持ってかれてます</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：モヒカンが車になってたの！？！？</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：草</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：これセットされたモヒカンをＡＥヘッドショットで丸坊主にしたら出来なくなる奴だな！？</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：モヒリティ60以上のモヒカン10名ほどを直々に選びぬいて１台のモヒカーにしたのがモヒカーです</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：モヒリティって何！？！？！？！？！？</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：さあ…</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：！？！？</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：だって車輪轟が言ってる事だし、GMがわかるとは限らない…</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：そっか……じゃあしょうがないな……</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：やはり俺はボケに向いて無いのかもしれない！！ホラーのつもりは半分ぐらい無いんですよ！？！？！？</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：じゃあこち亀BGMで合ってたんですか！？</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：はい！！！！！</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：時間があればTRICKのサントラから不穏なBGM探してた</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：よしじゃねえよ見たいなナイスじゃねえよ見たいな事をしたかったんだけどどうにも絵面が悪すぎた！！</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：設定的に妹はホラーキャラだと認識していたので改めます</font></br></td></tr>
+
+<tr class="tab3 char3"><td></td><td colspan="5" style="font-size:80%;background:#eeffee;"><font color='#000000'><b>金魚鉢</b>：こんなに可愛らしい妹なのに</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：クソ不穏でやることの絵面は最低だけど実態としてはお兄ちゃんに対して邁進しつつそれ以外にひたすら辛らつなボケキャラなのに…</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：それぐらいかな！！</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：はい！</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：お疲れさまでした！！！！！！！</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：妹に振り回されてモヒカンもああなるしかありませんでした！</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：先駆者たちがどう切り抜けたか、ログはネタバレ部屋でどうぞ！</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：モヒカーのやっつけ具合で大いに笑いました！！あとちょっと勢い余ってた感じがしてごめんなさい！！</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：もっと勢いをつけろ！！！！！</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：まだ足りなかったか……</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：トロッコを飛ばせ！！！！！</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：妹は飛んでいきました！！！！！！！！！！</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：なら良し！！！！！！！</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#006600'><b>妹の『アロレイン』</b>：再度再度お疲れさまでした！！！今度はもっと勢いよく妹をばら撒いて収拾と言う言葉から遠ざかります！！！</font></br></td></tr>
+
+<tr class="tab2 char4"><td></td><td colspan="5" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：お疲れさまでした！</font></br></td></tr>
+
+
+
+</table>
+<div id="sub">
+<div id="subTitle">発言者別フィルター</div>
+<div id="filter">
+<label><input type="checkbox" id="char0" value="char0" onclick="ShowHide(this)" checked>どどんとふ</label><br>
+<label><input type="checkbox" id="char4" value="char4" onclick="ShowHide(this)" checked>GM</label><br>
+<br>
+<label><input type="checkbox" id="char1" value="char1" onclick="ShowHide(this)" checked>妹の『アロレイン』</label><br>
+<br>
+<label><input type="checkbox" id="char12" value="char12" onclick="ShowHide(this)" checked>見学少女</label><br>
+<label><input type="checkbox" id="char2" value="char2" onclick="ShowHide(this)" checked>ゲルハムト</label><br>
+<label><input type="checkbox" id="char3" value="char3" onclick="ShowHide(this)" checked>金魚鉢</label><br>
+
+<br>
+<div onclick="obj=document.getElementById('open1').style; obj.display=(obj.display=='none')?'block':'none';">
+<a style="cursor:pointer;"><font color="0075ff">■</font>ＮＰＣ<font size="1">（ネタバレ回避のため折り畳み）</font></a></div>
+<div id="open1" style="display:none;clear:both;">
+<label><input type="checkbox" id="char6" value="char6" onclick="ShowHide(this)" checked>タックス</label><br>
+<label><input type="checkbox" id="char10" value="char10" onclick="ShowHide(this)" checked>車輪轟 軋軌</label><br>
+<label><input type="checkbox" id="char11" value="char11" onclick="ShowHide(this)" checked>モヒカー</label><br>
+<label><input type="checkbox" id="char8" value="char8" onclick="ShowHide(this)" checked>？？？</label><br>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

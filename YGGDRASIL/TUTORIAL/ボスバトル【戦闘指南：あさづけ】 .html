@@ -1,0 +1,3786 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>ボスバトル【戦闘指南：あさづけ】</title>
+	<style>
+		html {
+			font-size: 14px;
+		}
+		body {
+			-webkit-text-size-adjust: 100%;
+			background-color: #ffffff;
+		}
+		h1 {
+			font-size: 20px;
+			margin: 1rem 1rem 0;
+			color: #000000;
+		}
+		.tab {
+			border: 1px solid #999;
+			margin: 2rem 1rem 1rem;
+			line-height: 1.5;
+			position: relative;
+		}
+		.tabtitle {
+			border: 1px solid transparent;
+			border-color: inherit;
+			background-color: inherit;
+			position: absolute;
+			top: -.8rem;
+			left: 1rem;
+			min-width: 7rem;
+			padding: 0 .5rem;
+			text-align: center;
+			font-size: 1rem;
+			z-index: 9999;
+			line-height: 1.4rem;
+		}
+		.player {
+			margin: 0;
+			padding: 0 .5rem;
+			padding-left: 10.5rem;
+			border-bottom: 1px dotted transparent;
+			border-color: inherit;
+			position: relative;
+		}
+		.player:last-child {
+			border-bottom: 0;
+		}
+		.player b {
+			display: block;
+			height: 100%;
+			width: 9rem;
+			padding: 0 .5rem;
+			border-right: 1px solid transparent;
+			border-color: inherit;
+			position: absolute;
+			top: 0;
+			left: 0;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.tabtitle + .player {
+			padding-top: .7rem;
+		}
+		.tabtitle + .player b {
+			padding-top: .7rem;
+			height: calc(100% - .7rem);
+		}
+		.diceroll {
+			padding: 0 .5em;
+			color: #d3def1;
+		}
+
+		/* [情報] タブ */
+		.t0 {
+			background-color: #feecd2;
+			border-color: #999999;
+			color: #000000;
+		}
+
+		/* [雑談] タブ */
+		.t1 {
+			background-color: #fadbda;
+			border-color: #999999;
+			color: #000000;
+			font-size: .8rem;
+		}
+
+		/* [メイン] タブ */
+		.t2 {
+			background-color: #d3def1;
+			border-color: #999999;
+			color: #000000;
+		}
+
+		/* [見学席] タブ */
+		.t3 {
+			background-color: #ecf4d9;
+			border-color: #999999;
+			color: #000000;
+			font-size: .8rem;
+		}
+
+		/* 発言者：ＧＭ */
+		.p0 { color: #000000; }
+		.p0 .diceroll { background-color: #000000; }
+
+		/* 発言者：noname */
+		.p1 { color: #000000; }
+		.p1 .diceroll { background-color: #000000; }
+
+		/* 発言者：カリン */
+		.p2 { color: #ff3f4c; }
+		.p2 .diceroll { background-color: #ff3f4c; }
+
+		/* 発言者：チヒロ */
+		.p3 { color: #000000; }
+		.p3 .diceroll { background-color: #000000; }
+
+		/* 発言者：エイガー */
+		.p4 { color: #6c9bd2; }
+		.p4 .diceroll { background-color: #6c9bd2; }
+
+		/* 発言者：大統領 */
+		.p5 { color: #000000; }
+		.p5 .diceroll { background-color: #000000; }
+
+		/* 発言者：一般ＪＫ */
+		.p6 { color: #222222; }
+		.p6 .diceroll { background-color: #222222; }
+
+		/* 発言者：モヒカン（？）の群れ */
+		.p7 { color: #000000; }
+		.p7 .diceroll { background-color: #000000; }
+
+		/* 発言者：？？？？ */
+		.p8 { color: #80aa81; }
+		.p8 .diceroll { background-color: #80aa81; }
+
+		/* 発言者：ゆるい骸骨 */
+		.p9 { color: #80aa81; }
+		.p9 .diceroll { background-color: #80aa81; }
+
+		/* 発言者：でかい骸骨 */
+		.p10 { color: #80aa81; }
+		.p10 .diceroll { background-color: #80aa81; }
+
+		/* 発言者：ス＠見学 */
+		.p11 { color: #000000; }
+		.p11 .diceroll { background-color: #000000; }
+
+		/* 発言者：system */
+		.p12 { color: #000000; }
+		.p12 .diceroll { background-color: #000000; }
+
+		/* 発言者：関根公雄 */
+		.p13 { color: #000000; }
+		.p13 .diceroll { background-color: #000000; }
+
+		/* 発言者：はむぱん */
+		.p14 { color: #000000; }
+		.p14 .diceroll { background-color: #000000; }
+	</style>
+</head>
+<body>
+	<h1>ボスバトル【戦闘指南：あさづけ】</h1>
+	<div class="tab t0">
+		<div class="tabtitle">情報</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			【タイトル】戦闘指南：あさづけ<br>
+			【トレーラー】<br>
+			　というわけで（？）晴れて立て籠もり事件は解決された。<br>
+			　だが、一件落着とはいかないらしい。何と路地裏から、大量のモヒカン・ゾンビが押し寄せてきたのだ！！！！<br>
+			　……世界観違くない？　そんな気持ちになりつつ、あなたたちは事態の収束を試みる。<br>
+			　<br>
+			　ゾンビ共を押し退けた先に現れたのは……。<br>
+			<br>
+			【適正人数】２人<br>
+			【参加資格】ＰＬに【あさづけ】を含むこと<br>
+			【雰囲気】コミカル：シリアス＝７：３<br>
+			【深刻度】ライト：ヘヴィ＝６：４<br>
+			<br>
+			【非推奨】制限系、無効化系：系統無効、無効化武装、ブレイク<br>
+			【禁止】なし<br>
+			【初期暴走】６Ｄ６以上で任意<br>
+			【臨戦ラウンド】無制限（チャージカウント及びＡＥ【行動放棄】は禁止、強度感知は【４回】まで）<br>
+			【持ち越し要素】全適用
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p1">
+			<b>noname</b>
+			a<br>
+			さて…ここで遊んだことないぞう
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			OH！<br>
+			デモ安心シテクダサイ<br>
+			ダイタイどどんとふと一緒デスヨ！
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			コマは出来たか？
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			見エテマス<br>
+			ただダイスボットがないのだけ超絶不便なので強く生きましょう
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			スミマセンちょい席はずします
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			準備が整ったらcond……ではなく4D6をどうぞ<br>
+			（HP1,HP2,PP1,PP2）の内訳となります
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>チヒロ</b>
+			nU6[6]でクリティカルだけは計算できるはず
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			暴走率の表示どうしたらいいんじゃ<br>
+			うわっめったんじゃないのすげえ違和感あるな！！
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ステータスの欄に＋があるのでそれ押すと追加できる<br>
+			SANを書き換えると良い
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			こうかな！？
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			もどり　ここってログどうなるんだろ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			私が取ることになります<br>
+			全タブは取れるので安心するが良い……
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			任せたぞ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			ごあんしんです
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p2">
+			<b>カリン</b>
+			4d6 <br>
+			<span class="diceroll">DiceBot : (4D6) ＞ 13[5,1,2,5] ＞ 13</span>
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>チヒロ</b>
+			一応右上の歯車にログ出力というボタンもあるので、<br>
+			各部屋だけなら参加者もログ取れます
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			4D6 <br>
+			<span class="diceroll">DiceBot : (4D6) ＞ 14[4,6,2,2] ＞ 14</span>
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>チヒロ</b>
+			全タブはGMだけ　かな？
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p2">
+			<b>カリン</b>
+			HP6 PP7
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			この場合はHP+6のPP+7と<br>
+			HP+10のPP+4ですね
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			そのはず
+		</p>
+		<p class="player p5">
+			<b>大統領</b>
+			ココフォリアかぁテンション上がるなぁ～
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			OKだ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			OKyade
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p2">
+			<b>カリン</b>
+			いちいち演出がかっこよくなってるのう
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			これといって勉強できるような調整にしているわけでもないが、まぁ場数踏んでくれれば私は嬉しい<br>
+			さて、ＢＧＭはＯＫですか？
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			OKデス
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p5">
+			<b>大統領</b>
+			軌跡に卓がひとつ増える、それでいいじゃあないか
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ＢＧＭが停止した
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			ごめんとめちゃったかも
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			再生
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			流れてこないな…
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			わたしのとこは流れてます
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			このツール、１人がＢＧＭ止めると全体のＢＧＭが止まるので<br>
+			タブを個別に音消せるアドオンとか入れて対処してくれると助かるのだ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			サイト自体でミュートしてたわｗｗｗｗｗごめんｗｗｗｗｗｗｗｗ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			草
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			草
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			でもあるある<br>
+			ではよろしいかな？
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			OKやで
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			いいよー
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			では【戦闘指南：あさづけ】初めて生きたいと思います<br>
+			よろしくお願いします
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			よろしゅうに～
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			よろしくお願いします
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			今回はクソボスなのでなんか問題が生じたら全部ＧＭに責任があると考えてください
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			――――――
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			は？？？始まる前に言う？
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			マジ？
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　時刻は、もう昼過ぎぐらいになっているでしょうか。<br>
+			　街の通りはちょっとした喧騒に包まれていました。<br>
+			　……とはいっても、祭りでは決してありません。<br>
+			　「立て籠もり事件」が発生して、なんでもそれが通りすがりの能力者によって解決されたとか何とか。<br>
+			　エイガーはもしかすると現場にいて、事後処理に当たっているかもしれませんね。<br>
+			　何せ、通りは段々と普段通りの平穏を取り戻しつつありました……。＠
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			背景こんなんかたしか
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			じゃあ、現場の処理してます＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			カリンは周辺におつかいに来ていましたが、喧騒に釣られクマーします。
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			ヤバい日常会話っぽい定型文ないからすでに詰んでる
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p2">
+			<b>カリン</b>
+			「なんやなんや　祭りか～？」＠
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p2">
+			<b>カリン</b>
+			草
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　では不意に、通りへ悲鳴が響き渡ります。路地裏の方角からです。
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「…なんや！？」声の方に向かいます＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「！？」作業をやめて飛び出す＠
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			がっこうでくらしてそうな子
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p6">
+			<b>一般ＪＫ</b>
+			「ひっ……いやぁ！　こないで！」
+		</p>
+		<p class="player p7">
+			<b>モヒカン（？）の群れ</b>
+			「AHHHHHH！」「OHHHH！」<br>
+			「HYAHHAAAAAAAA！！！！！」<br>
+			「MEEEEET！！！」「HUNGRY！」<br>
+			「AOHHHHHHHHHGGH！！！」
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　見ると、どこから湧いて出たのか。モヒカンが群れを成して、少女を襲っています。<br>
+			　ですが……どこか様子がおかしいようです。
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「なんやあれ…なんちゅう顔色の悪い人間たちや…ビョーキか…？」＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「ウオォォォーーー！！」群れにローリングしながら突っ込みます！！！！＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　皆一様に焦点は定まっておらず、その行動には普段のそれに輪をかけて知性が感じられません。<br>
+			　また、モヒカンといえども火炎放射器は無理でも普通は斧やら棍棒やら原始的な武器を持っているぐらいが普通なのですが……彼らは皆素手です。<br>
+			　この寒い時期ですから、よもや寒気で脳ミソが退化しておおっとモヒカンくんふっとばされた＠格闘ダメージロールどうぞ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			3D6 <br>
+			<span class="diceroll">DiceBot : (3D6) ＞ 5[1,1,3] ＞ 5</span>
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			よわい<br>
+			５人ぐらい吹っ飛びます<br>
+			　さて、見るとこのモヒカンたちは近くのマンホールから湧いて出ているようです。<br>
+			　これはこのマンホールの奥に親玉がいるに違いねぇなぁボス模擬的によぉ！！！！<br>
+			　とあなたたちは思います＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「間に合った！もう安心だ」少女の周りにいたモヒカンをぶっ飛ばします＠
+		</p>
+		<p class="player p6">
+			<b>一般ＪＫ</b>
+			「ひっ……あ、ありがとうございます……！」
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			そういって少女は逃げていきます。帰り道でゾンビに食い殺されないといいね。＠
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p5">
+			<b>大統領</b>
+			ローリングしながら突っ込みます！？！？
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			そうなったら絶対許さんからな
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「なんやあれ…マンホールから湧いとるんか…？人間ってマンホールから生まれるんやったっけ　いやいや流石に違うわな」
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ゾンビになった少女ちゃんを最後に始末させるから……
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			と言いながらゾンビの群れに近づいていきます<br>
+			＠
+		</p>
+		<p class="player p7">
+			<b>モヒカン（？）の群れ</b>
+			「GRROOOOOHHHHHHHH!!!!!!!」「WRYYYYYYYYY!!!!!!」<br>
+			「MEEEEET！！！　…………MEET？」<br>
+			　カリンへ襲い掛かってきます＠雑にやっつけていいです
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「おわ～！！なんやなんや！！」ビーム出します＠
+		</p>
+		<p class="player p7">
+			<b>モヒカン（？）の群れ</b>
+			「GABAAAAA」「ABESHI」　溶けます＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「前進ーっ！」現場で上司が怒っていますがそんなことは知らねえと突っ込んでいくぞ＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			じゃあエイガーはモヒカンたちをちぎっては投げちぎっては投げ、その内マンホールまでの進路を悠々と確保します<br>
+			様子がおかしくても所詮モヒカンはモヒカンだった＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「もう！！びっくりしてビーム出てもうたやないか！！え！！ていうか溶けてもうた！！怖！！」＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			ローリングですべてをなぎ倒す男
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			とか何とか言いながら邪魔するゾンビを溶かしつつ進撃します　襲い掛かってくるからしかたないね＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ではマンホールに入りますか？<br>
+			入れ＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			入ります
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			はい
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ザッザッザッザ（階段ＳＥ）
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			ワイ詰まりそうやけどまあええわ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			草<br>
+			エイガーに引っ張ってもらえ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			ギリギリ入ったんだよ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			で、中にはモヒカンが地上よりさらに大挙しています
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			めったんが泡吹いて倒れそう
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ですがあなたたちはつよいので全て蹴散らします
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p2">
+			<b>カリン</b>
+			めったんで来なくてよかったね
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p2">
+			<b>カリン</b>
+			えぇ…
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			さて、それはともかく、この下水道の中にモヒカンがこれだけいたということはやはり尋常ではありません。
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「オオオォォーーーーッ！！YDFッ！！」バーッ＠
+		</p>
+		<p class="player p7">
+			<b>モヒカン（？）の群れ</b>
+			「GOOOOOOHHHHHHH」<br>
+			「HIDEBU」「CHINYA」「TAWASHI」
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			（たぶんエイガーさんはカリンに気付いてません）
+		</p>
+		<p class="player p7">
+			<b>モヒカン（？）の群れ</b>
+			そんな調子であなたたちが無双ゲーしているとですね
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			<font color="80aa81">
+			「――ほう」<br>
+			「モヒカンとはいえ、あれだけの数をこうも易々と蹴散らすとは」<br>
+			「ある程度は手練れがやってきたと見えるな」<br>
+			</font>
+			　下水道の闇を反響する声。<br>
+			　モヒカンたちの屍の向こうから、何かがこちらへやって来るのが見えます＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「何っ！！」＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「…！！　誰や…？」＠
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p5">
+			<b>大統領</b>
+			ゲェーッ！？
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			<font color="80aa81">
+			『誰――クク、愚かな』<br>
+			『貴様らに名乗る名などない。これから死にゆく貴様らに……な』
+			</font>
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p2">
+			<b>カリン</b>
+			急にお腹の調子悪くなってきた！！！クソが！！！
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			！！！！！
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			あら大丈夫ですか
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			まだいけるのでいけるところまでいきます
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			無理しないでね！！！
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　闇から顕になった姿は、髑髏。<br>
+			　それも外套に身を包み、大鎌を携えた……所謂『死神』と呼ばれる概念に近しい姿をしていました。
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p2">
+			<b>カリン</b>
+			どっかでみたことあるグラフィック
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			<font color="80aa81">
+			『だが――我が【名簿】に、貴様らの名はない』<br>
+			『つまり幸運なことだ。今この場で、我が貴様らを葬らねばならぬ道理はない』<br>
+			『潔く退くのであれば、見逃してやっても良いぞ？』
+			</font>
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>チヒロ</b>
+			死神の巡遊！！！
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　よく見ると、足元は朧で浮遊しています。この世ならざる光景といっても過言ではないでしょう。<br>
+			　しかしそれは明確に、実態を以てこちらへ近づいてきます＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「アッハッハ　確かか？」頭おかしいやつかな？と思っています＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「おーなんや変な奴やな～　えーと　あんさんがモヒカンたちをビョーキにしたんか？」＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			<font color="80aa81">
+			『フン……そうとも言えよう。だが正確ではない』
+			</font>
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「うわっ！」今頃カリンに気付いてビックリします＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			<font color="80aa81">
+			『此度の異変、我の能力ではない……奴らを変貌させたのは【ジャガーノート】と呼ばれる特殊なウイルスよ』
+			</font>
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			まともに喋れないけどマジで会話しないといけないときは縛り解禁するで…
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p2">
+			<b>カリン</b>
+			「んあ！？なんやそっちにも誰かおったんか！！びっくりしたわ～」＠カリンも気付いていなかった
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			<font color="80aa81">
+			『我らが組織に持ち込まれたそれを、ばら撒いてやっただけのこと……』<br>
+			『最も、見込み通りの効果は得られなかったがな。免疫の低い者が発症するにとどまったようだ』
+			</font>＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「ふーんウイルス…じゃあまあビョーキで合ってるんやな…っていうかあんさんがバラ撒いたんか！？なんてことしよるんや！！」＠
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p2">
+			<b>カリン</b>
+			モヒカンってパンピーより免疫低いのか…
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			「それはまずい」無線機繋がりますか？＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			<font color="80aa81">
+			『フハハハハハハ……当然であろう。それが我ら、混沌の使途【スヴァルトアルフ】という存在よ！』<br>
+			『さぁ、命が惜しければ立ち去るが良い……定命の者よ』</font>＠<br>
+			繋がります
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			バカだで…
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			基礎ｐｔが……低いから……
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			現場の上司にここ周辺の警備を強化しろと伝えます＠<br>
+			（無線機から怒鳴る大声が響き渡る）＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			はい<br>
+			じゃあですね<br>
+			<font color="80aa81">
+			『…………』
+			</font>
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「…みんなの生活を邪魔する輩は許さんで！！」＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			<font color="80aa81">
+			『…………む？　…………え？』<br>
+			『ちょ、え？　待って？　え？　何やってんの？』
+			</font>
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「！？」＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			<font color="80aa81">
+			『何？　もしかして連絡してる？　待って何その無線』
+			</font>＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「なんやなんや」＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「よくあることだ」当たり前では？という顔＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「電波に弱いんか…？」たぶんちがう＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			<font color="80aa81">
+			『ちょっ……ば、お前何してくれてんだよぉ!?』<br>
+			『俺っちヤバい存在だって言ってんじゃん！　何だよ警備強化って!?』<br>
+			『あわわわわわ……こ、ここまで来るのだって怖くてしょうがなかったのに、地上に上がったらＹＤＦの群れとか無理ゲーすぎる～～』<br>
+			『もうだめだ～～～…………』
+			</font><br>
+			といったところでですね<br>
+			あなたたちはこの間、目前の骸骨が弱弱しい声に反して一切微動だにしていないことに気付きます<br>
+			そして代わりに……隣のゴミ箱。なんかガタガタうるさいです＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「…まさかなあ」ゴミ箱をさかさまにして振ります＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「ポカーン」＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			<font color="80aa81">『……あ、ちょ、待って！　やめろ！　ヤメローーー！』</font><br>
+			ゴミ箱がゴトゴトと動き出しますが、まぁあっさり捕まります。<br>
+			で、そのままシェイクすると中から
+		</p>
+		<p class="player p8">
+			<b>？？？</b>
+			「うげっ」<br>
+			「あだだ……」<br>
+			「…………あっ」
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「…こんちわー」＠
+		</p>
+		<p class="player p8">
+			<b>？？？</b>
+			　……８０センチぐらいの身長の、ゆるい見た目の骸骨と目が合います＠
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			「…………どわぁぁぁぁぁぁぁあああああ!?」
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p5">
+			<b>大統領</b>
+			ジャガーノート！！！
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			ぴゅーっと逃げていってでかい骸骨の影に隠れます<br>
+			「ち、畜生！　おまえらよくも俺っちの本性を見破りやがったな!?」
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「何をする気だ？」＠
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			「ついでによくも援軍まで呼んでくれたな！　バックアップなしなんだぞ今回！」＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「当たり前だ」といいつつ応援をここに呼ぼうとします＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「…え、えーと…おちびちゃん…その…モヒカンをビョーキにしたんよね…？」＠
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			「だだだだだ、誰がチビだ！　今はちょっと手加減してるだけだ！」<br>
+			「本気を出せばおまえなんかよりずっとデカくて怖いんだぞ！」<br>
+			「あ、やめろ！　やめろって言ってんだろー!?　俺っち１人に対して何十人もYDF寄越して卑怯とか思わねーのかお前！」<br>
+			「くっそぉ……か、かくなる上は……」
+		</p>
+		<p class="player p10">
+			<b>でかい骸骨</b>
+			エイガーに向けて何やら弾丸のようなものを発射します＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「って話だな、アハハ」無線繋ごうとしたところ<br>
+			何か飛んで来たんですけど避けられますか？
+		</p>
+		<p class="player p10">
+			<b>でかい骸骨</b>
+			避けられます
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			判定とかは？
+		</p>
+		<p class="player p10">
+			<b>でかい骸骨</b>
+			フレーバーなんでナシで良いよ<br>
+			壁に着弾するとそこが黒ずんでグズグズになっていくのが見えるでしょう＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「…わお　脅威なのはホンマみたいやな」＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「コラ！撃つな！」お得意のローリング避け＠
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			「お、お前らをここで始末して……えっと……それから……それから……」<br>
+			「……と、とにかくやっつけてやる！　覚悟しろ！」　お目々ぐるぐる＠rpend
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「え、えーとォ………人々の生活を脅かすんはワイが許さんぞ…？」＠rpend
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「はあ…、敵を倒していいか？」撃ってきたんだもん！＠RPEND
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			はい。ではお待たせしました臨戦ラウンドです
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			これがクソボス！？かわいくね
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			強度感知する場合は【ゆるい骸骨 - 10】が目標値です。<br>
+			でかい骸骨はデータとして存在するわけではないです
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			木偶やんけ！！
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			エイガーさんの視力は両方とも5です
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			まぁ2体で1体的な（？）
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			普通に襲ってくるかと思ってた
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			フレーバー上はガッツリ襲ってきますよ、クリーチャーなんで
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			まあそうわな
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			では１Ｒ目。宣言どうぞ＠<br>
+			臨戦ラウンドね
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			すみません！！初期暴走してなくないですか！！
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			…………<br>
+			！！！！！！！！！！！！！！！！！<br>
+			！！！！！！！！！！！！！！！！！！！！！！！！！
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			！！！！！
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			！！！！！！！！！！！！！！！！！！！！！！！！！！！！<br>
+			6d以上でどうぞ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			盛っておくか迷うな<br>
+			うわ！？
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ミスっちゃったえへへ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			8d6 <br>
+			<span class="diceroll">DiceBot : (8D6) ＞ 38[5,6,3,5,3,5,6,5] ＞ 38</span>
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			まあいいや俺も8Dで<br>
+			8D6 <br>
+			<span class="diceroll">DiceBot : (8D6) ＞ 24[5,3,3,2,3,2,3,3] ＞ 24</span>
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			いいかんじ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			ええーーん…50処理しときたかったぉ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			1ｄ6 <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 3</span><br>
+			1ｄ6 <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 5</span><br>
+			ん～<br>
+			高揚（暴走+5）
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			そのままra70突っ込んだかな
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			今66じゃないのか…？<br>
+			あ、計算間違えてる<br>
+			ごめんちゃい
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			初期22%のcond+7、初期暴走+38%、高揚+5%
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			くそ…何故フラッシュを終わらせた…
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			1ｄ6　ra70 <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 5</span>
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			うわ<br>
+			発症<br>
+			2dどうぞ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			2d <br>
+			<span class="diceroll">DiceBot : (2D6) ＞ 7[3,4] ＞ 7</span>
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			精神異常
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			発症やめーや
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			記憶異常か
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			やばいんですが
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			記憶異常!?
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			ん～ｗｗｗ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			助けて～～～ｗｗｗｗｗ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			まぁ抑制Ｂって手もあるから……<br>
+			では１Ｒ目。記憶異常消してraやり直すなら何もせずに抑制Ｂするのも手<br>
+			エイガーの方は発症ないから自由に動けるか
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			俺が強度感知コンセして50済ましとこうか…？
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			んん…行動放棄して抑制Bが吉かな…？<br>
+			強度感知は任せます
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			わかった<br>
+			強度感知、観察眼5にコンセ4＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			コンセ3じゃなくて大丈夫ですか<br>
+			いや4か<br>
+			いや、感知分の消費あるから51だ。<br>
+			4で大丈夫ですか！？
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			ちょっちまってね
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			１が出るとファンブルでどの道失敗なので、確定成功を狙う場合出目の最低値は「２」と見積もるのが良いという話
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			もっと盛っておくか…見えないと困りそうだし<br>
+			コンセ8にします
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			大体終わりましたのでちょっと見に来たら知ってるアンタァー！ボスになったァー！
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			どうぞ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			1D6+5+8 <br>
+			<span class="diceroll">DiceBot : (1D6+5+8) ＞ 4[4]+5+8 ＞ 17</span>
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			判定はだいたい「目標値-2」か「目標値+5」まで行くのが無難
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			通常成功
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			感知いれて消費9か
+		</p>
+	</div>
+
+	<div class="tab t0">
+		<div class="tabtitle">情報</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			【 間抜けなミュータント 】<br>
+			筋2/耐2/知2/精2/器16/敏2/運14　cond(HP+12/PP+12)<br>
+			<br>
+			■ステータス<br>
+			HP：90　PP：30　暴走率：40%（反応型）<br>
+			防御：1　抵抗：1　行動値：1<br>
+			SS：12+2D6　命中：17+2D6　回避：3+2d6<br>
+			格闘：1D6+0　武器：1D6+0　能力：1D6+5<br>
+			SPE：【熟練】　カルマ：【勇猛】<br>
+			精度：9　スペック：4<br>
+			<br>
+			■特性（0pt/5bp）：<br>
+			　●因子覚醒　●再行動<br>
+			　（●ステータス変化系2pt）<br>
+			　<br>
+			　・消費アイテム10d保持
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			とふー！！生き返れええええ！！！！
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			エンドフェイズー<br>
+			（カリンは恐らく何もないと思うので。行動放棄しても回復できないし）
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			宣言無し！
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			んね～<br>
+			宣言無しや
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			抑制Ｂしないのか
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			しましゅ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			そうだよ抑制抑制
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			そしてエイガーはra50だ<br>
+			1d6どうぞ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			1D6 <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 5</span>
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			（抑制B１とか出たらどうしよ）<br>
+			2個振っといた方が良い…？
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			5は自制　ヨカッタネ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			ぐっぼーい
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			今回は臨戦ラウンドに余裕があるから（というか∞だから）抑制Ｂ１ずつするのも手
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			弱気になるな、お前ならできる
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			ほえ～
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p5">
+			<b>大統領</b>
+			あ、臨戦ラウンド∞だったのか
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			普通の卓は臨戦ラウンド１Ｒ、あっても２Ｒだけども
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			ほれ、ヒーローの変身シーンみたいに待っててくれるぞ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			抑制B1します<br>
+			1d6 <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 4</span><br>
+			おっけ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			グッジョブ！
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			これは無限　追憶は１Ｒ
+		</p>
+		<p class="player p5">
+			<b>大統領</b>
+			感知のコンセは不要だったわね…
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			70切ったので記憶異常解除
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p5">
+			<b>大統領</b>
+			うまい！
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p2">
+			<b>カリン</b>
+			暴走72→68
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			２Ｒ目。各自宣言どうぞ
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			今のうちに50すましとくという作戦なので
+		</p>
+		<p class="player p5">
+			<b>大統領</b>
+			なるほど…
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			全員が行動放棄してエンドも宣言なかったらバトルが始まると思ってください
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			宣言無しだ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			これって事前にバフかけたり出来るんでしたっけ…
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			次に消えなかったっけ？
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			できるよ<br>
+			バフかける場合はエンドフェイズ宣言終わった後に「３Ｒ目いらないっす！！！このままで！！！」って言ってもらえればバトルが始まります<br>
+			で、ラウンド継続ルールに従ってバフが持ち越せるというからくりになっておる<br>
+			ウチの卓では
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			いけいけ！バフれ！
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			ほえ～<br>
+			「極太レーザー」使用します　回避+4
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			カリンの回避が上がります
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			あ、命中っす！！
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			回避が上がった気がしたけど命中でした<br>
+			エイガーは……別にできることもないか　エンドフェイズー
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p2">
+			<b>カリン</b>
+			これもしかして発言編集出来るのか
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			できるよ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			できるっぽい　できるな
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			誤字勢も安心だ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			誤字はおもろいから残しといて…
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			待てよ……<br>
+			■１ラウンド維持 <br>
+			●自分対象→次ラウンドの自プリアクションまで。<br>
+			●他対象（行動前）→次ラウンドの対象プリアクションまで。<br>
+			●他対象（行動済）→次ラウンドの対象ポストアクションまで。
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			やれることがない！
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			命中強化意味ないわこれ<br>
+			次のラウンドの頭に効果が斬れる
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			マ？
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			ほら言ったじゃん
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			草
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			回避は意味ある
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			えっどうします
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			要するに次の自分のターンの直前まで続くわけよ<br>
+			だから回避を増やすのはアリなんだけど命中増やしてもよっしゃ殴るでって時に無いわけやな
+		</p>
+		<p class="player p3">
+			<b>チヒロ</b>
+			回避・防御は意味あるのと、他者へのバフなら命中も意味ありますね
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			回避あげるやつない？それやっとこ
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>チヒロ</b>
+			行動済みの味方にバフすれば、ポストアクションまで続くのでバフの恩恵を受けられる
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ほたるびがそんな感じ（回避あげる）
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			ほたるび使ったことになってください！！
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			歴史が改竄されました<br>
+			エンド宣言ありますか？
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			ないです
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			回避上がった気がしたけど本当でした<br>
+			ないよう
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			では、そのまま戦闘開始かな
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			はい～
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			これじゃねぇ（ＢＧＭ）
+		</p>
+		<p class="player p12">
+			<b>system</b>
+			[ カリン ] MP : 33 → 32
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「ＹＤＦッ！」＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			はーい戦闘開始、今度こそ。
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p5">
+			<b>大統領</b>
+			天才か？
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			「うおおおおおお！　俺っちはまだ死ぬわけにはいかないんだああああああ！」<br>
+			行動値1　ＡＥなし＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			行動値5　AEなし＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			行動値5宣言無し＠<br>
+			どうちー
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			当然のように上を取られる<br>
+			味方同士で同値の場合は対抗せず相談して決めていいです<br>
+			カリン＝エイガー＞ミュータント<br>
+			好きな方から宣言どうぞ＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			どっちがいいー
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			エイガーさんはAE盛ってぶんなぐるかホールドする予定です
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p5">
+			<b>大統領</b>
+			そういえば行動表とかはないんですか
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p2">
+			<b>カリン</b>
+			ホールドしてもらうとなるとエイガーさんを砲撃に巻き込む形になるね
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			ない<br>
+			私の手元にはあるが
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			そおか巻き込まれるのか
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			味方ごと吹き飛ばすとか血も涙もねぇなあのデカいやつ……こわすぎる……
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			わたしが先に動けばまあ大丈夫だけど
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			じゃあ、お先どうぞ！
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			OK
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			ぶっ放せ！！
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			ちなみに完全に上取ってたからこの攻撃でほたるびの効果も切れるわ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			アハハ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			フフフ、意味がありません…
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			というわけでカリンの手番どうぞ
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			行動値早いだけが正義じゃないね…
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			速殺しないとめんどくさいタイプと見てます
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			トランサー【 黒死の媒介者 】<br>
+			　標的や自身を無数のナノマシン郡に変換する能力。 <br>
+			　ナノマシンは細菌やウイルスに似た性質を持ち、感染した対象の肉体を崩壊させる。ナノマシンなので非生物にも有効。<br>
+			　現在は能力の暴走によってミュータント化、ナノマシンの塊と化している。
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>チヒロ</b>
+			バフを残したいがためにAE待機で行動順を遅らせる　という手もないではないですが<br>
+			相手に手番をくれてやるぐらいなら、その前に殴り殺したほうが早いとおもいます
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			能力概要はフレーバーなので雑談に投げておく
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			「共に戦います」カリンに敬礼をします＠
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			（なんだあいつ……）＠
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			敵情報って結構見るべきところが多いんだよなぁ<br>
+			目が滑りやすいけど
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p2">
+			<b>カリン</b>
+			現在スペック6<br>
+			サンビーム+出力増大　消費6、スペック5　4d6+2+12<br>
+			で合ってるかな？
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			あっとります<br>
+			対抗なし。命中判定どうぞ＠
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p5">
+			<b>大統領</b>
+			もしかしてこれコマにPC情報書けない？
+		</p>
+		<p class="player p3">
+			<b>チヒロ</b>
+			書けますよ
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			書けるよ
+		</p>
+		<p class="player p5">
+			<b>大統領</b>
+			a,
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			かける、エイガーさんは貼り付け用のアレがないからはｔってませんゴメンヨ
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			カーソル合わせて表示されるまで若干のラグがある
+		</p>
+		<p class="player p5">
+			<b>大統領</b>
+			あ、でてきた！ごめんなさい
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p2">
+			<b>カリン</b>
+			14+1ｄ6 <br>
+			<span class="diceroll">DiceBot : (14+1D6) ＞ 14+3[3] ＞ 17</span>
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			3+2d6 恐るべき回避力 <br>
+			<span class="diceroll">DiceBot : (3+2D6) ＞ 3+5[2,3] ＞ 8</span><br>
+			無理です<br>
+			倍差でダメージ来いや！
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			4d6+14+1d6 <br>
+			<span class="diceroll">DiceBot : (4D6+14+1D6) ＞ 10[1,3,1,5]+14+3[3] ＞ 27</span>
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			ジュッ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			しょっぱ！！
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			防御1点で26点もらいます
+		</p>
+		<p class="player p12">
+			<b>system</b>
+			[ ゆるい骸骨 ] HP : 90 → 75<br>
+			[ ゆるい骸骨 ] HP : 75 → 74<br>
+			[ カリン ] 暴走率 : 69 → 68
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			「ヒィィィィ！　紫外線ヤメロ！　殺菌される～～！！！！！」
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「その調子だ！」＠
+		</p>
+		<p class="player p12">
+			<b>system</b>
+			[ カリン ] 暴走率 : 68 → 69
+		</p>
+		<p class="player p10">
+			<b>でかい骸骨</b>
+			光が照射された部分がボロボロと崩れ落ちていきます＠
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			カリンは暴走75%でたぶんra70
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			1d6　ra70 <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 6</span>
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			自制！
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			時勢！！
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			エイガー続けてどうぞ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			ナイス！<br>
+			はい<br>
+			攻撃力＋はコンセのみか
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			ダメージにブーストは積めない<br>
+			基本コンセのみで、B使う手もあるけど因子２つ使って+1dだから恐ろしく効率悪い<br>
+			寿命が縮むので基本使わないことをオススメする
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			因子２Ｄ使えばバーストは出来るけど２Ｄ使って１Ｄなのよね
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			格闘攻撃、攻撃コンセ10＠
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			コンセですら燃費が良いとは言えないので電撃戦しかけたり押し込む時よ……行ったぁ！！！<br>
+			対抗なしだよ＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			14+1D6 <br>
+			<span class="diceroll">DiceBot : (14+1D6) ＞ 14+4[4] ＞ 18</span>
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			cf3+2d6<br>
+			癖で！！！！！！！！<br>
+			3+2d6 <br>
+			<span class="diceroll">DiceBot : (3+2D6) ＞ 3+7[1,6] ＞ 10</span>
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			わかるよ…
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			10+1d6-1d6 <br>
+			<span class="diceroll">DiceBot : (10+1D6-1D6) ＞ 10+5[5]-3[3] ＞ 12</span><br>
+			倍差ではない
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			はい
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			コンセだけ載せてどうぞ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			3D6+10 <br>
+			<span class="diceroll">DiceBot : (3D6+10) ＞ 9[1,2,6]+10 ＞ 19</span>
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			防御１で18点
+		</p>
+		<p class="player p12">
+			<b>system</b>
+			[ ゆるい骸骨 ] HP : 74 → 62<br>
+			[ ゆるい骸骨 ] HP : 62 → 63
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>チヒロ</b>
+			10u6[6]　上方無限ダイスはこれで振れたはず（ファンブルは別途計算） <br>
+			<span class="diceroll">DiceBot : (10U6[6]) ＞ 2,11[6,5],9[6,3],2,5,1,5,11[6,5],1,3 ＞ 11/50(最大/合計)</span>
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p12">
+			<b>system</b>
+			[ ゆるい骸骨 ] HP : 63 → 56
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>チヒロ</b>
+			50-2d6 <br>
+			<span class="diceroll">DiceBot : (50-2D6) ＞ 50-11[6,5] ＞ 39</span>
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			「YDFの誇りにかけて！」ローリングしながら詰め寄りパンチを叩き込みます！！＠
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			「そのローリング意味あるのｋグワーーーッ！」
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			ローリングローリング言うけどマジでローリングしながら銃撃つゲームでさ…
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			「くっそぉ……よくもやってくれたな……」
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			あ、待って増強の+1した？
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			というわけでこちらの手ば……してないね
+		</p>
+		<p class="player p12">
+			<b>system</b>
+			[ ゆるい骸骨 ] HP : 56 → 55
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			２だったわ
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			いや、１であってる<br>
+			コンセ撃った時点では暴走率55%だったはずなので
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			そっか！！<br>
+			OKOK
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			――瘴気が戦場に立ち込める。<br>
+			応用技《ジャック・ザ・キャリアー》&gt;&gt;自身<br>
+			Tr【タイミング：命中判定】（攻撃発動　ペネ）　＠
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			結局私の勉強にもなっててわろてる
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			こいつに向かって命中判定したやつにペネ攻撃が飛んでいきます<br>
+			次、再行動
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			ふざけんなｗ
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			――瘴気が戦場に立ち込める。<br>
+			応用技《ジャック・ザ・キャリアー》&gt;&gt;場<br>
+			Tr【タイミング：命中判定】（攻撃発動　ペネ）　＠<br>
+			誰か攻撃したらそいつに（略）<br>
+			はい、エンドフェイズー<br>
+			ボスは宣言なし＠
+		</p>
+		<p class="player p12">
+			<b>system</b>
+			[ ゆるい骸骨 ] MP : 30 → 25
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p2">
+			<b>カリン</b>
+			んあ、カリンの能力攻撃4ｄ6+1じゃん！！ごめんなさい！！1多く攻撃与えた気がします！！
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			状況は最悪だ(定型文)
+		</p>
+		<p class="player p12">
+			<b>system</b>
+			[ ゆるい骸骨 ] HP : 55 → 56
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			やっぱり1点多かったり1点少なかったりしろ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			すみません…
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			PPの回復B2＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			宣言なーしやで
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			PPB処理どうぞ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			因子今3です<br>
+			2D6 <br>
+			<span class="diceroll">DiceBot : (2D6) ＞ 8[2,6] ＞ 8</span>
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			あっと、そうだ…因子欄もいるわなこれ…
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			PP14
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			では２Ｒ目ー<br>
+			行動値1　ＡＥなし＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			行動値5宣言無し＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			行動値5　AEなし<br>
+			＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			あーーー困ったな…
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			同じくＰＣ2人からどうぞー
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			能力攻撃1d6+5,
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			マジでどうすりゃいいのよｗｗｗｗｗ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			食らう時は最大で11食らう
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			エイガーさんは食らえるけどカリン…
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			なんだかんだうちのボスで長考されるの久々だな
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			トラップ系頭痛くなんだもんなぁ
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">雑談</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			最近は特攻突いて崩されるかそもそも離脱ルートで相手にされないかが普通だった
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p2">
+			<b>カリン</b>
+			SS判定で刹那対抗、カリンのSSは14+1d6<br>
+			勝てば勝てるけど負けたら負けます！！（？？？？？）
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			どうせこいつまた煙撒くしな…
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p5">
+			<b>大統領</b>
+			あとボス模擬だからって理由で相手にされないか
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			追憶 - 悲嘆 - 、是非来てくれよな！！<br>
+			レックウザはなんか違う理由で長考された<br>
+			ＰＬがレックウザじゃなくて自ＰＣのキャラシとにらめっこしてた
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			とりまエイガーさんが突っ込んで食らってみる？
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			俺はにらめっこ一切してなかったし…横から茶々入れただけですよ
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p2">
+			<b>カリン</b>
+			とりあえずお願いします
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			んじゃーエイガーからどうぞ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			はい<br>
+			あーーんーーーー
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>チヒロ</b>
+			本気で初回討伐目指してましたが、<br>
+			ダイスがヘタクソだったのと途中プレミしたので殺し損ねました
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			突っ込むね！！！！！！！！！！
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p5">
+			<b>大統領</b>
+			1くんがレックウザワンキルできるっていう話はルールミスあったんで無理でした！！
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			格闘攻撃、攻撃コンセ10！！＠
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p5">
+			<b>大統領</b>
+			1くんが3人くらいあつまればいけるかもしれんけど
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			格闘攻撃そのものには対抗なし<br>
+			で、命中判定の前に<br>
+			――立ち込めた瘴気が肉体を蝕む。<br>
+			場設置《ジャック・ザ・キャリアー》&gt;&gt;エイガー<br>
+			Tr【タイミング：命中判定】（攻撃発動　ペネ）　刹那判定。宣言なし＠
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			1くんポケモンだったのか
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			刹那って基本的になんもできないよな
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			AEできないからね
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			この場で開示しといた方がフェアか<br>
+			――立ち込めた瘴気が肉体を蝕む。<br>
+			自設置《ジャック・ザ・キャリアー》&gt;&gt;エイガー<br>
+			Tr【タイミング：命中判定】（攻撃発動　ペネ）　刹那判定。宣言なし＠<br>
+			おかわり<br>
+			罠は２つ設置してあって、その両方の発動条件満たしてるのでどっちもエイガーに飛びます<br>
+			まずは場設置の方から処理<br>
+			で、それについては上記の通り対抗なし<br>
+			刹那なのでＡＥは宣言できません。ＡＥ以外（ＢとかカルマとかＳＰＥとか）は宣言できます
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			なんか1人1コ発動する気でいたわ
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			場設置、つまり「フィールドに居る誰かが命中判定したら飛ぶトラップ」と自分設置「俺に命中判定したら飛ぶトラップ」が仕掛けられてたわけだな
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			回避…んーー
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			で、エイガーさんは「フィールドに居る誰か」なので飛ぶ、ゆるいクソ骸骨が「俺に殴り掛かったら」にかかるので両方飛ぶわけよ
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			スマブラワゴン
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			回避した場合に攻撃止めるとかないよね？
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			ない
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			とりま回避してみるか
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			エイガーが罠2連打で死んだら話は別だが
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p2">
+			<b>カリン</b>
+			トラップは設置できるところに1つだけ、だから２回攻撃しようとするとそうなるのね…
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			さて、宣言はなしかな？
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			回避＠
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			では<br>
+			12+2d6 素SS <br>
+			<span class="diceroll">DiceBot : (12+2D6) ＞ 12+8[3,5] ＞ 20</span><br>
+			20
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			SSか
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			5u6 てすと <br>
+			<span class="diceroll">DiceBot : (5U6[0]) ＞ 無限ロールの条件がまちがっています</span><br>
+			違うのか
+		</p>
+		<p class="player p3">
+			<b>チヒロ</b>
+			なお、まずやらかさないと思いますが<br>
+			両トラップがある状況でボスが解放もせず殴りに行った場合、<br>
+			設置トラップが反応してボスに攻撃<br>
+			その設置トラップの攻撃に反応してボスに追撃<br>
+			というギャグが発生します
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			条件満たして起動した罠だからね
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			9+1D6　SS <br>
+			<span class="diceroll">DiceBot : (9+1D6) ＞ 9+2[2] ＞ 11</span>
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			これが解放（任意起動）になると、物理命中になるし刹那でもなくなる
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p2">
+			<b>カリン</b>
+			そんなんなるの！？
+		</p>
+		<p class="player p3">
+			<b>チヒロ</b>
+			無限ロールは<br>
+			nU6[x]ですね
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			ギリ倍差ではない
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			はい
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p2">
+			<b>カリン</b>
+			5U6[6] <br>
+			<span class="diceroll">DiceBot : (5U6[6]) ＞ 15[6,6,3],1,2,13[6,6,1],2 ＞ 15/33(最大/合計)</span>
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			1d6+5 <br>
+			<span class="diceroll">DiceBot : (1D6+5) ＞ 3[3]+5 ＞ 8</span><br>
+			ペネといっても実はこんなもん
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p2">
+			<b>カリン</b>
+			あらぶってない？
+		</p>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			4U6 <br>
+			<span class="diceroll">DiceBot : (4U6[0]) ＞ 無限ロールの条件がまちがっています</span>
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			8が2回？別々？
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			間違えた
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			別々
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			はい
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			これは場設置の分だけなので
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			4U6[6] <br>
+			<span class="diceroll">DiceBot : (4U6[6]) ＞ 3,4,3,4 ＞ 4/14(最大/合計)</span>
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			HP22
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			NO
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p2">
+			<b>カリン</b>
+			無限ロールできるだけでなかなか楽な気がする
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			25デース
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p2">
+			<b>カリン</b>
+			ファンブルクンはしりません
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			エイガーはアーマーを装備しているので、その分の軽減がある
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			あ、それは効くんだ
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p13">
+			<b>関根公雄</b>
+			10+2u6[6]
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			なんでかよくわかんないけど効く<br>
+			まぁその分暴走上昇もする
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			ええ…ペネなのにアーマーは効くんだ…何それ…
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			アーマーはペネを無視してガード出来ると考えるとなんかちょっと凄いようなそうで無いようなです
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			こればっかりはルルブに書いてあるから……<br>
+			さて、次。罠は2枚あった！
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p14">
+			<b>はむぱん</b>
+			2U6[6]+10　編集で正しい形に直しても振りなおさない
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			こちらも特に宣言なし＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			時間かかりまくってすまん！
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			3点だからなぁ
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			回避
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p14">
+			<b>はむぱん</b>
+			5U6[6]+10　これ編集で変えてもダイスには反映されない <br>
+			<span class="diceroll">DiceBot : (2U6[6]+10) ＞ 10[6,4],1+10 ＞ 20/21(最大/合計)</span>
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			回避、ではなく「宣言なし」と言ってもらえるとわかりやすくて助かります！
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p14">
+			<b>はむぱん</b>
+			ダイスが先ならいいのか
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			はい！！！！！
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			では命中<br>
+			12+2u6[6] つまりこういうことかね<br>
+			2u6[6]+12 つまりこういうことかね <br>
+			<span class="diceroll">DiceBot : (2U6[6]+12) ＞ 5,3+12 ＞ 17/20(最大/合計)</span><br>
+			……私は手動でいきます！！！！！！！
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			ちょっと難しい！
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			なんかちょっと見づらい
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			回避どうぞ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			9+1D6　SS <br>
+			<span class="diceroll">DiceBot : (9+1D6) ＞ 9+2[2] ＞ 11</span><br>
+			やる気ある？
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			1d6+5 ﾁﾈｰ <br>
+			<span class="diceroll">DiceBot : (1D6+5) ＞ 6[6]+5 ＞ 11</span><br>
+			頑張った
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			えー
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			いたそう
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			iute<br>
+			いうてＨＰ半分削れてないわこれ<br>
+			何ならアーマー2回も発動させられた負担の方がしんどいやつだ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			暴走がやばい！！
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			フヘヘッ
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			「ひっ……！　……あ、で、でもあいつナノマシンの中に……助かった……？」　＠やったか？　みたいな顔<br>
+			さて、本命の命中ロールどうぞ<br>
+			ちなみにまだ80活性は乗らない<br>
+			実は今回はエイガーの手番だったのだ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「オオーーッ！」ゴロゴロゴロゴロゴロゴロ＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			な、なんだって～！！
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			14+1D6　めいちゅうー <br>
+			<span class="diceroll">DiceBot : (14+1D6) ＞ 14+2[2] ＞ 16</span>
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			Σ「うわあああああああああ!?」
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			ゴロン族か？
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			3+2d6 <br>
+			<span class="diceroll">DiceBot : (3+2D6) ＞ 3+4[2,2] ＞ 7</span><br>
+			轢かれる<br>
+			倍差だよ！　ダメロどうぞ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			4D6+10+2　くらえー <br>
+			<span class="diceroll">DiceBot : (4D6+10+2) ＞ 17[5,6,4,2]+10+2 ＞ 29</span>
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			なんで急にそんな回った？？<br>
+			28点
+		</p>
+		<p class="player p12">
+			<b>system</b>
+			[ ゆるい骸骨 ] HP : 56 → 35<br>
+			[ ゆるい骸骨 ] HP : 35 → 28
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			「へぶぁ!?　こ、こいつ……」
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「オリャッ！」顔面？にパンチ食らわせます＠
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			「お、俺っちをコケにしやがって……もう許さねーぞ！　本気だからな！　本気で怒ったからなー！」<br>
+			――戦場にナノマシンがなだれ込む。<br>
+			性質系《バラの花輪》<br>
+			（性質【反応】）　　　　＠
+		</p>
+		<p class="player p10">
+			<b>でかい骸骨</b>
+			鎌を大きく掲げ、ぐるぐると回転させます。<br>
+			それが合図となったかのように、彼らの背後からドス黒い液体がなだれ込んでくるでしょう＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「ぐはぁ！」煙の中を抜けてきますが思ったよりきつそうです＠
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			「お、おまえらが悪いんだぞ……おまえらが……おまえらが……」<br>
+			「ブ、ブッ殺す……ブッ殺してやるッ！」＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			とか言いつつまだカリンの手番だったり　どうぞ＠<br>
+			あ、エイガーはra70だった
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			うん、<br>
+			1D6 <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 1</span>
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			自爆！！！
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			お、自爆か？
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			地縛。まぁ大丈夫だろう
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			2D6 <br>
+			<span class="diceroll">DiceBot : (2D6) ＞ 8[5,3] ＞ 8</span>
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			能力ダメージどうぞ
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			8点。これは接触判定がないのでアーマーは起動しない
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			増強と忘れてた1いれて+4？
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			いや、ra70は70活性までしか乗らない<br>
+			なので11ですね、増強込みでも
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			よし！(よしじゃねえ)
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			80活性は＋１ｄなので……これも入ってたら気絶がワンチャンあった<br>
+			そしてづけさんは大丈夫だろうか
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			何がですか！！
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			いろいろ！！！！！！！
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			いや、生きてるのかって事じゃない…？
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p2">
+			<b>カリン</b>
+			平気だ！！1月から土日休みなので無敵！！腹痛は微妙だけど平気！！
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			まぁ大丈夫なら宣言どうぞ<br>
+			！！！！！！！！！！
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「うわぁぁぁぁぁぁ！！」肉体崩壊とかいろいろで体全体が痛い痛い＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「ちょ、大丈夫か兄ちゃん！早いとこやっつけな…」＠
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			「ひっ……し、死ね！　死ね死ね死ね！！！！　いや別に死ななくてもいいけど動かなくなってくれ！！！」
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			SO１して+8するかまようところです！！<br>
+			反動引いてはずしたら悲惨だからやめとくか…？
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			「死んだら捕まった時に罪が重くなるから！　いややっぱ死ね！　おまえらが死ねば追っ手が少なくなってその分捕まるリスクが、あーでもやっぱり……」　なんか一人でブツブツ言ってる＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「ぐ、軍曹…！応援はまだか…」命の危機なので定型文じゃない言葉をしゃべります＠
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			草<br>
+			それ世界観的にもロールプレイなのかよ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			こまけえこたあいいんだよ
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			てっきりセバスチャンの同属だと思ってた……
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			これ我々の攻撃より先に相手のが来るのがなあ
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			あ<br>
+			大事なこと忘れてた。因子覚醒宣言します。暴走率が70%になります<br>
+			それだけ＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			！！！！！
+		</p>
+		<p class="player p12">
+			<b>system</b>
+			[ ゆるい骸骨 ] 暴走 : 40 → 70
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			性質発動＋反応型７０、さーなんぼか考えとけよー
+		</p>
+		<p class="player p5">
+			<b>大統領</b>
+			進研スマ通信講座始まってない？
+		</p>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			してない
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p2">
+			<b>カリン</b>
+			性質発動で+3、反応活性で+3<br>
+			9+2d6 <br>
+			<span class="diceroll">DiceBot : (9+2D6) ＞ 9+4[3,1] ＞ 13</span><br>
+			やべダイス振っちゃったテヘペロ
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			あるある<br>
+			さて、そろそろ答えを聞こうじゃあないか
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			まあ困ったら適当よ、気合い入れてダイス振ればええねんラバソみたいに
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p2">
+			<b>カリン</b>
+			というわけで…サンビーム+出力増大+極太レーザー　消費7、スペック7　4d6+1+12　命中+4で　AEは…うーん…攻撃に+5　雑だけど
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			倒せなかったらそん時に考える！！
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			攻撃コンセ5かな？
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			はいー
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p5">
+			<b>大統領</b>
+			これこれ、我々はラバソではないのですよ
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			ほい、対抗なし！<br>
+			やれるもんならやってみろよオラァ！（テンプシーロール）
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			14+4+1d6　命中いきまぁす <br>
+			<span class="diceroll">DiceBot : (14+4+1D6) ＞ 14+4+1[1] ＞ 19</span>
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			あっ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			ぽへ～！！<br>
+			1d6 <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 5</span><br>
+			おい
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			14か……
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			14ッスね…
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			・・・
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			3+2d6+3+3 まぁノーチャンってわけでは <br>
+			<span class="diceroll">DiceBot : (3+2D6+3+3) ＞ 3+6[1,5]+3+3 ＞ 15</span><br>
+			あっ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			おい
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			15-1d6 <br>
+			<span class="diceroll">DiceBot : (15-1D6) ＞ 15-3[3] ＞ 12</span>
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			ﾊｧｯ
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			殺菌される……
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			よしよし
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			ダメロどうぞ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			4d6+1+12+5 <br>
+			<span class="diceroll">DiceBot : (4D6+1+12+5) ＞ 9[1,5,2,1]+1+12+5 ＞ 27</span>
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			我々はラバソでは無いがラバソを見習うことは出来る　結果が付いて回るかどうかは別問題よ
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			「YDFの加護よッ！！」＠
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			防御1！！！！！！！！<br>
+			26点！！！！！！！！！！！<br>
+			堪えたぞぉぉぉぉ
+		</p>
+		<p class="player p12">
+			<b>system</b>
+			[ ゆるい骸骨 ] HP : 28 → 2
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			クソォ…
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			1d6 <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 3</span><br>
+			あっ<br>
+			気絶します……
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			！！！！！！！！！
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			草
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			トドメＲＰありますか!?!?!?!?
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			あ、やっぱ普通に気絶するタイプのボスやった
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			RP！するんだ！
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			「……あっ、な、なんかやばいやつだ！　めっちゃ光ってるぞ！　おい！」
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「ワイの友達…家族…体も大きくて力もあるワイが守るんや！！」
+		</p>
+		<p class="player p10">
+			<b>でかい骸骨</b>
+			カリンに向けて、ナノマシンが四方から襲い掛かります＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「食らえーッ！！」＠カリンの　ソーラービーム！！
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p14">
+			<b>はむぱん</b>
+			guki ないのか？
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			では、ナノマシンが到達するより僅かに、しかし決定的に速く、カリンの発射した熱線が二体の骸骨を撃ち抜くでしょう
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p2">
+			<b>カリン</b>
+			gukiしてるとおもいます！！
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			「――――――こ」<br>
+			「こんちく……しょう」
+		</p>
+		<p class="player p10">
+			<b>でかい骸骨</b>
+			核を撃ち抜かれ、そのまま風へ溶け消えるように消えていきます
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			「終わったか…？」＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「…消えてもうた。」＠
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p14">
+			<b>はむぱん</b>
+			いや、ダイスボット…
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			小さな骸骨もまた、肉体の大部分を消し飛ばされ活動を停止するでしょう。
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p2">
+			<b>カリン</b>
+			ああ…どうなんでしょ
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			「やるじゃないか！勲章ものだ！お前のおかげだ」グッ！ｂ ＠
+		</p>
+		<p class="player p9">
+			<b>ゆるい骸骨</b>
+			あなたへ今にも覆いかぶさろうとしていたナノマシンたちも、あなたへ届くことなく、まるで幻のように姿を消しました。
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			静まり返った下水道で、あなたたちはただ2人、立っていました。
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			「あ、ありがとな…」＠
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			エイガーさんはたぶん寝っ転がってます
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			なんで！？
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			くるしいから
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			というわけで勝利です。お疲れさまでした＠
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			そこまでちっちゃくなるんだ
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p5">
+			<b>大統領</b>
+			短期決戦ヨシ！！
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p2">
+			<b>カリン</b>
+			お疲れさまでした～
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			まぁ小さくなるというよりはドクロの部分しか残ってない感じ<br>
+			抑制の必要もないか、思ったより余裕だったな
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p5">
+			<b>大統領</b>
+			………DE∀THくんキャラロスですか？
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			「こちらエイガー！本部応答してくれ！」定型文無視して報告＠RPEND
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			カリンはこの後エイガーさんをおぶって下水道を出ますが、入り口のところで引っかかりYDFに救助されます＠RPEND
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			お疲れ様でしたー！<br>
+			こいつRPの気が楽だな…
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			完走した感想等あればどうぞ
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p14">
+			<b>はむぱん</b>
+			乙や
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			たのしかったです
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			相手の回避がアレな時は攻撃に突っ張る、ヨシ！<br>
+			今日はトラップの面倒くささに付いて学びましたね、相手のトラップの仕掛け位置と発動条件は良く注意しましょう
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p2">
+			<b>カリン</b>
+			トラップのウザさがよくわかりました
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			トラップやばいですね！
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ちなみにトラップ発動せずに手番を譲ればどうなっていたか？
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			あといまいち性質の事分かってなかったけど3００％理解しました（ばなな顔）
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			普通に解放して命中17+2dで殴ってきます
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			いやんばかん
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p14">
+			<b>はむぱん</b>
+			GMが臨戦R無制限とか言ってきたらトラップを無限に設置しまくって無限に殺し続けましょう
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			トラップって３ツくらいまでしか設置できないんじゃなくて…？
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			クリーチャーがいたらクリーチャーも３つぐらいまでしか設置できないので
+		</p>
+		<p class="player p14">
+			<b>はむぱん</b>
+			クリーチャーは別ユニットだから…クリーチャー作って転換してトラップ置かせて消滅させてクリーチャー作って(ry
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			クリが2体も並べば6個とか9個とか設置できます
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			そんなの誰が楽しいってんだよ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			自分でしょ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			今お二方が戦ったのはそれを実際の卓でやってボスを殲滅した人です<br>
+			7連撃でのワンショットキルは流石に許されなかった
+		</p>
+		<p class="player p14">
+			<b>はむぱん</b>
+			7連撃でボスを倒して一緒に卓してたお友達からオレらにも戦わせろって怒られが発生してました
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			ＨＰバカ盛りとかならわかるが…
+		</p>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			まあ勝つという目的は達せるけど実際にそれの横に居たＰＣは棒立ちで終わっちゃうわけよな
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			また模擬あったら作り置きを出すか…
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p2">
+			<b>カリン</b>
+			ソロで行けばよかったんですね…
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p2">
+			<b>カリン</b>
+			普通の卓には出さないんです？
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			めったんが行くもん
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			意思
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			戦うんじゃなくて勝つのが楽しいフレイザード思考だったから……
+		</p>
+		<p class="player p11">
+			<b>ス＠見学</b>
+			まあアレですよね、姉卓の高松さんですかね<br>
+			アレよりもうちょっとひどいかな<br>
+			構えた僕らは！？！？！？って感じ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			高松さんは戦闘じゃないからセーフ<br>
+			セーフか？
+		</p>
+		<p class="player p5">
+			<b>大統領</b>
+			ジャマーが悪い（論点のすり替え）
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			まぁ語弊を恐れずに言うなら私は今でも戦うんじゃなくて勝つのが楽しいと思ってるから……
+		</p>
+		<p class="player p14">
+			<b>はむぱん</b>
+			ココフォリア、キャラの表の位置がキャラ多くなったら立ち絵表示とかぶって大変だな…
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			立ち絵っていうかメッセージウィンドウ消したい…
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			演出としてはいいんだけどね～　RPGみたいでわたしは好き
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			居ても良いけどもっと小さくなってくれ
+		</p>
+		<p class="player p2">
+			<b>カリン</b>
+			というわけで私はこの辺で…おつかれさまでした
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>エイガー</b>
+			記憶は保持していいよね？
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			乙した乙したｗｗｗｗ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			おつー！
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ええですよ
+		</p>
+		<p class="player p4">
+			<b>エイガー</b>
+			ヤッタネ！<br>
+			解散しよう
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p5">
+			<b>大統領</b>
+			まぁ僕も勝利自体によろこび感じるから
+		</p>
+		<p class="player p14">
+			<b>はむぱん</b>
+			PC達の生きた過程によろこびを感じるから…
+		</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+body {
+	margin: 15px; line-height: 140%; font-size: 14px;
+}
+tr.open {
+	background: rgb(255, 255, 255); padding: 10px 0px; overflow: auto;
+}
+tr.secret {
+	background: rgb(51, 51, 51); padding: 10px 0px 10px 10px; color: rgb(204, 204, 204); overflow: auto;
+}
+tr.tab1 {
+	background: rgb(255, 255, 255); padding: 10px 0px 10px 10px; overflow: auto;
+}
+tr.tab2 {
+	background: rgb(255, 247, 239); padding: 10px 0px 10px 10px; overflow: auto;
+}
+tr.tab3 {
+	background: rgb(255, 249, 252); padding: 10px 0px 10px 10px; overflow: auto;
+}
+tr.tab4 {
+	background: rgb(240, 255, 243); padding: 10px 0px 10px 10px; overflow: auto;
+}
+tr.tab5 {
+	background: rgb(240, 250, 255); padding: 10px 0px 10px 10px; overflow: auto;
+}
+tr.tab6 {
+	background: rgb(239, 239, 239); padding: 10px 0px 10px 10px; overflow: auto;
+}
+p {
+	margin: 0px;
+}
+.icon {
+	background: rgb(255, 255, 255); margin: 0px 5px 0px 0px; border: 1px solid rgb(204, 204, 204); border-image: none; width: 100px; vertical-align: top; float: left; max-height: 100px; object-fit: cover; object-position: 0 0;
+}
+.tabname {
+	margin: 0px 10px 0px 0px;
+}
+.tabname::before {
+	content: "[ ";
+}
+.tabname::after {
+	content: " ]";
+}
+.name {
+	margin: 0px 10px 0px 0px; font-weight: bold;
+}
+.name::before {
+	content: "[ ";
+}
+.name::after {
+	white-space: pre; content: " ]""\A";
+}
+.maintext {
+	
+}
