@@ -1,0 +1,1668 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<title>キリＴ【瓢】</title>
+<style>
+*{margin:0;padding: 0;font-size: 14px;font-family : 'メイリオ',Meiryo,Osaka,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック','MS PGothic',sans-serif;}
+body{width: 100%;margin: 0;padding: 0;background-color: #f7f7f7;position: relative;}
+a{color: #666666;}
+a:hover{color: #CD0000;}
+h1{font-size: 21px;color: #666666;margin: 0px;padding: 0px;border-bottom: 1px solid #CCCCCC;}
+h2{font-size: 16px;color: #666666;margin: 5px;padding: 50px 0 0 0;border-bottom: 1px dotted #CCCCCC;}
+label{transition: all 0.2s;}
+#toggle{display: none;}
+#label_toggle{display: block;width: 100px;text-align: center;padding: 0;border: 2px solid #CD0000;background-color: #FFFFFF;color: #CD0000;border-radius: 15px;position: fixed;top: 10px;right: 10px;z-index: 1005;}
+#label_toggle:hover{background-color:#CD0000;color:#FFFFFF;}
+header{display: block;width: 0px;height: 100%;position: fixed;background-color: #FFFFFF;border-left: 1px solid #CCCCCC;z-index: 2;top: 0;right: 0;overflow-y: auto;overflow-x: hidden;transition: all 0.2s;padding: 50px 0 0 0;box-sizing: border-box;}
+#toggle:checked + header{width: 200px;}
+header label{display: block;width: 180px;margin:0 5px;padding: 5px;border-bottom: 1px dotted #EFEFEF;}
+header label input[type="checkbox"]{margin-right: 5px;}
+label:hover{cursor:pointer;background-color: #EFEFEF;}
+.wrapper{display: block;width: calc(100% - 30px);max-width: 1100px;padding: 30px 15px 100px 15px;margin: 0 AUTO;overflow: hidden;position: relative;background-color: #FFFFFF;}
+/* ログ部分 */
+dl{display: block;margin: 0;padding: 3px;box-sizing: border-box;}
+dl::after{display: block;content: "";clear: both;}
+dt{display: block;font-size: 0.8em;font-weight: bold;float: left;width: 100px;margin: 0;padding: 5px 5px;text-align: right;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+dd{display: block;width: calc(100% - 120px);margin: 0;padding: 2px;float: right;line-height: 1.8em;}
+.zatsudan{width: 95%;margin: 0 0 0 AUTO;background:#f7f7f7;border-left:1px solid #CCCCCC;}
+.other{background-color:#fff7ef;}
+.secret{width: 98%;margin: 0 0 0 AUTO;border-left:3px solid #CCCCCC;}
+.group{background:#f9f9f9;border-left:1px solid #CCCCCC;}
+@media (max-width:480px){
+  dt{display: inline-block;float: none;width: calc(100% - 6px);margin: 0;padding: 3px 0 0 3px;text-align: left;}
+  dd{display: inline-block;width: calc(100% - 6px);padding: 3px;float: none;}
+}
+</style>
+<style>
+.tab_0{}
+.tab_0.selected{display: none;}
+.tab_1{}
+.tab_1.selected{display: none;}
+
+</style>
+</head>
+<body>
+<label for="toggle" id="label_toggle">表示/非表示</label>
+<input type="checkbox" name="toggle" id="toggle">
+<header>
+<label>▽ 非表示にするタブ</label>
+<label for="main"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="main">メイン</label>
+<label for="zatsudan"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="zatsudan">雑談</label>
+<label for="tab_0"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="tab_0">info</label><label for="tab_1"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="tab_1">見学</label>
+</header>
+<div class="wrapper">
+<h1>キリＴ【瓢】</h1>
+<h2 id="day1">キリＴ【瓢】</h2>
+<dl style="color:#000000" class="group tab_0"><dt>KP</dt><dd>    【タイトル】瓢《ヒサゴ》<br>【舞台】現代日本<br>【プレイ時間】ボイスセッションで3時間程度想定（テキセで9時間ほど？）<br>【推奨人数】1-3人<br>【推奨技能】＜目星＞＜聞き耳＞＜図書館＞＜精神分析＞<br><br>【トレーラー】<br>　探索者（達）は、ある日、友人から“恐ろしい程当たる占い師がいる”という話を耳にする。<br>　友人はその占い師に占ってもらってからというもの、周囲で次々と良いことが起こり始め、ついには願いまで叶ったと興奮気味に語る。<br>　強く勧められるまま、占い師のもとへと足を運ぶ探索者達ですが……?   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊手紙</dt><dd>    こんばんは   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊手紙</dt><dd>    すいませんいあきゃらのキャラシを使ってコマ作れませんでしたっけ   </dd></dl>
+<dl style="color:#000000" class="zatsudan"><dt>亀卜 朗 (かめうら あきら)</dt><dd>    出力からコピーすればいけます   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正 (ばば くろまさ)</dt><dd>    コピーが出たらそのまま盤面に貼り付け   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊手紙</dt><dd>    コピーしてからどこに貼り付ければいいのかわからない   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正 (ばば くろまさ)</dt><dd>    盤面の画像とかじゃない右クリックできる適当なところで貼り付け   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊手紙</dt><dd>    ！！！！！！   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊手紙</dt><dd>    ありがとうございます   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    ハタケヤマ・ケイタロウです。<br>二人の共通の友人という形になります   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    本日はNPCとして皆さんを狂気の世界にいざなっていきたいと思いますのでよろしくお願いします   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    名前にコピーってついてることに気づかなかった　スワンプマンじゃないです　本物です   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    仕事は前走でジャーナリストってことになってますが別になんでもいいです<br>シナリオ上の指定はない   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    フリガナ消しました（邪魔なので）   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    あとすいません、表情差分とかってどう設定するんでしたっけ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    あ、これか   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    チャット末尾にアットマーク打って、表情差分の名前を書くと差分変更できる   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    私はアットマークが発言に残るのが煩わしいのでコマ直接編集で表情変えてます   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    残らなかった気がするけど   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    あん？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    テスト   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    残らない！   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    ！！！！！＠真顔   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    自分からは見えるのか…？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    いや、全部表示されてますね   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    半角全角とかか？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    ！！！！   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    ＠を半角で入れればいいのか   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    面倒！！！！！！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    そうです   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ま、凝ったところでログにはのこらないんですけどね   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    はい   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    10分もまたせてすいません、準備できました   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    あ、これ一度かえると表情そのままなのか。ニュートラルに戻らないのね   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    はい   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    なのでココフォリアでやる時は割り切って一枚絵にしてる   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    賢明だわなそれが   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    まああとはオリオンみたくかおもじで表現するか   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    というわけでシナリオ【瓢】初めて生きたいと思います   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    よろしくお願いします   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    黒正くん、うちら水泳部だったりしません？   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    高校のころ   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    よろしくお願いします！   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    choice[そうだよ,違うね] (choice[そうだよ,違うね]) ＞ そうだよ  </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    そうだよ   </dd></dl>
+<dl style="color:#795548" class="zatsudan"><dt>畠山 鶏太郎</dt><dd>    じゃあ俺も？   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    お前もか   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    冷静に考えたらホストがプライベートで異性と交友するのええんかと思ったけどまあええんです   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    なんか水泳とってるからな二人共   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    取るものが思い浮かばなかったから取った   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    多分水落ちで生存できるように   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    「なんでこいつは俺とタダでプライベートで会ってるんだ……？」ってふと冷静に返ったりしてください   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    ……ともあれ、どのようにして畠山と三人で会うのですか？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    普通に飲みに行くとか？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    市民プール！？！？！？！？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    普通に飲みに行くならそれでよいです   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    こいつ酒飲めたっけな……   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    こいつについて何もかも忘れちゃった   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    飲めます(今決めた)   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「……んじゃ、乾パァーーイッ」　ビールジョッキ片手に＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「イエーイ乾杯ー！」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「乾杯っすー」マッコリで乾杯   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    のんでます＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    PLが飲めないので酒については何もわかりません。カクテルのなんか飲んでます   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    僕も飲めないんでわかりませんദ്ദി⑉¯ ꇴ ¯⑉ )   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ホストやってるとさー。プライベートで誰かと仲良くしてると”なんで俺はタダでこんな関係を許してるんだろう”ってふと我に帰る瞬間があるってマジ～……？」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「いやあ俺は公私混同しないから、友達と飲む分には別にって感じかな。嫌な奴との付き合いとかなら別だが」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「職業病ってやつかァ？　女の子相手に愛想振りまくのも大変だな」　つくね食いながら＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「あ～いいわ黒正、キミは大人の世界に染まってなくて良いね……これからも仲良くしてね。ぐすっ……」泣いてますが、涙道障害で常に涙が出ているだけで感極まっているわけではないです＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「色々やってきて最終的に落ち着いた職業だからな。そこそこ気楽にやれる店に入れてよかったよ」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「お前らだって仕事は大変だろー？特に探偵なんて日常茶飯事で殺人事件に巻き込まれたり…」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「そのセリフで泣いてたらオカンみてぇだな」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「それは名探偵コナンの見すぎだよ黒正～」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「なんだそれ老けてるって意味かーやんのかニワトリ太郎てめー？」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「そういやコナンって京極さんよりジョディ先生の方が登場遅いんだぜ」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「老けてるとは言ってねぇ、ババくせぇって言ったんだよ」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ジョディって誰だっけ……あの……なんかメガネで……銃撃つのうまくて……」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ってそんな眼鏡の話はいいんだよー！聞き捨てならねー！」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ババくせぇってなんだよー！おめーがいつまでもガキだからそう見えるんじゃねーのかー！？あー！？」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「ぐえええわかったわかった」　ビールジョッキ片手にゆさゆさされてます   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「手紙はちょっと面倒見が良くてお節介なだけだろー？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「そーです。おねいさまとお呼び。」酔ってません＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    まだ＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    そういえば馬場はクールぶってるキャラなのに全然そんなことなかったぜ   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「ウチの店でそんなデリカシーの無い発言をしたら、先輩に５回はゲンコツ受けるぜ」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「そんときゃ私も加勢に行くよ……ぐすっ……」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「身内でもない相手にンな真似しでかしたら俺が記事のネタにされるわ」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「あ、すいません。背ぎもとすなずり、ビールもう一杯」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    通りすがりに注文を受けた店員が引っ込んでいきます   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「あ、もろきゅうもお願いしゃす……。ぐすっ」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「あ、俺はねぎま追加で」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「しかし記者も大変そうだな。記事のネタを探して取材して文章に纏めて…ってやるんだろ？」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「あ～？　ン～……まぁなー」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「思うように書けたところで編集者が気に入らなきゃそれまでだしな」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「あ～何、おエライさんにとってフツゴーな記事はマジでもみ消されたりすんの？」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「前までは随分ボツを食らったもんさ……」　料理が届いて店員に礼を言いながら＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「きゅうり ヘルシーで おいしい」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「さぁ？　俺はまだそこまでデカい記事を扱える立場じゃねぇからなぁ……」<br>「ま、この調子ならそのぐらいデカい記事を扱う時も来るかもな」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「…………？」黒正と顔を見合わせるような視線の動き   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「ま！　その時はケンリョクに屈さず、ドカンとスクープぶち上げる覚悟っつー奴よ、俺は！」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「なんだチミ、私が万年半人前探偵だってのに調子良いのかいチミは」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「デカい記事を扱った結果消されるなんてオチはやめろよな」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「あ……？　馬鹿お前。調子なんか……」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「……メチャクチャ良いに決まってるモンねーッ、ギャハハハハッ！」<br>愉快さを抑えられんと言わんばかりに笑っています＠<br>   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「ここまで見事に調子に乗ってる奴も珍しいな…酔いが回ったか？」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    &gt;&gt;デカい記事を扱った結果消される<br>「ま……その内の話だよ。今は別に具体的な話があるわけじゃないし」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「自慢したいんだろ！？自慢したいんだね！？」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「おーし今日は聞いてやってもいいぞ！？つまんなかったらコロスけど」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「いいじゃん、なんか面白い話なら客に話す話題にもできるし聞かせてくれよ」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「いーや！　むしろこの話はな、お前らに話してやりたいと思ってたんだよ！」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「俺の成功のヒケツ！　……なんだと思う？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「そうだな……【長いものに巻かれる】………！ぐすっ……」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「う～～ん半分正解！」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「規則正しい生活リズム…は記者だと難しいか？」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「取材先に合わせないといけないし納期もあるからなぁ」<br>「今ん所、健康診断はなんとかなってるけどそれはそれとして肩凝りが凄くてよ……」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「なんだ！？半分正解だとー？権力者の犬になったのか……！？マスゴミと化したんだな！？」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「正・解・はッ」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「……“占い師の先生”でした」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    腕に着けたブレスレットを示しながら言いました＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「………占い？」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「【キャラじゃねー】って思ったろ？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「な……なんだおめーオカルトに傾倒したのか……！？」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「まぁ……私はそういうの存在しないとは思わないけど………。」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「まあ…むしろそういうところに取材するもんじゃないか？記者って」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「そう！　オカルトだよ～ん！」<br>「俺も最初は胡散くせーと思ってた、でもハマるとかハマらないとかじゃねぇんだよ！」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「あの先生は本物《マジ》なんだッ！」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「占い自体を否定はしないけど、あんまりのめり込み過ぎるのは良くないぞ鶏太郎」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「俺の先輩も特技が占いで客との話題にしてるけど、会話のテクニックだったりが主だし…」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「なんならそういうホットリーディングやコールドリーディングは私にもできるんよ……ぐすっ……」＠n   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「ウンウン。【まさか！】だよなァ……。でもその【まさか！】なんだな～、現実って……」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「先生の言う通りにしたらよ～～。記事の採用率も上がって昇進候補に上がったんだ」<br>「おまけに会社の受付さんとデートの約束ができた！」<br>「ほんと、先生様様なんだよ俺の人生……。一瞬でも疑った自分が恥ずかしいぐらいだぜ」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「えー……ちなみにおいくらかかるの？その占い」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「１０分３０００円だ。……ま、安いとは言わねぇ」<br>「けど、人生変える占いって考えればおつりが来るさ」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「それに……俺の紹介って言えば、初回は無料なんだ」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「！？！？！？？！？！？！？！？」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「お得じゃん！！！！！！！！！！！」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （ううん…こういう時どうすればいいんだ？鶏太郎が前向きなのはいいことだけど、占いが人生相談レベルならそれにハマりすぎるのは良くないよな）   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「そう！　お得！」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「でも10分だけなんだろ？」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「１０分で十分だ！　先生の凄さは会えばわかる！」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「えーじゃあ私……行くわ……！」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「お前らのためと思って言ってんだ！　先生と１０分話してピンと来なけりゃもう帰ってもらっていい！　そして金輪際この話はしねぇ！」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「私がな……ナイフのような思考回路から導き出される尋問で……！10分間のうちに全てをな～聞き出してやるんだよ……ぐすっ」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「わかったわかった、行けばいいんだろ。ただし10分だけだし俺はあんまり信じてないぞ占い」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「そんで10分以上は何も聞かない！撤退！！びた一文払わない！！！」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「よしそれでいい！」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「だが予言するぜ……。初回無料の１０分を話し終わった頃にはお前ら先生の虜だ！」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「【もう１０分お願いします】っつって、３０００円取り出してる様が目に浮かぶぜ！」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「フッ…忘れたのか？俺はホストという虜にする側の人間だぜ？」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「言うねぇ～！」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「入れ込みすぎだろ？やっぱ催眠術とかかけられてないこいつ？振り子とか取り出したらソッコー帰るからな」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「いや本当なんだってばよ～～！」<br>「行けばわかるとはいえよォー、もどかしいよなァーーッ」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    まぁ占いの話はその辺りで切り上げて、別の話題に移って楽しくお酒飲むでしょう   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    で、お会計の時に   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「……あー」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「そうか……」　財布の中を眺めながら舌打ちします   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「……あのォ～～～」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「……まさか、じゃないよな？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ん？」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「…………マジですまん、今度返すからさ、今日立て替えてくれね……？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「(#^ω^)は？」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「まぁ別にいいけどね……。」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「占い師20分に掛かるお金があれば払えただろ…」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「すまん……次の給料日には絶対返す。ウチは○日だから……」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「まぁまぁ黒正くん。許してやろうじゃないか」肩に手を置く   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「えら～～～くなった鶏太郎くんがそのうちたんと出世払いしてくれるよきっと……ぐすっ」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「そうだな。記事を楽しみにしておくか」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    プレッシャーに冷汗をかきます＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「あ、でも私電子マネーしかないわ……PayPay送るから一回払ってくんね黒正」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「はいはい」＠支払います   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    会計の半額ぶんの電子マネーが送られてくることでしょう＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    チャリーン   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「最後の最後に格好つかねぇことしたなぁ……。すまねぇ」＠   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    そんなこと言ってるけど所持品におさいふ持たせてたな……と思ってキャラシ確認したら「電子マネー決済の方が多い」って書いてあった<br>4年前の自分と解釈一致してたわ   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    4年も前なのか………   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    その日はそれで終わりですか？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「そうだ、黒正が話のネタにしてやればいいんじゃないかな……」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「”怪奇！占いで人生成功したと言いつつ奢ってもらうジャーナリストは実在した……！”<br>みたいな触れ込みで話せばウケるんじゃない」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「いやー…知人のポカをネタにするのは良くないって先輩から口酸っぱく言われてるからなあ」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「まあ今後鶏太郎と一緒に飲む時にネタにするくらいだな」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「コ、コンプライアンスの伝道師……」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「勘弁してくれ」　トホホ顔＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「なんか…そういうところで一歩間違えれば一気に堕ちる業界だって聞いてるから…」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「そのままのおまえでいてくれ　Dear 黒正...」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「いい先輩持ったよ本当」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    はい   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    それでは三人の飲み会は以上で終了です   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    お疲れさまでした   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    閉店ガラガラ！   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    その後ですね   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    三人のLINEグループに畠山がある写真を送ってきます   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    なんだ認識災害ミームか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    イメージですがこういう雰囲気の   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    瓢箪？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    瓢ってこと？（適当）   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『先生の持ってる瓢箪　のレプリカ』<br>『先生が占いの時に使うんだよ』   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『俺も欲しくなっちゃってこれは自作したやつ笑』<br>『粘土だから汚いけど本物はもっと綺麗だから』   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    『自作とかwww執念に草』＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『あの瓢箪はマジですごいから』   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    『駒でも出るのか？』＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『あながち』   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    『ハァ～～～～？』ちいかわのうさぎのスタンプを送ります＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    そしてGooglemapを添付して   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『直近だと明日の２０時に此処で先生が露店やるらしい』   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『俺の紹介って言えば無料のはずだから』   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『また感想聞かせて』＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    『もし無料じゃなかったら今日のと合わせて金返せよ』＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    『明日20時行く？黒正』＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『倍にして返す！』＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    『ちょうど休みだし行けるかな』＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    『じゃいくかw』   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ちいかわのなんとかなれ～！！！！スタンプが送られてきます＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    スタンプで返事します＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    以心伝心   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    はい   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    では、あなたたちは畠山に指定された場所まで足を運びます。   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    来ました   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    昨日来た居酒屋などの飲み屋が立ち並ぶ繁華街です。   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    白杖をつきながら来ました＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    その中でも、人通りの少ない路地――よくわからんゴミだのコンクリート片だのも落ちている、あまり清潔ではない――が、該当の場所でした。＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「こんなところに…？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    なんかSAN値0になってたわ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「んん。流石の私でもわかるぞ。暗くて汚い道のようだな」白杖でゴミをかきわけながら進む   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ま、穴場ってそういうものなのかもしれないけど……」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    手紙の歩ける道を開くようにゴミを蹴ってどかします   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    あざす！   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    そんな路地、ビルとビルの間に、鎮座している人影があります。   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    その人影はいま物音を立ててますか？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （あ…怪しい…！）＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    うつむき加減で座るその人物……歳は四十代くらいでしょうかね。<br>分厚い瞼のせいか目つきが悪く、口元は少しニヤついているようにも感じます。   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    濃紺の着物姿で、言っちゃなんですが……見るからに“怪しい”といった風体です。＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    物音は立ててないと思う＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    普通に座り込んでる   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    明かりは？   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    時間が時間なのでテーブルライトぐらいは？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ん……”あれ”か……？」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「あれなら…ちょっと困るな。めちゃくちゃ怪しい」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「いや元からでしょｗ」小声で＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    机の上にはコース料金表(10 分:三千円/30 分:八千円/60 分:一万五千円)と大きな黒瓢箪が置いてあるのが見えます。   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    頬杖をついて大欠伸をしている＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （あくびしてね？）＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「…時間が長いとお得な値段設定だ」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「暇なんだろうな…俺達が行かなかった場合、客はいるのか…？」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ふむ………」とりあえず露店のすぐ前までは歩み寄ると思います   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「なるほど」料金表に顔を近づけながら   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「……ン」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「お嬢ちゃん、占いに興味がおありかい？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「そうですね……。てゆうか……ごほん」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「畠山 鶏太郎さんに紹介されて来ました……ぐすっ」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「あ、俺も鶏太郎の紹介で…」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「ン～～。悪いけど、名前じゃちょっとわかんないなぁ……」　ぽりぽり   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「なんか、他に特徴ない？　服とか、顔つきとかさ……」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ホットペッパーを見た！！みたいにいかないんかい！」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「ええと…ブレスレットとか？」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「それもウチで売ってるやつだからなぁ……」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「最近、個人情報とかいろいろ厳しいじゃない」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「だから名前とかあんまり訊ねないようにしてるのよ」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    写真とかありますかね   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    あってよい   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「じゃあ…この顔に見覚えは？」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    写真見せます＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「……お、成程。常連の子だね」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （常連なのか…そしてあのブレスレットはここで買ったのか、鶏太郎！）＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「OK、OK。10分コース、無料ね。じゃあ席についてもらって……」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    二人分ぐらいは席あるか   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「一応、二人とも個別に１０分無料でいいけど……どっちから話す？」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「俺から話すか？探偵なら横で聞いてて何かわかったり…」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「んー……じゃあはい、聞いてるよ」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「お兄さんからね」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「お願いします。……で、何の話を？」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「何占ってほしいの？」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「俺は占い師なんだからさ。お兄さんの方がなんか知りたいこと言ってよ」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （あ、そうか占いか。えーと…）   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「百発百中で当ててあげるから」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    choice[金運,仕事運,恋愛運,好きな漫画の連載が軌道に乗るか] (choice[金運,仕事運,恋愛運,好きな漫画の連載が軌道に乗るか]) ＞ 仕事運  </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    立てかけた瓢箪をゆすりながら不敵な笑み。中からちゃぷちゃぷと音がします＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （ここで私がトリックを見破ったらこう言ってやろうかな……「お前のやっていることはお見通しだぁ！」って……）＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「じゃあ仕事運で。今の職場にもだいぶ慣れてきたんですけど、これからどんな感じになるのかなって」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「なるほど～」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「それじゃあ……ま。占ってみるとしましょう」　黒い瓢箪を持ち上げます   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （鶏太郎から俺達のことを既に聞き出してる可能性もあるからな…ちょっとやそっと言い当てられたくらいじゃ驚かないぞ）＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「仕事始めてからはどのぐらいになるの？」　瓢箪をゆすりながら＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「そろそろ１年くらいですかね」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「職場自体には慣れてくる頃って感じだねぇ～」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （水音……なにが入っているんだ……？）＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「座右の銘とかある？」　瓢箪とにらめっこしながら＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    なんとなく時計を見ます。まだ20秒くらいか……＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「あ、キャッチコピーとして提案したら先輩に却下された奴なら」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「……『新星の切り札』」＠大真面目に言います   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「ファンキーだね」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「好きな動物は」　瓢箪を眺めながら＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「…………。」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「うーん…猫かな？」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （…仕事運の話だよな？こんな質問で何がわかるんだ？）＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「なるほど……」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「……む！」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「む～～～～～～～」　瓢箪をゆすりながら   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「う～～～～ん」　唸る   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （……？）＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「…………出ました」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「…………堤幸彦演出！？（TRICK）」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「何が！？」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「仕事運……という話ですね」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「ええ…まあ、はい」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「今の職場に慣れてきたというのは、とても良い兆しです」<br>「これからはさらに安定感が増してくると思います」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「しかし、変化や挑戦というのはですねぇ、小慣れた辺りで襲ってくるものですからねぇ」<br>「焦らず、今の流れを大事にしつつ、少しずつ新しいことに挑戦してみなさい」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「その変化をうまく乗り越えれば、もっと成長できるチャンスが訪れるかもしれないね」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （…………）   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「あ、ありがとうございます…？」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「…………。」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （……めちゃくちゃ定型文じゃん！何も珍しくないぞ鶏太郎！）   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「ただ……」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「えっ？」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「……仕事というのは、真面目に取り組めば報われることもあるし、報われないこともあるもんだからね」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「もし気が滅入るようなことがあっても、諦めずに努力を続けてみることだね」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「そう…ですね」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    うんうんと頷いています＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （………いま2分くらいか？あと4倍聞けるのか……？こんな話が）＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （だから定型文じゃん！！ただの励まし！それっぽい言葉！）＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「よ、よかったな黒正。人生が変わる2分間の深イイ話だった」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「あ……あと8分がんばれよ……」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「俺の残り時間は手紙に譲るとか…」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    まぁ10分間そんな感じで話します   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    別に譲るなら譲ってもいいけど   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    まあ自分の話を聞いてます   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （ウルトラマンならこの時間で3回怪獣倒して地球を救ってるんだよな～）＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    鶏太郎がオススメしてたし話のネタくらいにはなるかな～と思ったら想像以上に当たり障りない感じだからかなりビックリしている   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （こ、これが3000円…？鶏太郎、お前はこの話のどこにそんな価値を覚えたんだ…？）＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「……ん、もう１０分か……まぁこんなとこかな」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「いったんこっちのお嬢ちゃんかな……」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「よ、良かったな。話を聞いてもらえるぞ」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「え～………。」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「じゃあうちの話いいすか………？」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「はいどうぞ」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「あのですね～～………私実は占い師をやってるんですよね………。」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「……なに、同業？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ええ………。」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「それでですね……最近この仕事に疲れてきたんですよね………。」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「お客さんの話を聞いて適当に当たり障りのない”お告げ”を喋るだけで、皆さんお金を払って帰っていくんですけどね………」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「なんか………やってて虚しいなって………。どうすればいいっすかね………。」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「…………おい」　   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    時計を指差します   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （結構突っ込むなあ…大丈夫か？）＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「それは俺の事を言ってるのか？」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「俺の占いが適当こいてるだけのインチキだって……そう言いたいわけか？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    時計を指差します   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「制限時間いっぱいまで真摯にお話するのがあなたの仕事でしょう？」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「さぁどうぞ。良いアドバイスをくださいな」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「…………」　露骨に不愉快そうな表情です   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    とはいえ、瓢箪を手に取ってちゃぷちゃぷ揺らしたり唸ったり、さっきみたいなアクションを取り始めます   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「……出ました」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「あなたは仕事を続けるべきですねぇ」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「虚しいだなんて、とんでもない。あなたの仕事に救われている人は、たくさんいますよ」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「…………ほう？」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「………なるほど。面白いですね」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「たとえ当たり障りのない助言でも、結局はお客さんの気の持ちよう次第ということですかね……。」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （………）＠ハラハラしながらも見守っています   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「占い師の仕事って、お客さんを導くことなんですかね……それとも、適当に背中を押して、終わり、なんでしょうか」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （めちゃくちゃ挑発するじゃん手紙…）＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「無論、本分はお客さんを導くことでしょう。私はそう思っているしそれに恥じない仕事をしてるつもりですがねぇ」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「しかしあなたがそうではない……えぇ、たとえ根も葉もない言葉を吐き出すだけのインチキだとしても……」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「それならそれで……良いんじゃあないですか」   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「本物か偽物かなんて、すぐわかりますからねぇ」<br>「あなたに着いている客はインチキに納得して支払ってるってことでしょう」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ずいぶんと気前のいい客に恵まれてますね。我々……。」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「………助言ありがとうございまーす。」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「……いやぁしかし」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （…インチキに納得、か。俺もホストとして客と話す仕事をしているけど、会話だけにお金を払うってのは並大抵のことじゃない。納得させられるだけの何かがこの男にあるのか？）   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    ストンと黒瓢箪を置いて   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「あんた、死ぬね」＠手紙へ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「…………なんて？」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「長くない。死相が出てる」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「…いきなり穏やかじゃない言葉が出たな」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    二人とも＜聞き耳＞をどうぞ   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    CC&lt;=80 【聞き耳】 (1D100&lt;=80) ボーナス・ペナルティダイス[0] ＞ 96 ＞ 96 ＞ 失敗  </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    こちとら客の話を聞く商売だぜー！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    CC&lt;=89 【聞き耳】 (1D100&lt;=89) ボーナス・ペナルティダイス[0] ＞ 95 ＞ 95 ＞ 失敗  </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    はい   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    嘘だろ   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    まぁともかく、ちょうど１０分経過するぐらいのタイミングで占い師はそう言いました＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    ごめん聞いてなかった、もう一回言ってくれる？と言える胆力ならば   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「……………10分すね。」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「うん。……まぁ、もし行き詰ったら、私のところに来なさい」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「…………………すいませんした」3000円置きます＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「その時は何か示せるかもしれんからね。……勿論」コンコンと値札を叩きます＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「手紙、無料って話だから…」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「初回１０分は無料だよ。それとももう１０分追加してほしいのか？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「…………いや、迷惑料っすよ。いらないなら、鶏太郎がまた来たときの相談代にしといてください。……ぐすっ」＠   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    「……フン」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「よし、帰るぞ。『新星の切り札』クン」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「俺はその、普通に無料で…」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「じゃあ、ありがとうございました」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「どおも」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    １２時！！！！！！！！！！！！！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    帰ろうか　ねどこに   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ……あ、じゃあ最後に   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    sCC&lt;=50 てすと (1D100&lt;=50) ボーナス・ペナルティダイス[0] ＞ 89 ＞ 89 ＞ 失敗  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （念の為3000円持ってきてよかったな……よかったか……？）とか考えながら帰路につきます＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    S1d100 普通に振るか (1D100) ＞ 2  </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    じゃあ、最後に……   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    黒正はふと、手紙の顔を見てあることに気付きます   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    手紙の顔色が――目に見えて悪くなっているでしょう＠rpend   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「……手紙？」＠RPEND   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「え………？」＠RPEND   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    本日はこれにて終了！！！！！！！！！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    おつかれさまでした！！！！！！   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    お疲れ様でした！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    正直マジギレするとは思ってなかった！！！！！！！！！！！！！すまん！！！！！！！！！！！！！！！！！！   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    占いなんて信じてねーぜ→当たってる！すげえ！という即堕ちムーブの準備は出来てたのに堕としてくれない占いだった   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ちなみに手紙の好きな動物はフクロテナガザルです   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    ブチ殺すぞ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ごめんて～～～～～！！！！！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    手紙が無礼討ちされたら一人で頑張ってください   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    あと最後のクソファンブルダイスなんだよ   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ファンブル前提！？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    いや聞き耳だよ！！！！！！！   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    命中率80%のわざだからそこそこ外れます   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    これだからCoCは   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    2発撃って外すな   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    こんばんは   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    こんばんは   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    昨日は軽率な行動をして申し訳ありませんでした……   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    なんかありましたっけ   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    軽い気持ちでカスタマーハラスメントしたことです！！！！！！！   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    ああ、私は一切気にしてないので…   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    そう来たかあって思いながら見てました   </dd></dl>
+<dl style="color:#000000" class="zatsudan"><dt>KP</dt><dd>    こんばんは   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    こんばんは   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    こんばんは   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    具体的に何がいけないかというとあんまり変な行動すると黒正くんにこれからペアでやっていかなきゃならない手紙との付き合い方を考えさせてしまうから……<br>というわけで個人的に反省してます。以上です   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    【瓢】　第二夜初めて生きたいと思います   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    よろです   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    よろしくお願いします！   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ■１行でわかる前回のあらすじ<br>・なんか手紙の顔色悪くね？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    祟りじゃ………   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    因果応報では？？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    お前あの祠壊したんか！？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    空気を壊しました   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「え……な、なんですか黒正くん………」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「その……さっきはハメを外しちまったけど……ごめんね？え？ちがうの？？」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「お前、顔色悪いぞ。大丈夫か？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ん………？そ、そうなんだ………。」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ちなみに顔色は悪いんだけど、手紙は別に大丈夫だけどなぁと思います   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「うーん………まぁ、お気遣いありがとう」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    写真撮って見せてみますが顔色の悪さはわかりますかね？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「え？な、なんだ！？まさか”あんた死ぬわよ”って言われた私に対してのドッキリのつもりか！？」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「いやそんな悪趣味なことしねえよ！」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    写真はどうですか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    まぁたしかに顔色は悪いような気がします＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ん～～～～～～……………」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「普段からこんなもんな気がするけどなぁ……私いつも泣いてるし……ぐすっ……」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    じゃああなたたちが、アーケードの切れ目の横断歩道でそんな話をしているとですね   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「とりあえず、体調は悪くないとだけ言っておくよ」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    信号無視で突っ込んできた車が手紙のすぐ前を通り過ぎていきます   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    もしかしたら黒正が引っ張ってくれたかもしれない   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「うわっ！？」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    同じことを思いました   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    じゃあ引っ張りました   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    引っ張らなければ轢かれてたやつです   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「危ねえー…」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「え……？」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    周りの通行人がビビるぐらい間一髪でした   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    視力が悪いので何が起こったのか遅れて理解します   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    「アンタ大丈夫？」　とかおばちゃんが聞いてきます＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「だ…………大丈夫………です………けど。」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「と、友達が助けてくれたんで……はは」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「…少し、気を付けて行くか」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    質の悪い車に憤る以前に、あなたたちはさっきの占い結果と今の現象を結び付けて考えてしまうことでしょう。   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「待って。…………もしかしてさっきの占い………”マジ”だったってこと？」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    「ただの偶然」「あり得ない」と切り捨てるのも難しい、何か嫌な感覚があなたたちの頭の中にありました。<br>SANc【黒正】……0/1　【手紙】……1/1d3   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    1d100&lt;=65 【正気度ロール】 (1D100&lt;=65) ＞ 92 ＞ 失敗  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    1d100&lt;=74 【正気度ロール】 (1D100&lt;=74) ＞ 32 ＞ 成功  </dd></dl>
+<dl style="color:#000000" class="main"><dt>system</dt><dd>    [ 馬場 黒正 ] SAN : 65 → 64   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    二人とも１点ずつ減る   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    黒正くんのダイス呪われてない？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>system</dt><dd>    [ 屠山羊 手紙 ] SAN : 74 → 73   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「いやまさか…あんなこと言われたせいで必要以上に気になってるだけだろ」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「………」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「………よし！！！！」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「さっきの占い師に謝ってこれからどうすればいいか聞くわ！！」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「待て待て待て待て！そういう手って話じゃないのか！？」   </dd></dl>
+<dl style="color:#000000" class="zatsudan"><dt>KP</dt><dd>    手紙が即落ちするのかよ   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「無料相談分でわざと縁起の悪いことを言って、何か不運があれば言い当てられたって錯覚させる奴！」＠   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    馬鹿な…クールぶってる仮面がすぐ剥がれると設定にわざわざ明記するくらい即落ち準備が出来てた黒正が負けるなんて…   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「……本当は私、現実は超自然的な現象が起こるものだって信じてるタイプ」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「だが何より……私から行動力を取ったらただの目が悪くて常に顔色の悪い女が残るだけなのよ！！」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「生き延びる為ならなんでもしてやるわ！！！！うおおお待ってろ～～～そしてごめんなさい～～～～！！！」白杖をフル稼働させて路地を戻っていきます＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「ならまず他の行動を取らないか！？」＠腕を掴んで止める   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    さっきの車考えると一人で行かせるのもちょっと怖いしね…   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「な……なんでしょうか……？他の行動って……」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「えっと………冷静になる……とか……？」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「それもあるが、あの占い師の話は聞いててどうだった？」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「最後の言葉はともかく他は誰にでも言える、誰でも言えるような話ばかりで鶏太郎があれだけ信じ込んでる理由がまるでわからない」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「だから一度、あの占い師を信じるに至った理由を確認してみた方がいいと思う」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「鶏太郎も死ぬかもって言われてて、あの占い師の言う通りにしたら死ななかった…なんてオチもありうるからな」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「えっと………ここは鶏太郎の意見を聞くってこと……？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    アイコン変更用の文字でちゃった☆   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「ある意味ではそうか…？もし鶏太郎が”自分もそうだった”なんて言い出したら、占い師の胡散臭さは増すだろ？」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    鶏太郎に『占い行ってきた』ってメッセージ送ります＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「……………。」とりあえず黒正から少し離れ、腕組んで壁にもたれかかります。＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ほい   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    程なくして<br>『お』<br>『凄かっただろ？』　と返信されます＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    『まあある意味は』   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    とりあえず黙ってます＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    『鶏太郎はなんであの占い師を信じるようになったんだ？何かキッカケになる占いがあったんだろ？』＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『先生との馴れ初め？』   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『馴れ初めではねぇな』   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『切欠ね』   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    『彼氏面で草』   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『今度に会社の受付さんとデートっつったろ』   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『俺は仕事のことで占ってもらったんだよ』   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （ってことはあの当たり障りなく誰にでも当てはまるようなこと言われたのか？）＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『今は調子良いって昨日言ったけど、当時かなりキツい状態で、もう記者やめるかってとこまで行ったんだよ』   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『たまたま先生に会って、正直最初は軽い愚痴っていうか、人生相談ぐらいの気持ちでお願いしたんだよ』<br>『占い信じてなかったし１０分無料って話だったし』   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『でも先生の相談受けて、アドバイス聞いたあたりから段々記事の採用率が上がってさ』＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『俺の記事くそみそにこき下ろしてた編集者が、今回のは良いねとか言うわけ』＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    『ちょっとまって』   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    『何か指示されて指示通りに動いたらうまくいったとかじゃないん？』＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『なんか教えてもらったことを意識してやったかな。半信半疑だったけど』   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『なんて言われたっけ。具体的なところでいうと身だしなみからちゃんとしろとか、なんかそんなことだっけなぁ』   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （意識しようにも前提としてウソこいちゃったんだよなぁ～～～どうしよう）＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『どんな仕事でも基本を徹底するやつが成功するって言われたんだよな』   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    手紙は所持品にたこ焼き入ってるんで僕も食べようかなと思います   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    『それで調子が良くなったのは良いことだけどさ、だいぶ抽象的というかよくあるような話じゃないか？』   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    『痩せたい人に規則正しい食生活取れって言ってるようなもんというか…』＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『いやいや』<br>『それでいうなら、正しい食生活取っても体質的になかなか痩せないやつとかいるじゃん』   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『それに先生に相談してから、今の俺がやってる案件の声かかったの二週間とかだぜ？』   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『それで先生に報告しに行ったら、このブレスレットを買ったらもっと幸福にって』＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    『ちなみにいくらだったの』＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『５万』＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （あっ、これアレだ。とにかく数撃って一人でも掛かればいいって奴）＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「くそー！そんなに持ってねー！」財布を見てます＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    『このままだと不幸が起きるぞとか言われなかった？』＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    『何？　お前らなんか言われたの？』＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    『私死ぬってさ』＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    既読は即時つきますがしばらく返信が途絶えます   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    そしてLINEで着信が入ります＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    多分手紙にですよね。グループ？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    出ます＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    グループ通話かな？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    まあどちらにせよ会話には参加します   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    グループだと着信通知入らないけどまぁその場合は「今話せる？」みたいな発言を挟んでから   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「……おう、お疲れ。えっと……先生になんて言われたって？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「細木数子って……いたじゃんかよォ～～～～～～～」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「あいつに『あんた死ぬわよ』って芸能人が言われてるの見たことある………」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「私がそんな体験するとは思ってもなかったわ～～～～～～」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「マジかよ……」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「まあ…そういう状況なんだが」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「話を聞いてみた身としては、鶏太郎がどんな話したのか気になってな」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「それはマジにヤバい……先生に死を予言されるってのは激ヤバなんだ」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ま……まず待ってくれない………。実は私……先生にウソついちまってさぁ～～～……」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「は？」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「怒らせちゃったんだよね～～～……………。」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「おまえなあ～～～～」　（呆れ）   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「だ、だってさぁ～～…………黒正相手にひたすら当たり障りのないことしか聞かねーし当たり障りのないことしか言わないのを見るとさぁ～～～」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「魔が差しちゃったんスよ………だからその……まず紹介してくれたのにごめん……」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「正直言って、誰にでも当てはまることだけ言って上手く引っ掛かってくれたらラッキーってくらいのスタンスには感じたな」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「はぁ……まぁいい。俺が紹介した以上は俺の責任だ」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「先生には今度会った時に俺から謝っとく……。それよりもだ」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「そ……そんなことないって……いやお前が責任とって私が助かるなら考えるけど……」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「今はお前の占い結果が問題だ」<br>「あの瓢箪が占って死ぬって出たのは絶対に【大凶】なんだよ」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「そらな。死ぬなんて予言されたら今からグアム旅行にご招待されようが大殺界真っ只中なんですよ」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「ネットの掲示板で見た話だけど……先生にあの瓢箪で過去に死相を占われて、本当に死んだってやつもいるらしい」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「え？あの人2ちゃんねるにスレ建ってるレベルなのか……。」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「いや……今は5ちゃんねるだったか…………？」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「ネット掲示板ってどこまで信憑性あるんだ？」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「いや、流石に専門スレじゃねぇけど……」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「……こうなりゃ先生に何とかしてもらうよう頼むしかねぇぞ」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「…………ッッッッッッと言われてハイそうですかと3000円払う気になるかよー」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「普段ならな………。」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「水を差すようで悪いけどさ、そういうやり口だってことは考えないのか？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ただ………なんか露店から立ち去ってから黒正が顔色悪いとか言ってくるし……車が猛スピードで突っ込んできたりしたんだよォ～～～～！」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「言ってる場合か！　何かあってからじゃおせぇんだぞ！」&gt;&gt;黒正   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    色々言いたいけどその何かがさっきあったんだよな…という半信半疑   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「黒正も見たでしょ～～～！？あの速度であのタイミングは仕込みじゃないって～～～！ぐすっ……」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「だからあくまで偶然の不幸を、さも言い当てたかのように振る舞ってるんじゃないかって話だよ」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「そ、そーなら良いですがね………。」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 73  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「なんのために生まれて～なにをして 生きるのか～こたえられないなんて～そんなのは～い～やだぁ～～～～」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    あなたたちのすぐそばで物凄い大音がします   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「次はなんだよ！？ワイルド・スピード日本編の撮影でもやってんのか」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「何だ？」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ……屋台の装飾が外れて落下したようです。   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    無論ハリボテなので総重量はそれほどではありませんが、大きさが大きさなので当たり所によっては危なかったでしょう。   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    なんの屋台があるんだこんなところに   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    まぁ屋台というか店の看板か   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    たこ焼きか？？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    蟹道楽の蟹です   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    ここは大阪だった…？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ちなみに手紙は大阪出身です   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    マクドナルドのMです   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ほんまに大阪かもしれない   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「あ！蟹道楽の蟹落ちてるんだけどなんじゃこれ！？」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「偶然…だと思いたいが…」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「いや偶然じゃないってこれ！占い師にウソついた結果よぉ～～～～蟹道楽の蟹に潰されて死んじまったりしたら……あーダーウィン賞もらっちまうよ私。ぐすっ……」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「……実は、俺の後輩もお前と同じように死相を占われてんだ」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「はあ！？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「その先聞きたくないなぁ……………………。」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「それからは危険だったり不吉なことが続いてかなりヤバかったらしいが……」<br>「安心しろ。そいつはまだ生きてるし元気に働いてる」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ッッシャオラァァァァッッ！！」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「先生に凶運を祓ってもらったんだよ」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「おいまさかブレスレットの力とでも言うつもりか？」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「大凶だって言ったろ。俺のもらったブレスレットもスゴいけど、こいつじゃ駄目だ」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「後輩はたしか……先生に４００万ほど包んだって言ってたな」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「よ………よんッ…………！！！」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「おま…本気で言ってんのか！？」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「大マジだ。それ以来、そいつの周りで不吉なことは起きなくなったって話なんだよ」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「先生の占いは本物なんだ……だけど先生なら何とかできるはずだ！」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「い、いやそんな消費税だけでうまい棒数万本買えるんじゃねーのって金額持ってないんだけど……………」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「そういやあの瓢箪ってなんなんだ？なんの説明もなく弄ってたけど」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「いくらでも都合つけられるだろッ。最悪、消費者金融でも……」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「いやいやいやいやいや！落ち着け落ち着け！金借りるのは不味いって！」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「……あ？　あの瓢箪か……。いや詳しくは知らねぇ。でも先生はあれで占うんだよ」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「借りて助かるなら死ぬよりマシだけどさぁ～～～！私じゃ無理だって～～～！！個人経営の探偵の……ましてや下っ端なんて信用ないしさぁ～～～～～」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「あの瓢箪は凄いぜ。あの瓢箪で先生が占ったことは全部当たるんだ」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「誰かに貢ぐために金を借りるの本当に悲惨だぞ！」＠実例を見たことがあるかのような勢いで話す   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！」＠実例を見たんやろなぁって顔します   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「とにかく手紙がこの先助かるためには、あの瓢箪に何とかしてもらうしかねぇんだよ！」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「とりあえず会いに行かないか？もう一度……ぐすっ……」＠   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    まあメタ的にはあの占い師のところに行け！！ってことではあるんだろうな…   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「………」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「………」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「…まあ、行くしかないか。金を払うかどうかはともかく」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「待て。……今の時間からじゃ駄目だ。今日はたしか先生、早めに店じまいだと言ってた」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「な、なんだってぇ～！？羨ましいなぁ自営業は！」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「人に死ぬって言っておいて無責任な！」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「次回出直せ。たしか明日も店を開くはずだ……誠心誠意謝って、あの瓢箪で何とかしてくださいと頼むんだ」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「…………そ、そうか……。そういえば……あんたの後輩だってお祓いしてもらうまでしばらく生き延びたんだよな………」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「確かに不穏だけど……今日明日死ぬことはない……のかな………？」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「てかその後輩も先生怒らせたの？」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「それはそれとして身の回りには気を付けろよ」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「あ？　あぁ……そいつも元々半信半疑だったからな。最初はお前みたいに怒らせてしまったとか泣いてた気がするよ」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「な、あたしは泣いてねーし！！！タフですから！！泣いてたとしても……この涙は自前のやつ（？）なんですぅー！！！！」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「言ってる場合か……」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「もう今日明日は事務所の誰かに一緒にいてもらえよ」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ヒゲ（雲水）いるかな………あいつを盾にすれば……ぶつぶつ………」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    解散ですか？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    事務所まで送り届けます   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    事務所には上がらんが   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 54  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    言うてこの時間には誰もいないだろうしな……   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    家でいいです   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    通り道に車に轢かれた猫の死骸に遭遇します   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「けッ……ロードキルされた猫がなんだってんだ……」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    自分もああなるかもしれない……とか思うでしょう＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「黒正…………今日はありがとう。ていうかごめん………ぐすっ」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「今なら恥ずかしげもなく……あんたに一緒に居て欲しいって言えるけど」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「まぁ……社会人だしな……何よりここまで巻き込んで悪いから……もう帰りな……」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「あと職業上異性と一緒にいるのはちょっとな…いやそういうこと言ってる場合でもない気もするんだが」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「少なくとも一人では出歩くなよ？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「なんか言われたら顔色の悪い女がいたから家まで送ってあげただけですって言っときなね」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「うん…………気をつける………」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「あ、私の顔色って今どうなってる……？顔色ってか死相なんだろうけど……」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    どうなってますか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    終わったまんまです   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「あんまり変わってないな」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「うーん体調が悪かったりはしないのが逆に恐怖なんだよな」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「……………じゃ、おやすみ」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    はい   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    その後、グループLINEにあるスタンプが貼り付けられます   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    『なんとかなれーッ』＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    同じスタンプを貼ります＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    『とりあえずちゃんと飯は食っとけよ』って送ります＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    たこ焼きを悔いました＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    翌日デスカ？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    はい   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    翌日を迎えられたらですが   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    翌日になるまでに何かやっておきたいことありますか？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    SNSで占い師について調べられます？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    そもそも名前知らないんだよな   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    まぁ「瓢箪　占い師」をXで検索してみるか＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    無茶振りするなら占いが特技の先輩ホストに情報を少し伏せつつ意見聞くかな   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    名前は出す機会なかったけどそもそも畠山が知ってるので教えてもらってよいです   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    じゃあこっちはSNSで調べとく   </dd></dl>
+<dl style="color:#ff0000" class="main"><dt>？？？</dt><dd>    花鳥 吉秀　と申します   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    普通に露店にも名前あったんじゃないかな。対戦よろしくお願いします   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    というわけで＜図書館＞をどうぞ   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    それぞれ   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    CC&lt;=70 【図書館】　こっちは趣味で小説を読むんだぜ (1D100&lt;=70) ボーナス・ペナルティダイス[0] ＞ 66 ＞ 66 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    CC&lt;=65 【図書館】  (1D100&lt;=65) ボーナス・ペナルティダイス[0] ＞ 52 ＞ 52 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ではあなたたちはX（両腕をクロスする）で検索した結果、ちょろちょろ気になる書き込みを発見します   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    こんなピーキーなダークわざの命中率みたいなものを信頼しないといけないCoCの技術判定よ   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    まず、瓢箪を使った占いというのはこれといってヒットしません。<br>出てくるとしたらあの占い師のものぐらいでしょう。   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    件の占い師――【花鳥 吉秀】の我流なのかなと思います。<br>その瓢箪占いもわりと最近始めたもののようですが……。   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    先輩ホストに話聞きます？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    とりあえず…   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    SNSでいいならこのままX（両腕をクロスする）で情報出しますけど   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    これどう思いますー？って聞くだけのつもりだったから情報収集という意味ではSNSで   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    じゃあ続き   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    TwitterをXと呼ぶヤツが気に入りませんが手紙は多分Xって言うかもしれないのでXと呼んでおきます   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    TwitterはTwitterだよ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    2ちゃんねるは2ちゃんねるなんだよな～   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    花鳥自身の風評ですが、ここ数ヶ月ほどで評価が180°変わってるようです   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ピボットターン   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    三か月前までは手相とかタロットとか一般的な手段を用いて占っていたようです。<br>ただ、正直ほとんど詐欺師扱いですね。   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    これ花鳥のことか？　だとしたら犯罪では？　みたいな書き込みもいくつかある   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    脅迫めいたことを話すとか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    霊感商法で法外な額のブレスレットや壺を売りつけるとか……   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    チッ……怒らせて当然だったぜこんなヤツ   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    先生がそんなことするわけないだろ   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    では三ヶ月前からは？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    占いで瓢箪を使い始めた時期とだいたい一致しますね   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    明日どう行動しような……割と真面目にここからラバソ拉致したいな……   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    だって一人で行動するなって……二人いないと無理じゃん………   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    「先生に占いは当たる、『百発百中』の看板に嘘偽りなし！」<br>「今日、主治医から長年悩んでた持病が治ったって言われた。先生の瓢箪占いマジでヤバい」<br>「占いの先生に忠告されても内緒で進めてた事業、失敗しちゃった……。ここからどうすればいいか、正直に相談するか」   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    いや迎えには行きますよ   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    夜までは事務所で過ごしたことにするか   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    「知り合いが死んだ。（いくつか哀悼のツイートが続く）……占い師に死相を占われたから運命を変えないとみたいなこと言ってたな。当たってるじゃん」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    こんな感じです。それこそ花鳥の良くない風聞に対して「先生がそんなことするわけないだろ」みたいなツイートもあります   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    すいませんツイートじゃなくてポストでした   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    はいはい   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    じゃあそういう　ツ　イ　ー　ト　を見てある程度評判を把握しました   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    三ヶ月前からは詐欺じゃん…みたいな　T　w　e　e　t　も消えてる感じですか？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ていうか明日夜あの場所で花鳥に会えるってソース出てきますか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    少なくとも花鳥に騙されたって話は見なくなったかな   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    明日先生に彼との恋愛運占ってもらいに行くんだ(≩▽≨)　とかはあったかも   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    じゃあ私は明日先生に400万円払いに行こっか(≩▽≨)   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    それと   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ＜アイデア＞をどうぞ   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    CC&lt;=65 【アイデア】 (1D100&lt;=65) ボーナス・ペナルティダイス[0] ＞ 43 ＞ 43 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    CC&lt;=85 【アイデア】 (1D100&lt;=85) ボーナス・ペナルティダイス[0] ＞ 26 ＞ 26 ＞ ハード成功  </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    では、そういった花鳥ageの書き込みに加えて   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    「先生の瓢箪を自作した。勿論偽物だけど自分なりのお守りだ」とか<br>「あの瓢箪があればきっとなんでもできるだろうなぁ」とか   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    そういう書き込みが散見されます。ただの真っ黒い瓢箪だったと思うんですけどね。<br>場合によっちゃ花鳥からもらったお守りより入れ込んでるケースもあります＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    瓢箪がなんか神話生物の力の源になってて、そいつが裏で糸を引いているのかな？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    瓢箪を奪えばなんとかなるんだろうか   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    それ手紙なら実行しかねないな～と思ってたけど黒正を巻き込みたくないんだよな……   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    あとは自作でも活路が開ける可能性はあるが何らかの狂気に陥る可能性もあるな   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    早速作ってみよう！！！と思ったけど家に材料ねーわ   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    瓢箪を交換…いやバレルな   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    翌日が始まりますか？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    はい   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    始めましょう   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    あと30分で日付が変わりますが時間は大丈夫ですか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    手紙は死の恐怖でギンギンに目が冴えて８時間しか眠れなかった事でしょう   </dd></dl>
+<dl style="color:#000000" class="zatsudan"><dt>KP</dt><dd>    切りの良いところで終わります   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    はい！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    サトシのオニゴーリと戦うことになる悪夢を見ます＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    特になければ次の花鳥の営業時間が迫り向かうところから開始ですが   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    じゃあそれでいいか   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    ウィー   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    迎えに行きますよ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ちなみに不幸とかは起きてるんですかね依然   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    コップの水で溺れかけたりします   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    がぼぼぼ   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    こまごま不吉な事は起き続けています   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    ピタゴラスイッチもビックリの過程で金魚が喉に詰まります   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    望月家じゃねーよ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「うわぁ～ん黒正～～～～」事務所に来た彼の肩をぶんぶん揺すります＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「やめろやめろ！まだ生きててなによりだけど！」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「聞いてくれよ～～金魚が喉に詰まったりラジコンが落下してきたりしたんだよぅ～～～～」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「なんとかうちの事務所のヒゲを盾として使い潰すことで生き延びたけどさぁ～～～～」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    なお雲水はうちの事務所の人間じゃない模様   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「偶然と言うにはかなりピンポイントな危険だな」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    では、あなたたちは今一度花鳥の店へ向かうでしょう   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    いっけえええ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    向かいます向かいます   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    交差点を通った辺りですかね   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    背後でブレーキの音と、激突音がします。＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「うおおおおわああああああああああああああ」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「はあ！？」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    「キャアーーーッ」「おい！　救急車……救急車呼べーーッ」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>事故の犠牲者</dt><dd>    ガードレールに突っ込んだ車と、植え込みに女性が突っ込んだ女性が見えます＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    よく見えねえ！！！！！！   </dd></dl>
+<dl style="color:#000000" class="main"><dt>事故の犠牲者</dt><dd>    跳ね飛ばされたスマホが偶然あなたたちの足元近くに転がるでしょう＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「もう！！！！」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    スマホには目もくれず、飛んできた方向に走ります   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「大丈夫ですかー！？……くそ、よく見えん………！」女性の元へ駆け寄ろうとします＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>事故の犠牲者</dt><dd>    では……＜目星＞をどうぞ＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    見えねえっつってんだろ！！！！！！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    CC&lt;=45 【目星】 (1D100&lt;=45) ボーナス・ペナルティダイス[0] ＞ 4 ＞ 4 ＞ イクストリーム成功  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    開　　眼   </dd></dl>
+<dl style="color:#000000" class="main"><dt>事故の犠牲者</dt><dd>    たまたま手に当たって「……ん？」ってなったとかかな   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    まぁそれはそれとして観察力や経験で補っているので45あります   </dd></dl>
+<dl style="color:#000000" class="main"><dt>事故の犠牲者</dt><dd>    まず、女性の容体ですが。<br>実際のところ、生命に別状はなさそうだと気づきます。   </dd></dl>
+<dl style="color:#000000" class="main"><dt>事故の犠牲者</dt><dd>    植え込みがクッションになり、衝撃を和らげたようです。<br>このまま救急車が来れば大事には至らないでしょう。   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「い……意外となんともないみたいだな……」触診します＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>事故の犠牲者</dt><dd>    そして、女性の手にはブレスレットがはめられています。<br>この事故の衝撃でちぎれてバラバラになっているかもしれませんが。   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「こ……こいつは………！」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>事故の犠牲者</dt><dd>    そのブレスレットは、畠山が身に着けていたのと同じものです＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「…………………………。」ゾッとします＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    特になければ女性が搬送されて終わりです＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    スマホはどうでしたか？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （黒正くんにマイクを向けます）   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    寝た！？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    日付変わるし終わりましょう！！！！   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    へい   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    お疲れさまでした！！！！！！！！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    おつかれさまでした   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    あんたが今ここで倒れたら斎門や関林との約束はどうなっちゃうの！？寿命はまだ残ってる……！ここを耐えれば、花鳥に勝てるんだから！！！！！   </dd></dl>
+<dl style="color:#000000" class="zatsudan"><dt>KP</dt><dd>    CoC、もうちょっとがつがつ進めた方がいいのだろうか   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    わかんない   </dd></dl>
+<dl style="color:#000000" class="zatsudan"><dt>KP</dt><dd>    今RPしてんだろうが！ってなりそうだから迂闊に進められん   </dd></dl>
+<dl style="color:#000000" class="zatsudan"><dt>KP</dt><dd>    ユグドラはPCに自主的に進めさせるけどCoCは進行がシナリオとKPに依存するから   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    まぁ……このペースだと長くなりそうね   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    すみません今意識が   </dd></dl>
+<dl style="color:#000000" class="zatsudan"><dt>KP</dt><dd>    次回で終わります   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    も～キリシロさんを台風が休ませてくれないから～   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ちなみにはむぱんは台風で休みになりました   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    ちくせう   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    お疲れ様でした！   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    んなわけねーだろ！？！？！   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    すみませんでしｔ！！！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    元から日付変わるとこで終わる予定だったから無問題   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    おやすみ～   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    konbanha   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    こんばんは   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    昨日は寝落ちすみませんでした！！   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    定刻通り終わっただけ定期   </dd></dl>
+<dl style="color:#000000" class="zatsudan"><dt>KP</dt><dd>    こんばんは　実際そう&gt;&gt;定刻通り   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    あと馬場黒正の名前の由来のヒントください   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    ババ   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    ん～～～～～～   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    ババ・黒色・しょう   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    わかりました   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    左翔太郎です   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    はい   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    このPicrewに帽子がありませんでした   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    ババ＝ジョーカーの発想がなかった   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    瓢　最終夜　初めて生きたいと思います   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    うす   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    マネードーパント戦でババ抜きやってたのに！   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    よろしくお願いします！   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    でも多分行き着いてもなんか深読みしてブレイド方面にいきそうだた   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ■前回のあらすじ<br>・轢かれた女の人は大丈夫でした   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    CC&lt;=75 【目星】　21時間越しの目星 (1D100&lt;=75) ボーナス・ペナルティダイス[0] ＞ 31 ＞ 31 ＞ ハード成功  </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    職業が探偵じゃないのはマディウォーターで探偵やったのと手紙が探偵だからこっちは他の仕事でいっか～～～ってなったからです   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    それ手紙が要求されただけじゃね？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    目星は手紙に対してのものだったが、せっかくだからスマホの内容がちらっと見えたことにしようか   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    事故の衝撃ヒビの入ったスマートフォンの画面にはSNSの書き込みが表示されていました。   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    反射的に拾い上げます＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    『先生に占いの続きを聞きに行ってきます』<br>『前は“近いうちに人生が大きく変わるらしい”みたいな話だったけど、彼氏にプロポーズされたりしないかな？」<br>『”これがあれば大凶を避けられるでしょう”みたいな話だった。今日も付けてます』   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    手紙が確認したブレスレットの写真が写っています＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「これ…あの占い師の客だったってことか…！？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「………みたいだな………。」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ちなみにブレスレットつけてたけど……千切れてたよ……。命と引き換えに……ってことなんだろね……。」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「……いやまさか、ただの偶然だろ？あんな事故でブレスレットが壊れるなんておかしい話でもないし…」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「お……おい黒正ちゃん……そろそろ流石に認めた方が良いぜ………。」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「まぁ認めてないなら認めてないでそれでも私に付き添ってくれるとこはほんと優しいけど………」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「手紙と鶏太郎が信じるなら、俺くらいは懐疑的な立ち位置にいないとバランスがな…」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「あと値段が高すぎるのはあんまり信じたくない」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「そ……それは確かにそうだな……大事なポジションだ」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「値段は……あいつがガメついだけなんだろうな……どうにかしないとな……」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「と、とにかく私も一刻を争う！行くぞ！！」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    行きます！   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    はい   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    先日と同じように占いをしています……が、今回は先客がいるようです。   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「なにィ～～！？……いやそういう日もあるか……。」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「こういう時どうすればいいんだ？並ぶのか？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「な……並ぶしかなくね？」＠   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    「……結果が出ました」 占ってます   </dd></dl>
+<dl style="color:#000000" class="main"><dt>女性客</dt><dd>    脚組んで話聞いてます   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    「最近お客がストーカー気味であると……そういうことでしたね？」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>女性客</dt><dd>    「そうよ」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>女性客</dt><dd>    「店の外でも会いたいって……こっちは金もらってるから相手してやってるだけだってのに」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    とりあえず並んでます＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （なんか同業者な気がするな…）とか聞こえてくる話で思ってます   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    「まずは普段の振る舞いを改めるところから始めなさい」   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    ちょっとりせきします   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    「たとえば……」　ちらっと女性を見て   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    「……オホン。服装なんかをもう少し……」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>女性客</dt><dd>    「おい！　今アタシの胸見て言ったろ！」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （やっぱ言ってることに当たり障りが無さすぎるんだよなあの占い師）＠   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    「ま……まさか。オホンオホン……人聞きの悪い……」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>女性客</dt><dd>    「当たるって聞いたから来てみたのに何よッ！　説教なんか聞きたくねえんだよエロジジイッ」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    女性が大声で怒鳴るものだから通行人の注目を微妙に集めます   </dd></dl>
+<dl style="color:#000000" class="main"><dt>女性客</dt><dd>    「金払ってもないのにジロジロ見やがってッ！　気分悪いわッ！」   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    「ぬ……う、うむむ……」　流石に恥ずかしそう   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （これ一昨日黒正に言ったやつじゃん！マジでいるんだ！！！）＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （いやでもならそーゆー格好すんじゃねーよ！）＠   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    しかし女性の言葉を遮るようにして   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    「……あんたはこの路地を出た後、その男と鉢合わせするだろう」   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    「そして近い未来……あんたは男と切っても切り離せない仲になる！」   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    「それが嫌なら、このブレスレットを……」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>女性客</dt><dd>    「はァ～～！？　馬鹿にするなッ！　クソジジイッ」　席を立ってしまいます＠   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    「……ぬう」　苛立たし気に客を見送ります   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    「…………やれやれ」　ブレスレットをしまって通常営業に戻ります＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （そうだよな、こうなっておかしくないんだ。説教した挙げ句に売りつけてくるんだから）   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    ところで占い師いかずに女性を追うのもアリな気がします   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （こ、こりゃその通りになるパターンじゃねえか……でも私があいつなら信じるわけがないッ！実際に逢うまでよぉ～～～～）   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「…手紙、どうする？あっちの女の様子を伺ってみるか？」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    さて   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「路地に出たら何かが起こるみたいだから、占いが当たるかどうかはすぐわかる」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「……え？……確かに気になるが行ってどうするつもりだ？お前もおっぱいみたいのか！？」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ＜聞き耳＞をどうぞ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    CC&lt;=89 【聞き耳】 (1D100&lt;=89) ボーナス・ペナルティダイス[0] ＞ 40 ＞ 40 ＞ ハード成功  </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「なわけないだろ！？SNSの情報じゃなく、目の前で実際に占われた客がどうなるか確認できるチャンスだって話で…」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    CC&lt;=80 【聞き耳】 (1D100&lt;=80) ボーナス・ペナルティダイス[0] ＞ 53 ＞ 53 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ではあなたたちは花鳥が女性に捨て台詞を吐いたタイミング……よりちょっと経ってるかもしれませんが   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    水の中に何かが沈むような、くぐもった音を聞きます。＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「は？今なんか聞こえたか？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ここの近くに水とかあるんですか？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    なんか沈められるような   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「明らかに水音が聞こえたけど……」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ちょ……ちょっと見に行くか？」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「………」＠チラリと花鳥の方を見ますが、音に対して反応を見せますか？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    死んだか？   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    見せないんじゃないかな   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「…行くか。何があったか確かめないと占い師と話しても気が散りそうだ」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「よし……方向はたしかこっちだ……」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    では   </dd></dl>
+<dl style="color:#000000" class="main"><dt>眼鏡の男</dt><dd>    「……君を探していたんだ、待たせてごめん」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>女性客</dt><dd>    「…………！　あ、アンタなんで……」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>女性客</dt><dd>    眼鏡をかけた男に迫られています。<br>先ほどの話からいくと、ストーカーと思しいですが。   </dd></dl>
+<dl style="color:#000000" class="main"><dt>女性客</dt><dd>    さっきの威勢の良さとは裏腹に震えています。やはり内心は怖かったのでしょう＠   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    あ、水音って瓢箪の効果発動エフェクトか…？   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    なんでうちらの時は聞こえなかったんやろなぁ～～～   </dd></dl>
+<dl style="color:#000000" class="main"><dt>女性客</dt><dd>    「……ッ、いい加減にしてよ！」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>眼鏡の男</dt><dd>    懐に手を突っ込みます＠   </dd></dl>
+<dl style="color:#000000" class="zatsudan"><dt>KP</dt><dd>    ちょい離席   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    なんかヤバそうな雰囲気なので飛び出せますか？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    私かて……やりますよ   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    飛び出せますが、生憎にして   </dd></dl>
+<dl style="color:#000000" class="main"><dt>眼鏡の男</dt><dd>    「もう、きみを離さないからね……」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>眼鏡の男</dt><dd>    取り出したのは透明な瓶のようなものでした。<br>そのまま、女性に覆いかぶさりながら瓶の内容物を頭からかぶります   </dd></dl>
+<dl style="color:#000000" class="main"><dt>眼鏡の男</dt><dd>    笑い声とも悲鳴ともつかぬ声で叫びながら女性に抱き着きます   </dd></dl>
+<dl style="color:#000000" class="main"><dt>女性客</dt><dd>    「ぎゃあああああああああッ！」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>女性客</dt><dd>    「た……助け……あああああああああッ」　聞くに堪えない絶叫が響き渡る＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「おい！何してんだ！」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    もう………いいすか？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    攻撃して………   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    しまいにはどちらの声も聞こえなくなり、男女は抱き合ったまま地面に倒れるでしょう＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「え！？おい、どうなったの！？」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    駆け寄ります＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ほのかに肉の焼けるような臭いと、それとは別の刺激臭がします＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    では、黒正は見るでしょう   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    液体のかかった部分が焼けただれて、混ざり合うように結合した二人の顔を。   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    女性の側は恐怖で引き攣った表情なのに対し、ストーカーの方は凄絶な笑みを浮かべています   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    SANc……1D3/1D4+1   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    かわいそう   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （黒正が）   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    1d100&lt;=64 【正気度ロール】 (1D100&lt;=64) ＞ 2 ＞ 成功  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    無駄にいい出目   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    1d3 (1D3) ＞ 3  </dd></dl>
+<dl style="color:#000000" class="main"><dt>system</dt><dd>    [ 馬場 黒正 ] SAN : 64 → 61   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「……ッ！誰も来るな！警察と救急車！」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    ちなみに息はありますか？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「！？？！？……おいなんでそいつらは静かになったんだ……死んだのか？」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「と、とにかく呼んどくからな！」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    息は……ギリギリあるかもしれませんが、まぁこれではもはや……といった感じではある＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「うっ…！」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    服でも被せとくか…？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    いや流石にそこまで咄嗟には動けんな   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「えっと……なんかストーカーと被害者って感じの二人なんすけど……ストーカーが一緒に薬品？みたいなのを被って……」みたいなあやふやな説明を電話口にします＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    呆然と立ち尽くしてます＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    通報は問題なくできます。すぐにそちらへ向かうと電話は切られるでしょう   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「………これ事情聴取されるのかな…………」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    占い師のところへ戻れますか？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「そんな場合じゃねいんですけど…………。」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    戻って良いよ   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「…じゃあ今の内に行くしかないな、あの占い師のところに」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「………そ、そうだな………。」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ていうかこれ……もはやあいつがやった殺人だろ……」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    戻ります   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    では、表に戻ってくるとですね   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    めちゃくちゃ急いで荷物片づけてます＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「……なんかがちゃがちゃいってるな？」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「おい！」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「逃げる気か！？てめー！」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    目の前に座ってズバーンと財布から3000円出します   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    いいえ   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    あなた達と目が遭うと、いくつか荷物を取りこぼしながらも逃げ出します＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「……黒正、あいつ瓢箪持ってた！？」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    持ってましたか？   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    肌身離さず＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    追いかけようか   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    追いかけられますか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    追いかけられますが   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    戦闘扱いです   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    甘んじて受ける   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    ちなみにアイツが取りこぼしたものを拾う場合は無条件で逃げられますか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ラウンド消費かな   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    目星に成功したら目的のものをさっと見つけて取れませんか？   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    端的にルールを説明いたしましょう<br>これから４Rだけ戦闘をします。<br>その間に花鳥を捕まえられなければ戦闘終了です   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    また、花鳥は＜逃げる＞という専用技能を50%持っています。<br>これを3回成功させてもあなたたちの負けです   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    戦闘っていうことは我々は攻撃技能を宣言すれば命中判定に移行するというわけですか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    はい   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    拘束する場合は戦闘マニューバのルールを適用します   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    そして黒正は攻撃技能持ってないんで、せめて投擲に使えるものを拾えないかな？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    あれ初期値25くらいだった気がするけど   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    まぁ……私はOKです。考えがあります   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    黒正はとりあえず拾うかな…？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    とりあえずDEXは50です   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    55です   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    花鳥は？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    DEXの概念は関係ない   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    戦闘なら行動順があるでしょう   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    あなたたちが花鳥をぶち殺すか戦闘マヌーバで抑え込むかです   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    マヌーバって何…？   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    DEX30らしい   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ダメージ以外の提案みたいな感じかな……&gt;マヌーバ   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ただ殴る以上の何かを求める場合の提案   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    たとえば相手を抑え込むとか   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    先に聞くか。〔追跡〕で相手の逃走判定を失敗させられませんか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    できません   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    え？？？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    このゲームにおける追跡は単純な速度比べによるものではなく敵の痕跡を追うものだったはずです   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    じゃあなんすか、あいつはスパートかけて撒くってことですか   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    まぁDEX対抗で勝ったら逃走妨害しつつ＜近接戦闘：素手＞の成功率+25とかかな   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    その逃走妨害の宣言タイミングはいつですか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    手番   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    そうですか   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    とりあえず手紙はあいつをぶん殴るべきだと思うんですがどうでしょう   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    うーん……いや、ぶん殴れば手っ取り早いのは事実だし、ルールが定まってる以上追いかけることは想定されているんだろう   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    ただアイツがこぼした荷物を拾いたい気持ちと、警察がやってくるので時間が経ったら回収できない可能性がワンチャンあるのと、不運状態の手紙に一人で追いかけさせて大丈夫かという気持ちがある   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    荷物は何狙いですか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    そもそも白杖ついてるような人間が追跡できるんか？   </dd></dl>
+<dl style="color:#000000" class="group tab_0"><dt>KP</dt><dd>    戦闘マヌーバについて<br>・ただ相手をぶん殴るだけなら普通に攻撃技能を振ればいいよ<br>・それ以上の、たとえば敵を抑え込むとかそういうのを求めるなら戦闘マヌーバ判定に成功する必要があるよ<br>・戦闘マヌーバ判定では相手は回避で対抗できるよ。<br>　自分の攻撃判定の達成レベルが相手の回避判定の達成レベルより高い場合は戦闘マヌーバに成功するよ。<br>　引き分けの場合、戦闘マヌーバは失敗だよ。   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    行動権すら剥奪されるのであれば、毎ターン聞き耳と目星を足して割った値で判定して失敗したらチェイス失敗とかですかね   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    できるかできないかで言えば近視でも一応見えるのと耳がいいのでなんとかするでしょう   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    まぁいいか   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    何を落としたかは戦闘フェイズにならないとわからないですか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    別に大したもの落としてないと思う   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ペンとか   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    じゃあ追いかけるよ！！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    いまから一緒にあいつを殴りに行くんだな！？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    こぶしの初期値いくらでしたっけ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    なんか弱くなってた気が……   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    こぶしという技能はなくなった   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    近接戦闘とかになってるはず   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ２５か？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    25かあ   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    25%だな   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    しかし！今回に限り！なんと……   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    5000！？！？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    25%です   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    とりあえず手紙から行動します   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    近接武器（杖）を宣言しますがかまいませんね！！！！！！   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    来いや   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    逃げるを回避に転用します   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「女性の敵はなぁぁぁぁぁぁ！！！！」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「人類の敵なんよ！！！！」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    CC&lt;=75 【近接武器（杖）】 (1D100&lt;=75) ボーナス・ペナルティダイス[0] ＞ 21 ＞ 21 ＞ ハード成功  </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    杖75%もあるの！？   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    CC&lt;=50 逃げる   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    こちとら法で定められてて肌見放さず持ってんだ！！！使いこなしてなんぼだろ！！！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    棒術修めてますから！！！！！！   </dd></dl>
+<dl style="color:#000000" class="zatsudan"><dt>KP</dt><dd>    ブラウザの様子がおかしい   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    CC&lt;=50 (1D100&lt;=50) ボーナス・ペナルティダイス[0] ＞ 82 ＞ 82 ＞ 失敗  </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    ぎゃああああああ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    小さい棍棒（警棒）は1d6+DBダメージらしいのでそれに倣います   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    1d6 (1D6) ＞ 2  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ぺしっ！！！！！！！！！！！   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    「うぐっ」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>system</dt><dd>    [ 花鳥 吉秀 ] HP : 0 → -2   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    そのまま黒正かな   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    投擲20か…   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    まあ近接戦闘で殴りに行きます   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ……これしてほしい行動とかあったら言っても良いんですか？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    いいんですかKP   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    PL間の相談ってことなんじゃないの？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    包丁を投げるみたいなことじゃなければ聞きます   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    今回に限り「手番を消費してDEX対抗で勝ったら逃走妨害しつつ＜近接戦闘：素手＞の成功率+25」っていう行動が選択できちまうなぁ～～～～～ってつぶやきます   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    相手のDEXは30らしいです   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    あ、これそういう意味か   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    じゃあ杖で攻撃された隙に逃走妨害を試みます   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    別にRP的にもやることはかわらんしね   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    やるってのか！？   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    DEXどうぞ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    おまえはこの三人の中で一番速いんだ！！！いけ！！！   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    55です   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    CC&lt;=55　【DEX】 (1D100&lt;=55) ボーナス・ペナルティダイス[0] ＞ 46 ＞ 46 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    CC&lt;=30 (1D100&lt;=30) ボーナス・ペナルティダイス[0] ＞ 97 ＞ 97 ＞ ファンブル  </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    あっ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ファンブルだしなんか補正くださいよ～   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    えっと……   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    つんのめって転びました！！！！！！！！＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    なんだぁ～？大凶かぁ～～～～？お前も占ってもらった方がいいんじゃあねーのかぁ～～～～！？   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    1d3 転倒ダメージ (1D3) ＞ 2  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    この辺にぃ～～～よく当たる占い師いるって聞いたぜぇ～～～～～～～～～！！！！   </dd></dl>
+<dl style="color:#000000" class="main"><dt>system</dt><dd>    [ 花鳥 吉秀 ] HP : -2 → -4   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ……もう１Rぐらい動いていいんじゃね？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    探索者二人   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ていうか逃走妨害→強化パンチと連続攻撃できるわけじゃないのか。まぁそうか   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    次に近接攻撃する場合に補正入るって話ですね   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    じゃあこの行動がその”次”じゃん   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    見せてやれ黒正！！！！   </dd></dl>
+<dl style="color:#000000" class="zatsudan"><dt>KP</dt><dd>    戦闘マヌーバの成功条件、よくよく見たら別に普通に攻撃する時と変わらんな   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    じゃあ近接戦闘！   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    補正+25ですか？   </dd></dl>
+<dl style="color:#000000" class="zatsudan"><dt>KP</dt><dd>    たぶん「戦闘ではただ殴るんじゃなくて羽交い絞めにしたりもできるけどその場合はちゃんと何をどうするか言えよ」ってだけの話だなこれ   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    はい<br>ぶん殴るでOKですか   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    組み付きもなくなったんだっけか   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    はい   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    じゃあ+25でダメージどうぞ   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ？？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    成功率+25%で近接格闘どうぞ   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    ダメージ+25！？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    CC&lt;=50 近接格闘 (1D100&lt;=50) ボーナス・ペナルティダイス[0] ＞ 56 ＞ 56 ＞ 失敗  </dd></dl>
+<dl style="color:#000000" class="zatsudan"><dt>KP</dt><dd>    組み付きが「提案でやれ」になった感じ   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    空振りしました！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    むう   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    7版はデータを色々簡略化してる感はある   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    「ひいっ」　瓢箪を抱えながら辛うじて躱します＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    つっても殴る以外に選択肢がないんだよな、選択肢にも技能が必要なわけで   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    暴力反対！！！！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    わりぃ、杖でぶん殴ります   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    杖で羽交い絞めにする場合はその旨宣言してもらえれば……   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    CC&lt;=75 【近接武器（杖）】 (1D100&lt;=75) ボーナス・ペナルティダイス[0] ＞ 45 ＞ 45 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    CC&lt;=50 逃げる (1D100&lt;=50) ボーナス・ペナルティダイス[0] ＞ 68 ＞ 68 ＞ 失敗  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    1d6 (1D6) ＞ 5  </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    なんか運悪いな   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    あっ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ダボが   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「オルルルァ！！！！！！！！」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    容赦なくしばきます＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    でも逃げる三回成功って、回避判定のも含まれるよね？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    まぁこの調子ならまだ安心だが   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ちょっと待ってね   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    CC&lt;=40  (1D100&lt;=40) ボーナス・ペナルティダイス[0] ＞ 53 ＞ 53 ＞ 失敗  </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    あっ   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    手紙の杖が花鳥の頭を打ち据えると、そのままバランスを失い力なく転倒します   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    っしゃオラァァ！！！！！！！！！！！！   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    ――転倒した花鳥の頭から血が溢れ、それがコンクリートを染めていきます＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    わあ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    おっと？？？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「………………ん？？」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「や、やべ………殺っちまったか？」＠   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    ぴくりとも動きません＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「…………………………………。」   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    脇に抱えていた黒い瓢箪は放り出され、ごろごろと転がるでしょう＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「………よし！！！救急車呼ぼう！！！」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    とりあえず追いつきます   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「………」＠息があるか確認   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    息はまぁあります   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    あんのか、いやしかしな………   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「…よし！生きてる！まだ大丈夫だ！」＠   </dd></dl>
+<dl style="color:#000000" class="zatsudan"><dt>KP</dt><dd>    六壁坂みたいになってるじゃねーか   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「……いや、救急車はそれでも呼ぶよ」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「うん、呼ばないとな………やっちまったし……」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「そりゃ呼んでくれよ！このまま放置して最悪の事態になるのは見過ごせねえ！」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    はい……   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    とりあえず消防に連絡します。私がぶん殴りました。ってとこまで伝えます。＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    今の内に花鳥が落とした荷物を拾っておきます。瓢箪含め   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    あ、通報終えたことにしていいですか？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    私はいいと思う   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    KPのWi-Fiが死んだそうです   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「……………まず、すまん黒正……世話を焼いたばっかりにおまえはとんだとばっちりだ………」＠   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    なにぃ～～～～～～～～～～～～～～～～～～   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「俺は首を突っ込んだ側だから気にするな。まあなんというか、手紙も鶏太郎も死ななきゃいい」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    鶏太郎があのまま傾倒してたらヤバいことになってそうだなーとか考えてます   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「………ほんとに優しいな。黒正は………。」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「取調室で庇ってやりたいところだが、まぁ実際二人で襲いかかったし、あいつもそう証言するだろうしな………。」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「まぁ……眼の前で二人死んだ上に相手は霊感商法をやってる悪人だったんだ……偶然が重なった結果冷静さを欠いちまったとでも言い訳するか……」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「こっちも正直に話すしかないな。少なくともあの女がこの占い師と話してたのは他にも見ていた人がいるだろうし」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「どう考えても怪しいから話を聞こうとヒートアップした…と言うしかないか」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    でも傍目から見るとあの二人が死んだのには花鳥がものすごく関与してそうだから重要参考人を捕まえようと必死こくのはそんな不自然な行動ではない……か   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    まぁそれは置いといて……ここまでは前フリで<br>締める前に言っておきたいことがあるんや   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「そんでさ……もう一つ聞いて欲しいことがあるんだが……黒正」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「何だ？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「その瓢箪を使えば私達の運命を変えられるんじゃないのか………？」＠RPEND   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「………」＠拾った瓢箪を見つめます   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    おつかれさまでした！！！！！！   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    お疲れ様でした！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    これって………部屋どうなるんですかね   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    さいなら～   </dd></dl>
+<dl style="color:#000000" class="zatsudan"><dt>KP</dt><dd>    こんばんは　昨日はすいませんでした   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    ぺい   </dd></dl>
+<dl style="color:#000000" class="zatsudan"><dt>KP</dt><dd>    あとパニックになってwi-fiって書いてたけど実際は有線接続だからwi-fiではありませんでした   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    ！！！！！   </dd></dl>
+<dl style="color:#094440" class="zatsudan"><dt>馬場 黒正</dt><dd>    こんばんは   </dd></dl>
+<dl style="color:#103165" class="zatsudan"><dt>屠山羊 手紙</dt><dd>    こんばんWi-Fi   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    続き！！！！！！！！！！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ママーーーーーｗｗｗジャストキルダマーーーンｗｗｗｗｗｗｗｗｗｗｗ   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ボヘミアンたちはどうしますか？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「いやこれ…使って大丈夫なのか？そもそも使い方ってなんだ？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「……ちょっと貸して」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    あ、拾ったらですね   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    hai   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    思ったより軽いです。   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    何か入ってはいる？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    にも拘わらず、中からちゃぷちゃぷと液体の音がします＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    つまり音から推測できる水量ほどの重さが無い？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    うむ　けっこう入ってる感じの音なので   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「……ん？」と耳を近づけて確認   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「音的に結構入ってるよな？それにしちゃ軽いぞ」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    黒正はSANc 0/1をどうぞ   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    1d100&lt;=61 【正気度ロール】 (1D100&lt;=61) ＞ 78 ＞ 失敗  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「効果が効果だし、物理法則を無視してんじゃないの………」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ほい   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    <br>   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ていうかあたしはいいのか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>system</dt><dd>    [ 馬場 黒正 ] SAN : 61 → 60   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    別に今更そんなショックうけないけど   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    では黒正は、普段からなんとなく普段から思っていること……<br>かなり大げさに言えば、「願っていること」を口にしたくなります   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    はあ？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    したくなるだけです。言えとは言いませんし、そうなっている自分を客観視できるかもしれない   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    choice[口にする,口にしない] (choice[口にする,口にしない]) ＞ 口にしない  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    メタ的に冷静な判断をすると……言えば叶うかもしれんけど代償がありそうだな………   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    あと願いといっても別に大したもんじゃあなくてもよいです。<br>最近肩こりがしんどいとか、こないだ新しいゲーム発売されたからやりてぇよなとか、かつて生き別れた妹にまた会いたいとか……   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    多分焼き肉食いたいとか   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    それにしても持っている方にそういう効果があるんだな   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「あ…あー……手紙、これヤバいわ」＠手紙に渡そうとしてた瓢箪を自分の方に引き戻す   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「え！？ま……まて黒正、具体的にどうした……！？お前がヤバいなら放っておけないぞ……。ぐす……。」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「なんというか、自分の望み…願い？を口にしたくなる」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「で、これはただの勘だけど口にするのは多分ロクでもないことになる」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「はぁ？花鳥はむしろ聞く側の人間だったと思うが………」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「いや、そうか……例えば私が”あんた死ぬわよ”とか言われたのは……あいつがムカついて私をこの世から排除しようとしたから……その発露だったのか……」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「逆に”こいつは金づるにしてもいいな”と思った相手には相手の人生がうまくいくよう口にすればその通りになる………ってことか……？」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「まるで魔神のランプとはいえ……その瓢箪に強制されてるってのが不気味だな……」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「我慢できはするんだろう。実際俺は口に出そうになったけど何も言ってないし、効果がわかっているなら尚更口には出さないよう意識する」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    だがふつふつと衝動が沸き上がっても来る。<br>言ってしまえ、何を我慢する必要があると囁かれるみたいに。＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    一旦瓢箪を手放せますか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    それは問題ないです   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    手放したら衝動はどうなる？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    和らぎますが消えるとまではいきません   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    おいおい   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「手紙、１つ聞きたい」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「この瓢箪に『事態の解決』を願ったらどうなると思う？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「え………？事態がなにかによるな………私達が今から傷害罪に問われそうっていう話の事なら、パクられずに帰れるのかもしれないけど……」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「あとは瓢箪のせいで私が大殺界にいる事か………。その話なら瓢箪に相談すれば単純にそれは解決すると思うし、<br>というか今からそうなってもらわないと困るが……」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「まぁ具体的に願いを言えば、まったくそのとおりになるんじゃないか」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「じゃあ、物は試しだな。とりあえず花鳥が手紙に言った言葉を取り消さないと」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「いやでも「手紙は死なない」なんて言い方したら不老不死にでもなるのか？願いの言い方気をつけないとな…」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ま……待て、黒正が使うのか……？」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「だって手紙が自分に使えるかわからないし…」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「そ、そうだな……じゃあお願いしよう」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「いやでも言い方は一緒に考えてくれ。「死相が消える」でいいのか？「花鳥に言われたことが無効になる」とかか？」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    いかがいたしましょ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （えー………不老不死とか普通になりたいんだよなー………）   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （それと花鳥には仕事については結構ポジティブな事を言われていた……じゃあ取り消されたらなんだ？うまくいかなくなるのか？）   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （いやでも命には換えられんしな………）   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    手紙はSANc 0/1   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    1d100&lt;=73 【正気度ロール】 (1D100&lt;=73) ＞ 90 ＞ 失敗  </dd></dl>
+<dl style="color:#000000" class="main"><dt>system</dt><dd>    [ 屠山羊 手紙 ] SAN : 73 → 72   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    やっぱ自分が瓢箪を手にして願った方がいいんじゃないか？と思い始めます   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    思い始めるだけです＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （あと仕事無くそうが、最悪あとで億万長者とかを願えばそのとおりになるんじゃないか……？）   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「と……とりあえず後者やってみてくれ……ぐすっ……」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「よし、じゃあ…」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「手紙が昨日、花鳥に言われたことは無効になる！」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    どきどき   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    二人とも＜聞き耳＞をどうぞ＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    CC&lt;=80 【聞き耳】 (1D100&lt;=80) ボーナス・ペナルティダイス[0] ＞ 49 ＞ 49 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    CC&lt;=89 【聞き耳】 (1D100&lt;=89) ボーナス・ペナルティダイス[0] ＞ 49 ＞ 49 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    そもそもこの聞き耳って成功したからなんなんだ？？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    何回かあるけど   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    どぷん、と水中に何かが沈む音をあなたたちは聞きます。   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「！！！！！！！！」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    そして前回あなたたちが耳にした時よりも、その音は大きくなっており、水嵩も増しているように聞こえました。   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「な、なんだ！？何があった！？」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ……さて。   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「た、体感ではなんともないが………」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    手紙の顔色はにわかに良くなっていきます＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「ん？お、おお！顔色がだいぶ良くなってるぞ！あの占い聞く前みたいに！」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「え！？マジ！？」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「………………ど、どうする、次……いくか？」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    瓢箪に変化はありますか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    瓢箪の中の水嵩がちょっと増したような気はします。相変わらず軽いですけども   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    で、感覚的にはだいぶ入ってるんですよね中身   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    はい＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「ただ、願いを言う前と比べてなんか…中身が増えてる感じがするんだよな」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    満タンってほどではない＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「これ以上願ったらどうなるんだこれ」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「け……決壊するってことか……いつか…………」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「にしてはコイツは感情的に使ってたがよ………」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「………これ以上はやめるか。お前もさっき言ってたが、ロクなことになる予感はしない……」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「……初めて触った俺でも限界があるって予測はつくのに、人に死ぬだのなんだの好き勝手願ってたわけかコイツは」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「………ぶっ壊そうぜ」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「そ…れはそれで…いいのか…？」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    開ける？中身出す？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「この瓢箪はこいつに所有権がある。……このままだとこいつの手元に返る事になる。それはマズすぎるだろ……」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「それは…まあ、確かに……」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    今この男が所有している？　だから？　自分のものにしてしまえばいいんじゃないか？＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    願えばいいんだよなあ（願わない）   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    しかし仮にこの場をのらりくらりしたとして、じゃあ次に何すんの？って話でもある気がする   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    この瓢箪についてここで決着つけろというシナリオかもしれんし   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    まだ願えるんだから何かしたいなら願おうぜー！ってことかも   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    多分何言っても結果論なんだけど、個人的意見を述べると   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    破壊は別に問題ないと思う。   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    瓢箪は明らかに意思を持っていて、願いを言わせようとしてくる。   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    破壊しようって話になってからも、しつこく黒正に呼びかけているわけで   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    逆に言うと破壊は瓢箪の意に沿わない訳だから………破壊したら何かヤバい存在が復活するとかではない……と思うんだよな……   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    なるほど   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    じゃあ…壊すかあ！少なくとも破壊を試みるかあ！   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    中身抜いたら無限に願いを叶えてくれるとかではないだろうし   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    わ……私がやろうか？（杖を構えながら）   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「…警察が来る前に壊すか？」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「あるいは警察やこいつから隠し通してから壊すか……しかし、この瓢箪は危険だ……。恐らく一人だと……”魔が差す”……。」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「少なくとも私なら……絶対億万長者になりたいとか言っちゃう！！！！！」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    ツッコみたいが少なくとも自分も口に出しそうになったので何も言わない＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ………待てよ今の言ったんじゃね！ｗｗ   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    瓢箪持ってるのはこっちだからセーフじゃないか！？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    そ、そうか！！！！   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    あれ？　今願った？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    もしかして？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    言っちゃうって言っただけ！！言っちゃうって言っただけ！！！！！！！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    たられば！！！！！！！！！！   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    そっか……   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「俺の魔が差す前に急いだほうがいいな！」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    たらばがに！！！！（蟹道楽要素回収）   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    さて   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「走ってる車に投げつけるのは流石にやめた方がいいよな。となると…」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    「おいッ！」　とあなたたちに声をかける者がいます   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「良かった、こんなところに……」　聞き覚えのある声でした＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「…………おい黒正……ややこしいことになるんじゃね！？」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    一応言うと今は裏路地の一角にいて他に人はいない想定です＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「げっ！？」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「こんなところにあったのか、俺の瓢箪……」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「鶏太郎……！？！？？」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    気絶してる花鳥には目もくれず、瓢箪をあなたたちから奪い取ろうとしてきます＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「なんかヤバいぞ！まともじゃない！」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    どどどどどどうしますか！？！？？！   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    逃げるか今すぐ瓢箪をぶっ壊すか   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    そして走る車に投げ込むことを考えたが壊れなかったらアウトだし鶏太郎が追って飛び込みそうだ！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    まずさぁ……何するにしても罪を重ねることになりそうじゃん……   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「寄越せッ！　そいつは俺の……」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    そして、黒正は聞きます。あるいは手応えを感じます。   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「おい鶏太郎！！！やめろ！！！」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    漆が塗られたような漆黒の瓢箪。普通であればそんな事が起きても目立たず、気付かないでしょうが……。   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ミシリ、と音を立てて、瓢箪がひび割れ始めています＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ！？？？？？？？？？？？？？？？？？？？？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「ヒビ入ったー！？」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「絶対ヤバい！ヤバいってこれ！」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「うるせェーー！」　手紙を用者なく突き飛ばす＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「………ッぐぁぁぁぁあ！！！」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「ッ………じゃあ壊せー！！！防御デバフだと思えー！！！！！」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「それか逃げてくれーー！！」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    あるいは、瓢箪に願って鶏太郎を止める………   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    これ近くにいる奴の適当な願いを聞き入れる可能性があるので、壊すなら逃げるよりこの場でぶっ壊す方がいい気がしてきた   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    いや、一応所有者は黒正だからダイジョブなんじゃないか……   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    壊せますか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    具体的に何をしますか？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    下はコンクリ？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    叩きつけて壊す？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    確実性を取るなら瓢箪に「瓢箪壊れろ！」って願う   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    ただヒビが入ってるのでワンチャン限界が来てアウト   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    世界中の瓢箪が壊れますとかいわれたら若干困るな   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    そっちのがフェアだと思うので言っときます   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    あと１回だけ瓢箪に何かを願えます   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    これまでの描写からわかりそうなことであれば瓢箪と関係無関係問わず質問にも答えるので、よく考えて願いを入力してください＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    俺を不老不死にしろー！！！（ベジータ）   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    じゃあもう願った方が確実じゃねえかなあー！？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    ただ願ったら満タンでアウトですとか言われかねないんだよなー！   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    普通の瓢箪になれとか言います？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    任せます。僕はもう失敗してもいいから物理でやってみようと言おうとしてました   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    あーそれは良いかも   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ただ……主語がないのが気になるんだよな。この瓢の正式名称がわからないから鶏太郎を瓢箪に変えかねないｗｗ   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    『俺が手に持っている瓢箪を一切害のないただの瓢箪に変えろ』とか   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    良いんじゃないか   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    じゃあそれで行きます！   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    願いを言え   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    どんな願いでも一つだけ叶えてやろう   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （叩き壊すか？壊れるのか？そもそも壊しても大丈夫なのか？）   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    （いっそ鶏太郎がこれ以上何かを言って願いを叶えてしまう前に…）   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「…俺が手に持っている瓢箪を、一切害の無いただの瓢箪に変えてほしい！！」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    言い終るが早いか否か、畠山があなたから瓢箪を力づくで奪い取ります   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「やったァァ―――ッ、俺のモンだああああ」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「こいつで俺は幸せになるんだッ、ヒャハハハハハハハ！」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「……………………」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「…………あ？」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    ヒビの走った瓢箪が、ぽろりと欠け落ちる。   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    中身は空っぽでした。   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    そして、畠山は目を丸くしてあなたたちに向き直り   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「……俺、何してたんだっけ？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    我々の記憶はありますか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    はい   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「す………………」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「すげーぜ黒正………よくやったぁ～～～………！」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「…………ふぅー……」＠安堵の溜息   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「よ、良かった…壊れた瓢箪の中からとんでもないのが出てきたらどうしようかと…」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「…………？？？？」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「って……これ、花鳥先生の瓢箪か？　なんで俺が……」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「……え？」　あなたたちの足元に倒れている人物を見る   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    倒れてます＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「あ」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「はい」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「……おい、ちょっと待て……こりゃどーいう状況だ……？」　＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「………まぁ……今のお前になら話してもいいか。」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「まずこいつが人殺しのクズ野郎だというところから話をするからな……？」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    眼の前で客が死んだこと、咄嗟に追いかけた事、追いかけてからボコって瓢箪を奪ったこと、瓢箪の処遇をどうするか考えてたら正気を失ったおめーが奪いにきたって事を話します＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「はぁ……？」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「おまえなぁ～～」　＜任意：交渉系技能＞どうぞ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    CC&lt;=75 【心理学】 (1D100&lt;=75) ボーナス・ペナルティダイス[0] ＞ 80 ＞ 80 ＞ 失敗  </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    魅惑ってまあ無理ですよね。カリスマ性とかだろうし   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    クソが！！！！！！！！！   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    まぁそうだな   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    言いくるめしか無いな   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    CC&lt;=30 【言いくるめ】 (1D100&lt;=30) ボーナス・ペナルティダイス[0] ＞ 85 ＞ 85 ＞ 失敗  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    なんで我々はドラゴンダイブと大文字くらいしかまともな命中率の技もってないんですか   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    じゃあろくに信じてもらえません   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「……どういういきさつかは知らねぇが、とにかく……警察呼ぶぞ。良いな」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「心配すんな」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「もう手配してある」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「い、一応それなりの説明は用意してるから…」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「とりあえず先生を表まで運び出した方がいいんじゃねーのか……」　と言って倒れた花鳥へ歩み寄ります   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    もう一つ足音がします＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    二人目の花鳥！？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    足音の方を見ます＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「はぁ……騒ぎすぎたかな」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    え…………もしかして旧神ノーデン……？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    見慣れない出で立ちをした、白髪と髭を蓄えた老人でした   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「す、すいません……もう通報済なんですよ……ぐすっ……」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    彼はあなたたちを一瞥し、最後に黒瓢箪を見ると   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    「ふむ……こんなところにあったのか」   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    「面倒な事をしてくれるものだ」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「ちょ…いやいや！それ危ないんで！」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （ま……待て黒正）   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「今はもう大丈夫かもしれないけど触らないほうが…」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    （あれ絶対この瓢箪について詳しい人だって）＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    老人と、花鳥。そして畠山が手に持っていたはずの黒瓢箪が、忽然と消えます＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「……は！？」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「え！？！？？」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「………」＠絶句   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    事件の痕跡といえるものは何も残らないでしょう。<br>あなたたちの記憶だけです。   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ……強いていうなら、先ほど欠け落ちた瓢箪の破片。   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    いや今度は虚偽の通報で私がしょっぴかれかねないが？？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    そのひとかけらぐらいは、まだ落ちているかもしれませんが……＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「…………！？」　路地裏から出て表を見渡しても影も形もない＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「……………とりあえず、自力で帰ったとでも言ってごまかすか」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「あ、ああ。救急車いらないなんて言い張って強情な奴だったな（嘘）」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「それにまださっきの二人の死体はあるだろうし……。」＠   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    特になければ終わりになりそう＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    救急車は流石に来ますよね？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    呼んだし来るでしょ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    はい   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    もうなんか……いいです   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「とりあえず………助かったよ黒正。本当に………。」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「私のことはとりあえず心配しなくて良いわよ。ここからどうなろうと生きてるだけでめっけもんだし、その上400万も浮いてお得だ……。ぐすっ……」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「まあ、俺も友人を助けられて良かったよ」   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「あとは帰るまでに何事も無ければ本当に問題なしだな」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「……これからも友人でいてくれな！」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「………鶏太郎との付き合いはちょっと考えるかもしれん」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「え！？」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「あの瓢箪のせいでおかしくなってたのはあるだろうから…」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「だっておめー信じてくれなかったじゃん！！！！」   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「は？　あー……はいはいわかったわかった」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「私だって信じたくないよ！！！！！」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「でも現に起きてるじゃん……！X-ファイルが！！！」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「そりゃ信じられないだろって気持ちもあるが、当人の一人として信じてもらえないのが嫌なのもわかるな…」＠   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「見えるのか！！！私が罪もないおっさんを白杖でボコ殴りする巴御前に見えるのか！！！」   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    「一昨日の飲み代の返還を要求するー！！！！！」＠   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「ああ、それは早いところ返せよ」＠   </dd></dl>
+<dl style="color:#795548" class="main"><dt>畠山 鶏太郎</dt><dd>    「わかったわかった悪かったって！　次の給料日には返すったらよ！」＠rpend   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    今日ばかりは、多分ガチ泣き。＠RPEND   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    「しかし…やっぱり占いってのは話のネタにするくらいがちょうどいいな」＠RPEND   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ――――――<br>――――<br>――   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    それでは【瓢】、これにて終了でございます。<br>お疲れさまでした   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    おつかれさまでした   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    お疲れ様でした！   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    本当に終わったよ！   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    結末①…1D10の正気度ポイントを回復。<br>結末②…1D6の正気度ポイントを回復。<br>結末③…ロスト確定のため無し。<br>結末④⑤…正気度ポイントの回復無し。   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    今回は①と④の複合だから……   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    1d8ってとこかな   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    1d8 (1D8) ＞ 2  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    はいはい   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    1d8 (1D8) ＞ 1  </dd></dl>
+<dl style="color:#000000" class="main"><dt>system</dt><dd>    [ 馬場 黒正 ] SAN : 60 → 61   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    なんなのこれ   </dd></dl>
+<dl style="color:#000000" class="main"><dt>system</dt><dd>    [ 屠山羊 手紙 ] SAN : 72 → 74   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    技能成長する人はどうぞ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    成功したやつだけだっけ？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    はい   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    CC&lt;=89 【聞き耳】 (1D100&lt;=89) ボーナス・ペナルティダイス[0] ＞ 99 ＞ 99 ＞ 失敗  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    1d10だっけ？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    はい   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    1d10 (1D10) ＞ 3  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ゆるしたる   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    これ90超えたらSAN回復とかなかったっけ？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    はい   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    いくつ？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    CC&lt;=70 【図書館】 (1D100&lt;=70) ボーナス・ペナルティダイス[0] ＞ 76 ＞ 76 ＞ 失敗  </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    1d10 (1D10) ＞ 5  </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    CC&lt;=80 【聞き耳】 (1D100&lt;=80) ボーナス・ペナルティダイス[0] ＞ 39 ＞ 39 ＞ ハード成功  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    え？成功したやつ全部振れるの？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    はい   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    90ボーナスは2d6です   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    CC&lt;=75 【近接武器（杖）】 (1D100&lt;=75) ボーナス・ペナルティダイス[0] ＞ 70 ＞ 70 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    CC&lt;=65 【図書館】 (1D100&lt;=65) ボーナス・ペナルティダイス[0] ＞ 62 ＞ 62 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    CC&lt;=45 【目星】 (1D100&lt;=45) ボーナス・ペナルティダイス[0] ＞ 63 ＞ 63 ＞ 失敗  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    1d10 (1D10) ＞ 4  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    これはそこそこありがたいな   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    2d6 (2D6) ＞ 8[6,2] ＞ 8  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    おお、80超えたぞ   </dd></dl>
+<dl style="color:#000000" class="main"><dt>system</dt><dd>    [ 屠山羊 手紙 ] SAN : 74 → 82   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    なんだ結構得したな   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    アイデアとかって強化されるの？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    されない   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    幸運もしていいらしいな   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    はい   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    CC&lt;=75 【幸運】 (1D100&lt;=75) ボーナス・ペナルティダイス[0] ＞ 67 ＞ 67 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    幸運はいわゆるコンセみたいな使い方するからこうなっているんだろう   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    意外とやること多いなCoCのクリア処理   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    うちはリテイク扱いです   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    成功技能が全部成長するのってハウスルールやなかったっけ？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    逆   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    １つしか成長しない方がハウスルール   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    そうだっけか   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    目指せ！聞き耳99！！！！！！！   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    黒正は聞き耳だけですか？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    図書館振りましたよ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    他成功してないのか   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    あんまりダイスフッてないので   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    ほんまや振ってるわ。あと幸運もどうぞ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    悪いのよ運が   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    CC&lt;=45 【幸運】 (1D100&lt;=45) ボーナス・ペナルティダイス[0] ＞ 42 ＞ 42 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    成長は以上かな   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    そうです   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    とくになければ終わりです。お疲れさまでした   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    お疲れ様でした！   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    おつかれさまでした！！   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    楽しかったです！   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    後は質疑応答と投石   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    正直シナリオは後味悪かったな………選択の結果だが   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    神話生物のせいとかじゃなくて変なところで悪かった   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    あの女性は助けられましたか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    死んだと思う   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    杖で取り押さえるのかと思ったらどつきまわす方向に行ってあぁそうなるんだと思いながら見てた   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    人死にが出たのはまぁ僕の責任じゃないから良いとして<br>無駄に救急車読んじゃったし<br>ドラゴンダイブと大文字外して鶏太郎に信じてもらえないのは完全に運だしなぁ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    取り押さえるってどういう技能を要求されるんですか？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    杖で   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    自分の杖の技能判定結果が相手の回避判定の成功結果を上回ればよい   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    素手で捕まえる場合も同様   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    うーんいずれにせよあまり想像できないかな、どつくと思う   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    人が人殴ったら法的に危うくなるの忘れてた   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    いいぞ！そのままぶち殺せ！って剣闘士を眺める客みたいな気持ちで見てた   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    巴御前に槍で殴られてるわけじゃねーんだからよ、その程度で死ぬなよ   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    世界のエントロピーが上がっていくのは見てて楽しいからね   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    そう……・   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ていうか花鳥にあんた死ぬわよって言われたの僕だけなんじゃね？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    いいえ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    そう   </dd></dl>
+<dl style="color:#000000" class="main"><dt>KP</dt><dd>    花鳥に死ぬよって言われるのはシナリオギミックの一環なので   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    怒らせたわけじゃないのに言われるやつらかわいそう   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    花鳥は瓢箪ギミックのこと熟知してましたか？   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    まッッッッッたく知りませんでした   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    あああとCoCでノーデンと会うのが夢でした。ノーデンだったよねあれ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ノーデンスか   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    そんな怖い瓢箪だったのこれ？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    どつくぞ   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    お前なんだと思ってたんだよ   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    なんか変な瓢箪……   </dd></dl>
+<dl style="color:#1e002e" class="main"><dt>花鳥 吉秀</dt><dd>    行きがかりの骨董屋でなんか惹かれたから買ったけど……   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    言うて手紙も一人で手に入れてたら暴走してたんで   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    強欲な壺を発動   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    わし？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    わしはノーデンス   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    あの黒い瓢箪を捜しておったんじゃ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    はやく帰ってこい　遊戯王に   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ティアラメンツ・ナイアルラ使って待ってるから   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    ラストはどんな分岐してたんですか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    結末①：この瓢箪はただの瓢箪だと言わせる。事態解決<br>結末②：俺の占いは嘘だと言わせる。事態解決<br>結末③：死相を消してくれなど根本的解決にならないものを祈る。世界が滅ぶ　←？？？？？？<br>結末④：花鳥を殺す、気絶させる。→　畠山が瓢箪を奪い行方を晦ます。<br>結末⑤：花鳥が逃げ切る　→　「こんなものなくなってしまえ」と祈り、瓢箪がどこかへ消える。   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    壊せなかったってこと？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    壊せるよ   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    でも壊したらなんか世界が滅ぶらしいよ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    は？？？？？？？？？？？？？？？？？？   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    願い叶えまくってたらどうなったんですか？   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ふざけんなよマジでこのゲーム   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    黒瓢箪を破壊する。<br>　バキリと音を立て黒瓢箪は割れる。<br>　すると中からどばっと粘着質の液体があふれ出し、黒瓢箪を破壊したその液体が人間にかかる。<br><br>　液体が直接身体についた人間は、突然、自分の中にある欲望や衝動が抑えられなくなる。<br>　花鳥なら金への執着が抑えられなくなり、視界に入った人間や店から価値のありそうなものを盗んだりしようとするだろう。<br>　探索者の場合は各々の欲をさらけ出すかもしれない。<br><br>　液体はとめどなくあふれ続ける。<br>　地面に滴ったそれは、土や水に溶け込み、やがてそれを栄養とした農作物や家畜も徐々に衝動的な行動が増え、またそれらを摂取した人間にも徐々に同じような症状が現れるだろう。<br>　近い未来、自分の決断のせいで滅ぶ世界のなか、探索者はどう過ごすのだろうか。   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ウソだろ   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    わしは流石にどうかと思うからよっぽどPCが暴走しない限りこのエンディングにはしないとしてキーパリングしとるよ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    は？？？？？？？？？？？？？？？？？？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    これ厳密にやると本来的には「手紙の死相消せ！」って言うだけで滅亡じゃからね   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    このゲーム嫌いになりそう   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    瓢箪壊したらこのエンディングになるよ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    僕キリシロさんがいなかったら全部最悪の結末選んでるじゃん、マジで後味が悪すぎる   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    GMPL同席ありがとうございました   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    かえります   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    はい   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    シナリオまだ続くと思ってたしとりあえず応急処置として死相消したのはある   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    なので関係ない願い１回叶えたらアウトは厳しいぜ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    まぁウルフがそこは許してくれたからなんとかなったけどそれ避けたら手紙死ぬじゃん   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    探索者の目的は生存であってこの段階で世界の命運がどうとか思わねぇじゃろって思ったからこのままだとかなりキツいシナリオじゃよなぁとわしも思ったよ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ガー不じゃん   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    なんか葛藤させたいならせめて瓢の性質をちゃんと理解させてからにしてほしいけど理解したらなんかSAN値もっと減るんだろうな   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    だから初回の時点でエンディング③は瓢箪ぶち壊すか探索者が願いをかなえまくるとかしないと到達させん方向で行こうと思って、かつ瓢箪ぶち壊すもそこそこありそうだからもしそっちに行ったら「いいんだな？」って確認する方針で行こうって思った   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    これ今までロスト者出ましたか？   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    出とらん   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    というかこのロストの仕方はわしがつまらん   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    じゃあ～～～～～～僕が最初ってことになるじゃねーか   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    壊しとったわ確実に   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    破壊するか？って話自体は前回も持ち上がったよ   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    黒正くんが思いとどまってくれてほんとに助かったとしか言いようがない   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    おかげで所長のもとに帰れる   </dd></dl>
+<dl style="color:#094440" class="main"><dt>馬場 黒正</dt><dd>    よかったよかった   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    コンセプトと大まかな筋書きだけ拝借してシナリオとしてはわりと気ままに回しとるな   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    ヒゲ剃れ　物食べるときつくだろ　ソースとか   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    エンディング分岐は酷だけどそれ以外は重大性込みでけっこう好み   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    わしはこのぐらいの雰囲気のシナリオが回したい<br>あんまりダイレクトに世界の命運や人の感情を救うようなシナリオはわしの趣味から逸れるな   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    うーんごめん……あんま好きになれないかなこのシナリオは……<br>リザルトはデータ的に得したから満足としよう   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    僕は世界の命運を終わらせてたし黒正は世界を救ったんだよなぁ（破壊と創造）   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    こんなシナリオばっか回すからよろしくな   </dd></dl>
+<dl style="color:#103165" class="main"><dt>屠山羊 手紙</dt><dd>    楽しもうね   </dd></dl>
+<dl style="color:#000000" class="group tab_1"><dt>はむぱん</dt><dd>    シナリオの好みや良し悪しじゃなくて自分の選択で悪くなったから嫌いってだけなんじゃ…？   </dd></dl>
+<dl style="color:#000000" class="group tab_1"><dt>はむぱん</dt><dd>    CoCが判断材料がない状態で選択を迫られる機会が多いってのは僕もそこそこ嫌な部分ではある   </dd></dl>
+<dl style="color:#103165" class="group tab_1"><dt>屠山羊 手紙</dt><dd>    僕には判断材料がないように見えたけど僕以外全員回避に成功したってことは僕が馬鹿なだけじゃん～～～～～～～～～   </dd></dl>
+<dl style="color:#000000" class="group tab_1"><dt>はむぱん</dt><dd>    僕は死ぬ死ぬジョークでケラケラしてたらSAVOさんがすべて解決したからこのシナリオ楽しめました。   </dd></dl>
+<dl style="color:#000000" class="main"><dt>老人</dt><dd>    部屋畳みます   </dd></dl>
+
+</div>
+<footer></footer>
+
+<script>
+const Hide = (checkbox) => {
+  const elmntTarget = document.getElementsByClassName(checkbox.id)
+  for (let intCount = 0; intCount < elmntTarget.length; intCount++) {
+    const message = elmntTarget[intCount]
+    const contexts = message.className.split(' ')
+    let elmntChecked = checkbox.checked
+    contexts.forEach((context) => {
+      const contextCheckbox = document.getElementById(context)
+      if (contextCheckbox) {
+        elmntChecked &= contextCheckbox.checked
+      }
+    })
+    message.style.display = elmntChecked ? 'none' : ''
+  }
+}
+</script>
+</body>
+</html>
