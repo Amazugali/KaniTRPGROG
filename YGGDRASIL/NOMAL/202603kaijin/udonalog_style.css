@@ -1,0 +1,135 @@
+
+/* デザイン部分　数値4つは（上、右、下、左）の順 */
+/* 画像周りの線はとりあえずわかりやすさで入れています */
+
+body{
+    margin: 15px;
+    font-size: 14px;
+    line-height: 140%;
+    }
+
+/* 公開チャット div */
+tr.open{
+    padding:10px 0 10px 0;
+    overflow:  fixed;
+    background:#fff;
+    }
+
+/* 秘話チャット div */
+tr.secret{
+    padding:10px 0 10px 10px;
+    overflow:  fixed;
+    background:#333;
+    color:#ccc;
+    }
+
+/* 会場タブ tab1 */
+tr.tab1{
+    padding:10px 0 10px 10px;
+    overflow:  fixed;
+    background:#ffffff;
+    }
+/* 情報タブ tab2 */
+tr.tab2{
+    padding:10px 0 10px 10px;
+    overflow:  fixed;
+    background:#fff7ef;
+    }
+/* 雑談タブ tab3 */
+tr.tab3{
+    padding:10px 0 10px 10px;
+    overflow:  fixed;
+    background:#fff9fc;
+    }
+/* 見学タブ tab4 */
+tr.tab4{
+    padding:10px 0 10px 10px;
+    overflow:  fixed;
+    background:#f0fff3;
+    }
+/* リモタブ tab5 */
+tr.tab5{
+    padding:10px 0 10px 10px;
+    overflow:  fixed;
+    background:#f0faff;
+    }
+/* その他タブ tab6 */
+tr.tab6{
+    padding:10px 0 10px 10px;
+    overflow:  fixed;
+    background:#efefef;
+    }
+
+/* アイコン・名前・セリフをくくる p */
+p {
+    margin: 0 0 0 0;
+    }
+
+/* アイコン img */
+.icon { 
+    margin: 0 5px 0 0;
+    border: 1px #ccc solid;
+    background:#fff;
+    width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    object-position: 0 0;
+    float: left;
+    vertical-align: top;
+    }
+ @media screen and (max-width: 480px) {
+.icon { 
+    margin: 0 5px 0 0;
+    border: 1px #ccc solid;
+    background:#fff;
+    width: 70px;
+    max-height: 70px;
+    object-fit: cover;
+    object-position: 0 0;
+    float: left;
+    vertical-align: top;
+    }
+}
+
+/* タブ名 span */
+.tabname {
+    margin: 0 10px 0 0;
+    }
+.tabname:before{
+    content: "";
+    }
+.tabname:after{
+    content: "";
+    }
+ @media screen and (max-width: 480px) {
+.tabname {
+    margin: 0px 0px 0px 0px;
+}
+}
+ @media screen and (max-width: 480px) {
+.tabname::before {
+    content:"";
+}
+}
+ @media screen and (max-width: 480px) {
+.tabname::after {
+    content:"";
+}
+}
+/* 名前 span */
+.name {
+    font-weight: bold;
+    margin: 0 10px 0 0;
+    }
+.name:before{
+    content: "[ ";
+    }
+.name:after{
+    content: " ]""\A";
+    white-space: pre;
+    }
+
+/* セリフ span */
+.maintext{
+    word-break: break-word;
+    }
