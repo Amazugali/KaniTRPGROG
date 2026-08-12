@@ -1,0 +1,21 @@
+{
+  "archive_title": "カニドラシル ログ保管庫",
+  "brand_name": "Kani Meeting",
+  "subtitle": "Fresh Meeting 静的ログアーカイブ",
+  "notice": "Fresh Meeting のサービス終了に伴い保存した、閲覧専用の静的HTMLログです。",
+  "total_rooms": 29,
+  "rooms": {
+    "01": {
+      "title": "カニドラシルな部屋 01",
+      "description": "ユグドラシルの話題を分けるために作られた最初の部屋。"
+    },
+    "02": {
+      "title": "カニドラシルな部屋 02",
+      "description": "前室が7000発言近くになったため移行した部屋。"
+    },
+    "29": {
+      "title": "カニドラシルな部屋 29（にく）いカラス",
+      "description": "Fresh Meeting 上で運用された最終期の部屋。"
+    }
+  }
+}
