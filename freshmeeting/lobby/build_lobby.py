@@ -21,6 +21,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parent
 CONFIG_PATH = ROOT / "lobby-config.json"
+SPOILER_CONFIG_PATH = ROOT / "spoiler-rooms.json"
 OUTPUT_PATH = ROOT / "index.html"
 
 ROOM_FILE_RE = re.compile(r"^(\d{1,3})(?:\D|$)")
@@ -50,6 +51,27 @@ def load_config() -> dict[str, Any]:
     if not isinstance(merged.get("rooms"), dict):
         merged["rooms"] = {}
     return merged
+
+
+def load_spoiler_rooms() -> list[dict[str, Any]]:
+    """通過者専用部屋の設定を読み込む。ファイルがなければ空一覧。"""
+    if not SPOILER_CONFIG_PATH.exists():
+        return []
+    try:
+        loaded = json.loads(SPOILER_CONFIG_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SystemExit(f"通過者専用部屋の設定を読み込めません: {exc}") from exc
+
+    if isinstance(loaded, dict):
+        loaded = loaded.get("rooms", [])
+    if not isinstance(loaded, list):
+        raise SystemExit("spoiler-rooms.json は配列、または rooms 配列を持つオブジェクトにしてください。")
+
+    result: list[dict[str, Any]] = []
+    for item in loaded:
+        if isinstance(item, dict):
+            result.append(item)
+    return result
 
 
 def clean_text(raw: str) -> str:
@@ -195,6 +217,87 @@ def make_room_rows(config: dict[str, Any], logs: dict[int, dict[str, Any]]) -> t
         )
 
     return "\n".join(rows), data
+
+
+def make_spoiler_cards(entries: list[dict[str, Any]]) -> tuple[str, list[dict[str, Any]]]:
+    cards: list[str] = []
+    data: list[dict[str, Any]] = []
+
+    for index, entry in enumerate(entries, start=1):
+        room_id = str(entry.get("id") or f"S{index:02d}")
+        title_value = str(entry.get("title") or entry.get("scenario") or f"通過者専用部屋 {index:02d}")
+        description = str(entry.get("description") or "シナリオ通過者向けの感想・考察・裏話用の専用部屋。")
+        file_value = str(entry.get("file") or entry.get("href") or "").strip()
+        file_href = file_value.replace("\\", "/")
+        path = ROOT / file_value if file_value else None
+        saved = bool(path and path.is_file())
+
+        messages = 0
+        speaker_count = 0
+        speakers: list[str] = []
+        top_speakers: list[str] = []
+        file_size = ""
+        if saved and path is not None:
+            inspected = inspect_log(path)
+            messages = int(inspected["messages"])
+            speaker_count = int(inspected["speaker_count"])
+            speakers = list(inspected["speakers"])
+            top_speakers = list(inspected["top_speakers"])
+            file_size = human_size(int(inspected["size_bytes"]))
+
+        member_tags = "".join(
+            f'<span class="member-tag">{text(name)}</span>' for name in top_speakers[:5]
+        )
+        if speaker_count > 5:
+            member_tags += f'<span class="member-more">+{speaker_count - 5}</span>'
+        if not member_tags:
+            member_tags = '<span class="muted-dash">—</span>'
+
+        if saved:
+            action = (
+                f'<a class="spoiler-open-button" href="{attr(file_href)}" '
+                f'data-spoiler-room="{attr(room_id)}" data-spoiler-title="{attr(title_value)}">'
+                '警告を確認して入室<span aria-hidden="true">›</span></a>'
+            )
+            status = '<span class="spoiler-status saved">保存済み</span>'
+            meta = f'<span>{messages:,} 発言</span><span>{speaker_count} 人</span><span>{text(file_size)}</span>'
+            card_class = "spoiler-card is-saved"
+        else:
+            action = '<span class="spoiler-open-button disabled" aria-disabled="true">HTML未配置</span>'
+            status = '<span class="spoiler-status pending">準備中</span>'
+            meta = '<span>HTML未配置</span>'
+            card_class = "spoiler-card is-pending"
+
+        search_text = " ".join([room_id, title_value, description, *speakers]).lower()
+        cards.append(
+            f'''<article class="{card_class}" data-spoiler-id="{attr(room_id)}" data-search="{attr(search_text)}">
+  <div class="spoiler-card-head">
+    <span class="spoiler-symbol" aria-hidden="true">!</span>
+    <div class="spoiler-title-block">
+      <span class="spoiler-kicker">SCENARIO CLEARED MEMBERS ONLY</span>
+      <h3>{text(title_value)}</h3>
+    </div>
+    {status}
+  </div>
+  <p class="spoiler-description">{text(description)}</p>
+  <div class="spoiler-meta">{meta}</div>
+  <div class="spoiler-members" aria-label="主な参加者">{member_tags}</div>
+  <div class="spoiler-action">{action}</div>
+</article>'''
+        )
+        data.append({
+            "id": room_id,
+            "title": title_value,
+            "description": description,
+            "file": file_href,
+            "saved": saved,
+            "messages": messages,
+            "speaker_count": speaker_count,
+            "speakers": speakers,
+            "file_size": file_size,
+        })
+
+    return "\n".join(cards), data
 
 
 TEMPLATE = r'''<!doctype html>
@@ -440,6 +543,78 @@ button, input { font: inherit; }
 .archive-notes li + li { margin-top: 4px; }
 
 .main-panel { min-width: 0; }
+.archive-tabs {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border-bottom: 1px solid var(--green-line);
+  background: linear-gradient(#eefee1, #d9fbc0);
+}
+.archive-tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 42px;
+  padding: 8px 15px;
+  border: 0;
+  border-right: 1px solid #b8dc98;
+  background: transparent;
+  color: #4b6840;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+  text-align: left;
+  cursor: pointer;
+}
+.archive-tab:hover { background: rgba(255,255,255,.48); color: var(--green-deep); }
+.archive-tab[aria-selected="true"] {
+  z-index: 1;
+  margin-bottom: -1px;
+  border-bottom: 1px solid #fff;
+  background: #fff;
+  color: var(--green-deep);
+}
+.archive-tab[aria-selected="true"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3px;
+  background: var(--green);
+}
+.archive-tab.warning-tab { color: #81531a; }
+.archive-tab.warning-tab[aria-selected="true"] { color: #7d450b; }
+.archive-tab.warning-tab[aria-selected="true"]::before { background: #d98927; }
+.archive-tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  min-height: 18px;
+  padding: 1px 6px;
+  border: 1px solid #b9d79f;
+  border-radius: 10px;
+  background: rgba(255,255,255,.7);
+  color: #58744b;
+  font-size: 10px;
+  line-height: 1;
+}
+.warning-tab .archive-tab-count { border-color: #dfc17c; color: #81531a; }
+.archive-tab-panel { min-width: 0; }
+.archive-tab-panel[hidden] { display: none !important; }
+.archive-tab-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 29px;
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--line);
+  background: #fafbf9;
+  color: var(--muted);
+  font-size: 11px;
+}
 .toolbar {
   display: flex;
   align-items: center;
@@ -697,11 +872,138 @@ button, input { font: inherit; }
   .room-state { grid-template-columns: auto 1fr auto; justify-items: start; margin-top: 4px; padding-left: 52px; }
   .visited-label { justify-self: start; }
   .open-button { justify-self: end; }
+  .archive-tabs { display: grid; grid-template-columns: 1fr 1fr; }
+  .archive-tab { min-height: 48px; padding: 7px 9px; border-right: 1px solid #b8dc98; font-size: 11px; line-height: 1.35; }
+  .archive-tab-count { flex: 0 0 auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
+}
+
+.spoiler-panel { overflow: hidden; }
+.spoiler-intro {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e0c986;
+  background: linear-gradient(#fffdf2, #fff9df);
+  color: #584b20;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.spoiler-intro strong { color: #8a3b14; }
+.spoiler-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 12px;
+  background: #f8f8f6;
+}
+.spoiler-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid #d8d2be;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+.spoiler-card.is-saved:hover { border-color: #caa95b; box-shadow: inset 4px 0 #d88e2f, 0 1px 3px rgba(0,0,0,.06); }
+.spoiler-card.is-pending { background: #fafafa; color: #8b8b84; }
+.spoiler-card-head {
+  display: grid;
+  grid-template-columns: 38px minmax(0,1fr) auto;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 11px 8px;
+}
+.spoiler-symbol {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff3ce;
+  border: 1px solid #e4bf61;
+  color: #a15312;
+  font-weight: 900;
+  font-size: 18px;
+}
+.spoiler-title-block { min-width: 0; }
+.spoiler-kicker { display: block; color: #9b6c19; font-size: 9px; font-weight: 800; letter-spacing: .08em; }
+.spoiler-title-block h3 { margin: 1px 0 0; color: #333025; font-size: 15px; line-height: 1.4; overflow-wrap: anywhere; }
+.spoiler-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 2px 7px;
+  border-radius: 2px;
+  font-size: 10px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+.spoiler-status.saved { color: #70430b; background: #fff1c8; border: 1px solid #e5c16d; }
+.spoiler-status.pending { color: #777; background: #eee; border: 1px solid #ddd; }
+.spoiler-description { margin: 0; padding: 0 11px 9px 58px; color: #625e52; font-size: 12px; line-height: 1.55; }
+.spoiler-meta { display: flex; gap: 10px; flex-wrap: wrap; padding: 8px 11px 0; border-top: 1px dotted #ddd4bb; color: #7c7565; font-size: 10px; }
+.spoiler-members { display: flex; flex-wrap: wrap; gap: 4px; min-height: 28px; padding: 7px 11px; }
+.spoiler-action { margin-top: auto; padding: 0 11px 11px; }
+.spoiler-open-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 5px 11px;
+  border: 1px solid #bf8b27;
+  background: linear-gradient(#fff6d8, #ffe8a8);
+  color: #704008;
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+}
+.spoiler-open-button:hover { background: #ffe7a0; color: #542e04; }
+.spoiler-open-button.disabled { border-color: #ddd; background: #eee; color: #999; cursor: default; }
+.spoiler-empty { padding: 18px; color: #777; text-align: center; font-size: 12px; background: #fafafa; }
+.spoiler-dialog-backdrop[hidden] { display: none; }
+.spoiler-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(23, 20, 13, .64);
+}
+.spoiler-dialog {
+  width: min(560px, 100%);
+  border: 1px solid #c8a650;
+  background: #fffdf6;
+  box-shadow: 0 16px 55px rgba(0,0,0,.32);
+}
+.spoiler-dialog-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 15px;
+  border-bottom: 1px solid #e2c779;
+  background: linear-gradient(#fff7d9, #ffeab1);
+}
+.spoiler-dialog-head strong { color: #713b0c; font-size: 15px; }
+.spoiler-dialog-body { padding: 16px; color: #40392d; font-size: 13px; line-height: 1.75; }
+.spoiler-dialog-room { margin: 0 0 10px; padding: 8px 10px; border-left: 4px solid #d99a33; background: #fff6dc; font-weight: 750; }
+.spoiler-dialog-actions { display: flex; justify-content: flex-end; gap: 8px; padding: 0 16px 16px; }
+.spoiler-cancel, .spoiler-proceed { min-height: 34px; padding: 6px 12px; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; }
+.spoiler-cancel { border: 1px solid #bbb; background: #fff; color: #444; }
+.spoiler-proceed { border: 1px solid #a86a18; background: #d98927; color: #fff; text-decoration: none; display: inline-flex; align-items: center; }
+.spoiler-proceed:hover { background: #b96f18; }
+
+@media (max-width: 720px) {
+  .spoiler-grid { grid-template-columns: 1fr; }
+  .spoiler-card-head { grid-template-columns: 36px minmax(0,1fr); }
+  .spoiler-status { grid-column: 2; justify-self: start; }
+  .spoiler-description { padding-left: 56px; }
+  .spoiler-dialog-actions { flex-direction: column-reverse; }
+  .spoiler-cancel, .spoiler-proceed { width: 100%; justify-content: center; }
 }
 
 @media print {
@@ -725,7 +1027,8 @@ button, input { font: inherit; }
       </span>
     </a>
     <nav class="header-nav" aria-label="ページ内ナビゲーション">
-      <a href="#rooms"><span class="nav-dot" aria-hidden="true"></span>ログ一覧</a>
+      <a href="#rooms" data-archive-tab-link="rooms"><span class="nav-dot" aria-hidden="true"></span>常設ログ</a>
+      <a href="#spoiler-rooms" data-archive-tab-link="spoiler"><span class="nav-dot" aria-hidden="true"></span>通過者専用部屋</a>
       <a href="#archive-info"><span class="nav-dot" aria-hidden="true"></span>保存情報</a>
     </nav>
   </div>
@@ -746,7 +1049,7 @@ button, input { font: inherit; }
     </div>
     <div class="hero-actions">
       <a id="start-reading" class="primary-button" href="@@FIRST_HREF@@" @@FIRST_LINK_DATA@@>最初の部屋から読む</a>
-      <a class="secondary-button" href="#rooms">全@@TOTAL_ROOMS@@部屋を見る</a>
+      <a class="secondary-button" href="#rooms" data-archive-tab-link="rooms">全@@TOTAL_ROOMS@@部屋を見る</a>
     </div>
   </section>
 
@@ -784,30 +1087,46 @@ button, input { font: inherit; }
       </section>
     </aside>
 
-    <section class="panel main-panel" id="rooms" aria-labelledby="rooms-heading">
-      <div class="panel-heading">
-        <h2 id="rooms-heading">参加していたミーティングルーム</h2>
-        <span class="small-count">進行順 01 → @@TOTAL_ROOMS_PADDED@@</span>
+    <section class="panel main-panel" id="archive-rooms" aria-label="ミーティングルーム一覧">
+      <div class="archive-tabs" role="tablist" aria-label="ミーティングルームの種類">
+        <button class="archive-tab" id="tab-rooms" type="button" role="tab" aria-selected="true" aria-controls="rooms" data-archive-tab="rooms">
+          <span>参加していたミーティングルーム</span><span class="archive-tab-count">@@TOTAL_ROOMS@@</span>
+        </button>
+        <button class="archive-tab warning-tab" id="tab-spoiler" type="button" role="tab" aria-selected="false" aria-controls="spoiler-rooms" tabindex="-1" data-archive-tab="spoiler">
+          <span>シナリオ通過者専用部屋</span><span class="archive-tab-count">@@SPOILER_COUNT@@</span>
+        </button>
       </div>
 
-      <div class="toolbar">
-        <label class="search-box">
-          <span class="sr-only"></span>
-          <input id="room-search" type="search" autocomplete="off" placeholder="部屋名・説明・参加者で検索" aria-label="ログを検索">
-        </label>
-        <label class="check-control"><input id="saved-only" type="checkbox">保存済みのみ</label>
-        <button class="sort-button" id="sort-order" type="button" data-order="asc">新しい順にする</button>
-        <span class="result-count" id="result-count" aria-live="polite">@@TOTAL_ROOMS@@部屋を表示中</span>
-      </div>
+      <div class="archive-tab-panel" id="rooms" role="tabpanel" aria-labelledby="tab-rooms" data-archive-panel="rooms">
+        <div class="archive-tab-meta">進行順 01 → @@TOTAL_ROOMS_PADDED@@</div>
+        <div class="toolbar">
+          <label class="search-box">
+            <span class="sr-only"></span>
+            <input id="room-search" type="search" autocomplete="off" placeholder="部屋名・説明・参加者で検索" aria-label="ログを検索">
+          </label>
+          <label class="check-control"><input id="saved-only" type="checkbox">保存済みのみ</label>
+          <button class="sort-button" id="sort-order" type="button" data-order="asc">新しい順にする</button>
+          <span class="result-count" id="result-count" aria-live="polite">@@TOTAL_ROOMS@@部屋を表示中</span>
+        </div>
 
-      <div class="room-table-head" aria-hidden="true">
-        <span>No.</span><span>ミーティングルーム</span><span>発言数</span><span>主な参加者</span><span>状態</span>
-      </div>
+        <div class="room-table-head" aria-hidden="true">
+          <span>No.</span><span>ミーティングルーム</span><span>発言数</span><span>主な参加者</span><span>状態</span>
+        </div>
 
-      <div class="room-list" id="room-list">
+        <div class="room-list" id="room-list">
 @@ROOM_ROWS@@
+        </div>
+        <div class="empty-state" id="empty-state">条件に一致する部屋はありません。</div>
       </div>
-      <div class="empty-state" id="empty-state">条件に一致する部屋はありません。</div>
+
+      <div class="archive-tab-panel spoiler-panel" id="spoiler-rooms" role="tabpanel" aria-labelledby="tab-spoiler" data-archive-panel="spoiler" hidden>
+        <div class="archive-tab-meta">@@SPOILER_COUNT@@室 / 保存済み @@SPOILER_SAVED@@室</div>
+        <div class="spoiler-intro">
+          <strong>ネタバレ注意：</strong>ここにある部屋は、Fresh Meeting 上では各シナリオの通過者だけが招待されていた専用部屋です。
+          移管後はアクセス制限を設けず、閲覧前の警告のみとしています。未通過のシナリオを今後遊ぶ予定がある場合は閲覧にご注意ください。
+        </div>
+        @@SPOILER_BODY@@
+      </div>
     </section>
   </div>
 
@@ -816,6 +1135,23 @@ button, input { font: inherit; }
     Fresh Meeting の簡易HTML書き出しをもとに構成した、非公式の閲覧用アーカイブです。
   </footer>
 </main>
+
+<div class="spoiler-dialog-backdrop" id="spoiler-dialog" hidden>
+  <div class="spoiler-dialog" role="dialog" aria-modal="true" aria-labelledby="spoiler-dialog-title" aria-describedby="spoiler-dialog-description">
+    <div class="spoiler-dialog-head">
+      <span class="spoiler-symbol" aria-hidden="true">!</span>
+      <strong id="spoiler-dialog-title">シナリオのネタバレを含みます</strong>
+    </div>
+    <div class="spoiler-dialog-body" id="spoiler-dialog-description">
+      <p class="spoiler-dialog-room" id="spoiler-dialog-room"></p>
+      この部屋は本来、シナリオ通過者のみが招待されていた専用部屋です。シナリオの核心・結末・GM情報などを含む可能性があります。内容を承知のうえで閲覧してください。
+    </div>
+    <div class="spoiler-dialog-actions">
+      <button class="spoiler-cancel" id="spoiler-cancel" type="button">戻る</button>
+      <a class="spoiler-proceed" id="spoiler-proceed" href="#">内容を承知して入室する</a>
+    </div>
+  </div>
+</div>
 
 <script id="archive-data" type="application/json">@@ROOM_JSON@@</script>
 <script>
@@ -830,6 +1166,12 @@ button, input { font: inherit; }
   const emptyState = document.getElementById('empty-state');
   const lastReadBox = document.getElementById('last-read-box');
   const startReading = document.getElementById('start-reading');
+  const spoilerDialog = document.getElementById('spoiler-dialog');
+  const spoilerDialogRoom = document.getElementById('spoiler-dialog-room');
+  const spoilerProceed = document.getElementById('spoiler-proceed');
+  const spoilerCancel = document.getElementById('spoiler-cancel');
+  const archiveTabs = [...document.querySelectorAll('[data-archive-tab]')];
+  const archivePanels = [...document.querySelectorAll('[data-archive-panel]')];
 
   const loadState = () => {
     try {
@@ -899,6 +1241,56 @@ button, input { font: inherit; }
     }
   });
 
+  const activateArchiveTab = (name, options = {}) => {
+    const { focus = false, updateHash = false } = options;
+    const tab = archiveTabs.find((item) => item.dataset.archiveTab === name);
+    const panel = archivePanels.find((item) => item.dataset.archivePanel === name);
+    if (!tab || !panel) return;
+
+    archiveTabs.forEach((item) => {
+      const active = item === tab;
+      item.setAttribute('aria-selected', active ? 'true' : 'false');
+      item.tabIndex = active ? 0 : -1;
+    });
+    archivePanels.forEach((item) => { item.hidden = item !== panel; });
+
+    if (focus) tab.focus();
+    if (updateHash) {
+      const hash = name === 'spoiler' ? '#spoiler-rooms' : '#rooms';
+      try { history.replaceState(null, '', hash); } catch (_) {}
+    }
+  };
+
+  archiveTabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activateArchiveTab(tab.dataset.archiveTab, { updateHash: true }));
+    tab.addEventListener('keydown', (event) => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      let nextIndex = index;
+      if (event.key === 'ArrowLeft') nextIndex = (index - 1 + archiveTabs.length) % archiveTabs.length;
+      if (event.key === 'ArrowRight') nextIndex = (index + 1) % archiveTabs.length;
+      if (event.key === 'Home') nextIndex = 0;
+      if (event.key === 'End') nextIndex = archiveTabs.length - 1;
+      const nextTab = archiveTabs[nextIndex];
+      activateArchiveTab(nextTab.dataset.archiveTab, { focus: true, updateHash: true });
+    });
+  });
+
+  document.querySelectorAll('[data-archive-tab-link]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const name = link.dataset.archiveTabLink;
+      if (!name) return;
+      event.preventDefault();
+      activateArchiveTab(name, { updateHash: true });
+      document.getElementById('archive-rooms')?.scrollIntoView({ block: 'start' });
+    });
+  });
+
+  const syncTabFromHash = () => {
+    activateArchiveTab(location.hash === '#spoiler-rooms' ? 'spoiler' : 'rooms');
+  };
+  window.addEventListener('hashchange', syncTabFromHash);
+
   const applyFilters = () => {
     const query = searchInput.value.trim().toLowerCase();
     const onlySaved = savedOnly.checked;
@@ -928,6 +1320,31 @@ button, input { font: inherit; }
     sortButton.textContent = nextOrder === 'asc' ? '新しい順にする' : '古い順にする';
   });
 
+  const closeSpoilerDialog = () => {
+    if (!spoilerDialog) return;
+    spoilerDialog.hidden = true;
+    spoilerProceed.href = '#';
+  };
+
+  document.addEventListener('click', (event) => {
+    const spoilerLink = event.target.closest('[data-spoiler-room]');
+    if (spoilerLink) {
+      event.preventDefault();
+      spoilerDialogRoom.textContent = spoilerLink.dataset.spoilerTitle || spoilerLink.textContent.trim();
+      spoilerProceed.href = spoilerLink.getAttribute('href');
+      spoilerDialog.hidden = false;
+      spoilerCancel.focus();
+      return;
+    }
+    if (event.target === spoilerDialog) closeSpoilerDialog();
+  });
+
+  spoilerCancel?.addEventListener('click', closeSpoilerDialog);
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && spoilerDialog && !spoilerDialog.hidden) closeSpoilerDialog();
+  });
+
+  syncTabFromHash();
   renderHistory();
   applyFilters();
 })();
@@ -941,6 +1358,8 @@ def build() -> None:
     config = load_config()
     logs = detect_logs()
     room_rows, room_data = make_room_rows(config, logs)
+    spoiler_entries = load_spoiler_rooms()
+    spoiler_cards, spoiler_data = make_spoiler_cards(spoiler_entries)
 
     total_rooms = len(room_data)
     saved_rooms = sum(1 for item in room_data if item["saved"])
@@ -959,6 +1378,12 @@ def build() -> None:
         first_title = ""
         first_link_data = ""
 
+    spoiler_saved = sum(1 for item in spoiler_data if item["saved"])
+    if spoiler_cards:
+        spoiler_body = f'<div class="spoiler-grid">{spoiler_cards}</div>'
+    else:
+        spoiler_body = '<div class="spoiler-empty">まだ通過者専用部屋は登録されていません。<code>spoiler-rooms.json</code> に追加するとここに表示されます。</div>'
+
     replacements = {
         "@@PAGE_TITLE@@": text(config["archive_title"]),
         "@@ARCHIVE_TITLE@@": text(config["archive_title"]),
@@ -976,6 +1401,9 @@ def build() -> None:
         "@@FIRST_HREF_JS@@": first_href.replace("\\", "\\\\").replace("'", "\\'"),
         "@@FIRST_NUMBER@@": first_number.replace("'", "\\'"),
         "@@FIRST_TITLE_JS@@": first_title.replace("\\", "\\\\").replace("'", "\\'"),
+        "@@SPOILER_COUNT@@": f"{len(spoiler_data):,}",
+        "@@SPOILER_SAVED@@": f"{spoiler_saved:,}",
+        "@@SPOILER_BODY@@": spoiler_body,
         "@@ROOM_ROWS@@": room_rows,
         "@@ROOM_JSON@@": json.dumps(room_data, ensure_ascii=False).replace("</", r"<\/"),
     }
@@ -987,6 +1415,7 @@ def build() -> None:
     OUTPUT_PATH.write_text(output, encoding="utf-8", newline="\n")
     print(f"生成しました: {OUTPUT_PATH.name}")
     print(f"保存済み: {saved_rooms}/{total_rooms} 部屋、発言数: {total_messages:,}")
+    print(f"通過者専用部屋: {spoiler_saved}/{len(spoiler_data)} 室")
     if logs:
         for number, item in sorted(logs.items()):
             print(f"  {number:02d}: {item['filename']} ({item['messages']:,} 発言 / {item['speaker_count']} 人)")

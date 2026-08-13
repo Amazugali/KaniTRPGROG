@@ -241,6 +241,78 @@ button, input { font: inherit; }
 .archive-notes li + li { margin-top: 4px; }
 
 .main-panel { min-width: 0; }
+.archive-tabs {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border-bottom: 1px solid var(--green-line);
+  background: linear-gradient(#eefee1, #d9fbc0);
+}
+.archive-tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 42px;
+  padding: 8px 15px;
+  border: 0;
+  border-right: 1px solid #b8dc98;
+  background: transparent;
+  color: #4b6840;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+  text-align: left;
+  cursor: pointer;
+}
+.archive-tab:hover { background: rgba(255,255,255,.48); color: var(--green-deep); }
+.archive-tab[aria-selected="true"] {
+  z-index: 1;
+  margin-bottom: -1px;
+  border-bottom: 1px solid #fff;
+  background: #fff;
+  color: var(--green-deep);
+}
+.archive-tab[aria-selected="true"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3px;
+  background: var(--green);
+}
+.archive-tab.warning-tab { color: #81531a; }
+.archive-tab.warning-tab[aria-selected="true"] { color: #7d450b; }
+.archive-tab.warning-tab[aria-selected="true"]::before { background: #d98927; }
+.archive-tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  min-height: 18px;
+  padding: 1px 6px;
+  border: 1px solid #b9d79f;
+  border-radius: 10px;
+  background: rgba(255,255,255,.7);
+  color: #58744b;
+  font-size: 10px;
+  line-height: 1;
+}
+.warning-tab .archive-tab-count { border-color: #dfc17c; color: #81531a; }
+.archive-tab-panel { min-width: 0; }
+.archive-tab-panel[hidden] { display: none !important; }
+.archive-tab-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 29px;
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--line);
+  background: #fafbf9;
+  color: var(--muted);
+  font-size: 11px;
+}
 .toolbar {
   display: flex;
   align-items: center;
@@ -498,11 +570,138 @@ button, input { font: inherit; }
   .room-state { grid-template-columns: auto 1fr auto; justify-items: start; margin-top: 4px; padding-left: 52px; }
   .visited-label { justify-self: start; }
   .open-button { justify-self: end; }
+  .archive-tabs { display: grid; grid-template-columns: 1fr 1fr; }
+  .archive-tab { min-height: 48px; padding: 7px 9px; border-right: 1px solid #b8dc98; font-size: 11px; line-height: 1.35; }
+  .archive-tab-count { flex: 0 0 auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
+}
+
+.spoiler-panel { overflow: hidden; }
+.spoiler-intro {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e0c986;
+  background: linear-gradient(#fffdf2, #fff9df);
+  color: #584b20;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.spoiler-intro strong { color: #8a3b14; }
+.spoiler-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 12px;
+  background: #f8f8f6;
+}
+.spoiler-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid #d8d2be;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+.spoiler-card.is-saved:hover { border-color: #caa95b; box-shadow: inset 4px 0 #d88e2f, 0 1px 3px rgba(0,0,0,.06); }
+.spoiler-card.is-pending { background: #fafafa; color: #8b8b84; }
+.spoiler-card-head {
+  display: grid;
+  grid-template-columns: 38px minmax(0,1fr) auto;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 11px 8px;
+}
+.spoiler-symbol {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff3ce;
+  border: 1px solid #e4bf61;
+  color: #a15312;
+  font-weight: 900;
+  font-size: 18px;
+}
+.spoiler-title-block { min-width: 0; }
+.spoiler-kicker { display: block; color: #9b6c19; font-size: 9px; font-weight: 800; letter-spacing: .08em; }
+.spoiler-title-block h3 { margin: 1px 0 0; color: #333025; font-size: 15px; line-height: 1.4; overflow-wrap: anywhere; }
+.spoiler-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 2px 7px;
+  border-radius: 2px;
+  font-size: 10px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+.spoiler-status.saved { color: #70430b; background: #fff1c8; border: 1px solid #e5c16d; }
+.spoiler-status.pending { color: #777; background: #eee; border: 1px solid #ddd; }
+.spoiler-description { margin: 0; padding: 0 11px 9px 58px; color: #625e52; font-size: 12px; line-height: 1.55; }
+.spoiler-meta { display: flex; gap: 10px; flex-wrap: wrap; padding: 8px 11px 0; border-top: 1px dotted #ddd4bb; color: #7c7565; font-size: 10px; }
+.spoiler-members { display: flex; flex-wrap: wrap; gap: 4px; min-height: 28px; padding: 7px 11px; }
+.spoiler-action { margin-top: auto; padding: 0 11px 11px; }
+.spoiler-open-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 5px 11px;
+  border: 1px solid #bf8b27;
+  background: linear-gradient(#fff6d8, #ffe8a8);
+  color: #704008;
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+}
+.spoiler-open-button:hover { background: #ffe7a0; color: #542e04; }
+.spoiler-open-button.disabled { border-color: #ddd; background: #eee; color: #999; cursor: default; }
+.spoiler-empty { padding: 18px; color: #777; text-align: center; font-size: 12px; background: #fafafa; }
+.spoiler-dialog-backdrop[hidden] { display: none; }
+.spoiler-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(23, 20, 13, .64);
+}
+.spoiler-dialog {
+  width: min(560px, 100%);
+  border: 1px solid #c8a650;
+  background: #fffdf6;
+  box-shadow: 0 16px 55px rgba(0,0,0,.32);
+}
+.spoiler-dialog-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 15px;
+  border-bottom: 1px solid #e2c779;
+  background: linear-gradient(#fff7d9, #ffeab1);
+}
+.spoiler-dialog-head strong { color: #713b0c; font-size: 15px; }
+.spoiler-dialog-body { padding: 16px; color: #40392d; font-size: 13px; line-height: 1.75; }
+.spoiler-dialog-room { margin: 0 0 10px; padding: 8px 10px; border-left: 4px solid #d99a33; background: #fff6dc; font-weight: 750; }
+.spoiler-dialog-actions { display: flex; justify-content: flex-end; gap: 8px; padding: 0 16px 16px; }
+.spoiler-cancel, .spoiler-proceed { min-height: 34px; padding: 6px 12px; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; }
+.spoiler-cancel { border: 1px solid #bbb; background: #fff; color: #444; }
+.spoiler-proceed { border: 1px solid #a86a18; background: #d98927; color: #fff; text-decoration: none; display: inline-flex; align-items: center; }
+.spoiler-proceed:hover { background: #b96f18; }
+
+@media (max-width: 720px) {
+  .spoiler-grid { grid-template-columns: 1fr; }
+  .spoiler-card-head { grid-template-columns: 36px minmax(0,1fr); }
+  .spoiler-status { grid-column: 2; justify-self: start; }
+  .spoiler-description { padding-left: 56px; }
+  .spoiler-dialog-actions { flex-direction: column-reverse; }
+  .spoiler-cancel, .spoiler-proceed { width: 100%; justify-content: center; }
 }
 
 @media print {
@@ -526,7 +725,8 @@ button, input { font: inherit; }
       </span>
     </a>
     <nav class="header-nav" aria-label="ページ内ナビゲーション">
-      <a href="#rooms"><span class="nav-dot" aria-hidden="true"></span>ログ一覧</a>
+      <a href="#rooms" data-archive-tab-link="rooms"><span class="nav-dot" aria-hidden="true"></span>常設ログ</a>
+      <a href="#spoiler-rooms" data-archive-tab-link="spoiler"><span class="nav-dot" aria-hidden="true"></span>通過者専用部屋</a>
       <a href="#archive-info"><span class="nav-dot" aria-hidden="true"></span>保存情報</a>
     </nav>
   </div>
@@ -547,7 +747,7 @@ button, input { font: inherit; }
     </div>
     <div class="hero-actions">
       <a id="start-reading" class="primary-button" href="01.html" data-open-room="01" data-room-title="カニドラシルな部屋 01">最初の部屋から読む</a>
-      <a class="secondary-button" href="#rooms">全29部屋を見る</a>
+      <a class="secondary-button" href="#rooms" data-archive-tab-link="rooms">全29部屋を見る</a>
     </div>
   </section>
 
@@ -562,7 +762,7 @@ button, input { font: inherit; }
             <div class="stat"><strong>169,387</strong><span>保存発言</span></div>
             <div class="stat"><strong>40</strong><span>確認参加者</span></div>
           </div>
-          <p class="side-note">生成日：2026-08-13<br>ログ本文には手を加えていません。</p>
+          <p class="side-note">生成日：2026-08-14<br>ログ本文には手を加えていません。</p>
         </div>
       </section>
 
@@ -585,27 +785,33 @@ button, input { font: inherit; }
       </section>
     </aside>
 
-    <section class="panel main-panel" id="rooms" aria-labelledby="rooms-heading">
-      <div class="panel-heading">
-        <h2 id="rooms-heading">参加していたミーティングルーム</h2>
-        <span class="small-count">進行順 01 → 29</span>
+    <section class="panel main-panel" id="archive-rooms" aria-label="ミーティングルーム一覧">
+      <div class="archive-tabs" role="tablist" aria-label="ミーティングルームの種類">
+        <button class="archive-tab" id="tab-rooms" type="button" role="tab" aria-selected="true" aria-controls="rooms" data-archive-tab="rooms">
+          <span>参加していたミーティングルーム</span><span class="archive-tab-count">29</span>
+        </button>
+        <button class="archive-tab warning-tab" id="tab-spoiler" type="button" role="tab" aria-selected="false" aria-controls="spoiler-rooms" tabindex="-1" data-archive-tab="spoiler">
+          <span>シナリオ通過者専用部屋</span><span class="archive-tab-count">0</span>
+        </button>
       </div>
 
-      <div class="toolbar">
-        <label class="search-box">
-          <span class="sr-only"></span>
-          <input id="room-search" type="search" autocomplete="off" placeholder="部屋名・説明・参加者で検索" aria-label="ログを検索">
-        </label>
-        <label class="check-control"><input id="saved-only" type="checkbox">保存済みのみ</label>
-        <button class="sort-button" id="sort-order" type="button" data-order="asc">新しい順にする</button>
-        <span class="result-count" id="result-count" aria-live="polite">29部屋を表示中</span>
-      </div>
+      <div class="archive-tab-panel" id="rooms" role="tabpanel" aria-labelledby="tab-rooms" data-archive-panel="rooms">
+        <div class="archive-tab-meta">進行順 01 → 29</div>
+        <div class="toolbar">
+          <label class="search-box">
+            <span class="sr-only"></span>
+            <input id="room-search" type="search" autocomplete="off" placeholder="部屋名・説明・参加者で検索" aria-label="ログを検索">
+          </label>
+          <label class="check-control"><input id="saved-only" type="checkbox">保存済みのみ</label>
+          <button class="sort-button" id="sort-order" type="button" data-order="asc">新しい順にする</button>
+          <span class="result-count" id="result-count" aria-live="polite">29部屋を表示中</span>
+        </div>
 
-      <div class="room-table-head" aria-hidden="true">
-        <span>No.</span><span>ミーティングルーム</span><span>発言数</span><span>主な参加者</span><span>状態</span>
-      </div>
+        <div class="room-table-head" aria-hidden="true">
+          <span>No.</span><span>ミーティングルーム</span><span>発言数</span><span>主な参加者</span><span>状態</span>
+        </div>
 
-      <div class="room-list" id="room-list">
+        <div class="room-list" id="room-list">
 <article class="room-row is-saved" data-room="01" data-saved="1" data-search="01 カニドラシルな部屋 01 ユグドラシルの話題を分けるために作られた最初の部屋。 はむぱん スマブラの人 savoia キリシロ ラバソ ウルフ チヒロ マンモーニ">
   <div class="room-number" aria-label="部屋番号 01"><span>01</span></div>
   <div class="room-summary">
@@ -925,8 +1131,18 @@ button, input { font: inherit; }
   <div class="member-list" aria-label="参加者"><span class="muted-dash">—</span></div>
   <div class="room-state"><span class="status-badge pending">準備中</span><span class="open-button disabled" aria-disabled="true">準備中</span></div>
 </article>
+        </div>
+        <div class="empty-state" id="empty-state">条件に一致する部屋はありません。</div>
       </div>
-      <div class="empty-state" id="empty-state">条件に一致する部屋はありません。</div>
+
+      <div class="archive-tab-panel spoiler-panel" id="spoiler-rooms" role="tabpanel" aria-labelledby="tab-spoiler" data-archive-panel="spoiler" hidden>
+        <div class="archive-tab-meta">0室 / 保存済み 0室</div>
+        <div class="spoiler-intro">
+          <strong>ネタバレ注意：</strong>ここにある部屋は、Fresh Meeting 上では各シナリオの通過者だけが招待されていた専用部屋です。
+          移管後はアクセス制限を設けず、閲覧前の警告のみとしています。未通過のシナリオを今後遊ぶ予定がある場合は閲覧にご注意ください。
+        </div>
+        <div class="spoiler-empty">まだ通過者専用部屋は登録されていません。<code>spoiler-rooms.json</code> に追加するとここに表示されます。</div>
+      </div>
     </section>
   </div>
 
@@ -935,6 +1151,23 @@ button, input { font: inherit; }
     Fresh Meeting の簡易HTML書き出しをもとに構成した、非公式の閲覧用アーカイブです。
   </footer>
 </main>
+
+<div class="spoiler-dialog-backdrop" id="spoiler-dialog" hidden>
+  <div class="spoiler-dialog" role="dialog" aria-modal="true" aria-labelledby="spoiler-dialog-title" aria-describedby="spoiler-dialog-description">
+    <div class="spoiler-dialog-head">
+      <span class="spoiler-symbol" aria-hidden="true">!</span>
+      <strong id="spoiler-dialog-title">シナリオのネタバレを含みます</strong>
+    </div>
+    <div class="spoiler-dialog-body" id="spoiler-dialog-description">
+      <p class="spoiler-dialog-room" id="spoiler-dialog-room"></p>
+      この部屋は本来、シナリオ通過者のみが招待されていた専用部屋です。シナリオの核心・結末・GM情報などを含む可能性があります。内容を承知のうえで閲覧してください。
+    </div>
+    <div class="spoiler-dialog-actions">
+      <button class="spoiler-cancel" id="spoiler-cancel" type="button">戻る</button>
+      <a class="spoiler-proceed" id="spoiler-proceed" href="#">内容を承知して入室する</a>
+    </div>
+  </div>
+</div>
 
 <script id="archive-data" type="application/json">[{"number": "01", "title": "カニドラシルな部屋 01", "description": "ユグドラシルの話題を分けるために作られた最初の部屋。", "saved": true, "href": "01.html", "messages": 5540, "speaker_count": 8, "speakers": ["はむぱん", "スマブラの人", "SAVOIA", "キリシロ", "ラバソ", "ウルフ", "チヒロ", "マンモーニ"], "file_size": "1.3 MB"}, {"number": "02", "title": "カニドラシルな部屋 02", "description": "前室が7000発言近くになったため移行した部屋。", "saved": true, "href": "02.html", "messages": 6591, "speaker_count": 9, "speakers": ["はむぱん", "スマブラの人", "ウルフ", "ラバソ", "SAVOIA", "キリシロ", "チヒロ", "マンモーニ", "musyumusyu"], "file_size": "1.5 MB"}, {"number": "03", "title": "カニドラシルな部屋 03", "description": "", "saved": true, "href": "03.html", "messages": 6169, "speaker_count": 9, "speakers": ["スマブラの人", "ウルフ", "はむぱん", "T", "SAVOIA", "キリシロ", "ラバソ", "チヒロ", "マンモーニ"], "file_size": "1.5 MB"}, {"number": "04", "title": "カニドラシルな部屋 04", "description": "", "saved": true, "href": "04.html", "messages": 8047, "speaker_count": 10, "speakers": ["スマブラの人", "ウルフ", "はむぱん", "SAVOIA", "キリシロ", "ラバソ", "T", "チヒロ", "マンモーニ", "fpの人"], "file_size": "1.9 MB"}, {"number": "05", "title": "カニドラシルな部屋 05", "description": "", "saved": true, "href": "05.html", "messages": 8428, "speaker_count": 8, "speakers": ["ウルフ", "T", "スマブラの人", "はむぱん", "キリシロ", "ラバソ", "SAVOIA", "チヒロ"], "file_size": "2.0 MB"}, {"number": "06", "title": "カニドラシルな部屋 06", "description": "", "saved": true, "href": "06.html", "messages": 8211, "speaker_count": 9, "speakers": ["スマブラの人", "T", "ウルフ", "はむぱん", "キリシロ", "ラバソ", "SAVOIA", "チヒロ", "どんだけー"], "file_size": "2.0 MB"}, {"number": "07", "title": "カニドラシルな部屋 07", "description": "", "saved": true, "href": "07.html", "messages": 4693, "speaker_count": 10, "speakers": ["T", "はむぱん", "ウルフ", "スマブラの人", "キリシロ", "ラバソ", "SAVOIA", "チヒロ", "マンモーニ", "hitugi"], "file_size": "1.1 MB"}, {"number": "08", "title": "カニドラシルな部屋 08", "description": "", "saved": true, "href": "08.html", "messages": 5487, "speaker_count": 9, "speakers": ["ウルフ", "T", "はむぱん", "スマブラの人", "ラバソ", "キリシロ", "SAVOIA", "チヒロ", "マンモーニ"], "file_size": "1.4 MB"}, {"number": "09", "title": "カニドラシルな部屋 09", "description": "", "saved": true, "href": "09.html", "messages": 6077, "speaker_count": 9, "speakers": ["はむぱん", "T", "スマブラの人", "ウルフ", "キリシロ", "ラバソ", "チヒロ", "SAVOIA", "マンモーニ"], "file_size": "1.7 MB"}, {"number": "10", "title": "カニドラシルな部屋 10", "description": "", "saved": true, "href": "10.html", "messages": 8094, "speaker_count": 12, "speakers": ["ウルフ", "T", "スマブラの人", "はむぱん", "キリシロ", "ラバソ", "チヒロ", "あさづけ", "SAVOIA", "カゲロウ", "マンモーニ", "kagerou"], "file_size": "2.2 MB"}, {"number": "11", "title": "カニドラシルな部屋 11", "description": "", "saved": true, "href": "11.html", "messages": 8092, "speaker_count": 11, "speakers": ["ウルフ", "はむぱん", "スマブラの人", "T", "あさづけ", "キリシロ", "カゲロウ", "ラバソ", "チヒロ", "SAVOIA", "マンモーニ"], "file_size": "2.2 MB"}, {"number": "12", "title": "カニドラシルな部屋 12", "description": "", "saved": true, "href": "12.html", "messages": 8088, "speaker_count": 12, "speakers": ["ウルフ", "はむぱん", "スマブラの人", "T", "カゲロウ", "あさづけ", "キリシロ", "ラバソ", "SAVOIA", "チヒロ", "マンモーニ", "超たくあん"], "file_size": "2.2 MB"}, {"number": "13", "title": "カニドラシルな部屋 13", "description": "", "saved": true, "href": "13.html", "messages": 8163, "speaker_count": 11, "speakers": ["ウルフ", "はむぱん", "超たくあん", "スマブラの人", "カゲロウ", "キリシロ", "あさづけ", "ラバソ", "SAVOIA", "チヒロ", "マンモーニ"], "file_size": "2.2 MB"}, {"number": "14", "title": "カニドラシルな部屋 14", "description": "", "saved": true, "href": "14.html", "messages": 7919, "speaker_count": 21, "speakers": ["ウルフ", "はむぱん", "スマブラの人", "超たくあん", "カゲロウ", "キリシロ", "ラバソ", "あさづけ", "チヒロ", "SAVOIA", "超たきおん", "マンモーニ", "はぱむん", "鬼畜リョナ狼", "めったん", "ペパマリの人", "ラハゾ", "ズマフラの人", "ボーボボ", "花京院", "ガケロウ"], "file_size": "2.2 MB"}, {"number": "15", "title": "カニドラシルな部屋 15", "description": "", "saved": true, "href": "15.html", "messages": 7831, "speaker_count": 12, "speakers": ["ウルフ", "はむぱん", "スマブラの人", "超たくあん", "キリシロ", "ラバソ", "カゲロウ", "あさづけ", "SAVOIA", "チヒロ", "超たきおん", "マンモーニ"], "file_size": "2.1 MB"}, {"number": "16", "title": "カニドラシルな部屋 16", "description": "", "saved": true, "href": "16.html", "messages": 5480, "speaker_count": 11, "speakers": ["ウルフ", "はむぱん", "超たくあん", "スマブラの人", "ラバソ", "あさづけ", "キリシロ", "カゲロウ", "チヒロ", "SAVOIA", "マンモーニ"], "file_size": "1.5 MB"}, {"number": "17", "title": "カニドラシルな部屋 17", "description": "", "saved": true, "href": "17.html", "messages": 4788, "speaker_count": 11, "speakers": ["ウルフ", "はむぱん", "超たくあん", "スマブラの人", "あさづけ", "キリシロ", "ラバソ", "カゲロウ", "SAVOIA", "チヒロ", "マンモーニ"], "file_size": "1.2 MB"}, {"number": "18", "title": "カニドラシルな部屋 18", "description": "", "saved": true, "href": "18.html", "messages": 4327, "speaker_count": 11, "speakers": ["ウルフ", "はむぱん", "スマブラの人", "超たくあん", "あさづけ", "キリシロ", "ラバソ", "カゲロウ", "SAVOIA", "チヒロ", "マンモーニ"], "file_size": "1.1 MB"}, {"number": "19", "title": "カニドラシルな部屋 19", "description": "", "saved": true, "href": "19.html", "messages": 5579, "speaker_count": 12, "speakers": ["ウルフ", "はむぱん", "ラバソ", "超たくあん", "スマブラの人", "あさづけ", "キリシロ", "SAVOIA", "カゲロウ", "チヒロ", "マンモーニ", "嘘吐きクソ狼"], "file_size": "1.4 MB"}, {"number": "20", "title": "カニドラシルな部屋 20", "description": "", "saved": true, "href": "20.html", "messages": 4119, "speaker_count": 11, "speakers": ["ウルフ", "超たくあん", "はむぱん", "あさづけ", "ラバソ", "スマブラの人", "キリシロ", "カゲロウ", "SAVOIA", "チヒロ", "マンモーニ"], "file_size": "1.1 MB"}, {"number": "21", "title": "カニドラシルな部屋 21", "description": "", "saved": true, "href": "21.html", "messages": 4352, "speaker_count": 11, "speakers": ["ウルフ", "はむぱん", "ラバソ", "スマブラの人", "超たくあん", "あさづけ", "キリシロ", "カゲロウ", "SAVOIA", "チヒロ", "マンモーニ"], "file_size": "1.2 MB"}, {"number": "22", "title": "カニドラシルな部屋 22", "description": "", "saved": true, "href": "22.html", "messages": 5321, "speaker_count": 11, "speakers": ["ウルフ", "あさづけ", "ラバソ", "スマブラの人", "はむぱん", "キリシロ", "超たくあん", "SAVOIA", "カゲロウ", "チヒロ", "マンモーニ"], "file_size": "1.4 MB"}, {"number": "23", "title": "カニドラシルな部屋 23", "description": "", "saved": true, "href": "23.html", "messages": 4709, "speaker_count": 11, "speakers": ["ウルフ", "スマブラの人", "はむぱん", "ラバソ", "あさづけ", "キリシロ", "超たくあん", "SAVOIA", "カゲロウ", "チヒロ", "マンモーニ"], "file_size": "1.3 MB"}, {"number": "24", "title": "カニドラシルな部屋 24", "description": "", "saved": true, "href": "24.html", "messages": 5294, "speaker_count": 15, "speakers": ["ウルフ", "はむぱん", "ラバソ", "スマブラの人", "超たくあん", "キリシロ", "あさづけ", "カゲロウ", "SAVOIA", "チヒロ", "ウﾉﾚフ", "ラバン", "世界のゴミ", "キリツ口", "マンモーニ"], "file_size": "1.5 MB"}, {"number": "25", "title": "カニドラシルな部屋 25", "description": "", "saved": true, "href": "25.html", "messages": 4769, "speaker_count": 12, "speakers": ["ウルフ", "スマブラの人", "はむぱん", "ラバソ", "超たくあん", "あさづけ", "カゲロウ", "キリシロ", "SAVOIA", "チヒロ", "マンモーニ", "🎉キリシロ🎂"], "file_size": "1.2 MB"}, {"number": "26", "title": "カニドラシルな部屋 26", "description": "", "saved": true, "href": "26.html", "messages": 4398, "speaker_count": 13, "speakers": ["ウルフ", "ラバソ", "はむぱん", "スマブラの人", "キリシロ", "あさづけ", "超たくあん", "SAVOIA", "カゲロウ", "チヒロ", "Imaji", "マンモーニ", "サンタさん"], "file_size": "1.2 MB"}, {"number": "27", "title": "カニドラシルな部屋 27", "description": "", "saved": true, "href": "27.html", "messages": 5224, "speaker_count": 15, "speakers": ["ウルフ", "はむぱん", "ラバソ", "スマブラの人", "超たくあん", "キリシロ", "あさづけ", "カゲロウ", "SAVOIA", "チヒロ", "Imaji", "ラスター", "虚無", "マンモーニ", "ラパソ"], "file_size": "1.4 MB"}, {"number": "28", "title": "カニドラシルな部屋 28", "description": "", "saved": true, "href": "28.html", "messages": 3597, "speaker_count": 14, "speakers": ["ウルフ", "はむぱん", "スマブラの人", "ラバソ", "キリシロ", "超たくあん", "カゲロウ", "あさづけ", "チヒロ", "SAVOIA", "Imaji", "獣", "RABICO", "マンモーニ"], "file_size": "1.0 MB"}, {"number": "29", "title": "カニドラシルな部屋 29（にく）いカラス", "description": "Fresh Meeting 上で運用された最終期の部屋。", "saved": false, "href": "", "messages": 0, "speaker_count": 0, "speakers": [], "file_size": ""}]</script>
 <script>
@@ -949,6 +1182,12 @@ button, input { font: inherit; }
   const emptyState = document.getElementById('empty-state');
   const lastReadBox = document.getElementById('last-read-box');
   const startReading = document.getElementById('start-reading');
+  const spoilerDialog = document.getElementById('spoiler-dialog');
+  const spoilerDialogRoom = document.getElementById('spoiler-dialog-room');
+  const spoilerProceed = document.getElementById('spoiler-proceed');
+  const spoilerCancel = document.getElementById('spoiler-cancel');
+  const archiveTabs = [...document.querySelectorAll('[data-archive-tab]')];
+  const archivePanels = [...document.querySelectorAll('[data-archive-panel]')];
 
   const loadState = () => {
     try {
@@ -1018,6 +1257,56 @@ button, input { font: inherit; }
     }
   });
 
+  const activateArchiveTab = (name, options = {}) => {
+    const { focus = false, updateHash = false } = options;
+    const tab = archiveTabs.find((item) => item.dataset.archiveTab === name);
+    const panel = archivePanels.find((item) => item.dataset.archivePanel === name);
+    if (!tab || !panel) return;
+
+    archiveTabs.forEach((item) => {
+      const active = item === tab;
+      item.setAttribute('aria-selected', active ? 'true' : 'false');
+      item.tabIndex = active ? 0 : -1;
+    });
+    archivePanels.forEach((item) => { item.hidden = item !== panel; });
+
+    if (focus) tab.focus();
+    if (updateHash) {
+      const hash = name === 'spoiler' ? '#spoiler-rooms' : '#rooms';
+      try { history.replaceState(null, '', hash); } catch (_) {}
+    }
+  };
+
+  archiveTabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activateArchiveTab(tab.dataset.archiveTab, { updateHash: true }));
+    tab.addEventListener('keydown', (event) => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      let nextIndex = index;
+      if (event.key === 'ArrowLeft') nextIndex = (index - 1 + archiveTabs.length) % archiveTabs.length;
+      if (event.key === 'ArrowRight') nextIndex = (index + 1) % archiveTabs.length;
+      if (event.key === 'Home') nextIndex = 0;
+      if (event.key === 'End') nextIndex = archiveTabs.length - 1;
+      const nextTab = archiveTabs[nextIndex];
+      activateArchiveTab(nextTab.dataset.archiveTab, { focus: true, updateHash: true });
+    });
+  });
+
+  document.querySelectorAll('[data-archive-tab-link]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const name = link.dataset.archiveTabLink;
+      if (!name) return;
+      event.preventDefault();
+      activateArchiveTab(name, { updateHash: true });
+      document.getElementById('archive-rooms')?.scrollIntoView({ block: 'start' });
+    });
+  });
+
+  const syncTabFromHash = () => {
+    activateArchiveTab(location.hash === '#spoiler-rooms' ? 'spoiler' : 'rooms');
+  };
+  window.addEventListener('hashchange', syncTabFromHash);
+
   const applyFilters = () => {
     const query = searchInput.value.trim().toLowerCase();
     const onlySaved = savedOnly.checked;
@@ -1047,6 +1336,31 @@ button, input { font: inherit; }
     sortButton.textContent = nextOrder === 'asc' ? '新しい順にする' : '古い順にする';
   });
 
+  const closeSpoilerDialog = () => {
+    if (!spoilerDialog) return;
+    spoilerDialog.hidden = true;
+    spoilerProceed.href = '#';
+  };
+
+  document.addEventListener('click', (event) => {
+    const spoilerLink = event.target.closest('[data-spoiler-room]');
+    if (spoilerLink) {
+      event.preventDefault();
+      spoilerDialogRoom.textContent = spoilerLink.dataset.spoilerTitle || spoilerLink.textContent.trim();
+      spoilerProceed.href = spoilerLink.getAttribute('href');
+      spoilerDialog.hidden = false;
+      spoilerCancel.focus();
+      return;
+    }
+    if (event.target === spoilerDialog) closeSpoilerDialog();
+  });
+
+  spoilerCancel?.addEventListener('click', closeSpoilerDialog);
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && spoilerDialog && !spoilerDialog.hidden) closeSpoilerDialog();
+  });
+
+  syncTabFromHash();
   renderHistory();
   applyFilters();
 })();
