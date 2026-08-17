@@ -9,6 +9,7 @@
   5. freshmeeting/index.html を開く
 
 ビルド時に lobby/ と spoiler/ 以下の人物アイコン参照を、各HTMLの階層に応じた保存用パスへ正規化する。
+また spoiler/yggdrasil/ と spoiler/coc/ のHTMLを確認し、未登録分を spoiler-rooms.json へ自動追記する。
 """
 
 from __future__ import annotations
@@ -29,6 +30,13 @@ IMG_DIR = ROOT / "img"
 CONFIG_PATH = ROOT / "lobby-config.json"
 SPOILER_CONFIG_PATH = ROOT / "spoiler-rooms.json"
 OUTPUT_PATH = ROOT / "index.html"
+
+# spoiler-rooms.json へ自動登録する対象。
+# この2フォルダに置いたHTMLは rebuild 時に未登録分だけ追記する。
+SPOILER_SYNC_DIRS = (
+    SPOILER_DIR / "yggdrasil",
+    SPOILER_DIR / "coc",
+)
 
 # Fresh Meeting 側のデフォルトアイコンURL -> 保存用ファイル名。
 # URLは http/https と www の有無を吸収して判定する。
@@ -111,6 +119,135 @@ def derive_spoiler_title(path: Path, relative_file: str) -> str:
     # 可読性だけ軽く整える。シナリオ名そのものは推測しない。
     candidate = stem.replace("_", " ").strip()
     return candidate or relative_file
+
+
+
+def make_spoiler_id(path: Path, used_ids: set[str]) -> str:
+    """ファイル名を基本に spoiler room ID を作る。重複時だけフォルダ名を付ける。"""
+    base = path.stem.strip() or "spoiler-room"
+    candidate = base
+
+    if candidate not in used_ids:
+        return candidate
+
+    try:
+        parent_name = path.parent.relative_to(SPOILER_DIR).as_posix().replace("/", "_")
+    except ValueError:
+        parent_name = path.parent.name
+
+    candidate = f"{parent_name}_{base}" if parent_name else base
+    suffix = 2
+    while candidate in used_ids:
+        candidate = f"{parent_name}_{base}_{suffix}" if parent_name else f"{base}_{suffix}"
+        suffix += 1
+    return candidate
+
+
+def read_spoiler_config_for_sync() -> list[dict[str, Any]]:
+    """JSON同期用に既存設定を読む。ファイルが無ければ空配列。"""
+    if not SPOILER_CONFIG_PATH.exists():
+        return []
+
+    try:
+        loaded = json.loads(SPOILER_CONFIG_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SystemExit(
+            "spoiler-rooms.json が正しいJSONではないため自動追記できません。\n"
+            f"{exc}\n"
+            "今回同梱した修正版 spoiler-rooms.json で置き換えてから再実行してください。"
+        ) from exc
+
+    if isinstance(loaded, dict):
+        loaded = loaded.get("rooms", [])
+
+    if not isinstance(loaded, list):
+        raise SystemExit(
+            "spoiler-rooms.json は配列、または rooms 配列を持つオブジェクトにしてください。"
+        )
+
+    return [item for item in loaded if isinstance(item, dict)]
+
+
+def sync_spoiler_config() -> tuple[int, int]:
+    """yggdrasil/ と coc/ のHTMLを確認し、未登録分を spoiler-rooms.json へ追記する。
+
+    既存エントリは維持する。
+    同じ file が複数登録されている場合は最初の1件だけ残して重複を整理する。
+
+    戻り値:
+      (新規追加件数, 重複削除件数)
+    """
+    entries = read_spoiler_config_for_sync()
+
+    # 既存設定を file 単位で重複排除。最初の手入力内容を優先する。
+    cleaned: list[dict[str, Any]] = []
+    known_files: set[str] = set()
+    used_ids: set[str] = set()
+    duplicate_count = 0
+
+    for item in entries:
+        file_value = normalize_spoiler_file_value(
+            str(item.get("file") or item.get("href") or "")
+        )
+
+        if file_value:
+            if file_value in known_files:
+                duplicate_count += 1
+                continue
+            known_files.add(file_value)
+            item = dict(item)
+            item["file"] = file_value
+
+        room_id = str(item.get("id") or "").strip()
+        if room_id:
+            used_ids.add(room_id)
+
+        cleaned.append(item)
+
+    added_count = 0
+
+    # 指定された2フォルダだけを走査。
+    for folder in SPOILER_SYNC_DIRS:
+        if not folder.exists():
+            continue
+
+        for path in sorted(folder.rglob("*.html"), key=lambda p: p.as_posix().lower()):
+            relative_file = path.relative_to(SPOILER_DIR).as_posix()
+
+            if relative_file in known_files:
+                continue
+
+            room_id = make_spoiler_id(path, used_ids)
+            title_value = derive_spoiler_title(path, relative_file)
+
+            cleaned.append({
+                "id": room_id,
+                "title": title_value,
+                "file": relative_file,
+                "description": "",
+            })
+
+            known_files.add(relative_file)
+            used_ids.add(room_id)
+            added_count += 1
+
+    # 元ファイルが無い場合でも [] を作る。
+    # 内容に変化がある場合だけ書き戻す。
+    should_write = (
+        not SPOILER_CONFIG_PATH.exists()
+        or added_count > 0
+        or duplicate_count > 0
+        or cleaned != entries
+    )
+
+    if should_write:
+        SPOILER_CONFIG_PATH.write_text(
+            json.dumps(cleaned, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+            newline="\n",
+        )
+
+    return added_count, duplicate_count
 
 
 def load_spoiler_overrides() -> list[dict[str, Any]]:
@@ -1541,6 +1678,7 @@ button, input { font: inherit; }
 
 def build() -> None:
     config = load_config()
+    spoiler_added, spoiler_duplicates = sync_spoiler_config()
     changed_files, remote_icons, local_icons = normalize_archive_files()
     logs = detect_logs()
     room_rows, room_data = make_room_rows(config, logs)
@@ -1600,6 +1738,12 @@ def build() -> None:
 
     OUTPUT_PATH.write_text(output, encoding="utf-8", newline="\n")
     print(f"生成しました: {OUTPUT_PATH.name}")
+    if spoiler_added:
+        print(f"spoiler-rooms.json: {spoiler_added} 件を自動追記")
+    else:
+        print("spoiler-rooms.json: 新規追記なし")
+    if spoiler_duplicates:
+        print(f"spoiler-rooms.json: 重複 {spoiler_duplicates} 件を整理")
     if changed_files:
         print(
             f"アイコン参照を補正: {changed_files} ファイル "
