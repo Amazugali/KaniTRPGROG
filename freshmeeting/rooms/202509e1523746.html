@@ -1,0 +1,2857 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>【灯火の翼】開発部屋</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>【灯火の翼】開発部屋</h1>
+    <div class="meta">Fresh Meeting archive / room id: 202509e1523746 / ended</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=202509e1523746"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+	<a href="https://www.freshmeeting.com/forumopen.php?f=202509e1523746"><img src="https://www.freshmeeting.com/img/reopen.gif" alt="ミーティングを再開する"><span>ミーティングを再開する</span></a>
+</span>
+
+<p>
+	さぼスマウル：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202509ikaros/01_SvSmWl.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202509ikar<wbr>os/<wbr>01_<wbr>SvSmWl.<wbr>html</a><br>はむラバチヒ：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202509ikaros/02_HmRbCh.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202509ikar<wbr>os/<wbr>02_<wbr>HmRbCh.<wbr>html</a></p></div>
+  </div>
+</header>
+<main>
+
+<div class="attachment-warning">
+  このログには Fresh Meeting 上の添付ファイル参照が 8 件あります。
+  HTML本文とは別に添付ファイル本体の保全が必要です。
+</div>
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">&nbsp; &nbsp;【灯火の翼（仮）】<br>あなた達は「自分を狙っている者の調査とそいつからの護衛」という依頼を受ける。<br><br>【募集人数】２～３人<br>【参加資格】特に無いが、依頼人が素行不良なためそれを承諾して仕事できるPC推奨<br><br>＜シナリオ概要＞<br>　【開催日時】３～４日？<br>　【開催場所】ユドナリウムリリィ<br>　【暴走チェック】最初に6D6以上<br>　【コメディ：シリアス】4:6<br>　【ライト：ヘヴィ】5:5<br>　【探索：戦闘】7:3<br>　【難易度】わかりません<br>　【補足】<br>　上述しましたが依頼人が不良で割とクソ野郎想定なので、そのうえで働けるPC推奨です<br>　あまり正義感が強かったりすると依頼人に反発してこんな奴の仕事は受けないみたいになるかもしれません<br>　※Chatアレクによるテストプレイ中</div>
+    <div class="message-time">1: 2025/9/9(火) 15:26:43</div>
+  </div>
+</article><div class="elapsed"><span>5時間 6分 経過</span></div>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">依頼を受けたPC達は依頼人からの連絡により廃ボウリング場に呼び出される。<br>そこで隠れていた依頼人は「自分を狙っている者の調査とそいつからの護衛」という仕事について詳細を話し始める。</div>
+    <div class="message-time">2: 2025/9/9(火) 20:33:36</div>
+  </div>
+</article>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">串中 申（くしなか しん）<br>今回の依頼人。チーム世紀末覇者のような組織には所属しておらず、いつも友人２人とフラフラしている。<br>素行が悪く人に迷惑を掛けたり弱い者を狙ってカツアゲするのが日常。<br>それゆえに大きなトラブルに巻き込まれることに慣れておらず、友人２人が襲われた状況に恐怖と混乱でメンタルが大きく削られている。<br>体を尖らせるトランサー能力を持ち、指を尖らせて脅迫したりできる。</div>
+    <div class="message-time">3: 2025/9/9(火) 21:42:04</div>
+  </div>
+</article>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">遠金 レツ<br>依頼人の友人。体が小さい小心者。最初の犠牲者で入院中。<br>指で作った輪で除いた相手の強弱をある程度測ることができるエスパー能力を持つ。<br>襲撃された際は最初に除いて相手が弱いと考えたが、ネクストによって大幅に強化された能力で殴られた。</div>
+    <div class="message-time">4: 2025/9/9(火) 22:29:08</div>
+  </div>
+</article>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">丼坂 堅固<br>依頼人の友人。体が大きく少し鈍い。二人目の犠牲者で入院中。<br>自身の体の表面に固い装甲を作ることができ、物理的な防御力は高い。<br>しかし炎で襲われたことで入院。意識はまだ戻っていないが炎に巻かれながらも命に別状は無かった。</div>
+    <div class="message-time">5: 2025/9/9(火) 22:31:33</div>
+  </div>
+</article>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">碇 善郎<br>襲撃犯。真面目な性格で正義感が強い。<br>串中たちにカツアゲされている同級生を助けに入ったが、力が弱かったがために助けられず自分の金を取られた。<br>その一件から自分の能力が強くしたいという願望を抱き、能力強化薬ネクストを手に入れようと画策。<br>ネクスト研究者の誘いに乗ってしまい、強化された能力で不良を襲撃する。<br>しかしその状態でも殺意は無く、攻撃後にすぐその場を離脱している。<br>能力はロウソクを創り出すクリエイター能力。しかし出力は低く、細く脆いものを１本創り出すのが精一杯。<br>強化後は固めたロウを鈍器や装甲に用いたり、ロウソクの炎を増幅して攻撃することが可能になる。</div>
+    <div class="message-time">6: 2025/9/9(火) 22:39:17</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">七緒 三葉<br>碇の同級生。串中たちにカツアゲされていたところに碇が割って入ってきた。<br>その数日後に行方不明になった碇を心配して探していたところに串中を発見して問い質す。</div>
+    <div class="message-time">7: 2025/9/9(火) 22:44:35</div>
+  </div>
+</article>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">火鉢 ナツ<br>碇の同級生。若干羽目を外しやすいグループに所属しており、その不真面目な態度から碇に目をつけられ苦手に思っている。<br>手から火花を出す能力を持ち、ネクストで強化して花火のような火花を出すことが時折行うストレス解消。<br>ネクスト自体は違法薬物ではないが、それを所持していたことを学内で碇に咎められたことがある。<br>しかしある日碇からネクストの入手方法を聞かれ、さらにその数日後に失踪したという話を聞いて不安になる。</div>
+    <div class="message-time">8: 2025/9/9(火) 22:47:45</div>
+  </div>
+</article><div class="elapsed"><span>1日 0時間 44分 経過</span></div>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">赤津 大々<br>ネクスト研究者。新薬【ウイング】を開発し、碇を被検体として使う。<br>ミーノという男にネクスト販売店を貸し与えており、訪れた客の中で目当てのものがいたら連絡するように言い被検体候補を探していた。<br>碇を選んだのは縁が無さそうなネクストを買い求めるほど力を欲していたことと、能力が弱々しいものだったため。<br>能力は自らを巨大な牛に変えるトランサー能力。<br>しかし戦闘慣れしておらず、力を振り回すような戦い方が主。</div>
+    <div class="message-time">9: 2025/9/10(水) 23:31:56</div>
+  </div>
+</article>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ミーノ<br>中層に居を構えるネクスト販売店の店員。<br>本来許可が下りてないと売れない薬品だが、赤津から渡された許可証を持っている。<br>許可証自体は本物だが、入手ルートが非正規のものという点が弱味。<br>路上で安い葉っぱ（薬物）を売っていたが赤津にスカウトされて店を構え、<br>赤津から指定された客を見かけたら連絡する仕事を請け負っている。</div>
+    <div class="message-time">10: 2025/9/10(水) 23:34:29</div>
+  </div>
+</article><div class="elapsed"><span>23時間 25分 経過</span></div>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">蝋燭男<br>【■■き灯】<br>ロウソクを創り出す能力。<br>蝋を変形させる他、ロウソクの炎を増幅させることもできる。<br><br>最大HP:30 最大PP:21 暴走率:50%<br>攻撃力:3D6+2 防御力:2 精神抵抗:4 行動値:5<br>SS:11+1D6 命中:12(+3)+1D<wbr>6 回避:9(+3)+1D6<wbr><br>発動スペック:1(+4) 能力精度:9 活性タイプ:反応型<br>SPE:【瞬動】 カルマ:【勇猛】<br>特殊武装:【増強アンプル】【強化シナプス】<br>筋:1 耐:4 知:12 精:8 器:10 敏:3 運:2<br>力:0 威:1 観:7 察:3 知:11 技:8<br>隠:5 俊:2 話:10 読:5 閃:2 幸:1<br><br>ボス特性<br>【HP追加】【安定状態】【発動スペック＋２】【発動スペック＋２】【命中＋３】【回避＋３】<br><br>オリジナル特性<br>【多勢の無勢】…戦闘に参加しているクリーチャー１体につき命中と回避を＋２する<br>【強化薬物】…特殊武装【増強アンプル】【強化シナプス】による反動ダメージが無くなる<br>【副作用】…このNPCは応用技を３つ以上用いてチェイン発動することができない<br><br>技一覧<br>S1/PP1　3D6+2単体攻撃（攻撃）<br>S2/PP4　3D6+2全体攻撃（攻撃＋オールレンジ）<br>S3/PP6　全体継続3ダメージ付与 解除判定【耐久】（付加＋継続＋オールレンジ）<br>S3/PP3　攻撃力+6（付加＋攻撃強化＋攻撃強化）<br>S4/PP5　回避-9（付加＋回避減衰＋回避減衰＋回避減衰）<br>S4/PP6　命中+1D6 回避-3 テリトリー（付加＋命中追加＋回避減衰＋テリトリー）</div>
+    <div class="message-time">11: 2025/9/11(木) 23:00:25</div>
+  </div>
+</article><div class="elapsed"><span>1日 9時間 28分 経過</span></div>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【寄り添う灯火】→【■■■う■火】→【怒り患う業火】</div>
+    <div class="message-time">12: 2025/9/13(土) 8:29:09</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【寄り添う灯火】→【■■■う■火】→【歪み患う業火】</div>
+    <div class="message-time">13: 2025/9/13(土) 10:02:04</div>
+  </div>
+</article><div class="elapsed"><span>3時間 8分 経過</span></div>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">■■■<br>【■■■う■火】<br>ロウソクを創り出すクリエイター能力。<br>蝋を変形させる他、ロウソクの炎を増幅させることもできる。<br><br>最大HP:40 最大PP:21 暴走率:50%<br>攻撃力:3D6+2 防御力:2 精神抵抗:4 行動値:5<br>SS:11+1D6 命中:12(+3)+1D<wbr>6 回避:9+1D6<br>発動スペック:1(+4) 能力精度:9 活性タイプ:増強型<br>SPE:【リテイク】 カルマ:【不幸】<br>特殊武装:【増強アンプル】【強化シナプス】<br>筋:1 耐:4 知:12 精:8 器:10 敏:3 運:2<br>力:0 威:1 観:7 察:3 知:11 技:8<br>隠:5 俊:2 話:10 読:5 閃:2 幸:1<br><br>ボス特性<br>【HP追加】【安定状態】【命中＋３】【発動スペック＋２】【発動スペック＋２】<br><br>オリジナル特性<br>【多勢の無■】…戦闘に参加しているクリーチャー１体につき命中と回避を＋２する<br>【強■■■】…特殊武装【増強アンプル】【強化シナプス】による反動ダメージが無くなる<br>【■■用】…このNPCは応用技を３つ以上用いてチェイン発動することができない<br><br>技一覧<br>S1/PP1　3D6+2単体攻撃（攻撃）<br>S2/PP4　3D6+2全体攻撃（攻撃＋オールレンジ）<br>S3/PP6　全体継続3ダメージ付与 解除判定【耐久】（付加＋継続＋オールレンジ）<br>S3/PP3　攻撃力+6（付加＋攻撃強化＋攻撃強化）<br>S4/PP5　回避-9（付加＋回避減衰＋回避減衰＋回避減衰）<br>S4/PP6　命中+1D6 回避-3 テリトリー（付加＋命中追加＋回避減衰＋テリトリー）</div>
+    <div class="message-time">14: 2025/9/13(土) 13:10:16</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">碇 善郎<br>【歪み患う業火】<br>ロウソクを創り出す能力。<br>蝋を変形させる他、ロウソクの炎を増幅させることもできる。<br>薬物による暴走で炎は燃え盛り蝋は溶け続けている。<br><br>最大HP:100 最大PP:無限 暴走率:70%<br>攻撃力:3D6+2 防御力:2 精神抵抗:4 行動値:5<br>SS:11+1D6 命中:12(+3)+1D<wbr>6 回避:9+1D6<br>発動スペック:1(+50以上) 能力精度:9 活性タイプ:増強型<br>SPE:【リテイク】 カルマ:【不幸】<br>特殊武装:【増強アンプル】【強化シナプス】<br>筋:1 耐:4 知:12 精:8 器:10 敏:3 運:2<br>力:0 威:1 観:7 察:3 知:11 技:8<br>隠:5 俊:2 話:10 読:5 閃:2 幸:1<br><br>ボス特性<br>【HP追加】【無限PP】【活性状態】【命中＋３】<br>【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】<br>【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】<br>【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】<br>【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】<br>【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】…<br><br>オリジナル特性<br>【多勢の無勢】…戦闘に参加しているクリーチャー１体につき命中と回避を＋２する<br>【強化薬物】…特殊武装【増強アンプル】【強化シナプス】による反動ダメージが無くなる<br>【副作用】…このNPCは応用技を３つ以上用いてチェイン発動することができない<br>【過剰投与】…このNPCはPPを消費する際、必ずAE【死力】を使用する<br><br>技一覧<br>S1/PP1　3D6+2単体攻撃（攻撃）<br>S2/PP4　3D6+2全体攻撃（攻撃＋オールレンジ）<br>S3/PP6　全体継続3ダメージ付与 解除判定【耐久】（付加＋継続＋オールレンジ）<br>S3/PP3　攻撃力+6（付加＋攻撃強化＋攻撃強化）<br>S4/PP5　回避-9（付加＋回避減衰＋回避減衰＋回避減衰）<br>S4/PP6　命中+1D6 回避-3 テリトリー（付加＋命中追加＋回避減衰＋テリトリー）<br>S3/PP4　PP1クリーチャー創造 イニシアチブオート（付加＋創造＋オート）<br>S3/PP4　PP1クリーチャー創造 エンドフェイズオート（付加＋創造＋オート）</div>
+    <div class="message-time">15: 2025/9/13(土) 13:10:26</div>
+  </div>
+</article>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">赤津<br>【赫き闘牛】<br>自身を巨大な牛の姿へ変える能力。<br>身体能力が大きく向上する。<br><br>最大HP:35 最大PP:21 暴走率:75%<br>攻撃力:3D6+1 防御力:4 精神抵抗:3 行動値:4<br>SS:11+1D6 命中:12+1D6 回避:8+1D6<br>発動スペック:4(+2) 能力精度:7(+3) 活性タイプ:反応型<br>SPE:【激励】 カルマ:【拷問師】<br>筋:8 耐:8 知:14 精:6 器:8 敏:1 運:2<br>力:7 威:7 観:8 察:2 知:13 技:6<br>隠:3 俊:0 話:10 読:4 閃:2 幸:1<br><br>ボス特性<br>【HP追加】【因子覚醒】【能力制度＋３】【発動スペック＋２】<br><br>オリジナル特性<br>【薬物投与】…このNPCは碇 善郎のHPが50以下になった場合、自分のアクションにてSPE【激励】を使用しHPを回復する<br>　　　　 　 　 　 その際、HP回復後に碇 善郎の暴走率は10％上昇する<br>【暴走牛】…相手の攻撃によってダメージを受けた場合、その半分の数値だけ暴走率を上昇させる<br><br>技一覧<br>S2/PP1　攻撃力+3（付加＋攻撃強化）<br>S2/PP1　命中+3（付加＋命中強化）<br>S2/PP1　回避+3（付加＋回避強化）<br>S3/PP4　回避+3 インファイトトリガー（付加＋回避強化＋オート）</div>
+    <div class="message-time">16: 2025/9/13(土) 14:37:52</div>
+  </div>
+</article><div class="elapsed"><span>17時間 44分 経過</span></div>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">NPC名称及び能力名まとめ・調整<br>碇 善郎　【寄り添う灯火】<br>七緒 三葉　能力無し<br>火鉢 ナツ　【スパーキー】<br><br>赤羽 奏士　【赫き闘牛】（クリムゾン・ブル）<br>ミーノ・メーキュ　能力無し<br><br>串中 申　【刺々脅】<br>遠金 レツ　【弱肉捜食】（ダーティー・スコープ）<br>丼坂 堅固　【臆病者の盾】（カオス・シールド）</div>
+    <div class="message-time">17: 2025/9/14(日) 8:22:26</div>
+  </div>
+</article><div class="elapsed"><span>6日 0時間 11分 経過</span></div>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">汎用系オリジナル特性<br>【多勢の無勢】…戦闘に参加しているクリーチャー１体につき命中と回避を＋２する<br>【聖なる守勢】…応用技による状態異常の解除判定に失敗した際、以降同じ応用技に対する解除判定に＋１０の補正を加える<br>　　　　　　　　この効果はバトル中重複・継続する</div>
+    <div class="message-time">18: 2025/9/20(土) 8:34:17</div>
+  </div>
+</article><div class="elapsed"><span>8時間 17分 経過</span></div>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">調整<br>碇→【聖なる守勢】追加<br>赤羽→【気絶無効】【聖なる守勢】追加</div>
+    <div class="message-time">19: 2025/9/20(土) 16:51:42</div>
+  </div>
+</article><div class="elapsed"><span>4時間 56分 経過</span></div>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">名称変更<br>ミーノ・メーキュ→北見 梅人（きたみ うめひと）</div>
+    <div class="message-time">20: 2025/9/20(土) 21:47:55</div>
+  </div>
+</article>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">想定NPC<br>串中 申、遠金 レツ、丼坂 堅固、<br>碇 善郎、七緒 三葉、火鉢 ナツ、<br>赤羽 奏士、北見 梅人<br><br>名無しポジ<br>ゲーセン店員、不良、カツアゲ被害者、病院関係者、医者、看護婦、<br>北見の知り合い、ケチな売人、碇母、クラスメイト、教師</div>
+    <div class="message-time">21: 2025/9/20(土) 22:03:38</div>
+  </div>
+</article><div class="elapsed"><span>1日 10時間 58分 経過</span></div>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202509e1523746&amp;i=i98752fbe" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202509e1523746&amp;i=i98752fbe" width="120" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202509e1523746&amp;i=i98752fbe">📎 NPC立ち絵.jpg</a> <span class="filesize">[140.0 KB, 800x1097px]</span> を追加しました。</div>
+    <div class="message-time">22: 2025/9/22(月) 9:01:46</div>
+  </div>
+</article><div class="elapsed"><span>14時間 14分 経過</span></div>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">蝋燭男<br>【■■■う■火】<br>ロウソクを創り出すクリエイター能力。<br>蝋を変形させる他、ロウソクの炎を増幅させることもできる。<br><br>最大HP:40 最大PP:21 暴走率:50%<br>攻撃力:3D6+2 防御力:2 精神抵抗:4 行動値:5<br>SS:11+1D6 命中:12(+3)+1D<wbr>6 回避:9+1D6<br>発動スペック:1(+4) 能力精度:9 活性タイプ:増強型<br>SPE:【リテイク】 カルマ:【不幸】<br>特殊武装:【増強アンプル】【強化シナプス】<br>筋:1 耐:4 知:12 精:8 器:10 敏:3 運:2<br>力:0 威:1 観:7 察:3 知:11 技:8<br>隠:5 俊:2 話:10 読:5 閃:2 幸:1<br><br>ボス特性<br>【HP追加】【安定状態】【命中＋３】【発動スペック＋２】【発動スペック＋２】<br><br>オリジナル特性<br>【多勢の無■】…戦闘に参加しているクリーチャー１体につき命中と回避を＋２する<br>【強■■■】…特殊武装【増強アンプル】【強化シナプス】による反動ダメージが無くなる<br>【■■用】…このNPCは応用技を３つ以上用いてチェイン発動することができない<br>【■なる■勢】…応用技による状態異常の解除判定に失敗した際、以降同じ応用技に対する解除判定に＋１０の補正を加える<br>　　　　　　　　この効果はバトル中重複・継続する<br><br>技一覧<br>【蝋球打】S1/PP1　3D6+2単体攻撃（攻撃）<br>【蝋牙棒】S2/PP4　3D6+2全体攻撃（攻撃＋オールレンジ）<br>【散火渦】S3/PP6　全体継続3ダメージ付与 解除判定【耐久】（付加＋継続＋オールレンジ）<br>【業火炎】S3/PP3　攻撃力+6（付加＋攻撃強化＋攻撃強化）<br>【蝋下床】S4/PP5　回避-9（付加＋回避減衰＋回避減衰＋回避減衰）<br>【蝋下禁走】S4/PP6　命中+1D6 回避-3 テリトリー（付加＋命中追加＋回避減衰＋テリトリー）</div>
+    <div class="message-time">23: 2025/9/22(月) 23:16:01</div>
+  </div>
+</article><div class="elapsed"><span>23時間 59分 経過</span></div>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">レツの名前<br>遠金 レツ→臼高 レツ</div>
+    <div class="message-time">24: 2025/9/23(火) 23:15:14</div>
+  </div>
+</article><div class="elapsed"><span>20時間 1分 経過</span></div>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">碇 善郎<br>【歪み患う業火】<br>ロウソクを創り出す能力。<br>蝋を変形させる他、ロウソクの炎を増幅させることもできる。<br>薬物による暴走で炎は燃え盛り蝋は溶け続けている。<br><br>最大HP:100 最大PP:無限 暴走率:70%<br>攻撃力:3D6+2 防御力:2 精神抵抗:4 行動値:5<br>SS:11+1D6 命中:12(+3)+1D<wbr>6 回避:9+1D6<br>発動スペック:1(+50以上) 能力精度:9 活性タイプ:増強型<br>SPE:【リテイク】 カルマ:【不幸】<br>特殊武装:【増強アンプル】【強化シナプス】<br>筋:1 耐:4 知:12 精:8 器:10 敏:3 運:2<br>力:0 威:1 観:7 察:3 知:11 技:8<br>隠:5 俊:2 話:10 読:5 閃:2 幸:1<br><br>ボス特性<br>【HP追加】【無限PP】【活性状態】【命中＋３】<br>【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】<br>【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】<br>【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】<br>【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】<br>【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】…<br><br>オリジナル特性<br>【多勢の無勢】…戦闘に参加しているクリーチャー１体につき命中と回避を＋２する<br>【強化薬物】…特殊武装【増強アンプル】【強化シナプス】による反動ダメージが無くなる<br>【副作用】…このNPCは応用技を３つ以上用いてチェイン発動することができない<br>【過剰投与】…このNPCはPPを消費する際、必ずAE【死力】を使用する<br>【聖なる守勢】…応用技による状態異常の解除判定に失敗した際、以降同じ応用技に対する解除判定に＋１０の補正を加える<br>　　　　　　　　この効果はバトル中重複・継続する<br><br>技一覧<br>【蝋球打】S1/PP1　3D6+2単体攻撃（攻撃）<br>【蝋牙棒】S2/PP4　3D6+2全体攻撃（攻撃＋オールレンジ）<br>【散火渦】S3/PP6　全体継続3ダメージ付与 解除判定【耐久】（付加＋継続＋オールレンジ）<br>【業火炎】S3/PP3　攻撃力+6（付加＋攻撃強化＋攻撃強化）<br>【蝋下床】S4/PP5　回避-9（付加＋回避減衰＋回避減衰＋回避減衰）<br>【蝋下禁走】S4/PP6　命中+1D6 回避-3 テリトリー（付加＋命中追加＋回避減衰＋テリトリー）<br>【溶蝋ノ滝】S3/PP4　PP1クリーチャー創造 イニシアチブオート（付加＋創造＋オート）<br>【融蝋ノ雨】S3/PP4　PP1クリーチャー創造 エンドフェイズオート（付加＋創造＋オート）</div>
+    <div class="message-time">25: 2025/9/24(水) 19:16:50</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">赤羽 奏士<br>【赫き闘牛】<br>自身を巨大な牛の姿へ変える能力。<br>身体能力が大きく向上する。<br><br>最大HP:35 最大PP:21 暴走率:75%<br>攻撃力:3D6+1 防御力:4 精神抵抗:3 行動値:4<br>SS:11+1D6 命中:12+1D6 回避:8+1D6<br>発動スペック:4(+2) 能力精度:7(+3) 活性タイプ:反応型<br>SPE:【激励】 カルマ:【拷問師】<br>筋:8 耐:8 知:14 精:6 器:8 敏:1 運:2<br>力:7 威:7 観:8 察:2 知:13 技:6<br>隠:3 俊:0 話:10 読:4 閃:2 幸:1<br><br>ボス特性<br>【HP追加】【因子覚醒】【能力制度＋３】【発動スペック＋２】【気絶無効】<br><br>オリジナル特性<br>【薬物投与】…このNPCは碇 善郎のHPが50以下になった場合、自分のアクションにてSPE【激励】を使用しHPを回復する<br>　　　　 　 　 　 その際、HP回復後に碇 善郎の暴走率は10％上昇する<br>【暴走牛】…相手の攻撃によってダメージを受けた場合、その半分の数値だけ暴走率を上昇させる<br>【聖なる守勢】…応用技による状態異常の解除判定に失敗した際、以降同じ応用技に対する解除判定に＋１０の補正を加える<br>　　　　　　　　この効果はバトル中重複・継続する<br><br>技一覧<br>S2/PP1　攻撃力+3（付加＋攻撃強化）<br>S2/PP1　命中+3（付加＋命中強化）<br>S2/PP1　回避+3（付加＋回避強化）<br>S3/PP4　回避+3 インファイトトリガー（付加＋回避強化＋オート）</div>
+    <div class="message-time">26: 2025/9/24(水) 19:17:51</div>
+  </div>
+</article><div class="elapsed"><span>2日 1時間 21分 経過</span></div>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オリジナル特性調整<br>【多勢の無勢】…クリーチャーまたはクリーチャーを創造しているユニットがこのNPCの戦闘に参加する場合、<br>　　　　　　　　このNPCの命中・回避は戦闘するユニットに関わるクリーチャー１体につき＋２される<br>　　　　　　　（クリーチャー２体を創造しているPCと戦闘する場合＋４される）</div>
+    <div class="message-time">27: 2025/9/26(金) 20:38:51</div>
+  </div>
+</article><div class="elapsed"><span>1日 1時間 46分 経過</span></div>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クリア処理<br>シナリオクリア…+3D6<br>一度のダメージロールで30以上の数値が出た…+1D6<br>赤羽より先に碇を倒した…+2D6<br><br>おまけ<br>不良グループの名前の共通点を当てる…+1D6<br>串中 申、臼高 レツ、丼坂 堅固</div>
+    <div class="message-time">28: 2025/9/27(土) 22:25:36</div>
+  </div>
+</article><div class="elapsed"><span>1日 0時間 1分 経過</span></div>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クリア処理<br>シナリオクリア…+3D6<br>一度のダメージロールで30以上の数値が出た…+1D6<br>赤羽より先に碇を倒した…+2D6<br>串中を殴った…+1D6<br>串中に怪我をさせなかった…+1D6<br>一部消費アイテム※を使用…1種類につき+1D6<br>※【ライズ】【トランス】【ネクスト】【パンドラ】【ユートピア】<br><br>おまけ<br>不良グループの名前の共通点を当てる…+1D6<br>串中 申、臼高 レツ、丼坂 堅固</div>
+    <div class="message-time">29: 2025/9/28(日) 22:27:00</div>
+  </div>
+</article><div class="elapsed"><span>20時間 50分 経過</span></div>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【攻兵牛】<br>【追身牛】<br>【避弾牛】<br>【旋対牛】</div>
+    <div class="message-time">30: 2025/9/29(月) 19:17:28</div>
+  </div>
+</article>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">碇のHPを100から80へ変更</div>
+    <div class="message-time">31: 2025/9/29(月) 19:19:34</div>
+  </div>
+</article>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ボス特性修正<br>【違法薬物】…特殊武装【増強アンプル】【強化シナプス】による補正を+1し、反動ダメージが1D6となる</div>
+    <div class="message-time">32: 2025/9/29(月) 21:19:28</div>
+  </div>
+</article>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【融蝋ノ雨】を削除</div>
+    <div class="message-time">33: 2025/9/29(月) 21:19:46</div>
+  </div>
+</article>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">碇 善郎<br>【歪み患う業火】<br>ロウソクを創り出す能力。<br>蝋を変形させる他、ロウソクの炎を増幅させることもできる。<br>薬物による暴走で炎は燃え盛り蝋は溶け続けている。<br><br>最大HP:80 最大PP:無限 暴走率:70%<br>攻撃力:3D6+2 防御力:2 精神抵抗:4 行動値:5<br>SS:11+1D6 命中:12(+3)+1D<wbr>6 回避:9+1D6<br>発動スペック:1(+50以上) 能力精度:9 活性タイプ:増強型<br>SPE:【リテイク】 カルマ:【不幸】<br>特殊武装:【増強アンプル】【強化シナプス】<br>筋:1 耐:4 知:12 精:8 器:10 敏:3 運:2<br>力:0 威:1 観:7 察:3 知:11 技:8<br>隠:5 俊:2 話:10 読:5 閃:2 幸:1<br><br>ボス特性<br>【HP追加】【無限PP】【活性状態】【命中＋３】<br>【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】<br>【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】<br>【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】<br>【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】<br>【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】【発動スペック＋２】…<br><br>オリジナル特性<br>【多勢の無勢】…クリーチャーまたはクリーチャーを創造しているユニットがこのNPCの戦闘に参加する場合、<br>　　　　　　　　このNPCの命中・回避は戦闘するユニットに関わるクリーチャー１体につき＋２される<br>　　　　　　　（クリーチャー２体を創造しているPCと戦闘する場合＋４される）<br>【違法薬物】…特殊武装【増強アンプル】【強化シナプス】による補正を+1し、反動ダメージが1D6となる<br>【副作用】…このNPCは応用技を３つ以上用いてチェイン発動することができない<br>【過剰投与】…このNPCはPPを消費する際、必ずAE【死力】を使用する<br>【聖なる守勢】…応用技による状態異常の解除判定に失敗した際、以降同じ応用技に対する解除判定に＋１０の補正を加える<br>　　　　　　　　この効果はバトル中重複・継続する<br><br>技一覧<br>【蝋球打】S1/PP1　3D6+2単体攻撃（攻撃）<br>【蝋牙棒】S2/PP4　3D6+2全体攻撃（攻撃＋オールレンジ）<br>【散火渦】S3/PP6　全体継続3ダメージ付与 解除判定【耐久】（付加＋継続＋オールレンジ）<br>【業火炎】S3/PP3　攻撃力+6（付加＋攻撃強化＋攻撃強化）<br>【蝋下床】S4/PP5　回避-9（付加＋回避減衰＋回避減衰＋回避減衰）<br>【蝋下禁走】S4/PP6　命中+1D6 回避-3 テリトリー（付加＋命中追加＋回避減衰＋テリトリー）<br>【溶蝋ノ滝】S3/PP4　PP1クリーチャー創造 イニシアチブオート（付加＋創造＋オート）</div>
+    <div class="message-time">34: 2025/9/29(月) 21:22:00</div>
+  </div>
+</article>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">35: 2025/9/29(月) 21:24:38</div>
+  </div>
+</article>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">赤羽 奏士<br>【赫き闘牛】<br>自身を巨大な牛の姿へ変える能力。<br>身体能力が大きく向上する。<br><br>最大HP:35 最大PP:21 暴走率:75%<br>攻撃力:3D6+1 防御力:4 精神抵抗:3 行動値:4<br>SS:11+1D6 命中:12+1D6 回避:8+1D6<br>発動スペック:4(+2) 能力精度:7(+3) 活性タイプ:反応型<br>SPE:【激励】 カルマ:【演技派】<br>筋:8 耐:8 知:14 精:6 器:8 敏:1 運:2<br>力:7 威:7 観:8 察:2 知:13 技:6<br>隠:3 俊:0 話:10 読:4 閃:2 幸:1<br><br>ボス特性<br>【HP追加】【因子覚醒】【能力制度＋３】【発動スペック＋２】【気絶無効】<br><br>オリジナル特性<br>【薬物投与】…このNPCは碇 善郎のHPが50以下になった場合、自分のアクションにてSPE【激励】を使用しHPを回復する<br>　　　　　　　　その際、HP回復後に碇 善郎の暴走率は10％上昇する<br>【暴走牛】…相手の攻撃によってダメージを受けた場合、その半分の数値だけ暴走率を上昇させる<br>【聖なる守勢】…応用技による状態異常の解除判定に失敗した際、以降同じ応用技に対する解除判定に＋１０の補正を加える<br>　　　　　　　　この効果はバトル中重複・継続する<br><br>技一覧<br>【攻兵牛】　S2/PP1　攻撃力+3（付加＋攻撃強化）<br>【追身牛】　S2/PP1　命中+3（付加＋命中強化）<br>【避弾牛】　S2/PP1　回避+3（付加＋回避強化）<br>【旋対牛】　S3/PP4　回避+3 インファイトトリガー（付加＋回避強化＋オート）</div>
+    <div class="message-time">36: 2025/9/29(月) 21:28:37</div>
+  </div>
+</article>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">北見の店を薬局からアングラショップへ変更</div>
+    <div class="message-time">37: 2025/9/30(火) 0:22:35</div>
+  </div>
+</article>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちょっとどうでもいいことを言うと、赤羽のビジュアルが赤髪＋白衣でカゲさんの好みっぽくなったなって思ってます<br>髪が赤いのはレッドブルだからですが</div>
+    <div class="message-time">38: 2025/9/30(火) 1:19:57</div>
+  </div>
+</article>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それはちょっと思った</div>
+    <div class="message-time">39: 2025/9/30(火) 1:20:09</div>
+  </div>
+</article>
+<article class="message" id="res40">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">言われてみれば</div>
+    <div class="message-time">40: 2025/9/30(火) 1:21:09</div>
+  </div>
+</article>
+<article class="message" id="res41">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">イアム、もうちょっと幼くて浮世離れしたイメージだったけど、<br>わりと状況を俯瞰的に整理して面白がったり呆れたり、かといって取り乱すこともなくって感じで<br>はむさん系だなって思った</div>
+    <div class="message-time">41: 2025/9/30(火) 1:27:10</div>
+  </div>
+</article><div class="elapsed"><span>10時間 14分 経過</span></div>
+<article class="message" id="res42">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202509e1523746&amp;i=iad3e91d6" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202509e1523746&amp;i=iad3e91d6" width="124" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202509e1523746&amp;i=iad3e91d6">📎 G1qDQaQbUAAwCTD.jpeg</a> <span class="filesize">[614.3 KB, 960x1280px]</span> を追加しました。</div>
+    <div class="message-time">42: 2025/9/30(火) 11:41:31</div>
+  </div>
+</article>
+<article class="message" id="res43">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">余談ですけど店の合言葉をまったく考えておらず忍殺みたいな言葉しか出てこなくてどうしたもんかと牛に関する言葉を考えた結果、<br>王の晩餐、麦はなし（バーガーキングがパン無しのビーフ売り始めたよ）になりました</div>
+    <div class="message-time">43: 2025/9/30(火) 11:42:52</div>
+  </div>
+</article>
+<article class="message" id="res44">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">草<br>ググっても何もないと思ったらそういうことだったのか</div>
+    <div class="message-time">44: 2025/9/30(火) 12:22:31</div>
+  </div>
+</article><div class="elapsed"><span>3時間 52分 経過</span></div>
+<article class="message" id="res45">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">さぼスマウル：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202509ikaros/01_SvSmWl.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202509ikar<wbr>os/<wbr>01_<wbr>SvSmWl.<wbr>html</a></div>
+    <div class="message-time">45: 2025/9/30(火) 16:15:23</div>
+  </div>
+</article>
+<article class="message" id="res46">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">碇くんのお見舞いぐらいは行きそうだから（面白そうなので）<br>後日談屋っと伽良かったな</div>
+    <div class="message-time">46: 2025/9/30(火) 16:21:46</div>
+  </div>
+</article>
+<article class="message" id="res47">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">やっときゃよかった！</div>
+    <div class="message-time">47: 2025/9/30(火) 16:21:50</div>
+  </div>
+</article>
+<article class="message" id="res48">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログ神ありがとうございます！</div>
+    <div class="message-time">48: 2025/9/30(火) 17:22:48</div>
+  </div>
+</article>
+<article class="message" id="res49">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">部屋データあるので後日談くらいはできますよ</div>
+    <div class="message-time">49: 2025/9/30(火) 17:22:56</div>
+  </div>
+</article>
+<article class="message" id="res50">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どないしよかな</div>
+    <div class="message-time">50: 2025/9/30(火) 17:25:34</div>
+  </div>
+</article>
+<article class="message" id="res51">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いうてどういう話にまとめるかがいまいち思い付いてない感があるので、<br>やるにしてもちょっと寝かせます</div>
+    <div class="message-time">51: 2025/9/30(火) 17:34:16</div>
+  </div>
+</article>
+<article class="message" id="res52">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">うっす</div>
+    <div class="message-time">52: 2025/9/30(火) 19:09:26</div>
+  </div>
+</article>
+<article class="message" id="res53">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">流石ログを扱わせたら右に出るものは居ないともっぱらの評判の男だ（ありがとうの意</div>
+    <div class="message-time">53: 2025/9/30(火) 19:46:29</div>
+  </div>
+</article>
+<article class="message" id="res54">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういえばボールでドゴォされたやつってなんだったんだろう</div>
+    <div class="message-time">54: 2025/9/30(火) 20:44:41</div>
+  </div>
+</article>
+<article class="message" id="res55">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">蝋燭固めてボールでドゴォされたんかな</div>
+    <div class="message-time">55: 2025/9/30(火) 20:44:54</div>
+  </div>
+</article>
+<article class="message" id="res56">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">溶かした蝋を球体に固めてドゴォ</div>
+    <div class="message-time">56: 2025/9/30(火) 20:54:43</div>
+  </div>
+</article>
+<article class="message" id="res57">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい</div>
+    <div class="message-time">57: 2025/9/30(火) 21:02:47</div>
+  </div>
+</article>
+<article class="message" id="res58">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">北見（薬卸した売人）、逮捕され損だったな……</div>
+    <div class="message-time">58: 2025/9/30(火) 21:15:36</div>
+  </div>
+</article>
+<article class="message" id="res59">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁあの時点では組織の規模が不透明だったから、<br>ベストな助言だったと思うし騙したつもりもないけど……</div>
+    <div class="message-time">59: 2025/9/30(火) 21:16:26</div>
+  </div>
+</article>
+<article class="message" id="res60">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ルーン企業連と繋がったままでコトを構えるレベルだったらあの助言通りの事が起きてただろうしな…</div>
+    <div class="message-time">60: 2025/9/30(火) 22:10:50</div>
+  </div>
+</article><div class="elapsed"><span>3日 20時間 29分 経過</span></div>
+<article class="message" id="res61">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあカスでクズだけどあくまで常識的な範疇の頭してるカスだからロケットで絶対安心って言われてもアホかテメェ帰れってなるわな……</div>
+    <div class="message-time">61: 2025/10/4(土) 18:40:00</div>
+  </div>
+</article>
+<article class="message" id="res62">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">殺されそうになってる状況で依頼放棄されるのが一番嫌だから煽られても帰さないけどロケットはちょっと…</div>
+    <div class="message-time">62: 2025/10/4(土) 19:18:21</div>
+  </div>
+</article><div class="elapsed"><span>21時間 28分 経過</span></div>
+<article class="message" id="res63">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">甘ちゃんの隼人でもまあやれた程度のクズとは言うてもええんやろか…</div>
+    <div class="message-time">63: 2025/10/5(日) 16:47:09</div>
+  </div>
+</article>
+<article class="message" id="res64">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いいよ</div>
+    <div class="message-time">64: 2025/10/5(日) 17:00:18</div>
+  </div>
+</article>
+<article class="message" id="res65">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あんまりネタバレにはならんだろうしこのPCがいけたとかは参考材料になりうる</div>
+    <div class="message-time">65: 2025/10/5(日) 17:00:53</div>
+  </div>
+</article><div class="elapsed"><span>3日 5時間 17分 経過</span></div>
+<article class="message" id="res66">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「犯人に殺意無いな」って割とわかるもんなんですね<br>殺す気があるなら殺すだろって状況なのは確かですけど</div>
+    <div class="message-time">66: 2025/10/8(水) 22:18:50</div>
+  </div>
+</article>
+<article class="message" id="res67">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">蝋燭男<br>【■■■う■火】<br>ロウソクを創り出すクリエイター能力。<br>蝋を変形させる他、ロウソクの炎を増幅させることもできる。<br><br>最大HP:40 最大PP:21 暴走率:50%<br>攻撃力:3D6+2 防御力:2 精神抵抗:4 行動値:5<br>SS:11+1D6 命中:12(+3)+1D<wbr>6 回避:9+1D6<br>発動スペック:1(+4) 能力精度:9 活性タイプ:増強型<br>SPE:【リテイク】 カルマ:【不幸】<br>特殊武装:【増強アンプル】【強化シナプス】<br>筋:1 耐:4 知:12 精:8 器:10 敏:3 運:2<br>力:0 威:1 観:7 察:3 知:11 技:8<br>隠:5 俊:2 話:10 読:5 閃:2 幸:1<br><br>ボス特性<br>【HP追加】【安定状態】【命中＋３】【発動スペック＋２】【発動スペック＋２】<br><br>オリジナル特性<br>【多勢の無■】…クリーチャーまたはクリーチャーを創造しているユニットがこのNPCの戦闘に参加する場合、<br>　　　　　　　　このNPCの命中・回避は戦闘するユニットに関わるクリーチャー１体につき＋２される<br>　　　　　　　（クリーチャー２体を創造しているPCと戦闘する場合＋４される）<br>【強■薬■】…特殊武装【増強アンプル】【強化シナプス】による反動ダメージが無くなる<br>【■■用】…このNPCは応用技を３つ以上用いてチェイン発動することができない<br>【■なる■勢】…応用技による状態異常の解除判定に失敗した際、以降同じ応用技に対する解除判定に＋１０の補正を加える<br>　　　　　　　　この効果はバトル中重複・継続する<br><br>技一覧<br>【蝋球打】S1/PP1　3D6+2単体攻撃（攻撃）<br>【蝋牙棒】S2/PP4　3D6+2全体攻撃（攻撃＋オールレンジ）<br>【散火渦】S3/PP6　全体継続3ダメージ付与 解除判定【耐久】（付加＋継続＋オールレンジ）<br>【業火炎】S3/PP3　攻撃力+6（付加＋攻撃強化＋攻撃強化）<br>【蝋下床】S4/PP5　回避-9（付加＋回避減衰＋回避減衰＋回避減衰）<br>【蝋下禁走】S4/PP6　命中+1D6 回避-3 テリトリー（付加＋命中追加＋回避減衰＋テリトリー）</div>
+    <div class="message-time">67: 2025/10/8(水) 23:16:18</div>
+  </div>
+</article>
+<article class="message" id="res68">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【多勢の無■】、そのままじゃね・</div>
+    <div class="message-time">68: 2025/10/8(水) 23:17:35</div>
+  </div>
+</article>
+<article class="message" id="res69">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そのままっていうか修正前じゃね？</div>
+    <div class="message-time">69: 2025/10/8(水) 23:17:50</div>
+  </div>
+</article>
+<article class="message" id="res70">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">修正前は問答無用で+2でしたよ</div>
+    <div class="message-time">70: 2025/10/8(水) 23:23:00</div>
+  </div>
+</article>
+<article class="message" id="res71">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、戦闘に参加するって判定に参加するってことか？</div>
+    <div class="message-time">71: 2025/10/8(水) 23:29:47</div>
+  </div>
+</article>
+<article class="message" id="res72">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">戦闘に参加するって書き方だとバトルに参加してる奴全部対象じゃね？ってなると思う</div>
+    <div class="message-time">72: 2025/10/8(水) 23:30:14</div>
+  </div>
+</article>
+<article class="message" id="res73">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">遊戯王感覚だった</div>
+    <div class="message-time">73: 2025/10/8(水) 23:31:04</div>
+  </div>
+</article>
+<article class="message" id="res74">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res66">&gt;&gt; 66</a> <br>本来このユグドラ（蟹ドラ）で生きるにはどれだけ命掛かってんのかよく分からんことになってるけど<br>少なくとも人を襲えるだけの能力を持った存在が恨みを持って人を襲った場合は殺すのが普通、半殺しなら有情な方、骨折程度とかやる気あんのかってレベルだと思うなぁ</div>
+    <div class="message-time">74: 2025/10/8(水) 23:53:24</div>
+  </div>
+</article>
+<article class="message" id="res75">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なるほど<br>まあ依頼人は「何もしてないのに仲間が殺されそうになった！逆恨みだ！」とギャンギャン喚きます</div>
+    <div class="message-time">75: 2025/10/8(水) 23:54:09</div>
+  </div>
+</article>
+<article class="message" id="res76">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">仮にそうでなかったとしてもPCって割と百戦錬磨だから余計に命のやり取りをよく見てるので<br>「は？死にかけても無いのに殺されそうとか何言ってんだコイツ？」って感覚麻痺っててもおかしくないかな</div>
+    <div class="message-time">76: 2025/10/8(水) 23:54:49</div>
+  </div>
+</article>
+<article class="message" id="res77">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そりゃこのチンピラ共が頭須磨だったなら分からんでは無いけど感性は普通のチンピラだし…</div>
+    <div class="message-time">77: 2025/10/8(水) 23:56:12</div>
+  </div>
+</article><div class="elapsed"><span>11時間 51分 経過</span></div>
+<article class="message" id="res78">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res66">&gt;&gt; 66</a><br>殺されてもおかしくない、ぐらいのイメージだな<br>殺されて当然まではいかない認識　銃社会のイメージ</div>
+    <div class="message-time">78: 2025/10/9(木) 11:47:38</div>
+  </div>
+</article>
+<article class="message" id="res79">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">私はどっちかっていうと、<br>話を聞いてる限り不良どもが一方的にやられてるのに<br>碇くんがトドメ刺してないって状況から判断したところが強い</div>
+    <div class="message-time">79: 2025/10/9(木) 11:50:41</div>
+  </div>
+</article>
+<article class="message" id="res80">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">殺傷力についてはあんまり考慮してない<br>銃社会でも脚撃つか胸撃つか頭撃つかで害意にグラデーションってあるし</div>
+    <div class="message-time">80: 2025/10/9(木) 11:52:34</div>
+  </div>
+</article>
+<article class="message" id="res81">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ああ、殺傷力というより俺が言ったのは物理的に加害出来る能力の場合ってこと<br>視界ぶん回しで殺すとかはまあまず難しいから…</div>
+    <div class="message-time">81: 2025/10/9(木) 12:07:45</div>
+  </div>
+</article><div class="elapsed"><span>1日 2時間 54分 経過</span></div>
+<article class="message" id="res82">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">北見の尋問もおそらく暴力と威圧によるものになると考えると、このままいけばハクラトが探索賞になりそうなんですけどマジ？って気持ちです</div>
+    <div class="message-time">82: 2025/10/10(金) 15:02:01</div>
+  </div>
+</article>
+<article class="message" id="res83">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ハムケージが探索賞取った卓もあるから……</div>
+    <div class="message-time">83: 2025/10/10(金) 16:22:52</div>
+  </div>
+</article><div class="elapsed"><span>8時間 21分 経過</span></div>
+<article class="message" id="res84">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">変に回避ダイス回ったのもあるけど碇が先にやられちゃった</div>
+    <div class="message-time">84: 2025/10/11(土) 0:44:45</div>
+  </div>
+</article>
+<article class="message" id="res85">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">先に赤羽ぶっ殺しとこ―ぜってならないのマジかぁ</div>
+    <div class="message-time">85: 2025/10/11(土) 0:50:40</div>
+  </div>
+</article>
+<article class="message" id="res86">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">我ながら無駄に情報量多いのでとりあえず殴ったのかもしれない</div>
+    <div class="message-time">86: 2025/10/11(土) 0:56:44</div>
+  </div>
+</article><div class="elapsed"><span>21時間 39分 経過</span></div>
+<article class="message" id="res87">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">改めて「これ碇くんほっといたら死ぬやんｗｗ」が「まあこんだけスペック無理矢理増やされてたら死ぬか……」ってなっていくのよくできてると思ってました</div>
+    <div class="message-time">87: 2025/10/11(土) 22:36:16</div>
+  </div>
+</article>
+<article class="message" id="res88">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">へへっ</div>
+    <div class="message-time">88: 2025/10/11(土) 22:37:58</div>
+  </div>
+</article>
+<article class="message" id="res89">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">リフレクあるし、ハクラトもダニーも硬いから適当に殴ってれば終わるかなって感覚だった</div>
+    <div class="message-time">89: 2025/10/11(土) 22:39:23</div>
+  </div>
+</article>
+<article class="message" id="res90">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まさか、ホールド外すと思ってなかったんだよね</div>
+    <div class="message-time">90: 2025/10/11(土) 22:40:01</div>
+  </div>
+</article>
+<article class="message" id="res91">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">cfダイス合計は流石にプラスに転じたんだろうか</div>
+    <div class="message-time">91: 2025/10/11(土) 22:40:31</div>
+  </div>
+</article>
+<article class="message" id="res92">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">1R目の回避で無駄にクリティカル2つだしたので、多分＋です</div>
+    <div class="message-time">92: 2025/10/11(土) 22:41:19</div>
+  </div>
+</article>
+<article class="message" id="res93">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">よかったよかった</div>
+    <div class="message-time">93: 2025/10/11(土) 22:41:31</div>
+  </div>
+</article>
+<article class="message" id="res94">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">半ボツ設定<br>研究助手<br>アンノウン能力【がらんどうの過去（プリテンダー・クリエイター）】<br>自身に過去経歴や人格などの「人物像」を設定し振る舞う能力。<br>人物像を削除すればその人物の「個性」に関わる記憶や記録の一切が消える。<br>たとえば、共に食事をした記憶はあるがどのような誰と食事をしたのか一切思い出せない。<br><br>この能力を利用して様々な場所に潜入し情報を横流ししているルーン企業連所属者。</div>
+    <div class="message-time">94: 2025/10/11(土) 22:41:48</div>
+  </div>
+</article>
+<article class="message" id="res95">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[灯火の翼_log_全タブ_2025-10-11_2242.html] </del></div>
+    <div class="message-time">95: 2025/10/11(土) 22:44:35</div>
+  </div>
+</article><div class="elapsed"><span>14時間 6分 経過</span></div>
+<article class="message" id="res96">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">へやデータあります？</div>
+    <div class="message-time">96: 2025/10/12(日) 12:51:31</div>
+  </div>
+</article>
+<article class="message" id="res97">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">97: 2025/10/12(日) 14:50:07</div>
+  </div>
+</article>
+<article class="message" id="res98">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">これでいけます？</div>
+    <div class="message-time">98: 2025/10/12(日) 14:50:11</div>
+  </div>
+</article>
+<article class="message" id="res99">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">パスは600</div>
+    <div class="message-time">99: 2025/10/12(日) 14:50:35</div>
+  </div>
+</article>
+<article class="message" id="res100">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">拾った<br>あざます</div>
+    <div class="message-time">100: 2025/10/12(日) 15:17:08</div>
+  </div>
+</article>
+<article class="message" id="res101">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログ格納しました<br>ここおかしいぞどうなってんだクソ野郎ってのがあったら教えてください</div>
+    <div class="message-time">101: 2025/10/12(日) 15:48:09</div>
+  </div>
+</article>
+<article class="message" id="res102">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！！</div>
+    <div class="message-time">102: 2025/10/12(日) 16:22:07</div>
+  </div>
+</article>
+<article class="message" id="res103">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！！</div>
+    <div class="message-time">103: 2025/10/12(日) 16:57:52</div>
+  </div>
+</article>
+<article class="message" id="res104">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！！</div>
+    <div class="message-time">104: 2025/10/12(日) 17:02:42</div>
+  </div>
+</article><div class="elapsed"><span>5時間 18分 経過</span></div>
+<article class="message" id="res105">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ファイル削除しました</div>
+    <div class="message-time">105: 2025/10/12(日) 22:21:25</div>
+  </div>
+</article><div class="elapsed"><span>1日 10時間 5分 経過</span></div>
+<article class="message" id="res106">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今気付いたけど、【依頼人を怪我させなかった：＋1Rd】のクリアボーナスって串中からの依頼報酬か</div>
+    <div class="message-time">106: 2025/10/14(火) 8:27:14</div>
+  </div>
+</article>
+<article class="message" id="res107">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だいぶ安く使われてる！！！</div>
+    <div class="message-time">107: 2025/10/14(火) 8:27:29</div>
+  </div>
+</article><div class="elapsed"><span>3時間 55分 経過</span></div>
+<article class="message" id="res108">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そーなの！？<br>じゃあそういうことです</div>
+    <div class="message-time">108: 2025/10/14(火) 12:23:01</div>
+  </div>
+</article>
+<article class="message" id="res109">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">少女<br>「あ、あなた達は…？」＠<br>会場 &nbsp; &nbsp; &nbsp; &nbsp; <br>ハクラト<br>「俺様たちはこの人から依頼を受けて近くにいるんだぜ！」＠<br>会場 &nbsp; &nbsp; &nbsp; &nbsp; <br>小森朋典<br>「この馬鹿を襲うとする馬鹿をボコすためにいんの」<br>会場 &nbsp; &nbsp; &nbsp; &nbsp; <br>ハクラト<br>「もしかして今俺様のこと馬鹿って言ったか！？」言ってない＠<br>会場 &nbsp; &nbsp; &nbsp; &nbsp; <br>小森朋典<br>「こいつはこの馬鹿を襲おうとする馬鹿から守るためにいる馬鹿だ」今言った＠<br><br>会場 &nbsp; &nbsp; &nbsp; &nbsp; <br>ハクラト<br>「えっと…この馬鹿を襲おうとする馬鹿の襲われる馬鹿は俺様じゃなくて、襲おうとする馬鹿も俺様じゃなくて…あれあれ？？」こんがらがって分からなくなります＠<br>会場 &nbsp; &nbsp; &nbsp; &nbsp; <br>小森朋典<br>馬鹿じゃん</div>
+    <div class="message-time">109: 2025/10/14(火) 12:47:06</div>
+  </div>
+</article>
+<article class="message" id="res110">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">（呆れ）</div>
+    <div class="message-time">110: 2025/10/14(火) 12:47:14</div>
+  </div>
+</article>
+<article class="message" id="res111">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202509e1523746&amp;i=i5524fa2c" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202509e1523746&amp;i=i5524fa2c" width="324" height="144"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202509e1523746&amp;i=i5524fa2c">📎 Screenshots_2025-10-14-13-10-00.png</a> <span class="filesize">[125.9 KB, 816x359px]</span> を追加しました。</div>
+    <div class="message-time">111: 2025/10/14(火) 13:10:15</div>
+  </div>
+</article>
+<article class="message" id="res112">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">攻撃立ち絵なの？</div>
+    <div class="message-time">112: 2025/10/14(火) 13:10:26</div>
+  </div>
+</article>
+<article class="message" id="res113">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ハチドリ<br>ハチドリの素材探しにトワツガイ公式見に行ったら<br>ゲームの後続のファンサイトもサ終してただの焼け跡になってた<br><br>文化損失</div>
+    <div class="message-time">113: 2025/10/14(火) 15:57:18</div>
+  </div>
+</article>
+<article class="message" id="res114">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">GM<br>よく考えたらマフツさんと同じ読みじゃんコイツ関谷のくせにふざけんなよな<br><br>理不尽すぎる</div>
+    <div class="message-time">114: 2025/10/14(火) 15:57:51</div>
+  </div>
+</article>
+<article class="message" id="res115">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">男<br>「クソ…なんだよこいつらハズレ引いたか…？」＠ブツブツと文句を垂れる<br><br>最終走はどうなるかなぁ</div>
+    <div class="message-time">115: 2025/10/14(火) 15:59:58</div>
+  </div>
+</article>
+<article class="message" id="res116">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ハチドリ<br>「じゃ、襲われそうなとこ行って釣ればいーんじゃない？」＠ &nbsp; &nbsp;<br>&quot;イアム&quot;<br>「言うと思った～～」　ウケてます＠<br>串中 申<br>「ふっ…ふざけんな！守らせるためにお前らに金を出してんのに何で危険な目に遭わなきゃいけねえんだ！！」 &nbsp; &nbsp; &nbsp; &nbsp;<br>&quot;イアム&quot;<br>「それも言うと思った～」　LUNA隊噂通り過ぎてワロタ＠<br><br>なんだこの触手</div>
+    <div class="message-time">116: 2025/10/14(火) 16:02:35</div>
+  </div>
+</article>
+<article class="message" id="res117">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">気が合いそう</div>
+    <div class="message-time">117: 2025/10/14(火) 16:02:41</div>
+  </div>
+</article>
+<article class="message" id="res118">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">めちゃくちゃいろいろ恨みに心当たりがあってめちゃくちゃいろんな奴から狙われてる卓作ったらどうなるんだろうって思った</div>
+    <div class="message-time">118: 2025/10/14(火) 16:11:43</div>
+  </div>
+</article>
+<article class="message" id="res119">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">恨みの心当たり聞いたら５～10個くらい出してきてなんやこいつってなって<br>襲ってくるやつもそれぞれ別件で5組くらいいる卓</div>
+    <div class="message-time">119: 2025/10/14(火) 16:12:39</div>
+  </div>
+</article>
+<article class="message" id="res120">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">草</div>
+    <div class="message-time">120: 2025/10/14(火) 16:23:54</div>
+  </div>
+</article>
+<article class="message" id="res121">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">純粋な私怨、組織としての面子、バーストからの依頼云々...</div>
+    <div class="message-time">121: 2025/10/14(火) 16:24:41</div>
+  </div>
+</article>
+<article class="message" id="res122">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ハチドリ<br>「カチコミ！？　カチコミする！？」＠<br>遠見 隼人<br>「アンタもカチコミじゃねえっつってんだろまだ出所まで言った覚えはねえぞ！？それに知らねえからな！？関係者でも何でもねえんだよ俺は！！」＠ &nbsp; &nbsp;<br>ハチドリ<br>「うるさっ。病院では静かにしてね」＠<br>遠見 隼人<br>「こ…………こいつら………」＠<br><br>草</div>
+    <div class="message-time">122: 2025/10/14(火) 16:26:30</div>
+  </div>
+</article>
+<article class="message" id="res123">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">遠見 隼人<br>（俺はLUNA隊にも突然現れた触手野郎にもおちょくられてんのか……？？？）<br>「……ハァ！そういうのが居りゃ話ははえーだろうがよ……つーかアンタも仮にもYDFの一部署ならなんかしら情報持ってんじゃねえのかよ」＞ハチドリ＠<br>ハチドリ<br>なんか知ってますか？<br>ハチドリ<br>私は知らないと思う<br>&quot;イアム&quot;<br>ハチドリ自身が知らないって言い切ったらおしまいだよ &nbsp; &nbsp;<br>遠見 隼人<br>ほな知らねえよ<br><br>知らんかぁ</div>
+    <div class="message-time">123: 2025/10/14(火) 16:29:03</div>
+  </div>
+</article>
+<article class="message" id="res124">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">GM<br>じゃあハチドリはふと靉翁が独り言で愚痴ってたのを思い出します<br><br>！！！！！！！！！！！</div>
+    <div class="message-time">124: 2025/10/14(火) 16:30:20</div>
+  </div>
+</article>
+<article class="message" id="res125">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ハチドリ<br>やっぱりツッコミがいるとボケがいがあっていいなぁ<br><br>わかる</div>
+    <div class="message-time">125: 2025/10/14(火) 16:35:27</div>
+  </div>
+</article>
+<article class="message" id="res126">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">串中 申<br>「ゴチャゴチャ言いやがって…カツアゲされてたのを助けようとしたカッコつけが返り討ちにあってダセえってだけの話じゃねえか！」＠<br><br>小森君もわかるわかるって言ってます</div>
+    <div class="message-time">126: 2025/10/14(火) 16:50:05</div>
+  </div>
+</article>
+<article class="message" id="res127">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">こんな必死にツッコミに全力で口回し続けたの初めてかもしれん</div>
+    <div class="message-time">127: 2025/10/14(火) 16:50:44</div>
+  </div>
+</article>
+<article class="message" id="res128">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いつもは電車突っ込んできてワヤになるから思考放棄してツッコミというより悪態になるけど<br>今回ギリギリ対応できるレベルの混沌だったので結果的に仕事量が最大化されてた感</div>
+    <div class="message-time">128: 2025/10/14(火) 16:54:39</div>
+  </div>
+</article>
+<article class="message" id="res129">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res119">&gt;&gt; 119</a> <br>「恨みに心当たりだって…？キモいオタクをカツアゲしたことか…路駐バイクを借りパクしたことか…薬の売り上げ持って逃げたことか…女寝取って捨てたことか…先輩が紹介してくれた半グレとの約束ぶっちったことか…後輩の犬を川に沈めたことか…あと何があったっけ…」</div>
+    <div class="message-time">129: 2025/10/14(火) 17:04:52</div>
+  </div>
+</article>
+<article class="message" id="res130">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202509e1523746&amp;i=i7f2c0887" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202509e1523746&amp;i=i7f2c0887" width="266" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202509e1523746&amp;i=i7f2c0887">📎 新しいビットマップ イメージ.png</a> <span class="filesize">[177.4 KB, 1250x763px]</span> を追加しました。</div>
+    <div class="message-time">130: 2025/10/14(火) 17:08:33</div>
+  </div>
+</article>
+<article class="message" id="res131">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">顔画像ないっす</div>
+    <div class="message-time">131: 2025/10/14(火) 17:08:41</div>
+  </div>
+</article>
+<article class="message" id="res132">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">遠見 隼人<br>灯火くんにやる気スイッチとか言う翼を授けちゃった系のアレ<br><br>エスパーじゃん</div>
+    <div class="message-time">132: 2025/10/14(火) 17:10:02</div>
+  </div>
+</article>
+<article class="message" id="res133">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">GM<br>クリーチャーを大量に出された時どうすればいいかワイの出した答えがこれや<br><br>ええと思います</div>
+    <div class="message-time">133: 2025/10/14(火) 17:11:40</div>
+  </div>
+</article>
+<article class="message" id="res134">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">シナプスをリアクションで使っている！！！！！！</div>
+    <div class="message-time">134: 2025/10/14(火) 17:15:30</div>
+  </div>
+</article>
+<article class="message" id="res135">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">訂正されてる</div>
+    <div class="message-time">135: 2025/10/14(火) 17:15:51</div>
+  </div>
+</article>
+<article class="message" id="res136">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">遠見 隼人<br>本当にただの人間の視界でしか無いから開いてない引き出しの中とかは光源無いから見えないけど &nbsp; &nbsp;<br>ハチドリ<br>大概シーケンスブレイカーだよなこいつも<br><br>これだから遠見の奴らは…</div>
+    <div class="message-time">136: 2025/10/14(火) 17:32:27</div>
+  </div>
+</article>
+<article class="message" id="res137">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">研究者<br>「貴方がたも強行突破してこないということは、話し合いの余地くらいあるでしょう？」＠ &nbsp; &nbsp;<br>ハチドリ<br>「開けないなら鍵ブチ抜くけどいいー？」＠<br>GM<br>話し合いの余地無さそうやんけ<br><br><br>草</div>
+    <div class="message-time">137: 2025/10/14(火) 17:34:16</div>
+  </div>
+</article>
+<article class="message" id="res138">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">𝓡𝓮𝓭 𝓦𝓸𝓵𝓯<br>だいぶ手早く終わりそう（ハチドリのダメージ運考えるとなおさら）<br>ハチドリ<br>２＋４＋４ｄ６＋１ｄ６＋２ｄ６<br>&lt;BCDice：ハチドリ&gt;<br>Yggdrasill<wbr> : (2+4+4D6+1<wbr>D6+2D6) → 2+4+16[5,6<wbr>,1,4]+5[5]<wbr>+11[6,5] → 38<br>𝓡𝓮𝓭 𝓦𝓸𝓵𝓯<br>でしょうね<br>遠見 隼人<br>うわ<br>GM<br>たっか！！！<br><br>強すぎる</div>
+    <div class="message-time">138: 2025/10/14(火) 17:41:21</div>
+  </div>
+</article>
+<article class="message" id="res139">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">遠見 隼人<br>7d6<br>&lt;BCDice：遠見 隼人&gt;<br>Yggdrasill<wbr> : (7D6) → 17[3,1,1,1<wbr>,5,1,5] → 17<br><br>やる気あんのか</div>
+    <div class="message-time">139: 2025/10/14(火) 17:44:14</div>
+  </div>
+</article>
+<article class="message" id="res140">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クリファンダイスじゃないからって好きなだけ1だしていいってもんじゃねーんだぞ</div>
+    <div class="message-time">140: 2025/10/14(火) 17:45:01</div>
+  </div>
+</article>
+<article class="message" id="res141">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">𝓡𝓮𝓭 𝓦𝓸𝓵𝓯<br>&gt;&gt; 「恐喝」のことを表すヤクザや不良の隠語。<br>&gt;&gt; “恐喝して巻き上げる”ことに由来し、漢字では「喝上げ」と表記する<br><br>10へぇ<br><br>そーなの！？！？</div>
+    <div class="message-time">141: 2025/10/14(火) 17:53:02</div>
+  </div>
+</article>
+<article class="message" id="res142">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">力を持ってしまったって隼人初卓だったの！！？！？</div>
+    <div class="message-time">142: 2025/10/14(火) 17:54:47</div>
+  </div>
+</article>
+<article class="message" id="res143">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ハチドリ<br>キャラが立ってるのはいいけど真面目な話がぜんぜんできんこいつ &nbsp; &nbsp;<br>ハチドリ<br>当たり前だけど<br><br>LUNA隊だもの</div>
+    <div class="message-time">143: 2025/10/14(火) 17:55:16</div>
+  </div>
+</article>
+<article class="message" id="res144">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">遠見 隼人<br>74-5d6 &nbsp; &nbsp;<br>&lt;BCDice：遠見 隼人&gt;<br>Yggdrasill<wbr> : (74-5D6) → 74-11[4,4,<wbr>1,1,1] → 63<br><br>クリファンダイスじゃないからっていくらでも1だしていいわけじゃないんだぞ</div>
+    <div class="message-time">144: 2025/10/14(火) 17:56:25</div>
+  </div>
+</article>
+<article class="message" id="res145">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">わかってんのか？</div>
+    <div class="message-time">145: 2025/10/14(火) 17:56:31</div>
+  </div>
+</article>
+<article class="message" id="res146">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">遠見 隼人<br>63-3d6 &nbsp; &nbsp;<br>&lt;BCDice：遠見 隼人&gt;<br>Yggdrasill<wbr> : (63-3D6) → 63-4[1,1,2<wbr>] → 59<br><br>わかってんのか？？？？？</div>
+    <div class="message-time">146: 2025/10/14(火) 17:57:20</div>
+  </div>
+</article>
+<article class="message" id="res147">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ！！碇くんってイカロスで蠟の翼ってことだったの！？！？！？？！？！？！？？！？？？？？</div>
+    <div class="message-time">147: 2025/10/14(火) 17:59:04</div>
+  </div>
+</article>
+<article class="message" id="res148">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res137">&gt;&gt; 137</a> <br>草</div>
+    <div class="message-time">148: 2025/10/14(火) 18:05:18</div>
+  </div>
+</article>
+<article class="message" id="res149">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ハチドリの様子がよくわかったのが良かった</div>
+    <div class="message-time">149: 2025/10/14(火) 18:23:28</div>
+  </div>
+</article>
+<article class="message" id="res150">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">LUNA隊話題に出しやすくなる</div>
+    <div class="message-time">150: 2025/10/14(火) 18:23:44</div>
+  </div>
+</article>
+<article class="message" id="res151">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ラスターといっつも戦ってそう</div>
+    <div class="message-time">151: 2025/10/14(火) 18:24:10</div>
+  </div>
+</article>
+<article class="message" id="res152">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">会場 &nbsp; &nbsp; &nbsp; &nbsp; <br>ハクラト<br>精神異常ってguki見てから宣言変えられる？</div>
+    <div class="message-time">152: 2025/10/14(火) 18:44:37</div>
+  </div>
+</article>
+<article class="message" id="res153">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">変えられません</div>
+    <div class="message-time">153: 2025/10/14(火) 18:44:42</div>
+  </div>
+</article>
+<article class="message" id="res154">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">碇くんの名前候補に三郎がありました（ドルドルの実のMr3から）<br>でも兄弟設定無いので三郎は変だなと思ってやめました</div>
+    <div class="message-time">154: 2025/10/14(火) 18:52:22</div>
+  </div>
+</article>
+<article class="message" id="res155">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">別に一人っ子に三郎ってつけてもいいだろ</div>
+    <div class="message-time">155: 2025/10/14(火) 18:55:52</div>
+  </div>
+</article>
+<article class="message" id="res156">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いやまあ別にいいんですけどもね<br>しっくり来なかった</div>
+    <div class="message-time">156: 2025/10/14(火) 18:58:27</div>
+  </div>
+</article>
+<article class="message" id="res157">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">黄泉終わりました</div>
+    <div class="message-time">157: 2025/10/14(火) 19:05:26</div>
+  </div>
+</article>
+<article class="message" id="res158">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れさまでした</div>
+    <div class="message-time">158: 2025/10/14(火) 19:05:40</div>
+  </div>
+</article>
+<article class="message" id="res159">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ダニー、その気になればいつでも捻り潰せるから大目に見てやるよみたいな生物としての格を感じる</div>
+    <div class="message-time">159: 2025/10/14(火) 19:06:50</div>
+  </div>
+</article>
+<article class="message" id="res160">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">筋肉達磨、節馬とかオリオンみたいな「優しき巨人」路線かケージみたいな「暴力の塊」のどっちかに二極化しがちだから<br>ダニーみたいな中庸筋肉達磨は意外といなかった感ある</div>
+    <div class="message-time">160: 2025/10/14(火) 19:10:45</div>
+  </div>
+</article>
+<article class="message" id="res161">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">デニスみたいに口汚いキャラ使ってるときに楽しいのが<br>ボルテージ上がるごとにどんどん台詞から品性や知性が欠けて、<br>最終的には「SHIT」と「FUCK」しか言わなくなって会話が壊滅するところなんだけど<br>今回の小森にはそれに近しいものを感じた</div>
+    <div class="message-time">161: 2025/10/14(火) 19:16:20</div>
+  </div>
+</article>
+<article class="message" id="res162">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あとハクラトが幼女だった</div>
+    <div class="message-time">162: 2025/10/14(火) 19:17:19</div>
+  </div>
+</article>
+<article class="message" id="res163">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">幼女</div>
+    <div class="message-time">163: 2025/10/14(火) 19:17:28</div>
+  </div>
+</article>
+<article class="message" id="res164">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">会場 &nbsp; &nbsp; &nbsp; &nbsp; <br>ハクラト<br>「絶対俺様のこと馬鹿にしたぞ！！！！」＠<br>会場 &nbsp; &nbsp; &nbsp; &nbsp; <br>小森朋典<br>「したらなんなんだよ」<br>会場 &nbsp; &nbsp; &nbsp; &nbsp; <br>ハクラト<br>「怒る！」<br>会場 &nbsp; &nbsp; &nbsp; &nbsp; <br>ハクラト<br>「ムキーッ！」＠<br>会場 &nbsp; &nbsp; &nbsp; &nbsp; <br>小森朋典<br>「そう」<br>会場 &nbsp; &nbsp; &nbsp; &nbsp; <br>ハクラト<br>「うん！」<br>会場 &nbsp; &nbsp; &nbsp; &nbsp; <br>ハクラト<br>「じゃあ行こうぜ！」＠<br>会場 &nbsp; &nbsp; &nbsp; &nbsp; <br>ダニエル・スプリガン<br>「おー！」＠<br>会場 &nbsp; &nbsp; &nbsp; &nbsp; <br>小森朋典<br>「なんだこいつ」</div>
+    <div class="message-time">164: 2025/10/14(火) 19:21:15</div>
+  </div>
+</article>
+<article class="message" id="res165">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">幼女</div>
+    <div class="message-time">165: 2025/10/14(火) 19:21:25</div>
+  </div>
+</article>
+<article class="message" id="res166">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">自分をバカにされたって怒りが「バカにされたらどうなるの？」という質問への回答で塗りつぶされてんだよな</div>
+    <div class="message-time">166: 2025/10/14(火) 19:22:59</div>
+  </div>
+</article>
+<article class="message" id="res167">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちょうちょに気を取られて本題を忘れる幼女</div>
+    <div class="message-time">167: 2025/10/14(火) 19:23:46</div>
+  </div>
+</article>
+<article class="message" id="res168">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">小森君ハクラトの威圧にビビらなかったけどクイーンが横に居たらどこまで虚勢貼れるのかな</div>
+    <div class="message-time">168: 2025/10/14(火) 19:28:58</div>
+  </div>
+</article>
+<article class="message" id="res169">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ハクラトのは実際の威圧感というよりギャグ補正だけどクイーンのは【そういう異能】だからなぁ</div>
+    <div class="message-time">169: 2025/10/14(火) 19:29:48</div>
+  </div>
+</article>
+<article class="message" id="res170">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">自分最強張ってますよPC、クイーンが現れた時にどうするのか考えないといけない</div>
+    <div class="message-time">170: 2025/10/14(火) 19:30:50</div>
+  </div>
+</article>
+<article class="message" id="res171">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ビビってたわけではないけど、自壊覚悟で特攻してくるデニス相手に「何アイツ……」ってドン引きしてたし<br>クイーン相手ならわりと素直にビビりそうだけどな</div>
+    <div class="message-time">171: 2025/10/14(火) 19:32:30</div>
+  </div>
+</article>
+<article class="message" id="res172">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res170">&gt;&gt; 170</a> <br>でもケージはクイーン相手でも殴りかかるでしょ？</div>
+    <div class="message-time">172: 2025/10/14(火) 19:32:49</div>
+  </div>
+</article>
+<article class="message" id="res173">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい</div>
+    <div class="message-time">173: 2025/10/14(火) 19:33:50</div>
+  </div>
+</article>
+<article class="message" id="res174">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">相手がボス並だとわかっていても気合いで殴りに行きます</div>
+    <div class="message-time">174: 2025/10/14(火) 19:34:10</div>
+  </div>
+</article>
+<article class="message" id="res175">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーンのが強かろうがなんだろうがジョンドゥよりでっけぇ背中を見たことがないからな</div>
+    <div class="message-time">175: 2025/10/14(火) 19:35:02</div>
+  </div>
+</article>
+<article class="message" id="res176">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">やはりココモリの群れが島中を埋め尽くすエイプリルイベントが必要だな</div>
+    <div class="message-time">176: 2025/10/14(火) 19:47:57</div>
+  </div>
+</article><div class="elapsed"><span>18日 2時間 20分 経過</span></div>
+<article class="message" id="res177">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">原作の関谷って28歳なんだ…串中は若者感覚で動かしてたから20ちょいくらいだけど</div>
+    <div class="message-time">177: 2025/11/1(土) 22:08:40</div>
+  </div>
+</article>
+<article class="message" id="res178">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[灯火の翼_log_全タブ_2025-11-02_0045.html] </del></div>
+    <div class="message-time">178: 2025/11/2(日) 0:48:22</div>
+  </div>
+</article><div class="elapsed"><span>20時間 3分 経過</span></div>
+<article class="message" id="res179">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">二人用のボス調整のこと全然考えてなかった</div>
+    <div class="message-time">179: 2025/11/2(日) 20:51:44</div>
+  </div>
+</article>
+<article class="message" id="res180">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">180: 2025/11/2(日) 20:51:46</div>
+  </div>
+</article>
+<article class="message" id="res181">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とりあえずHPを-10したけど…</div>
+    <div class="message-time">181: 2025/11/2(日) 20:51:58</div>
+  </div>
+</article>
+<article class="message" id="res182">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">碇はHP据え置きで防御力0スタートにすればいいかな</div>
+    <div class="message-time">182: 2025/11/2(日) 20:53:44</div>
+  </div>
+</article>
+<article class="message" id="res183">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とるとるいるなら別にどうとでもなると思う</div>
+    <div class="message-time">183: 2025/11/2(日) 20:54:57</div>
+  </div>
+</article>
+<article class="message" id="res184">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">碇の防御-2、SPE【リテイク】削除<br>赤羽の【激励】仕様タイミングを碇のHP50以下からHP30以下に調整<br>を想定</div>
+    <div class="message-time">184: 2025/11/2(日) 20:55:09</div>
+  </div>
+</article>
+<article class="message" id="res185">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ割と簡単にやられたので調整も軽くでいいのかなと思ってます</div>
+    <div class="message-time">185: 2025/11/2(日) 20:55:30</div>
+  </div>
+</article>
+<article class="message" id="res186">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とりあえず碇の防御-2とSPE削除だけにしておくかな…HPは据え置きで</div>
+    <div class="message-time">186: 2025/11/2(日) 20:56:05</div>
+  </div>
+</article>
+<article class="message" id="res187">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">蝋燭男<br>【■■■う■火】<br>ロウソクを創り出すクリエイター能力。<br>蝋を変形させる他、ロウソクの炎を増幅させることもできる。<br><br>最大HP:40 最大PP:21 暴走率:50%<br>攻撃力:3D6+2 防御力:0 精神抵抗:4 行動値:5<br>SS:11+1D6 命中:12(+3)+1D<wbr>6 回避:9+1D6<br>発動スペック:1(+4) 能力精度:9 活性タイプ:増強型<br>SPE:無し カルマ:【不幸】<br>特殊武装:【増強アンプル】【強化シナプス】<br>筋:1 耐:4 知:12 精:8 器:10 敏:3 運:2<br>力:0 威:1 観:7 察:3 知:11 技:8<br>隠:5 俊:2 話:10 読:5 閃:2 幸:1<br><br>ボス特性<br>【HP追加】【安定状態】【命中＋３】【発動スペック＋２】【発動スペック＋２】<br><br>オリジナル特性<br>【多勢の無■】…クリーチャーまたはクリーチャーを創造しているユニットがこのNPCの戦闘に参加する場合、<br>　　　　　　　　このNPCの命中・回避は戦闘するユニットに関わるクリーチャー１体につき＋２される<br>　　　　　　　（クリーチャー２体を創造しているPCと戦闘する場合＋４される）<br>【強■薬■】…特殊武装【増強アンプル】【強化シナプス】による反動ダメージが無くなる<br>【■■用】…このNPCは応用技を３つ以上用いてチェイン発動することができない<br>【■なる■勢】…応用技による状態異常の解除判定に失敗した際、以降同じ応用技に対する解除判定に＋１０の補正を加える<br>　　　　　　　　この効果はバトル中重複・継続する<br><br>技一覧<br>【蝋球打】S1/PP1　3D6+2単体攻撃（攻撃）<br>【蝋牙棒】S2/PP4　3D6+2全体攻撃（攻撃＋オールレンジ）<br>【散火渦】S3/PP6　全体継続3ダメージ付与 解除判定【耐久】（付加＋継続＋オールレンジ）<br>【業火炎】S3/PP3　攻撃力+6（付加＋攻撃強化＋攻撃強化）<br>【蝋下床】S4/PP5　回避-9（付加＋回避減衰＋回避減衰＋回避減衰）<br>【蝋下禁走】S4/PP6　命中+1D6 回避-3 テリトリー（付加＋命中追加＋回避減衰＋テリトリー）</div>
+    <div class="message-time">187: 2025/11/2(日) 20:57:58</div>
+  </div>
+</article>
+<article class="message" id="res188">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">現状知らん連中の深堀が成されている</div>
+    <div class="message-time">188: 2025/11/2(日) 21:13:17</div>
+  </div>
+</article>
+<article class="message" id="res189">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">正直この考え方はなるほどな～ってなってる</div>
+    <div class="message-time">189: 2025/11/2(日) 21:25:45</div>
+  </div>
+</article>
+<article class="message" id="res190">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">YDF隊員がパーティにいると串中が普通に捕まるんだなあって思ってる<br>どうしよ（ノープラン）</div>
+    <div class="message-time">190: 2025/11/2(日) 22:05:36</div>
+  </div>
+</article>
+<article class="message" id="res191">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあなんとかなるやろ</div>
+    <div class="message-time">191: 2025/11/2(日) 22:05:43</div>
+  </div>
+</article>
+<article class="message" id="res192">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そりゃ捕まえろこんなヤツ過ぎるもんな……</div>
+    <div class="message-time">192: 2025/11/2(日) 22:06:24</div>
+  </div>
+</article>
+<article class="message" id="res193">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それはそう</div>
+    <div class="message-time">193: 2025/11/2(日) 22:06:52</div>
+  </div>
+</article>
+<article class="message" id="res194">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ話の途中だからとりあえずそこまで話させてくれへんか……</div>
+    <div class="message-time">194: 2025/11/2(日) 22:07:23</div>
+  </div>
+</article>
+<article class="message" id="res195">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＞何もしてねえ<br>カツアゲ自供してるし証言もあるんだよなぁ</div>
+    <div class="message-time">195: 2025/11/2(日) 22:07:59</div>
+  </div>
+</article>
+<article class="message" id="res196">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">闘争の果ては依頼内容がそもそも犯罪だからYDF蹴れるけど<br>このシナリオは依頼人が犯罪者ってだけで依頼そのものはそれなりに筋の通った護衛だからなぁ</div>
+    <div class="message-time">196: 2025/11/2(日) 22:09:11</div>
+  </div>
+</article>
+<article class="message" id="res197">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういえば立ちふさがった善意の一般人ぶん殴ってるってことはつまりこれって強盗傷害？</div>
+    <div class="message-time">197: 2025/11/2(日) 22:09:53</div>
+  </div>
+</article>
+<article class="message" id="res198">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">こいつ取り繕う気配すら見えねえんだもんな</div>
+    <div class="message-time">198: 2025/11/2(日) 22:10:18</div>
+  </div>
+</article>
+<article class="message" id="res199">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">シナリオの流れ考えるとYDF来る前に変な人が突っ込んでくるからそこは崩れ無さそうで良かった<br>そっからぶっちゃけ串中の必要性０になるから署にぶち込んでもいいと思うし</div>
+    <div class="message-time">199: 2025/11/2(日) 22:11:39</div>
+  </div>
+</article>
+<article class="message" id="res200">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">200: 2025/11/2(日) 22:11:50</div>
+  </div>
+</article>
+<article class="message" id="res201">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">日本の刑法は盗みに対しては妙に厳しいのでみんな気をつけましょう（強盗致傷は６年以上の拘禁または無期）</div>
+    <div class="message-time">201: 2025/11/2(日) 22:12:30</div>
+  </div>
+</article>
+<article class="message" id="res202">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ギろうってんなら背骨バキ折ってもうんたらかんたら</div>
+    <div class="message-time">202: 2025/11/2(日) 22:13:21</div>
+  </div>
+</article>
+<article class="message" id="res203">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＞シナリオが終わる可能性があるじゃん<br>やれやれ…GMが止めないという状況を鑑みればどうなるかわかるでしょう<br>何も考えてないんですよGM</div>
+    <div class="message-time">203: 2025/11/2(日) 22:13:55</div>
+  </div>
+</article>
+<article class="message" id="res204">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">GMに聞いてきたら返答できるけどそうでなければわざわざ突っ込む必要は無いアレですね</div>
+    <div class="message-time">204: 2025/11/2(日) 22:14:50</div>
+  </div>
+</article>
+<article class="message" id="res205">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">きなくさい依頼に公権力持ち込むと藪蛇になりがち</div>
+    <div class="message-time">205: 2025/11/2(日) 22:15:33</div>
+  </div>
+</article>
+<article class="message" id="res206">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">中ボス自体は蝋燭男突っ込めばなんとかなるけどそっからどうするかなあ…くらいに今考えてる</div>
+    <div class="message-time">206: 2025/11/2(日) 22:16:06</div>
+  </div>
+</article>
+<article class="message" id="res207">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">逆に言えばそれ以外考えず流れに身を任せてる</div>
+    <div class="message-time">207: 2025/11/2(日) 22:16:50</div>
+  </div>
+</article>
+<article class="message" id="res208">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">蝋燭男突っ込んでそいつが連れ去られ～までは普通にそのままで進行しそうだけどそっからどうなるかは本当に分かんないな</div>
+    <div class="message-time">208: 2025/11/2(日) 22:16:57</div>
+  </div>
+</article>
+<article class="message" id="res209">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあいいやコイツ捕まってもYDF経由で仕事手伝ってもらうルートにしよ</div>
+    <div class="message-time">209: 2025/11/2(日) 22:21:12</div>
+  </div>
+</article>
+<article class="message" id="res210">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">依頼なのに依頼人を盤面から除去しても問題ない卓って新しいなこれ</div>
+    <div class="message-time">210: 2025/11/2(日) 22:22:14</div>
+  </div>
+</article>
+<article class="message" id="res211">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">うーん…串中は自分が悪いとカスで一貫してたけどTさんのRPを無視してしまう形になってしまったな…<br>戦闘後なんとかフォローしたい</div>
+    <div class="message-time">211: 2025/11/2(日) 22:48:42</div>
+  </div>
+</article>
+<article class="message" id="res212">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">会場見れてないけどターゲットがムショにぶち込まれたら蝋燭マンにカス倒させるプロモーション完遂できなくない？</div>
+    <div class="message-time">212: 2025/11/2(日) 23:02:14</div>
+  </div>
+</article>
+<article class="message" id="res213">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">レッドブルさんどうすんだろ</div>
+    <div class="message-time">213: 2025/11/2(日) 23:02:40</div>
+  </div>
+</article>
+<article class="message" id="res214">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">別にムショごと吹っ飛ばせばいいのでは</div>
+    <div class="message-time">214: 2025/11/2(日) 23:02:44</div>
+  </div>
+</article>
+<article class="message" id="res215">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">よ～しお前達ぶっ倒してYDF攻め込ませちゃうぞ～^^</div>
+    <div class="message-time">215: 2025/11/2(日) 23:03:08</div>
+  </div>
+</article>
+<article class="message" id="res216">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">実験体がYDFに捕まっても知らんし…</div>
+    <div class="message-time">216: 2025/11/2(日) 23:03:23</div>
+  </div>
+</article>
+<article class="message" id="res217">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">公権力が制裁与えてんのに私刑しに公権力に喧嘩売るな</div>
+    <div class="message-time">217: 2025/11/2(日) 23:04:02</div>
+  </div>
+</article>
+<article class="message" id="res218">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">途中で捕まって復讐完遂できませんでした、にしたって道中でYDF何人ぶち殺しましたってデータが取れればそれはそれで参照の価値がある</div>
+    <div class="message-time">218: 2025/11/2(日) 23:04:13</div>
+  </div>
+</article>
+<article class="message" id="res219">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんなら串中なんかよりずっと価値があるよ</div>
+    <div class="message-time">219: 2025/11/2(日) 23:04:27</div>
+  </div>
+</article>
+<article class="message" id="res220">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">最初からその辺のモヒカン使ってYDF襲わせてろ</div>
+    <div class="message-time">220: 2025/11/2(日) 23:06:43</div>
+  </div>
+</article>
+<article class="message" id="res221">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「僕は弱い能力者を救いたいんだ！」って思いがあればまだ行動に説得力出るんだけど、弱い能力者全員自分の薬の功績を示すための駒としか考えてないので<br>マジで行動に対して何考えてんのお前ってなっちゃう</div>
+    <div class="message-time">221: 2025/11/2(日) 23:07:53</div>
+  </div>
+</article>
+<article class="message" id="res222">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ最初から頭足りてるのに頭足りてない人と言う事で一つ……</div>
+    <div class="message-time">222: 2025/11/2(日) 23:12:53</div>
+  </div>
+</article>
+<article class="message" id="res223">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">トルトルが対黒幕の姿勢取ってくれてるから串中が捕まっても問題ないな！と思うGM</div>
+    <div class="message-time">223: 2025/11/2(日) 23:35:10</div>
+  </div>
+</article>
+<article class="message" id="res224">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">へぇ…こんな流れになるんだ…（他人事）</div>
+    <div class="message-time">224: 2025/11/3(月) 0:05:15</div>
+  </div>
+</article>
+<article class="message" id="res225">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">追跡戦かぁ</div>
+    <div class="message-time">225: 2025/11/3(月) 0:05:54</div>
+  </div>
+</article>
+<article class="message" id="res226">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[灯火の翼_log_全タブ_2025-11-03_0053.html] </del></div>
+    <div class="message-time">226: 2025/11/3(月) 0:57:00</div>
+  </div>
+</article><div class="elapsed"><span>2日 23時間 23分 経過</span></div>
+<article class="message" id="res227">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202509e1523746&amp;i=i89dc7738">📎 灯火の翼_log_全タブ_2025-11-06_0019.html</a> <span class="filesize">[261.5 KB]</span> を追加しました。</div>
+    <div class="message-time">227: 2025/11/6(木) 0:20:10</div>
+  </div>
+</article><div class="elapsed"><span>1日 22時間 14分 経過</span></div>
+<article class="message" id="res228">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＞ちょっとどうでもいいことを言うと、赤羽のビジュアルが赤髪＋白衣でカゲさんの好みっぽくなったなって思ってます<br><br>はい、ドストライクです</div>
+    <div class="message-time">228: 2025/11/7(金) 22:35:03</div>
+  </div>
+</article>
+<article class="message" id="res229">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">名前なんでこんな赤馬零児に似てるんだ</div>
+    <div class="message-time">229: 2025/11/7(金) 22:43:39</div>
+  </div>
+</article>
+<article class="message" id="res230">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202509e1523746&amp;i=i9dd323b3" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202509e1523746&amp;i=i9dd323b3" width="230" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202509e1523746&amp;i=i9dd323b3">📎 カゲT【灯火の翼】.jpg</a> <span class="filesize">[158.4 KB, 949x671px]</span> を追加しました。</div>
+    <div class="message-time">230: 2025/11/7(金) 22:49:24</div>
+  </div>
+</article>
+<article class="message" id="res231">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">内藤の過去資料って朝まで忍ブロ会議以外にないの？</div>
+    <div class="message-time">231: 2025/11/7(金) 22:51:54</div>
+  </div>
+</article>
+<article class="message" id="res232">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういえば引退チャンスを2回回避したので引退は保留します</div>
+    <div class="message-time">232: 2025/11/7(金) 22:52:30</div>
+  </div>
+</article>
+<article class="message" id="res233">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">漠然としか考えてないから、聞きたい部分を教えてくれればそれに答えます</div>
+    <div class="message-time">233: 2025/11/7(金) 22:54:14</div>
+  </div>
+</article>
+<article class="message" id="res234">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">じゃあ内藤はなぜこんな人の死に怯えるのですか？</div>
+    <div class="message-time">234: 2025/11/7(金) 22:54:31</div>
+  </div>
+</article>
+<article class="message" id="res235">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">赤馬零児に似ているのはただの偶然です<br>レッドブルなので赤と牛の要素を入れたかっただけ…</div>
+    <div class="message-time">235: 2025/11/7(金) 22:55:17</div>
+  </div>
+</article>
+<article class="message" id="res236">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">じゃあ内藤はなぜこんな人の死に怯えるのですか？<br><br>過去の事件で自分も仲間も死にかけたから</div>
+    <div class="message-time">236: 2025/11/7(金) 22:56:15</div>
+  </div>
+</article>
+<article class="message" id="res237">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい</div>
+    <div class="message-time">237: 2025/11/7(金) 22:56:34</div>
+  </div>
+</article>
+<article class="message" id="res238">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">気を悪くしないでほしいんだけど、とるとるのラストアタックの演出が事件の時に似ていてトラウマの核にガチっとハマっちゃったんだよね</div>
+    <div class="message-time">238: 2025/11/7(金) 22:58:21</div>
+  </div>
+</article>
+<article class="message" id="res239">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ベヒんモスをボコったラスターを思い出したってこと？</div>
+    <div class="message-time">239: 2025/11/7(金) 22:59:48</div>
+  </div>
+</article>
+<article class="message" id="res240">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">闇を入れたくて入れたわけじゃなくてこれは笑えないやつや！ってなったから</div>
+    <div class="message-time">240: 2025/11/7(金) 22:59:59</div>
+  </div>
+</article>
+<article class="message" id="res241">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあカオス・ソルジャーもオッドアイズレイジングドラゴンも攻撃力同じだからね、仕方ないね</div>
+    <div class="message-time">241: 2025/11/7(金) 23:00:59</div>
+  </div>
+</article>
+<article class="message" id="res242">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ん～～たぶんべひんもすが出てきて自分がやられた時をフラッシュバックしたのかも</div>
+    <div class="message-time">242: 2025/11/7(金) 23:01:48</div>
+  </div>
+</article>
+<article class="message" id="res243">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とはいえそのあととるとるは普通だったし、もう思い出したくないので吹っ切って立ち直りました</div>
+    <div class="message-time">243: 2025/11/7(金) 23:06:56</div>
+  </div>
+</article>
+<article class="message" id="res244">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202509e1523746&amp;i=i715b1f24">📎 カゲT【灯火の翼】.zip</a> <span class="filesize">[2.0 MB]</span> を追加しました。</div>
+    <div class="message-time">244: 2025/11/7(金) 23:07:04</div>
+  </div>
+</article>
+<article class="message" id="res245">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でけた</div>
+    <div class="message-time">245: 2025/11/7(金) 23:07:12</div>
+  </div>
+</article>
+<article class="message" id="res246">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">素早いたくあん</div>
+    <div class="message-time">246: 2025/11/7(金) 23:07:28</div>
+  </div>
+</article>
+<article class="message" id="res247">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">レベル2です</div>
+    <div class="message-time">247: 2025/11/7(金) 23:07:33</div>
+  </div>
+</article>
+<article class="message" id="res248">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、別に気を悪くしてないです<br>ただちんちん卓の内藤の描写とか、まあ気になったからね</div>
+    <div class="message-time">248: 2025/11/7(金) 23:08:27</div>
+  </div>
+</article>
+<article class="message" id="res249">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんかあったっけ</div>
+    <div class="message-time">249: 2025/11/7(金) 23:09:02</div>
+  </div>
+</article>
+<article class="message" id="res250">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">つか申くんってマフツさんと名前読み同じでウケる</div>
+    <div class="message-time">250: 2025/11/7(金) 23:09:47</div>
+  </div>
+</article>
+<article class="message" id="res251">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おじさんが死にかけた時必死で救急呼んでたでしょ</div>
+    <div class="message-time">251: 2025/11/7(金) 23:10:13</div>
+  </div>
+</article>
+<article class="message" id="res252">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あーーー</div>
+    <div class="message-time">252: 2025/11/7(金) 23:11:10</div>
+  </div>
+</article>
+<article class="message" id="res253">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">死は怖いし笑えん状況だし</div>
+    <div class="message-time">253: 2025/11/7(金) 23:12:04</div>
+  </div>
+</article>
+<article class="message" id="res254">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">一般人でも死は怖いし笑えん状況だけど内藤はなんか人間の死に対してPTSDがあるのかなと思うよ</div>
+    <div class="message-time">254: 2025/11/7(金) 23:13:20</div>
+  </div>
+</article>
+<article class="message" id="res255">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">PTSDで全部説明つくわ、出てこなかったｗｗｗ</div>
+    <div class="message-time">255: 2025/11/7(金) 23:13:47</div>
+  </div>
+</article>
+<article class="message" id="res256">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">PTSDかつ現実逃避してる人です、内藤くんは</div>
+    <div class="message-time">256: 2025/11/7(金) 23:17:51</div>
+  </div>
+</article>
+<article class="message" id="res257">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ良いんじゃない？と思いますとるとるは</div>
+    <div class="message-time">257: 2025/11/7(金) 23:18:31</div>
+  </div>
+</article>
+<article class="message" id="res258">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">2人用調整、HP-10ってことは従来のステータスだと赤羽のHPが1残ってたのか<br>downとれなかったら普通に全滅してた気がするわ</div>
+    <div class="message-time">258: 2025/11/7(金) 23:19:14</div>
+  </div>
+</article>
+<article class="message" id="res259">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">戦犯です<br>ぶっ叩いてください</div>
+    <div class="message-time">259: 2025/11/7(金) 23:20:06</div>
+  </div>
+</article>
+<article class="message" id="res260">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ僕も忖度貰ってはいたから………</div>
+    <div class="message-time">260: 2025/11/7(金) 23:20:19</div>
+  </div>
+</article>
+<article class="message" id="res261">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">人数少ない時のとるとるのドクトリンは攻撃上げるよりも安定したビートダウンを目指した方がいいのかな……要調整か</div>
+    <div class="message-time">261: 2025/11/7(金) 23:22:14</div>
+  </div>
+</article><div class="elapsed"><span>7時間 6分 経過</span></div>
+<article class="message" id="res262">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">（正直どこまで調整すればいいかわからなかったから、HPはそのままに碇の防御力とSPEリテイク削除しただけで終わらせてました）</div>
+    <div class="message-time">262: 2025/11/8(土) 6:28:52</div>
+  </div>
+</article>
+<article class="message" id="res263">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">赤羽は特性との都合上、半端に生き残ると暴走90いくかもねなHPにしてたので</div>
+    <div class="message-time">263: 2025/11/8(土) 6:29:43</div>
+  </div>
+</article><div class="elapsed"><span>13時間 14分 経過</span></div>
+<article class="message" id="res264">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">グレネードで自爆する内藤みて思いついたコンボなんだけど<br>ロケラン手榴弾は攻撃バフを受けないだけじゃなくてデバフも受けないから減衰【攻】をチェインしながら撃てばra70ケアしながら普通に攻撃できるんやな</div>
+    <div class="message-time">264: 2025/11/8(土) 19:44:26</div>
+  </div>
+</article>
+<article class="message" id="res265">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい</div>
+    <div class="message-time">265: 2025/11/8(土) 19:45:22</div>
+  </div>
+</article>
+<article class="message" id="res266">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">蟹以降に解禁されたコンボだけど</div>
+    <div class="message-time">266: 2025/11/8(土) 19:45:30</div>
+  </div>
+</article><div class="elapsed"><span>5日 2時間 0分 経過</span></div>
+<article class="message" id="res267">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202509e1523746&amp;i=i7c640882" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202509e1523746&amp;i=i7c640882" width="254" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202509e1523746&amp;i=i7c640882">📎 スクリーンショット 2025-11-13 214601.jpg</a> <span class="filesize">[68.0 KB, 704x449px]</span> を追加しました。</div>
+    <div class="message-time">267: 2025/11/13(木) 21:46:22</div>
+  </div>
+</article>
+<article class="message" id="res268">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">顔アイコンが抜けてます（なんかついてるのはスクショ時のミスです）</div>
+    <div class="message-time">268: 2025/11/13(木) 21:46:41</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>転生TRPG開発室</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>転生TRPG開発室</h1>
+    <div class="meta">Fresh Meeting archive / room id: 2022071cd26461 / ended</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=2022071cd26461"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+	<a href="https://www.freshmeeting.com/forumopen.php?f=2022071cd26461"><img src="https://www.freshmeeting.com/img/reopen.gif" alt="ミーティングを再開する"><span>ミーティングを再開する</span></a>
+</span></div>
+  </div>
+</header>
+<main>
+
+<div class="attachment-warning">
+  このログには Fresh Meeting 上の添付ファイル参照が 2 件あります。
+  HTML本文とは別に添付ファイル本体の保全が必要です。
+</div>
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=2022071cd26461&amp;i=i2cbfce01">📎 Charactersheet ver0.01.xls</a> <span class="filesize">[11.5 KB]</span> を追加しました。</div>
+    <div class="message-time">1: 2022/7/17(日) 0:45:32</div>
+  </div>
+</article>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">キャラクターシート（仮バージョン）を作りました</div>
+    <div class="message-time">2: 2022/7/17(日) 0:46:00</div>
+  </div>
+</article>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">基礎ポイントには１～５の数字を１つずつ割り振って、<br>技能ポイントは合計が基礎ポイントの数字になるように割り振ります</div>
+    <div class="message-time">3: 2022/7/17(日) 0:49:13</div>
+  </div>
+</article>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">基礎ポイントと技能ポイントを足した数＋１d６が判定値になります</div>
+    <div class="message-time">4: 2022/7/17(日) 0:50:04</div>
+  </div>
+</article>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">できてるー！</div>
+    <div class="message-time">5: 2022/7/17(日) 0:50:15</div>
+  </div>
+</article>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ダイスを振って１～３が失敗、４～６が成功で、成功数が目標値を超えると判定成功です。</div>
+    <div class="message-time">6: 2022/7/17(日) 0:50:59</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">111、222、333など判定値がゾロ目になってしまうとファンブルで、判定値からファンブル数✕1d3が引かれます。<br>444、555、666がが出るとクリティカルで、判定値にクリティカル数✕1d6を足すことができます。</div>
+    <div class="message-time">7: 2022/7/17(日) 0:53:02</div>
+  </div>
+</article>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ここまで考えた</div>
+    <div class="message-time">8: 2022/7/17(日) 0:53:09</div>
+  </div>
+</article>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そして【前世の記憶】を取り戻すと、その【取り戻した世代】が持っていた【5】の基礎ポイントを<br>継承することができるようになる……と</div>
+    <div class="message-time">9: 2022/7/17(日) 0:54:45</div>
+  </div>
+</article>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そんな……そんな感じ</div>
+    <div class="message-time">10: 2022/7/17(日) 0:55:24</div>
+  </div>
+</article>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ダイスジャラジャラ系だ</div>
+    <div class="message-time">11: 2022/7/17(日) 0:55:44</div>
+  </div>
+</article>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちょっと多すぎる気はしないでもない</div>
+    <div class="message-time">12: 2022/7/17(日) 0:57:00</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">試しにステ振りしてみて知性5の知識に５ぶち込んだらダイス11個だ</div>
+    <div class="message-time">13: 2022/7/17(日) 0:57:48</div>
+  </div>
+</article>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">これで前世の記憶も取り戻したら16個！？</div>
+    <div class="message-time">14: 2022/7/17(日) 0:58:01</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうなります</div>
+    <div class="message-time">15: 2022/7/17(日) 0:59:17</div>
+  </div>
+</article>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、いやここにはかかなかったけど、転生後は一度5をいれた基礎パラメータには5を入れられなくなります</div>
+    <div class="message-time">16: 2022/7/17(日) 1:00:05</div>
+  </div>
+</article>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんで基礎パラと継承が両方5になることはないですね</div>
+    <div class="message-time">17: 2022/7/17(日) 1:00:35</div>
+  </div>
+</article>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なるほどね</div>
+    <div class="message-time">18: 2022/7/17(日) 1:01:54</div>
+  </div>
+</article>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">強運と悪運の違いが自分でもよくわからないので【幸運】カテゴリで何か良い技能を思いついた人は教えてください</div>
+    <div class="message-time">19: 2022/7/17(日) 1:06:11</div>
+  </div>
+</article>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">良縁：人との巡り会わせがよくなる。</div>
+    <div class="message-time">20: 2022/7/17(日) 1:08:30</div>
+  </div>
+</article>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あーなるほどなー　よいかも</div>
+    <div class="message-time">21: 2022/7/17(日) 1:08:59</div>
+  </div>
+</article>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">探索で通行人とかいますか？ってよく聞かれるから思いついた</div>
+    <div class="message-time">22: 2022/7/17(日) 1:09:28</div>
+  </div>
+</article>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">魅力とかでも良いかもしれないな</div>
+    <div class="message-time">23: 2022/7/17(日) 1:10:09</div>
+  </div>
+</article>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ダイス数は多いけど最大の１４d振っても期待値は７前後だから、目標値にもよるけど意外とシビアな気はするな</div>
+    <div class="message-time">24: 2022/7/17(日) 1:18:11</div>
+  </div>
+</article>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="http://www.bekkoame.ne.jp/ro/kami/thinking/MKrpg.html" target="_blank">http:<wbr>/<wbr>/<wbr>www.<wbr>bekkoame.<wbr>ne.<wbr>jp/<wbr>ro/<wbr>kami/<wbr>thinking/<wbr>MKrpg.<wbr>html</a><br>とりあえず私が一時期いろいろ作ってた頃に参考にしたページ</div>
+    <div class="message-time">25: 2022/7/17(日) 1:19:22</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">さんくす</div>
+    <div class="message-time">26: 2022/7/17(日) 1:21:42</div>
+  </div>
+</article>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あと設定するのがスキルと失敗した時に失うリソースが何かってことと<br>記憶を継承した時の副作用を設定することだな</div>
+    <div class="message-time">27: 2022/7/17(日) 1:26:48</div>
+  </div>
+</article>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今年中のテストプレイをめざそう</div>
+    <div class="message-time">28: 2022/7/17(日) 1:38:54</div>
+  </div>
+</article>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">できてるー！！！！</div>
+    <div class="message-time">29: 2022/7/17(日) 1:46:50</div>
+  </div>
+</article>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">近いうちにキャラシ使った仮キャラはつくると思います</div>
+    <div class="message-time">30: 2022/7/17(日) 1:47:54</div>
+  </div>
+</article>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">キャラシ自体が仮なのでしっかりとは作りませんが</div>
+    <div class="message-time">31: 2022/7/17(日) 1:48:08</div>
+  </div>
+</article>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">これ判定値の＋１いらないな</div>
+    <div class="message-time">32: 2022/7/17(日) 2:05:34</div>
+  </div>
+</article>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">判定値０にならないように＋１したがそもそも０にはならんわ</div>
+    <div class="message-time">33: 2022/7/17(日) 2:06:00</div>
+  </div>
+</article>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それはそう</div>
+    <div class="message-time">34: 2022/7/17(日) 2:06:20</div>
+  </div>
+</article>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">無駄にややこしくなるんで１は消します</div>
+    <div class="message-time">35: 2022/7/17(日) 2:06:48</div>
+  </div>
+</article>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">基礎があるからね</div>
+    <div class="message-time">36: 2022/7/17(日) 2:07:03</div>
+  </div>
+</article>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">わりと適当に作ったけど「得意なジャンルは得意、苦手なジャンルは苦手」で個性が出てなかなか悪くないバランスな気はしている</div>
+    <div class="message-time">37: 2022/7/17(日) 2:08:04</div>
+  </div>
+</article>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">プレイ人数何人ぐらいをボリュームゾーンに据えてるんだろう</div>
+    <div class="message-time">38: 2022/7/17(日) 2:08:37</div>
+  </div>
+</article>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">プレイ人数は２で固定</div>
+    <div class="message-time">39: 2022/7/17(日) 2:09:02</div>
+  </div>
+</article>
+<article class="message" id="res40">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">２人だとむしろ得意不得意極端に出ない方が良い気もする</div>
+    <div class="message-time">40: 2022/7/17(日) 2:09:24</div>
+  </div>
+</article>
+<article class="message" id="res41">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ケースによって詰みかねないから遊覧型のＧＭが困るんじゃね？ってのが</div>
+    <div class="message-time">41: 2022/7/17(日) 2:10:03</div>
+  </div>
+</article>
+<article class="message" id="res42">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">システム的には終末紀行とかウタカゼに近いんで、詰みはしないと思うんですよね。<br>多分HPも作らないし</div>
+    <div class="message-time">42: 2022/7/17(日) 2:11:16</div>
+  </div>
+</article>
+<article class="message" id="res43">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なるほど</div>
+    <div class="message-time">43: 2022/7/17(日) 2:11:25</div>
+  </div>
+</article>
+<article class="message" id="res44">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">RPのためのスパイス要素かな……　あとはED分岐？</div>
+    <div class="message-time">44: 2022/7/17(日) 2:12:11</div>
+  </div>
+</article>
+<article class="message" id="res45">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">転生というテーマ上、あるていどバッドエンドになりやすいくらいがちょうどいいかなと思っている</div>
+    <div class="message-time">45: 2022/7/17(日) 2:12:56</div>
+  </div>
+</article>
+<article class="message" id="res46">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あーそうか、キャンペ前提だから「前世でうまくいかなかったから今度こそ」ぐらいのノリでも良いのね</div>
+    <div class="message-time">46: 2022/7/17(日) 2:13:35</div>
+  </div>
+</article>
+<article class="message" id="res47">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうですね</div>
+    <div class="message-time">47: 2022/7/17(日) 2:13:45</div>
+  </div>
+</article>
+<article class="message" id="res48">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=2022071cd26461&amp;i=idbeb3776" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=2022071cd26461&amp;i=idbeb3776" width="91" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=2022071cd26461&amp;i=idbeb3776">📎 輪廻転生.png</a> <span class="filesize">[2.4 KB, 226x411px]</span> を追加しました。</div>
+    <div class="message-time">48: 2022/7/17(日) 2:18:41</div>
+  </div>
+</article>
+<article class="message" id="res49">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それは幽体離脱や！</div>
+    <div class="message-time">49: 2022/7/17(日) 2:19:44</div>
+  </div>
+</article>
+<article class="message" id="res50">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">SAVOIAさんならどんなPCを作りますか？</div>
+    <div class="message-time">50: 2022/7/17(日) 2:20:34</div>
+  </div>
+</article>
+<article class="message" id="res51">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ、流石に作ってる本人に聞くのは<br>念願のプレイできる機会が来るまで言わせぬが花か……</div>
+    <div class="message-time">51: 2022/7/17(日) 2:21:17</div>
+  </div>
+</article>
+<article class="message" id="res52">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ最初は古代の章からだからな……ほぼ未開人状態から始まるから……</div>
+    <div class="message-time">52: 2022/7/17(日) 2:21:54</div>
+  </div>
+</article>
+<article class="message" id="res53">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">古代！？ウンババから始まるの！？</div>
+    <div class="message-time">53: 2022/7/17(日) 2:22:07</div>
+  </div>
+</article>
+<article class="message" id="res54">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そこまでではない</div>
+    <div class="message-time">54: 2022/7/17(日) 2:22:23</div>
+  </div>
+</article>
+<article class="message" id="res55">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">邪馬台国くらい？</div>
+    <div class="message-time">55: 2022/7/17(日) 2:22:46</div>
+  </div>
+</article>
+<article class="message" id="res56">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうね</div>
+    <div class="message-time">56: 2022/7/17(日) 2:22:50</div>
+  </div>
+</article>
+<article class="message" id="res57">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">邪馬台国の様子なんて誰も知らないのになんでこんな事言ったんだろう</div>
+    <div class="message-time">57: 2022/7/17(日) 2:23:15</div>
+  </div>
+</article>
+<article class="message" id="res58">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">地球ではなくて「地球によく似た世界」にして、ディティールは何となくでいいよという感じにしようと思ってます</div>
+    <div class="message-time">58: 2022/7/17(日) 2:23:52</div>
+  </div>
+</article>
+<article class="message" id="res59">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">火の鳥</div>
+    <div class="message-time">59: 2022/7/17(日) 2:39:46</div>
+  </div>
+</article><div class="elapsed"><span>9時間 3分 経過</span></div>
+<article class="message" id="res60">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">タイトルは【メモリインカネーション】になりそうですがもっとカッコいいのがあったら募集します</div>
+    <div class="message-time">60: 2022/7/17(日) 11:42:47</div>
+  </div>
+</article><div class="elapsed"><span>9時間 41分 経過</span></div>
+<article class="message" id="res61">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【メモ】GMは【観測者】　PCは【転生者】と呼ぶ。<br>シナリオ中に大きな目的を達成するなどした転生者は特別報酬【歴史に名を残す】を取得する。</div>
+    <div class="message-time">61: 2022/7/17(日) 21:24:03</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>

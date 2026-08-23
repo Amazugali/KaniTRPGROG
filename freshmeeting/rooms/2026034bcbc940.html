@@ -1,0 +1,1627 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>開発室【わたしはカイジン】</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>開発室【わたしはカイジン】</h1>
+    <div class="meta">Fresh Meeting archive / room id: 2026034bcbc940 / active</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=2026034bcbc940"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+	<a href="https://www.freshmeeting.com/forumdel.php?f=2026034bcbc940"><img src="https://www.freshmeeting.com/img/delete.gif" alt="削除する"><span>削除する</span></a>
+</span>
+
+<p>
+	キリ：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202603kaijin/01_Kr.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202603kaij<wbr>in/<wbr>01_<wbr>Kr.<wbr>html</a><br>チヒ：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202603kaijin/02_Ch.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202603kaij<wbr>in/<wbr>02_<wbr>Ch.<wbr>html</a></p></div>
+  </div>
+</header>
+<main>
+
+<div class="attachment-warning">
+  このログには Fresh Meeting 上の添付ファイル参照が 4 件あります。
+  HTML本文とは別に添付ファイル本体の保全が必要です。
+</div>
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://youtu.be/W9pYRs-6XOE?si=iCP2xYTbwhB11T0Q" target="_blank">https:<wbr>/<wbr>/<wbr>youtu.<wbr>be/<wbr>W9pYRs-<wbr>6XOE?<wbr>si=<wbr>iCP2xYTbwh<wbr>B11T0Q</a></div>
+    <div class="message-time">1: 2026/3/11(水) 10:20:10</div>
+  </div>
+</article>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この女の子とデートする話</div>
+    <div class="message-time">2: 2026/3/11(水) 10:20:32</div>
+  </div>
+</article>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">女の子はミュータント化がかなり深刻化してて幾ばくもない状態<br>彼氏が浮気してたと聞いて傷心して、ささやかな仕返しのつもりでバーストに「私とデートしてください」と依頼を出す</div>
+    <div class="message-time">3: 2026/3/11(水) 10:34:44</div>
+  </div>
+</article>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">仕返しというか自分なりのケジメだな<br>家出ていった後だから</div>
+    <div class="message-time">4: 2026/3/11(水) 10:36:36</div>
+  </div>
+</article>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">土壇場で明かすと「この女よぉ！」ってなる人もいそうなので、<br>フェアネス精神に基づいて「※失恋が原因です」ってメタ情報で伝えておくか</div>
+    <div class="message-time">5: 2026/3/11(水) 10:39:09</div>
+  </div>
+</article>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">家を出ていった直接的な理由は彼ピの浮気なんだけど、怨むというより<br>「自分が負担になっていることを改めて意識した」<br>「彼ピが普通の幸せを手に入れるために自分はいちゃいけないと思った」<br>みたいな感じが近い</div>
+    <div class="message-time">6: 2026/3/11(水) 10:49:01</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">彼ピの方は重圧を感じてたのは事実だけど気持ちが切れたわけでは全くなくて、<br>浮気も疲れてたところに言い寄られて流れで……って側面が大きい</div>
+    <div class="message-time">7: 2026/3/11(水) 10:50:56</div>
+  </div>
+</article>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ハンチョウで所帯持ちの黒服が<br>「妻子への愛情を義務にしてはならない」<br>「たまにはそういうのを忘れて思いっきり遊んで、自分を満喫すればこそ妻や子供への情も沸いてくる」<br>みたいなのを説いてたけどあれに近い心理かもしれん</div>
+    <div class="message-time">8: 2026/3/11(水) 10:55:09</div>
+  </div>
+</article>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁこの彼ピの場合は自分からいったんじゃなくてなし崩しなんだけど<br>荷を下ろして休憩したかっただけってのは同じ</div>
+    <div class="message-time">9: 2026/3/11(水) 10:57:49</div>
+  </div>
+</article>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">浮気相手は知らん</div>
+    <div class="message-time">10: 2026/3/11(水) 10:58:00</div>
+  </div>
+</article>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">こいつ化物の介護に疲れっきりっぽいし、<br>ワンチャン寝取れるんじゃね？って思ってたんじゃないかな</div>
+    <div class="message-time">11: 2026/3/11(水) 10:59:21</div>
+  </div>
+</article>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カイジンちゃん自身も今後どうするかは揺れてて<br>一応彼氏への鬱憤を本人に伝わらない形で晴らしてるってのと<br>彼ピに幸せになってほしいと祈った以上は自分が幸せを謳歌しなければならないって考えが入り交じってる</div>
+    <div class="message-time">12: 2026/3/11(水) 11:05:08</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ヨリ戻すルートもあるしPCとのデートで吹っ切れて前を向くルートも両方有り得る</div>
+    <div class="message-time">13: 2026/3/11(水) 11:06:04</div>
+  </div>
+</article>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">妙に達観してるから彼ピへの未練らしい未練ないんだよなこの子<br>「離れてもへっちゃら、愛想が尽きたなんて強がれば嘘になるが、しかし失恋とはこういうものだ」<br>みたいな</div>
+    <div class="message-time">14: 2026/3/11(水) 11:08:18</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アカギか？</div>
+    <div class="message-time">15: 2026/3/11(水) 11:08:33</div>
+  </div>
+</article>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">機械ならスイッチでオンオフできるんだろうけど人間は面倒だからなぁ<br>ならこれが失恋の味と割りきるしかないなぁ</div>
+    <div class="message-time">16: 2026/3/11(水) 11:09:37</div>
+  </div>
+</article>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁエンディングでジンオウガになります</div>
+    <div class="message-time">17: 2026/3/11(水) 11:14:47</div>
+  </div>
+</article>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">彼氏と会ってもジンオウガになります</div>
+    <div class="message-time">18: 2026/3/11(水) 11:14:59</div>
+  </div>
+</article>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">出ていった理由のひとつには死期を悟ったってのもあるので</div>
+    <div class="message-time">19: 2026/3/11(水) 11:15:36</div>
+  </div>
+</article>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今さらだとしても、やっぱり醜い姿を好きな人には見られたくないから</div>
+    <div class="message-time">20: 2026/3/11(水) 11:17:00</div>
+  </div>
+</article>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">彼氏がブチギレて「おまえが醜かったことなんか一回もねぇ！！！」ってサンボマスターになります</div>
+    <div class="message-time">21: 2026/3/11(水) 11:17:14</div>
+  </div>
+</article><div class="elapsed"><span>2日 2時間 52分 経過</span></div>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">筋15/耐14/知1/精14/器1/敏1/運1</div>
+    <div class="message-time">22: 2026/3/13(金) 14:09:14</div>
+  </div>
+</article><div class="elapsed"><span>1日 10時間 13分 経過</span></div>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">冥伽、アトーニャにカチキレそうだなこれ</div>
+    <div class="message-time">23: 2026/3/15(日) 0:22:56</div>
+  </div>
+</article>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">地雷の上でタップダンスしてるっていうか茜の時思い出して「だーーーーーーーーーかーーーーーーーーらーーーーーーーーーーーー！！！！！！！！」ってなってそう</div>
+    <div class="message-time">24: 2026/3/15(日) 0:23:38</div>
+  </div>
+</article><div class="elapsed"><span>20時間 18分 経過</span></div>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">彼ピくん、流石に浮気は未遂の方がいいかなぁ<br>アトーニャへの事実上のトドメになっちゃう気がする</div>
+    <div class="message-time">25: 2026/3/15(日) 20:41:59</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この浮気が<br>脇が甘かったですね、ぐらいにした方がいいか</div>
+    <div class="message-time">26: 2026/3/15(日) 20:42:21</div>
+  </div>
+</article><div class="elapsed"><span>5時間 48分 経過</span></div>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">『The Scientist (Coldplay)』　和訳<br><a href="https://ameblo.jp/beh0914/entry-12041448351.html" target="_blank">https:<wbr>/<wbr>/<wbr>ameblo.<wbr>jp/<wbr>beh0914/<wbr>entry-<wbr>1204144835<wbr>1.<wbr>html</a><br><br>勢いで採用したけどかなり合ってる気がするな、この歌詞</div>
+    <div class="message-time">27: 2026/3/16(月) 2:31:09</div>
+  </div>
+</article><div class="elapsed"><span>5時間 16分 経過</span></div>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">○悼むような哀もすり抜けてしまえ：通常クリアボーナス（+2d）<br>○「私だけがあなたのこと、わかってあげれるから」／探索賞：ＮＰＣ『アトーニャ』に対して探索判定を行った(+1d)<br>○「ごめんね、こんなこともひとりでできないみたい」／ＲＰ賞：ＮＰＣ『アトーニャ』を慮るようなＲＰを行った(+1d)<br>○「あなたのせいじゃない、あなたのせいじゃないよ」／バトル賞：ＮＰＣ『アトーニャ』とバトルを行った（+1d）<br>○あなたはヒーロー／ＭＶＰ：ＮＰＣ『アトーニャ』が死亡し、その死に関わった（+2d）</div>
+    <div class="message-time">28: 2026/3/16(月) 7:47:58</div>
+  </div>
+</article>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">通常クリアボーナスは7Rdにしとくか</div>
+    <div class="message-time">29: 2026/3/16(月) 7:48:14</div>
+  </div>
+</article>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">一応戦闘あるしこの卓</div>
+    <div class="message-time">30: 2026/3/16(月) 7:48:23</div>
+  </div>
+</article><div class="elapsed"><span>16時間 55分 経過</span></div>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">君たちはどう生きるかに関しては走ってない人がこっちに来るかもしれないから詳しいこと言わないけど、能力者解放戦線系の卓をいくらか重ねた後にぶつけてきたからゲロ重かったところありますよこの卓</div>
+    <div class="message-time">31: 2026/3/17(火) 0:44:10</div>
+  </div>
+</article>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">後日談は今日サウナ入りながらウキウキで考えてました<br>アトーニャがああなるとは知らなかったけど、過去卓含めて色々掘り下げられたのでじゃあこの際触れとくかってなった</div>
+    <div class="message-time">32: 2026/3/17(火) 0:46:34</div>
+  </div>
+</article>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[わたしはカイジン_log_全タブ_2026-03-17_0048.html] </del></div>
+    <div class="message-time">33: 2026/3/17(火) 0:49:01</div>
+  </div>
+</article>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">暫定的に会話ログだけ置いとこ</div>
+    <div class="message-time">34: 2026/3/17(火) 0:49:16</div>
+  </div>
+</article><div class="elapsed"><span>6時間 51分 経過</span></div>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=2026034bcbc940&amp;i=i1e638671" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=2026034bcbc940&amp;i=i1e638671" width="262" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=2026034bcbc940&amp;i=i1e638671">📎 Screenshot 2026-03-17 at 07-40-32 UdonariumLily 1.11.0.png</a> <span class="filesize">[1.9 MB, 1612x1000px]</span> を追加しました。</div>
+    <div class="message-time">35: 2026/3/17(火) 7:40:48</div>
+  </div>
+</article>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=2026034bcbc940&amp;i=i47618564" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=2026034bcbc940&amp;i=i47618564" width="113" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=2026034bcbc940&amp;i=i47618564">📎 コマチ.png</a> <span class="filesize">[240.6 KB, 832x1216px]</span> を追加しました。</div>
+    <div class="message-time">36: 2026/3/17(火) 7:45:30</div>
+  </div>
+</article>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログ貼った</div>
+    <div class="message-time">37: 2026/3/17(火) 7:50:10</div>
+  </div>
+</article>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ブティック店員の画像はせっかくなので&gt;&gt;36の新絵に差し替えました</div>
+    <div class="message-time">38: 2026/3/17(火) 8:05:37</div>
+  </div>
+</article>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！</div>
+    <div class="message-time">39: 2026/3/17(火) 8:34:29</div>
+  </div>
+</article>
+<article class="message" id="res40">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">デコってるな〜</div>
+    <div class="message-time">40: 2026/3/17(火) 8:34:34</div>
+  </div>
+</article>
+<article class="message" id="res41">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">他の人が走ったらどうなるか今から怖い</div>
+    <div class="message-time">41: 2026/3/17(火) 8:36:11</div>
+  </div>
+</article>
+<article class="message" id="res42">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういえば姉卓の時に言った気がするけど<br>私は「レギュラーキャラならともかくそのシナリオこっきりのNPCが死んだところで悲しさなんか知れてるだろ」<br>って思ってて、今のところその価値観に変動もないのですが</div>
+    <div class="message-time">42: 2026/3/17(火) 8:53:41</div>
+  </div>
+</article>
+<article class="message" id="res43">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それに対して「じゃあそのシナリオ中にちゃんと思い入れを育んで殺せばいいか」と思ってこのシナリオ作ってるから<br>じゃあシリアス5だわ</div>
+    <div class="message-time">43: 2026/3/17(火) 8:54:50</div>
+  </div>
+</article><div class="elapsed"><span>3時間 14分 経過</span></div>
+<article class="message" id="res44">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">死人が出るやり方だぞ</div>
+    <div class="message-time">44: 2026/3/17(火) 12:09:13</div>
+  </div>
+</article>
+<article class="message" id="res45">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">他に誰が走るかはまだわからないけどはむさんはプレイしながら「これシリアス度3ってマジ？？？」って言いそうだしラバソ氏は「おい！！！！」って叫ぶに5000ペリカ賭けます</div>
+    <div class="message-time">45: 2026/3/17(火) 12:10:23</div>
+  </div>
+</article>
+<article class="message" id="res46">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">空中ブランコ乗りのエリーもちょっと参考にした気がしないでもない</div>
+    <div class="message-time">46: 2026/3/17(火) 12:19:02</div>
+  </div>
+</article>
+<article class="message" id="res47">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それは……それを言われたら私には何も言えないけど…</div>
+    <div class="message-time">47: 2026/3/17(火) 12:30:57</div>
+  </div>
+</article>
+<article class="message" id="res48">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今回の卓で掘り下げられた冥伽の内面<br>・善性の根幹は過去に周りに支えられ助けられた経験から<br>・動物園の一件はかなりトラウマ<br>・自認人殺し<br>・あのミミズクを人と認めているため異形であっても普通の人間だという価値観<br>・ああするしかなかったとわかっていても自分を赦したくない気持ちから逃げたくない<br>・でも他の人が同じ状況なら励ます側に回る</div>
+    <div class="message-time">48: 2026/3/17(火) 12:37:28</div>
+  </div>
+</article>
+<article class="message" id="res49">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ミミズクの件に関しては大体虎杖悠仁の心持ちな気がしてきた</div>
+    <div class="message-time">49: 2026/3/17(火) 12:38:08</div>
+  </div>
+</article>
+<article class="message" id="res50">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=2026034bcbc940&amp;i=ib13bb44a" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=2026034bcbc940&amp;i=ib13bb44a" width="123" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=2026034bcbc940&amp;i=ib13bb44a">📎 IMG_6151.jpeg</a> <span class="filesize">[193.3 KB, 893x1200px]</span> を追加しました。</div>
+    <div class="message-time">50: 2026/3/17(火) 12:38:19</div>
+  </div>
+</article>
+<article class="message" id="res51">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういえば、アトーニャのSPEは【愛】ですが</div>
+    <div class="message-time">51: 2026/3/17(火) 13:57:26</div>
+  </div>
+</article>
+<article class="message" id="res52">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">SPE【愛】<br><br>（中略）<br><br>■使用制限② &nbsp; &nbsp; / &nbsp; &nbsp; １セッションに１回<br>■消費② &nbsp; &nbsp; / &nbsp; &nbsp; なし<br>■効果② &nbsp; &nbsp; / &nbsp; &nbsp; 自身を除く味方が１人、戦闘不能になった場合に発動する（強制）。<br>そのＨＰを【２ｄ】まで回復する。</div>
+    <div class="message-time">52: 2026/3/17(火) 13:58:39</div>
+  </div>
+</article>
+<article class="message" id="res53">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">もしPCが死んだらこれが発動して１回だけ食い縛れる救済措置兼隠しギミックがあります</div>
+    <div class="message-time">53: 2026/3/17(火) 13:59:25</div>
+  </div>
+</article>
+<article class="message" id="res54">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">愛の人じゃん</div>
+    <div class="message-time">54: 2026/3/17(火) 14:20:24</div>
+  </div>
+</article>
+<article class="message" id="res55">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今回RPでやったみたいに、咄嗟に自我が働いて致命傷を避ける</div>
+    <div class="message-time">55: 2026/3/17(火) 14:27:48</div>
+  </div>
+</article>
+<article class="message" id="res56">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんだまだ救える可能性あるじゃん！！！</div>
+    <div class="message-time">56: 2026/3/17(火) 15:01:02</div>
+  </div>
+</article>
+<article class="message" id="res57">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">レイヴンの動向って上層でアトーニャを保護→なんやかんや恋仲に→お互い疲弊<br>→浮気疑惑でアトーニャが家を出ていく→ションボリしているところに通報情報を聞く<br>→アトーニャだと気づいたので中層に単身で向かう→引導を渡す<br>って感じですか？</div>
+    <div class="message-time">57: 2026/3/17(火) 15:09:17</div>
+  </div>
+</article>
+<article class="message" id="res58">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">舞台が下層にも上層にもなる卓だけどレイヴンに見つからないよう上層を離れたり、レイヴンが上層から出向いたりしたのがなんかそれっぽい</div>
+    <div class="message-time">58: 2026/3/17(火) 15:10:16</div>
+  </div>
+</article>
+<article class="message" id="res59">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res57">&gt;&gt; 57</a> <br>だいたいこれ</div>
+    <div class="message-time">59: 2026/3/17(火) 15:22:31</div>
+  </div>
+</article>
+<article class="message" id="res60">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">レイヴン自身はノーマルだからアトーニャの親とは何から何まで正反対のイメージ</div>
+    <div class="message-time">60: 2026/3/17(火) 15:23:12</div>
+  </div>
+</article>
+<article class="message" id="res61">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">レイヴンが浮気したのも悪いけど、<br>そもそもアトーニャが糾弾してもないのに過剰に罪悪感を背負い込んでそれが摩擦になってたのも原因なので<br>今回の件についてはわりとどっちもどっちです</div>
+    <div class="message-time">61: 2026/3/17(火) 15:27:59</div>
+  </div>
+</article>
+<article class="message" id="res62">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">自分の助けになると思っておまえと同棲してねぇよ<br>そんな期待してねぇよ</div>
+    <div class="message-time">62: 2026/3/17(火) 15:29:00</div>
+  </div>
+</article>
+<article class="message" id="res63">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">レイヴンとしては自分が好きでアトーニャと一緒にいて<br>「この子のためにやれることはなんでもやるぞ～」って気概なのに<br>それを「私のせいだよね、負担だよね、ごめんね」みたいな顔されたらやってられんよねってのはある</div>
+    <div class="message-time">63: 2026/3/17(火) 15:31:52</div>
+  </div>
+</article>
+<article class="message" id="res64">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">全然自己肯定しないなあって思ってました<br>なのでめちゃくちゃ励ましたよ</div>
+    <div class="message-time">64: 2026/3/17(火) 15:35:36</div>
+  </div>
+</article>
+<article class="message" id="res65">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあアトーニャにどんなことが出来るかわからないしそもそも何も出来ない体になってることに苦しんでるので<br>少しずつでもいいから自分を好きになりましょう！！！の方向性だけども</div>
+    <div class="message-time">65: 2026/3/17(火) 15:36:43</div>
+  </div>
+</article>
+<article class="message" id="res66">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちらっと書いたけど、思考の固着を意図的にオミットしたこと以外はわりとがっつりリアル鬱を参考にしてます</div>
+    <div class="message-time">66: 2026/3/17(火) 15:37:01</div>
+  </div>
+</article>
+<article class="message" id="res67">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エゴはあるんだけどエゴを発揮する自分も気持ち悪いと思ってる<br>今回の依頼については「自分が金払うんだから文句は言えない……筈！」と踏ん切りつけて募集したけど<br>それもある種奇跡的なのかもしれない</div>
+    <div class="message-time">67: 2026/3/17(火) 15:40:40</div>
+  </div>
+</article>
+<article class="message" id="res68">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">実際、冥伽と合流してからは「ただの仕事人」じゃなくて一個人としての冥伽の人となりに触れてしまって<br>ネガティブ思考になってたし</div>
+    <div class="message-time">68: 2026/3/17(火) 15:43:02</div>
+  </div>
+</article>
+<article class="message" id="res69">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どうしてやりゃいいんだよこいつって思いながらGMしてました</div>
+    <div class="message-time">69: 2026/3/17(火) 15:43:55</div>
+  </div>
+</article>
+<article class="message" id="res70">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">初期設定だと失恋切掛で吹っ切れて「じゃあ私は私で幸せになってやるわ」ってデートの依頼出す想定だったんだが…<br>いや、まぁそれは今もそうか<br>「あれ？私、もしかして誰かにおんぶにだっこでないとデートすらまともにできない？」となって自己否定が爆発しただけで</div>
+    <div class="message-time">70: 2026/3/17(火) 15:51:52</div>
+  </div>
+</article><div class="elapsed"><span>4時間 35分 経過</span></div>
+<article class="message" id="res71">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">次走まで間が空きそうなので聞いてみるんですけど、GMが想定してたデートイベントってどんなのがありますか？<br>レストランで入店拒否されて一悶着とかは卓の中で読心したようにまあ想定内だろうなとは思ってますけど</div>
+    <div class="message-time">71: 2026/3/17(火) 20:27:48</div>
+  </div>
+</article>
+<article class="message" id="res72">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＞狼卓でろくでもない呪い背負い過ぎだろ<br>ログ読んでたけどこの発言時点で新たな呪い背負うこと確信してるんですよね…？<br>なんならPCを冥伽に変えた時「あーあ」って思いませんでした？</div>
+    <div class="message-time">72: 2026/3/17(火) 22:37:33</div>
+  </div>
+</article>
+<article class="message" id="res73">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res71">&gt;&gt; 71</a> <br>ありません</div>
+    <div class="message-time">73: 2026/3/18(水) 0:30:56</div>
+  </div>
+</article>
+<article class="message" id="res74">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">何も想定してません<br>なぜなら一日卓だから</div>
+    <div class="message-time">74: 2026/3/18(水) 0:31:09</div>
+  </div>
+</article>
+<article class="message" id="res75">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res72">&gt;&gt; 72</a> <br>あーあって思いました</div>
+    <div class="message-time">75: 2026/3/18(水) 0:31:56</div>
+  </div>
+</article><div class="elapsed"><span>8時間 35分 経過</span></div>
+<article class="message" id="res76">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんか飲もうとしたらカップうまく掴めなくてガシャーンってのは原曲の歌詞にもあるから考えてたかな</div>
+    <div class="message-time">76: 2026/3/18(水) 9:06:59</div>
+  </div>
+</article><div class="elapsed"><span>9日 0時間 33分 経過</span></div>
+<article class="message" id="res77">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カイジン卓の高松さん、嫌な予感しかしない</div>
+    <div class="message-time">77: 2026/3/27(金) 9:40:43</div>
+  </div>
+</article>
+<article class="message" id="res78">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">冥伽と高松さん、姉卓からコインの表と裏みたいになってる</div>
+    <div class="message-time">78: 2026/3/27(金) 10:34:32</div>
+  </div>
+</article>
+<article class="message" id="res79">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どれくらい真逆になるか楽しみではある<br>高松さんの能力ならワンチャン生存あり得るか…？（正気のままとは言ってない）</div>
+    <div class="message-time">79: 2026/3/27(金) 12:33:51</div>
+  </div>
+</article>
+<article class="message" id="res80">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アトーニャ単体だと金にならん案件だからレイヴンを引きずり出して何かしらに利用するのかなぁという予見</div>
+    <div class="message-time">80: 2026/3/27(金) 13:44:18</div>
+  </div>
+</article>
+<article class="message" id="res81">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アトーニャにレイヴンを殺させて復讐できたねとか<br>アトーニャを犯罪に走らせておまえのせいで彼女ちゃん犯罪者になっちゃったよ？どんな気分？とか</div>
+    <div class="message-time">81: 2026/3/27(金) 13:58:23</div>
+  </div>
+</article>
+<article class="message" id="res82">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">冥伽との温度差が凄いことになりそう</div>
+    <div class="message-time">82: 2026/3/27(金) 14:17:30</div>
+  </div>
+</article><div class="elapsed"><span>135日 3時間 6分 経過</span></div>
+<article class="message" id="res83">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">シリアス3じゃないよってのは一応連絡帳に追記されてますけど改めて宣言はしない感じですか？</div>
+    <div class="message-time">83: 2026/8/9(日) 17:23:33</div>
+  </div>
+</article>
+<article class="message" id="res84">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちゃんと書いたんだからあとはPLにお任せするぜってスタンスですか？</div>
+    <div class="message-time">84: 2026/8/9(日) 17:24:15</div>
+  </div>
+</article>
+<article class="message" id="res85">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい</div>
+    <div class="message-time">85: 2026/8/9(日) 17:24:31</div>
+  </div>
+</article>
+<article class="message" id="res86">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁシリアス3でもそんな変わらんでしょ</div>
+    <div class="message-time">86: 2026/8/9(日) 17:24:56</div>
+  </div>
+</article>
+<article class="message" id="res87">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＼投石／</div>
+    <div class="message-time">87: 2026/8/9(日) 17:25:15</div>
+  </div>
+</article>
+<article class="message" id="res88">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ…GMのスタンスに従って見届けます</div>
+    <div class="message-time">88: 2026/8/9(日) 17:25:36</div>
+  </div>
+</article>
+<article class="message" id="res89">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">私は生存ルート拾えたけど基本考えられてないってのがどうなるか</div>
+    <div class="message-time">89: 2026/8/9(日) 17:25:59</div>
+  </div>
+</article><div class="elapsed"><span>3時間 10分 経過</span></div>
+<article class="message" id="res90">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ミュータント同士のデートか…どうなるか楽しみだ</div>
+    <div class="message-time">90: 2026/8/9(日) 20:36:35</div>
+  </div>
+</article><div class="elapsed"><span>14時間 55分 経過</span></div>
+<article class="message" id="res91">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">91: 2026/8/10(月) 11:31:59</div>
+  </div>
+</article>
+<article class="message" id="res92">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://chatgpt.com/share/6a7937cf-9a64-83ee-b592-002194ba7aba?ogimg=plain" target="_blank">https:<wbr>/<wbr>/<wbr>chatgpt.<wbr>com/<wbr>share/<wbr>6a7937cf-<wbr>9a64-<wbr>83ee-<wbr>b592-<wbr>002194ba7a<wbr>ba?<wbr>ogimg=<wbr>plain</a><br><br>前回のログについてチャッピーからの講評が届きました</div>
+    <div class="message-time">92: 2026/8/10(月) 12:20:08</div>
+  </div>
+</article>
+<article class="message" id="res93">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そんなことできるんだ！？</div>
+    <div class="message-time">93: 2026/8/10(月) 13:01:21</div>
+  </div>
+</article>
+<article class="message" id="res94">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">色々評価してくれて嬉しい</div>
+    <div class="message-time">94: 2026/8/10(月) 13:16:26</div>
+  </div>
+</article>
+<article class="message" id="res95">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「現実的に考えるとちょっと強引だよね」というのはまあはい</div>
+    <div class="message-time">95: 2026/8/10(月) 13:16:52</div>
+  </div>
+</article>
+<article class="message" id="res96">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">卓始まる前に無責任に書いとくがラブラビッツが来たらどうなるか見たかった</div>
+    <div class="message-time">96: 2026/8/10(月) 14:51:11</div>
+  </div>
+</article><div class="elapsed"><span>3時間 19分 経過</span></div>
+<article class="message" id="res97">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">GPT講評、最近見てるYouTubeの漫画紹介動画を思い出して少しCVずんだもんで脳内再生される</div>
+    <div class="message-time">97: 2026/8/10(月) 18:10:40</div>
+  </div>
+</article>
+<article class="message" id="res98">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">草</div>
+    <div class="message-time">98: 2026/8/10(月) 19:08:38</div>
+  </div>
+</article>
+<article class="message" id="res99">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">帰ったらずんだもんバージョン作るか</div>
+    <div class="message-time">99: 2026/8/10(月) 19:08:50</div>
+  </div>
+</article>
+<article class="message" id="res100">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちなみにこのチャンネルです<br>一応なのだとはあまり言わない<br><a href="https://youtu.be/bwEiOmmWUUk?si=XEucKGJuckdJOn-W" target="_blank">https:<wbr>/<wbr>/<wbr>youtu.<wbr>be/<wbr>bwEiOmmWUU<wbr>k?<wbr>si=<wbr>XEucKGJuck<wbr>dJOn-<wbr>W</a></div>
+    <div class="message-time">100: 2026/8/10(月) 20:02:44</div>
+  </div>
+</article>
+<article class="message" id="res101">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">冥伽は単なるデートというより救助の意識も強かったから「何事やねん」ってところから入って元カレの話になったけど<br>その辺掘られなかった場合は未知数だな　いや作った当時の私は考えてたはずだけど</div>
+    <div class="message-time">101: 2026/8/10(月) 21:52:42</div>
+  </div>
+</article>
+<article class="message" id="res102">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">コミュ力がカスすぎてチヒロさんに申し訳なくなってくるなこれ</div>
+    <div class="message-time">102: 2026/8/10(月) 22:52:29</div>
+  </div>
+</article>
+<article class="message" id="res103">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">元ネタの曲だと彼ピが消防隊員っぽい描写がちらほらあるのでレイヴンもレスキュー隊にします</div>
+    <div class="message-time">103: 2026/8/10(月) 23:24:58</div>
+  </div>
+</article>
+<article class="message" id="res104">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">YDFの一部署ってことになるかな</div>
+    <div class="message-time">104: 2026/8/10(月) 23:25:08</div>
+  </div>
+</article>
+<article class="message" id="res105">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=2026034bcbc940&amp;i=ia2a16f9b" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=2026034bcbc940&amp;i=ia2a16f9b" width="113" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=2026034bcbc940&amp;i=ia2a16f9b">📎 raven_test.png</a> <span class="filesize">[2.1 MB, 1038x1516px]</span> を追加しました。</div>
+    <div class="message-time">105: 2026/8/10(月) 23:25:41</div>
+  </div>
+</article>
+<article class="message" id="res106">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あと画風違い過ぎたんでアトーニャ側に合わせようと試みます</div>
+    <div class="message-time">106: 2026/8/10(月) 23:25:52</div>
+  </div>
+</article>
+<article class="message" id="res107">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">やっぱりアトーニャの様子を見て「どしたん？話聞こか？」というムーブになりやすいのかな</div>
+    <div class="message-time">107: 2026/8/10(月) 23:37:57</div>
+  </div>
+</article>
+<article class="message" id="res108">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＞「あ、あんまり行儀よくできなくなっちゃいましたけど……」<br>細かな部分でも自己評価の低さが伝わってくる</div>
+    <div class="message-time">108: 2026/8/10(月) 23:56:18</div>
+  </div>
+</article>
+<article class="message" id="res109">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おもたいんだけどこの卓</div>
+    <div class="message-time">109: 2026/8/11(火) 1:02:30</div>
+  </div>
+</article><div class="elapsed"><span>4時間 57分 経過</span></div>
+<article class="message" id="res110">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だからシリアス3じゃねえって言っただろ</div>
+    <div class="message-time">110: 2026/8/11(火) 6:00:08</div>
+  </div>
+</article><div class="elapsed"><span>1日 8時間 12分 経過</span></div>
+<article class="message" id="res111">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんか現状、ガイウスのバイタリティに惹かれてる感じだな</div>
+    <div class="message-time">111: 2026/8/12(水) 14:12:27</div>
+  </div>
+</article>
+<article class="message" id="res112">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">恋愛対象ってより子供がヒーローを目前にしてる感覚に近そう</div>
+    <div class="message-time">112: 2026/8/12(水) 14:13:07</div>
+  </div>
+</article><div class="elapsed"><span>4時間 11分 経過</span></div>
+<article class="message" id="res113">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんか日本で「和マンチ」を肯定的な称号に転化した時ってこういう感動があったんだろうなって思うわ</div>
+    <div class="message-time">113: 2026/8/12(水) 18:24:18</div>
+  </div>
+</article>
+<article class="message" id="res114">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">すげーな戦闘せずSPEで解決した</div>
+    <div class="message-time">114: 2026/8/12(水) 19:00:15</div>
+  </div>
+</article>
+<article class="message" id="res115">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">やっぱり生存ルートが標準装備じゃないか！！</div>
+    <div class="message-time">115: 2026/8/12(水) 19:00:28</div>
+  </div>
+</article>
+<article class="message" id="res116">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れさまでした！</div>
+    <div class="message-time">116: 2026/8/12(水) 21:37:13</div>
+  </div>
+</article>
+<article class="message" id="res117">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">チヒロさんに言い忘れてたけどアトーニャは死ぬのが前提のNPCです</div>
+    <div class="message-time">117: 2026/8/12(水) 21:39:33</div>
+  </div>
+</article>
+<article class="message" id="res118">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">！！！！</div>
+    <div class="message-time">118: 2026/8/12(水) 21:39:46</div>
+  </div>
+</article>
+<article class="message" id="res119">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁあのルートは確実に番外ルートだな　とは思ってましたけども！！！</div>
+    <div class="message-time">119: 2026/8/12(水) 21:40:12</div>
+  </div>
+</article>
+<article class="message" id="res120">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">これでシリアス３とか言ってたんですよこのGM</div>
+    <div class="message-time">120: 2026/8/12(水) 21:40:16</div>
+  </div>
+</article>
+<article class="message" id="res121">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ブランコ卓から何を学んだのか</div>
+    <div class="message-time">121: 2026/8/12(水) 21:40:31</div>
+  </div>
+</article>
+<article class="message" id="res122">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なぜか２回とも生還してます<br>というか１回目で「なんか描写的に死ぬの語都合主義じゃない？」って突き付けられた感があって事実上瓦解した感はあるかも</div>
+    <div class="message-time">122: 2026/8/12(水) 21:40:34</div>
+  </div>
+</article>
+<article class="message" id="res123">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ブランコ卓を参考にしました！</div>
+    <div class="message-time">123: 2026/8/12(水) 21:40:44</div>
+  </div>
+</article>
+<article class="message" id="res124">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ブランコ卓を出されると私には何も言えないんだが？？？</div>
+    <div class="message-time">124: 2026/8/12(水) 21:40:54</div>
+  </div>
+</article>
+<article class="message" id="res125">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちょっと別所でキズを負ったから他の人にもと思っただけで</div>
+    <div class="message-time">125: 2026/8/12(水) 21:41:08</div>
+  </div>
+</article>
+<article class="message" id="res126">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あれはかなり傷が深かった</div>
+    <div class="message-time">126: 2026/8/12(水) 21:41:27</div>
+  </div>
+</article>
+<article class="message" id="res127">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res42">&gt;&gt; 42</a></div>
+    <div class="message-time">127: 2026/8/12(水) 21:41:57</div>
+  </div>
+</article>
+<article class="message" id="res128">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">このテーマならNPCが死ぬ時に胸糞悪くなってほしいよなぁ、どうすれば胸糞悪くなるかなぁ<br>って思って、じゃあPCとデートして思い出を育んでから殺せばいいか。ブランコメソッドやな<br>ってなりました</div>
+    <div class="message-time">128: 2026/8/12(水) 21:43:17</div>
+  </div>
+</article>
+<article class="message" id="res129">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">可愛くデートした相手が死んだら悲しいんですよ！！！！<br>それはそれとしてPCとして殺す選択はとれますし、むしろ殺せるキャラとしてヘイズルーン闘士出してますが<br><br>だがイタリア男は愛する女を傷つけない　うっそだろお前</div>
+    <div class="message-time">129: 2026/8/12(水) 21:44:36</div>
+  </div>
+</article>
+<article class="message" id="res130">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でもまぁ卓固有NPCは所詮卓固有NPCだからどうとも思わない人はどうとも思わないでしょ<br>よし、シリアス３だな</div>
+    <div class="message-time">130: 2026/8/12(水) 21:44:57</div>
+  </div>
+</article>
+<article class="message" id="res131">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res129">&gt;&gt; 129</a> <br>あぁそうそう、一応殺害まで依頼の射程に入れてるから暗黙的に覚悟はさせてるつもりです</div>
+    <div class="message-time">131: 2026/8/12(水) 21:46:01</div>
+  </div>
+</article>
+<article class="message" id="res132">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まだエリーよりは死の予兆があったので、PLはラストバトルで殺す覚悟してました<br><br>PCはそんなの知るか　俺が死んでもアトーニャは抱きしめて離さないって言ってました<br>（激励がなかったら暴走150エンドだったと思われる）</div>
+    <div class="message-time">132: 2026/8/12(水) 21:47:28</div>
+  </div>
+</article>
+<article class="message" id="res133">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">死の予兆もあるし今のところ２回ひっくり返ってるからブランコより有情ですよ（物議を醸す発言）</div>
+    <div class="message-time">133: 2026/8/12(水) 21:48:54</div>
+  </div>
+</article>
+<article class="message" id="res134">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ今回のガイウスも暴走率下げただけだから、これからちゃんとした医療機関を探して連れていく必要はあると思うけど</div>
+    <div class="message-time">134: 2026/8/12(水) 21:49:38</div>
+  </div>
+</article>
+<article class="message" id="res135">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それはそう</div>
+    <div class="message-time">135: 2026/8/12(水) 21:49:59</div>
+  </div>
+</article>
+<article class="message" id="res136">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">自分以外が既定の死亡ルートだと逆にどうしようかと思ってたがチヒロさんも生存させてくれたおかげでなんかちょっと楽になった<br>いっそこのまま全生存目指してほしいがこのGMは容赦なく殺すタイプだしな…</div>
+    <div class="message-time">136: 2026/8/12(水) 21:50:22</div>
+  </div>
+</article>
+<article class="message" id="res137">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">死ぬ時は殺すのが目の前のPLへの誠意である</div>
+    <div class="message-time">137: 2026/8/12(水) 21:50:56</div>
+  </div>
+</article>
+<article class="message" id="res138">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">スヴァルトアルフだから足元見て未承認な治療薬を売ってくれそうな気はする</div>
+    <div class="message-time">138: 2026/8/12(水) 21:51:13</div>
+  </div>
+</article>
+<article class="message" id="res139">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はむさんが高松さん出してくるっぽいんだよな…まあある意味生存ルートは見込めそうだけど</div>
+    <div class="message-time">139: 2026/8/12(水) 21:51:29</div>
+  </div>
+</article>
+<article class="message" id="res140">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ……正直因子崩壊ルートぐらいじゃないかな<br>ただしばき倒すぐらいならキリさんの時と同じで暴走崩壊止まりだと思う</div>
+    <div class="message-time">140: 2026/8/12(水) 21:51:49</div>
+  </div>
+</article>
+<article class="message" id="res141">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、YDFに対処をぶん投げたら死にます</div>
+    <div class="message-time">141: 2026/8/12(水) 21:52:58</div>
+  </div>
+</article>
+<article class="message" id="res142">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">彼ピがなんとかできるなら家出してねぇんだ</div>
+    <div class="message-time">142: 2026/8/12(水) 21:54:55</div>
+  </div>
+</article><div class="elapsed"><span>10時間 54分 経過</span></div>
+<article class="message" id="res143">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">Discordにてクリア部屋を仮開通しました。以後のやり取りは極力Discord側でお願いします</div>
+    <div class="message-time">143: 2026/8/13(木) 8:49:27</div>
+  </div>
+</article>
+<article class="message" id="res144">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！</div>
+    <div class="message-time">144: 2026/8/13(木) 9:12:59</div>
+  </div>
+</article><div class="elapsed"><span>7時間 2分 経過</span></div>
+<article class="message" id="res145">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！</div>
+    <div class="message-time">145: 2026/8/13(木) 16:15:02</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>

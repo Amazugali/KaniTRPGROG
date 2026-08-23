@@ -1,0 +1,1576 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>【出現！偽LUNA隊！】開発部屋</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>【出現！偽LUNA隊！】開発部屋</h1>
+    <div class="meta">Fresh Meeting archive / room id: 202602d20c4aad / active</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=202602d20c4aad"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+</span>
+
+<p>
+	Tカゲラバ：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202602falseLUNA/01TtKgRb.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202602fals<wbr>eLUNA/<wbr>01TtKgRb.<wbr>html</a><br>はむラバ：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202602falseLUNA/02HmRb.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202602fals<wbr>eLUNA/<wbr>02HmRb.<wbr>html</a><br>サボラバ：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202602falseLUNA/03SvRb.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202602fals<wbr>eLUNA/<wbr>03SvRb.<wbr>html</a><br>スマラバ：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202602falseLUNA/04SmRb.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202602fals<wbr>eLUNA/<wbr>04SmRb.<wbr>html</a></p></div>
+  </div>
+</header>
+<main>
+
+<div class="attachment-warning">
+  このログには Fresh Meeting 上の添付ファイル参照が 25 件あります。
+  HTML本文とは別に添付ファイル本体の保全が必要です。
+</div>
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【登場！偽LUNA隊！】<br>LUNA隊本部であなた達は自分たちの偽物がいることを知る。<br>そしてパトロールの最中にとある連中を見かけた。<br><br>【募集人数】２人以上で無理のない人数<br>【参加資格】LUNA隊所属者及び遠見隼人または八釼 耀<br><br>＜シナリオ概要＞<br>　【開催日時】１～２日<br>　【開催場所】ユドナリウムリリィ<br>　【暴走チェック】最初に6D6以上<br>　【コメディ：シリアス】100:0<br>　【ライト：ヘヴィ】100:0<br>　【探索：戦闘】特になし<br>　【難易度】超低い<br>　【補足】<br>　蟹及びBP適用可<br>　オリジナル特性アリ<br><br>　※LUNA隊で暴れるだけの簡易的な卓です。ストーリー要素もほぼありません<br>　※一応バトルはありますがフレーバー程度の簡単なものです。好きにやりましょう<br>　※偽物の容姿行動発言がPCやPLの神経を逆撫でする場合があります。偽物とはそういうものです<br>　※一度参加したPLも別PCで再度参加することが可能です<br>　※一人のPLが複数のPCで参加することも可能です<br>　※仮にキャラシの無いPCでもフレーバー的に戦闘へ参加できます<br>　※クリア報酬はありますが総評及び各賞はありません<br>　※特殊措置としてクリア処理の際にカルマは変更無しで引き継ぐことができます<br>　※ソルト・レインを巻き込むかはPLが決められます</div>
+    <div class="message-time">1: 2026/2/24(火) 21:22:07</div>
+  </div>
+</article>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=i3c94d520" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=i3c94d520" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=i3c94d520">📎 偽キッド.png</a> <span class="filesize">[557.2 KB, 600x900px]</span> を追加しました。</div>
+    <div class="message-time">2: 2026/2/24(火) 21:35:56</div>
+  </div>
+</article>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=ia011162b" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=ia011162b" width="120" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=ia011162b">📎 偽イータ.png</a> <span class="filesize">[700.6 KB, 600x825px]</span> を追加しました。</div>
+    <div class="message-time">3: 2026/2/24(火) 21:42:24</div>
+  </div>
+</article>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=i7ed633f0" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=i7ed633f0" width="159" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=i7ed633f0">📎 偽ビシュナル.png</a> <span class="filesize">[340.8 KB, 600x620px]</span> を追加しました。</div>
+    <div class="message-time">4: 2026/2/24(火) 21:42:30</div>
+  </div>
+</article>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=i1f5113be" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=i1f5113be" width="118" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=i1f5113be">📎 偽左沢.png</a> <span class="filesize">[616.2 KB, 600x840px]</span> を追加しました。</div>
+    <div class="message-time">5: 2026/2/24(火) 21:42:37</div>
+  </div>
+</article>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=i5f704a41" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=i5f704a41" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=i5f704a41">📎 偽リオン.png</a> <span class="filesize">[705.0 KB, 600x900px]</span> を追加しました。</div>
+    <div class="message-time">6: 2026/2/24(火) 21:42:47</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=ia0baf66a" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=ia0baf66a" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=ia0baf66a">📎 偽靉翁.png</a> <span class="filesize">[848.0 KB, 600x900px]</span> を追加しました。</div>
+    <div class="message-time">7: 2026/2/24(火) 21:42:53</div>
+  </div>
+</article>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=i9a708ccd" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=i9a708ccd" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=i9a708ccd">📎 偽ラスター.png</a> <span class="filesize">[619.0 KB, 600x900px]</span> を追加しました。</div>
+    <div class="message-time">8: 2026/2/24(火) 21:42:58</div>
+  </div>
+</article>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=ia96a3af4" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=ia96a3af4" width="118" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=ia96a3af4">📎 偽タローマン.png</a> <span class="filesize">[639.6 KB, 600x842px]</span> を追加しました。</div>
+    <div class="message-time">9: 2026/2/24(火) 21:43:03</div>
+  </div>
+</article>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=ia4cb813b" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=ia4cb813b" width="119" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=ia4cb813b">📎 偽大統領.png</a> <span class="filesize">[526.2 KB, 600x830px]</span> を追加しました。</div>
+    <div class="message-time">10: 2026/2/24(火) 21:43:11</div>
+  </div>
+</article>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=id48439fd" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=id48439fd" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=id48439fd">📎 偽ライス.png</a> <span class="filesize">[690.7 KB, 600x900px]</span> を追加しました。</div>
+    <div class="message-time">11: 2026/2/24(火) 21:43:14</div>
+  </div>
+</article>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=ie77f99df" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=ie77f99df" width="116" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=ie77f99df">📎 偽ハチドリ.png</a> <span class="filesize">[683.1 KB, 600x858px]</span> を追加しました。</div>
+    <div class="message-time">12: 2026/2/24(火) 21:43:24</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=i0116f5d1" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=i0116f5d1" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=i0116f5d1">📎 偽ソルト.png</a> <span class="filesize">[845.3 KB, 600x900px]</span> を追加しました。</div>
+    <div class="message-time">13: 2026/2/24(火) 21:43:29</div>
+  </div>
+</article>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=id8035061" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=id8035061" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=id8035061">📎 偽隼人.png</a> <span class="filesize">[792.9 KB, 600x900px]</span> を追加しました。</div>
+    <div class="message-time">14: 2026/2/24(火) 21:43:34</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=i46c8a44c" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=i46c8a44c" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=i46c8a44c">📎 偽ヒカリ.png</a> <span class="filesize">[638.9 KB, 600x900px]</span> を追加しました。</div>
+    <div class="message-time">15: 2026/2/24(火) 21:43:40</div>
+  </div>
+</article>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=i48c3d44e" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=i48c3d44e" width="124" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=i48c3d44e">📎 元絵.jpg</a> <span class="filesize">[156.7 KB, 800x1064px]</span> を追加しました。</div>
+    <div class="message-time">16: 2026/2/24(火) 21:48:24</div>
+  </div>
+</article>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【節穴揃いの鑑定団（チープ・メイト）】<br>変装や物真似の説得力を上げる能力<br>陳腐な変装でも周囲は騙されてしまうが流石に本人たちは騙されない<br>なお自分たちにも適用されてしまうため、偽LUNA隊は変装が完璧だと信じ込んでいる<br><br>【低予算な仮装大会（チープ・トリック・オア・トリート）】<br>とても雑な変装道具を創造する能力<br>クオリティはハチャメチャに低いが上記の能力と合わさって完璧な変装だと信じ込まれている<br><br>【にわか知識の参考文献（チープ・ラーニング）】<br>特定人物の知識を得る能力<br>ただしまともな情報はほとんど無いし真偽も割と怪しい</div>
+    <div class="message-time">17: 2026/2/24(火) 22:03:41</div>
+  </div>
+</article>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ミート・ダルティ<br>クコーンバ・シグマ<br>ゲキコーサス<br>苆野 おやつ<br>麻浦 バナン<br>永井 勇<br>ファースタ・秋桜<br>栗田 一<br>クロックス・右々<br>アブト・ラズ<br>パーン・バス子<br>佐藤 晴太<br>近松 鳥夫<br>一ツ宮 盾</div>
+    <div class="message-time">18: 2026/2/24(火) 22:23:04</div>
+  </div>
+</article>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">19: 2026/2/24(火) 22:31:43</div>
+  </div>
+</article>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">・LUNA隊本部でキッドから偽物の存在を聞かされる<br>・パトロールに出る<br>・個人経営のレストランで恐喝してる偽LUNA隊を発見<br>・PC側から出向くもしくは偽LUNA隊の方から絡んで戦闘<br>・戦闘後はなんやかんやで解決<br>・レストランは地下で違法植物の栽培と武器の密輸と偽札製造を行っているのでついでに捕まる</div>
+    <div class="message-time">20: 2026/2/24(火) 22:34:42</div>
+  </div>
+</article>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽タローマンは爆竹、偽隼人はバット、偽イータはエアガン、偽ビシュナルはゴム弾、偽ハチドリはサッカーボールを武器として使用</div>
+    <div class="message-time">21: 2026/2/24(火) 22:35:31</div>
+  </div>
+</article>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽ソルトはローラースケートによる機動力がウリ<br>偽ラスターはスポーツチャンバラのエアーソフト剣を使用<br>偽ライスは「自分に逆らうお前も不幸にしてやろうか」と脅す<br>偽大統領はプロレス技</div>
+    <div class="message-time">22: 2026/2/24(火) 22:36:57</div>
+  </div>
+</article>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽靉翁はナイフをペロペロ舐めながら襲ってくる</div>
+    <div class="message-time">23: 2026/2/24(火) 22:37:16</div>
+  </div>
+</article>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽ヒカリはガラスの灰皿を投げてくる</div>
+    <div class="message-time">24: 2026/2/24(火) 22:39:43</div>
+  </div>
+</article>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽リオンは木の杭でどついてくる</div>
+    <div class="message-time">25: 2026/2/24(火) 22:41:40</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クリア報酬…3D6<br>登場した偽LUNA隊メンバーの本名の由来を当てる…1人につき1D6<br>解答権はPCそれぞれに偽LUNA隊1人ごとに1回</div>
+    <div class="message-time">26: 2026/2/24(火) 22:42:53</div>
+  </div>
+</article>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">店 長（みせの おさ）<br>レストラン『ブレイカブル』の店長<br>ぼったくり同然の高くてあんまり美味しくない料理を提供する店を隠れ蓑に、地下室で違法植物栽培と武器の密輸と偽札の製造を行っている</div>
+    <div class="message-time">27: 2026/2/24(火) 22:56:20</div>
+  </div>
+</article>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽靉翁草</div>
+    <div class="message-time">28: 2026/2/24(火) 23:01:11</div>
+  </div>
+</article>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽ライスエッチだな！！！！！！！！！！！</div>
+    <div class="message-time">29: 2026/2/24(火) 23:01:31</div>
+  </div>
+</article>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">興奮してきたな（サンドウィッチマン）</div>
+    <div class="message-time">30: 2026/2/24(火) 23:01:37</div>
+  </div>
+</article>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんか普通に可愛いデザインになってしまった偽ライス</div>
+    <div class="message-time">31: 2026/2/24(火) 23:02:54</div>
+  </div>
+</article><div class="elapsed"><span>11時間 2分 経過</span></div>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽リオンは流石に魔導サイエンティストに寄せすぎたのでもうちょい変えようかなあ</div>
+    <div class="message-time">32: 2026/2/25(水) 10:05:05</div>
+  </div>
+</article>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">コザッキーのが近そう</div>
+    <div class="message-time">33: 2026/2/25(水) 10:45:17</div>
+  </div>
+</article>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">パチモン臭い偽物と全然違う偽物は意図的に分けたんですけど、リオンはパチモンより一目見て「はあ？」って言わせる側にしたい<br>靉翁みたく常識人サイドなので</div>
+    <div class="message-time">34: 2026/2/25(水) 12:04:22</div>
+  </div>
+</article><div class="elapsed"><span>11時間 51分 経過</span></div>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=if1c9b1b2" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=if1c9b1b2" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=if1c9b1b2">📎 A0E574C9-38CF-433E-8833-989291E9017B.png</a> <span class="filesize">[2.6 MB, 1024x1536px]</span> を追加しました。</div>
+    <div class="message-time">35: 2026/2/25(水) 23:55:39</div>
+  </div>
+</article>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とりあえずこれか魔導サイエンティストの二択になるけど、これ志村けんでは？</div>
+    <div class="message-time">36: 2026/2/25(水) 23:56:25</div>
+  </div>
+</article><div class="elapsed"><span>21時間 26分 経過</span></div>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=i87e44d17" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=i87e44d17" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=i87e44d17">📎 偽リオンver2.png</a> <span class="filesize">[730.4 KB, 600x900px]</span> を追加しました。</div>
+    <div class="message-time">37: 2026/2/26(木) 21:23:14</div>
+  </div>
+</article>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=id3f807ed" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=id3f807ed" width="124" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=id3f807ed">📎 偽リオン元絵.png</a> <span class="filesize">[179.5 KB, 900x1200px]</span> を追加しました。</div>
+    <div class="message-time">38: 2026/2/26(木) 21:23:50</div>
+  </div>
+</article><div class="elapsed"><span>23時間 35分 経過</span></div>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽イータ「ウィーアー クレイジー YDFチーム」<br>偽ラスター「オラァ～ナメんじゃねえぞぉ～」（甲高い声）<br>偽ライス「私達の邪魔をした奴は不幸になる…ヒヒ…」<br>偽大統領「オラの妹の言う通りだべ！お前の店を壊れるズラよ～！」</div>
+    <div class="message-time">39: 2026/2/27(金) 20:59:29</div>
+  </div>
+</article>
+<article class="message" id="res40">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クリア報酬は諸々纏めて5D6に変更</div>
+    <div class="message-time">40: 2026/2/27(金) 23:21:32</div>
+  </div>
+</article>
+<article class="message" id="res41">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=i03b2959f" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=i03b2959f" width="282" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=i03b2959f">📎 【偽LUNA隊カゲラバT】.jpg</a> <span class="filesize">[205.9 KB, 1332x767px]</span> を追加しました。</div>
+    <div class="message-time">41: 2026/2/28(土) 0:02:35</div>
+  </div>
+</article>
+<article class="message" id="res42">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽ラスターと偽ライスは普通に可愛いと思いました</div>
+    <div class="message-time">42: 2026/2/28(土) 0:03:44</div>
+  </div>
+</article>
+<article class="message" id="res43">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽ライス、魔女っぽいのをイメージして描いたんですけどGPTくんに清書してもらったらだいぶ可愛くなっちゃったんですよね</div>
+    <div class="message-time">43: 2026/2/28(土) 0:04:24</div>
+  </div>
+</article>
+<article class="message" id="res44">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽ラスターはギャグマンガ日和です</div>
+    <div class="message-time">44: 2026/2/28(土) 0:04:32</div>
+  </div>
+</article>
+<article class="message" id="res45">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ギャグ日！</div>
+    <div class="message-time">45: 2026/2/28(土) 0:05:47</div>
+  </div>
+</article>
+<article class="message" id="res46">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">戦闘狂なので逆に弱そうに、そして兜がカッコいいのでヘルメットに雑な飾りを付けたのが偽ラスター</div>
+    <div class="message-time">46: 2026/2/28(土) 0:06:50</div>
+  </div>
+</article>
+<article class="message" id="res47">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">憧れちゃったか～</div>
+    <div class="message-time">47: 2026/2/28(土) 0:07:52</div>
+  </div>
+</article>
+<article class="message" id="res48">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽あいおうで一生笑ってる</div>
+    <div class="message-time">48: 2026/2/28(土) 0:08:34</div>
+  </div>
+</article>
+<article class="message" id="res49">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽イータ、GPTくんに出してもらったアメリカン不良警官の画像を参考に描いた絵をGPTくんに清書してもらったのでだいぶAI製</div>
+    <div class="message-time">49: 2026/2/28(土) 0:10:25</div>
+  </div>
+</article>
+<article class="message" id="res50">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">しばらく思い出し笑いに苦しめられそう、訴訟</div>
+    <div class="message-time">50: 2026/2/28(土) 0:12:35</div>
+  </div>
+</article>
+<article class="message" id="res51">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オリジナル特性：【殺戮領域】<br>メインアクション宣言時およびエンドフェイズ時にそれぞれ発動する。<br>全ての敵は１Ｒの間、回避判定に【－１ｄ】のペナルティを受ける。<br>この効果で判定ダイス数が【１】を下回る場合、 そのユニットは代わりに【１ｄ】の貫通ダメージを受ける。</div>
+    <div class="message-time">51: 2026/2/28(土) 0:19:49</div>
+  </div>
+</article>
+<article class="message" id="res52">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">これ忘れてたわ<br>まあダメージ増えるくらいだけど</div>
+    <div class="message-time">52: 2026/2/28(土) 0:20:23</div>
+  </div>
+</article><div class="elapsed"><span>8時間 8分 経過</span></div>
+<article class="message" id="res53">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽LUNA隊パラメータ（統一）<br>HP:15 最大PP:10 初期暴走率:30％<br>攻撃力:1D6+3 防御力:0 精神抵抗:0 行動値:1<br>SS:8+1D6 命中:10+1D6 回避:8+1D6<br>発動スペック:1 能力精度:6<br>SPE:無し カルマ:【勇猛】<br>判定技能:一括で8<br><br>オリジナル特性<br>【ギャグ補正】…どんなに酷い目に遭ってもギャグ的な描写で済む<br>【無知の無謀】…このエネミーはカルマ【勇猛】を可能ならば必ず使用し、他者の【勇猛】に対しても先手を取れる<br>【追撃対象者】…このエネミーはHPが0以下になっても攻撃対象に含まれる</div>
+    <div class="message-time">53: 2026/2/28(土) 8:28:56</div>
+  </div>
+</article><div class="elapsed"><span>15時間 45分 経過</span></div>
+<article class="message" id="res54">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=if4f4d49c">📎 出現！偽LUNA隊！カゲラバT.zip</a> <span class="filesize">[1.1 MB]</span> を追加しました。</div>
+    <div class="message-time">54: 2026/3/1(日) 0:14:20</div>
+  </div>
+</article>
+<article class="message" id="res55">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！</div>
+    <div class="message-time">55: 2026/3/1(日) 0:31:13</div>
+  </div>
+</article><div class="elapsed"><span>3日 20時間 1分 経過</span></div>
+<article class="message" id="res56">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ジャンク品として流れてたクラップトラップを偽リオンが改造したものが偽ビシュナルって設定だったけど、<br>そもそもリオンがビシュナル開発者という勘違いからきてる設定なのでパチモン臭が一気に上がってしまった</div>
+    <div class="message-time">56: 2026/3/4(水) 20:32:31</div>
+  </div>
+</article><div class="elapsed"><span>24日 0時間 13分 経過</span></div>
+<article class="message" id="res57">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽靉翁「ギィーッヒャッハー！この正義のナイフで悪を懲らしめてやるゥー！」<br>偽リオン「私の開発したビシュナルを連れてきてもいいのですよ？」</div>
+    <div class="message-time">57: 2026/3/28(土) 20:46:17</div>
+  </div>
+</article>
+<article class="message" id="res58">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れさまでした！！！！</div>
+    <div class="message-time">58: 2026/3/28(土) 22:55:49</div>
+  </div>
+</article>
+<article class="message" id="res59">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この卓何？？？？？？？</div>
+    <div class="message-time">59: 2026/3/28(土) 22:55:58</div>
+  </div>
+</article>
+<article class="message" id="res60">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res4">&gt;&gt; 4</a> <br>草</div>
+    <div class="message-time">60: 2026/3/28(土) 22:56:19</div>
+  </div>
+</article><div class="elapsed"><span>1日 22時間 9分 経過</span></div>
+<article class="message" id="res61">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽左沢「ワイの財布の紐は固いでヤンス！」<br>偽ハチドリ「キックマスターと呼ばれたアタイの足技見せてやるよ！」</div>
+    <div class="message-time">61: 2026/3/30(月) 21:06:06</div>
+  </div>
+</article>
+<article class="message" id="res62">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした～</div>
+    <div class="message-time">62: 2026/3/30(月) 22:54:38</div>
+  </div>
+</article>
+<article class="message" id="res63">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽ビシュナル似せる気ないだろｗｗｗ</div>
+    <div class="message-time">63: 2026/3/30(月) 23:08:22</div>
+  </div>
+</article>
+<article class="message" id="res64">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">せめて犬ではあれよ！！</div>
+    <div class="message-time">64: 2026/3/30(月) 23:08:43</div>
+  </div>
+</article>
+<article class="message" id="res65">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">これ描いた時点でビシュナルのことをロボット犬と勘違いしていたせいもあります</div>
+    <div class="message-time">65: 2026/3/30(月) 23:09:05</div>
+  </div>
+</article>
+<article class="message" id="res66">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">草</div>
+    <div class="message-time">66: 2026/3/30(月) 23:11:48</div>
+  </div>
+</article><div class="elapsed"><span>13時間 36分 経過</span></div>
+<article class="message" id="res67">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">LUNA隊の拠点で会話してるところにキッドが入ってくる構成とキッドがよくビシュナルと一緒にいる設定により、<br>卓開始時はなんらかの要因でLUNA隊拠点に隼人一人きりの可能性が出てきた<br>ここに誰か加わるにしてもビシュナルかソルトです</div>
+    <div class="message-time">67: 2026/3/31(火) 12:48:02</div>
+  </div>
+</article><div class="elapsed"><span>8時間 34分 経過</span></div>
+<article class="message" id="res68">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=i6b3eae63" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=i6b3eae63" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=i6b3eae63">📎 ゲーミングソルト像.png</a> <span class="filesize">[1.1 MB, 1024x1536px]</span> を追加しました。</div>
+    <div class="message-time">68: 2026/3/31(火) 21:22:22</div>
+  </div>
+</article>
+<article class="message" id="res69">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">もしも隼人が一人でLUNA隊本部に来る場合、LUNA隊に縁のある場所だとすぐわかるためのオブジェクト画像をGPTくんに作ってもらいました</div>
+    <div class="message-time">69: 2026/3/31(火) 21:23:17</div>
+  </div>
+</article><div class="elapsed"><span>4日 20時間 16分 経過</span></div>
+<article class="message" id="res70">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=i595afc7a">📎 SAVOラバ 偽LUNA隊.zip</a> <span class="filesize">[4.2 MB]</span> を追加しました。</div>
+    <div class="message-time">70: 2026/4/5(日) 17:39:37</div>
+  </div>
+</article>
+<article class="message" id="res71">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=if4d9ef49">📎 はむラバ 偽LUNA隊.zip</a> <span class="filesize">[3.3 MB]</span> を追加しました。</div>
+    <div class="message-time">71: 2026/4/5(日) 17:39:43</div>
+  </div>
+</article>
+<article class="message" id="res72">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=i936fef93">📎 Tカゲラバ偽LUNA隊.zip</a> <span class="filesize">[10.3 MB]</span> を追加しました。</div>
+    <div class="message-time">72: 2026/4/5(日) 17:52:53</div>
+  </div>
+</article>
+<article class="message" id="res73">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！</div>
+    <div class="message-time">73: 2026/4/5(日) 20:26:15</div>
+  </div>
+</article><div class="elapsed"><span>1日 0時間 18分 経過</span></div>
+<article class="message" id="res74">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽隼人「この遠見 隼人こそがLUNA隊のリーダーと言っても過言ではない！ケーケケケ！」<br>偽キッド「ハヤトのセイ・ストリートデース！」<br>偽ビシュナル「ウナギバーガーでアリマス！」</div>
+    <div class="message-time">74: 2026/4/6(月) 20:44:59</div>
+  </div>
+</article><div class="elapsed"><span>3時間 17分 経過</span></div>
+<article class="message" id="res75">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れさまでした！！！！！ひどい話だった</div>
+    <div class="message-time">75: 2026/4/7(火) 0:02:44</div>
+  </div>
+</article>
+<article class="message" id="res76">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202602d20c4aad&amp;i=i7a0ede39" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202602d20c4aad&amp;i=i7a0ede39" width="324" height="141"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202602d20c4aad&amp;i=i7a0ede39">📎 ラバスマ.png</a> <span class="filesize">[1.4 MB, 1517x650px]</span> を追加しました。</div>
+    <div class="message-time">76: 2026/4/7(火) 0:07:05</div>
+  </div>
+</article>
+<article class="message" id="res77">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">画像ありがとう！</div>
+    <div class="message-time">77: 2026/4/7(火) 0:08:35</div>
+  </div>
+</article>
+<article class="message" id="res78">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">さぁ～て……やるか</div>
+    <div class="message-time">78: 2026/4/7(火) 0:08:38</div>
+  </div>
+</article>
+<article class="message" id="res79">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログ神</div>
+    <div class="message-time">79: 2026/4/7(火) 0:08:46</div>
+  </div>
+</article>
+<article class="message" id="res80">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">全体的にGMキッドのクオリティが高くて笑いました！！<br>特にハチドリ左沢回のキッドが！！</div>
+    <div class="message-time">80: 2026/4/7(火) 0:09:27</div>
+  </div>
+</article>
+<article class="message" id="res81">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res16">&gt;&gt; 16</a> <br>元絵の時点でクオリティ高いのかよ！！！！</div>
+    <div class="message-time">81: 2026/4/7(火) 0:10:28</div>
+  </div>
+</article>
+<article class="message" id="res82">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res17">&gt;&gt; 17</a> <br>なるほどね</div>
+    <div class="message-time">82: 2026/4/7(火) 0:11:01</div>
+  </div>
+</article>
+<article class="message" id="res83">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">以前見た隼人がそこに居て笑った<br>本当に何もかも酷かったがLUNA隊がそもそもひどい連中なのでまあ相手の酷さよりこっちのが悪いもんな、で済んだ</div>
+    <div class="message-time">83: 2026/4/7(火) 0:12:21</div>
+  </div>
+</article>
+<article class="message" id="res84">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">というか実際あんな危険な軍団を近くでまじまじと見るような状況なんてそうそうないのでまああんなクオリティにもなるわな<br>って変に納得してしまった</div>
+    <div class="message-time">84: 2026/4/7(火) 0:13:17</div>
+  </div>
+</article>
+<article class="message" id="res85">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">多分行けた</div>
+    <div class="message-time">85: 2026/4/7(火) 0:34:10</div>
+  </div>
+</article>
+<article class="message" id="res86">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今の短時間で4つも！！！？</div>
+    <div class="message-time">86: 2026/4/7(火) 0:34:32</div>
+  </div>
+</article>
+<article class="message" id="res87">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アルティメットオブアルティメット偉業</div>
+    <div class="message-time">87: 2026/4/7(火) 0:34:57</div>
+  </div>
+</article>
+<article class="message" id="res88">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">神</div>
+    <div class="message-time">88: 2026/4/7(火) 0:35:00</div>
+  </div>
+</article>
+<article class="message" id="res89">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！！！</div>
+    <div class="message-time">89: 2026/4/7(火) 0:35:03</div>
+  </div>
+</article>
+<article class="message" id="res90">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">結局のところ導入さえ何とかすれば<br>入れる用のファイル作る→ログの変換を全部する→名前変更して見やすくする→<br>入れる用のファイルに画像一式とログをそれぞれ詰め込む→アップロードする→そのURLで飛べるか確認する<br>ってだけなのでそんなに大変でもない<br>面倒ではある</div>
+    <div class="message-time">90: 2026/4/7(火) 0:36:31</div>
+  </div>
+</article>
+<article class="message" id="res91">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">割とマジで最初の導入が一番の難題だったわアレは</div>
+    <div class="message-time">91: 2026/4/7(火) 0:37:24</div>
+  </div>
+</article>
+<article class="message" id="res92">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">大統領の偽物頭が鳩サブレで草</div>
+    <div class="message-time">92: 2026/4/7(火) 0:43:17</div>
+  </div>
+</article><div class="elapsed"><span>4時間 59分 経過</span></div>
+<article class="message" id="res93">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログ神ありがとうございます！</div>
+    <div class="message-time">93: 2026/4/7(火) 5:42:59</div>
+  </div>
+</article><div class="elapsed"><span>8時間 12分 経過</span></div>
+<article class="message" id="res94">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">神様</div>
+    <div class="message-time">94: 2026/4/7(火) 13:55:03</div>
+  </div>
+</article>
+<article class="message" id="res95">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ウナギの神様</div>
+    <div class="message-time">95: 2026/4/7(火) 13:55:15</div>
+  </div>
+</article><div class="elapsed"><span>5時間 24分 経過</span></div>
+<article class="message" id="res96">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res54">&gt;&gt;54</a><br>せっかく容量を1/10以下まで削減した軽量版ログを作ったのに！！！！！！</div>
+    <div class="message-time">96: 2026/4/7(火) 19:19:54</div>
+  </div>
+</article>
+<article class="message" id="res97">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ一ヶ月前だし覚えてなくても仕方ないか</div>
+    <div class="message-time">97: 2026/4/7(火) 19:20:05</div>
+  </div>
+</article>
+<article class="message" id="res98">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">！！！！！</div>
+    <div class="message-time">98: 2026/4/7(火) 19:29:40</div>
+  </div>
+</article>
+<article class="message" id="res99">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まとめてログ化した弊害が！！！</div>
+    <div class="message-time">99: 2026/4/7(火) 19:29:54</div>
+  </div>
+</article>
+<article class="message" id="res100">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">すみません！！！</div>
+    <div class="message-time">100: 2026/4/7(火) 19:29:59</div>
+  </div>
+</article>
+<article class="message" id="res101">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">！！！！！</div>
+    <div class="message-time">101: 2026/4/7(火) 19:30:57</div>
+  </div>
+</article>
+<article class="message" id="res102">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そこまで見とらんよぉ〜〜</div>
+    <div class="message-time">102: 2026/4/7(火) 19:31:39</div>
+  </div>
+</article>
+<article class="message" id="res103">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はいやりました<br>実際変更されたかは知りませんよ流石に</div>
+    <div class="message-time">103: 2026/4/7(火) 19:36:05</div>
+  </div>
+</article>
+<article class="message" id="res104">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">気にするなありがとう</div>
+    <div class="message-time">104: 2026/4/7(火) 19:49:50</div>
+  </div>
+</article>
+<article class="message" id="res105">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">さっき見たときには平気だったのに、なんかほぼ全ての画像が二重になっちゃったみたい</div>
+    <div class="message-time">105: 2026/4/7(火) 19:50:11</div>
+  </div>
+</article>
+<article class="message" id="res106">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ページのタイトルがlogじゃなくて卓タイトルになってるから変わっているな</div>
+    <div class="message-time">106: 2026/4/7(火) 19:50:55</div>
+  </div>
+</article>
+<article class="message" id="res107">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">な、なんか僕のせいで二重になってるなら戻して下さい</div>
+    <div class="message-time">107: 2026/4/7(火) 19:51:31</div>
+  </div>
+</article>
+<article class="message" id="res108">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あーそうか分かった理解した<br>ちょっと弄ります</div>
+    <div class="message-time">108: 2026/4/7(火) 19:52:01</div>
+  </div>
+</article>
+<article class="message" id="res109">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ただ戻すにしても画像ファイル全部入れてるからなぁ<br>一つ一つ潰していくべか</div>
+    <div class="message-time">109: 2026/4/7(火) 19:54:49</div>
+  </div>
+</article>
+<article class="message" id="res110">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">すみません！！</div>
+    <div class="message-time">110: 2026/4/7(火) 19:55:38</div>
+  </div>
+</article>
+<article class="message" id="res111">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">本当に悪いと思ってるならお前らもこっち（弄る側に）来い！！！</div>
+    <div class="message-time">111: 2026/4/7(火) 19:56:27</div>
+  </div>
+</article>
+<article class="message" id="res112">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">すみません！！！</div>
+    <div class="message-time">112: 2026/4/7(火) 20:00:23</div>
+  </div>
+</article>
+<article class="message" id="res113">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい何とかしました多分きっと知らんけど</div>
+    <div class="message-time">113: 2026/4/7(火) 20:03:47</div>
+  </div>
+</article>
+<article class="message" id="res114">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">👍️</div>
+    <div class="message-time">114: 2026/4/7(火) 20:13:26</div>
+  </div>
+</article>
+<article class="message" id="res115">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">Q.結局なんであいつらLUNA隊を騙ったの？<br>A.【節穴揃いの鑑定団】では本人や縁深い相手は騙せないので「悪名だけ広まってる連中」というのがちょうどよかった<br>　状況を選びまくる代わりに悪用されたらヤバい能力な気もするのでこんなことで捕まったのが幸いかもしれない</div>
+    <div class="message-time">115: 2026/4/7(火) 20:38:48</div>
+  </div>
+</article>
+<article class="message" id="res116">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">もしかして世界線さえ違えば解放戦線を騙る馬鹿軍団が生まれていた可能性が…？</div>
+    <div class="message-time">116: 2026/4/7(火) 20:40:09</div>
+  </div>
+</article>
+<article class="message" id="res117">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽ヤフヤ「俺が声を上げれば能力者解放戦線がこの店を襲うんだぜぇ！？」</div>
+    <div class="message-time">117: 2026/4/7(火) 20:41:38</div>
+  </div>
+</article>
+<article class="message" id="res118">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">もしかしてテロリスト共を無駄に釣れるエサが生まれる前から消えてしまったのでは？</div>
+    <div class="message-time">118: 2026/4/7(火) 20:43:00</div>
+  </div>
+</article>
+<article class="message" id="res119">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽キッド<br>・偽LUNA隊の始まり<br>・特に深いことを考えずパチモン的な外国人<br>・元ネタが直毛短髪なので癖っ毛にした覚えがある<br>・喋り方はエセ外国人を意識したらルー語というかペガサスになった<br>・武器はおにぎり。原作がパン作り漫画だからという安直さだがまあ多分シレンでもそういう攻撃できるだろ…</div>
+    <div class="message-time">119: 2026/4/7(火) 20:56:34</div>
+  </div>
+</article>
+<article class="message" id="res120">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ出来なくはないが……握り変化相手に喉詰まらせて即死とか…</div>
+    <div class="message-time">120: 2026/4/7(火) 20:58:42</div>
+  </div>
+</article>
+<article class="message" id="res121">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽イータ<br>・パチモン系列は既に何人かいたのでイータは思いっきり変なデザインにした<br>・アメリカンなポリスをGPTくんに出力してもらってそれをトレスしたものを清書してもらっただいぶAI産の奴<br>・喋り方は雑な英語。なんか楽しかった<br>・イータが銃を撃つのでそれに寄せて武器をゴム弾にした。もちろん非殺傷</div>
+    <div class="message-time">121: 2026/4/7(火) 20:59:53</div>
+  </div>
+</article>
+<article class="message" id="res122">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽ビシュナル<br>・本物をロボットだと勘違いしてたのでロボットから始まり、アイボだと可愛くて殴りづらいのでクラップトラップになった<br>・本物がリオンに開発されたと勘違いしてたので偽リオンがジャンク品を改造して作った設定<br>・クラップトラップに犬耳をつけるつもりがなんかこうなった<br>・武器はロケラン乱射に対してエアガンによるBB弾乱射<br>・ウナギは別に食べないがウナギ好きっぽい発言を繰り返すようプログラミングされている</div>
+    <div class="message-time">122: 2026/4/7(火) 21:02:03</div>
+  </div>
+</article>
+<article class="message" id="res123">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽左沢<br>・とりあえず伸ばすか巻くかすればパチモンっぽくなる法則に従ったらパチモンっぽくなった<br>・本物の一人称がオイラなので偽物の語尾がヤンスになった<br>・語尾がヤンスになったせいで三下っぽいキャラになった<br>・札束ビンタを想定してたが札束ビンタできる奴はこんなことしねえよって考えて札束柄ハリセンになった</div>
+    <div class="message-time">123: 2026/4/7(火) 21:04:04</div>
+  </div>
+</article>
+<article class="message" id="res124">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽リオン<br>・本物をビシュナルの開発者と勘違いしてたのでマッドサイエンティストっぽい見た目<br>・っていうか最初は魔導サイエンティストだったけどまんま過ぎたのでリオンに近づけた。志村けんっぽくなった<br>・本物のスーツ姿に対しよれっとしただらしない感じの着こなしになった<br>・パイルバンカーに対して杭による突進攻撃</div>
+    <div class="message-time">124: 2026/4/7(火) 21:06:36</div>
+  </div>
+</article>
+<article class="message" id="res125">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">&gt;・札束ビンタを想定してたが札束ビンタできる奴はこんなことしねえよって考えて札束柄ハリセンになった<br>草<br>そりゃそうだ過ぎる</div>
+    <div class="message-time">125: 2026/4/7(火) 21:07:16</div>
+  </div>
+</article>
+<article class="message" id="res126">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽靉翁<br>・見るからに悪漢なモヒカンが自分を騙ってナイフペロペロしてたら靉翁はムカつくだろうな～って思ったのでこうなった<br>・髪や服装の色に靉翁を意識した痕跡を感じる辺りが正直ムカつく<br>・頭部の「愛」タトゥーは靉翁ですよアピールになってるつもり<br>・実は格闘攻撃なのでナイフはペロペロしてるだけで攻撃に使っていない</div>
+    <div class="message-time">126: 2026/4/7(火) 21:11:55</div>
+  </div>
+</article>
+<article class="message" id="res127">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽ラスター<br>・戦闘狂なラスターに対してクッソ弱そうな感じの奴にしたかったのでギャグマンガ日和っぽくした<br>・本物のかっこいい兜に対して安いヘルメットに雑な飾りをつけただけの代物<br>・GPTくんの力を借りることで飾りが段ボールになって安物感がグッと増した<br>・とにかく弱そうというかダメージが無さそうな武器としてスポーツチャンバラの奴を使わせたけど、多分あれはあれで熟練者が使うと痛い</div>
+    <div class="message-time">127: 2026/4/7(火) 21:15:34</div>
+  </div>
+</article>
+<article class="message" id="res128">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽タローマン<br>・デザイン元はポピーザぱフォーマー…ではなくボーボボでOVER城が崩壊した時に出てきた微妙に首領パッチじゃない奴<br>・穏やかに微笑んでるけどタローマンが絶対見せない表情なのでこれはこれでとてもパチモン<br>・「芸術は爆発だ」から爆竹を投げて攻撃する。言葉の意味は一切理解していない<br>・全身タイツという文言を使ったらGPTくんに生成拒否された過去を持つ</div>
+    <div class="message-time">128: 2026/4/7(火) 21:18:01</div>
+  </div>
+</article>
+<article class="message" id="res129">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽大統領<br>・とりあえず本物のデザインを踏襲しないことが前提として決まっていた<br>・最初は鳥のマスクを被ったプロレスラーだったがタローマンの前例から上半身裸は生成されない気がして服を着せた<br>・大統領が漢字で喋るのでこっちも喋り方に特徴づけをした。でも英語は偽キッドや偽イータが担当してたのでうえきの法則プラスのスパークみたいになった<br>・プロレス技を仕掛けるのはプロレスラーだった頃の名残<br>・スカーフは黒咲隼が元だがこれを巻いたせいで首元がなんか変な気がする</div>
+    <div class="message-time">129: 2026/4/7(火) 21:20:36</div>
+  </div>
+</article>
+<article class="message" id="res130">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽ライス<br>・「黒い衣装」「帽子」「花飾り」と要素だけ箇条書きしたらそれっぽいが総合的には全然違うタイプのパチモン<br>・他人の不幸を自分のせいだと落ち込む性格を反転させたら、自分に逆らえば不幸が訪れると他人を脅すカスみてえな性格になった<br>・果物ナイフという偽LUNA隊の中でも殺傷力の高い武器を使うがこれは元のライスが固有演出でナイフを手にするため<br>・偽大統領とは特にこれといって血縁はなく兄妹を騙ってるだけ</div>
+    <div class="message-time">130: 2026/4/7(火) 21:26:12</div>
+  </div>
+</article>
+<article class="message" id="res131">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽ハチドリ<br>・元絵はなぜか意図的に顔を縦に長くしていたがGPTくんが清書にあたって普通のバランスに整えてくれた<br>・三下の偽左沢と組んだせいかレディースの姉御みたいなキャラになった<br>・本物が足を使って戦うのでサッカーボールを使って戦う<br>・ボールを足で軽く受け止めた本物に対して飛んできたボールを思わず手で受け止めようとした対比</div>
+    <div class="message-time">131: 2026/4/7(火) 21:29:23</div>
+  </div>
+</article>
+<article class="message" id="res132">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽ソルト<br>・GPTくんからイケメンが出力されてムカついたので垂れ目とアゴと無精髭の要素を元絵に追加した<br>・電車で走るソルトに対してローラースケートの機動力を誇っている<br>・こいつはこいつで偽LUNA隊の中で一番イケメンを自称するナルシスト</div>
+    <div class="message-time">132: 2026/4/7(火) 21:31:48</div>
+  </div>
+</article>
+<article class="message" id="res133">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽隼人<br>・ある意味一番最初の偽物なのでわかりやすくパチモンデザイン<br>・バットを使うのは応用技の名前から取った<br>・遠見家についてはよく知らない<br>・自分の名前を騙る奴が自分はLUNA隊だぞと言いふらしてたら隼人は嫌だろうなと思ったのでそうした<br>・描写されなかったが背が低い</div>
+    <div class="message-time">133: 2026/4/7(火) 21:34:25</div>
+  </div>
+</article>
+<article class="message" id="res134">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽ヒカリ<br>・髪型をそれっぽくしただけで多分一番似てない偽物<br>・服に飾りを雑につけたが焼け石に水な気がする<br>・ヒカリが能力で結晶を出すので水晶の灰皿で殴るというサスペンスの犯人みたいな攻撃をする</div>
+    <div class="message-time">134: 2026/4/7(火) 21:36:30</div>
+  </div>
+</article>
+<article class="message" id="res135">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">総じて偽LUNA隊の容姿・行動は「本物が見たらムカつきそう」という前提で作っていました</div>
+    <div class="message-time">135: 2026/4/7(火) 21:37:37</div>
+  </div>
+</article>
+<article class="message" id="res136">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res113">&gt;&gt; 113</a> <br>ありがとうございます！</div>
+    <div class="message-time">136: 2026/4/7(火) 21:43:50</div>
+  </div>
+</article>
+<article class="message" id="res137">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＞札束ビンタを想定してたが札束ビンタできる奴はこんなことしねえよって考えて札束柄ハリセンになった<br><br>草</div>
+    <div class="message-time">137: 2026/4/7(火) 21:54:13</div>
+  </div>
+</article>
+<article class="message" id="res138">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＞実は格闘攻撃なのでナイフはペロペロしてるだけで攻撃に使っていない<br><br>そーなの！？</div>
+    <div class="message-time">138: 2026/4/7(火) 21:55:44</div>
+  </div>
+</article>
+<article class="message" id="res139">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽リオン、偽ライス、偽ヒカリだけ殺傷力に差がある</div>
+    <div class="message-time">139: 2026/4/7(火) 21:59:56</div>
+  </div>
+</article>
+<article class="message" id="res140">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">コイツらの武器人殺せるんですけど</div>
+    <div class="message-time">140: 2026/4/7(火) 22:00:08</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>
