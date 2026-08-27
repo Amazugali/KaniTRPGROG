@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ウルフの作戦会議室</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>ウルフの作戦会議室</h1>
+    <div class="meta">Fresh Meeting archive / room id: 202207828b7987 / ended</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=202207828b7987"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+	<a href="https://www.freshmeeting.com/forumopen.php?f=202207828b7987"><img src="https://www.freshmeeting.com/img/reopen.gif" alt="ミーティングを再開する"><span>ミーティングを再開する</span></a>
+	<a href="https://www.freshmeeting.com/forumdel.php?f=202207828b7987"><img src="https://www.freshmeeting.com/img/delete.gif" alt="削除する"><span>削除する</span></a>
+</span></div>
+  </div>
+</header>
+<main>
+
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">タマちゃんがいかにおじさんをいじめるか</div>
+    <div class="message-time">1: 2022/7/13(水) 3:01:05</div>
+  </div>
+</article>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">&nbsp; &nbsp;【タイトル】生きた人として死ぬために<br>【システム】鋼鉄のユグドラシル<br>【概要】<br>グングニル上院議員【レオナルド＝トランプ】は下層の視察中に暴漢に襲われた。<br>レオナルドは意識不明の重体だったが上層に送還され幸いにも一命はとりとめた。<br>そして、この事件は下層の治安維持を司るテセウスにとって痛手となったのだ。<br><br>犯人はその場で拘束され、背後関係が調べられた。しかし犯人はただの一般人であった。<br>これは陰謀などが存在しない、失うものがない自棄になった人間の巻き込み自殺でしかなかったのだ。<br><br>自棄になり無気力である犯人を、ただ犯人の望み通り処刑するだけではもはやメンツがつかない状況にある。<br>困難になった処刑に際しテセウスの構成員である日浦匡也は一つのアイディアを提示した。<br><br>「つまんねぇ人生に嫌気がさしてんなら、人生ってのはこんなにも素晴らしいって教えてやりゃあいいんだよ。」<br><br><br>【適正人数】ＰＣ１人<br>【参加資格】やる気のある人<br>【想定プレイ時間】1日～？<br>【雰囲気】コミカル：シリアス＝3：7<br>【深刻度】ライト：ヘヴィ＝4：6<br>【難易度】？<br>【禁止】なし<br>【暴走チェック】消費、開始時6d6<br>【抑制ロール】２回振り<br>【補足】<br>　・サプリメント「蟹」適用。<br>　・PCオリジナル特性適用。<br>　・復活Bの使用あり<br>　・NPCは制御状態で因子獲得しません。<br>　・GMが用意したイベントはありません。PCが終わりといえば終わりです。</div>
+    <div class="message-time">2: 2022/7/13(水) 3:03:37</div>
+  </div>
+</article>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とりあえず日浦さんから詳しく注文聞いて、その条件を満たすような催眠の下で自尊心を養う<br>その後レオナルド氏を襲ったのと同じやり方で負傷させ、そのまま介錯する形で殺す</div>
+    <div class="message-time">3: 2022/7/13(水) 3:07:14</div>
+  </div>
+</article>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いや、もうただの処刑の域を越えてるからじわじわ死なす方が良いな。失血死とか</div>
+    <div class="message-time">4: 2022/7/13(水) 3:08:11</div>
+  </div>
+</article>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">十字架に磔にするとか</div>
+    <div class="message-time">5: 2022/7/13(水) 3:09:13</div>
+  </div>
+</article>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">最後の最後には自分は裏切って、それだとひとりぼっちになってしまうわけだから<br>つがいがほしい</div>
+    <div class="message-time">6: 2022/7/13(水) 3:11:44</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">つがいは難しいのかな<br>犯人がブサメンだったら男にしよう</div>
+    <div class="message-time">7: 2022/7/13(水) 3:13:03</div>
+  </div>
+</article>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">その辺込みでセクシュアリティちゃんと聞いとかないとな…</div>
+    <div class="message-time">8: 2022/7/13(水) 3:13:27</div>
+  </div>
+</article>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">場合によっては疑似人格埋め込んだグリゴリという手もある</div>
+    <div class="message-time">9: 2022/7/13(水) 3:13:47</div>
+  </div>
+</article>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">懲役30日メソッドでどん底からのサクセスストーリーを体感させます</div>
+    <div class="message-time">10: 2022/7/13(水) 3:20:03</div>
+  </div>
+</article>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">タマちゃんはどうしようかな、おぢさんの味方になるか敵になるか</div>
+    <div class="message-time">11: 2022/7/13(水) 3:22:31</div>
+  </div>
+</article>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">味方として最初出てくるけど終盤で最初に裏切るか</div>
+    <div class="message-time">12: 2022/7/13(水) 3:22:54</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">立場を自覚させるかどうかも悩むな</div>
+    <div class="message-time">13: 2022/7/13(水) 3:28:50</div>
+  </div>
+</article>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">……あ、Dクラスとして雇用させるか？</div>
+    <div class="message-time">14: 2022/7/13(水) 3:29:48</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">1日後、1週間後、1ヶ月後、1年後、10年後の5フェイズ？</div>
+    <div class="message-time">15: 2022/7/13(水) 3:33:13</div>
+  </div>
+</article>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">犯人の経歴は軽く知っておきたいな</div>
+    <div class="message-time">16: 2022/7/13(水) 3:34:43</div>
+  </div>
+</article>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">SCP-871、<br>SCP-173、<br>SCP-646-JP<wbr>、<br>SCP-076、<br>SCP-1983（生還）<br><br>SCP-978、<br>SCP-2800</div>
+    <div class="message-time">17: 2022/7/13(水) 4:37:57</div>
+  </div>
+</article>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">こいつらにふれあわせる<br>2800は同じ境遇のDの一人として出す</div>
+    <div class="message-time">18: 2022/7/13(水) 4:41:14</div>
+  </div>
+</article><div class="elapsed"><span>20時間 51分 経過</span></div>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">次は欲望カメラかSCP-646-JP<wbr></div>
+    <div class="message-time">19: 2022/7/14(木) 1:33:07</div>
+  </div>
+</article><div class="elapsed"><span>1日 0時間 39分 経過</span></div>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">レオナルドの腹心としてマキナに拷問した後トドメ</div>
+    <div class="message-time">20: 2022/7/15(金) 2:12:58</div>
+  </div>
+</article>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「肉体を若返らせる異能」と嘘をつく<br>（当時の姿を模して罰を与える儀式的な意味合いと偽って）</div>
+    <div class="message-time">21: 2022/7/15(金) 2:18:13</div>
+  </div>
+</article>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">SCP-231で〆ってのも美しいか</div>
+    <div class="message-time">22: 2022/7/15(金) 2:35:07</div>
+  </div>
+</article>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「処置モントークを開始する」</div>
+    <div class="message-time">23: 2022/7/15(金) 3:09:47</div>
+  </div>
+</article>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">処置110-モントークか</div>
+    <div class="message-time">24: 2022/7/15(金) 3:12:36</div>
+  </div>
+</article>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">レオナルドは死んだと勘違いさせる（外部には事件直後だったので生死を確認する暇がなかったと伝える）</div>
+    <div class="message-time">25: 2022/7/15(金) 3:43:14</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">中層に移住させる<br>戸籍とかの問題はどうしようかな</div>
+    <div class="message-time">26: 2022/7/15(金) 3:56:19</div>
+  </div>
+</article>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">死んだ、だとどうしようもなくなるからレオナルドは植物人間にするのがよさそう</div>
+    <div class="message-time">27: 2022/7/15(金) 3:58:13</div>
+  </div>
+</article>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アキくんにモントークの実行役やらせるか…</div>
+    <div class="message-time">28: 2022/7/15(金) 4:00:29</div>
+  </div>
+</article><div class="elapsed"><span>9時間 26分 経過</span></div>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">マキナをいたぶるのは無敵の人への抑止力にならないから微妙か？<br>それともあえていい想いさせたりする時点でその辺は拘ってないプロジェクトなのか</div>
+    <div class="message-time">29: 2022/7/15(金) 13:27:14</div>
+  </div>
+</article><div class="elapsed"><span>13時間 5分 経過</span></div>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カウンセリングからスタート<br>隊長は昔キタと同じような状況になったことがある</div>
+    <div class="message-time">30: 2022/7/16(土) 2:33:11</div>
+  </div>
+</article>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アキくんはキタを恨んでいる</div>
+    <div class="message-time">31: 2022/7/16(土) 3:21:13</div>
+  </div>
+</article>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">服を欲しがる<br>色に目覚める年齢かッッッ</div>
+    <div class="message-time">32: 2022/7/16(土) 3:32:36</div>
+  </div>
+</article>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">猫又タマチャン（老婆の立ち絵加工）</div>
+    <div class="message-time">33: 2022/7/16(土) 3:36:02</div>
+  </div>
+</article><div class="elapsed"><span>16時間 24分 経過</span></div>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">猫ババアは若化の異能を持ってる設定<br>誰だお前って言われたら「成程、あたしの顔を観て、こうまでされてまだ心当たりがないのかい。これならわかるかい？」って言いながら顔を若返らせる<br>レオナルドの夫人だったアメリア＝トランプの顔になる</div>
+    <div class="message-time">34: 2022/7/16(土) 20:00:43</div>
+  </div>
+</article>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">殺されてもしょうがない、みたいな殊勝な反応しやがったら「アンタあの頃からなんにも変わっちゃいないね」って悪態つく</div>
+    <div class="message-time">35: 2022/7/16(土) 20:01:48</div>
+  </div>
+</article><div class="elapsed"><span>6時間 41分 経過</span></div>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アキくんの腕は生体義手って言い張る</div>
+    <div class="message-time">36: 2022/7/17(日) 2:43:18</div>
+  </div>
+</article>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">トドメは放火</div>
+    <div class="message-time">37: 2022/7/17(日) 3:11:51</div>
+  </div>
+</article>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">二人まとめて殺す</div>
+    <div class="message-time">38: 2022/7/17(日) 3:12:01</div>
+  </div>
+</article>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「見上げた根性だ。ならこの娘にはあんたにできないことをしてもらうしかないねぇ」</div>
+    <div class="message-time">39: 2022/7/17(日) 3:18:56</div>
+  </div>
+</article>
+<article class="message" id="res40">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">燃やしていい家と十字架？</div>
+    <div class="message-time">40: 2022/7/17(日) 3:19:21</div>
+  </div>
+</article>
+<article class="message" id="res41">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「殺しゃしないさ。アタシはアンタを殺すためだけに今まで生きてきたんだからね」</div>
+    <div class="message-time">41: 2022/7/17(日) 3:32:22</div>
+  </div>
+</article>
+<article class="message" id="res42">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">最初と最後に自己紹介挟んで企画説明<br>夫人への風評被害を可能な限り避ける</div>
+    <div class="message-time">42: 2022/7/17(日) 3:38:30</div>
+  </div>
+</article>
+<article class="message" id="res43">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いや、具体的に何したかはわからん方がよいな</div>
+    <div class="message-time">43: 2022/7/17(日) 3:40:17</div>
+  </div>
+</article>
+<article class="message" id="res44">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いくらなんでもイメージが悪すぎる</div>
+    <div class="message-time">44: 2022/7/17(日) 3:40:37</div>
+  </div>
+</article>
+<article class="message" id="res45">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ボスのガスマスクもらおう</div>
+    <div class="message-time">45: 2022/7/17(日) 3:41:01</div>
+  </div>
+</article>
+<article class="message" id="res46">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">袋かぶせて火あぶりの準備<br>周りの住人は追い払うけど遠巻きには様子をうかがえるようにする</div>
+    <div class="message-time">46: 2022/7/17(日) 3:48:09</div>
+  </div>
+</article>
+<article class="message" id="res47">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とりあえずキタさん一通り殴る<br>その後マキナを殴る、頃合い見て別室でレイプさせる<br>キタがたっぷり後悔したらそのまま現場まで運んで火炙り<br><br>血が止まらなくなったりしたら困るから血が出るようなことはしない</div>
+    <div class="message-time">47: 2022/7/17(日) 4:18:58</div>
+  </div>
+</article>
+<article class="message" id="res48">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">指をペンチで潰すとかその程度かな……</div>
+    <div class="message-time">48: 2022/7/17(日) 4:19:27</div>
+  </div>
+</article>
+<article class="message" id="res49">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">恐怖や苦痛には鮮度がある<br>一度絶望し、心が死んでしまえば拷問の効果は薄い<br>コスパが悪いのでさっさと殺すべき<br>（むしろどれだけ希望を捨てさせず死の恐怖を連続させるかが拷問師の手腕）<br>尊厳の破壊は今回の依頼の対象外だし、そんなものは死体を晒しておけば素人がやってくれる</div>
+    <div class="message-time">49: 2022/7/17(日) 5:13:25</div>
+  </div>
+</article>
+<article class="message" id="res50">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">想像以上に惨い卓になってしまったから「やりすぎだ」ってことでマー君も処刑されそうだな…<br>でも「ケツは全部俺が拭く」って言い切ったのに感心してタマちゃんがスヴァルトへの鞍替え案内するかも</div>
+    <div class="message-time">50: 2022/7/17(日) 5:17:51</div>
+  </div>
+</article>
+<article class="message" id="res51">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">向き合わせて焼く<br>お互いが死ぬ様を見届けさせる</div>
+    <div class="message-time">51: 2022/7/17(日) 5:29:52</div>
+  </div>
+</article><div class="elapsed"><span>15時間 17分 経過</span></div>
+<article class="message" id="res52">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">地獄のようなメモ書き晒しておきます</div>
+    <div class="message-time">52: 2022/7/17(日) 20:47:41</div>
+  </div>
+</article>
+<article class="message" id="res53">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">これだけやっても絆を断てませんでした</div>
+    <div class="message-time">53: 2022/7/17(日) 20:48:08</div>
+  </div>
+</article>
+<article class="message" id="res54">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">うわ</div>
+    <div class="message-time">54: 2022/7/17(日) 20:51:25</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,3617 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>開発室【路上の星、ニコラス】</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>開発室【路上の星、ニコラス】</h1>
+    <div class="meta">Fresh Meeting archive / room id: 20240851f7bae2 / active</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=20240851f7bae2"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+	<a href="https://www.freshmeeting.com/forumdel.php?f=20240851f7bae2"><img src="https://www.freshmeeting.com/img/delete.gif" alt="削除する"><span>削除する</span></a>
+</span>
+
+<p>
+	カゲT：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202408nightmarekart/01KgTt_nightmarekart/log.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202408nigh<wbr>tmarekart/<wbr>01KgTt_<wbr>n.<wbr>.<wbr></a><br>キリスマ：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202408nightmarekart/02KrSm_nightmarekart/log.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202408nigh<wbr>tmarekart/<wbr>02KrSm_<wbr>n.<wbr>.<wbr></a><br>はむラバ：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202408nightmarekart/03HmRb_nightmarekart/log.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202408nigh<wbr>tmarekart/<wbr>03HmRb_<wbr>n.<wbr>.<wbr></a></p></div>
+  </div>
+</header>
+<main>
+
+<div class="attachment-warning">
+  このログには Fresh Meeting 上の添付ファイル参照が 5 件あります。
+  HTML本文とは別に添付ファイル本体の保全が必要です。
+</div>
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【タイトル】路上の星、ニコラス<br>【システム】鋼鉄のユグドラシル<br>【概要】<br>　あなたは下層における暴走行為の被疑者である【ニコラス】を追っている。<br>　彼を一度補足したはいいが、噂通りのスピードである。あなたたちは彼を取り逃がしてしまった。<br>　今回の任務は至ってシンプルだ。この【ニコラス】を取り押さえ、下層の秩序を維持してほしい。<br><br>【適正人数】1～2人、2人の場合は難易度の上昇あり<br>【参加資格】なし<br>【想定プレイ時間】3～6時間<br>【シリアス度】■□□□□（アホ）<br>【ヘヴィ度】■□□□□（下層の暴走行為とかありふれてるだろうし……）<br>【非推奨】制限系、無効化系：系統無効、無効化武装、ブレイク<br>【禁止】なし<br>【暴走チェック】消費、開始時6d<br>【抑制ロール】2回振り、リテイク等はなし<br>【補足】<br>　・シナリオというより、【インスタントダンジョン】を改変したミニゲームのような代物になります。<br>　・クリア報酬は「基本報酬7Rd＋3章＋MVP（＋エンタメ賞）のみ」で固定。<br>　・ソロを想定したシナリオのため、3賞＋MVP（＋エンタメ賞）は条件を満たすことで授与になります。</div>
+    <div class="message-time">1: 2024/8/13(火) 18:31:33</div>
+  </div>
+</article>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アルスヴィズのレーサーだと思うけどまぁ重要ではない</div>
+    <div class="message-time">2: 2024/8/13(火) 18:48:27</div>
+  </div>
+</article><div class="elapsed"><span>4日 0時間 43分 経過</span></div>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はむぱん◆GX1B9JyDnc<wbr> @Ham_pang<br>ヒヨコが本体でニコラスがアタッチメントってマジ？<br><br><br>超たくあん◆MOGAMI.Ooo<wbr> @super_tak<wbr>uan<br>ライスかよ</div>
+    <div class="message-time">3: 2024/8/17(土) 19:31:32</div>
+  </div>
+</article><div class="elapsed"><span>2日 9時間 27分 経過</span></div>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カードだけ作ってまとめてなかったのでいい加減まとめよう</div>
+    <div class="message-time">4: 2024/8/20(火) 4:59:17</div>
+  </div>
+</article>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">原典におけるセリフ書き起こし<br><br>【戦闘開始時、ムービーにて】<br>Ah, yes. the architect….<br>Do you not hear our pleas?<br>No, we should not awaken from this nightmare.<wbr><br><br>You cannnot stop us...<br>You cannnot catch us.<br><br>【フェイズ２移行時】<br>Ohohohoho!<wbr> How magnificen<wbr>t.<br>A hunter is a hunter, Even in a nightmare.<wbr><br>But don't be too hasty!<br>This nightmare will never end.<br><br>【フェイズ３移行時】<br>Oh me oh my, oh my, oh me.<br>One must find the moon shards, three.<br>One is submerged where the dead lie.<br>One where bush &amp; beasts intertwine<wbr>.<br>The last of the trip, Neath my watchful eye.<br>Is found in this castle, location awry.<br>The truth of this secret, Held in thou or thine casket.<br>A sword nist radiant, a true hunters gambit!<br><br>【撃破時】<br>This can't be happening!<wbr><br>The nightmare mustn't end!<br>Lest…!</div>
+    <div class="message-time">5: 2024/8/20(火) 5:58:04</div>
+  </div>
+</article><div class="elapsed"><span>8日 9時間 35分 経過</span></div>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[【路上の星、ニコラス】カゲT.jpg] </del></div>
+    <div class="message-time">6: 2024/8/28(水) 15:33:38</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">敵かな？</div>
+    <div class="message-time">7: 2024/8/28(水) 15:34:26</div>
+  </div>
+</article>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[【路上の星、ニコラス】カゲT.jpg] </del></div>
+    <div class="message-time">8: 2024/8/28(水) 15:35:16</div>
+  </div>
+</article>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">背景変わってたから修正</div>
+    <div class="message-time">9: 2024/8/28(水) 15:35:25</div>
+  </div>
+</article>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">臓物売り飛ばしおじさん忘れてたｗｗｗ</div>
+    <div class="message-time">10: 2024/8/28(水) 15:35:59</div>
+  </div>
+</article>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いらないっしょｗｗ</div>
+    <div class="message-time">11: 2024/8/28(水) 15:36:47</div>
+  </div>
+</article>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=20240851f7bae2&amp;i=i25f58d10" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=20240851f7bae2&amp;i=i25f58d10" width="229" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=20240851f7bae2&amp;i=i25f58d10">📎 【路上の星、ニコラス】カゲT.jpg</a> <span class="filesize">[99.1 KB, 853x607px]</span> を追加しました。</div>
+    <div class="message-time">12: 2024/8/28(水) 15:37:16</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">OPでニコラスに無視された大統領がショック受けるシーンあったけどあれは無視してたんじゃなくてロボット越しに喋ってたのが大統領に伝わらなかっただけです</div>
+    <div class="message-time">13: 2024/8/28(水) 15:38:00</div>
+  </div>
+</article>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いずれにせよ意味不明な供述をしており</div>
+    <div class="message-time">14: 2024/8/28(水) 15:38:28</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんなんだろうなこいつ……</div>
+    <div class="message-time">15: 2024/8/28(水) 15:38:52</div>
+  </div>
+</article>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あなたがわからなければ誰にもわからんだろうよ</div>
+    <div class="message-time">16: 2024/8/28(水) 15:39:27</div>
+  </div>
+</article>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エッグラとチキーラの信奉者な気がする</div>
+    <div class="message-time">17: 2024/8/28(水) 15:40:01</div>
+  </div>
+</article>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エグチキに祈りが届いたところで、だろ</div>
+    <div class="message-time">18: 2024/8/28(水) 15:40:26</div>
+  </div>
+</article>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でも矢じりとかスターストーンとかくれるし……</div>
+    <div class="message-time">19: 2024/8/28(水) 15:40:54</div>
+  </div>
+</article>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">結局どういう能力だったの？</div>
+    <div class="message-time">20: 2024/8/28(水) 15:41:31</div>
+  </div>
+</article>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ひよこだかニコラスだか</div>
+    <div class="message-time">21: 2024/8/28(水) 15:41:40</div>
+  </div>
+</article>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">チキーラは大統領に遭ったらどういうリアクションするんだ<br>ニワトリに変形すれば崇めてくれるのか</div>
+    <div class="message-time">22: 2024/8/28(水) 15:41:45</div>
+  </div>
+</article>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">幻覚能力です<br>ニコラスはただのロボット。乗り物です</div>
+    <div class="message-time">23: 2024/8/28(水) 15:41:53</div>
+  </div>
+</article>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カートだったか…</div>
+    <div class="message-time">24: 2024/8/28(水) 15:42:04</div>
+  </div>
+</article>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">夢だし大統領もカートに変形しとけばよかったか</div>
+    <div class="message-time">25: 2024/8/28(水) 15:42:22</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">下層を幻の迷宮にしてテセウスから逃げ回ってたんですけどたまたまあなたたちに出くわした</div>
+    <div class="message-time">26: 2024/8/28(水) 15:42:40</div>
+  </div>
+</article>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">衛星砲ニトロエンジン搭載</div>
+    <div class="message-time">27: 2024/8/28(水) 15:42:42</div>
+  </div>
+</article>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">鳥としての尊厳は？</div>
+    <div class="message-time">28: 2024/8/28(水) 15:42:52</div>
+  </div>
+</article>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">悪夢を終わらせる目的がまたひとつ増えるんですよ</div>
+    <div class="message-time">29: 2024/8/28(水) 15:43:16</div>
+  </div>
+</article>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だから道中で見つけたマグタフとかも本物です<br>輸血液じゃなかったのはそういう事情</div>
+    <div class="message-time">30: 2024/8/28(水) 15:43:28</div>
+  </div>
+</article>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ～～～なるほど</div>
+    <div class="message-time">31: 2024/8/28(水) 15:43:46</div>
+  </div>
+</article>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">悪夢の中に落ちてるもの飲むより下層で落ちてるもの飲むのはまずいんじゃ</div>
+    <div class="message-time">32: 2024/8/28(水) 15:43:57</div>
+  </div>
+</article>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">じゃあうちら下層飛び回ってたってこと！？</div>
+    <div class="message-time">33: 2024/8/28(水) 15:44:02</div>
+  </div>
+</article>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい</div>
+    <div class="message-time">34: 2024/8/28(水) 15:44:05</div>
+  </div>
+</article>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どこかの店舗とか壊れた自販機から回収してたイメージ</div>
+    <div class="message-time">35: 2024/8/28(水) 15:44:33</div>
+  </div>
+</article>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">大統領がビーム撃ちまくってたけどしーらね！</div>
+    <div class="message-time">36: 2024/8/28(水) 15:44:38</div>
+  </div>
+</article>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">LUNA隊がテセウス家族会議の議題にあがるだろこれ</div>
+    <div class="message-time">37: 2024/8/28(水) 15:45:16</div>
+  </div>
+</article>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ緊急避難が適用されるだろ…</div>
+    <div class="message-time">38: 2024/8/28(水) 15:45:51</div>
+  </div>
+</article>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">LUNA隊vsテセウスの闘争がはじまるのか…</div>
+    <div class="message-time">39: 2024/8/28(水) 15:46:23</div>
+  </div>
+</article>
+<article class="message" id="res40">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res22">&gt;&gt; 22</a> <br>ニワトリちゃんに変身したらおぉよしよしって撫でてきます</div>
+    <div class="message-time">40: 2024/8/28(水) 15:47:00</div>
+  </div>
+</article>
+<article class="message" id="res41">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">素の姿でも鶏と思うかもしれない</div>
+    <div class="message-time">41: 2024/8/28(水) 15:47:23</div>
+  </div>
+</article>
+<article class="message" id="res42">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エッグラはキレます</div>
+    <div class="message-time">42: 2024/8/28(水) 15:47:34</div>
+  </div>
+</article>
+<article class="message" id="res43">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エグチキはもはや神みたいな存在だけど大統領はどう思うのか</div>
+    <div class="message-time">43: 2024/8/28(水) 15:47:52</div>
+  </div>
+</article>
+<article class="message" id="res44">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">大統領と設定上はアルセウス（ひこうプレート）みたいな感じじゃないっけ</div>
+    <div class="message-time">44: 2024/8/28(水) 15:48:38</div>
+  </div>
+</article>
+<article class="message" id="res45">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">大統領も</div>
+    <div class="message-time">45: 2024/8/28(水) 15:48:45</div>
+  </div>
+</article>
+<article class="message" id="res46">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">人類悪であって神ではないのでは？</div>
+    <div class="message-time">46: 2024/8/28(水) 15:49:04</div>
+  </div>
+</article>
+<article class="message" id="res47">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">光のコヤンスカヤです</div>
+    <div class="message-time">47: 2024/8/28(水) 15:51:49</div>
+  </div>
+</article>
+<article class="message" id="res48">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">上位存在ではぜんぜんない、一般的な生物と同じ土俵の上に産まれた怪物</div>
+    <div class="message-time">48: 2024/8/28(水) 15:53:36</div>
+  </div>
+</article>
+<article class="message" id="res49">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ニコラス、エッグラとチキーラの存在を知り、そして彼らのなにかに気付いてしまった鳥ちゃんにしようと思います</div>
+    <div class="message-time">49: 2024/8/28(水) 16:01:39</div>
+  </div>
+</article>
+<article class="message" id="res50">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ひよこっぽいけどたぶんひよこではないです</div>
+    <div class="message-time">50: 2024/8/28(水) 16:01:58</div>
+  </div>
+</article>
+<article class="message" id="res51">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">CoCやめろ</div>
+    <div class="message-time">51: 2024/8/28(水) 16:02:13</div>
+  </div>
+</article>
+<article class="message" id="res52">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とうの昔に果ててる神に祈り続ける哀れな狂信者なんだよな、ミコラーシュは</div>
+    <div class="message-time">52: 2024/8/28(水) 16:03:32</div>
+  </div>
+</article>
+<article class="message" id="res53">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">大統領の尋問に対して<br>「我らは無窮の問いからやってきた……【卵が先か？鶏が先か？】……フハ、アーッハッハッハッハッ……」<br>などと意味不明な供述を繰り返します</div>
+    <div class="message-time">53: 2024/8/28(水) 16:03:38</div>
+  </div>
+</article>
+<article class="message" id="res54">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">悪意はありますか？</div>
+    <div class="message-time">54: 2024/8/28(水) 16:03:56</div>
+  </div>
+</article>
+<article class="message" id="res55">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありません</div>
+    <div class="message-time">55: 2024/8/28(水) 16:04:01</div>
+  </div>
+</article>
+<article class="message" id="res56">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">靉翁にはしばかれなくてよかったですね</div>
+    <div class="message-time">56: 2024/8/28(水) 16:04:14</div>
+  </div>
+</article>
+<article class="message" id="res57">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">鳥類虐待の趣味はないと信じたい</div>
+    <div class="message-time">57: 2024/8/28(水) 16:04:43</div>
+  </div>
+</article>
+<article class="message" id="res58">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">善悪の天秤にかけたあとは平等ですよ</div>
+    <div class="message-time">58: 2024/8/28(水) 16:05:03</div>
+  </div>
+</article>
+<article class="message" id="res59">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">大統領が食べちゃいませんか？</div>
+    <div class="message-time">59: 2024/8/28(水) 16:05:27</div>
+  </div>
+</article>
+<article class="message" id="res60">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">別に鳥が鳥食べるのは良いと思ってるけど大統領自身がおやつにすることはないと思います</div>
+    <div class="message-time">60: 2024/8/28(水) 16:06:09</div>
+  </div>
+</article>
+<article class="message" id="res61">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">食べたら吸血鬼取り込んだアーカードみたくひよこの意識が大統領の中にまざるかもしれないけど</div>
+    <div class="message-time">61: 2024/8/28(水) 16:06:35</div>
+  </div>
+</article>
+<article class="message" id="res62">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">自然之理。</div>
+    <div class="message-time">62: 2024/8/28(水) 16:06:40</div>
+  </div>
+</article>
+<article class="message" id="res63">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">大統領がエグチキに祈りはじめちゃう</div>
+    <div class="message-time">63: 2024/8/28(水) 16:06:59</div>
+  </div>
+</article>
+<article class="message" id="res64">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とりたまを見たら「なるほどね？」ってなります</div>
+    <div class="message-time">64: 2024/8/28(水) 16:07:15</div>
+  </div>
+</article>
+<article class="message" id="res65">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ニコラスは政治的関心の薄い鳥だから大統領に投票してないと思うけど大統領の庇護の対象ですか？</div>
+    <div class="message-time">65: 2024/8/28(水) 16:08:46</div>
+  </div>
+</article>
+<article class="message" id="res66">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">鳥＝ニコラスでいいのか</div>
+    <div class="message-time">66: 2024/8/28(水) 16:09:38</div>
+  </div>
+</article>
+<article class="message" id="res67">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">鳥類の味方です</div>
+    <div class="message-time">67: 2024/8/28(水) 16:10:05</div>
+  </div>
+</article>
+<article class="message" id="res68">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">鳥がニコラスです<br>人間部はなんか別の名前がついてるでしょう</div>
+    <div class="message-time">68: 2024/8/28(水) 16:10:05</div>
+  </div>
+</article>
+<article class="message" id="res69">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">全く関係ないけどラスターの技欄整理したらひとつ空いたんだけど何かアイデアくだしあ</div>
+    <div class="message-time">69: 2024/8/28(水) 16:10:43</div>
+  </div>
+</article>
+<article class="message" id="res70">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">リスク！！！！！！！！！！！！！！！！！！</div>
+    <div class="message-time">70: 2024/8/28(水) 16:11:43</div>
+  </div>
+</article>
+<article class="message" id="res71">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">レギュレーション</div>
+    <div class="message-time">71: 2024/8/28(水) 16:11:56</div>
+  </div>
+</article>
+<article class="message" id="res72">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">リスクにするなら強化項目をちゃんと書いといてね</div>
+    <div class="message-time">72: 2024/8/28(水) 16:12:46</div>
+  </div>
+</article>
+<article class="message" id="res73">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どういう意でリスク攻撃になるんだ</div>
+    <div class="message-time">73: 2024/8/28(水) 16:13:14</div>
+  </div>
+</article>
+<article class="message" id="res74">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">リスクはそれ自体に固有の理由づけはいらない<br>ほぼ強化系と同じ理屈でとれる</div>
+    <div class="message-time">74: 2024/8/28(水) 16:13:40</div>
+  </div>
+</article>
+<article class="message" id="res75">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうなんだ！</div>
+    <div class="message-time">75: 2024/8/28(水) 16:14:18</div>
+  </div>
+</article>
+<article class="message" id="res76">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">違いは自分の体への負担を考慮しないところだけど<br>それは気合いの問題であって別に異能の内容とは関係ないからな</div>
+    <div class="message-time">76: 2024/8/28(水) 16:15:11</div>
+  </div>
+</article>
+<article class="message" id="res77">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">リスクも良いけど<br>攻撃発動　防御発動でもいいな</div>
+    <div class="message-time">77: 2024/8/28(水) 16:15:30</div>
+  </div>
+</article>
+<article class="message" id="res78">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">チェインじゃいかんのか？</div>
+    <div class="message-time">78: 2024/8/28(水) 16:15:46</div>
+  </div>
+</article>
+<article class="message" id="res79">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">チェインいけるのか</div>
+    <div class="message-time">79: 2024/8/28(水) 16:16:05</div>
+  </div>
+</article>
+<article class="message" id="res80">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">元々単防御持ってなかったっけ</div>
+    <div class="message-time">80: 2024/8/28(水) 16:16:06</div>
+  </div>
+</article>
+<article class="message" id="res81">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ある</div>
+    <div class="message-time">81: 2024/8/28(水) 16:16:13</div>
+  </div>
+</article>
+<article class="message" id="res82">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">攻撃発動と防御発動はチェインできる</div>
+    <div class="message-time">82: 2024/8/28(水) 16:16:21</div>
+  </div>
+</article>
+<article class="message" id="res83">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">個人的にはチェインできなくして強化【防】と住み分けした方が美しかったと思うけどともあれできる</div>
+    <div class="message-time">83: 2024/8/28(水) 16:17:20</div>
+  </div>
+</article>
+<article class="message" id="res84">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">攻撃発動　リスク　強化【防】　でファランクス(盾チク)します</div>
+    <div class="message-time">84: 2024/8/28(水) 16:19:32</div>
+  </div>
+</article>
+<article class="message" id="res85">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">攻撃発動防御発動リスクでいい</div>
+    <div class="message-time">85: 2024/8/28(水) 16:19:49</div>
+  </div>
+</article>
+<article class="message" id="res86">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">強化【防】はコンテみたいな例外を除けば防御発動より優先する意味はないと思ってよい</div>
+    <div class="message-time">86: 2024/8/28(水) 16:20:36</div>
+  </div>
+</article>
+<article class="message" id="res87">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">補正あげるとこなくね？</div>
+    <div class="message-time">87: 2024/8/28(水) 16:20:49</div>
+  </div>
+</article>
+<article class="message" id="res88">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">リスクの話なら手書きするしかないな</div>
+    <div class="message-time">88: 2024/8/28(水) 16:21:06</div>
+  </div>
+</article>
+<article class="message" id="res89">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">紫色の帯のところに【威力】とか【命中】とか書く</div>
+    <div class="message-time">89: 2024/8/28(水) 16:21:27</div>
+  </div>
+</article>
+<article class="message" id="res90">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ダメージ判定でいいのか</div>
+    <div class="message-time">90: 2024/8/28(水) 16:22:16</div>
+  </div>
+</article>
+<article class="message" id="res91">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">攻撃発動　防御発動　リスク【威力】　これでおｋ？</div>
+    <div class="message-time">91: 2024/8/28(水) 16:23:53</div>
+  </div>
+</article>
+<article class="message" id="res92">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">防御発動いらなくね？</div>
+    <div class="message-time">92: 2024/8/28(水) 16:24:04</div>
+  </div>
+</article>
+<article class="message" id="res93">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">盾チクが主軸なので…</div>
+    <div class="message-time">93: 2024/8/28(水) 16:24:40</div>
+  </div>
+</article>
+<article class="message" id="res94">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そもそもおせえんだから無駄に消費するなって話なら　はい</div>
+    <div class="message-time">94: 2024/8/28(水) 16:26:18</div>
+  </div>
+</article>
+<article class="message" id="res95">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんで防御発動チェインすればいいのに入れるんだ？</div>
+    <div class="message-time">95: 2024/8/28(水) 16:26:21</div>
+  </div>
+</article>
+<article class="message" id="res96">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">もしかして応用技をチェインするのと一つの応用技に複数の効果入れることの違いをわかってないのかな</div>
+    <div class="message-time">96: 2024/8/28(水) 16:30:48</div>
+  </div>
+</article>
+<article class="message" id="res97">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">攻撃発動リスクにして防御発動はチェインしろってこと？</div>
+    <div class="message-time">97: 2024/8/28(水) 16:31:54</div>
+  </div>
+</article>
+<article class="message" id="res98">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうすれば防御発動したくないときは防御発動ぶん浮く<br>スペックも浮く<br>もともと覚醒型で常に余裕あるわけではないだろうし<br>例えば暴走率60で攻撃発動+リスクという応用技を作った場合、<br>付加強化【攻】をチェインする選択もできるし防御発動をチェインすることも選択できる</div>
+    <div class="message-time">98: 2024/8/28(水) 16:33:21</div>
+  </div>
+</article>
+<article class="message" id="res99">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">何故かチェイン発動の事いつも忘れるからひとつの技にまとめておきたかった</div>
+    <div class="message-time">99: 2024/8/28(水) 16:34:08</div>
+  </div>
+</article>
+<article class="message" id="res100">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">別にしたほうがお得なのは納得したのでそうします、すまんこんな低次元な事をいつまでも言ってて</div>
+    <div class="message-time">100: 2024/8/28(水) 16:34:55</div>
+  </div>
+</article>
+<article class="message" id="res101">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">最初から応用技に防御発動入れといたら柔軟性がややなくなる<br>ただメリットはある<br>操作を付与された時チェイン発動できないから、味方から操作された時「あ～リスク撃たせながら防御発動もさせてぇなぁ～！」って謎の状況になった時両方使える</div>
+    <div class="message-time">101: 2024/8/28(水) 16:35:11</div>
+  </div>
+</article>
+<article class="message" id="res102">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ忘れやすいからっていうのも良い理由だと思う</div>
+    <div class="message-time">102: 2024/8/28(水) 16:35:39</div>
+  </div>
+</article>
+<article class="message" id="res103">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ただ必要なときには味方PLが思い出させてくれるとはおもう</div>
+    <div class="message-time">103: 2024/8/28(水) 16:36:03</div>
+  </div>
+</article>
+<article class="message" id="res104">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ操作持ちボスとかほとんどの場合予想外だしな…</div>
+    <div class="message-time">104: 2024/8/28(水) 16:36:33</div>
+  </div>
+</article>
+<article class="message" id="res105">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">逆にラスターよく使うしこれを機におぼえればいいんじゃね</div>
+    <div class="message-time">105: 2024/8/28(水) 16:36:35</div>
+  </div>
+</article>
+<article class="message" id="res106">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">めったんの時はテンプレ用意してたからまた作っておくか～～</div>
+    <div class="message-time">106: 2024/8/28(水) 16:37:14</div>
+  </div>
+</article>
+<article class="message" id="res107">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res98">&gt;&gt;98</a><br>スペ3覚醒型が暴走率60になったらスペ5か、暴走率50の間違いでした</div>
+    <div class="message-time">107: 2024/8/28(水) 16:37:40</div>
+  </div>
+</article>
+<article class="message" id="res108">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">（蟹リスク強いからそのうちテコ入れ入りそうだけど）</div>
+    <div class="message-time">108: 2024/8/28(水) 16:44:07</div>
+  </div>
+</article>
+<article class="message" id="res109">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">出目1～2で精度÷3分の補正をなくすって話があったと思う</div>
+    <div class="message-time">109: 2024/8/28(水) 16:44:44</div>
+  </div>
+</article>
+<article class="message" id="res110">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そのぐらいかな</div>
+    <div class="message-time">110: 2024/8/28(水) 16:44:47</div>
+  </div>
+</article>
+<article class="message" id="res111">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">リスクロール &nbsp; &nbsp; <br>【６】 &nbsp; &nbsp;覚醒発動 &nbsp; &nbsp; → &nbsp; &nbsp; 付加補正量＋４Ｄ６を加える。<br>ただし発動後、【自爆】ダメージ。<br>【５】 &nbsp; &nbsp;活性発動 &nbsp; &nbsp; → &nbsp; &nbsp; 付加補正量＋３Ｄ６を加える。<br>ただし発動後、【発作】ダメージ。<br>【４】～【３】 &nbsp; &nbsp;活性起動 &nbsp; &nbsp; → &nbsp; &nbsp; 付加補正量＋２Ｄ６を加える。<br>【２】～【１】 &nbsp; &nbsp;通常発動 &nbsp; &nbsp; → &nbsp; &nbsp; ＋１Ｄ６を加える。</div>
+    <div class="message-time">111: 2024/8/28(水) 16:46:45</div>
+  </div>
+</article>
+<article class="message" id="res112">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">こうなる</div>
+    <div class="message-time">112: 2024/8/28(水) 16:46:51</div>
+  </div>
+</article>
+<article class="message" id="res113">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">3～6までの強化ダイス数1dずつ減らそうかなとも思うけどそうなると弱いんだよな</div>
+    <div class="message-time">113: 2024/8/28(水) 16:49:35</div>
+  </div>
+</article>
+<article class="message" id="res114">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">1d減らして固定値＋3とか？　最低保証ついてリスク感なくなる？</div>
+    <div class="message-time">114: 2024/8/28(水) 16:50:36</div>
+  </div>
+</article>
+<article class="message" id="res115">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まともな精度持ってたらあまりうれしくない効果だな<br>大統領は精度0だからまだ使えるけど</div>
+    <div class="message-time">115: 2024/8/28(水) 16:51:47</div>
+  </div>
+</article>
+<article class="message" id="res116">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ精度はちゃんと加算されるしリスクだしこんなもんか</div>
+    <div class="message-time">116: 2024/8/28(水) 16:52:19</div>
+  </div>
+</article>
+<article class="message" id="res117">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">利率の問題なんですよね<br>リスクの効果自体は別に強化系と追加系の組み合わせで再現できるんだけど、4pp突っ込んでるのに&gt;&gt;113だと「5以上出さないと意味ないよね」ってなる<br>もっとも、リスクは1spだからそれを考えたらお釣りが来るかもしれんが</div>
+    <div class="message-time">117: 2024/8/28(水) 16:52:35</div>
+  </div>
+</article>
+<article class="message" id="res118">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">デメリットもデカいからこれでいいと思うけどにゃー</div>
+    <div class="message-time">118: 2024/8/28(水) 16:53:27</div>
+  </div>
+</article>
+<article class="message" id="res119">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">119: 2024/8/28(水) 16:54:33</div>
+  </div>
+</article>
+<article class="message" id="res120">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁぶっちゃけ今&gt;&gt;111見返したら効果に統一感なくなってキモいのでこのまま行くと思います<br>同じ理由で過去の私も見送ったのだろう</div>
+    <div class="message-time">120: 2024/8/28(水) 16:54:34</div>
+  </div>
+</article>
+<article class="message" id="res121">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">1/3でPP4突っ込んで重強化以下の効率となると個人的には足踏みしちゃうけどそんなタマが取るSEじゃないしな</div>
+    <div class="message-time">121: 2024/8/28(水) 16:54:55</div>
+  </div>
+</article>
+<article class="message" id="res122">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=20240851f7bae2&amp;i=ie0f7a73a" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=20240851f7bae2&amp;i=ie0f7a73a" width="324" height="47"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=20240851f7bae2&amp;i=ie0f7a73a">📎 本日の夢.png</a> <span class="filesize">[49.8 KB, 744x101px]</span> を追加しました。</div>
+    <div class="message-time">122: 2024/8/28(水) 18:25:40</div>
+  </div>
+</article>
+<article class="message" id="res123">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">寝ぼけたせいで「今日の夢」って文言が抜けてた</div>
+    <div class="message-time">123: 2024/8/28(水) 18:26:08</div>
+  </div>
+</article><div class="elapsed"><span>1日 6時間 10分 経過</span></div>
+<article class="message" id="res124">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログまだだっけ？と言おうとしたらあったわ<br>ありがとサンクス</div>
+    <div class="message-time">124: 2024/8/30(金) 0:36:57</div>
+  </div>
+</article><div class="elapsed"><span>63日 23時間 31分 経過</span></div>
+<article class="message" id="res125">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今話してるオートキャラがここに来たらラスターより酷いことにならない？</div>
+    <div class="message-time">125: 2024/11/2(土) 0:08:19</div>
+  </div>
+</article>
+<article class="message" id="res126">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ラスターはHPある分死ぬまで猶予あったけどクリスはそうでもないからな</div>
+    <div class="message-time">126: 2024/11/2(土) 0:11:02</div>
+  </div>
+</article>
+<article class="message" id="res127">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">一番しんどいのがニコラスのHPが低いからオートが全く役に立たないことなんだよな</div>
+    <div class="message-time">127: 2024/11/2(土) 0:11:37</div>
+  </div>
+</article>
+<article class="message" id="res128">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オートじゃなくてトラップか</div>
+    <div class="message-time">128: 2024/11/2(土) 0:11:48</div>
+  </div>
+</article>
+<article class="message" id="res129">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いや、ヒットリがあるか</div>
+    <div class="message-time">129: 2024/11/2(土) 0:11:59</div>
+  </div>
+</article>
+<article class="message" id="res130">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いやいうてなぁ</div>
+    <div class="message-time">130: 2024/11/2(土) 0:12:04</div>
+  </div>
+</article>
+<article class="message" id="res131">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">しかし止めることは出来ない……！<br>心が痛い！</div>
+    <div class="message-time">131: 2024/11/2(土) 0:13:25</div>
+  </div>
+</article>
+<article class="message" id="res132">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ救いなのはニコラスがアップデートで精神オルレがフェイズ２になってることです</div>
+    <div class="message-time">132: 2024/11/2(土) 0:15:28</div>
+  </div>
+</article>
+<article class="message" id="res133">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ラバソくんリオンで行くって言え！！<br>……あいおうもオート持ち！！</div>
+    <div class="message-time">133: 2024/11/2(土) 0:21:40</div>
+  </div>
+</article><div class="elapsed"><span>2日 1時間 7分 経過</span></div>
+<article class="message" id="res134">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ここまでは普通のボス戦、ここからがマグマなんです（彼方を構えながら）</div>
+    <div class="message-time">134: 2024/11/4(月) 1:29:20</div>
+  </div>
+</article>
+<article class="message" id="res135">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ今回はまだ大丈夫でしょう……順調もいいところだし</div>
+    <div class="message-time">135: 2024/11/4(月) 1:49:29</div>
+  </div>
+</article><div class="elapsed"><span>23時間 21分 経過</span></div>
+<article class="message" id="res136">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=20240851f7bae2&amp;i=i67e5626e" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=20240851f7bae2&amp;i=i67e5626e" width="164" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=20240851f7bae2&amp;i=i67e5626e">📎 event-アイテムショップ.jpg</a> <span class="filesize">[818.3 KB, 1080x1080px]</span> を追加しました。</div>
+    <div class="message-time">136: 2024/11/5(火) 1:10:58</div>
+  </div>
+</article>
+<article class="message" id="res137">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今回は出てないけどアイテムショップ<br>アイテムデッキから7枚めくって、その中から任意のアイテムを【価値×２】の値段で買える</div>
+    <div class="message-time">137: 2024/11/5(火) 1:12:51</div>
+  </div>
+</article>
+<article class="message" id="res138">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">出てないけどというかデッキには入ってないけど</div>
+    <div class="message-time">138: 2024/11/5(火) 1:13:11</div>
+  </div>
+</article>
+<article class="message" id="res139">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なるほど、そこで因子使って買った方がオイシイブツもあるかもね、って感じか</div>
+    <div class="message-time">139: 2024/11/5(火) 1:13:17</div>
+  </div>
+</article>
+<article class="message" id="res140">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">やたらめったら高性能なのはその関係もある</div>
+    <div class="message-time">140: 2024/11/5(火) 1:13:38</div>
+  </div>
+</article>
+<article class="message" id="res141">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">原型になったアイテムと同等程度の性能しかないアイテムはデコイ（比較対象：煙幕）ぐらいだな</div>
+    <div class="message-time">141: 2024/11/5(火) 1:14:18</div>
+  </div>
+</article>
+<article class="message" id="res142">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">整備されたこのルールでもう一度やりてぇ～</div>
+    <div class="message-time">142: 2024/11/5(火) 1:14:30</div>
+  </div>
+</article>
+<article class="message" id="res143">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">言うて相手の命中ー５されまくるのって普通にありがたいではあると思いますわ</div>
+    <div class="message-time">143: 2024/11/5(火) 1:14:54</div>
+  </div>
+</article>
+<article class="message" id="res144">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">強いて「デコイ」と言うならチョイスロールさせられる時に２つか３つ分ぐらい吸うブツかなと思ってたけど</div>
+    <div class="message-time">144: 2024/11/5(火) 1:15:58</div>
+  </div>
+</article>
+<article class="message" id="res145">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ストーリー的に深みのあるシナリオにはなりづらいけど、インスタントダンジョン我ながら便利だと思うのでみんな開こうね<br>ボスと雑魚的とダンジョンが何由来なのかだけ設定すれば作れるから</div>
+    <div class="message-time">145: 2024/11/5(火) 1:16:01</div>
+  </div>
+</article>
+<article class="message" id="res146">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">煙幕やスモークに類似するアイテム……と考えていいのが思いつかなかったんだよね</div>
+    <div class="message-time">146: 2024/11/5(火) 1:16:45</div>
+  </div>
+</article>
+<article class="message" id="res147">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ほなしゃあない</div>
+    <div class="message-time">147: 2024/11/5(火) 1:17:00</div>
+  </div>
+</article>
+<article class="message" id="res148">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">拘りがあるわけではないし、そもそものアイデアも募集中なので良いのがあれば更新したり追加します</div>
+    <div class="message-time">148: 2024/11/5(火) 1:17:24</div>
+  </div>
+</article>
+<article class="message" id="res149">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カードのテキスト・画像の一覧とか、ユドナに放り込んですぐ使えるセーブデータを配布するページとか作らないといかんな……</div>
+    <div class="message-time">149: 2024/11/5(火) 1:19:54</div>
+  </div>
+</article>
+<article class="message" id="res150">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういえばなんですけど2d因子貰えるか相手に2dダメージ与えられるあれなんすけど<br>あれって命中ロールいらんのか？とか<br>あれ二つあれば最悪それでニコラス撃墜出来んか？とか思ったんですが</div>
+    <div class="message-time">150: 2024/11/5(火) 1:20:11</div>
+  </div>
+</article>
+<article class="message" id="res151">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">命中ロールは必要だったはず、<br>威力2d防御無視の「攻撃」を行うってテキストだったんじゃないか</div>
+    <div class="message-time">151: 2024/11/5(火) 1:21:15</div>
+  </div>
+</article>
+<article class="message" id="res152">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ああなるほど</div>
+    <div class="message-time">152: 2024/11/5(火) 1:21:33</div>
+  </div>
+</article>
+<article class="message" id="res153">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">必中とも書いてあったかもしれんけどその場合もパフェ耐性に引っ掛かる</div>
+    <div class="message-time">153: 2024/11/5(火) 1:21:43</div>
+  </div>
+</article>
+<article class="message" id="res154">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">トラップ解放のノリで使えるから強いよねぐらいの気持ちです<br>銭投げ</div>
+    <div class="message-time">154: 2024/11/5(火) 1:22:26</div>
+  </div>
+</article>
+<article class="message" id="res155">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ああそうそう<br>たぬきのじたばた動きとあのBGMの親和性が異常だと思います　良かったです</div>
+    <div class="message-time">155: 2024/11/5(火) 1:22:47</div>
+  </div>
+</article>
+<article class="message" id="res156">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">トラップ解放で雑魚一掃できると考えりゃそりゃ強いわなぁ</div>
+    <div class="message-time">156: 2024/11/5(火) 1:23:16</div>
+  </div>
+</article>
+<article class="message" id="res157">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">原典のニコラスがダバダバ走ってるのを見て「たぬきみたい」と表現したのはTさんだったかな</div>
+    <div class="message-time">157: 2024/11/5(火) 1:23:37</div>
+  </div>
+</article>
+<article class="message" id="res158">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そーなの！？</div>
+    <div class="message-time">158: 2024/11/5(火) 1:23:47</div>
+  </div>
+</article>
+<article class="message" id="res159">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">事実上カゲTウルフの合作卓なんですかこれ</div>
+    <div class="message-time">159: 2024/11/5(火) 1:24:03</div>
+  </div>
+</article>
+<article class="message" id="res160">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">何かビジュアル的にPLを脅かしてやりたいと思ってたところにいいインスピレーションになったから採用しました</div>
+    <div class="message-time">160: 2024/11/5(火) 1:24:26</div>
+  </div>
+</article>
+<article class="message" id="res161">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">自作たぬきとかよーやるわ…</div>
+    <div class="message-time">161: 2024/11/5(火) 1:24:44</div>
+  </div>
+</article>
+<article class="message" id="res162">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お陰で大して通ってもないコンテンツのミームについてそこそこ真面目に調べる羽目になった</div>
+    <div class="message-time">162: 2024/11/5(火) 1:25:14</div>
+  </div>
+</article>
+<article class="message" id="res163">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">流れてきたのをつまみ食いしてた程度なのに</div>
+    <div class="message-time">163: 2024/11/5(火) 1:25:36</div>
+  </div>
+</article>
+<article class="message" id="res164">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">何よりたぬきは都合上保管庫が無いせいで大変だろうなって</div>
+    <div class="message-time">164: 2024/11/5(火) 1:25:53</div>
+  </div>
+</article>
+<article class="message" id="res165">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">Gifかなんかを解体してトレスしたんじゃなかったかな</div>
+    <div class="message-time">165: 2024/11/5(火) 1:27:07</div>
+  </div>
+</article>
+<article class="message" id="res166">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういやブラボが元ネタなら割とマジでクリスマス卓のサンタは一切関係無かったなぁ<br>路上の「星」にニコラスって名前にスピード狂（ソリに乗って逃げようとした）辺り最初本気でソルトと同じ考え方してたけど</div>
+    <div class="message-time">166: 2024/11/5(火) 1:36:30</div>
+  </div>
+</article>
+<article class="message" id="res167">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">変な頭のおかしいひよこです</div>
+    <div class="message-time">167: 2024/11/5(火) 1:38:52</div>
+  </div>
+</article>
+<article class="message" id="res168">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それ以上でもそれ以下でもない</div>
+    <div class="message-time">168: 2024/11/5(火) 1:39:07</div>
+  </div>
+</article>
+<article class="message" id="res169">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はた迷惑なヒヨコがよ</div>
+    <div class="message-time">169: 2024/11/5(火) 1:39:18</div>
+  </div>
+</article>
+<article class="message" id="res170">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お前らの方が迷惑だろコノヤロー</div>
+    <div class="message-time">170: 2024/11/5(火) 1:39:46</div>
+  </div>
+</article>
+<article class="message" id="res171">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい</div>
+    <div class="message-time">171: 2024/11/5(火) 1:39:54</div>
+  </div>
+</article>
+<article class="message" id="res172">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">完全に白旗です</div>
+    <div class="message-time">172: 2024/11/5(火) 1:41:17</div>
+  </div>
+</article>
+<article class="message" id="res173">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ひよこはたぶん他の住人たちを悪夢に誘うことで人類を啓蒙しようとしたんちゃうかな</div>
+    <div class="message-time">173: 2024/11/5(火) 1:43:09</div>
+  </div>
+</article>
+<article class="message" id="res174">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はた迷惑なひよこがよ<br>お前一人だけ永遠に眠らせてやろうか</div>
+    <div class="message-time">174: 2024/11/5(火) 1:43:51</div>
+  </div>
+</article>
+<article class="message" id="res175">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">夢という形で人々の思念を統合することでとりたまという真理に目覚めるのだ</div>
+    <div class="message-time">175: 2024/11/5(火) 1:44:25</div>
+  </div>
+</article>
+<article class="message" id="res176">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">Nightmare Kart - Nicholas, Host of the Nightmare<br><a href="https://youtu.be/nwZpRFNeI30" target="_blank">https:<wbr>/<wbr>/<wbr>youtu.<wbr>be/<wbr>nwZpRFNeI3<wbr>0</a><br>今更だけど元ネタのプレイ動画貼っとくか</div>
+    <div class="message-time">176: 2024/11/5(火) 1:55:48</div>
+  </div>
+</article><div class="elapsed"><span>20時間 48分 経過</span></div>
+<article class="message" id="res177">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res176">&gt;&gt; 176</a> <br>元ネタの元ネタが分からないからどこまでマジになって見れば良いんだこれは？？？<br>笑うべきなのか？？？</div>
+    <div class="message-time">177: 2024/11/5(火) 22:44:31</div>
+  </div>
+</article>
+<article class="message" id="res178">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">笑えばいいと思うよ</div>
+    <div class="message-time">178: 2024/11/5(火) 22:51:59</div>
+  </div>
+</article>
+<article class="message" id="res179">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">Bloodborne<wbr>(元ネタの元ネタ)が大ヒット<br>↓<br>海外でBloodborne<wbr>カートというレースゲームミームが流行る<br>↓<br>有志がほんとにBloodborne<wbr>カートを作り始める<br>↓<br>そろそろリリース出来るよって時に開発からやめてねと言われリリース出来なくなる<br>↓<br>デザインを変えてnightmare kartというBloodborne<wbr>のミームのパロディゲームが完成してリリースされる<br>↓<br>私がキャスでやりウルフさんが見て卓になる</div>
+    <div class="message-time">179: 2024/11/5(火) 22:56:54</div>
+  </div>
+</article>
+<article class="message" id="res180">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">？？？？？</div>
+    <div class="message-time">180: 2024/11/5(火) 22:58:13</div>
+  </div>
+</article>
+<article class="message" id="res181">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">哀れな人って感じのは聞いたけど鳥かご男さんって原作でもだばだば走りながら戦うんすか？</div>
+    <div class="message-time">181: 2024/11/5(火) 22:59:43</div>
+  </div>
+</article>
+<article class="message" id="res182">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">全力疾走で逃げながら戦います</div>
+    <div class="message-time">182: 2024/11/5(火) 23:01:06</div>
+  </div>
+</article>
+<article class="message" id="res183">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ミコラーシュを追いかけるだけ<br><a href="https://www.nicovideo.jp/watch/sm27820156?ref=nicoiphone_other" target="_blank">https:<wbr>/<wbr>/<wbr>www.<wbr>nicovideo.<wbr>jp/<wbr>watch/<wbr>sm27820156<wbr>?<wbr>ref=<wbr>nicoiphone<wbr>_<wbr>other</a></div>
+    <div class="message-time">183: 2024/11/5(火) 23:03:54</div>
+  </div>
+</article>
+<article class="message" id="res184">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">特定のポイントまで追い込まないとこんな感じでずっと追いかけっこ出来る</div>
+    <div class="message-time">184: 2024/11/5(火) 23:07:15</div>
+  </div>
+</article>
+<article class="message" id="res185">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんだコイツ</div>
+    <div class="message-time">185: 2024/11/5(火) 23:08:10</div>
+  </div>
+</article>
+<article class="message" id="res186">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">思った以上にごっつい鳥かご被ってるなぁ…</div>
+    <div class="message-time">186: 2024/11/5(火) 23:08:26</div>
+  </div>
+</article>
+<article class="message" id="res187">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">上位者と交信するための檻らしいんだけどよく分からない</div>
+    <div class="message-time">187: 2024/11/5(火) 23:11:48</div>
+  </div>
+</article>
+<article class="message" id="res188">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">頭パッパラパーが多い世界なんかなぁ（偏見）</div>
+    <div class="message-time">188: 2024/11/5(火) 23:14:46</div>
+  </div>
+</article>
+<article class="message" id="res189">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だいたいあってる</div>
+    <div class="message-time">189: 2024/11/5(火) 23:16:30</div>
+  </div>
+</article>
+<article class="message" id="res190">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ミコラーシュのセリフ　日本語ver<br><a href="https://youtu.be/HlGfgOyGJR4" target="_blank">https:<wbr>/<wbr>/<wbr>youtu.<wbr>be/<wbr>HlGfgOyGJR<wbr>4</a><br>卓で出た変な文言、変な叫び声は本家の改変ですね</div>
+    <div class="message-time">190: 2024/11/5(火) 23:19:05</div>
+  </div>
+</article>
+<article class="message" id="res191">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">またやりたくなってきたなBloodborne<wbr>……</div>
+    <div class="message-time">191: 2024/11/5(火) 23:21:49</div>
+  </div>
+</article><div class="elapsed"><span>3日 22時間 31分 経過</span></div>
+<article class="message" id="res192">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">何やってんだこの爆弾魔…？（見学ついでにログを読み始めた）</div>
+    <div class="message-time">192: 2024/11/9(土) 21:52:51</div>
+  </div>
+</article>
+<article class="message" id="res193">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">建物の壁爆破して通り抜けるとか蛮族かよ…</div>
+    <div class="message-time">193: 2024/11/9(土) 21:53:51</div>
+  </div>
+</article>
+<article class="message" id="res194">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">追いついた。GMのダイスがおかしい</div>
+    <div class="message-time">194: 2024/11/9(土) 22:04:38</div>
+  </div>
+</article>
+<article class="message" id="res195">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「卵が先かニワトリが先か」問題の答えが判明か<br><a href="https://news.livedoor.com/article/detail/27517059/" target="_blank">https:<wbr>/<wbr>/<wbr>news.<wbr>livedoor.<wbr>com/<wbr>article/<wbr>detail/<wbr>27517059/<wbr></a><br>とってもタイムリーな話題</div>
+    <div class="message-time">195: 2024/11/9(土) 22:47:04</div>
+  </div>
+</article>
+<article class="message" id="res196">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">真理に辿り着いてしまった</div>
+    <div class="message-time">196: 2024/11/9(土) 23:33:23</div>
+  </div>
+</article>
+<article class="message" id="res197">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ビルから落ちたら大変なんだなぁ</div>
+    <div class="message-time">197: 2024/11/10(日) 0:16:30</div>
+  </div>
+</article>
+<article class="message" id="res198">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">判定の足場ぐらい作れんのか？</div>
+    <div class="message-time">198: 2024/11/10(日) 0:18:24</div>
+  </div>
+</article>
+<article class="message" id="res199">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちゃんと足で追っかけたの初だったな</div>
+    <div class="message-time">199: 2024/11/10(日) 0:19:11</div>
+  </div>
+</article>
+<article class="message" id="res200">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ビルから落下する生物を助ける生態を持つ下層生物「ビルカラオチルヤツタスケルゼミ」がいないか判定していいですか？</div>
+    <div class="message-time">200: 2024/11/10(日) 0:20:13</div>
+  </div>
+</article>
+<article class="message" id="res201">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どうぞ</div>
+    <div class="message-time">201: 2024/11/10(日) 0:20:32</div>
+  </div>
+</article>
+<article class="message" id="res202">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">幸運目標値4ですね振ります。ファンブルしました落ちます</div>
+    <div class="message-time">202: 2024/11/10(日) 0:21:44</div>
+  </div>
+</article>
+<article class="message" id="res203">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういや俺らの回のログが無いな</div>
+    <div class="message-time">203: 2024/11/10(日) 0:28:50</div>
+  </div>
+</article>
+<article class="message" id="res204">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちょっと更新滞ってます</div>
+    <div class="message-time">204: 2024/11/10(日) 0:29:41</div>
+  </div>
+</article><div class="elapsed"><span>8時間 10分 経過</span></div>
+<article class="message" id="res205">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=20240851f7bae2&amp;i=i607d417b" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=20240851f7bae2&amp;i=i607d417b" width="266" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=20240851f7bae2&amp;i=i607d417b">📎 キリスマ【路上の星、ニコラス】.jpg</a> <span class="filesize">[891.4 KB, 1505x918px]</span> を追加しました。</div>
+    <div class="message-time">205: 2024/11/10(日) 8:40:02</div>
+  </div>
+</article>
+<article class="message" id="res206">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=20240851f7bae2&amp;i=ia824c633" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=20240851f7bae2&amp;i=ia824c633" width="273" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=20240851f7bae2&amp;i=ia824c633">📎 はむラバ【路上の星、ニコラス】.jpg</a> <span class="filesize">[716.0 KB, 1539x918px]</span> を追加しました。</div>
+    <div class="message-time">206: 2024/11/10(日) 8:40:22</div>
+  </div>
+</article>
+<article class="message" id="res207">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">207: 2024/11/10(日) 8:41:08</div>
+  </div>
+</article>
+<article class="message" id="res208">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おはようございます<br>今夜ちょっと忙しいので今の内に更新しときます</div>
+    <div class="message-time">208: 2024/11/10(日) 8:41:27</div>
+  </div>
+</article>
+<article class="message" id="res209">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます</div>
+    <div class="message-time">209: 2024/11/10(日) 8:41:39</div>
+  </div>
+</article>
+<article class="message" id="res210">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あざます！</div>
+    <div class="message-time">210: 2024/11/10(日) 10:43:08</div>
+  </div>
+</article>
+<article class="message" id="res211">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">最後のゲルハムトの爆破より最初の落下ダメージの方がでかいじゃん！</div>
+    <div class="message-time">211: 2024/11/10(日) 12:52:18</div>
+  </div>
+</article>
+<article class="message" id="res212">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">位置エネルギーってすごい</div>
+    <div class="message-time">212: 2024/11/10(日) 12:52:27</div>
+  </div>
+</article>
+<article class="message" id="res213">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">軽く読み返したけど、ゲルハムト最初っからニコラスの正体分かって攻撃仕掛けてない？</div>
+    <div class="message-time">213: 2024/11/10(日) 14:48:44</div>
+  </div>
+</article>
+<article class="message" id="res214">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうなんですか？</div>
+    <div class="message-time">214: 2024/11/10(日) 14:49:56</div>
+  </div>
+</article>
+<article class="message" id="res215">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">じゃあそうです</div>
+    <div class="message-time">215: 2024/11/10(日) 14:49:59</div>
+  </div>
+</article>
+<article class="message" id="res216">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">変なところで賢い奴</div>
+    <div class="message-time">216: 2024/11/10(日) 15:15:04</div>
+  </div>
+</article>
+<article class="message" id="res217">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">何も分かってない賢者</div>
+    <div class="message-time">217: 2024/11/10(日) 15:35:18</div>
+  </div>
+</article>
+<article class="message" id="res218">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">称号：何も分かってない賢者を獲得しました！</div>
+    <div class="message-time">218: 2024/11/10(日) 15:42:09</div>
+  </div>
+</article><div class="elapsed"><span>1日 22時間 17分 経過</span></div>
+<article class="message" id="res219">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ラスター<br>cond &nbsp; &nbsp;<br>&lt;BCDice：ラスター&gt;<br>Yggdrasill<wbr> : (COND) → HP3[2,1] 、 PP3[1,2]<br><br>えぇ……</div>
+    <div class="message-time">219: 2024/11/12(火) 13:59:33</div>
+  </div>
+</article>
+<article class="message" id="res220">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">U-ファルコン・ルスキニア<br>「小鳥。我鳥類大統領。貴様等目的不明。説明要求。」鳥に話しかけます＠<br><br>草</div>
+    <div class="message-time">220: 2024/11/12(火) 14:09:39</div>
+  </div>
+</article>
+<article class="message" id="res221">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">U-ファルコン・ルスキニア<br>「小鳥無反応……！？鳥類大統領我呼掛無視……！？」<br><br>反大統領派閥の鳥だったのかな？</div>
+    <div class="message-time">221: 2024/11/12(火) 14:10:38</div>
+  </div>
+</article>
+<article class="message" id="res222">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">政治的関心の薄いひよこでした</div>
+    <div class="message-time">222: 2024/11/12(火) 14:11:29</div>
+  </div>
+</article>
+<article class="message" id="res223">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">人間でも投票率低いのに鳥類の選挙の投票率やばそうだな…得票率数％で大統領になってたりする？</div>
+    <div class="message-time">223: 2024/11/12(火) 14:17:30</div>
+  </div>
+</article>
+<article class="message" id="res224">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それとも人間なんかより鳥類は意識が高いので投票率100％近くで当選したんですか？</div>
+    <div class="message-time">224: 2024/11/12(火) 14:17:58</div>
+  </div>
+</article>
+<article class="message" id="res225">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">政府発表によると投票率が120%あったそうです</div>
+    <div class="message-time">225: 2024/11/12(火) 14:19:41</div>
+  </div>
+</article>
+<article class="message" id="res226">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">120％かぁ</div>
+    <div class="message-time">226: 2024/11/12(火) 14:20:41</div>
+  </div>
+</article>
+<article class="message" id="res227">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オート防御餅大変だなぁ</div>
+    <div class="message-time">227: 2024/11/12(火) 14:23:45</div>
+  </div>
+</article>
+<article class="message" id="res228">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">インファイトヒットトリガーって技名に書いてるけどインファイトトリガーとヒットトリガーって共存できたっけ？って確認したら共存不可だった</div>
+    <div class="message-time">228: 2024/11/12(火) 14:25:43</div>
+  </div>
+</article>
+<article class="message" id="res229">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">近接ヒットトリガーはできる</div>
+    <div class="message-time">229: 2024/11/12(火) 14:26:43</div>
+  </div>
+</article>
+<article class="message" id="res230">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">大統領のHPがみるみる減っていってる</div>
+    <div class="message-time">230: 2024/11/12(火) 14:27:38</div>
+  </div>
+</article>
+<article class="message" id="res231">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">できるんだ</div>
+    <div class="message-time">231: 2024/11/12(火) 14:27:40</div>
+  </div>
+</article>
+<article class="message" id="res232">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁカゲさんは直しといてください</div>
+    <div class="message-time">232: 2024/11/12(火) 14:27:43</div>
+  </div>
+</article>
+<article class="message" id="res233">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">近接ヒットトリガーって遠距離攻撃ヒットしたらヒットトリガー発動しなくていいの？</div>
+    <div class="message-time">233: 2024/11/12(火) 14:28:19</div>
+  </div>
+</article>
+<article class="message" id="res234">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">インファイトトリガーは攻撃が飛んできた時点、被弾よりも先に発動するからヒットとはタイミングが違う<br>この２つのトリガーが同時に満たされることはないので併用できないって話だな</div>
+    <div class="message-time">234: 2024/11/12(火) 14:28:23</div>
+  </div>
+</article>
+<article class="message" id="res235">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい&gt;&gt;遠距離は発動しなくて良い？</div>
+    <div class="message-time">235: 2024/11/12(火) 14:28:33</div>
+  </div>
+</article>
+<article class="message" id="res236">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">物理攻撃は無駄に細分化できるのに精神攻撃にだけ反応しない、はできない</div>
+    <div class="message-time">236: 2024/11/12(火) 14:28:54</div>
+  </div>
+</article>
+<article class="message" id="res237">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうなんだ</div>
+    <div class="message-time">237: 2024/11/12(火) 14:29:06</div>
+  </div>
+</article>
+<article class="message" id="res238">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カスがよ</div>
+    <div class="message-time">238: 2024/11/12(火) 14:29:13</div>
+  </div>
+</article>
+<article class="message" id="res239">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">近接ヒットトリガーでも精神攻撃には発動するからな</div>
+    <div class="message-time">239: 2024/11/12(火) 14:29:18</div>
+  </div>
+</article>
+<article class="message" id="res240">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">精神トリガーを嚙ませることで精神に反応しなくなるとか精神にのみ反応するとか選択できるようにしろ</div>
+    <div class="message-time">240: 2024/11/12(火) 14:30:02</div>
+  </div>
+</article>
+<article class="message" id="res241">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">GM<br>[1]哨戒<br>[2]哨戒<br>[3]哨戒<br><br>草</div>
+    <div class="message-time">241: 2024/11/12(火) 14:37:02</div>
+  </div>
+</article>
+<article class="message" id="res242">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">深夜で脳が死んでる～</div>
+    <div class="message-time">242: 2024/11/12(火) 14:55:46</div>
+  </div>
+</article>
+<article class="message" id="res243">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ラスター<br>cf17+1D6+1<wbr>d+1d+10<br>会場 &nbsp; &nbsp; &nbsp; &nbsp;<br>&lt;BCDice：ラスター&gt;<br>Yggdrasill<wbr> : (CF17+1D6+<wbr>1D6+1D6+10<wbr>) → 計【 24 】 ： 17+1[1]+2[<wbr>2]+1[1]+10<wbr> (fa:2)-7[6<wbr>,1]<br><br>うわ</div>
+    <div class="message-time">243: 2024/11/12(火) 14:56:48</div>
+  </div>
+</article>
+<article class="message" id="res244">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ラスター<br>鴉の羽根を思わせる外套に身を包んだ黒い騎士になります<br> &nbsp; &nbsp;<br>U-ファルコン・ルスキニア<br>鴉！？我臣民！？<br><br>判定ガバガバすぎる</div>
+    <div class="message-time">244: 2024/11/12(火) 14:58:28</div>
+  </div>
+</article>
+<article class="message" id="res245">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ラスター<br>5d<br>会場 &nbsp; &nbsp; &nbsp; &nbsp;<br>&lt;BCDice：ラスター&gt;<br>Yggdrasill<wbr> : (5D6) → 7[1,1,1,2,<wbr>2] → 7<br><br><br>うわ</div>
+    <div class="message-time">245: 2024/11/12(火) 15:02:21</div>
+  </div>
+</article>
+<article class="message" id="res246">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ラスター：せっかくだから下層行きたいくね？<br>U-ファルコン・ルスキニア：え？<br>U-ファルコン・ルスキニア：じゃあ理由を用意してください<br>GM：ライスが攫われたらしい &nbsp; &nbsp; &nbsp; &nbsp;<br>ライス・ルスキニア：！？！？！？！？？！？！？！？！？！<br><br>ライスが雑にさらわれてて草</div>
+    <div class="message-time">246: 2024/11/12(火) 15:04:37</div>
+  </div>
+</article>
+<article class="message" id="res247">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">路上の星、ニコラス<br>3d6+0 能力攻撃力<br>会場 &nbsp; &nbsp; &nbsp; &nbsp;<br>&lt;BCDice：路上の星、ニコラス&gt;<br>Yggdrasill<wbr> : (3D6+0) → 16[6,6,4]+<wbr>0 → 16<br><br>GMのカスがこの野郎</div>
+    <div class="message-time">247: 2024/11/12(火) 15:05:42</div>
+  </div>
+</article>
+<article class="message" id="res248">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どういうわけかクリファンないダメージロールが一番振れるんだよなニコラス</div>
+    <div class="message-time">248: 2024/11/12(火) 15:06:50</div>
+  </div>
+</article>
+<article class="message" id="res249">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ラスター<br>私がなんかやらかした時に5d＝７って唱えてください<br>GM<br>詰めの段階の命中判定で出た数字とかじゃなくてよかったよあれは本当<br><br>お？トドメに1以外出せば確定命中で終わってたのに初心貫通して3回1出して倒しきれなかったチヒロさんに言ってんのか？</div>
+    <div class="message-time">249: 2024/11/12(火) 15:09:07</div>
+  </div>
+</article>
+<article class="message" id="res250">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">1d＝-2</div>
+    <div class="message-time">250: 2024/11/12(火) 15:09:19</div>
+  </div>
+</article>
+<article class="message" id="res251">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">U-ファルコン・ルスキニア<br>こいつが方向音痴なのを知っているのですごく訝しみながら進みます＠<br><br>大統領にすら方向音痴って認識されてるのかラスター……</div>
+    <div class="message-time">251: 2024/11/12(火) 15:14:27</div>
+  </div>
+</article>
+<article class="message" id="res252">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんでこの回こんな運悪いんだ</div>
+    <div class="message-time">252: 2024/11/12(火) 15:14:34</div>
+  </div>
+</article>
+<article class="message" id="res253">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">GM<br>【急展開】→【落下】【平穏な道】<br>会場 &nbsp; &nbsp; &nbsp; &nbsp;<br>U-ファルコン・ルスキニア<br>GM！！！！！！GM聞いて下さい！！！！！！！！<br>会場 &nbsp; &nbsp; &nbsp; &nbsp;<br>U-ファルコン・ルスキニア<br>なんと飛んでます！！！！！！！！！！！！！！！！！！<br>会場 &nbsp; &nbsp; &nbsp; &nbsp;<br>GM<br>なんじゃい<br>会場 &nbsp; &nbsp; &nbsp; &nbsp;<br>GM<br>はぁ？<br>会場 &nbsp; &nbsp; &nbsp; &nbsp;<br>ラスター<br>堕ちようがないよね？<br>会場 &nbsp; &nbsp; &nbsp; &nbsp;<br>GM<br>んなわけないだろ<br>会場 &nbsp; &nbsp; &nbsp; &nbsp;<br>GM<br>鳥がどうやって飛ぶって証拠だよ<br>会場 &nbsp; &nbsp; &nbsp; &nbsp;<br>U-ファルコン・ルスキニア<br>鳥が飛ぶの当たり前すぎてそれを担保するアタッチメントもキャラ特性もないです<br>会場 &nbsp; &nbsp; &nbsp; &nbsp;<br>U-ファルコン・ルスキニア<br>ダチョウだったかもしれません<br><br><br>草</div>
+    <div class="message-time">253: 2024/11/12(火) 15:19:43</div>
+  </div>
+</article>
+<article class="message" id="res254">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">鳥ってどうやって飛ぶんですか？ロケットでもついてるんですか？</div>
+    <div class="message-time">254: 2024/11/12(火) 15:20:55</div>
+  </div>
+</article>
+<article class="message" id="res255">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">路上の星、ニコラス<br>「ぴ、ピヨピヨ！　ピヨピヨピヨ？？？」　ひよこの鳴き真似をして誤魔化します＠<br>U-ファルコン・ルスキニア<br>「貴様鳥語下手」 &nbsp; &nbsp;<br>U-ファルコン・ルスキニア<br>くちばしで啄みます<br>U-ファルコン・ルスキニア<br>「大統領権限聴取確定」<br><br>あーあ</div>
+    <div class="message-time">255: 2024/11/12(火) 15:23:44</div>
+  </div>
+</article>
+<article class="message" id="res256">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">鳥が空を飛ぶなんて話は聞いたことがない</div>
+    <div class="message-time">256: 2024/11/12(火) 15:25:21</div>
+  </div>
+</article>
+<article class="message" id="res257">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どこの時空に生きてるんですか？？？？</div>
+    <div class="message-time">257: 2024/11/12(火) 15:29:16</div>
+  </div>
+</article>
+<article class="message" id="res258">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">キャラシートのどこにも鳥が空を飛ぶとは書いてない<br>証拠を出せ</div>
+    <div class="message-time">258: 2024/11/12(火) 15:31:23</div>
+  </div>
+</article>
+<article class="message" id="res259">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ルルブの世界観の項目にも鳥が空を飛ぶとは書いてないだろ</div>
+    <div class="message-time">259: 2024/11/12(火) 15:31:43</div>
+  </div>
+</article>
+<article class="message" id="res260">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">渡り鳥が渡りの途中にユグドラシルに近付いたら撃ち抜かれてしまうんだろうか</div>
+    <div class="message-time">260: 2024/11/12(火) 15:33:43</div>
+  </div>
+</article>
+<article class="message" id="res261">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">入る分にはいいけど出ようとしたら撃たれます</div>
+    <div class="message-time">261: 2024/11/12(火) 15:34:02</div>
+  </div>
+</article>
+<article class="message" id="res262">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">渡りの牢獄</div>
+    <div class="message-time">262: 2024/11/12(火) 15:34:27</div>
+  </div>
+</article>
+<article class="message" id="res263">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">U-ファルコン・ルスキニア<br>変なオートついてるやつは一番きついだろうな、終わってみるとラスターが一番きついかもしれない<br><br>やっぱオートもちには一言入れろ</div>
+    <div class="message-time">263: 2024/11/12(火) 15:34:52</div>
+  </div>
+</article>
+<article class="message" id="res264">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どこまで厳密にやってんだろうなその辺<br>文字通り蟻一匹……もとい渡り鳥一匹逃がさないレベルなのか</div>
+    <div class="message-time">264: 2024/11/12(火) 15:34:58</div>
+  </div>
+</article>
+<article class="message" id="res265">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">少なくとも衛生砲が起動するのは市民登録した存在が外出たら殺すぐらいの感じな気もしてきた</div>
+    <div class="message-time">265: 2024/11/12(火) 15:36:13</div>
+  </div>
+</article>
+<article class="message" id="res266">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でも渡り鳥にくっついて移動できる能力者とかいたら脱出するかもしれんし…</div>
+    <div class="message-time">266: 2024/11/12(火) 15:43:45</div>
+  </div>
+</article>
+<article class="message" id="res267">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">U-ファルコン・ルスキニア<br>あとウルフが心で泣いてそうなところといえば<br>こういうダンジョンカードシステム、対処に熱中するあまりカードで発生したハプニングに対してRPする人はそう多くはないところですね<br>今回そこはちょっと気をつけてRPしたつもりではあった &nbsp; &nbsp;<br>路上の星、ニコラス<br>難しいところだな<br><br>なんかよくわからんけど全部RPしてたわ</div>
+    <div class="message-time">267: 2024/11/12(火) 15:44:18</div>
+  </div>
+</article>
+<article class="message" id="res268">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">読み終わりました</div>
+    <div class="message-time">268: 2024/11/12(火) 15:45:39</div>
+  </div>
+</article>
+<article class="message" id="res269">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ひよこは政治に関心持ってください</div>
+    <div class="message-time">269: 2024/11/12(火) 15:45:53</div>
+  </div>
+</article>
+<article class="message" id="res270">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ラスター「チッ…気色わりぃもん並べやがって…」ラスターのエロ同人ください！！！<br>GM：脱がせたら怒るだろアンタ<br><br>脱がせたら怒るだろで笑う</div>
+    <div class="message-time">270: 2024/11/12(火) 15:46:32</div>
+  </div>
+</article>
+<article class="message" id="res271">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エロ=脱ぐものと思ってるのが甘いわ</div>
+    <div class="message-time">271: 2024/11/12(火) 15:47:01</div>
+  </div>
+</article>
+<article class="message" id="res272">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">すみません</div>
+    <div class="message-time">272: 2024/11/12(火) 15:47:08</div>
+  </div>
+</article>
+<article class="message" id="res273">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">脱がないなら何をどうすればいいんだよ</div>
+    <div class="message-time">273: 2024/11/12(火) 15:47:39</div>
+  </div>
+</article>
+<article class="message" id="res274">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">考えたけどわかりませんでした</div>
+    <div class="message-time">274: 2024/11/12(火) 15:49:35</div>
+  </div>
+</article>
+<article class="message" id="res275">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">夢現と知りながらここにない何かを追い求めてろ</div>
+    <div class="message-time">275: 2024/11/12(火) 15:51:37</div>
+  </div>
+</article>
+<article class="message" id="res276">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ライス・ルスキニア「つ、ついでだしリオンさんに解析してもらおうかな……」<br><br>そーなの！！！？</div>
+    <div class="message-time">276: 2024/11/12(火) 16:18:09</div>
+  </div>
+</article>
+<article class="message" id="res277">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">路上の星、ニコラス：まぁそれはそれとしてスマさんとかは本当にダイス振るの下手だし昨日のカゲさんの出目も終わってました<br><br>さらっと関係ないスマさんをディスるな！！</div>
+    <div class="message-time">277: 2024/11/12(火) 16:20:56</div>
+  </div>
+</article>
+<article class="message" id="res278">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">しまった！実況に乗り遅れた！</div>
+    <div class="message-time">278: 2024/11/12(火) 18:35:33</div>
+  </div>
+</article>
+<article class="message" id="res279">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">読んでくれてありがとうございます。</div>
+    <div class="message-time">279: 2024/11/12(火) 18:46:12</div>
+  </div>
+</article>
+<article class="message" id="res280">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ライスにアタッチメント2枠使ってたんですが次回は1枠飛行に充てます</div>
+    <div class="message-time">280: 2024/11/12(火) 18:46:49</div>
+  </div>
+</article>
+<article class="message" id="res281">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そもそもライスがアタッチメントととして役に立った事ないし</div>
+    <div class="message-time">281: 2024/11/12(火) 18:46:56</div>
+  </div>
+</article>
+<article class="message" id="res282">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ノ＜；；；；；</div>
+    <div class="message-time">282: 2024/11/12(火) 18:48:03</div>
+  </div>
+</article>
+<article class="message" id="res283">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">非常食かもしれない</div>
+    <div class="message-time">283: 2024/11/12(火) 19:00:30</div>
+  </div>
+</article>
+<article class="message" id="res284">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ノ＜！！！？！！！？！！！？；；；；</div>
+    <div class="message-time">284: 2024/11/12(火) 19:02:01</div>
+  </div>
+</article><div class="elapsed"><span>15時間 46分 経過</span></div>
+<article class="message" id="res285">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ソルト・レイン<br>引くぞ！<br>元加 枠<br>轢いてんだよ<br><br>草</div>
+    <div class="message-time">285: 2024/11/13(水) 10:48:48</div>
+  </div>
+</article>
+<article class="message" id="res286">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ソルト・レイン<br>「よーし！こうなったら急ぐよ！」<br>ソルト・レイン<br>「真っ直ぐ行こう！」<br>電車<br>壁をぶち破ります！！<br>電車<br>どこかの倉庫の中を行きます！<br>元加 枠<br>「…………」<br>電車<br>再び壁をぶち破って外に出ます！<br>電車<br>倉庫の中のものがいつの間にか電車の中に紛れ込んでいました！！<br>ソルト・レイン<br>「これでショートカットになったね！」＠<br>元加 枠<br>「いやぁ……悪気がこれっぽっちも無いのって、傍から見るとこんな感じかぁ……」とポツリとこぼします＠<br><br>草</div>
+    <div class="message-time">286: 2024/11/13(水) 10:50:03</div>
+  </div>
+</article>
+<article class="message" id="res287">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ゲルハムトと思考レベルが同じ</div>
+    <div class="message-time">287: 2024/11/13(水) 10:50:29</div>
+  </div>
+</article>
+<article class="message" id="res288">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ソルト・レイン<br>「あれ？こんなの中に入ってたっけ…？」 &nbsp; &nbsp;<br>ソルト・レイン<br>「でも中にあるってことは中にあったってことか！」＠<br><br>まぁ中にあるってことは中にあったってことだよな</div>
+    <div class="message-time">288: 2024/11/13(水) 10:51:19</div>
+  </div>
+</article>
+<article class="message" id="res289">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">路上の星、ニコラス<br>3d6+0 &nbsp; &nbsp;<br>&lt;BCDice：路上の星、ニコラス&gt;<br>Yggdrasill<wbr> : (3D6+0) → 16[5,5,6]+<wbr>0 → 16<br><br>ほんまこいつは</div>
+    <div class="message-time">289: 2024/11/13(水) 10:53:37</div>
+  </div>
+</article>
+<article class="message" id="res290">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ソルト・レイン<br>「ひょっとしてニューゴリラの仲間だったのかな！？」＠<br>路上の星、ニコラス<br>「ニューゴリラ…………？」＠<br><br>ニューゴリラ…？</div>
+    <div class="message-time">290: 2024/11/13(水) 10:57:40</div>
+  </div>
+</article>
+<article class="message" id="res291">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">元加 枠<br>ぶっちゃけた話しますけど能力でジャンプ台作れば電車ごと跳べません？<br><br>気合でトロッコを！？</div>
+    <div class="message-time">291: 2024/11/13(水) 11:00:57</div>
+  </div>
+</article>
+<article class="message" id="res292">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res291">&gt;&gt; 291</a> <br>気合いで何でもかんでも浮いたら苦労しねえよ</div>
+    <div class="message-time">292: 2024/11/13(水) 11:52:26</div>
+  </div>
+</article>
+<article class="message" id="res293">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">元加 枠<br>窓もパリンパリン割れてるんやろなぁ……って言うかここ運転席で良いんだよね…<br>ソルト・レイン<br>そうなんですか？<br>元加 枠<br>いや分かんないですけど……<br>元加 枠<br>運転席があるタイプの先頭車両なのかそれとも客席のあるところなのかそこはソルト次第です<br>ソルト・レイン<br>前見て操作してないことになるけどまあ…<br>ソルト・レイン<br>まあ………<br>元加 枠<br>………<br>ソルト・レイン<br>なんなら運転席にいるイメージ無かったからまあ……<br>元加 枠<br>つまり……前もロクに見えないような客席専用車両みたいなののところだけで走っとったんかワテら！？<br>ソルト・レイン<br>うん！！！<br>元加 枠<br>（絶句）<br><br>うんじゃないが？</div>
+    <div class="message-time">293: 2024/11/13(水) 11:57:19</div>
+  </div>
+</article>
+<article class="message" id="res294">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ソルト・レイン<br>そんな！電車で真っ直ぐ突き進んでるだけなのに迷子になるんですか！？<br>GM<br>迷子になる要素しかねぇだろ<br>元加 枠<br>目標を見失うって意味で迷子なんだろ！！<br><br>目に見える範囲全部走破したら迷子にならないからなぁ</div>
+    <div class="message-time">294: 2024/11/13(水) 12:33:25</div>
+  </div>
+</article>
+<article class="message" id="res295">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">路上の星、ニコラス<br>3d6+0 こういう場合ってダメロとカウンターどっちが先なんだっけな憶えてねぇ<br>会場 &nbsp; &nbsp; &nbsp; &nbsp;<br>&lt;BCDice：路上の星、ニコラス&gt;<br>Yggdrasill<wbr> : (3D6+0) → 17[6,6,5]+<wbr>0 → 17<br>ソルト・レイン<br>なんなんだよお前マジで<br><br>ほんまこいつ</div>
+    <div class="message-time">295: 2024/11/13(水) 12:36:32</div>
+  </div>
+</article>
+<article class="message" id="res296">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">元加 枠<br>今敵は屋根の上っすよね？<br>電車で真っ直ぐ敵の方角に突っ込んでいけばいいわけですよね？<br>つまり分岐してても相手が見えてる限りそのまま真っ直ぐ進むだけで済むのではないですか？<br>元加 枠<br>つまり分岐を真っ直ぐ進んでビルも何もかも全部なぎ倒して進んでいけばよいのではないですか？<br><br>よいのではないですか？じゃないが？？？</div>
+    <div class="message-time">296: 2024/11/13(水) 12:44:49</div>
+  </div>
+</article>
+<article class="message" id="res297">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">電車<br>自分…行けます！分岐無視して直進できます！<br>元加 枠<br>そうか…行けるか…！（腕組み<br><br>行けますじゃないが？？？</div>
+    <div class="message-time">297: 2024/11/13(水) 12:45:25</div>
+  </div>
+</article>
+<article class="message" id="res298">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">路上の星、ニコラス<br>「――クソッタレ！　あの馬鹿ども、YDFじゃないのか！？」<br>路上の星、ニコラス<br>「あいつらの方がずっと起こしてる被害でかいだろ！」<br><br>急に冷静になるな</div>
+    <div class="message-time">298: 2024/11/13(水) 12:50:24</div>
+  </div>
+</article>
+<article class="message" id="res299">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">電車<br>いくつもの電車が創造され、ソルトと枠の乗る電車と並走し色々と薙ぎ倒していく！<br>電車<br>亡者たちももちろん跳ね飛ばす！<br>元加 枠<br>「うわ……地獄絵図……」思わず言葉がこぼれます<br><br>うわ</div>
+    <div class="message-time">299: 2024/11/13(水) 12:52:23</div>
+  </div>
+</article>
+<article class="message" id="res300">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ソルト・レイン<br>「夢は楽しく見るものだからね！」＠<br><br>ここ好き</div>
+    <div class="message-time">300: 2024/11/13(水) 12:53:11</div>
+  </div>
+</article>
+<article class="message" id="res301">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ソルト・レイン：ちょっと思ったんですけど【再生】の使用回数がセッション中2回まで・・ってことは、なんやかんやと理屈つければ１回もしくは０回で済ませられるってことですよね<br><br>天才の発想じゃん</div>
+    <div class="message-time">301: 2024/11/13(水) 12:56:07</div>
+  </div>
+</article>
+<article class="message" id="res302">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ソルト・レイン<br>「枠も凄いからYDFに入ったらLUNA隊に選ばれるかもよ！」＠悪意なく褒め言葉として言います<br><br>隼人に続いて枠くんもLUNA隊かぁ</div>
+    <div class="message-time">302: 2024/11/13(水) 12:57:53</div>
+  </div>
+</article>
+<article class="message" id="res303">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">またLUNA隊んとこにサイコパスなのに周りに圧倒される系の人が増えてまう</div>
+    <div class="message-time">303: 2024/11/13(水) 13:00:30</div>
+  </div>
+</article>
+<article class="message" id="res304">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">電車<br>choice[壁を破る,何も無いところを行く,なんか転移する]<br>&lt;BCDice：電車&gt;<br>Yggdrasill<wbr> : (choice[壁を破る,何も無いところを行く,なんか転移する]) → なんか転移する<br>電車<br>あら<br>元加 枠<br>は？<br>電車<br>えーとじゃあ<br>電車<br>空間の歪みに吸い込まれていきました<br><br><br>なんか転移する？？？？？？？</div>
+    <div class="message-time">304: 2024/11/13(水) 13:01:21</div>
+  </div>
+</article>
+<article class="message" id="res305">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういう能力だろ定期</div>
+    <div class="message-time">305: 2024/11/13(水) 13:01:37</div>
+  </div>
+</article>
+<article class="message" id="res306">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">キャラシに嘘をかくな</div>
+    <div class="message-time">306: 2024/11/13(水) 13:01:54</div>
+  </div>
+</article>
+<article class="message" id="res307">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お前もや</div>
+    <div class="message-time">307: 2024/11/13(水) 13:02:51</div>
+  </div>
+</article>
+<article class="message" id="res308">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">GM<br>無血開城取れたのでは……<br>無血開城……（瓦礫の山となった惨状を見渡す）<br><br>血は流れてないな！ヨシ！</div>
+    <div class="message-time">308: 2024/11/13(水) 13:07:16</div>
+  </div>
+</article>
+<article class="message" id="res309">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">読み終わりました</div>
+    <div class="message-time">309: 2024/11/13(水) 13:13:11</div>
+  </div>
+</article>
+<article class="message" id="res310">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">スマさんは定期的にソルトと同席してるけど、ぼくはイベントNPC以外で生ソルトに出会えてない</div>
+    <div class="message-time">310: 2024/11/13(水) 13:15:13</div>
+  </div>
+</article>
+<article class="message" id="res311">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">乙や<br>そもそも生ソルト自体2回しか現れてないんだよなあ</div>
+    <div class="message-time">311: 2024/11/13(水) 13:17:45</div>
+  </div>
+</article>
+<article class="message" id="res312">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">僕も読み終わりました　クソ面白かったです</div>
+    <div class="message-time">312: 2024/11/13(水) 13:21:51</div>
+  </div>
+</article>
+<article class="message" id="res313">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res311">&gt;&gt; 311</a> <br>生ソルトが2回？？？またまたご冗談を</div>
+    <div class="message-time">313: 2024/11/13(水) 13:23:12</div>
+  </div>
+</article>
+<article class="message" id="res314">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">314: 2024/11/13(水) 14:09:18</div>
+  </div>
+</article>
+<article class="message" id="res315">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この人冷静に見るとそれになったら冗談じゃ済まんのでは！？ってヤバいチョイス出し続けてるのに辛うじて言い訳効く程度の破壊しかし続けてないの地味におかしい<br>イータの加護がチョイスにまで効いてる</div>
+    <div class="message-time">315: 2024/11/13(水) 14:09:42</div>
+  </div>
+</article>
+<article class="message" id="res316">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">乙です<br>生ソルトと同卓したのは隼人、ヒカリ、枠くんの3人だけです</div>
+    <div class="message-time">316: 2024/11/13(水) 15:07:06</div>
+  </div>
+</article>
+<article class="message" id="res317">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">次は須磨か…</div>
+    <div class="message-time">317: 2024/11/13(水) 15:20:05</div>
+  </div>
+</article>
+<article class="message" id="res318">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ギャグじゃすまなくなるだろ</div>
+    <div class="message-time">318: 2024/11/13(水) 15:20:24</div>
+  </div>
+</article><div class="elapsed"><span>17日 6時間 2分 経過</span></div>
+<article class="message" id="res319">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">読みます #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">319: 2024/11/30(土) 21:22:39</div>
+  </div>
+</article>
+<article class="message" id="res320">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ラスターのコンディションが… #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">320: 2024/11/30(土) 21:23:07</div>
+  </div>
+</article>
+<article class="message" id="res321">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">中層外でLUNA隊の活動が！？ #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">321: 2024/11/30(土) 21:25:07</div>
+  </div>
+</article>
+<article class="message" id="res322">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ラスターってなんだかんだ「守る者」に該当するナイトなので、ライスとの相性良い気がする #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">322: 2024/11/30(土) 21:27:30</div>
+  </div>
+</article>
+<article class="message" id="res323">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">大統領にもひよこの頃があった #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">323: 2024/11/30(土) 21:29:12</div>
+  </div>
+</article>
+<article class="message" id="res324">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ライスのストーカー！？ #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">324: 2024/11/30(土) 21:30:23</div>
+  </div>
+</article>
+<article class="message" id="res325">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">大統領が移動手段になるのか #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">325: 2024/11/30(土) 21:32:55</div>
+  </div>
+</article>
+<article class="message" id="res326">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">リソース吐いたなあ～！ #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">326: 2024/11/30(土) 21:37:52</div>
+  </div>
+</article>
+<article class="message" id="res327">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オルレ弱体化案なんてあったんだ… #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">327: 2024/11/30(土) 21:43:35</div>
+  </div>
+</article>
+<article class="message" id="res328">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">このボスまーたダメージダイス回ってるよ #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">328: 2024/11/30(土) 21:46:03</div>
+  </div>
+</article>
+<article class="message" id="res329">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ギミックで回避爆上がりしてる奴にカウンターなんてされてたまるか！！！ #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">329: 2024/11/30(土) 21:52:49</div>
+  </div>
+</article>
+<article class="message" id="res330">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オルレ弱体化措置の一環だから既にオルレ弱体化してるなら別にいいかなってなった</div>
+    <div class="message-time">330: 2024/11/30(土) 21:53:42</div>
+  </div>
+</article>
+<article class="message" id="res331">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オルレしたらまず確定でカウンター飛んでくるのは弱体化の範疇か？？？</div>
+    <div class="message-time">331: 2024/11/30(土) 21:55:15</div>
+  </div>
+</article>
+<article class="message" id="res332">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エネミーダイスじゃらじゃらは悪 #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">332: 2024/11/30(土) 21:55:46</div>
+  </div>
+</article>
+<article class="message" id="res333">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">シンプルに相性による苦戦かこれ？ #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">333: 2024/11/30(土) 21:58:14</div>
+  </div>
+</article>
+<article class="message" id="res334">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">正直ここまで追い詰められてるとは思いもしなかった #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">334: 2024/11/30(土) 22:04:02</div>
+  </div>
+</article>
+<article class="message" id="res335">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんてことだここは鳥類卓だったのか #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">335: 2024/11/30(土) 22:06:41</div>
+  </div>
+</article>
+<article class="message" id="res336">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">２時回ってんの！？ #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">336: 2024/11/30(土) 22:09:40</div>
+  </div>
+</article>
+<article class="message" id="res337">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">出目がグロい #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">337: 2024/11/30(土) 22:11:13</div>
+  </div>
+</article>
+<article class="message" id="res338">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">総消費59はちょっとエグすぎる #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">338: 2024/11/30(土) 22:12:17</div>
+  </div>
+</article>
+<article class="message" id="res339">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＞キリさんが見学席に来て、「今更だけどこのシナリオ既に見てた事を思い出しました」とか言ってて、<br>＞０回目参加者かぁってなってました<br><br>？？？？？？？？？？？？？</div>
+    <div class="message-time">339: 2024/11/30(土) 22:13:04</div>
+  </div>
+</article>
+<article class="message" id="res340">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">悪夢でも見ました？</div>
+    <div class="message-time">340: 2024/11/30(土) 22:13:14</div>
+  </div>
+</article>
+<article class="message" id="res341">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">第一形態がなんだったんだってレベルで順調 #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">341: 2024/11/30(土) 22:17:14</div>
+  </div>
+</article>
+<article class="message" id="res342">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">読み終えました！１日目の出目が凄かったけどちゃんとクリアして良かったなあと思いました！！！ #ニコラス #大統領 #ラスター</div>
+    <div class="message-time">342: 2024/11/30(土) 22:24:49</div>
+  </div>
+</article>
+<article class="message" id="res343">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ほんとに終わってた、出目が</div>
+    <div class="message-time">343: 2024/11/30(土) 22:26:09</div>
+  </div>
+</article>
+<article class="message" id="res344">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">終わってたね</div>
+    <div class="message-time">344: 2024/12/1(日) 0:07:11</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>

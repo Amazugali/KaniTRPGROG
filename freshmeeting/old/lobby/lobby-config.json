@@ -1,0 +1,125 @@
+{
+  "archive_title": "Fresh Meeting ログ保管庫",
+  "brand_name": "Fresh Meeting",
+  "subtitle": "Fresh Meeting 静的ログアーカイブ",
+  "notice": "Fresh Meeting のサービス終了に伴い保存した、閲覧専用の静的HTMLログです。",
+  "total_rooms": 29,
+  "rooms": {
+    "01": {
+      "title": "カニドラシルな部屋",
+      "description": ""
+    },
+    "02": {
+      "title": "カニドラシルな部屋　２日目",
+      "description": ""
+    },
+    "03": {
+      "title": "カニドラシルな部屋　三が日",
+      "description": ""
+    },
+    "04": {
+      "title": "カニドラシルな部屋　４人目",
+      "description": ""
+    },
+    "05": {
+      "title": "カニドラシルな部屋　５録大富豪",
+      "description": ""
+    },
+    "06": {
+      "title": "カニドラシルな部屋　６波羅探題",
+      "description": ""
+    },
+    "07": {
+      "title": "カニドラシルな部屋　7っとう大好き",
+      "description": ""
+    },
+    "08": {
+      "title": "カニドラシルな部屋　アレク・8ールバルズ",
+      "description": ""
+    },
+    "09": {
+      "title": "カニドラシルな部屋　アレ9・ハールバルズ",
+      "description": ""
+    },
+    "10": {
+      "title": "カニドラシルな部屋　10制限の恐怖",
+      "description": ""
+    },
+    "11": {
+      "title": "カニドラシルな部屋　[1,1]",
+      "description": ""
+    },
+    "12": {
+      "title": "カニドラシルな部屋　今日も須磨の12穴が空く",
+      "description": ""
+    },
+    "13": {
+      "title": "カニドラシルな部屋　あなたが13だったんですね",
+      "description": ""
+    },
+    "14": {
+      "title": "カニドラシルな部屋 運14",
+      "description": ""
+    },
+    "15": {
+      "title": "カニドラシルな部屋 精度15",
+      "description": ""
+    },
+    "16": {
+      "title": "カニドラシルな部屋 16んな一日",
+      "description": ""
+    },
+    "17": {
+      "title": "カニドラシルな部屋：1cr7fa",
+      "description": ""
+    },
+    "18": {
+      "title": "カニドラシルな部屋：耐18",
+      "description": ""
+    },
+    "19": {
+      "title": "カニドラシルな部屋：19くらいに欲しい能力",
+      "description": ""
+    },
+    "20": {
+      "title": "カニドラシルな部屋 器20",
+      "description": ""
+    },
+    "21": {
+      "title": "カニドラシルな部屋 お21ちゃん大好き",
+      "description": ""
+    },
+    "22": {
+      "title": "カニドラシルな部屋 '22年 第█次モヒ示録戦争勃発",
+      "description": ""
+    },
+    "23": {
+      "title": "カニドラシルな部屋 23年あけましておめでとう",
+      "description": ""
+    },
+    "24": {
+      "title": "カニドラシルな部屋 最前線！密着ＹＤＦ24時",
+      "description": ""
+    },
+    "25": {
+      "title": "カニドラシルな部屋 ㊗️コンセ25上限撤廃",
+      "description": ""
+    },
+    "26": {
+      "title": "カニドラシルな部屋 能力攻撃2D6",
+      "description": ""
+    },
+    "27": {
+      "title": "カニドラシルな部屋 回避27+1d6",
+      "description": ""
+    },
+    "28": {
+      "title": "カニドラシルな部屋 28",
+      "description": ""
+    },
+    "29": {
+      "title": "カニドラシルな部屋 29（にく）いカラス",
+      "description": "Fresh Meeting 上で運用された最終期の部屋。"
+    }
+  }
+}

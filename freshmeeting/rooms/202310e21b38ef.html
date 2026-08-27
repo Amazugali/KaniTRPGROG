@@ -1,0 +1,4768 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>開発室【血涙】</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>開発室【血涙】</h1>
+    <div class="meta">Fresh Meeting archive / room id: 202310e21b38ef / ended</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=202310e21b38ef"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+	<a href="https://www.freshmeeting.com/forumopen.php?f=202310e21b38ef"><img src="https://www.freshmeeting.com/img/reopen.gif" alt="ミーティングを再開する"><span>ミーティングを再開する</span></a>
+	<a href="https://www.freshmeeting.com/forumdel.php?f=202310e21b38ef"><img src="https://www.freshmeeting.com/img/delete.gif" alt="削除する"><span>削除する</span></a>
+</span>
+
+<p>
+	はむさぼキリ：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202409bloodytears/01HmSvKr.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202409bloo<wbr>dytears/<wbr>01HmSvKr.<wbr>h.<wbr>.<wbr></a><br>Ｔカゲまじ：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202409bloodytears/02TtKgIm.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202409bloo<wbr>dytears/<wbr>02TtKgIm.<wbr>h.<wbr>.<wbr></a><br>づけづけ：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202409bloodytears/03DkDk.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202409bloo<wbr>dytears/<wbr>03DkDk.<wbr>html</a><br>スマラバチヒ：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202409bloodytears/04SmRbCh.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202409bloo<wbr>dytears/<wbr>04SmRbCh.<wbr>h.<wbr>.<wbr></a></p></div>
+  </div>
+</header>
+<main>
+
+<div class="attachment-warning">
+  このログには Fresh Meeting 上の添付ファイル参照が 12 件あります。
+  HTML本文とは別に添付ファイル本体の保全が必要です。
+</div>
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">多重能力を研究していたラボから被験体が逃げ出した話<br>被験体のテーマは「擬態」</div>
+    <div class="message-time">1: 2023/10/30(月) 13:00:26</div>
+  </div>
+</article><div class="elapsed"><span>13日 19時間 19分 経過</span></div>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">■博士　＠ナナカマド博士あたり？<br>　・今回の依頼人。フラメルの関係者かも。<br>　・研究対象である【被検体ちゃん】の脱走を受けて極秘裏に回収を依頼する。<br>　　被検体ちゃんが既に民間人に危害を加えた可能性についても憂慮しており、早急な事態の解決のためやむなくＰＣに依頼を送った格好である。<br>　・基本的に嘘はつかず、依頼人として最低限の筋は通す。変に誤魔化すよりは「言えない」と正直に言うタイプ。<br>　　たとえば、隠ぺいが目的と訊ねられても否定はしない。（というか実際それ以外に理由はないだろう）<br>　・被検体の行動原理について知った際はドライな反応を見せるだろう。</div>
+    <div class="message-time">2: 2023/11/13(月) 8:19:39</div>
+  </div>
+</article><div class="elapsed"><span>4日 3時間 4分 経過</span></div>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">■ナナカマド博士(追記)<br>・【ナナカマド研究室】の室長。【多重能力者生成計画】の責任者でもあった。<br> &nbsp;実際には他にもクルーがいるだろうが、PCが直接やり取りをする窓口は彼になる。<br>・被検体の収容違反を受けて懲戒処分が決定しており、最後の任務として今回の事件のオペレーターを担当する。<br><br>■“ボンド”、被検体『CARRION』@CARRION<br>・多重能力研究の被検体として産み出されたミュータント。<br> &nbsp;完全な多重というわけではなく、「擬態」をキーワードにややかけ離れた異能を使い分けられる程度。<br>・肉体の形態を変異させられる他、体組織を由来として思考や記憶を吸収することができる。<br> &nbsp;また、肉片を植え付けることでその性質を付与することも可能。<br>・脱走以降、島内各所でその姿が確認されている。<br> &nbsp;→【フォージャー家】失踪現場（肉片と体液のみ）<br> &nbsp;→スーパーマーケット（人に擬態して食品を盗む姿を店員やYDFに目撃されている）<br> &nbsp;→ヴァナヘイム（家畜を盗んで栄養補給を試みた結果）<br><br>・フォージャー家の遺体が見つからないのは、CARRIONがその遺体を補食したから。しかしフォージャー家を殺害したのは彼ではない。<br>・実はフォージャー家とは生前から交流があり、周囲になじめないアーニャにとっては一番の友達であった。<br> &nbsp;(ロイドやヨルもその存在を関知しているが、アーニャが楽しそうにしているのを見てから監視こそすれ多くは詮索していない)<br>・アーニャからは【ボンド】と名付けて可愛がられており、CARRION自身もアーニャやフォージャー家に心を開いていた。<br>・そのためフォージャー家を殺す理由はCARRIONになく、むしろフォージャー家が襲われた際にはいち早く駆けつけ、犯人を捕まえようと格闘していた。<br> &nbsp;遺体を食ったのも、DNAを取り込んでフォージャー一家を複製することで彼らを実質的に生き返らせることが出来るのではないかと考えたため。<br> &nbsp;（そしてそれが叶わないことを知り、絶望した）<br>・その後、衰弱した自分では復讐が成せないと悟り、一方でYDFへの通報も犯人の素性ゆえに渋り、結果としてPTのような「自由に動ける存在」を待つことになる。<br><br>■フォージャー家<br>・島内に存在したごく普通の一家。<br>・公的には行方不明事件として扱われているが、当人たちの血液が大量に確認されており、警察内部では生存は絶望的という見立て。<br>・事件現場に存在する肉片の一部はDNAがフォージャー家とボンドのものと一致する。<br>・家捜しを徹底すると、フォージャー家の成員であるアーニャが描いていた「似顔絵」が見つかる。<br> &nbsp;両親と自分、飼い犬を描いていたことがわかる……が、この家に犬はいない。<br> &nbsp;また、別の似顔絵では飼い犬の代わりに目玉だらけの化物が描かれているが、似顔絵の中でフォージャー家が化物を恐れている様子はない。<br>・さらに家捜しを続けると、成員の日記が出てくる。ヨルかアーニャのものが良さそう<br> &nbsp;→その異様な姿に困惑しながらも夫妻が“ボンド”をうけいれていく様子が綴られている。</div>
+    <div class="message-time">3: 2023/11/17(金) 11:23:47</div>
+  </div>
+</article><div class="elapsed"><span>4日 20時間 47分 経過</span></div>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">フォージャー家を殺したのはYDF<br>捜査にあたった身内がこれをもみ消した（身内間でやったことで、その層のYDFが組織体質としてそういう感じってわけではない）</div>
+    <div class="message-time">4: 2023/11/22(水) 8:11:34</div>
+  </div>
+</article>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">動機は今のところ性犯罪かなぁと思ってるが</div>
+    <div class="message-time">5: 2023/11/22(水) 8:45:37</div>
+  </div>
+</article>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">レイプ魔をシナリオで出すの初だからちょっとこええな<br>だが私はこの辺の際どい要素もシナリオで出します<br>時事ネタ擦っておきながらこの程度のセンシティブな要素を日和ってちゃそれこそ不誠実だぜ</div>
+    <div class="message-time">6: 2023/11/22(水) 8:49:10</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、いや。YDF内部の揉み消しとかは初期のギミックだな<br>パズズを絡めるって決めてからはそもそもYDFが犯人を追跡できなくなったから動機だけ決めれば良いんだった</div>
+    <div class="message-time">7: 2023/11/22(水) 8:52:27</div>
+  </div>
+</article><div class="elapsed"><span>5日 23時間 9分 経過</span></div>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">完成したんだから纏めろ！</div>
+    <div class="message-time">8: 2023/11/28(火) 8:01:28</div>
+  </div>
+</article>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">殺人鬼の立ち絵どうしようかな～　<br>イメージは完全に『藁の楯』の清丸（演：藤原竜也）なんだが</div>
+    <div class="message-time">9: 2023/11/28(火) 8:50:30</div>
+  </div>
+</article><div class="elapsed"><span>3時間 28分 経過</span></div>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">通報すればええやんってなるから犯人はYDFにするんだったな</div>
+    <div class="message-time">10: 2023/11/28(火) 12:19:17</div>
+  </div>
+</article>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いや、でもそれはそれで難しかった気がする</div>
+    <div class="message-time">11: 2023/11/28(火) 12:20:32</div>
+  </div>
+</article><div class="elapsed"><span>1日 19時間 32分 経過</span></div>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">嘘喰いの羽山 郁斗だ！</div>
+    <div class="message-time">12: 2023/11/30(木) 7:53:13</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">こいつをYDFの内部関係者が工作して庇ってたことにしよう</div>
+    <div class="message-time">13: 2023/11/30(木) 7:53:39</div>
+  </div>
+</article><div class="elapsed"><span>16時間 27分 経過</span></div>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">後はYDFが誰か決めたら配役は完了か</div>
+    <div class="message-time">14: 2023/12/1(金) 0:21:23</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ウロボロスあたりからとってこれそう</div>
+    <div class="message-time">15: 2023/12/1(金) 0:30:21</div>
+  </div>
+</article><div class="elapsed"><span>8時間 15分 経過</span></div>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">結局AIで作ったスケベなガイノイドになりそう</div>
+    <div class="message-time">16: 2023/12/1(金) 8:45:21</div>
+  </div>
+</article>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ガイノイドというか人型ロボット</div>
+    <div class="message-time">17: 2023/12/1(金) 8:45:41</div>
+  </div>
+</article>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">備品じゃなくてちゃんと人格のあるヒューマノイドです</div>
+    <div class="message-time">18: 2023/12/1(金) 8:47:13</div>
+  </div>
+</article><div class="elapsed"><span>15時間 49分 経過</span></div>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202310e21b38ef&amp;i=i619903ba" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202310e21b38ef&amp;i=i619903ba" width="164" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202310e21b38ef&amp;i=i619903ba">📎 CARRION.png</a> <span class="filesize">[4.4 MB, 2160x2160px]</span> を追加しました。</div>
+    <div class="message-time">19: 2023/12/2(土) 0:36:58</div>
+  </div>
+</article>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202310e21b38ef&amp;i=i018d83e2" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202310e21b38ef&amp;i=i018d83e2" width="150" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202310e21b38ef&amp;i=i018d83e2">📎 フォージャー家のポートレイト.png</a> <span class="filesize">[75.2 KB, 250x273px]</span> を追加しました。</div>
+    <div class="message-time">20: 2023/12/2(土) 2:00:39</div>
+  </div>
+</article>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202310e21b38ef&amp;i=i93ca7736" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202310e21b38ef&amp;i=i93ca7736" width="80" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202310e21b38ef&amp;i=i93ca7736">📎 ローワン・ソルバス・アウクパリア.jpg</a> <span class="filesize">[17.3 KB, 176x368px]</span> を追加しました。</div>
+    <div class="message-time">21: 2023/12/2(土) 2:42:15</div>
+  </div>
+</article>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202310e21b38ef&amp;i=i813d048e" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202310e21b38ef&amp;i=i813d048e" width="90" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202310e21b38ef&amp;i=i813d048e">📎 葉山郁人_立ち絵.png</a> <span class="filesize">[103.0 KB, 189x349px]</span> を追加しました。</div>
+    <div class="message-time">22: 2023/12/2(土) 2:59:35</div>
+  </div>
+</article>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">郁人、今見返すと「こいつがイケメンだったらあそこまで心象悪くなかっただろ」ってぐらい醜悪に描かれてて笑う</div>
+    <div class="message-time">23: 2023/12/2(土) 3:12:19</div>
+  </div>
+</article>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202310e21b38ef&amp;i=i8dc9f6e3" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202310e21b38ef&amp;i=i8dc9f6e3" width="128" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202310e21b38ef&amp;i=i8dc9f6e3">📎 フォージャー家のポートレイトv2.jpg</a> <span class="filesize">[225.3 KB, 420x540px]</span> を追加しました。</div>
+    <div class="message-time">24: 2023/12/2(土) 3:15:39</div>
+  </div>
+</article>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ボンドが写ってると都合が悪いので</div>
+    <div class="message-time">25: 2023/12/2(土) 3:15:59</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【タイトル】血涙<br>【システム】鋼鉄のユグドラシル<br>【概要/HO】<br>　組織か、縁故か、単なる仕事か。あなたたちはクライアントとして、フラメル在籍の【ローワン研究室】へ招かれる。<br>　秘密裏に行っていた実験の被検体が逃げ出したという。此度の事態を、速やかに鎮圧することがあなたたちの目的だ。<br><br>　「ターゲットは擬態が得意だ。その性質上、人間社会に紛れ込めば大変なことになりかねない」<br>　「この通りだ。我々のプロジェクトの幕引きを手伝ってくれ」<br><br><br>【適正人数】3人<br>【参加資格】なし<br>【プレイ時間】10～15時間<br>【シリアス度】■■■■□（だいぶ真面目）<br>【ヘヴィ度】■■□□□（けっこう小ぢんまり？）<br>【非推奨】制限系、無効化系：系統無効、無効化武装、ブレイク<br>【禁止】なし<br>【暴走チェック】消費、開始時6d<br>【抑制ロール】2回振り、リテイク等はなし<br>【補足】<br>　・サプリメント「蟹」完全適用。<br>　・ソロを想定したシナリオのため、3賞＋MVP（＋エンタメ賞）は条件を満たすことで授与になります。<br><br>　・シナリオ内期間で一ヶ月ほど経過します。<br>　　サザエさん時空が不都合であれば夢オチ可。</div>
+    <div class="message-time">26: 2023/12/2(土) 3:54:36</div>
+  </div>
+</article><div class="elapsed"><span>10時間 54分 経過</span></div>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">改めてまとめる</div>
+    <div class="message-time">27: 2023/12/2(土) 14:49:24</div>
+  </div>
+</article><div class="elapsed"><span>8時間 40分 経過</span></div>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【タイトル】血涙<br>【システム】鋼鉄のユグドラシル<br>【概要/HO】<br>　組織か、縁故か、単なる仕事か。あなたたちは請負人として、フラメル在籍の【ローワン研究室】へ招かれる。<br>　秘密裏に行っていた実験の被検体が逃げ出したという。此度の事態を、速やかに鎮圧することがあなたたちの目的だ。<br><br>　「ターゲットは擬態が得意だ。その性質上、人間社会に紛れ込めば大変なことになりかねない」<br>　「この通りだ。我々のプロジェクトの幕引きを手伝ってくれ」<br><br>【適正人数】3人<br>【参加資格】なし<br>【プレイ時間】10～15時間<br>【シリアス度】■■■■□（だいぶ真面目）<br>【ヘヴィ度】■■■□□（そこそこ大ゴト）<br>【非推奨】制限系、無効化系：系統無効、無効化武装、ブレイク<br>【禁止】なし<br>【暴走チェック】消費、開始時6d<br>【抑制ロール】2回振り、リテイク等はなし<br>【補足】<br>　・サプリメント「蟹」はオリ特性を含め一切が非適用。……身体タイプ・能力タイプボーナスぐらいは無視してよい。</div>
+    <div class="message-time">28: 2023/12/2(土) 23:29:39</div>
+  </div>
+</article><div class="elapsed"><span>16時間 28分 経過</span></div>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">●依頼人はローワン博士（演：ナナカマド）。内容は「被検体の確保/殺害」。<br>　→ローワン博士から提供される情報は以下。<br> &nbsp; &nbsp;・脱走したのは昨晩。島の各地で目撃情報が目撃されている。<br> &nbsp; &nbsp;・決定的なものは島内で起きた【フォージャー一家失踪事件】。遺体は見つかっていないが、現場には夥しい量の血液があり生存は絶望的と目される。<br> &nbsp; &nbsp; &nbsp;事件発生の推定時刻は被検体の収容違反時刻とおおよそ一致しており、被検体が脱走してこの家族を襲った結果起きた惨劇であるように見える</div>
+    <div class="message-time">29: 2023/12/3(日) 15:57:49</div>
+  </div>
+</article><div class="elapsed"><span>11時間 21分 経過</span></div>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">●事件現場であるフォージャー家は、血の痕があちこちに染みついており、事件の惨状をありありと伝えるようである。<br>　現場には既にYDFが駆けつけて現場の調査を始めている。<br>　→現場のYDFは最初排他的な態度だが、ローワン博士からの使いであることやライセンスを提示すると渋々聞き込みに応じてくれる。<br>　　確認できる情報は以下。<br>　　・現場には遺体がないため、厳密には殺人事件と呼ぶべきではない。<br>　　　ただ、現場に飛び散っている血液や肉片はDNAがフォージャー一家のものと一致している。<br>　　・物品が漁られている様子はない。目的はいまいち不明瞭だが、妻子の部屋からは引きちぎられた衣服の切れ端が残っている。<br>　　　快楽殺人ないし暴行目的の殺人だったのではないかと推察は出来る。<br>　　・まだ捜査開始から間もないため、明白な証拠はあまりない。名探偵を気取ってあまり現場を荒らさないように</div>
+    <div class="message-time">30: 2023/12/4(月) 3:19:35</div>
+  </div>
+</article><div class="elapsed"><span>4時間 58分 経過</span></div>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202310e21b38ef&amp;i=i75cfdf02" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202310e21b38ef&amp;i=i75cfdf02" width="290" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202310e21b38ef&amp;i=i75cfdf02">📎 事件現場.png</a> <span class="filesize">[1.5 MB, 1456x816px]</span> を追加しました。</div>
+    <div class="message-time">31: 2023/12/4(月) 8:17:36</div>
+  </div>
+</article>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202310e21b38ef&amp;i=i65dc9afe" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202310e21b38ef&amp;i=i65dc9afe" width="230" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202310e21b38ef&amp;i=i65dc9afe">📎 アーニャのお絵描き2.jpg</a> <span class="filesize">[3.4 MB, 3508x2480px]</span> を追加しました。</div>
+    <div class="message-time">32: 2023/12/4(月) 8:18:01</div>
+  </div>
+</article>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アーニャの一人称はアーニャだからAnyaって書くべきか</div>
+    <div class="message-time">33: 2023/12/4(月) 8:29:36</div>
+  </div>
+</article><div class="elapsed"><span>97日 21時間 49分 経過</span></div>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">こっち先に回した方がいい気がする</div>
+    <div class="message-time">34: 2024/3/11(月) 6:19:22</div>
+  </div>
+</article>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">やること<br>・アーニャと存在しない犬の絵を描く<br>・今回の事件についての自室関係を整理<br>　たしかメモ書きがリアルにあったはず<br>・結局ボス誰やねん、データを作る<br>　一応ボンドのデータも作っとく</div>
+    <div class="message-time">35: 2024/3/11(月) 8:48:56</div>
+  </div>
+</article>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クリアボーナスも要るわ<br>めんどくせ～</div>
+    <div class="message-time">36: 2024/3/11(月) 8:49:19</div>
+  </div>
+</article>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ボンドのデータは作るだけ作っておいた気もする</div>
+    <div class="message-time">37: 2024/3/11(月) 8:49:38</div>
+  </div>
+</article>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あとあれだな、アーニャのお絵描きにくしゃくしゃの紙のテクスチャ被せたい</div>
+    <div class="message-time">38: 2024/3/11(月) 8:51:20</div>
+  </div>
+</article>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">探索については、結局ボンドとプレイヤーたちがどうやって合流するのか定まってない<br>プレイヤーに復讐を依頼するとかじゃなくてわけわからずうろうろしてるだけとかでもいいか？</div>
+    <div class="message-time">39: 2024/3/11(月) 8:57:25</div>
+  </div>
+</article>
+<article class="message" id="res40">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">その場合は知識は吸収できない感じか</div>
+    <div class="message-time">40: 2024/3/11(月) 8:58:58</div>
+  </div>
+</article><div class="elapsed"><span>27日 22時間 57分 経過</span></div>
+<article class="message" id="res41">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ぬえの話をこれに繋げることにしました</div>
+    <div class="message-time">41: 2024/4/8(月) 7:56:24</div>
+  </div>
+</article>
+<article class="message" id="res42">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いのちのかがやきちゃんの研究データを花屋が使ってたことにする</div>
+    <div class="message-time">42: 2024/4/8(月) 7:56:51</div>
+  </div>
+</article>
+<article class="message" id="res43">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">向こうも完コピには遠かったからかがやきちゃんの場合はもっと微妙になりそうだけど大丈夫か？</div>
+    <div class="message-time">43: 2024/4/8(月) 8:27:52</div>
+  </div>
+</article>
+<article class="message" id="res44">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">一部ミュータントのためのIPS細胞的なものを作ろうとしていたら独立した生命体になってしまい、<br>しかも異能と知能まで獲得してしまったってところか</div>
+    <div class="message-time">44: 2024/4/8(月) 8:36:18</div>
+  </div>
+</article>
+<article class="message" id="res45">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">世界観的な建て付けとしては<br>なので複製能力は外観以外未知数</div>
+    <div class="message-time">45: 2024/4/8(月) 8:36:51</div>
+  </div>
+</article><div class="elapsed"><span>145日 15時間 14分 経過</span></div>
+<article class="message" id="res46">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ほい</div>
+    <div class="message-time">46: 2024/8/31(土) 23:51:50</div>
+  </div>
+</article><div class="elapsed"><span>6日 0時間 48分 経過</span></div>
+<article class="message" id="res47">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">冬辺続1zLL2u5K20<wbr>24/9/7 0:38<br>身内の組織で良かったな反社だったら殲滅対象だったぞ<br>ヴェン・アーライミbGs3jq6p20<wbr>24/9/7 0:39<br>果たしてEDでこの研究室が生き残れるのか<br><br>取り潰しは確定なんだけどそれ以上の罰則があるかどうかだな</div>
+    <div class="message-time">47: 2024/9/7(土) 0:39:53</div>
+  </div>
+</article>
+<article class="message" id="res48">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">CARRIONが無実だって知ったらさぼさん微妙に萎えそうだけど汚職事件が発覚するから別にいいか</div>
+    <div class="message-time">48: 2024/9/7(土) 0:40:47</div>
+  </div>
+</article>
+<article class="message" id="res49">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">じゃあそっちで殴るかぁ！ってなってもらおう</div>
+    <div class="message-time">49: 2024/9/7(土) 0:40:58</div>
+  </div>
+</article><div class="elapsed"><span>23時間 39分 経過</span></div>
+<article class="message" id="res50">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">遠見 訟jBAgiC5Y20<wbr>24/9/8 0:19<br>「そいつはもう人を食う事は無いだろう。わし様のお墨付きだ」<br><br>これかっけぇな～。未来視たとかじゃなくて直感的に言ってるんだろうな</div>
+    <div class="message-time">50: 2024/9/8(日) 0:20:13</div>
+  </div>
+</article><div class="elapsed"><span>21時間 2分 経過</span></div>
+<article class="message" id="res51">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ヴェン・アーライミnupevj3O20<wbr>24/9/8 20:59<br>ヴェン動かしてる時の違和感の正体がわかりました<br>昨日は感情が欠けてると言いましたが正確にはコイツ、感情が”乗らない”<br>ヴェン・アーライミnupevj3O20<wbr>24/9/8 21:00<br>善意も正義感もあるし悪人許せねえって気持ちもあるけど出力されるのが感情や目の前の出来事、会話のキーワードに紐づいた虚言なのでその気持ちが表に出ない (編集済)<br><br>ヴェン・アーライミnupevj3O20<wbr>24/9/8 21:02<br>「人を殴るなんて許せねえよな～！」って怒りがあるとしてそれが「殴るなんて良くないよ平和的解決がいい私はかつて無為な戦いを終わらせて～～」って虚言になる</div>
+    <div class="message-time">51: 2024/9/8(日) 21:22:58</div>
+  </div>
+</article>
+<article class="message" id="res52">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">感情が高ぶった時に嘘が加速したりするのか？</div>
+    <div class="message-time">52: 2024/9/8(日) 21:23:36</div>
+  </div>
+</article>
+<article class="message" id="res53">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ヴェン・アーライミnupevj3O20<wbr>24/9/8 22:39<br>「驚くことはない私はこういった仕掛けを見破るのには些か手慣れていてねどんな隠し事も見つけてしまうんだ」＠<br><br>虚言がいつもよりちょっと薄っぺらい！<br>かわいい</div>
+    <div class="message-time">53: 2024/9/8(日) 22:40:15</div>
+  </div>
+</article>
+<article class="message" id="res54">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">冬辺続EzgktxAl20<wbr>24/9/8 23:57<br>中ボス……ではないよな！？<br>遠見 訟BHPURnAO20<wbr>24/9/8 23:58<br>展開的にないと思うけどウルフ卓だからなぁ<br>ヴェン・アーライミnupevj3O20<wbr>24/9/8 23:58<br>私はこのGMについてどこまでも断定できません<br><br>今回に関してはむしろエデン探索でインスタントダンジョン使ったことに私自身がビビったよ</div>
+    <div class="message-time">54: 2024/9/8(日) 23:59:33</div>
+  </div>
+</article><div class="elapsed"><span>1日 0時間 25分 経過</span></div>
+<article class="message" id="res55">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この卓タイトル何にすればいいと思いますか？？？？？</div>
+    <div class="message-time">55: 2024/9/10(火) 0:24:39</div>
+  </div>
+</article>
+<article class="message" id="res56">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">血涙でいいんじゃないの？</div>
+    <div class="message-time">56: 2024/9/10(火) 0:25:17</div>
+  </div>
+</article>
+<article class="message" id="res57">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">変える必要を特に感じない</div>
+    <div class="message-time">57: 2024/9/10(火) 0:26:12</div>
+  </div>
+</article>
+<article class="message" id="res58">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">けつるい？　ちなみだ？</div>
+    <div class="message-time">58: 2024/9/10(火) 0:26:46</div>
+  </div>
+</article>
+<article class="message" id="res59">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ケツルイ</div>
+    <div class="message-time">59: 2024/9/10(火) 0:27:18</div>
+  </div>
+</article>
+<article class="message" id="res60">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">2走目とか3走目になってもずっとタイトルに唸りながら回すことになる気がする</div>
+    <div class="message-time">60: 2024/9/10(火) 0:29:43</div>
+  </div>
+</article>
+<article class="message" id="res61">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202310e21b38ef&amp;i=i0a1105dc" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202310e21b38ef&amp;i=i0a1105dc" width="223" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202310e21b38ef&amp;i=i0a1105dc">📎 はむさぼキリ【血涙】.png</a> <span class="filesize">[1.0 MB, 1113x812px]</span> を追加しました。</div>
+    <div class="message-time">61: 2024/9/10(火) 0:30:19</div>
+  </div>
+</article>
+<article class="message" id="res62">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">くらえやぁ！</div>
+    <div class="message-time">62: 2024/9/10(火) 0:30:23</div>
+  </div>
+</article>
+<article class="message" id="res63">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！</div>
+    <div class="message-time">63: 2024/9/10(火) 0:30:29</div>
+  </div>
+</article>
+<article class="message" id="res64">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！</div>
+    <div class="message-time">64: 2024/9/10(火) 0:30:37</div>
+  </div>
+</article>
+<article class="message" id="res65">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログは後日まとめます<br>とってます</div>
+    <div class="message-time">65: 2024/9/10(火) 0:31:28</div>
+  </div>
+</article><div class="elapsed"><span>1日 9時間 2分 経過</span></div>
+<article class="message" id="res66">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、まだログないのか</div>
+    <div class="message-time">66: 2024/9/11(水) 9:33:56</div>
+  </div>
+</article>
+<article class="message" id="res67">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">！！！！！！！！！！！！！！！！！！！</div>
+    <div class="message-time">67: 2024/9/11(水) 9:34:44</div>
+  </div>
+</article>
+<article class="message" id="res68">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちょっと待ってね</div>
+    <div class="message-time">68: 2024/9/11(水) 9:34:49</div>
+  </div>
+</article>
+<article class="message" id="res69">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res1">&gt;&gt; 1</a> <br>ほぼ一年前始動！？</div>
+    <div class="message-time">69: 2024/9/11(水) 9:35:03</div>
+  </div>
+</article>
+<article class="message" id="res70">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい</div>
+    <div class="message-time">70: 2024/9/11(水) 9:35:10</div>
+  </div>
+</article>
+<article class="message" id="res71">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">71: 2024/9/11(水) 9:43:18</div>
+  </div>
+</article>
+<article class="message" id="res72">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オラッ！</div>
+    <div class="message-time">72: 2024/9/11(水) 9:44:13</div>
+  </div>
+</article>
+<article class="message" id="res73">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！！！！！！！！！！</div>
+    <div class="message-time">73: 2024/9/11(水) 9:51:26</div>
+  </div>
+</article>
+<article class="message" id="res74">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">わし様、ロランとの初遭遇時にしかめっ面で「ふぅ～む。」しか言ってないけどもしかして敵対する未来見えてた？</div>
+    <div class="message-time">74: 2024/9/11(水) 10:08:06</div>
+  </div>
+</article>
+<article class="message" id="res75">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">半々ぐらいで視えてた説ある</div>
+    <div class="message-time">75: 2024/9/11(水) 10:12:32</div>
+  </div>
+</article>
+<article class="message" id="res76">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">科学の力君の画像がありません！！！！！！</div>
+    <div class="message-time">76: 2024/9/11(水) 10:13:43</div>
+  </div>
+</article>
+<article class="message" id="res77">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">郁人、目つきの鋭さだけはかっこいいなこいつ</div>
+    <div class="message-time">77: 2024/9/11(水) 10:22:40</div>
+  </div>
+</article>
+<article class="message" id="res78">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">痩せたら意外とイケメンなのかもしれん</div>
+    <div class="message-time">78: 2024/9/11(水) 10:37:05</div>
+  </div>
+</article>
+<article class="message" id="res79">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">中央隊員<br>「……そうか。残念です」<br>会場 &nbsp; &nbsp; &nbsp; &nbsp;<br>中央隊員<br>「あなたたちだけは敵に回したくなかったんですが」<br><br>ここのロラン君の画像がありません！！！！</div>
+    <div class="message-time">79: 2024/9/11(水) 13:18:05</div>
+  </div>
+</article>
+<article class="message" id="res80">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">わりと画像抜けてるのか</div>
+    <div class="message-time">80: 2024/9/11(水) 13:26:58</div>
+  </div>
+</article><div class="elapsed"><span>34日 2時間 28分 経過</span></div>
+<article class="message" id="res81">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どういうシナリオだっけ</div>
+    <div class="message-time">81: 2024/10/15(火) 15:55:36</div>
+  </div>
+</article>
+<article class="message" id="res82">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ヴェン、教えてやれ</div>
+    <div class="message-time">82: 2024/10/15(火) 15:56:11</div>
+  </div>
+</article>
+<article class="message" id="res83">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ジェイミーが史上最強のロケットを海王星まで飛ばすために燃料となるハチミツシロップを島中から集めるとかそんなだっけ</div>
+    <div class="message-time">83: 2024/10/15(火) 15:57:08</div>
+  </div>
+</article>
+<article class="message" id="res84">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい</div>
+    <div class="message-time">84: 2024/10/15(火) 15:57:18</div>
+  </div>
+</article>
+<article class="message" id="res85">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res82">&gt;&gt; 82</a> <br>これはまた無茶振りだねしかし問われれば答えるのが私の使命だこのシナリオは私がグングニルの命を直々に受けるところから始まるまさか私も自分の存在がそこまで轟いているとは思わなかったがね<br>考えてみれば先日フォシマゥスの魔女を単独で倒したのが伝わっていたのだろうかいや単独というのは勿論誇張した表現だ私一人ではあの魔女の元に辿り着くことすら出来なかっただろう<br>私は魔女と共に戦う仲間を募ったが最初は誰も声を上げなかった魔女の恐怖に支配されていたのだから無理もないだろうだが私が戦う姿を見て勇気を奮い立たせてくれる者が<br>一人また一人と増えていき魔女の率いる眷属の軍勢と戦えるまでの勢力となったのだ私はただ彼らに道を示したに過ぎず彼ら自身の勇気に他ならない<br>それでも眷属は手強く私を魔女の元に送り出すため一人また一人と戦いに身を投じ最後は私一人となっていた魔女が繰り出した最強の眷属を単身で倒せたのは彼らの想いを背負っていたからだ<br>かくして私は魔女を倒し英雄としてほんの少し名を轟かせたわけだがまさかグングニルがそれを知っていたとはね流石の情報網といったところか</div>
+    <div class="message-time">85: 2024/10/15(火) 16:16:57</div>
+  </div>
+</article><div class="elapsed"><span>1日 6時間 22分 経過</span></div>
+<article class="message" id="res86">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オリオンPOc4fTPo20<wbr>24/10/16 22:31<br>(´-ω-｀ )「⋯⋯⋯お前結構冷静だな。フラメルが現場で捜査してるお前らに肝心なことを話してなかったんだぞ？怒ったりしないの？」＠ (編集済)<br>中央隊員RPQ8eeUu20<wbr>24/10/16 22:34<br>「……そうですか？　怒り心頭のつもりなんですけどね」<br>中央隊員RPQ8eeUu20<wbr>24/10/16 22:35<br>「堪忍袋の容量を超えた話すぎて、感情が追いついてないのかもしれませんね」<br>中央隊員RPQ8eeUu20<wbr>24/10/16 22:35<br>「…………ああ、いや、すいません。やっぱり、少し一人にさせてもらえますか」<br>中央隊員RPQ8eeUu20<wbr>24/10/16 22:36<br>「付き添いには、表の彼女を代わりに呼んできますから……」＠<br><br>ロラン本音<br>（やっぱフラメルが噛んでたか……）<br>（オリオンさんならきっと被検体の討伐を成功させるだろう。そっちを今回の事件の犯人とする形にして……）</div>
+    <div class="message-time">86: 2024/10/16(水) 22:39:33</div>
+  </div>
+</article>
+<article class="message" id="res87">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あれ？絵日記ってここで見つからないのか？</div>
+    <div class="message-time">87: 2024/10/16(水) 23:32:50</div>
+  </div>
+</article><div class="elapsed"><span>1日 1時間 24分 経過</span></div>
+<article class="message" id="res88">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">博士のラボはセントラルタワーにはないから死体がお出ましになるのはまだだなと思った</div>
+    <div class="message-time">88: 2024/10/18(金) 0:57:32</div>
+  </div>
+</article>
+<article class="message" id="res89">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オリオンUQOomHES20<wbr>24/10/18 1:00<br>しかし、俺達絶妙に人の心ないから、このドラマを見せられても特に心を動かされたりしないな<br><br>殺さないんだ……って思ってた</div>
+    <div class="message-time">89: 2024/10/18(金) 1:00:57</div>
+  </div>
+</article>
+<article class="message" id="res90">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">２周目になって改めてCARRIONの主張見てたらGMながらかなり無理筋言ってるなこいつって思ったから</div>
+    <div class="message-time">90: 2024/10/18(金) 1:01:29</div>
+  </div>
+</article>
+<article class="message" id="res91">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">1組目は真犯人判明でウキウキ1人と懐の深いわし様と虚言botだったからスムーズにしばきにいくぜって方針転換してた</div>
+    <div class="message-time">91: 2024/10/18(金) 1:15:58</div>
+  </div>
+</article>
+<article class="message" id="res92">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ここから郁人を殴るルートもあんまり考えてないのよなぁ<br>前回はとりあえずニーベルングのコネで家捜ししてみたって感じだしな</div>
+    <div class="message-time">92: 2024/10/18(金) 1:27:33</div>
+  </div>
+</article>
+<article class="message" id="res93">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">しゃらくさいしロランが研究所で張ってりゃいいか<br>この周回はPTが情報独占してないし、PTの同行をロランが早い段階で察知してたからここで決戦になっても全然変ではない</div>
+    <div class="message-time">93: 2024/10/18(金) 1:30:49</div>
+  </div>
+</article>
+<article class="message" id="res94">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">メモ：究極的にはおせろっとがディープ・スロートとして情報を渡してもいいかも。となると別に研究所でロランと即やりあう必要はないか</div>
+    <div class="message-time">94: 2024/10/18(金) 2:20:18</div>
+  </div>
+</article>
+<article class="message" id="res95">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">後の事は幕外でNPCが片付けましただとモヤりそうだし</div>
+    <div class="message-time">95: 2024/10/18(金) 2:20:53</div>
+  </div>
+</article>
+<article class="message" id="res96">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">研究所でいきなり襲われる格好だと箸を置く間もないしな<br>CARRION確保してこいって言われて確保したんでこれ以上動くつもりはありません。ごちそうさまでした<br>って言えるようにはしたい</div>
+    <div class="message-time">96: 2024/10/18(金) 2:25:04</div>
+  </div>
+</article><div class="elapsed"><span>3日 19時間 56分 経過</span></div>
+<article class="message" id="res97">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オリオンUfULvhXq20<wbr>24/10/21 22:20<br>フォージャー家事件ってそんな粗いかな⋯⋯結局刃物使ったくらいの痕跡以外人間のなかったし<br>扉の鍵空いてたけど指紋とか出てないんだろうし<br><br><br>言われてみりゃPT視点そうか<br>まぁ……その辺の証拠はロランが全部握り潰してるからな……</div>
+    <div class="message-time">97: 2024/10/21(月) 22:21:53</div>
+  </div>
+</article>
+<article class="message" id="res98">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この辺正直なるようにしかならんと思ってたからあんまり情報詰めてないんだよな<br>どうしよう</div>
+    <div class="message-time">98: 2024/10/21(月) 22:27:56</div>
+  </div>
+</article>
+<article class="message" id="res99">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">笹木近衛znaLrFtW20<wbr>24/10/21 23:45<br>「いや…たとえ帰れと言われたとしても。造花のそしてこの件のすべてが終わるまで、俺自身が見届けると決めたんだ」＠</div>
+    <div class="message-time">99: 2024/10/21(月) 23:48:29</div>
+  </div>
+</article>
+<article class="message" id="res100">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">imajiさん、やっぱタイプ速度とかがネックなだけでキャラを動かすの自体は全然得意っぽいな</div>
+    <div class="message-time">100: 2024/10/21(月) 23:48:58</div>
+  </div>
+</article>
+<article class="message" id="res101">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ダイヤ君ってどうなってるんですか？捕まって拷問でも受けてるんですか？</div>
+    <div class="message-time">101: 2024/10/21(月) 23:53:25</div>
+  </div>
+</article>
+<article class="message" id="res102">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そもそも研究所にいなかったってのを想定してはいますが、<br>とはいえ無事じゃないだろうとは思います</div>
+    <div class="message-time">102: 2024/10/21(月) 23:54:16</div>
+  </div>
+</article>
+<article class="message" id="res103">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">捕まって拷問受けてるんじゃないのかな</div>
+    <div class="message-time">103: 2024/10/21(月) 23:54:30</div>
+  </div>
+</article>
+<article class="message" id="res104">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">Imajiさん、参加した卓の半分くらい造花が絡んでる</div>
+    <div class="message-time">104: 2024/10/21(月) 23:56:41</div>
+  </div>
+</article>
+<article class="message" id="res105">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">思ったより骨あるアンサー出してくれてよかった</div>
+    <div class="message-time">105: 2024/10/21(月) 23:57:15</div>
+  </div>
+</article>
+<article class="message" id="res106">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">何より、時系列の整理でこんがらがって冷めた熱を呼び戻してくれたと思う</div>
+    <div class="message-time">106: 2024/10/21(月) 23:57:40</div>
+  </div>
+</article>
+<article class="message" id="res107">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">耀星のハサンonasbMuo20<wbr>24/10/22 0:25<br>ロランはたぶん、何も知らない<br><br>ブチブチブチブチブチブチギレられそうで今になって怖くなってきた</div>
+    <div class="message-time">107: 2024/10/22(火) 0:26:03</div>
+  </div>
+</article>
+<article class="message" id="res108">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ははは</div>
+    <div class="message-time">108: 2024/10/22(火) 0:26:59</div>
+  </div>
+</article>
+<article class="message" id="res109">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カゲロウonasbMuo20<wbr>24/10/22 1:06<br>前回どう回してたの？？？？？<br><br>前のログから引っ張ってくりゃええやろと思ってたら前は感知してないわ<br>データよくわかんないところに置いてるわ<br>そうなってくるとデータの整合性も怪しいわ</div>
+    <div class="message-time">109: 2024/10/22(火) 1:07:17</div>
+  </div>
+</article>
+<article class="message" id="res110">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">フリースタイルGM</div>
+    <div class="message-time">110: 2024/10/22(火) 1:08:30</div>
+  </div>
+</article><div class="elapsed"><span>8時間 23分 経過</span></div>
+<article class="message" id="res111">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カゲさんNPCの裏切りに対して「この野郎！！」って思うタイプみたいだから多分ブチギレする</div>
+    <div class="message-time">111: 2024/10/22(火) 9:32:02</div>
+  </div>
+</article><div class="elapsed"><span>4時間 45分 経過</span></div>
+<article class="message" id="res112">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いかにも裏切りそうなNPCを同行させて常に意をきりきりさせるけど結局裏切らなかったらキレられませんか？</div>
+    <div class="message-time">112: 2024/10/22(火) 14:17:50</div>
+  </div>
+</article>
+<article class="message" id="res113">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">胃をキリキリ</div>
+    <div class="message-time">113: 2024/10/22(火) 14:18:02</div>
+  </div>
+</article><div class="elapsed"><span>1日 4時間 25分 経過</span></div>
+<article class="message" id="res114">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">わりと熱くて好きかも</div>
+    <div class="message-time">114: 2024/10/23(水) 18:43:15</div>
+  </div>
+</article><div class="elapsed"><span>6時間 1分 経過</span></div>
+<article class="message" id="res115">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ブチギレ通り越して萎えちゃった</div>
+    <div class="message-time">115: 2024/10/24(木) 0:44:51</div>
+  </div>
+</article>
+<article class="message" id="res116">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ロランに郁人引き渡しエンドあるか～～？</div>
+    <div class="message-time">116: 2024/10/24(木) 0:52:51</div>
+  </div>
+</article>
+<article class="message" id="res117">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">中央隊員Xvo5aIsg20<wbr>24/10/24 1:07<br>せっかくなのでこちらの要求をまとめておきます<br>中央隊員Xvo5aIsg20<wbr>24/10/24 1:11<br>①今回の件が露呈した以上郁人は我々にとって癌でしかないから殺す。こっちに身柄を渡せ<br>　ついでにその害獣も寄越せ。フォージャー家失踪の犯人になってもらう<br>②抵抗するならこの場にいる者は全員殺す<br>　抵抗せず、郁人とCARRIONの身柄を引き渡し、記憶処理の類を受けるのであれば解放してやらんこともない<br>③そもそも我々の活動は経済界や政界の重鎮からの要望を受けて行っているものなんだから、<br>　我々の隠蔽工作を世間に公開すればお前らだって（間接的・直接的問わず）無事では済まない。<br>　これもこの島の秩序なんだから黙って呑み込め (編集済)<br>中央隊員Xvo5aIsg20<wbr>24/10/24 1:13<br>善い決断を期待します</div>
+    <div class="message-time">117: 2024/10/24(木) 1:13:04</div>
+  </div>
+</article>
+<article class="message" id="res118">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とりあえずこうした</div>
+    <div class="message-time">118: 2024/10/24(木) 1:13:11</div>
+  </div>
+</article><div class="elapsed"><span>23時間 53分 経過</span></div>
+<article class="message" id="res119">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それはそれとしてボンドが家畜を食い殺したこととか一家の死体を食べて死体損壊したこととかって裁かれるのかな？</div>
+    <div class="message-time">119: 2024/10/25(金) 1:06:16</div>
+  </div>
+</article>
+<article class="message" id="res120">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それは裁かれると思う</div>
+    <div class="message-time">120: 2024/10/25(金) 1:07:10</div>
+  </div>
+</article>
+<article class="message" id="res121">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">2周目だと知識までは吸収できると書いてないから情状酌量の対象になるかも<br>まぁ1周目も執行猶予とかつくだろう情状酌量的に</div>
+    <div class="message-time">121: 2024/10/25(金) 1:07:51</div>
+  </div>
+</article>
+<article class="message" id="res122">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">龍が如くシリーズやジャッジアイズシリーズのストーリーラインがかなり脳に焼き付いててその影響もかなりあるけど、<br>何気にはむさんの掃除屋ゲームからの影響も受けてたかもしれんな、少なくとも2周目以降は</div>
+    <div class="message-time">122: 2024/10/25(金) 1:28:07</div>
+  </div>
+</article>
+<article class="message" id="res123">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">事実を歪められれば、その死さえ穢されるってインスピレーションがRP上の意気込みとしてあったかも</div>
+    <div class="message-time">123: 2024/10/25(金) 1:29:14</div>
+  </div>
+</article><div class="elapsed"><span>7時間 39分 経過</span></div>
+<article class="message" id="res124">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">掃除屋ゲームに影響受けすぎてる</div>
+    <div class="message-time">124: 2024/10/25(金) 9:08:57</div>
+  </div>
+</article><div class="elapsed"><span>12時間 15分 経過</span></div>
+<article class="message" id="res125">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あえてこっちの部屋で聞くけど<br>昔SAVOIAさんとこんなテストプレイ卓やったんですよ。【THE CANCER】っていう卓で、<br>「遊星からの物体X」が元ネタで、CANCERっていう名前の新生物と戦う卓なんですけど<br>CANCERの特徴としては取り込んだ生命体の細胞をコピーして複製する能力を持ってて、死体を使えばオリジナルのように振る舞って味方のフリをすることができるんですよね<br>オリオンは仲間に化けたこいつを数人殺して殲滅したのでこの時の事思い出して少しナイーブになっていました<br>で、CANCERとCARRIONって名前似てる上にどことなく性質も似てるので、実はこいつを元に造られたんじゃないかなとか思ったんですよね<br>その可能性はあったりしませんか？</div>
+    <div class="message-time">125: 2024/10/25(金) 21:24:15</div>
+  </div>
+</article>
+<article class="message" id="res126">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、この話していいかはSAVOIAさんに相談済です<br>本人に似てませんかって聞いたら「たし⋯かに？」って反応でしたがｗ</div>
+    <div class="message-time">126: 2024/10/25(金) 21:25:26</div>
+  </div>
+</article>
+<article class="message" id="res127">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ミュートリア＝CANCER＝CARRION……ってコト！？</div>
+    <div class="message-time">127: 2024/10/25(金) 21:45:37</div>
+  </div>
+</article>
+<article class="message" id="res128">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ミュートリアは知らんが、CANCER（の死体）を回収したのはグングニルだからつながりがあるからね</div>
+    <div class="message-time">128: 2024/10/25(金) 21:49:59</div>
+  </div>
+</article>
+<article class="message" id="res129">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202310e21b38ef&amp;i=i41823ab0" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202310e21b38ef&amp;i=i41823ab0" width="216" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202310e21b38ef&amp;i=i41823ab0">📎 Tカゲいまじ【血涙】.jpg</a> <span class="filesize">[123.0 KB, 765x577px]</span> を追加しました。</div>
+    <div class="message-time">129: 2024/10/25(金) 22:48:43</div>
+  </div>
+</article>
+<article class="message" id="res130">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">CANCERは一応宇宙生物という設定ではある</div>
+    <div class="message-time">130: 2024/10/25(金) 23:24:08</div>
+  </div>
+</article>
+<article class="message" id="res131">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">伏せていたことをｗｗ</div>
+    <div class="message-time">131: 2024/10/25(金) 23:26:20</div>
+  </div>
+</article>
+<article class="message" id="res132">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうね、あいつの系譜っていう設定を採用しちゃうと宇宙生物が存在することになるね（別にいてもいいと思うけど）</div>
+    <div class="message-time">132: 2024/10/25(金) 23:26:52</div>
+  </div>
+</article>
+<article class="message" id="res133">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんで情報伏せて繋がりある？とか聞いてんだこの人</div>
+    <div class="message-time">133: 2024/10/25(金) 23:27:07</div>
+  </div>
+</article>
+<article class="message" id="res134">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だってウルフなら読んでないから知らん、つながりないです<br>で終わると思ってたから⋯⋯</div>
+    <div class="message-time">134: 2024/10/25(金) 23:27:33</div>
+  </div>
+</article>
+<article class="message" id="res135">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁそっちじゃなくてミュートリアの系譜です多分</div>
+    <div class="message-time">135: 2024/10/25(金) 23:27:58</div>
+  </div>
+</article>
+<article class="message" id="res136">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">公開情報じゃない事を根拠になんか聞いてきて、後から情報伏せられてるのが発覚するの、フェアネスに欠いてて僕はたぶんかなり不快になると思うから僕にはしないでね。</div>
+    <div class="message-time">136: 2024/10/25(金) 23:41:17</div>
+  </div>
+</article>
+<article class="message" id="res137">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">公開されてるもんを見てないのはこっちの落ち度だし、後から公開するつもりならいいんだけど、そもそも公開しないものを前提に話をされると会話の公平性がないしわからんとか知らんとかしか言いようがないしなんで話題に出した？ってなる。<br>知ってるほうは納得したり面白いのかもしれんけど、知らんほうは謎の話されてその謎も不明のまま終わるのでもやもやだけ残るから。</div>
+    <div class="message-time">137: 2024/10/25(金) 23:49:46</div>
+  </div>
+</article>
+<article class="message" id="res138">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">うわめっちゃ怒るじゃんごめん</div>
+    <div class="message-time">138: 2024/10/26(土) 0:59:11</div>
+  </div>
+</article>
+<article class="message" id="res139">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">青鬼とか読まれなかったし僕のソロ卓とか公開しても読まれるわけないから良いやとかなあなあで済ませようとしちゃってた<br>どうせ与太で終わるだろうなと思ってたのもある</div>
+    <div class="message-time">139: 2024/10/26(土) 1:00:21</div>
+  </div>
+</article>
+<article class="message" id="res140">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ともかく不誠実でした、気をつけます</div>
+    <div class="message-time">140: 2024/10/26(土) 1:03:35</div>
+  </div>
+</article>
+<article class="message" id="res141">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁミュートリアとはなんか関係ある気はします<br>具体的には答えられないからないかも</div>
+    <div class="message-time">141: 2024/10/26(土) 1:17:55</div>
+  </div>
+</article>
+<article class="message" id="res142">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">キャンサーは知らん</div>
+    <div class="message-time">142: 2024/10/26(土) 1:18:03</div>
+  </div>
+</article>
+<article class="message" id="res143">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちなみに僕は公開されないものの話は結構好きです<br>たださぼさんがログ公開しなければもうこの話は一切しません</div>
+    <div class="message-time">143: 2024/10/26(土) 1:18:07</div>
+  </div>
+</article>
+<article class="message" id="res144">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ事前の予想通り私は興味がない寄りです<br>あるんじゃない？って答えたのも別に否定する材料が特にないからとりあえず答えただけといえばそうだな……</div>
+    <div class="message-time">144: 2024/10/26(土) 1:19:25</div>
+  </div>
+</article>
+<article class="message" id="res145">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そして卓として実現しなかったんだからさぼさん的にも掘り下げられたくない気はするのでそこも掘り起こした僕が悪いです<br>すいません</div>
+    <div class="message-time">145: 2024/10/26(土) 1:20:01</div>
+  </div>
+</article>
+<article class="message" id="res146">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ただ私はカニドラ時空に宇宙生物はいない派ということは念頭に置いといてね<br>参加した卓のGMがいるといえばいるけど</div>
+    <div class="message-time">146: 2024/10/26(土) 1:20:21</div>
+  </div>
+</article>
+<article class="message" id="res147">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いや厳密にはいてもいいと思うけどPLが取り扱っていい話題の領分を超えている派</div>
+    <div class="message-time">147: 2024/10/26(土) 1:21:04</div>
+  </div>
+</article>
+<article class="message" id="res148">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">別に話に出すのはいいけど進んで公開するほどのもんでもないかなって……</div>
+    <div class="message-time">148: 2024/10/26(土) 1:21:43</div>
+  </div>
+</article>
+<article class="message" id="res149">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">Tさんが公開するなら別に止めない</div>
+    <div class="message-time">149: 2024/10/26(土) 1:22:00</div>
+  </div>
+</article>
+<article class="message" id="res150">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res143">&gt;&gt; 143</a> <br>僕は公開されないものの話は当事者と部外者にきっぱり別れるから嫌いなんだな。そりゃ情報握ってる当事者は楽しいだろうねにしかならんから</div>
+    <div class="message-time">150: 2024/10/26(土) 1:23:45</div>
+  </div>
+</article>
+<article class="message" id="res151">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">正直あまりわからない感覚だがそれはそれとして覚えられるよう努力します</div>
+    <div class="message-time">151: 2024/10/26(土) 1:25:18</div>
+  </div>
+</article>
+<article class="message" id="res152">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">単純にTさんだけが楽しくなる会話に何ではむさんが参加せなあかんのって話じゃないの</div>
+    <div class="message-time">152: 2024/10/26(土) 1:26:23</div>
+  </div>
+</article>
+<article class="message" id="res153">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とりあえずtさんが怒られたから公開したという要素がログに付随して欲しくないので何らかの別の機会がない限り僕からは公開しないし二度と話しません<br>以上です</div>
+    <div class="message-time">153: 2024/10/26(土) 1:30:43</div>
+  </div>
+</article>
+<article class="message" id="res154">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そもそも非公開情報の話題が好きかどうかで<br>はむさんは「だから何？」としかならんけどTさんは「へぇ～そうなんだ～！」ってなるからそこのズレって話か<br>それなら感性の違いだから暗記ゲーだけど</div>
+    <div class="message-time">154: 2024/10/26(土) 1:32:09</div>
+  </div>
+</article>
+<article class="message" id="res155">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">何にムカついたのか考え直したら<br>話題にしたいならさっさと全公開すりゃいいじゃん。なんか勿体ぶって小出しにして伏せてる部分があるとか後から追加情報出すとかするのがダルいって感じかな。<br>情報持ってる側の好みでアクセス範囲を操作するフェアネス性に欠けるのが嫌いなんだと思う。</div>
+    <div class="message-time">155: 2024/10/26(土) 1:39:43</div>
+  </div>
+</article>
+<article class="message" id="res156">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちなみに私としては、宇宙生物であることを伏せて私から関係あるという言質を取った上で<br>「でもさっき関係あるって言った！」とか言うつもりだったならやめてねってぐらいです</div>
+    <div class="message-time">156: 2024/10/26(土) 1:40:08</div>
+  </div>
+</article>
+<article class="message" id="res157">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それはそのとおりね</div>
+    <div class="message-time">157: 2024/10/26(土) 1:40:40</div>
+  </div>
+</article>
+<article class="message" id="res158">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">僕は他人が興味ないだろうなって情報は結構伏せて話すから……<br>他人が興味ないだろうなって情報これ見よがしに見せたりしたらこいつうぬぼれてんなみたいに思われるんじゃないかと</div>
+    <div class="message-time">158: 2024/10/26(土) 1:42:55</div>
+  </div>
+</article>
+<article class="message" id="res159">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">興味はないけど「とりあえず否定材料はない」「既存の設定と矛盾するから有り得ない」ぐらいは答えます</div>
+    <div class="message-time">159: 2024/10/26(土) 1:43:14</div>
+  </div>
+</article>
+<article class="message" id="res160">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁそうだな既存の世界観と矛盾するような事実を言わないままこんな話したのは全面的に悪かった<br>反省します</div>
+    <div class="message-time">160: 2024/10/26(土) 1:49:14</div>
+  </div>
+</article>
+<article class="message" id="res161">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それは興味ないから伏せてたとかじゃなくアンフェアなだけだった<br>別に既成事実作ろうとしたつもりはなくて<br>ウルフのことだから与太で流れるだろうから未公開ログの衝撃的な要素言う必要ないなと思ってた方が大きいんだが<br>客観的に観れば行動自体が卑劣なので批判されるのは残党</div>
+    <div class="message-time">161: 2024/10/26(土) 1:51:23</div>
+  </div>
+</article>
+<article class="message" id="res162">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あと確認しようがないものの話されるともし興味持っても確認しようがなくて馬鹿みたいになるのも好かん理由にある。</div>
+    <div class="message-time">162: 2024/10/26(土) 1:53:12</div>
+  </div>
+</article>
+<article class="message" id="res163">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だから非公開情報は公開するつもりないなら一部を出されても興味持っても確認できずモヤモヤだけ残るし、興味持たなくても知らんで終わる虚無だし、どっちに転んでもダルいんだ。</div>
+    <div class="message-time">163: 2024/10/26(土) 1:59:12</div>
+  </div>
+</article>
+<article class="message" id="res164">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">見せる気のないチラ見せがダルいから見せるか見せないかハッキリとせい！</div>
+    <div class="message-time">164: 2024/10/26(土) 2:02:39</div>
+  </div>
+</article><div class="elapsed"><span>7時間 42分 経過</span></div>
+<article class="message" id="res165">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今回のとは話が変わるというか僕の性根の話になるが、<br>CoCとかの秘匿系のシナリオに忌避感があるのもそのダルさが嫌なんだろうな…<br>あとミリしら遊び（知らない作品のキャラの名前や設定考えるやつ）も嫌いなのも同根な気がしてる。<br>正しい情報や答えが存在して公開共有すれば話が早いものを一方が知ってる状態で公開せず、推理や推測の及ばないものについて考えさせられるのが嫌だし、さらに答えが公開もされないのが更に嫌なんだろうな…</div>
+    <div class="message-time">165: 2024/10/26(土) 9:44:39</div>
+  </div>
+</article>
+<article class="message" id="res166">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">自己理解が進んだ</div>
+    <div class="message-time">166: 2024/10/26(土) 9:44:52</div>
+  </div>
+</article><div class="elapsed"><span>2日 12時間 51分 経過</span></div>
+<article class="message" id="res167">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">実はなんか血涙の部屋ずーっと開きっぱなしだったりするので読みます<br>っていうか読もうと思ってたけど週末に友人からマリパに誘われたから延期してました</div>
+    <div class="message-time">167: 2024/10/28(月) 22:35:52</div>
+  </div>
+</article>
+<article class="message" id="res168">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">誰かの肩の上が定位置となっている熊 #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">168: 2024/10/28(月) 22:37:37</div>
+  </div>
+</article>
+<article class="message" id="res169">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">笹木さんもすっかりベテラン風格のPC #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">169: 2024/10/28(月) 22:39:25</div>
+  </div>
+</article>
+<article class="message" id="res170">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">何！ハサンくんがオリオンの首に無理やり巻いて締める流れではないのか！？ #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">170: 2024/10/28(月) 22:43:43</div>
+  </div>
+</article>
+<article class="message" id="res171">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ファンブル実演しちゃった…；； #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">171: 2024/10/28(月) 22:47:33</div>
+  </div>
+</article>
+<article class="message" id="res172">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">パーティが動いてる事情を知ったロランの行動が真意知ってるとあまりにもあまりにも #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">172: 2024/10/28(月) 22:49:13</div>
+  </div>
+</article>
+<article class="message" id="res173">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういえばこっちはヴァナヘイム行ってなかったな…？ #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">173: 2024/10/28(月) 22:59:08</div>
+  </div>
+</article>
+<article class="message" id="res174">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">実際何言おうかなってかなり困った</div>
+    <div class="message-time">174: 2024/10/28(月) 22:59:43</div>
+  </div>
+</article>
+<article class="message" id="res175">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そーなの！？</div>
+    <div class="message-time">175: 2024/10/28(月) 23:00:13</div>
+  </div>
+</article>
+<article class="message" id="res176">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＞死した人間は戻って来ない、ならばこの身体は―――<br>特に理由のない不意打ちがハサンくんを襲う！ #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">176: 2024/10/28(月) 23:18:30</div>
+  </div>
+</article>
+<article class="message" id="res177">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">博士死んでる！！！！！！ #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">177: 2024/10/28(月) 23:21:07</div>
+  </div>
+</article>
+<article class="message" id="res178">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">時系列を初めて把握した気がする #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">178: 2024/10/28(月) 23:26:01</div>
+  </div>
+</article>
+<article class="message" id="res179">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いぶし銀笹木 #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">179: 2024/10/28(月) 23:28:46</div>
+  </div>
+</article>
+<article class="message" id="res180">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カゲさん基本的に味方風NPCは信じるスタンスよね #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">180: 2024/10/28(月) 23:36:15</div>
+  </div>
+</article>
+<article class="message" id="res181">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">疑うけどそんなわけねえよな！って勝手に信じてます<br>バカですねえ</div>
+    <div class="message-time">181: 2024/10/28(月) 23:38:34</div>
+  </div>
+</article>
+<article class="message" id="res182">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">頭ラクーンシティやってる #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">182: 2024/10/28(月) 23:45:50</div>
+  </div>
+</article>
+<article class="message" id="res183">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この卓、YDFと協力（笑）してこっちの情報逐一伝えてたらどうなってたんだろ #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">183: 2024/10/28(月) 23:47:13</div>
+  </div>
+</article>
+<article class="message" id="res184">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カゲさんがめちゃくちゃダメージ受けてる… #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">184: 2024/10/28(月) 23:52:10</div>
+  </div>
+</article>
+<article class="message" id="res185">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">３人の啖呵かっけぇ～ #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">185: 2024/10/28(月) 23:55:02</div>
+  </div>
+</article>
+<article class="message" id="res186">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">暴発を受けることに定評のある郁人 #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">186: 2024/10/28(月) 23:59:32</div>
+  </div>
+</article>
+<article class="message" id="res187">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんだこのSPEは！？僕のデータに無いぞ！？ #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">187: 2024/10/29(火) 0:02:18</div>
+  </div>
+</article>
+<article class="message" id="res188">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">読み終えました！お疲れ様でした！ #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">188: 2024/10/29(火) 0:09:38</div>
+  </div>
+</article>
+<article class="message" id="res189">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんやかんや綺麗に着地してて凄いと思いました（小並感） #血涙 #オリオン #笹木 #耀星</div>
+    <div class="message-time">189: 2024/10/29(火) 0:09:58</div>
+  </div>
+</article>
+<article class="message" id="res190">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お通夜</div>
+    <div class="message-time">190: 2024/10/29(火) 0:10:23</div>
+  </div>
+</article>
+<article class="message" id="res191">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ほんとになんやかんやすぎる<br>ありがとうございました</div>
+    <div class="message-time">191: 2024/10/29(火) 0:11:05</div>
+  </div>
+</article>
+<article class="message" id="res192">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ヴェンのRP自体は楽しかったけどこの卓にヴェンを出したの失敗だなと思いました<br>もっと感情的なPCにすべきだったか…</div>
+    <div class="message-time">192: 2024/10/29(火) 0:11:53</div>
+  </div>
+</article>
+<article class="message" id="res193">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">キリさんがその手の後悔するの珍しいな</div>
+    <div class="message-time">193: 2024/10/29(火) 0:12:52</div>
+  </div>
+</article>
+<article class="message" id="res194">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">最初に出した卓が夢オチソロ卓だったから気が付かなかったけど、複数人卓で使ったら「感情が乗らない」とかいうとんでもねえ欠点が見つかったのでぇ…</div>
+    <div class="message-time">194: 2024/10/29(火) 0:16:26</div>
+  </div>
+</article>
+<article class="message" id="res195">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">私はPC感情を啜り貪るためにRPしてるところあるのにヴェンは無味だったんですよ</div>
+    <div class="message-time">195: 2024/10/29(火) 0:17:14</div>
+  </div>
+</article>
+<article class="message" id="res196">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">噛めば噛むほど味が消える虚無<br>ある意味貴重なRP体験ではあったが</div>
+    <div class="message-time">196: 2024/10/29(火) 0:18:16</div>
+  </div>
+</article>
+<article class="message" id="res197">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">実家からどころか創造主のPLからすら無味といわれるヴェン流石に哀れすぎるだろ</div>
+    <div class="message-time">197: 2024/10/29(火) 2:15:23</div>
+  </div>
+</article><div class="elapsed"><span>8時間 23分 経過</span></div>
+<article class="message" id="res198">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">キャラとしては想定外の完成度になったけどそのお陰でPCとして動かすことに難があるというマジでヴェンが何したんですかって境遇</div>
+    <div class="message-time">198: 2024/10/29(火) 10:39:15</div>
+  </div>
+</article>
+<article class="message" id="res199">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">虚言癖だけならまだやりようがあった<br>遠見家設定をくっつけたのが終わりの始まりだった</div>
+    <div class="message-time">199: 2024/10/29(火) 10:40:21</div>
+  </div>
+</article><div class="elapsed"><span>76日 13時間 27分 経過</span></div>
+<article class="message" id="res200">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">YDF中央隊員8IvylOsM20<wbr>25/1/14 0:05<br>「……ヒカリさん。まだ遺体は見つかってませんから……」<br>YDF中央隊員8IvylOsM20<wbr>25/1/14 0:06<br>咎めるが、声に力はない。＠<br>ヒカリRtDj5gd220<wbr>25/1/14 0:06<br>「しかし、この様子では…」<br>ヒカリRtDj5gd220<wbr>25/1/14 0:06<br>「………」<br>YDF中央隊員8IvylOsM20<wbr>25/1/14 0:07<br>「……そうですね。正直、僕も現場に入ってから同じことをしました」＠</div>
+    <div class="message-time">200: 2025/1/14(火) 0:08:16</div>
+  </div>
+</article>
+<article class="message" id="res201">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">冷静に考えたらこいつ悪すぎるな</div>
+    <div class="message-time">201: 2025/1/14(火) 0:08:36</div>
+  </div>
+</article>
+<article class="message" id="res202">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">202: 2025/1/14(火) 0:09:11</div>
+  </div>
+</article>
+<article class="message" id="res203">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いやまぁ郁人に嫌気が差してた自分もいただろうから家族を憐れんでるのも本当っちゃ本当なんだろうけど</div>
+    <div class="message-time">203: 2025/1/14(火) 0:09:29</div>
+  </div>
+</article>
+<article class="message" id="res204">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">自分で処分したくせによぉ</div>
+    <div class="message-time">204: 2025/1/14(火) 0:45:44</div>
+  </div>
+</article><div class="elapsed"><span>2日 23時間 11分 経過</span></div>
+<article class="message" id="res205">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">私のキャラならボンドどうしてただろうなぁ、弁解聴く前に殺しちゃうかもしれない</div>
+    <div class="message-time">205: 2025/1/16(木) 23:56:47</div>
+  </div>
+</article>
+<article class="message" id="res206">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">というか弁解聴いても「まだ言うか害獣！」としかならん気がする</div>
+    <div class="message-time">206: 2025/1/16(木) 23:57:15</div>
+  </div>
+</article>
+<article class="message" id="res207">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">SAVOさんが止めなかったら殴り殺してました</div>
+    <div class="message-time">207: 2025/1/17(金) 0:03:35</div>
+  </div>
+</article>
+<article class="message" id="res208">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ1回殴ったけどセーフか</div>
+    <div class="message-time">208: 2025/1/17(金) 0:04:18</div>
+  </div>
+</article>
+<article class="message" id="res209">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">私のキャラがというより私がたぶんボンドの発言に引っ掛からないと思う<br>知性が向上してるって前情報もあるしな</div>
+    <div class="message-time">209: 2025/1/17(金) 0:04:34</div>
+  </div>
+</article>
+<article class="message" id="res210">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ロラン君もニコニコですね</div>
+    <div class="message-time">210: 2025/1/17(金) 0:05:06</div>
+  </div>
+</article>
+<article class="message" id="res211">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ザインAMj5OqaM20<wbr>25/1/17 0:04<br>人を殺めてる以上処す選択肢しかないんですけど、それはそれとして気持ちの整理がつかない感じですね　同じような生命体なので猶更</div>
+    <div class="message-time">211: 2025/1/17(金) 0:05:12</div>
+  </div>
+</article>
+<article class="message" id="res212">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ロラン「いけ！　殺せ！！！！！！！！！」</div>
+    <div class="message-time">212: 2025/1/17(金) 0:05:21</div>
+  </div>
+</article>
+<article class="message" id="res213">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">化け物がやったんですよ！ほんとです！</div>
+    <div class="message-time">213: 2025/1/17(金) 0:05:32</div>
+  </div>
+</article>
+<article class="message" id="res214">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ロラン「このまま殺して納めてくれればこっちも調書まとめやすいので！！！！！！！」</div>
+    <div class="message-time">214: 2025/1/17(金) 0:05:44</div>
+  </div>
+</article>
+<article class="message" id="res215">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">PCとロランと郁人でWIN-WIN-WI<wbr>Nじゃんね</div>
+    <div class="message-time">215: 2025/1/17(金) 0:06:21</div>
+  </div>
+</article>
+<article class="message" id="res216">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">肉を食える賢い化け物だからって人を餌としか認識しないわけじゃないって話だから信じてあげてね……</div>
+    <div class="message-time">216: 2025/1/17(金) 0:07:13</div>
+  </div>
+</article>
+<article class="message" id="res217">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">冬辺続<br>冬辺もわりとそのタイプではあるけど<br>悪者って聞いた時点で何か現場に感じてた違和感がカチカチッと<br>ハマったので間に合った<br><br>現場の違和感…たぶんプレイ中あんまり感じてなかったかもしれないな…リドルだめです</div>
+    <div class="message-time">217: 2025/1/17(金) 0:30:04</div>
+  </div>
+</article>
+<article class="message" id="res218">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">殴って反撃してこないところまで討伐する気満々だった</div>
+    <div class="message-time">218: 2025/1/17(金) 0:30:39</div>
+  </div>
+</article>
+<article class="message" id="res219">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ほーんえらい賢くなっとりますなぁって思って</div>
+    <div class="message-time">219: 2025/1/17(金) 0:31:07</div>
+  </div>
+</article>
+<article class="message" id="res220">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">実際食って知恵付けて人間社会に擬態して紛れ込んでるやろって筋で考えてたし、衣服の切れ端の違いも、食った順番で知恵をつけた前と後かなって</div>
+    <div class="message-time">220: 2025/1/17(金) 0:33:03</div>
+  </div>
+</article>
+<article class="message" id="res221">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">&gt;&gt;子供<br>&gt;&gt;「じゃあ、悪い奴を懲らしめてくれる？　――――」<br><br>これ引き出したの英雄を自称するヴェンの与太なのどういう巡り会わせやねんすぎる</div>
+    <div class="message-time">221: 2025/1/17(金) 0:33:39</div>
+  </div>
+</article>
+<article class="message" id="res222">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">下水道云々も、知恵付けたんなら住処変えとんちゃうかぁ～？ほんまにおるんかいだったし</div>
+    <div class="message-time">222: 2025/1/17(金) 0:33:59</div>
+  </div>
+</article>
+<article class="message" id="res223">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">キリさんとSAVOさんがいなかったら殴り殺してました</div>
+    <div class="message-time">223: 2025/1/17(金) 0:34:32</div>
+  </div>
+</article>
+<article class="message" id="res224">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ヴェンが違和感を引き出してそれをトリガーに冬辺が洞察してわし様が異能で確証を得てるから無自覚のコンビネーションだったかもしれない</div>
+    <div class="message-time">224: 2025/1/17(金) 0:34:37</div>
+  </div>
+</article>
+<article class="message" id="res225">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">全部わし様のおかげである！感謝せいよ！</div>
+    <div class="message-time">225: 2025/1/17(金) 0:35:19</div>
+  </div>
+</article>
+<article class="message" id="res226">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">1周目のわし様で、「郁人はコネパワーがあるから面倒くせぇ～」って話になった時に<br>「え？なんで？無辜の民一方的に殺しといて無罪なわけなくない？」って反応したのが一番好きです</div>
+    <div class="message-time">226: 2025/1/17(金) 0:37:09</div>
+  </div>
+</article>
+<article class="message" id="res227">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いや単純に人殺しがまるまる一つ消えてなくなるのは荒唐無稽すぎるだろっていう理性的なツッコミなんだろうけど<br>わし様の立場上ノブレスオブリージュ的な高貴さをうかがわせる発言になってる</div>
+    <div class="message-time">227: 2025/1/17(金) 0:38:38</div>
+  </div>
+</article>
+<article class="message" id="res228">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんであの因習ジメジメ差別主義遠見ハウスからこんな快男児が出て来てんだよ</div>
+    <div class="message-time">228: 2025/1/17(金) 0:41:23</div>
+  </div>
+</article>
+<article class="message" id="res229">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お家の事情はお家の事情でウチに生まれた劣等種は最悪成長の過程で死んだり追放されることはあるかもしれないけど、それはそれとしてお家の外の無関係の一般人を差別して殺していいわけじゃないからな</div>
+    <div class="message-time">229: 2025/1/17(金) 0:43:56</div>
+  </div>
+</article><div class="elapsed"><span>21時間 34分 経過</span></div>
+<article class="message" id="res230">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ロラン「騙されないでください！　そいつは人食いの化け物なんですよ！？」</div>
+    <div class="message-time">230: 2025/1/17(金) 22:18:08</div>
+  </div>
+</article>
+<article class="message" id="res231">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ザイン、元々致死性の実験で異能覚醒して、仲間の遺骸を食う事で生き延びたみたいな感じなんだっけな<br>ボンドに感情移入してるんだろうけど、ボンドが狡猾で嘘つきな人食いじゃなくてよかったな……</div>
+    <div class="message-time">231: 2025/1/17(金) 22:23:11</div>
+  </div>
+</article><div class="elapsed"><span>1日 23時間 1分 経過</span></div>
+<article class="message" id="res232">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ヒカリAP0039tJ20<wbr>25/1/19 21:34<br>「…その、こいつは本当に小さな可能性なんだが」<br>ヒカリAP0039tJ20<wbr>25/1/19 21:34<br>言い淀みながら<br>ヒカリAP0039tJ20<wbr>25/1/19 21:34<br>「さっきの…現場のYDFいたろ。あの人なら…。正義感に溢れた彼なら、もしかしたら…」</div>
+    <div class="message-time">232: 2025/1/19(日) 21:24:33</div>
+  </div>
+</article>
+<article class="message" id="res233">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾<br>＾＾＾＾＾＾＾＾＾＾＾＾<br>＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾</div>
+    <div class="message-time">233: 2025/1/19(日) 21:24:41</div>
+  </div>
+</article>
+<article class="message" id="res234">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾＾</div>
+    <div class="message-time">234: 2025/1/19(日) 21:26:39</div>
+  </div>
+</article>
+<article class="message" id="res235">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ヒカリAP0039tJ20<wbr>25/1/19 21:34<br>「さっきの…現場のYDFいたろ。あの人なら…。正義感に溢れた彼なら、もしかしたら…」<br><br>草</div>
+    <div class="message-time">235: 2025/1/19(日) 21:34:50</div>
+  </div>
+</article>
+<article class="message" id="res236">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">真相を知った時のヒカリの反応を想像するだけでご飯三杯いける</div>
+    <div class="message-time">236: 2025/1/19(日) 21:36:25</div>
+  </div>
+</article>
+<article class="message" id="res237">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オセロットはYDFの報告に不審な点があって、それについてニーベルング＝ラインゴールド側で独自調査してた側<br>PCと情報交換したいと思っている</div>
+    <div class="message-time">237: 2025/1/19(日) 21:54:56</div>
+  </div>
+</article>
+<article class="message" id="res238">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">化け物か化け物じゃないか分らない化け物と見た目で明らかに化け物だとわかる化け物なら前者の方が脅威だけど迫害されるのは後者だよな…</div>
+    <div class="message-time">238: 2025/1/19(日) 23:06:58</div>
+  </div>
+</article><div class="elapsed"><span>1日 1時間 2分 経過</span></div>
+<article class="message" id="res239">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">タスクとかでこのシナリオ参加してたら詰んでたかもしれんな……</div>
+    <div class="message-time">239: 2025/1/21(火) 0:09:26</div>
+  </div>
+</article>
+<article class="message" id="res240">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ郁人レベルのやらかしなら「損切りも組織に属する者の務めだ」ってゴリ押すか</div>
+    <div class="message-time">240: 2025/1/21(火) 0:10:11</div>
+  </div>
+</article>
+<article class="message" id="res241">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">高松さんがこのシナリオ参加してたらロラン君といい関係を結べたのに…</div>
+    <div class="message-time">241: 2025/1/21(火) 0:23:49</div>
+  </div>
+</article>
+<article class="message" id="res242">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">完全な利害一致なんだよな</div>
+    <div class="message-time">242: 2025/1/21(火) 0:29:09</div>
+  </div>
+</article>
+<article class="message" id="res243">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">……それでも郁人は殺される気がするな</div>
+    <div class="message-time">243: 2025/1/21(火) 0:29:39</div>
+  </div>
+</article>
+<article class="message" id="res244">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">有効活用してから死んでほしいけど…</div>
+    <div class="message-time">244: 2025/1/21(火) 0:30:47</div>
+  </div>
+</article>
+<article class="message" id="res245">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">利用できるかあれ？？</div>
+    <div class="message-time">245: 2025/1/21(火) 0:33:52</div>
+  </div>
+</article>
+<article class="message" id="res246">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">うーん…</div>
+    <div class="message-time">246: 2025/1/21(火) 0:34:22</div>
+  </div>
+</article>
+<article class="message" id="res247">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">活かしてたらリスクだし</div>
+    <div class="message-time">247: 2025/1/21(火) 0:34:53</div>
+  </div>
+</article>
+<article class="message" id="res248">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">父親からも見捨てられていい顔知れるの拝んでから死んでもらいたいな</div>
+    <div class="message-time">248: 2025/1/21(火) 0:36:16</div>
+  </div>
+</article>
+<article class="message" id="res249">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">草</div>
+    <div class="message-time">249: 2025/1/21(火) 0:36:24</div>
+  </div>
+</article>
+<article class="message" id="res250">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ロラン君苦労してたしスカッとして</div>
+    <div class="message-time">250: 2025/1/21(火) 0:36:24</div>
+  </div>
+</article>
+<article class="message" id="res251">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">利用とかじゃなくて個人的な消費じゃねーか！</div>
+    <div class="message-time">251: 2025/1/21(火) 0:36:54</div>
+  </div>
+</article>
+<article class="message" id="res252">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だってそれくらいしか利用価値ないし…</div>
+    <div class="message-time">252: 2025/1/21(火) 0:37:11</div>
+  </div>
+</article>
+<article class="message" id="res253">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ボンドに郁人食わせて、ボンドを郁人にしたら郁人（ボンド）は趣味で人を殺さない清廉潔白な青年になってWINWINになりませんか？</div>
+    <div class="message-time">253: 2025/1/21(火) 0:51:37</div>
+  </div>
+</article>
+<article class="message" id="res254">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">血涙回すために嘘喰い読み返してたけど、滑骨に「お前が郁人を殺した」って言われて<br>「この状況まで追い込んだのはおまえと郁人自身だろ」って跳ね返した上で<br>「確かに俺が最後に郁人を突き落としたが、その分の責任はおまえに言われなくとも一生付き合っていく」<br>って言い返した梶ちゃん偉いな</div>
+    <div class="message-time">254: 2025/1/21(火) 0:51:41</div>
+  </div>
+</article>
+<article class="message" id="res255">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res253">&gt;&gt; 253</a> <br>ボンドはフォージャー家の死をなかったことにしたくないっつってんだよ！</div>
+    <div class="message-time">255: 2025/1/21(火) 0:52:25</div>
+  </div>
+</article>
+<article class="message" id="res256">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">フォージャー一家のみんなはボンドに復讐を望んでいるんですよ。彼らの望みを叶えましょうよ</div>
+    <div class="message-time">256: 2025/1/21(火) 0:53:23</div>
+  </div>
+</article>
+<article class="message" id="res257">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">郁人を殺して気が済むならわざわざPTに頼んでねぇんだよ！</div>
+    <div class="message-time">257: 2025/1/21(火) 0:53:38</div>
+  </div>
+</article>
+<article class="message" id="res258">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いうてボンドだけで郁人まで辿り着くのは無理か…<br>まぁでも殺して済む話じゃねぇんだよ！</div>
+    <div class="message-time">258: 2025/1/21(火) 0:54:31</div>
+  </div>
+</article>
+<article class="message" id="res259">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">化け物のくせに</div>
+    <div class="message-time">259: 2025/1/21(火) 0:54:39</div>
+  </div>
+</article>
+<article class="message" id="res260">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ボンドの手で仇を討ってあげる事が死んだ彼らへの報いなんですよ</div>
+    <div class="message-time">260: 2025/1/21(火) 0:55:26</div>
+  </div>
+</article>
+<article class="message" id="res261">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうかな……高松さんがそう言うならそうかも……</div>
+    <div class="message-time">261: 2025/1/21(火) 0:59:16</div>
+  </div>
+</article><div class="elapsed"><span>3日 21時間 58分 経過</span></div>
+<article class="message" id="res262">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">がもうEOhyjs1M20<wbr>25/1/24 22:55<br>じゃあぼくが撃ち殺します　綿菓子銃じゃないです＠ (編集済)<br>がもうEOhyjs1M20<wbr>25/1/24 22:56<br>じゃあさっきもろたブラスターで撃つか<br>YDF中央隊員8IvylOsM20<wbr>25/1/24 22:56<br>「…………」<br>YDF中央隊員8IvylOsM20<wbr>25/1/24 22:56<br>「こういうのは、早く決めないとダメですよ。博士」<br>YDF中央隊員8IvylOsM20<wbr>25/1/24 22:56<br>眉間に風穴が空きます＠</div>
+    <div class="message-time">262: 2025/1/24(金) 22:57:39</div>
+  </div>
+</article>
+<article class="message" id="res263">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ロラン再登場ルートなくなったわ</div>
+    <div class="message-time">263: 2025/1/24(金) 22:57:52</div>
+  </div>
+</article>
+<article class="message" id="res264">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">がもうEOhyjs1M20<wbr>25/1/24 23:01<br>（殺されたがってた…のれしょうかね？あいつ。しらんけど…。）＠</div>
+    <div class="message-time">264: 2025/1/24(金) 23:02:04</div>
+  </div>
+</article>
+<article class="message" id="res265">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「僕が生きていていろいろと情報吐かされるような流れになったら僕のクライアントの皆さんの迷惑になりますからね」</div>
+    <div class="message-time">265: 2025/1/24(金) 23:02:45</div>
+  </div>
+</article>
+<article class="message" id="res266">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ふと思い出したけどヴェンでちょっとやりたかったムーブとしては郁人に「君が罪を償うなら私は君を守ろうじゃないか」と言いつつ自覚なしに銃で足を撃ち抜く狂人ムーブ</div>
+    <div class="message-time">266: 2025/1/24(金) 23:06:03</div>
+  </div>
+</article>
+<article class="message" id="res267">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res265">&gt;&gt; 265</a> <br>がもう「ふぅん…なーんだ…しょうもな…」</div>
+    <div class="message-time">267: 2025/1/24(金) 23:43:43</div>
+  </div>
+</article>
+<article class="message" id="res268">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202310e21b38ef&amp;i=i7e44e62a" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202310e21b38ef&amp;i=i7e44e62a" width="239" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202310e21b38ef&amp;i=i7e44e62a">📎 づけ【血涙】.png</a> <span class="filesize">[1.5 MB, 1350x918px]</span> を追加しました。</div>
+    <div class="message-time">268: 2025/1/25(土) 0:30:55</div>
+  </div>
+</article>
+<article class="message" id="res269">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れさまでした<br>なんやねん血涙て（まだ言う）</div>
+    <div class="message-time">269: 2025/1/25(土) 0:31:12</div>
+  </div>
+</article>
+<article class="message" id="res270">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんやねんでしたね</div>
+    <div class="message-time">270: 2025/1/25(土) 0:36:35</div>
+  </div>
+</article>
+<article class="message" id="res271">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんだろうな</div>
+    <div class="message-time">271: 2025/1/25(土) 0:36:39</div>
+  </div>
+</article>
+<article class="message" id="res272">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">後半のシナリオがネタバレ出来ないのがきついな</div>
+    <div class="message-time">272: 2025/1/25(土) 0:37:20</div>
+  </div>
+</article>
+<article class="message" id="res273">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今さらタイトル変えるつもりはないけど何がよかったと思いますか？</div>
+    <div class="message-time">273: 2025/1/25(土) 0:37:49</div>
+  </div>
+</article>
+<article class="message" id="res274">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">私はどうすればよかったんですか？</div>
+    <div class="message-time">274: 2025/1/25(土) 0:37:58</div>
+  </div>
+</article>
+<article class="message" id="res275">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どこから間違えていたというんですか？</div>
+    <div class="message-time">275: 2025/1/25(土) 0:38:10</div>
+  </div>
+</article>
+<article class="message" id="res276">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">変えるつもりないなら考える必要ないかぁ…</div>
+    <div class="message-time">276: 2025/1/25(土) 0:38:10</div>
+  </div>
+</article>
+<article class="message" id="res277">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">！！！！</div>
+    <div class="message-time">277: 2025/1/25(土) 0:38:26</div>
+  </div>
+</article>
+<article class="message" id="res278">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">４周目でタイトル変えたら「何の話？」ってなるからな</div>
+    <div class="message-time">278: 2025/1/25(土) 0:39:00</div>
+  </div>
+</article>
+<article class="message" id="res279">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんか倫理観は問われまくってたな</div>
+    <div class="message-time">279: 2025/1/25(土) 0:39:02</div>
+  </div>
+</article>
+<article class="message" id="res280">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だいぶアライメントの話だった</div>
+    <div class="message-time">280: 2025/1/25(土) 0:39:29</div>
+  </div>
+</article>
+<article class="message" id="res281">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁいうて郁人という絶対悪がいるから…</div>
+    <div class="message-time">281: 2025/1/25(土) 0:40:11</div>
+  </div>
+</article>
+<article class="message" id="res282">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">蝸旋がよ</div>
+    <div class="message-time">282: 2025/1/25(土) 0:40:36</div>
+  </div>
+</article>
+<article class="message" id="res283">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあいいんじゃないの血涙で</div>
+    <div class="message-time">283: 2025/1/25(土) 0:41:08</div>
+  </div>
+</article>
+<article class="message" id="res284">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">郁人に殺された人間たちの声のつもりで流したら郁人の被害者意識が負けてなかった</div>
+    <div class="message-time">284: 2025/1/25(土) 0:41:24</div>
+  </div>
+</article>
+<article class="message" id="res285">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あいつモンスターすぎる</div>
+    <div class="message-time">285: 2025/1/25(土) 0:41:36</div>
+  </div>
+</article>
+<article class="message" id="res286">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どうしようもねえ</div>
+    <div class="message-time">286: 2025/1/25(土) 0:41:53</div>
+  </div>
+</article>
+<article class="message" id="res287">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ボンドにとっては郁人ブチ殺したいくらい憎いのに涙をのんで止めるんだから血涙でいいよ</div>
+    <div class="message-time">287: 2025/1/25(土) 0:42:56</div>
+  </div>
+</article>
+<article class="message" id="res288">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">フォージャーのみんなの死を無にしないことがボンドの選んだ哀悼の形だから…</div>
+    <div class="message-time">288: 2025/1/25(土) 0:44:08</div>
+  </div>
+</article>
+<article class="message" id="res289">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">元肉塊とは思えない倫理観である</div>
+    <div class="message-time">289: 2025/1/25(土) 0:45:16</div>
+  </div>
+</article>
+<article class="message" id="res290">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういえば全然関係ないけどがもうが電磁力で銃取り上げるとこ楽しかったな<br>電磁力っていいですね</div>
+    <div class="message-time">290: 2025/1/25(土) 0:47:15</div>
+  </div>
+</article>
+<article class="message" id="res291">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">キムタクが如くと、はむさんがやってた犯行現場掃除して殺人の事実をなかったことにするシミュレーター系ゲーム見て<br>「犯行の事実を歪めることは死人を穢すことなんだな」って心で理解してそのインスピレーションが取り込まれています</div>
+    <div class="message-time">291: 2025/1/25(土) 0:47:32</div>
+  </div>
+</article>
+<article class="message" id="res292">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なるほどね</div>
+    <div class="message-time">292: 2025/1/25(土) 0:47:52</div>
+  </div>
+</article>
+<article class="message" id="res293">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">掃除シミュレーター卓生み出し過ぎだろ</div>
+    <div class="message-time">293: 2025/1/25(土) 0:48:31</div>
+  </div>
+</article>
+<article class="message" id="res294">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あと秩序・悪（広義）をあんまり動かせてなかったから秩序・悪（広義）を動かしたかった</div>
+    <div class="message-time">294: 2025/1/25(土) 0:49:14</div>
+  </div>
+</article>
+<article class="message" id="res295">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">珍しかったですね秩序悪</div>
+    <div class="message-time">295: 2025/1/25(土) 0:49:38</div>
+  </div>
+</article>
+<article class="message" id="res296">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、そういや敵のステータス開示してもらうの忘れてた<br>どんなもんでした？</div>
+    <div class="message-time">296: 2025/1/25(土) 0:49:55</div>
+  </div>
+</article>
+<article class="message" id="res297">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちょっと待ってね</div>
+    <div class="message-time">297: 2025/1/25(土) 0:50:11</div>
+  </div>
+</article>
+<article class="message" id="res298">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">■ＹＤＦ中央隊　警備部　警備課<br>　『ロラン・マルロス』<br>　<br>　……<br>　…………<br>　………………<br>　<br>[情報を訂正……]<br><br>■ＹＤＦエデン隊　警備部　公安課<br>　『ロラン・マルロス』<br><br>力20 / 威13 / 観4 / 察7 / 知2 / 技10 / 隠13 / 俊8 / 話10 / 読4 / 閃6 / 幸6<br>筋20 / 耐6 / 知2 / 精2 / 器18 / 敏8 / 運6<br><br>HP：50 / PP：30 / 暴走：70%<br>ＳＳ：14+1d(+3) / 命中：21+1d(+3) / 回避：11+1d(+3)<br><br>防御：4 / 抵抗：1 / 行動値：4<br>格闘：6D6+0 / 武器：1D6+0 / 能力：2D6+0<br><br>スペック：0 / 精度：10<br>活性タイプ：反応型 / ＳＰＥ：※ / カルマ：破壊者<br><br>ＮＰＣ特性（0pt/5bp）：<br>●因子覚醒<br>●瞬間解除<br>●異常耐性（Lv0）<br><br>▼オリジナルＳＰＥ【執念】<br>　このユニットが戦闘不能になった場合、１度だけ発動する。<br>　エンドフェイズにＨＰを【１０ｄ】回復し、全ての状態異常・付加効果を解除する。</div>
+    <div class="message-time">298: 2025/1/25(土) 0:50:45</div>
+  </div>
+</article>
+<article class="message" id="res299">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">■ＹＤＦエデン隊　警備部　公安課　備品<br>　『イオタ‐2000』<br>力0 / 威4 / 観0 / 察8 / 知1 / 技3 / 隠11 / 俊17 / 話3 / 読0 / 閃0 / 幸1<br>筋1 / 耐10 / 知2 / 精2 / 器6 / 敏18 / 運2<br><br>HP：20 / PP：25 / 暴走：70%<br>ＳＳ：3+1d(+3) / 命中：13+1d(+3) / 回避：19+1d(+3)<br><br>防御：5 / 抵抗：1 / 行動値：9<br>格闘：1d+0 / 武器：2d+5 / 能力：2d+0<br><br>スペック：0 / 精度：10<br>活性タイプ：反応型 / ＳＰＥ：防衛本能 / カルマ：闇商人<br><br>ＮＰＣ特性（1pt/0bp）：<br>●活性状態<br>（○ステータス変化系6pt)</div>
+    <div class="message-time">299: 2025/1/25(土) 0:51:05</div>
+  </div>
+</article>
+<article class="message" id="res300">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ロラン君、割とちょくちょく顔見せてたからこうなっちゃって悲しいな</div>
+    <div class="message-time">300: 2025/1/25(土) 0:51:05</div>
+  </div>
+</article>
+<article class="message" id="res301">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、認識してたのか<br>づけさんの前に顔だしたことあったっけ？って感じだった</div>
+    <div class="message-time">301: 2025/1/25(土) 0:51:32</div>
+  </div>
+</article>
+<article class="message" id="res302">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でもこうするために作ったキャラでした<br>てへぺろ</div>
+    <div class="message-time">302: 2025/1/25(土) 0:51:58</div>
+  </div>
+</article>
+<article class="message" id="res303">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">俺は見てたか分からんけど割と出てたのは知ってそーーーーなの！？</div>
+    <div class="message-time">303: 2025/1/25(土) 0:52:10</div>
+  </div>
+</article>
+<article class="message" id="res304">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はわわ…＞＜；；；；；；</div>
+    <div class="message-time">304: 2025/1/25(土) 0:52:24</div>
+  </div>
+</article>
+<article class="message" id="res305">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＞＜；；；；；；</div>
+    <div class="message-time">305: 2025/1/25(土) 0:52:37</div>
+  </div>
+</article>
+<article class="message" id="res306">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">前どこで出てたかは忘れたけどどっかで複数回見たことはあるはず</div>
+    <div class="message-time">306: 2025/1/25(土) 0:53:07</div>
+  </div>
+</article>
+<article class="message" id="res307">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ロラン命中高すぎるwwwwwwあっぶねwwwww</div>
+    <div class="message-time">307: 2025/1/25(土) 0:53:40</div>
+  </div>
+</article>
+<article class="message" id="res308">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「実は中央隊は本属ではなくエデンの公安」って設定があって、<br>いつ爆発させようかな～と思ってた爆薬が今回炸裂しました</div>
+    <div class="message-time">308: 2025/1/25(土) 0:53:44</div>
+  </div>
+</article>
+<article class="message" id="res309">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">特異体質で頭ハムケージになってる系ノーマルです</div>
+    <div class="message-time">309: 2025/1/25(土) 0:54:10</div>
+  </div>
+</article>
+<article class="message" id="res310">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おもったよりイカレてんなこいつ</div>
+    <div class="message-time">310: 2025/1/25(土) 0:54:59</div>
+  </div>
+</article>
+<article class="message" id="res311">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">タフネスではケージに遅れを取ってるがスピードで分があるでしょう<br>最後に打ってたのはそれこそアンプルやシナプスの類のヤバイ薬です</div>
+    <div class="message-time">311: 2025/1/25(土) 0:55:47</div>
+  </div>
+</article>
+<article class="message" id="res312">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ行動させなきゃただの回避11の的なんですよね</div>
+    <div class="message-time">312: 2025/1/25(土) 0:55:54</div>
+  </div>
+</article>
+<article class="message" id="res313">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ヒカリは若干心配が勝っていたアレ</div>
+    <div class="message-time">313: 2025/1/25(土) 0:56:36</div>
+  </div>
+</article>
+<article class="message" id="res314">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res312">&gt;&gt; 312</a> <br>クリーチャーの強さはぶっちゃけこの電撃戦の発想にかなり助けられてるからな</div>
+    <div class="message-time">314: 2025/1/25(土) 0:56:38</div>
+  </div>
+</article>
+<article class="message" id="res315">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なのでクリーチャーを殺したいときはオート状態異常みたいな絶対上取るギミックを搭載したり<br>物理無効で持久戦を強要しましょうね</div>
+    <div class="message-time">315: 2025/1/25(土) 0:57:34</div>
+  </div>
+</article>
+<article class="message" id="res316">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ジャマーは身も蓋も無さすぎるからやめようね！</div>
+    <div class="message-time">316: 2025/1/25(土) 0:58:09</div>
+  </div>
+</article>
+<article class="message" id="res317">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">一手違えてたらあそこまでサックリいかなかったかもしれないな　まあ因子はいっぱいあったが</div>
+    <div class="message-time">317: 2025/1/25(土) 0:58:27</div>
+  </div>
+</article>
+<article class="message" id="res318">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">イオタ（フェイスレス警備ロボ）のグレネードも込みでけっこう綱渡りだったと思う</div>
+    <div class="message-time">318: 2025/1/25(土) 0:59:17</div>
+  </div>
+</article>
+<article class="message" id="res319">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">敵にグレネード持たせるの法律で禁止にしてくれ</div>
+    <div class="message-time">319: 2025/1/25(土) 0:59:45</div>
+  </div>
+</article>
+<article class="message" id="res320">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあこんなもんかな　寝ます…うわ、ナナ・テスカトリの存在思い出した　倒さなきゃ…</div>
+    <div class="message-time">320: 2025/1/25(土) 1:01:37</div>
+  </div>
+</article>
+<article class="message" id="res321">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おつかれさまでした　ありがとうございました</div>
+    <div class="message-time">321: 2025/1/25(土) 1:02:12</div>
+  </div>
+</article>
+<article class="message" id="res322">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">草</div>
+    <div class="message-time">322: 2025/1/25(土) 1:02:44</div>
+  </div>
+</article>
+<article class="message" id="res323">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">乙した乙した<br>ナナリベンジキャスお待ちしています</div>
+    <div class="message-time">323: 2025/1/25(土) 1:03:04</div>
+  </div>
+</article><div class="elapsed"><span>82日 21時間 15分 経過</span></div>
+<article class="message" id="res324">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この卓まだ終わってなかったのかよ</div>
+    <div class="message-time">324: 2025/4/17(木) 22:18:27</div>
+  </div>
+</article><div class="elapsed"><span>16日 12時間 10分 経過</span></div>
+<article class="message" id="res325">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんか「この卓のRPとか行動は結構いい線行ってたよな〜」と思ってつい読み返しちゃった<br>今あんまTRPGのモチベないのって多分この卓でやりたかった事全部出来ちゃったからなんだよな<br>やっぱ満足感って創作には毒なのかもな<br>まあまたなんかやりたい事できたら戻ってくるから…</div>
+    <div class="message-time">325: 2025/5/4(日) 10:29:25</div>
+  </div>
+</article>
+<article class="message" id="res326">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ザインはお気に入りのキャラなのでまた使いたいですね</div>
+    <div class="message-time">326: 2025/5/4(日) 10:30:17</div>
+  </div>
+</article><div class="elapsed"><span>2日 0時間 27分 経過</span></div>
+<article class="message" id="res327">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">スマさんがワク君使ったらボンドのお願いを聞く義理が無くて殺して終了しそうだけど、ラバソのキャラ次第では枠君に立ちふさがって節馬枠パート2が始まったりしますか？</div>
+    <div class="message-time">327: 2025/5/6(火) 10:58:12</div>
+  </div>
+</article><div class="elapsed"><span>4時間 17分 経過</span></div>
+<article class="message" id="res328">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そもそもスマさんがこの卓を「もう一度の幸せを2」だと思ってます</div>
+    <div class="message-time">328: 2025/5/6(火) 15:15:20</div>
+  </div>
+</article>
+<article class="message" id="res329">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なので枠くん出だしてもしょうがないって言ってたはず</div>
+    <div class="message-time">329: 2025/5/6(火) 15:15:51</div>
+  </div>
+</article><div class="elapsed"><span>11日 21時間 39分 経過</span></div>
+<article class="message" id="res330">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちょっと思い出したのでコラム情報<br>既にどっかで喋ったかもしれないけど</div>
+    <div class="message-time">330: 2025/5/18(日) 12:55:38</div>
+  </div>
+</article>
+<article class="message" id="res331">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">元々このシナリオの着想元になったのははるまきごはん氏作曲の『メルティランドナイトメア』という楽曲です<br><a href="https://youtu.be/ZEy36W1xX8c?si=IXRTVKAIwU4yU7hK" target="_blank">https:<wbr>/<wbr>/<wbr>youtu.<wbr>be/<wbr>ZEy36W1xX8<wbr>c?<wbr>si=<wbr>IXRTVKAIwU<wbr>4yU7hK</a><br><br>夢の中でだけ会える二人の少女の幻想的な出会いと別れを語っています</div>
+    <div class="message-time">331: 2025/5/18(日) 12:56:38</div>
+  </div>
+</article>
+<article class="message" id="res332">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">で、この曲の有名な解釈の一つとして「堕胎した少女と生まれる筈の少女の出会いを描いたものなのではないか」というものがあります<br>この解釈自体はMVや歌詞を深読みしたものに過ぎず、作者からは特にこれといったコメントもない筈ではある</div>
+    <div class="message-time">332: 2025/5/18(日) 13:00:30</div>
+  </div>
+</article>
+<article class="message" id="res333">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">センシティブなテーマなので考察として注目を集めやすい事情を考えると、一「興味深くはあるがそれ以上ではない」って感じです<br>鵜呑みにするには疑問符がいくつか付き纏う代物ではある……が、ともかくそういった楽曲です</div>
+    <div class="message-time">333: 2025/5/18(日) 13:01:37</div>
+  </div>
+</article>
+<article class="message" id="res334">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">で、真偽はともかく私は本考察を面白いと感じたので何か卓のネタにできないかと思いました<br>そこで思いついたのが、はむ卓の『もう一度の幸せを』です。あの構造が使えると。<br>そうです。この卓、当初は本当に『もう一度の幸せを２』でした</div>
+    <div class="message-time">334: 2025/5/18(日) 13:04:23</div>
+  </div>
+</article>
+<article class="message" id="res335">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">当初、CARRIONは子供を堕胎した人間のところに現れ、<br>「本来生まれていたはずの子供」の姿を取り、その未練を人質として寄生する生物種としてデザインしていました。<br>こう書くとムーピーそのままですね。</div>
+    <div class="message-time">335: 2025/5/18(日) 13:08:00</div>
+  </div>
+</article>
+<article class="message" id="res336">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">で、その上で一捻りとして設定したのは「CARRIONは子供の姿を取って泣き喚くが、あくまで生存戦略の範疇で採る行動に過ぎない」って点でした<br>泣き落としが通用しないと見るや否や急に人間離れした動きを始めてＰＬを襲ったりそれまで寄生してた母親（偽）を人質にとる……<br>みたいな展開を想定してました</div>
+    <div class="message-time">336: 2025/5/18(日) 13:11:50</div>
+  </div>
+</article>
+<article class="message" id="res337">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">これまでのカニドラでも「実験生物にも情緒があって……」みたいな話を押し出す展開が多かったですし、<br>その裏をかく形になるこの展開自体は、意外性があってなかなか良かったと思います<br>何より、母親（偽）の善意や思い出を目の前で踏み躙る格好になるので、単なる害獣駆除に留まらぬドラマが生まれそうですし。</div>
+    <div class="message-time">337: 2025/5/18(日) 13:14:51</div>
+  </div>
+</article>
+<article class="message" id="res338">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">SCPでめちゃくちゃかわいそうな子供の姿をしてて庇護されることで寄生する生物とかいたからいつか出したいなぁって思ってた</div>
+    <div class="message-time">338: 2025/5/18(日) 13:16:55</div>
+  </div>
+</article>
+<article class="message" id="res339">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ただ、それ以外の副菜にあたる展開が思いつかなかったのは問題でした。話として無駄が無さ過ぎたのです。<br>短いシナリオとして纏めても良かったのですが、テーマもテーマなのであまり短すぎる尺には向かないように思いました。<br>まぁ私やはむさんが思い出した頃に再利用できるでしょう。</div>
+    <div class="message-time">339: 2025/5/18(日) 13:17:24</div>
+  </div>
+</article>
+<article class="message" id="res340">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="http://scp-jp.wikidot.com/scp-1076" target="_blank">http:<wbr>/<wbr>/<wbr>scp-<wbr>jp.<wbr>wikidot.<wbr>com/<wbr>scp-<wbr>1076</a><br>これだ</div>
+    <div class="message-time">340: 2025/5/18(日) 13:20:43</div>
+  </div>
+</article>
+<article class="message" id="res341">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">で、そのままCARRIONの設定だけが宙ぶらりんになります。<br>一方で当時、【SCP-2931-JP】というSCPを鑑賞して、これにもいたく感銘を受け、これが第二の元ネタになります。<br><br><a href="http://scp-jp.wikidot.com/scp-2931-jp" target="_blank">http:<wbr>/<wbr>/<wbr>scp-<wbr>jp.<wbr>wikidot.<wbr>com/<wbr>scp-<wbr>2931-<wbr>jp</a></div>
+    <div class="message-time">341: 2025/5/18(日) 13:23:43</div>
+  </div>
+</article>
+<article class="message" id="res342">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">342: 2025/5/18(日) 13:26:07</div>
+  </div>
+</article>
+<article class="message" id="res343">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">内容をざっくりいうと、「怪物が人間の女の子と仲良くなったが、その女の子が親からの虐待で死んでしまい、オブジェクトがその女の子の仇討ちをした」って経緯になります<br>特に印象に残ったのは、SCiPが女の子の絵（自分が描かれたもの）を女の子との思い出の品として現場から持ち去った描写でした<br>これは使えるぞと思い、当時執筆を進めていました</div>
+    <div class="message-time">343: 2025/5/18(日) 13:26:34</div>
+  </div>
+</article>
+<article class="message" id="res344">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">で、その2931-JPのギミックと既にあったCARRIONのギミックが融合し、「復讐のために収容違反をする擬態生物」という根幹部分が固まりました<br>かつ、そこから真相に対する意外性を強調するために、「殺人事件に関与していると思われたが実際は無関係」「CARRION自身は理性的で、復讐といっても法治的なものを望んでいる」<br>といった展開が補助のために生えました</div>
+    <div class="message-time">344: 2025/5/18(日) 13:30:27</div>
+  </div>
+</article>
+<article class="message" id="res345">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この時点で<br>「序盤……収容違反の脱走およびそれに由来すると思われる殺人事件について、PCが調査を依頼される」<br>「中盤……被験体は実は殺していない。手掛かりを示し、事件の真解決をPCに頼む」<br>「終盤……事件の真犯人と決着をつける」<br>と、大まかな筋書は出来上がっていました。<br>なので細部はざっくり流すために、YDFによる陰謀劇があったということにすればわかりやすい構造になるかな、ということで7割まとまってました</div>
+    <div class="message-time">345: 2025/5/18(日) 13:34:13</div>
+  </div>
+</article>
+<article class="message" id="res346">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">真犯人（の近衛）にロランが選ばれたのもこの辺でした。<br>所属は伏せているが本属はエデン隊って設定自体は元から考えていたものだったので、けっこうこの辺はシームレスに決まりました<br>「あ、今までも出てたんだ」みたいな反応になるのだけが懸念点でしたが、だいたいの方に「おまえレギュラーじゃなかった？」って思ってはいただけたようなのでそこは幸いでした</div>
+    <div class="message-time">346: 2025/5/18(日) 13:38:32</div>
+  </div>
+</article>
+<article class="message" id="res347">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">で、後は細部を世界観的な妥当性を加味して適当に直していったものをお出しした感じなのですが<br>惜しむらくは時系列や収容の形態に関して終始曖昧なままだったところ<br>&gt;&gt;344 の通り、当初は「収容違反と事件の発生は同時（少女の危険を察知して飛び出した）」想定だったのですが、流石に世界観的にうまく説明できないと思って練り直した部分でした<br>この時のイメージに引っ張られていたのもあり、うまく整理がついていなかったようです</div>
+    <div class="message-time">347: 2025/5/18(日) 13:42:12</div>
+  </div>
+</article>
+<article class="message" id="res348">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、ちょっと遡りますが郁人について<br>CARRIONが結局、情緒的な怪物になってしまったので、むしろ人間側の醜さを対比・強調する構造にしようと思っていました<br>事件自体も単なる殺害じゃなく、陰惨なものにするのがよいだろう……ということで、生理的嫌悪感を催すレベルの事件にすることにしました<br>現状のリプレイ中ではあまり触れられていませんが、強姦殺人なのはそういう理由です</div>
+    <div class="message-time">348: 2025/5/18(日) 13:46:27</div>
+  </div>
+</article>
+<article class="message" id="res349">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">で、『嘘喰い』本編で全く同じ事件を起こしているクソ野郎として郁人に白羽の矢が立ちました<br>元々真犯人自体は戦闘力がなく護衛がいなきゃ何もできないぐらいの空気感を望んでいたのですが、そのイメージにもピッタリ合いますし<br>人格の醜悪さもかなり理想的です</div>
+    <div class="message-time">349: 2025/5/18(日) 13:48:34</div>
+  </div>
+</article>
+<article class="message" id="res350">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あと、今作におけるＹＤＦやロランの周りの設定は龍が如くスタジオの『ジャッジアイズ』シリーズを参考にしたのですが<br>同作では「黒幕に当たる人物が複数おり、片方がもう片方に始末されそうになるのをプレイヤー（キムタク）が庇う」という展開があって、そこのイメージも引用しています<br>特に一作目で庇うことになるのはキムタク自身が「アンタを庇うのは本意じゃねぇけどな」と漏らすレベルのクソ野郎です<br>事件究明のため、悪人をそれ以上の悪人から庇うという構図を考えた時に、郁人がぴったりハマった感じがしました</div>
+    <div class="message-time">350: 2025/5/18(日) 13:53:47</div>
+  </div>
+</article>
+<article class="message" id="res351">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">取り留めはないけどだいたい話せたか<br>まぁだいたいそんな感じの卓でした。時系列ガバガバだったり、カゲさんが体調崩すレベルでガン萎えしたり、ＰＣ視点だと敵が強大すぎて後半の展開にとっかかりがなさすぎたり、<br>いろいろアレな出来ではありましたが、まぁ露骨にやりたい事ができなかったって人はいなさそうだから良かったことにしよう……<br>いずれ来る最終走もそのようにあってほしいが……</div>
+    <div class="message-time">351: 2025/5/18(日) 13:57:29</div>
+  </div>
+</article>
+<article class="message" id="res352">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">追記：当初のシナリオ案、【ケダモノ】とかだった気がします。なんでこれにしなかったんだろう</div>
+    <div class="message-time">352: 2025/5/18(日) 13:59:00</div>
+  </div>
+</article>
+<article class="message" id="res353">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202310e21b38ef&amp;i=ie4fef85b" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202310e21b38ef&amp;i=ie4fef85b" width="221" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202310e21b38ef&amp;i=ie4fef85b">📎 関係図.jpg</a> <span class="filesize">[368.7 KB, 1900x1400px]</span> を追加しました。</div>
+    <div class="message-time">353: 2025/5/18(日) 14:17:37</div>
+  </div>
+</article>
+<article class="message" id="res354">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">①収容違反したCARRIONがアーニャとズッ友になる<br>②フォージャー一家を郁人が殺害する<br>③CARRION「何してくれとんねんコイツ」　郁人パパ「何してくれとんねんコイツ」<br>④エデン隊がフェザー親子の依頼の下隠蔽工作をする<br>⑤ローワン研究所が事件を知り「これウチのせいじゃね？」と考える<br>⑥ＰＣに依頼が出され、シナリオ開始</div>
+    <div class="message-time">354: 2025/5/18(日) 14:21:20</div>
+  </div>
+</article>
+<article class="message" id="res355">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">時系列よくわからず終わった人かなりいそうなので補足しときます</div>
+    <div class="message-time">355: 2025/5/18(日) 14:22:21</div>
+  </div>
+</article><div class="elapsed"><span>16日 10時間 40分 経過</span></div>
+<article class="message" id="res356">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202310e21b38ef&amp;i=i36d74bbd" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202310e21b38ef&amp;i=i36d74bbd" width="238" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202310e21b38ef&amp;i=i36d74bbd">📎 【…どうしました？　まだ死んでませんよ？】.jpg</a> <span class="filesize">[312.5 KB, 1216x832px]</span> を追加しました。</div>
+    <div class="message-time">356: 2025/6/4(水) 1:02:27</div>
+  </div>
+</article>
+<article class="message" id="res357">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">流石にディスコじゃ投げられないので</div>
+    <div class="message-time">357: 2025/6/4(水) 1:02:43</div>
+  </div>
+</article>
+<article class="message" id="res358">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういえばロランの怪力についてですが、画像の出典でもあるドラクエ外伝（モンスターズ＋）でのローレシアの王子の描写が元ネタです<br>作中設定だとロランは「単純なフィジカルだけで破壊神を打倒した怪物」扱いで、剣を喪ってなお素手で敵を引きちぎったりしてました</div>
+    <div class="message-time">358: 2025/6/4(水) 1:09:20</div>
+  </div>
+</article>
+<article class="message" id="res359">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">自分たちのために怪力無双の勇者が文字通りに命を張って世界を救ってくれたのに、<br>世界が平和になったら今度はその勇者を迫害するとは人類は愚かじゃ～</div>
+    <div class="message-time">359: 2025/6/4(水) 1:15:22</div>
+  </div>
+</article><div class="elapsed"><span>5日 21時間 10分 経過</span></div>
+<article class="message" id="res360">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オリオンは、一応室長にかなり近い立場の”駒”です。<br>近頃、隠蔽工作を行う一派の調査を&quot;信頼できる駒&quot;として手伝わざるを得ず、<br>手伝わなくてもかつての仲間だった人達が敵だったと発覚していき、その情報も入ってきてしまうので<br>何をしてもしてなくても気が滅入っていきます。<br><br>そんな彼にアレク、それかファニーがこう言いました。<br>「中層で獣害事件が起きており、駆除ができる&quot;狩人&quot;を探している。どうだ、行ってきてくれないか」と。<br><br>つまり滅多に上層から降りてこないオリオンが中層の獣を狩る卓に参加していたのは、迂遠な言い方で許可された&quot;休暇&quot;だったからでした。おわり</div>
+    <div class="message-time">360: 2025/6/9(月) 22:26:04</div>
+  </div>
+</article>
+<article class="message" id="res361">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうなんだ</div>
+    <div class="message-time">361: 2025/6/9(月) 22:26:59</div>
+  </div>
+</article>
+<article class="message" id="res362">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">へぇ～</div>
+    <div class="message-time">362: 2025/6/9(月) 22:27:01</div>
+  </div>
+</article>
+<article class="message" id="res363">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">仕事の息抜きに仕事してる</div>
+    <div class="message-time">363: 2025/6/9(月) 22:29:48</div>
+  </div>
+</article><div class="elapsed"><span>8日 18時間 4分 経過</span></div>
+<article class="message" id="res364">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ネタで名前出したけどプーレ、食べた事への肯定をボンドに説いて変な方向にセラピーとして解決しそう</div>
+    <div class="message-time">364: 2025/6/18(水) 16:34:33</div>
+  </div>
+</article>
+<article class="message" id="res365">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">365: 2025/6/18(水) 16:41:12</div>
+  </div>
+</article>
+<article class="message" id="res366">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あいつ煽動能力だけは一丁前だから</div>
+    <div class="message-time">366: 2025/6/18(水) 16:41:59</div>
+  </div>
+</article><div class="elapsed"><span>3日 8時間 27分 経過</span></div>
+<article class="message" id="res367">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この時点でロランが疑われたらどうすればいいんだろうなぁ<br>今回は「そんならお前このシナリオ中心理学振らない覚悟で読心しろや！？　あ゛ぁ！？」と威圧して何とか切り抜けたけど</div>
+    <div class="message-time">367: 2025/6/22(日) 1:09:50</div>
+  </div>
+</article><div class="elapsed"><span>21時間 10分 経過</span></div>
+<article class="message" id="res368">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">少なくともロイドはリビングでぶちころされたことにすりゃよかったな</div>
+    <div class="message-time">368: 2025/6/22(日) 22:20:00</div>
+  </div>
+</article>
+<article class="message" id="res369">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁそもそもこの現場はエデン隊のロランたちが封殺してるからロクな情報出ないんだが</div>
+    <div class="message-time">369: 2025/6/22(日) 22:20:48</div>
+  </div>
+</article>
+<article class="message" id="res370">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">卓作った時は「ケッケッケｗｗｗｗこれでみんなボンドが人食いの化け物だと勘違いするぜぇ～～ｗｗｗ」って感じなのに<br>実際に卓を運転すると「違うんです；；；；；ボンドはそういうことじゃなくて；；；；；」って気持ちになってくるな</div>
+    <div class="message-time">370: 2025/6/22(日) 22:53:43</div>
+  </div>
+</article>
+<article class="message" id="res371">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">こうやって見返すと、「収容違反した実験生物」としての特性や厄介さにスポットを当てておきながら<br>ボンド自身に悪意はないからってことで全部投げ捨てる構図になってんだなこのシナリオ<br>なんかそれはそれでどうなんって感じもするな</div>
+    <div class="message-time">371: 2025/6/22(日) 23:05:10</div>
+  </div>
+</article>
+<article class="message" id="res372">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">スマさん、感覚的にはロランのことクロだと睨んでそうだな</div>
+    <div class="message-time">372: 2025/6/22(日) 23:09:52</div>
+  </div>
+</article>
+<article class="message" id="res373">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">物証がないから確定的なRPはしないけど……ぐらいの感じでいそう<br>でもこのぐらい一件一件の仕事に入れ込むＹＤＦいてもいいだろ！！！　結構な事だろ！！！</div>
+    <div class="message-time">373: 2025/6/22(日) 23:10:39</div>
+  </div>
+</article>
+<article class="message" id="res374">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">スマさんは常に全員疑ってるだけでしょ</div>
+    <div class="message-time">374: 2025/6/22(日) 23:43:19</div>
+  </div>
+</article>
+<article class="message" id="res375">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">頭須磨なだけで</div>
+    <div class="message-time">375: 2025/6/22(日) 23:43:42</div>
+  </div>
+</article>
+<article class="message" id="res376">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ナナメさんの汚ねぇ人類は滅びろポイントから遠いからボンドに優しいのか？</div>
+    <div class="message-time">376: 2025/6/23(月) 0:50:20</div>
+  </div>
+</article>
+<article class="message" id="res377">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">博士が死ぬところまで描写したかった～～～～！！！！（制限時間）</div>
+    <div class="message-time">377: 2025/6/23(月) 0:50:24</div>
+  </div>
+</article>
+<article class="message" id="res378">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いやぁ、「優しい警察官」の貌を被ってるだけな気がする</div>
+    <div class="message-time">378: 2025/6/23(月) 0:50:49</div>
+  </div>
+</article>
+<article class="message" id="res379">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ラバソキャラで一番難解</div>
+    <div class="message-time">379: 2025/6/23(月) 0:51:17</div>
+  </div>
+</article>
+<article class="message" id="res380">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">グリッチマンとかチンポでのタスクのRPに近い感じなんだと思ってる<br>PCとしては冷めてるけどPLとしては何かしらいい具合にしてやりたいっていう気持ち</div>
+    <div class="message-time">380: 2025/6/23(月) 0:52:57</div>
+  </div>
+</article>
+<article class="message" id="res381">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">依頼人殺されたら枠くんどんな反応するんだろうな…</div>
+    <div class="message-time">381: 2025/6/23(月) 1:13:19</div>
+  </div>
+</article>
+<article class="message" id="res382">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あんまり気にしないのか、報酬の受け取るまでがゲームのサイクルなのにそれを破壊されたってことでキレるのか</div>
+    <div class="message-time">382: 2025/6/23(月) 1:14:06</div>
+  </div>
+</article>
+<article class="message" id="res383">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とりあえず仕事の遂行自体は既定路線な気はするが<br>ゴルゴ13の如く</div>
+    <div class="message-time">383: 2025/6/23(月) 1:15:01</div>
+  </div>
+</article>
+<article class="message" id="res384">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">依頼人を美味しいアップルパイにしても仕事をやり通す男だ</div>
+    <div class="message-time">384: 2025/6/23(月) 1:15:26</div>
+  </div>
+</article>
+<article class="message" id="res385">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">スマブラの人 &nbsp; &nbsp;ぶっちゃけコイツの言い分信じる程の理由は無いので<br>あんなこと言いながらうっそでーす本当は知能すごいでーすへっボケがよ！！居もしねえ犯人永遠に探してな雑魚雑魚細胞軍団がよ！！って思いながら逃げられたら話にならないんで</div>
+    <div class="message-time">385: 2025/6/23(月) 1:16:14</div>
+  </div>
+</article>
+<article class="message" id="res386">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">初期案</div>
+    <div class="message-time">386: 2025/6/23(月) 1:16:19</div>
+  </div>
+</article>
+<article class="message" id="res387">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">嘘をつくNPCを経験すると、今後全てのNPCを疑わなくてはならなくなるジレンマ</div>
+    <div class="message-time">387: 2025/6/23(月) 1:18:50</div>
+  </div>
+</article><div class="elapsed"><span>20時間 53分 経過</span></div>
+<article class="message" id="res388">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">菜々芽 碧花hF9Q4eqr20<wbr>25/6/23 21:43<br>「ああ……そうか…うん、分かった。」なんか目の色を曇らせて、自身の頭を片手で強く掴みながら＠<br><br>愚かな人間ぶち殺すぞゲージが溜まってる</div>
+    <div class="message-time">388: 2025/6/23(月) 22:12:11</div>
+  </div>
+</article>
+<article class="message" id="res389">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">菜々芽 碧花hF9Q4eqr20<wbr>25/6/23 21:59<br>ほどける前に、アーニャの姿をした肉塊に近寄り、しゃがんでその目を見つめます<br>菜々芽 碧花hF9Q4eqr20<wbr>25/6/23 22:00<br>「……」少女を見るその目は、まるで自分自身が映る鏡を眺めている様にも見える<br>菜々芽 碧花hF9Q4eqr20<wbr>25/6/23 22:01<br>何か思うことがあったのか、完全に吸収されるまで眺めていました。<br><br>やっぱナナメさん貌を被ってなくてそこそこ素で同情してるでしょ</div>
+    <div class="message-time">389: 2025/6/23(月) 22:15:44</div>
+  </div>
+</article>
+<article class="message" id="res390">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">汚ねぇ人類は滅びろポイントをチャージしてぶちまけていけ</div>
+    <div class="message-time">390: 2025/6/23(月) 22:16:01</div>
+  </div>
+</article>
+<article class="message" id="res391">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">郁人みたいな悪人キャラはPL的に中指立ててブッコロ宣言するくらいの存在なんだけど、<br>この卓のPCがよりによってヴェンだったのでその気持ちを上手く出力できずにちょっとバグってた思い出がある</div>
+    <div class="message-time">391: 2025/6/23(月) 22:56:05</div>
+  </div>
+</article>
+<article class="message" id="res392">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">郁人、ガワもこの卓における配役も中指立ててブッコロ宣言されるためだけに作られたキャラ過ぎる</div>
+    <div class="message-time">392: 2025/6/23(月) 22:57:01</div>
+  </div>
+</article>
+<article class="message" id="res393">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ラストバトル後にヴェンって頭おかしいし郁人の脚を銃で撃ち抜くようなんとか会話持っていけねえかな…と考えてたPLが私だよ</div>
+    <div class="message-time">393: 2025/6/23(月) 23:01:54</div>
+  </div>
+</article><div class="elapsed"><span>1日 2時間 33分 経過</span></div>
+<article class="message" id="res394">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">真相回りの話、わし様の「どゆこと？　金持ちだからって人を好きに殺して言い訳ではなくない？」がやっぱ思い起こされる</div>
+    <div class="message-time">394: 2025/6/25(水) 1:35:09</div>
+  </div>
+</article>
+<article class="message" id="res395">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ロランや郁人に面と向かって言ったわけではないけどやっぱスマートな回答だったと思うわアレ</div>
+    <div class="message-time">395: 2025/6/25(水) 1:38:38</div>
+  </div>
+</article>
+<article class="message" id="res396">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">精神的にも貴族だぞわし様</div>
+    <div class="message-time">396: 2025/6/25(水) 1:39:32</div>
+  </div>
+</article>
+<article class="message" id="res397">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">怒りとかじゃなくて疑問や困惑が先に来てるのがいい</div>
+    <div class="message-time">397: 2025/6/25(水) 1:40:46</div>
+  </div>
+</article><div class="elapsed"><span>1日 22時間 44分 経過</span></div>
+<article class="message" id="res398">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">冬辺さんもナナメさんも外面ニコニコ内心汚ねぇ人類滅びろ勢なんだけど<br>冬辺さんは汚ねぇ人類見つけたら嬉々としてこの世から消し去りに行って世界を少しでも気持ちよくしようとするのに対して<br>ナナメさんははぁ〜マジゴミゴミクソがこの世から消えて二度と視界に入ってくんなって消し去りに行くんだよな<br><br>ナナメさん生きづらそうって思ったが、ゴキブリ見つけてテンション上がって潰しに行く冬辺さんのがなんか変だな</div>
+    <div class="message-time">398: 2025/6/27(金) 0:24:56</div>
+  </div>
+</article>
+<article class="message" id="res399">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">何ていうか……趣味なんですよねあれ……</div>
+    <div class="message-time">399: 2025/6/27(金) 0:49:11</div>
+  </div>
+</article><div class="elapsed"><span>1日 0時間 23分 経過</span></div>
+<article class="message" id="res400">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res372">&gt;&gt; 372</a> <br>全く睨んでない…疑っても無い…………</div>
+    <div class="message-time">400: 2025/6/28(土) 1:12:55</div>
+  </div>
+</article>
+<article class="message" id="res401">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ストーリーの内容自体は【組織の圧力によって死の意味すら冒涜された家族の話】で<br>その家族の無念や怨嗟を表現する単語として【血涙】をタイトルに選んだんだけど<br>なんかどんどんピンと来なくなって非常によろしくなかった</div>
+    <div class="message-time">401: 2025/6/28(土) 1:43:43</div>
+  </div>
+</article>
+<article class="message" id="res402">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">血涙で良いでしょ</div>
+    <div class="message-time">402: 2025/6/28(土) 1:44:16</div>
+  </div>
+</article>
+<article class="message" id="res403">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">合ってるよ</div>
+    <div class="message-time">403: 2025/6/28(土) 1:44:29</div>
+  </div>
+</article>
+<article class="message" id="res404">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">やっぱ𝑩𝒍𝒐𝒐𝒅𝒚 𝑻𝒆𝒂𝒓𝒔にすべきだったかなと</div>
+    <div class="message-time">404: 2025/6/28(土) 1:46:07</div>
+  </div>
+</article>
+<article class="message" id="res405">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">せめて</div>
+    <div class="message-time">405: 2025/6/28(土) 1:46:23</div>
+  </div>
+</article>
+<article class="message" id="res406">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">血涙であってくれ</div>
+    <div class="message-time">406: 2025/6/28(土) 1:48:33</div>
+  </div>
+</article>
+<article class="message" id="res407">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">急にふざけてるみたいだから</div>
+    <div class="message-time">407: 2025/6/28(土) 1:48:46</div>
+  </div>
+</article>
+<article class="message" id="res408">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ<br>何の謂われもないのに辱しめを受けて殺された挙げ句、<br>その事実を省みられるという最低限の尊厳すら奪われたフォージャー一家とか<br>自分の友人が突然殺されたことへの絶望とか憎悪が腹の中で煮えくり返りながらも、<br>郁人やそれを庇う連中の論理を完膚なきまでに否定するために憤怒を圧し殺して法に訴えることを決意したボンドの心情とか<br>そういうのを引っくるめて思い付いたのが血涙なんです</div>
+    <div class="message-time">408: 2025/6/28(土) 1:53:09</div>
+  </div>
+</article>
+<article class="message" id="res409">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんやねん血涙って思うかもしれないけど血涙と名付けたくなってしまった私の気持ちは理解してほしい</div>
+    <div class="message-time">409: 2025/6/28(土) 1:53:52</div>
+  </div>
+</article>
+<article class="message" id="res410">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんやねんとはならないよ！！</div>
+    <div class="message-time">410: 2025/6/28(土) 1:54:18</div>
+  </div>
+</article>
+<article class="message" id="res411">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res408">&gt;&gt; 408</a> <br>わかるよ！！</div>
+    <div class="message-time">411: 2025/6/28(土) 1:54:32</div>
+  </div>
+</article>
+<article class="message" id="res412">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">開発段階だと【ケダモノ】だった気がするんだけど、なんでそれ蹴って【血涙】にしようとしたんだろう</div>
+    <div class="message-time">412: 2025/6/28(土) 1:55:10</div>
+  </div>
+</article>
+<article class="message" id="res413">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そんなに悩む話か！？！？</div>
+    <div class="message-time">413: 2025/6/28(土) 1:55:23</div>
+  </div>
+</article>
+<article class="message" id="res414">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">血涙って意味わかんないじゃんだって</div>
+    <div class="message-time">414: 2025/6/28(土) 1:55:34</div>
+  </div>
+</article>
+<article class="message" id="res415">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんやねん血涙ってってなるじゃん</div>
+    <div class="message-time">415: 2025/6/28(土) 1:55:51</div>
+  </div>
+</article>
+<article class="message" id="res416">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ならないって！！</div>
+    <div class="message-time">416: 2025/6/28(土) 1:55:58</div>
+  </div>
+</article>
+<article class="message" id="res417">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">隼人君も最終的に血涙流すかもしんねーなって言わせてからそういやカルマ不幸だから可能性薄いなと気付いて回収できねえやとなりました</div>
+    <div class="message-time">417: 2025/6/28(土) 1:56:05</div>
+  </div>
+</article>
+<article class="message" id="res418">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">時系列のガバありつつもなんだかんだこの卓はそれなりの代物になったかなって達成感はあるけどタイトルだけは最後まで辛いままだった</div>
+    <div class="message-time">418: 2025/6/28(土) 1:56:48</div>
+  </div>
+</article>
+<article class="message" id="res419">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあなんでそこに永遠に引っかかってんねんって言うのは俺の卓の時でも周りから見ればそうだっただろうから深くは言えねえ…<br>何故か分からなくても一度突っかかると無限にそこが気になって腹立ってくるよな</div>
+    <div class="message-time">419: 2025/6/28(土) 1:58:15</div>
+  </div>
+</article>
+<article class="message" id="res420">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">身内だからなんとかなってるけど他所でこのシナリオやってたらタイトルのダサすぎてコミュニティ追放される</div>
+    <div class="message-time">420: 2025/6/28(土) 2:00:22</div>
+  </div>
+</article>
+<article class="message" id="res421">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「血涙ｗｗｗｗｗ」<br>「流石にセンス無さすぎ」<br>「ウルフ卓のPLやめます」<br><br>（シナリオ会場の画面上を流れるコメントたち）</div>
+    <div class="message-time">421: 2025/6/28(土) 2:01:25</div>
+  </div>
+</article>
+<article class="message" id="res422">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">洞窟大作戦とか言いながら別に大作戦要素ねえじゃんってぼやかれたり<br>台風接近中世界樹補修中にパクリだとか言われたり<br>ゲームの時間Rに人のシナリオの名前使ってる上に長々と単語羅列しただけとか言われたりするだろ俺も！！</div>
+    <div class="message-time">422: 2025/6/28(土) 2:02:50</div>
+  </div>
+</article>
+<article class="message" id="res423">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">大事なことは基地んと報告しましょう！よりマシだろ</div>
+    <div class="message-time">423: 2025/6/28(土) 2:03:30</div>
+  </div>
+</article>
+<article class="message" id="res424">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">仕事クビになって妻に離婚されて最愛の息子と離れ離れになって貯金も尽きて孤独に死ぬしかなくなるよ<br>血涙なんてシナリオタイトルつけた日には</div>
+    <div class="message-time">424: 2025/6/28(土) 2:03:32</div>
+  </div>
+</article>
+<article class="message" id="res425">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そんなに</div>
+    <div class="message-time">425: 2025/6/28(土) 2:03:42</div>
+  </div>
+</article>
+<article class="message" id="res426">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">やかましいテメーの目ん玉抉り出して血涙流させたろかって恫喝しましょう</div>
+    <div class="message-time">426: 2025/6/28(土) 2:04:39</div>
+  </div>
+</article>
+<article class="message" id="res427">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">実家でも私の存在はいなかったことにされ、生活は荒れ、昼間から酒を浴びるように飲み、貯金を食い潰すような日々<br>癒えない傷、眠れない夜<br>全てはシナリオに【血涙】と名付けてしまったばかりに</div>
+    <div class="message-time">427: 2025/6/28(土) 2:06:25</div>
+  </div>
+</article>
+<article class="message" id="res428">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">相手すんの面倒になってきたからコイツの目潰して血涙流させて話終了させるか…</div>
+    <div class="message-time">428: 2025/6/28(土) 2:09:01</div>
+  </div>
+</article>
+<article class="message" id="res429">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">このシナリオは【血涙】です！！！！</div>
+    <div class="message-time">429: 2025/6/28(土) 2:09:44</div>
+  </div>
+</article>
+<article class="message" id="res430">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">シナリオタイトルと保存フォルダ名が一致してないからあとでこれなんの卓だっけってなる不具合どうにかしたい</div>
+    <div class="message-time">430: 2025/6/28(土) 2:10:50</div>
+  </div>
+</article>
+<article class="message" id="res431">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res428">&gt;&gt; 428</a> <br>草</div>
+    <div class="message-time">431: 2025/6/28(土) 2:11:47</div>
+  </div>
+</article>
+<article class="message" id="res432">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ピカチュウとかちんことか不倫とか付けてるせいでわからなくなる</div>
+    <div class="message-time">432: 2025/6/28(土) 2:12:31</div>
+  </div>
+</article>
+<article class="message" id="res433">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">づけさんのログ管理用のデータベースはセッションのトレーラー掲載日時＋識別用の名前って感じの書式でした</div>
+    <div class="message-time">433: 2025/6/28(土) 2:13:04</div>
+  </div>
+</article>
+<article class="message" id="res434">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんか最近ログ取らなくても部屋の上のところに置かれてるからあんまり保存しなくなったな…</div>
+    <div class="message-time">434: 2025/6/28(土) 2:15:56</div>
+  </div>
+</article>
+<article class="message" id="res435">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">わかるよ</div>
+    <div class="message-time">435: 2025/6/28(土) 2:16:48</div>
+  </div>
+</article>
+<article class="message" id="res436">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">私も自分用の取らなくなっちゃった</div>
+    <div class="message-time">436: 2025/6/28(土) 2:17:04</div>
+  </div>
+</article>
+<article class="message" id="res437">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">わし様使いたくなってきたな</div>
+    <div class="message-time">437: 2025/6/28(土) 2:20:41</div>
+  </div>
+</article>
+<article class="message" id="res438">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">スマさんの卓に投げて全て破壊するか</div>
+    <div class="message-time">438: 2025/6/28(土) 2:21:01</div>
+  </div>
+</article>
+<article class="message" id="res439">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあええか悪いかで言えばええよ</div>
+    <div class="message-time">439: 2025/6/28(土) 2:22:33</div>
+  </div>
+</article>
+<article class="message" id="res440">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">わし様、RPはしやすいしキャラは好きだけど、未来視が永遠に難しすぎて困る。未来見えてないとダサいけど僕には未来見えないから困る</div>
+    <div class="message-time">440: 2025/6/28(土) 2:23:06</div>
+  </div>
+</article>
+<article class="message" id="res441">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なまじ今のとこ出した2卓とも未来視できてるせいでハードルが永遠に上がり続けてんだよなこいつ</div>
+    <div class="message-time">441: 2025/6/28(土) 2:24:46</div>
+  </div>
+</article><div class="elapsed"><span>20時間 14分 経過</span></div>
+<article class="message" id="res442">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">深く考えてみたんですけど元加さんがこの卓に来てあの状況になった時……<br>・コイツが嘘を付いていたりしてこちらに不意打ちや逃亡をした場合また追いかけっこが始まる、しかもこちらは圧倒的不利、よって放置は絶対的に無い、殺すのが確実<br>・PC達が必死に反対するのなら仕方ないので博士たちに連絡を取って指示を仰ぐ（多分電話繋がらない）<br>・指示が仰げないならお前の話を真として依頼を請けなくもない、代わりにお前は先に博士たちの元に連れて行く、が最低条件<br><br>・で、連れて行くと博士たち死んでる、キレる　この時点で依頼を達成する理由が無くなる、万能細胞ちゃんどうでも良くなる<br>・依頼はどうでもよいが横槍入れて来たヤツを放置するのは個人的な感情として嫌なのでぶっ殺しに行く<br><br>って感じですかね…</div>
+    <div class="message-time">442: 2025/6/28(土) 22:39:04</div>
+  </div>
+</article>
+<article class="message" id="res443">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">草</div>
+    <div class="message-time">443: 2025/6/28(土) 22:42:19</div>
+  </div>
+</article>
+<article class="message" id="res444">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ボンドを殺して、卓のタイトルの血涙ってなんすか？って言え</div>
+    <div class="message-time">444: 2025/6/28(土) 22:42:40</div>
+  </div>
+</article>
+<article class="message" id="res445">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おっと博士たちじゃなくて博士だけ死んでるんだっけ<br>まあ同じことよ、依頼主が何故か殺されてんだからぶちのギーレェですよ</div>
+    <div class="message-time">445: 2025/6/28(土) 22:43:56</div>
+  </div>
+</article>
+<article class="message" id="res446">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でも秩序のためだし納得してくれますよね？</div>
+    <div class="message-time">446: 2025/6/28(土) 22:57:54</div>
+  </div>
+</article>
+<article class="message" id="res447">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">大人になりましょうよ元加さん</div>
+    <div class="message-time">447: 2025/6/28(土) 22:58:15</div>
+  </div>
+</article>
+<article class="message" id="res448">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">秩序のためとか言われて頷くような人間だったらこんな仕事してねえんだよなぁ</div>
+    <div class="message-time">448: 2025/6/28(土) 22:58:52</div>
+  </div>
+</article>
+<article class="message" id="res449">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">思い出した！！！！！ロランが再登場して敵だと判明した時に俺がなんであんなに困ってたか！<br>単にね！隼人君は皮肉だか悪口だか言うためには現状を把握しないとうまく言えないんだこれが<br>あとスマPCで設定的にもステ的にも最も頭良いキャラにしてるからいい感じに反応しようと思ったんだけど本当に理解出来なくて口が全く回らなくなっちゃったのよね</div>
+    <div class="message-time">449: 2025/6/29(日) 1:47:05</div>
+  </div>
+</article>
+<article class="message" id="res450">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だからお前何なんだよって無限に考察してたのに全部スカったからどうしたものかってなりました<br>それを言おうとして忘れてたという話です　ハイ</div>
+    <div class="message-time">450: 2025/6/29(日) 1:47:56</div>
+  </div>
+</article>
+<article class="message" id="res451">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">苦し紛れに口走った「狂信者かよ話通じねーわ」が意外といい線いってました</div>
+    <div class="message-time">451: 2025/6/29(日) 1:48:40</div>
+  </div>
+</article>
+<article class="message" id="res452">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">皮一枚繋がった</div>
+    <div class="message-time">452: 2025/6/29(日) 1:49:07</div>
+  </div>
+</article>
+<article class="message" id="res453">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">タマが勝手にキャロルを見破った時もだいたい同じ気持ちでした</div>
+    <div class="message-time">453: 2025/6/29(日) 1:49:39</div>
+  </div>
+</article>
+<article class="message" id="res454">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それは分かれよ</div>
+    <div class="message-time">454: 2025/6/29(日) 1:52:09</div>
+  </div>
+</article>
+<article class="message" id="res455">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">！！！！！！！！！！！！！！！</div>
+    <div class="message-time">455: 2025/6/29(日) 1:52:33</div>
+  </div>
+</article><div class="elapsed"><span>6時間 41分 経過</span></div>
+<article class="message" id="res456">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ふと思いついたんですけど枠くんの依頼人を依頼内容と無関係なところで殺して<br>「あっ、こいつの依頼無効になったなら俺が依頼するから手伝ってよ。お金なら出すからさ^^」って言ったらどうなりますか？</div>
+    <div class="message-time">456: 2025/6/29(日) 8:34:18</div>
+  </div>
+</article>
+<article class="message" id="res457">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">457: 2025/6/29(日) 10:44:51</div>
+  </div>
+</article>
+<article class="message" id="res458">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とりあえずそんなことを堂々と言ってきたカスは生かしてはおけないっすかね</div>
+    <div class="message-time">458: 2025/6/29(日) 10:45:30</div>
+  </div>
+</article><div class="elapsed"><span>16日 21時間 22分 経過</span></div>
+<article class="message" id="res459">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">459: 2025/7/16(水) 8:08:26</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>

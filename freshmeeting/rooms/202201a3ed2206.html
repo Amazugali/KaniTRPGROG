@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ウルフ働け</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>ウルフ働け</h1>
+    <div class="meta">Fresh Meeting archive / room id: 202201a3ed2206 / ended</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=202201a3ed2206"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+	<a href="https://www.freshmeeting.com/forumopen.php?f=202201a3ed2206"><img src="https://www.freshmeeting.com/img/reopen.gif" alt="ミーティングを再開する"><span>ミーティングを再開する</span></a>
+	<a href="https://www.freshmeeting.com/forumdel.php?f=202201a3ed2206"><img src="https://www.freshmeeting.com/img/delete.gif" alt="削除する"><span>削除する</span></a>
+</span>
+
+<p>
+	解決した問題は削除してくれると嬉しいです<br><br>↓ホワイトボード（付箋貼ったり落書きしたり好きに使ってね）<br><a href="https://jamboard.google.com/d/1Ev0zwV9TFC-cA_hqIwNgqsv_0lkSJJ7lzS_bs-mcgQs/edit?usp=sharing" target="_blank">https:<wbr>/<wbr>/<wbr>jamboard.<wbr>google.<wbr>com/<wbr>d/<wbr>1Ev0zwV9TF<wbr>C-<wbr>cA_<wbr>hqIwNgqsv_<wbr>0lkSJJ7lzS<wbr>_<wbr>bs-<wbr>mcgQs/<wbr>edit?<wbr>usp=<wbr>.<wbr>.<wbr></a></p></div>
+  </div>
+</header>
+<main>
+
+<div class="attachment-warning">
+  このログには Fresh Meeting 上の添付ファイル参照が 1 件あります。
+  HTML本文とは別に添付ファイル本体の保全が必要です。
+</div>
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">建てました</div>
+    <div class="message-time">1: 2022/1/11(火) 8:12:06</div>
+  </div>
+</article>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">このログ倉庫に上がってねーぞ働けとかあったら書いてね</div>
+    <div class="message-time">2: 2022/1/11(火) 8:13:49</div>
+  </div>
+</article><div class="elapsed"><span>8時間 0分 経過</span></div>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">3: 2022/1/11(火) 16:14:43</div>
+  </div>
+</article>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">4: 2022/1/11(火) 16:14:49</div>
+  </div>
+</article>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">5: 2022/1/11(火) 16:14:57</div>
+  </div>
+</article>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ユグレンジャーの他の回読め</div>
+    <div class="message-time">6: 2022/1/11(火) 16:15:51</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">万象一切灰燼と為せ</div>
+    <div class="message-time">7: 2022/1/11(火) 16:27:33</div>
+  </div>
+</article>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">無病息災</div>
+    <div class="message-time">8: 2022/1/11(火) 18:41:35</div>
+  </div>
+</article>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この世の全てのログを実況しろ</div>
+    <div class="message-time">9: 2022/1/11(火) 18:46:06</div>
+  </div>
+</article>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">マジで申し訳ないけどログ読む気は現状ないです<br>平日はパソコンの前に腰据えるような暇がないので</div>
+    <div class="message-time">10: 2022/1/11(火) 20:30:18</div>
+  </div>
+</article>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">蟹の更新は具体的な編集事項として何があったかいまいち覚えてないんだよな…<br>ギャラリーモードだけ更新します</div>
+    <div class="message-time">11: 2022/1/11(火) 20:33:38</div>
+  </div>
+</article>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">移動中に読めないこともないかな…？<br>まぁ試してみます、期待はしないでくれると…</div>
+    <div class="message-time">12: 2022/1/11(火) 20:35:34</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">13: 2022/1/11(火) 20:37:32</div>
+  </div>
+</article>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">14: 2022/1/11(火) 20:37:43</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今試してみたけどスマホだとアイコンが表示されなかったので…<br>すいません</div>
+    <div class="message-time">15: 2022/1/11(火) 20:53:27</div>
+  </div>
+</article>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログは読みません<br>ギャラリーモードについては日曜日の私がなんとか…無理か<br>再来週の私がたぶんなんとかします</div>
+    <div class="message-time">16: 2022/1/11(火) 20:54:30</div>
+  </div>
+</article><div class="elapsed"><span>15時間 20分 経過</span></div>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">自炊しろとまでは言わないけど栄養は取れ。体に不調を来したらすぐ養生しろ</div>
+    <div class="message-time">17: 2022/1/12(水) 12:15:04</div>
+  </div>
+</article>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いつまでも元気でいてねウルフおじいちゃん</div>
+    <div class="message-time">18: 2022/1/12(水) 12:16:26</div>
+  </div>
+</article>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">19: 2022/1/12(水) 12:32:04</div>
+  </div>
+</article>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちゃんと噛めよ</div>
+    <div class="message-time">20: 2022/1/12(水) 13:08:55</div>
+  </div>
+</article><div class="elapsed"><span>10日 1時間 36分 経過</span></div>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">21: 2022/1/22(土) 14:45:41</div>
+  </div>
+</article><div class="elapsed"><span>1日 5時間 24分 経過</span></div>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">22: 2022/1/23(日) 20:09:57</div>
+  </div>
+</article>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">23: 2022/1/23(日) 20:46:22</div>
+  </div>
+</article>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">24: 2022/1/23(日) 20:46:40</div>
+  </div>
+</article>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">25: 2022/1/23(日) 21:10:15</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">歴史改変しました</div>
+    <div class="message-time">26: 2022/1/23(日) 21:10:41</div>
+  </div>
+</article><div class="elapsed"><span>6日 20時間 4分 経過</span></div>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">27: 2022/1/30(日) 17:15:34</div>
+  </div>
+</article>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">28: 2022/1/30(日) 17:19:18</div>
+  </div>
+</article>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">29: 2022/1/30(日) 17:58:32</div>
+  </div>
+</article>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">30: 2022/1/30(日) 18:00:00</div>
+  </div>
+</article>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">31: 2022/1/30(日) 18:01:25</div>
+  </div>
+</article>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">32: 2022/1/30(日) 18:01:37</div>
+  </div>
+</article><div class="elapsed"><span>1日 0時間 9分 経過</span></div>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">忍者と極道全話読め</div>
+    <div class="message-time">33: 2022/1/31(月) 18:11:11</div>
+  </div>
+</article>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">読めねぇっつってんだろ！！</div>
+    <div class="message-time">34: 2022/1/31(月) 18:16:39</div>
+  </div>
+</article>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">と思ったけどなんか思いの外なんとかなってるので卓は無理でもそのぐらいの余裕はぶっちゃけ全然ありそうです</div>
+    <div class="message-time">35: 2022/1/31(月) 18:17:26</div>
+  </div>
+</article>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">読みます</div>
+    <div class="message-time">36: 2022/1/31(月) 18:17:34</div>
+  </div>
+</article>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">シナリオのログをな！！！</div>
+    <div class="message-time">37: 2022/1/31(月) 18:17:43</div>
+  </div>
+</article><div class="elapsed"><span>2日 5時間 29分 経過</span></div>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[誕生日の棺_2022-02-02_2346.zip] </del></div>
+    <div class="message-time">38: 2022/2/2(水) 23:47:31</div>
+  </div>
+</article><div class="elapsed"><span>1日 9時間 19分 経過</span></div>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">バトゥーキ読め！<br><a href="https://tonarinoyj.jp/episode/10834108156631753703" target="_blank">https:<wbr>/<wbr>/<wbr>tonarinoyj<wbr>.<wbr>jp/<wbr>episode/<wbr>1083410815<wbr>6631753703<wbr></a></div>
+    <div class="message-time">39: 2022/2/4(金) 9:06:41</div>
+  </div>
+</article><div class="elapsed"><span>1日 12時間 20分 経過</span></div>
+<article class="message" id="res40">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">40: 2022/2/5(土) 21:27:32</div>
+  </div>
+</article><div class="elapsed"><span>1日 1時間 26分 経過</span></div>
+<article class="message" id="res41">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">41: 2022/2/6(日) 22:53:49</div>
+  </div>
+</article><div class="elapsed"><span>1日 13時間 4分 経過</span></div>
+<article class="message" id="res42">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">サムライハーツのPCのキャラ特性ください</div>
+    <div class="message-time">42: 2022/2/8(火) 11:58:04</div>
+  </div>
+</article>
+<article class="message" id="res43">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res38">&gt;&gt; 38</a> <br>ログ整形お願いします！</div>
+    <div class="message-time">43: 2022/2/8(火) 12:45:57</div>
+  </div>
+</article>
+<article class="message" id="res44">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">44: 2022/2/8(火) 13:56:25</div>
+  </div>
+</article><div class="elapsed"><span>11日 10時間 36分 経過</span></div>
+<article class="message" id="res45">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202201a3ed2206&amp;i=i8493b225">📎 誕生日の棺_2022-02-20_0032.zip</a> <span class="filesize">[4.4 MB]</span> を追加しました。</div>
+    <div class="message-time">45: 2022/2/20(日) 0:33:14</div>
+  </div>
+</article>
+<article class="message" id="res46">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お願いします！！</div>
+    <div class="message-time">46: 2022/2/20(日) 0:33:19</div>
+  </div>
+</article><div class="elapsed"><span>20日 22時間 47分 経過</span></div>
+<article class="message" id="res47">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">47: 2022/3/12(土) 23:20:44</div>
+  </div>
+</article>
+<article class="message" id="res48">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">48: 2022/3/12(土) 23:21:14</div>
+  </div>
+</article>
+<article class="message" id="res49">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">49: 2022/3/12(土) 23:23:14</div>
+  </div>
+</article><div class="elapsed"><span>44日 17時間 40分 経過</span></div>
+<article class="message" id="res50">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">50: 2022/4/26(火) 17:04:12</div>
+  </div>
+</article><div class="elapsed"><span>1日 1時間 29分 経過</span></div>
+<article class="message" id="res51">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res45">&gt;&gt; 45</a> <br>これは私が自分で変換しちゃった奴かな<br>消してもいいですかね</div>
+    <div class="message-time">51: 2022/4/27(水) 18:34:02</div>
+  </div>
+</article><div class="elapsed"><span>12時間 24分 経過</span></div>
+<article class="message" id="res52">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">52: 2022/4/28(木) 6:58:09</div>
+  </div>
+</article><div class="elapsed"><span>11日 5時間 23分 経過</span></div>
+<article class="message" id="res53">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">53: 2022/5/9(月) 12:21:52</div>
+  </div>
+</article><div class="elapsed"><span>1日 1時間 24分 経過</span></div>
+<article class="message" id="res54">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">54: 2022/5/10(火) 13:46:48</div>
+  </div>
+</article><div class="elapsed"><span>39日 6時間 28分 経過</span></div>
+<article class="message" id="res55">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">55: 2022/6/18(土) 20:15:21</div>
+  </div>
+</article><div class="elapsed"><span>26日 16時間 33分 経過</span></div>
+<article class="message" id="res56">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ギャラリーモードにユグレンジャー4樹、5樹で送られたイラストも載せて欲しいです！</div>
+    <div class="message-time">56: 2022/7/15(金) 12:49:20</div>
+  </div>
+</article><div class="elapsed"><span>10日 20時間 13分 経過</span></div>
+<article class="message" id="res57">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">新集合写真もギャラリーモードにください！</div>
+    <div class="message-time">57: 2022/7/26(火) 9:02:33</div>
+  </div>
+</article><div class="elapsed"><span>10日 4時間 24分 経過</span></div>
+<article class="message" id="res58">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">58: 2022/8/5(金) 13:27:12</div>
+  </div>
+</article>
+<article class="message" id="res59">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">59: 2022/8/5(金) 13:42:38</div>
+  </div>
+</article><div class="elapsed"><span>3日 21時間 14分 経過</span></div>
+<article class="message" id="res60">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">60: 2022/8/9(火) 10:56:56</div>
+  </div>
+</article><div class="elapsed"><span>1日 14時間 1分 経過</span></div>
+<article class="message" id="res61">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">●隠れ鬼のトレーラーまとめる<br>●作成中のシナリオ２つをさっさと完成させる</div>
+    <div class="message-time">61: 2022/8/11(木) 0:57:59</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,1158 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>開発室【闘争の果て】</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>開発室【闘争の果て】</h1>
+    <div class="meta">Fresh Meeting archive / room id: 202401021acb33 / ended</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=202401021acb33"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+	<a href="https://www.freshmeeting.com/forumopen.php?f=202401021acb33"><img src="https://www.freshmeeting.com/img/reopen.gif" alt="ミーティングを再開する"><span>ミーティングを再開する</span></a>
+	<a href="https://www.freshmeeting.com/forumdel.php?f=202401021acb33"><img src="https://www.freshmeeting.com/img/delete.gif" alt="削除する"><span>削除する</span></a>
+</span>
+
+<p>
+	<a href="https://talto.cc/projects/tG4T-FxFkDgkWsgGRI39D" target="_blank">https:<wbr>/<wbr>/<wbr>talto.<wbr>cc/<wbr>projects/<wbr>tG4T-<wbr>FxFkDgkWsg<wbr>GRI39D</a><br><br>はむチヒカゲ：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202509strife/01_HmChKg.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202509stri<wbr>fe/<wbr>01_<wbr>HmChKg.<wbr>html</a><br>さぼキリＴ　：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202509strife/02_SvKrTt.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202509stri<wbr>fe/<wbr>02_<wbr>SvKrTt.<wbr>html</a></p></div>
+  </div>
+</header>
+<main>
+
+<div class="attachment-warning">
+  このログには Fresh Meeting 上の添付ファイル参照が 5 件あります。
+  HTML本文とは別に添付ファイル本体の保全が必要です。
+</div>
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">○もしもワムウがジョセフのボケた姿を見たら何を思うだろう<br>○ブラックワンが邪悪じゃないシナリオ第二段<br>○兎への敬意ゆえに全力で狩る獅子</div>
+    <div class="message-time">1: 2024/1/29(月) 16:22:59</div>
+  </div>
+</article>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">■鬼（仮）<br>　ブラックワンの一個体。ガワは露骨に強そうな人外＋若々しい見た目であることが条件。九尾とかでもいい。<br>　数十年前に【老人（仮）】に討たれるも絶命はせず、ごく最近まで眠りについていた。<br>　【老人】との再戦を望むが、そもそも人間社会に疎い上に歳月が経過しすぎて捜索もままならず。彼の捜索依頼をバーストに流す。<br><br>　性格は傲岸不遜。そして戦闘狂。<br>　人間を見下しているが、戦いに美学を見いだす性格ゆえに弱者には良くも悪くも興味がない。<br>　人類にはそれほど敵対的とは言えない雰囲気である。<br>　自らを討った名も知らぬ傭兵をいたく気に入っており、彼へのリベンジを果たすことを心待ちにしている。</div>
+    <div class="message-time">2: 2024/1/29(月) 16:31:27</div>
+  </div>
+</article>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">…これタルト使えばいいのか！</div>
+    <div class="message-time">3: 2024/1/29(月) 16:32:16</div>
+  </div>
+</article><div class="elapsed"><span>595日 7時間 3分 経過</span></div>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今回タルトメインで作ってたから製作過程ほとんど記録できてないな<br>もったいない</div>
+    <div class="message-time">4: 2025/9/15(月) 23:35:40</div>
+  </div>
+</article>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202401021acb33&amp;i=icd786f02" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202401021acb33&amp;i=icd786f02" width="164" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202401021acb33&amp;i=icd786f02">📎 ヘルマン_icon3.jpg</a> <span class="filesize">[64.0 KB, 1024x1024px]</span> を追加しました。</div>
+    <div class="message-time">5: 2025/9/15(月) 23:43:18</div>
+  </div>
+</article>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202401021acb33&amp;i=i492c24be" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202401021acb33&amp;i=i492c24be" width="164" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202401021acb33&amp;i=i492c24be">📎 闘争の果て.jpg</a> <span class="filesize">[782.0 KB, 1024x1024px]</span> を追加しました。</div>
+    <div class="message-time">6: 2025/9/15(月) 23:43:22</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">こういうカットインを使った視覚的な演出を本格的に利用できるってのは発見だった</div>
+    <div class="message-time">7: 2025/9/15(月) 23:44:04</div>
+  </div>
+</article>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">初見ブラックワンか？って思ったんだけど、あってたんだ</div>
+    <div class="message-time">8: 2025/9/15(月) 23:44:14</div>
+  </div>
+</article>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いや、ブラックワンじゃない</div>
+    <div class="message-time">9: 2025/9/15(月) 23:44:30</div>
+  </div>
+</article>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">こねくり回す内にそうではなくなった</div>
+    <div class="message-time">10: 2025/9/15(月) 23:44:40</div>
+  </div>
+</article>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">違うんかい！</div>
+    <div class="message-time">11: 2025/9/15(月) 23:45:20</div>
+  </div>
+</article>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">作成開始、去年の1月ｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</div>
+    <div class="message-time">12: 2025/9/15(月) 23:47:00</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんで99割完成してから完成できなかったんぢゃお</div>
+    <div class="message-time">13: 2025/9/16(火) 0:07:21</div>
+  </div>
+</article>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だよ</div>
+    <div class="message-time">14: 2025/9/16(火) 0:07:26</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ぢゃお？</div>
+    <div class="message-time">15: 2025/9/16(火) 0:07:31</div>
+  </div>
+</article>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res1">&gt;&gt; 1</a> <br>ワムウとジョセフ、なるほどね</div>
+    <div class="message-time">16: 2025/9/16(火) 0:15:04</div>
+  </div>
+</article>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res16">&gt;&gt; 16</a> <br>ASBの特殊会話で「貴様……JOJOか？　人間とはあっという間に歳をとるな……」みたいな台詞があって<br>あれがインスピレーションの一つです</div>
+    <div class="message-time">17: 2025/9/16(火) 0:18:22</div>
+  </div>
+</article>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">プレイ者としてはヘルシングのテイストが一番するのかな？って予想だけど<br>ヘルシングはなんというか、接着剤です</div>
+    <div class="message-time">18: 2025/9/16(火) 0:18:59</div>
+  </div>
+</article>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あやふやなところをヘルシングでくっつけています</div>
+    <div class="message-time">19: 2025/9/16(火) 0:19:10</div>
+  </div>
+</article>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ヘルシングは後付けなのね</div>
+    <div class="message-time">20: 2025/9/16(火) 0:19:35</div>
+  </div>
+</article>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アンデルセンが杭使わなかったifみたいで良かった</div>
+    <div class="message-time">21: 2025/9/16(火) 0:20:06</div>
+  </div>
+</article>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アーサーもアーサーで今回の件終わったらボケちゃいそう</div>
+    <div class="message-time">22: 2025/9/16(火) 0:25:26</div>
+  </div>
+</article>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202401021acb33&amp;i=ieeaeed0c" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202401021acb33&amp;i=ieeaeed0c" width="213" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202401021acb33&amp;i=ieeaeed0c">📎 Screenshot 2025-09-16 at 00-23-44 UdonariumLily 1.11.0.png</a> <span class="filesize">[2.2 MB, 1623x1238px]</span> を追加しました。</div>
+    <div class="message-time">23: 2025/9/16(火) 0:25:53</div>
+  </div>
+</article>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ブラムが基本的に依頼人としてクソなので、<br>そこが引っ掛かるとこのシナリオは終始苦痛になるから肝を冷やしながら回してました</div>
+    <div class="message-time">24: 2025/9/16(火) 0:27:00</div>
+  </div>
+</article>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">気にならなかったならよかった</div>
+    <div class="message-time">25: 2025/9/16(火) 0:27:13</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">我々は変人に慣れてるってのがある</div>
+    <div class="message-time">26: 2025/9/16(火) 0:27:30</div>
+  </div>
+</article>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">モニカがピアノ弾いてブラムが聞き入ってクリスが寝てたら枠君が依頼始めろよってキレる</div>
+    <div class="message-time">27: 2025/9/16(火) 0:28:23</div>
+  </div>
+</article>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">事前の想定と食い違ったら「え？人間って65年経ったら死ぬの……？」って言い出すの、普通にキレる人はキレそうだよな</div>
+    <div class="message-time">28: 2025/9/16(火) 0:29:03</div>
+  </div>
+</article>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">呆れるだけならいいけど、依頼人が馬鹿すぎるとその依頼を請けなきゃいけないPCの格も落ちるからね<br>なぜかモヒカンからの依頼を真摯にこなして株を挙げてるゲーマーもいるけど</div>
+    <div class="message-time">29: 2025/9/16(火) 0:30:28</div>
+  </div>
+</article>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それ言う前にこいつの数年前って200年前とかじゃねぇのか？って冗談言ってたからPL側に覚悟ができてたのはある</div>
+    <div class="message-time">30: 2025/9/16(火) 0:31:02</div>
+  </div>
+</article>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">100年生きてそうな顔してるけど、起きてる時間だと多分1年生きてない感</div>
+    <div class="message-time">31: 2025/9/16(火) 0:31:11</div>
+  </div>
+</article>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">浮世離れ人を脳内に飼っているからなんか全然気にならなかった……（感覚麻痺）</div>
+    <div class="message-time">32: 2025/9/16(火) 0:31:30</div>
+  </div>
+</article>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">65歳（0歳）</div>
+    <div class="message-time">33: 2025/9/16(火) 0:31:33</div>
+  </div>
+</article>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res31">&gt;&gt; 31</a> <br>それはそうです</div>
+    <div class="message-time">34: 2025/9/16(火) 0:31:46</div>
+  </div>
+</article>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">施設抜け出して心臓ぶっこ抜かれてハートも撃ち抜かれちゃった<br><br>-　65年後　-</div>
+    <div class="message-time">35: 2025/9/16(火) 0:32:48</div>
+  </div>
+</article>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">老化現象を「そんなことあるわけないだろ」って否認し続けてる時、あまりに苦しかった</div>
+    <div class="message-time">36: 2025/9/16(火) 0:33:20</div>
+  </div>
+</article>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そんなことあるわけないわけないだろ<br>バカが</div>
+    <div class="message-time">37: 2025/9/16(火) 0:33:37</div>
+  </div>
+</article>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちょっとは考えてモノ言わんかい</div>
+    <div class="message-time">38: 2025/9/16(火) 0:33:57</div>
+  </div>
+</article>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">1年生きてないし、人間社会とか入っていかなかったから<br>老化という現象を観測していないんだ<br><br>老人は最初から老人で　若者はずっと若者なんだ</div>
+    <div class="message-time">39: 2025/9/16(火) 0:34:35</div>
+  </div>
+</article>
+<article class="message" id="res40">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はあ</div>
+    <div class="message-time">40: 2025/9/16(火) 0:34:48</div>
+  </div>
+</article>
+<article class="message" id="res41">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい</div>
+    <div class="message-time">41: 2025/9/16(火) 0:34:49</div>
+  </div>
+</article>
+<article class="message" id="res42">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ヘルマン、当初は純粋な人間でミスター・パイルバンカーだったんだけど<br>老化を否認する材料に乏しすぎて人狼になりました</div>
+    <div class="message-time">42: 2025/9/16(火) 0:38:19</div>
+  </div>
+</article>
+<article class="message" id="res43">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res30">&gt;&gt;30</a><br>すいません……って思いながらやってた</div>
+    <div class="message-time">43: 2025/9/16(火) 0:42:18</div>
+  </div>
+</article>
+<article class="message" id="res44">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">本当にそのオチなんです赦してください……って震えてた</div>
+    <div class="message-time">44: 2025/9/16(火) 0:42:57</div>
+  </div>
+</article>
+<article class="message" id="res45">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">4000年前じゃなくてよかった</div>
+    <div class="message-time">45: 2025/9/16(火) 0:43:17</div>
+  </div>
+</article>
+<article class="message" id="res46">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あまりにもアーカードすぎるのが悪い</div>
+    <div class="message-time">46: 2025/9/16(火) 0:43:21</div>
+  </div>
+</article><div class="elapsed"><span>14時間 29分 経過</span></div>
+<article class="message" id="res47">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://talto.cc/projects/tG4T-FxFkDgkWsgGRI39D" target="_blank">https:<wbr>/<wbr>/<wbr>talto.<wbr>cc/<wbr>projects/<wbr>tG4T-<wbr>FxFkDgkWsg<wbr>GRI39D</a><br><br>シナリオ限定公開できるのか<br>いったんこれで投げておきます</div>
+    <div class="message-time">47: 2025/9/16(火) 15:13:03</div>
+  </div>
+</article>
+<article class="message" id="res48">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">48: 2025/9/16(火) 15:37:36</div>
+  </div>
+</article>
+<article class="message" id="res49">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">精神科医の名越先生が龍が如くのゲームさんぽで真島と桐生の関係を<br>「肉体関係です笑」って言及してたけど<br>相手への感情が肉体的アクションに置換される構図が一致するって意味で恋愛と心理学的に近いんだろうな<br>性欲に由来するか暴力衝動に由来するかの違いってだけで</div>
+    <div class="message-time">49: 2025/9/16(火) 15:38:24</div>
+  </div>
+</article>
+<article class="message" id="res50">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">&gt;現在も彼に寄り添うのは一緒に暮らすセワード氏<br>誰！？</div>
+    <div class="message-time">50: 2025/9/16(火) 16:00:48</div>
+  </div>
+</article>
+<article class="message" id="res51">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">Q.何か特徴は？<br>A.狼の獣人だった。最後の戦いで右目と右腕を千切り飛ばしたので、何らかの後遺症が残っているかもしれな。<br><br>しれんな。か、しれない。かな</div>
+    <div class="message-time">51: 2025/9/16(火) 16:04:22</div>
+  </div>
+</article>
+<article class="message" id="res52">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アーサーのBエンド後はまだ書いてないのか</div>
+    <div class="message-time">52: 2025/9/16(火) 16:27:49</div>
+  </div>
+</article>
+<article class="message" id="res53">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">・贖う紅（武器攻撃＋行為発動＋ドレイン）<br>――血液で武器を形作り、攻撃する。<br><br>AE重撃いるかも</div>
+    <div class="message-time">53: 2025/9/16(火) 16:29:04</div>
+  </div>
+</article><div class="elapsed"><span>4時間 17分 経過</span></div>
+<article class="message" id="res54">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">セワードはボリスの旧名ですね<br>ありがとうございます</div>
+    <div class="message-time">54: 2025/9/16(火) 20:46:32</div>
+  </div>
+</article>
+<article class="message" id="res55">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">Bエンドはちょっと迷ってんだよな<br>アーサーのブラム追跡も違法は違法だから逮捕されたりするかも</div>
+    <div class="message-time">55: 2025/9/16(火) 20:49:10</div>
+  </div>
+</article>
+<article class="message" id="res56">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ブラムもアウトローとしてお尋ね者になるだろうけど</div>
+    <div class="message-time">56: 2025/9/16(火) 20:50:29</div>
+  </div>
+</article><div class="elapsed"><span>27日 11時間 37分 経過</span></div>
+<article class="message" id="res57">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">嫌な気持ちになってきたな</div>
+    <div class="message-time">57: 2025/10/14(火) 8:28:19</div>
+  </div>
+</article><div class="elapsed"><span>5時間 33分 経過</span></div>
+<article class="message" id="res58">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">非常に嫌な気持ちになってきたな</div>
+    <div class="message-time">58: 2025/10/14(火) 14:01:19</div>
+  </div>
+</article>
+<article class="message" id="res59">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">このおもんない卓もう一回回さないといかんのか</div>
+    <div class="message-time">59: 2025/10/14(火) 14:02:49</div>
+  </div>
+</article><div class="elapsed"><span>6時間 23分 経過</span></div>
+<article class="message" id="res60">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">久遠、ワンチャン当時のこと知ってるんじゃねぇのか？</div>
+    <div class="message-time">60: 2025/10/14(火) 20:26:20</div>
+  </div>
+</article>
+<article class="message" id="res61">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ～……</div>
+    <div class="message-time">61: 2025/10/14(火) 20:27:23</div>
+  </div>
+</article>
+<article class="message" id="res62">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">特殊OPあるか？</div>
+    <div class="message-time">62: 2025/10/14(火) 20:27:38</div>
+  </div>
+</article>
+<article class="message" id="res63">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ下層の事なんか知らんか</div>
+    <div class="message-time">63: 2025/10/14(火) 20:27:44</div>
+  </div>
+</article>
+<article class="message" id="res64">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">GM &gt; プレイヤーqEWE213z20<wbr>25/10/14 21:06<br>さぼさん　さぼさん　聞こえていますか<br>今　あなたの心に直接話しかけています [編集]<br><br>久遠 &gt; GM7BW8evsv<wbr>2025/10/14<wbr> 21:07<br>お？<br><br><br>GM &gt; プレイヤーqEWE213z20<wbr>25/10/14 21:08<br>久遠って島流しにされてからはずっとフラメルの中ですか？<br><br>久遠 &gt; GM7BW8evsv<wbr>2025/10/14<wbr> 21:09<br>特に決めてないなぁ<br><br><br>GM &gt; プレイヤーqEWE213z20<wbr>25/10/14 21:10<br>へい<br><br><br>GM &gt; プレイヤーqEWE213z20<wbr>25/10/14 21:11<br>じゃあいったんいいかな。おいおいなんかあったらなんかあるでしょう<br>シナリオ始まって程なくしたらわかります<br><br>久遠 &gt; GM7BW8evsv<wbr>2025/10/14<wbr> 21:11<br>うぃ</div>
+    <div class="message-time">64: 2025/10/14(火) 21:12:43</div>
+  </div>
+</article>
+<article class="message" id="res65">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">久遠7BW8evsv20<wbr>25/10/14 21:56<br>「え、ちょいちょいちょい待って。<br>　あなた何歳ですか？　まじで」＠<br><br><br>実質0歳なんだよな</div>
+    <div class="message-time">65: 2025/10/14(火) 21:59:00</div>
+  </div>
+</article>
+<article class="message" id="res66">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202401021acb33&amp;i=i57380965" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202401021acb33&amp;i=i57380965" width="164" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202401021acb33&amp;i=i57380965">📎 できたぞ！.jpg</a> <span class="filesize">[397.5 KB, 2048x2048px]</span> を追加しました。</div>
+    <div class="message-time">66: 2025/10/14(火) 22:35:07</div>
+  </div>
+</article><div class="elapsed"><span>14時間 47分 経過</span></div>
+<article class="message" id="res67">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">GM<br>ちょうど65年前……ドンピシャで65年前ではないのか？<br>まぁそのぐらいに一個の書店会社が立ち上げられているのを確認できます。<br>会場 &nbsp; &nbsp; &nbsp; &nbsp;<br>GM<br>読書を趣味にしてるキャラならもしかすると名前を知ってるかも、と思ったんですが<br>今回の二人はそういうこともなさそうかな。<br>ともあれ、会社自体は今も健在のようです。<br><br>とるとるワンチャン知ってるんじゃねぇか？</div>
+    <div class="message-time">67: 2025/10/15(水) 13:22:55</div>
+  </div>
+</article>
+<article class="message" id="res68">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">知ってますか？って聞いて知ってたらじゃあ知ってますってぐらい</div>
+    <div class="message-time">68: 2025/10/15(水) 13:23:42</div>
+  </div>
+</article><div class="elapsed"><span>1日 11時間 7分 経過</span></div>
+<article class="message" id="res69">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">主治医として最初からトキいてもいいな</div>
+    <div class="message-time">69: 2025/10/17(金) 0:31:12</div>
+  </div>
+</article><div class="elapsed"><span>10時間 38分 経過</span></div>
+<article class="message" id="res70">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res69">&gt;&gt; 69</a> <br>これ、一晩寝かせて考えてみるとダメだな<br>テンポはいいかもだけど、ベルトコンベア式に決闘の準備が整うからブラムがPLに改めて頭を下げるシークエンスまでカットされちゃって<br>ブラムにたいする心象の整理がつかないままになってしまう</div>
+    <div class="message-time">70: 2025/10/17(金) 11:09:39</div>
+  </div>
+</article><div class="elapsed"><span>2日 13時間 10分 経過</span></div>
+<article class="message" id="res71">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">思ったより時間かかるなぁ<br>次回アーサー一味の襲撃、その次ラストバトル、さらにその次エンディング＆クリア処理って感じかな</div>
+    <div class="message-time">71: 2025/10/20(月) 0:19:58</div>
+  </div>
+</article>
+<article class="message" id="res72">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">トキとの会話けっこうやるんだ</div>
+    <div class="message-time">72: 2025/10/20(月) 0:27:01</div>
+  </div>
+</article>
+<article class="message" id="res73">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あぁトキね、で流されると思ったら意外と掘られた</div>
+    <div class="message-time">73: 2025/10/20(月) 0:27:40</div>
+  </div>
+</article><div class="elapsed"><span>4日 1時間 24分 経過</span></div>
+<article class="message" id="res74">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">久遠にとって、不老不死仲間ができるってことは、<br>希望であると同時に「じゃあこいつを残して自分だけ死んでいいのか？」っていう<br>新しい葛藤、呪でもあるんだよな<br>ただメメントモリしていればいいってわけでもなくなるというか</div>
+    <div class="message-time">74: 2025/10/24(金) 1:52:07</div>
+  </div>
+</article><div class="elapsed"><span>6時間 15分 経過</span></div>
+<article class="message" id="res75">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なるほどね</div>
+    <div class="message-time">75: 2025/10/24(金) 8:07:16</div>
+  </div>
+</article>
+<article class="message" id="res76">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ブラムは今回の事例しか知らんから「それが貴様の望みであれば仕方あるまい」ってスタンスだろうけど<br>久遠のはそういう理想論通り越した先での葛藤だろうしなぁ</div>
+    <div class="message-time">76: 2025/10/24(金) 8:14:56</div>
+  </div>
+</article>
+<article class="message" id="res77">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そんなもんちゃうねん独りっちゅうのはって感じだろうな</div>
+    <div class="message-time">77: 2025/10/24(金) 8:15:50</div>
+  </div>
+</article><div class="elapsed"><span>12時間 23分 経過</span></div>
+<article class="message" id="res78">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあでもブラムはDIOみたいなまだその気になれば死ねるやつだから<br>現状は久遠からの執着が主ではある</div>
+    <div class="message-time">78: 2025/10/24(金) 20:39:42</div>
+  </div>
+</article><div class="elapsed"><span>3時間 16分 経過</span></div>
+<article class="message" id="res79">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ウルフさーん！！！！！</div>
+    <div class="message-time">79: 2025/10/24(金) 23:55:52</div>
+  </div>
+</article>
+<article class="message" id="res80">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202401021acb33&amp;i=i6553092c" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202401021acb33&amp;i=i6553092c" width="211" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202401021acb33&amp;i=i6553092c">📎 さぼキリT【闘争の果て】.jpg</a> <span class="filesize">[155.2 KB, 990x767px]</span> を追加しました。</div>
+    <div class="message-time">80: 2025/10/24(金) 23:58:28</div>
+  </div>
+</article>
+<article class="message" id="res81">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした。あと渡し忘れてる探索賞ください。さすがにください。</div>
+    <div class="message-time">81: 2025/10/25(土) 0:03:53</div>
+  </div>
+</article>
+<article class="message" id="res82">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした！</div>
+    <div class="message-time">82: 2025/10/25(土) 0:03:59</div>
+  </div>
+</article>
+<article class="message" id="res83">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">後日談、ほとんど地蔵になる予定だけどなんかしゃしゃり出てしまったな　まぁええか</div>
+    <div class="message-time">83: 2025/10/25(土) 0:09:25</div>
+  </div>
+</article><div class="elapsed"><span>5時間 50分 経過</span></div>
+<article class="message" id="res84">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういや最後に笹々木に「やっぱ仕事ってクソだわ」って言わせるつもりだったの忘れてたな</div>
+    <div class="message-time">84: 2025/10/25(土) 5:59:59</div>
+  </div>
+</article>
+<article class="message" id="res85">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れさまでした！！！<br>すいません！！！</div>
+    <div class="message-time">85: 2025/10/25(土) 8:54:47</div>
+  </div>
+</article><div class="elapsed"><span>3時間 15分 経過</span></div>
+<article class="message" id="res86">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">寝落ちでした</div>
+    <div class="message-time">86: 2025/10/25(土) 12:10:39</div>
+  </div>
+</article>
+<article class="message" id="res87">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">しゃーない</div>
+    <div class="message-time">87: 2025/10/25(土) 12:31:40</div>
+  </div>
+</article>
+<article class="message" id="res88">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">……探索賞は？？</div>
+    <div class="message-time">88: 2025/10/25(土) 13:15:36</div>
+  </div>
+</article>
+<article class="message" id="res89">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なしで</div>
+    <div class="message-time">89: 2025/10/25(土) 14:19:16</div>
+  </div>
+</article>
+<article class="message" id="res90">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">リザルト確定しちゃったし</div>
+    <div class="message-time">90: 2025/10/25(土) 14:19:20</div>
+  </div>
+</article>
+<article class="message" id="res91">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">(ꐦ°᷄д°᷅)</div>
+    <div class="message-time">91: 2025/10/25(土) 14:25:11</div>
+  </div>
+</article><div class="elapsed"><span>6日 1時間 25分 経過</span></div>
+<article class="message" id="res92">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういえば書き忘れてたんだけど、ブラムに対する心象ってどうでしたか？<br>途中で嫌気差したりなんでこんなやつの依頼を叶えてやらなきゃなんないんだよってなりませんでしたか？</div>
+    <div class="message-time">92: 2025/10/31(金) 15:51:03</div>
+  </div>
+</article><div class="elapsed"><span>5時間 1分 経過</span></div>
+<article class="message" id="res93">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">別に</div>
+    <div class="message-time">93: 2025/10/31(金) 20:52:41</div>
+  </div>
+</article>
+<article class="message" id="res94">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ仕事だしあれくらい変なやつそのへんにいくらでもいるしね</div>
+    <div class="message-time">94: 2025/10/31(金) 20:56:23</div>
+  </div>
+</article>
+<article class="message" id="res95">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">顔合わせ時点でなんとなくキャラが掴めていたのと、<br>いい空気吸ってるだけで悪意があるタイプでもないので、不快感はなかったですね。</div>
+    <div class="message-time">95: 2025/10/31(金) 22:47:49</div>
+  </div>
+</article><div class="elapsed"><span>7時間 55分 経過</span></div>
+<article class="message" id="res96">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">価値観ズレてるだけで特別悪人ってわけでもないので特には</div>
+    <div class="message-time">96: 2025/11/1(土) 6:43:15</div>
+  </div>
+</article>
+<article class="message" id="res97">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">愉快な長命種好きだからなんとも</div>
+    <div class="message-time">97: 2025/11/1(土) 9:25:58</div>
+  </div>
+</article><div class="elapsed"><span>9時間 49分 経過</span></div>
+<article class="message" id="res98">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ悪印象ないならよかった</div>
+    <div class="message-time">98: 2025/11/1(土) 19:14:59</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>
