@@ -1,0 +1,2469 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>SAVO【バイトのヘルプに駆け付けたら客席に玉虫色の塊が座ってた】</title>
+	<style>
+		html {
+			font-size: 14px;
+		}
+		body {
+			-webkit-text-size-adjust: 100%;
+			background-color: #ffffff;
+		}
+		h1 {
+			font-size: 20px;
+			margin: 1rem 1rem 0;
+			color: #000000;
+		}
+		.tab {
+			border: 1px solid #999;
+			margin: 2rem 1rem 1rem;
+			line-height: 1.5;
+			position: relative;
+		}
+		.tabtitle {
+			border: 1px solid transparent;
+			border-color: inherit;
+			background-color: inherit;
+			position: absolute;
+			top: -.8rem;
+			left: 1rem;
+			min-width: 7rem;
+			padding: 0 .5rem;
+			text-align: center;
+			font-size: 1rem;
+			z-index: 9999;
+			line-height: 1.4rem;
+		}
+		.player {
+			margin: 0;
+			padding: 0 .5rem;
+			padding-left: 10.5rem;
+			border-bottom: 1px dotted transparent;
+			border-color: inherit;
+			position: relative;
+		}
+		.player:last-child {
+			border-bottom: 0;
+		}
+		.player b {
+			display: block;
+			height: 100%;
+			width: 9rem;
+			padding: 0 .5rem;
+			border-right: 1px solid transparent;
+			border-color: inherit;
+			position: absolute;
+			top: 0;
+			left: 0;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.tabtitle + .player {
+			padding-top: .7rem;
+		}
+		.tabtitle + .player b {
+			padding-top: .7rem;
+			height: calc(100% - .7rem);
+		}
+		.diceroll {
+			padding: 0 .5em;
+			color: #ffffff;
+		}
+
+		/* [情報] タブ */
+		.t0 {
+			background-color: #feecd2;
+			border-color: #999999;
+			color: #000000;
+		}
+
+		/* [メイン] タブ */
+		.t1 {
+			background-color: #ffffff;
+			border-color: #999999;
+			color: #000000;
+		}
+
+		/* [雑談] タブ */
+		.t2 {
+			background-color: #fadce9;
+			border-color: #999999;
+			color: #000000;
+			font-size: .8rem;
+		}
+
+		/* [見学席] タブ */
+		.t3 {
+			background-color: #d5ead8;
+			border-color: #999999;
+			color: #000000;
+			font-size: .8rem;
+		}
+
+		/* 発言者：ＧＭ */
+		.p0 { color: #000000; }
+		.p0 .diceroll { background-color: #000000; }
+
+		/* 発言者：宮田二郎 */
+		.p1 { color: #f44336; }
+		.p1 .diceroll { background-color: #f44336; }
+
+		/* 発言者：system */
+		.p2 { color: #000000; }
+		.p2 .diceroll { background-color: #000000; }
+
+		/* 発言者：ハムトニーちゃん */
+		.p3 { color: #000000; }
+		.p3 .diceroll { background-color: #000000; }
+
+		/* 発言者：大将 */
+		.p4 { color: #845a12; }
+		.p4 .diceroll { background-color: #845a12; }
+
+		/* 発言者：？？？ */
+		.p5 { color: #ff0000; }
+		.p5 .diceroll { background-color: #ff0000; }
+
+		/* 発言者：見学少女 */
+		.p6 { color: #000000; }
+		.p6 .diceroll { background-color: #000000; }
+	</style>
+</head>
+<body>
+	<h1>SAVO【バイトのヘルプに駆け付けたら客席に玉虫色の塊が座ってた】</h1>
+	<div class="tab t0">
+		<div class="tabtitle">情報</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			【システム】鋼鉄のユグドラシル<br>
+			【タイトル】■■■■■■■■■■■■■■■■■■■■■■■■■■■<br>
+			【トレーラー】<br>
+			　自室でくつろぐあなたの下に、一本の電話がかかって来た。<br>
+			　バイト先のラーメン屋の大将だ。<br>
+			<br>
+			　嫌な予感がしつつも電話に出ると、聞こえて来たのはいつものがなり声ではなかった。<br>
+			「お、おい、〇〇……。すまんが、時間があるなら店まで来てくれねえか？」<br>
+			「頼む、バイト代は弾むから、助けてくれ」<br>
+			<br>
+			【適正人数】１人<br>
+			【所要時間】３０分～４時間<br>
+			【参加資格】ラーメン屋でバイトできるPC<br>
+			【暴走チェック】開始時（６Ｄ以上）、消費、衝動<br>
+			【抑制ロール】２回振り、リテイク等はなし<br>
+			【雰囲気】コミカル：シリアス＝１０：０（逆かも）<br>
+			【深刻度】ライト：ヘヴィ＝０：１０（逆かも）<br>
+			<br>
+			【その他】<br>
+			　・「蟹」“非”適用。特殊キャラシートも使用不可。<br>
+			　・希望があれば当シナリオをＩＦ扱いで無かったことにしても良い。
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			4d6 <br>
+			<span class="diceroll">DiceBot : (4D6) ＞ 9[1,1,4,3] ＞ 9</span><br>
+			4d6 <br>
+			<span class="diceroll">DiceBot : (4D6) ＞ 13[3,2,5,3] ＞ 13</span><br>
+			……まあこれでいいか……
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">雑談</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ステータス表の項目、各々でいじるしかないんだろうか
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			懐かしすぎる
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			６ｄ６ <br>
+			<span class="diceroll">DiceBot : (6D6) ＞ 26[2,3,6,6,6,3] ＞ 26</span><br>
+			デッカ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			一応、後々入室してくる人のために説明しておくと<br>
+			コマンドがない頃はこうやって4d振ってcondをロールしてました<br>
+			出目はそれぞれ「HP1,HP2,PP1,PP2」と振り分けられます。
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			１ｄ６ <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 5</span><br>
+			ra50は自制
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] HP : 0 → 8<br>
+			[ 宮田二郎 ] MP : 0 → 29
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			SANを暴走値として扱います
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			うい
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			これでOKかな<br>
+			因子は-1<br>
+			普通にステ名変えられたわ<br>
+			あとおもったけどチャットパレットで何とかならんかな？
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			チャパレではな～<br>
+			チャパレというか、アレですかね、コマンド表みたいな<br>
+			どどんとふでできた自作コマンドの登録
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			そうね
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ココフォリアは……あるのかなぁそういうの
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			あるよ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ある！！！
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			20+2d6　命中 <br>
+			<span class="diceroll">DiceBot : (20+2D6) ＞ 20+6[3,3] ＞ 26</span>
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			チャパレはあるっぽいけど自作ダイスボット表ってどうやるんだ……？
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			ちょっと違うなやっぱ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			てすと<br>
+			BGM流してるけど聞こえてるだろうか
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			聞こえます<br>
+			そしてトイレに行きます
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			良かった<br>
+			はい<br>
+			部屋のセーブデータ使えないから一々ＢＧＭ登録しなきゃならんのか<br>
+			部屋は削除せず掃除して使いまわす形にした方が良さそうだな
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			うっし
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ユドナリウムもなかなか心惹かれたんだが、ループ仕様の耐久ＢＧＭを使えそうなツールがココフォリアしかなかったものでな……<br>
+			さて、おかえりなさい。開始しますか？
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			私はログ削除して毎回同じ部屋浸かってます<br>
+			はーい
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			やっぱそっちのが良いわな<br>
+			はい<br>
+			というわけで■■■■■■■■■■■■■■■■■■■■■■■■■■■初めて生きたいと思います！<br>
+			よろしくお願いします
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			よろしくお願いしまし
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ＢＧＭ鳴らないな……<br>
+			お、入ったかな？<br>
+			まぁとりあえず描写を<br>
+			――<br>
+			――――<br>
+			――――――<br>
+			　季節でいえば、現在から大きく遡っての話になる。<br>
+			　その日、あなたは休日だった。これといった予定もなく、あなたは部屋の中でくつろいでいることだろう。<br>
+			　外はうだるような暑さということだが、冷房の利いたこの部屋の中では関係のない話である。<br>
+			　惰性で眺めるテレビの中では、数人の若者が青空を背景に、自転車に跨って坂道を駆け下りている。<br>
+			　実にステレオタイプな――ついでに言えば、この島の感覚でいえばだいぶ古い――青春の映像だが、しかしつまらない。<br>
+			　チャンネルを変えようか、はたまた別の趣味にでも興じてみようか。そんなことを考えて。<br>
+			　――着信音がした。バイト先のラーメン屋の大将からだった。@　ちなみに今、店は休憩時間中のはずです
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>ハムトニーちゃん</b>
+			ファイトですよ！
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「はい、宮田ッス！　師匠、どうしましたか！」＠
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">雑談</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			チャパレ、改行できないからそのままブチ込んだけど意外と嵩張るな……
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　では、ものすごいノイズ交じりで通話が繋がります。電波が悪いのかしら。
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			『よ、よ█やく繋がったか……！』<br>
+			『█、おい、二郎……すまんが、今から店まで来て█れねえか？』<br>
+			『頼む、バイト代は弾む█ら、助█てくれ……！』＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「ん、電波悪いッスね？　分かりました、すぐ行きやす！」全速力で店に行きます＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			お話が早い
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			『おお、本█か！　頼むぞ！　早█だ！　急いで██よ！！！』
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「ヘイ！」＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　じゃああなたは全速力で店に来ます。<br>
+			　背景だともうカウンターの方に来ちゃってるが、「まず裏口から入って、バックヤードで着替えて、そこから厨房にＩＮ」というのがこの店のシステムである。<br>
+			　ラーメン屋ってだいたいそんなんやろ（偏見）。
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>ハムトニーちゃん</b>
+			スマホからでもそのまま見れるのは良いなココフォリア
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>大将</b>
+			「じ、二郎！　あ、ありがとう、助かった……！　お前は命の恩人だ……！」<br>
+			　裏口から入るや否や縋り付いてきます＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「お待たせしやした！　師匠ォ！　どうしたんスか！」とにもかくにも店長に会います＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「どうしたもこうしたもあるか！　早く&quot;あれ”を何とかしてくれ！」<br>
+			　そう言って、大将はあなたを表まで引っ張っていこうとします。まだ着替えてもないのに、相当な慌てっぷりと見える。＠<br>
+			表ってのは厨房とかカウンターの方面のことで
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「アレ？　アレってまさか、頭文字Gッスか！」＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「クソ！　それならまだ良かったよ、それなら……」<br>
+			「いったい俺にどうしろってんだ、畜生！」＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「じゃあ何なんスカ……」表を見ます＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			はい
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　では、厨房に入って、カウンターの方を……見るまでもなく視線がそちらに吸い寄せられていくだろう。<br>
+			　カウンターの向こう、客席にいたのは――否、“あった”のは、あなたの十倍はあろうかという巨大な体積の「塊」だった。<br>
+			　不快にぎらめくそれは、店舗の照明と窓から差し込む陽光を受け、角度によって様々に彩りを変化させている。<br>
+			　紫、あるいは緑、あるいは黒、あるいは青――環境問題について扱ったテレビで見た工場廃液。あれがこんな色だったかな、なんて、場違いなことをあなたは考えるかもしれない。<br>
+			　ただ不幸にも、あなたの眼前へ鎮座するそれは、単なるヘドロ塊などでは断じてなかった。<br>
+			　その塊には目玉と、牙の生えた口があった。さらに目玉と、牙の生えた口があった。<br>
+			　目玉のそばには口が、その反対側には口が、その左上には目玉が、その上には口が。<br>
+			　そのすぐ右横には目玉が、その上と下と左右には目玉と口と上と目玉と口と目玉と目玉が。<br>
+			　――無数の目玉と、無数の口が、浮かび上がっては蠢き、やがて埋没し、それを絶えず繰り返している。
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			何だこのやる気のないキャロルは
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　不意に、甲高い音がする。人の声だろうか。鈴の音だろうか。それとも獣の呻き声だろうか。
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			テケリ・リ
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			――Tekeli-li, Tekeli-li !
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　そう発音したように聞こえた。いや、そんなことよりも。<br>
+			　　　　　　　　　　――PsychicTRPG【鋼鉄のユグドラシル】――<br>
+			　　――『バイトのヘルプに駆け付けたら客席に玉虫色の塊が座ってた』――<br>
+			　あれは何なのだ。あの玉虫色の塊は、一体何故こんなところに……。<br>
+			というわけで1d6/5d6の衝動チェックとなります。目標値は【？？？の威圧（固定値のみ、各種補正込）】<br>
+			成功で1d6上昇、失敗で5d6上昇の意。＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			威圧すればいいの？
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			二郎側は精神で判定ですね
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			精神ね
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ショゴ……玉虫色の塊の【威圧】以上の値を精神判定で出せれば成功
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			……宣言無しで＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			では精神判定どうぞ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			４＋１ｄ６ <br>
+			<span class="diceroll">DiceBot : (4+1D6) ＞ 4+5[5] ＞ 9</span>
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			では玉虫色の塊の威圧を開示。【20】です
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			草
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			前はエキスパートで威圧取ってたから28だったけどバランスの兼ね合いでどうしようもないなとなったので流石に下げた<br>
+			あ、失敬　厳密には【17】に感覚活性Lv3で20でした……<br>
+			というわけで5dの暴走上昇どうぞ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			５ｄ６ <br>
+			<span class="diceroll">DiceBot : (5D6) ＞ 27[3,6,6,6,6] ＞ 27</span><br>
+			！？！？
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			何だその上がり方は
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p6">
+			<b>見学少女</b>
+			超ビックリ
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			よかった失敗談持ってきて
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ra70どうぞ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			１ｄ６ <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 1</span>
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			自縛<br>
+			自爆！
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>ハムトニーちゃん</b>
+			原始時代！
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			４＋４ｄ６ <br>
+			<span class="diceroll">DiceBot : (4+4D6) ＞ 4+8[2,3,1,2] ＞ 12</span><br>
+			死んだわ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			終了！！！！！！！<br>
+			復活Ｂしますか？
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			流石に闘志発動もアレだし復活Bします
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			そういえば闘志だったな<br>
+			どうぞ
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 因子 : -1 → -4<br>
+			[ 宮田二郎 ] 暴走率 : 51 → 79<br>
+			[ 宮田二郎 ] 暴走率 : 79 → 77<br>
+			[ 宮田二郎 ] 暴走率 : 77 → 78
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			尋常ならざる存在を見て一瞬眩暈がしたけどなんとか持ち直したとかそんなんだろうきっと
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			２ｄ６ <br>
+			<span class="diceroll">DiceBot : (2D6) ＞ 9[5,4] ＞ 9</span><br>
+			満タン<br>
+			「……何スカあれ」＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「バ、バッキャロー！　オレが知るわけねぇだろ！」<br>
+			「休憩時間なんで買い出しに行こうと思って、入口も締めといたのにいつの間にかいたんだよ！！！」<br>
+			入口の方を見てみると、確かに「準備中」の看板がかかっとる
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「……なるほど」<br>
+			「……で、俺はどうすりゃいいんで……？」＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「あ、アレ追い払ってくれ……何とかしてくれ！」＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「……」<br>
+			「師匠ォ……俺はね、アンタのラーメンを愛してんすよ」<br>
+			「そして、俺は誰よりも！　このユグドラシルの誰よりも、ラーメンの力を信じている！」
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「……？　……？？？」＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「例えそれがミュータントだろうと何だろうと！　カウンターに座っている以上はウチの客だ！　そんなら最高のラーメンを、満足するまで食って頂くってのが筋ってもんじゃァないですかねぇ、師匠！！」＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「……は？　…………は？？？？？？」<br>
+			「……おま、は？　え？　客って……あ、あれにラーメン出すつもりかお前!?」＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「ラーメン屋でラーメン出さないでどうするっつぅんですか！」＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「ラーメンだとかそういう次元じゃねーだろあの肉塊！！！！」<br>
+			「入店してからそれらしい言葉なんか一っ言も口にしてねぇんだよあれは！！」<br>
+			「だいたい今は準備中で経営時間じゃねぇんだぞ、そもそも店のシステム理解できてんのか!?」
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			とかなんとか言ってると
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「いいえ！　ラーメンは神が人類に与え給うた至宝！　最高の美食！　ならば！　どんな異種族とも分かりあえるはず！」
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			――Tekeli-li, Tekeli-li !
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　玉虫色の肉塊がゴトゴトと音を立てながら一鳴きします。身動きしたせいで隣の椅子やら何やらが倒れた音らしい＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「ヘイッ、只今！」<br>
+			「……とりあえず、俺が注文取ってきやす。仕込みは済んでんでしょう？」＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「……角煮切らしてんだよ今」　注文取ってくる気マンマンの二郎ちゃん見て渋々といった様子で零します＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「そりゃァ、この際しょうがないでしょう。時間外ってことで勘弁してもらいやしょう」<br>
+			では肉塊に話しかけに行きます。<br>
+			「……大変お待たせしやした。ええと、ご注文は？」＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　では“客”の方もあなたに気付いたらしい。<br>
+			　全身にびっしりとくっついた眼が、一斉にこちらを向いた。<br>
+			　ヘドロめいた外見に違わずというか、肉塊を中心に異臭が辺りに充満していることにあなたは気付くだろう。<br>
+			　頭が痛くなりそうだ。
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			――Tekeli-li !
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　あなたに応じた……のか、異形が再び奇怪な声を奏でた。<br>
+			　やがてその塊の一部が、ずるりと音を立ててあなたに伸びる。……手と呼ぶべきなのだろうか。これは。手と呼んで良いのだろうか、これは。<br>
+			　そして、触手の先端には。<br>
+			　……食券が握られていた。<br>
+			　【とんこつチャーシュー（半熟味玉入）】【ライス（大）】と書いてある。@
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「……話が早いッスねお客さん！<br>
+			　師匠ォ、半玉豚とんこつ、飯大一丁！」＠<br>
+			「……あ、チャーシュー切れてんだっけか」＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			角煮とチャーシューは別なのでそこは大丈夫です
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			おｋ
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「……は!?　ほ、本当に注文したのか!?　そいつが!?」＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「ええ、食券持ってらっしゃいやした」＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「………………………………」<br>
+			信じられないといった様子で（粘液のくっついた）食券と“客”を交互に見ていましたが
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			――――
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　&quot;お客様&quot;の全身にビッシリとくっついた目玉が、大将の方を向きました。<br>
+			　鋭い牙が、口元で煌めいたように見えます。
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「ヒッ……あ、あいよぉーー！！！！！！」<br>
+			裏返った声で逃げるようにして厨房に引っ込んでいきます＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「そうこなくっちゃァ！　それでこそ俺が見込んだお方だ！」<br>
+			ライスを準備します＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			はい
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ではここから便宜上ラウンド単位で処理します。<br>
+			だから特別な処理があるとかではないんだけども
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「あ、そうだ。お冷出すん忘れてましたね、どうぞ」と水を出します＠<br>
+			おう……おう？
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			お冷をまじまじと見つめた後、コップごと丸のみにします＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			では１Ｒ目、宣言どうぞ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「豪快ッスね。備品壊されるとちっと困っちまうんですが……<br>
+			どうぞと言われても
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			まぁ別に何するでも良い<br>
+			それこそライス盛るとかでも良いか
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			大将が麺茹で終わるのに何Rかかりますか＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			次のラウンドには終わりそう
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			じゃあ丼を出してスープを入れておきます＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			大将は今ネギを刻んでいます＠<br>
+			はい<br>
+			では２Ｒ目
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			ネギを刻んでいます＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			ちなみに食券て前払いだよね？
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			シナリオ見た感じだとなぜか後払いになってるっぽいんだよな
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			どんな食券やねん
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			まぁ前払いで良いです
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p6">
+			<b>見学少女</b>
+			そういえばそうだよな…食券なのに後払い
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			いいんかい
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			食券機壊されてそうだな
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			あ、２Rか
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			ネギを刻んでいます＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			じゃあ盛り付けてネギとチャーシューをバーナーで炙りますね＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			じゃあそこで二郎ちゃんは大将の異変に気付くでしょう
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			む
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			この人ずっとネギ刻んでます
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			麺茹でてないんか
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			もうそろそろ麺が茹で上がる頃なのにまだやってます＠<br>
+			麺はまぁ茹でてたことにして良い
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「師匠、麺は大丈夫スか！」＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「うううう美味いラーメンの極意ってのぁなぁ！！！！　めめめめめ麺よりもなぁ！　ネネネネギとメンマで決まるんじゃい！！！！！」＠ｻﾞｸｻﾞｸｻﾞｸｻﾞｸ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			トイレ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			うい
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			おし<br>
+			「らしくもねぇ、しっかりしてください！<br>
+			　いいスか！　俺はここ5年間、上層から下層まで、この島のあらゆるラーメンを食べ歩いてきた！<br>
+			　その俺が、最高だと認めてついて行こうと決めたのがアンタとこの店のラーメンなんだ！<br>
+			　自身を持って！　アンタはこの島で最高のラーメン職人なんだ！」<br>
+			話術で振ってもいいですか
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			草<br>
+			目標値18で。RPボーナスで+3して良い
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			17＋１ｄ６ <br>
+			<span class="diceroll">DiceBot : (17+1D6) ＞ 17+4[4] ＞ 21</span><br>
+			はいっ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ではテンパり倒していた大将の気付けに成功します
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「……はっ、俺は一体……」
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「さぁ師匠、麺が伸びちまわないうちに仕上げを！」＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「！　そ、そうか……わかった！」<br>
+			では正気に戻った大将は流石になれた手つきで麺を仕上げ、そのまま盛り付けまで済ませるでしょう
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			その間にライスをよそって、完成したラーメンを持っていきます。<br>
+			「半熟玉子チャーシュー豚骨、ライス一丁お待ち！」＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			そうだな、幸運でどうぞ。ラーメンの完成度についての判定です
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			幸運15！<br>
+			……PP消費したいな
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			刹那じゃないのでＡＥ使用も可
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			コンセ10しておきましょう
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] MP : 29 → 19
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			突っ込んだ。どうぞ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			25＋１ｄ６ <br>
+			<span class="diceroll">DiceBot : (25+1D6) ＞ 25+4[4] ＞ 29</span>
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 因子 : -4 → -2<br>
+			[ 宮田二郎 ] 暴走率 : 78 → 85<br>
+			[ 宮田二郎 ] 暴走率 : 85 → 92<br>
+			[ 宮田二郎 ] 暴走率 : 92 → 88
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			（そうだ……一体俺は何を浮足立っていた……）<br>
+			（俺はラーメン職人だ、それ以上でもそれ以下でもねぇ）<br>
+			（そしてこの店のカウンターに座ったなら誰であろうとそいつは客ッ）<br>
+			「へっ……悪かったな二郎。テメェに説教されちまうとは……」<br>
+			「こいつがッ！　ウチの店のッ！　一杯だァァァァァァアアアアッ！！！！！！！」<br>
+			「持ってけ二郎ォ！」　香ばしい匂いが辺りへ漂います＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「ヘイッ、半熟玉子チャーシュー豚骨、ライス一丁お待ちどお！」＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　あなたたちが供した渾身の一杯を、&quot;お客様&quot;は目玉という目玉で見つめるだろう。<br>
+			　テーブルの下からも、うぞうぞと目玉が這い上がって器へ視線を注いでいる。<br>
+			　目玉の横に追いやられた口が、思い思いに喚いている。心なしか興奮気味に聞こえないこともない。<br>
+			　やがて今度は、先刻と正反対に口が目玉を押しのけて前方へ移動した。口と口は絵具のように溶け合って、一つの大口へ変貌し――<br>
+			　――ラーメンとライスを、器ごと啜り上げてしまった。<br>
+			　がりがり、ぼり、ぐしゃり。<br>
+			　……およそラーメンの咀嚼音らしからぬ異音を鈍く鳴り響くこと十数秒。最後に飲み下すように身体を波打たせた頃には、あれだけ牙の煌めいていた口は全て閉ざされ、店内には沈黙が訪れるだろう。＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「…………」　やったか!?　みたいな顔＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「……なかなかの邪道喰いッスね、お客さん」＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			　様々に思考が過る。……やがて、目玉という目玉が、ぎょろりとあなたたちへ視線を投げかけた。
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			おまえはＧＭじゃなくて大将<br>
+			　様々に思考が過る。……やがて、目玉という目玉が、ぎょろりとあなたたちへ視線を投げかけた。
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			「こ」<br>
+			　「れ」<br>
+			　　「だ」<br>
+			　　　「け」<br>
+			　　　　「？」
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　そんな不満げな声が頭の中に響いた……気がした。<br>
+			というわけで0/1d6の【衝動チェック - 12】。＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			精神？
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			精神<br>
+			80活性もあるので4+2dかな、今回は
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			素振りでいいや<br>
+			４＋２ｄ６ <br>
+			<span class="diceroll">DiceBot : (4+2D6) ＞ 4+4[3,1] ＞ 8</span>
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			さぼダイス
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			１ｄ６ <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 6</span><br>
+			HAHAHA<br>
+			１ｄ６ <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 4</span>
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 暴走率 : 88 → 84
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ra90どうぞ
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 暴走率 : 84 → 92
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			２ｄ６ <br>
+			<span class="diceroll">DiceBot : (2D6) ＞ 7[6,1] ＞ 7</span><br>
+			うぅむ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			制御異常か<br>
+			choice[てすと,ごりら] <br>
+			<span class="diceroll">DiceBot : (CHOICE[てすと,ごりら]) ＞ ごりら</span><br>
+			choice使えるのね
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			だいたい何でもできる
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			//choice[二郎ちゃん,大将,“お客様”,店内の椅子]<br>
+			これでどうぞ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			choice[二郎ちゃん,大将,“お客様”,店内の椅子] <br>
+			<span class="diceroll">DiceBot : (CHOICE[二郎ちゃん,大将,“お客様&quot;,店内の椅子]) ＞ “お客様&quot;</span><br>
+			うわああああ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			あっ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			最悪だあああああああ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			宣言どうぞ<br>
+			刹那です
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			何をどうしろってんだ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			特に無ければそのまま命中判定どうぞ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			２０＋４ｄ６ <br>
+			<span class="diceroll">DiceBot : (20+4D6) ＞ 20+15[4,3,2,6] ＞ 35</span><br>
+			１ｄ６ <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 3</span>
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			こんな時に限ってクリティカル
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			３８
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			cf3+1d6+3d6
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>ハムトニーちゃん</b>
+			そういうサービスの店かな？
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p5">
+			<b>？？？</b>
+			cf効かない；；<br>
+			3+1d6+3d6 回避＋感覚型Lv&quot;6&quot; <br>
+			<span class="diceroll">DiceBot : (3+1D6+3D6) ＞ 3+4[4]+7[2,4,1] ＞ 14</span><br>
+			14-1d6 <br>
+			<span class="diceroll">DiceBot : (14-1D6) ＞ 14-1[1] ＞ 13</span><br>
+			一応ダメージロールどうぞ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			４＋７ｄ６ <br>
+			<span class="diceroll">DiceBot : (4+7D6) ＞ 4+26[5,4,3,1,2,6,5] ＞ 30</span>
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			防御10点で20点もらいます＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			どういうRPすればええねん
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ ？？？ ] HP : 0 → -20
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			普通に能力の暴発が起きたとか……
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>ハムトニーちゃん</b>
+			お冷のおかわり持って行ったら手が滑ってクリーンヒットしたとか…
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			じゃあ「おかわり入りましたー！」といった途端に暴発して槍が客に刺さります
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「あっ……」
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「っとぉ！？　何だ急にぃ！？」＠
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			――――――
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			槍が”お客様”に深々と突き刺さるでしょう。全身の目はぱちくりとして静止し、辺りは静寂に包まれます。<br>
+			そして、次の刹那に。
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「いや……スミマセンお客さん、ちょっと手が滑っちまって……」
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			――Tekeli-li, Tekeli-li !
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　肉塊の触手がテーブルに叩きつけられ、メリメリと破壊音を立てながらカウンター席を崩壊させます。<br>
+			　ここまでいまいち意図の読めない肉塊でしたが、今回ばかりは明瞭でした。<br>
+			　……たぶん、怒ってます　＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「……致し方ねぇか」<br>
+			「師匠、支払いは俺が持ちます……<br>
+			　『アレ』をこのお客さんに」<br>
+			「ごつ盛り全部のせスペシャルを！　お出ししましょう！」＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「は!?　い、いや、そりゃ良いが……その……」<br>
+			「……おとなしく待っててくれんのか？　お客さん……」＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			どうなんですか？
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			触手をあちこちにぶつけ、今にもあなたに襲い掛からんとしている＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「完成するまで……俺が責任持って食い止めます」＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「そ、そうか……わかった、無理するんじゃねぇぞ！」<br>
+			奥に引っ込んでいきます
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「ヘイッ！　なるべく、チョッパヤでお願いします！」＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			さて、完成までは……３Ｒぐらいかかりそうかな<br>
+			それまであなたは荒ぶる&quot;お客様&quot;のお相手をしなければいけないだろう！<br>
+			というわけでまさかまさかの臨戦ラウンド
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			うむ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			一応今回もラウンド制限はありません<br>
+			強度感知するなら目標値は【8】で＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			あ、キャラ氏から想像技が消えている<br>
+			とりあえずPP4を消費して複製創造します
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			修正前の内容でＯＫですよ<br>
+			Ａｔ＋Ｓｈコピーの複製創造だったかな
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			エフェクトも
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			あらそうなのか　他の方の卓だと使えるかどうか聞いておいてね
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			はい
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			だがうちではＯＫ！！！<br>
+			と思ったが、創造前に制御異常による暴発判定がある気がするな
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] HP : 8 → 7<br>
+			[ 宮田二郎 ] 暴走率 : 92 → 93<br>
+			[ 宮田二郎 ] HP : 7 → 8<br>
+			[ 宮田二郎 ] MP : 19 → 18
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			プリアクションになるのかそれ<br>
+			じゃあ先に発動Bするわ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ラウンドで管理してるのでプリアクション扱い
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			発動じゃない抑制
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			はいよ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			１ｄ６ <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 2</span>
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			たりないな。もう１Ｄいきますか？
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			いきます<br>
+			１ｄ６ <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 1</span>
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 暴走率 : 93 → 89<br>
+			[ 宮田二郎 ] 因子 : -2 → -6
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			制御異常解除、で、そこから複製創造してもう１回ra90
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			２ｄ６ <br>
+			<span class="diceroll">DiceBot : (2D6) ＞ 6[1,5] ＞ 6</span><br>
+			クソしか引かねぇ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			忘我か<br>
+			まぁまた制御異常引くよりはマシかもしれない
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 暴走率 : 89 → 90
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			複製創造だから4点の消費で93%のはず
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 暴走率 : 90 → 93
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			PPは15か
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] MP : 18 → 15
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			一応感知するか
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			では箸が生えた
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			７＋３ｄ６ <br>
+			<span class="diceroll">DiceBot : (7+3D6) ＞ 7+5[1,2,2] ＞ 12</span><br>
+			１ｄ６ <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 6</span><br>
+			なんなん？？？
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			何事もわからぬ<br>
+			あと二郎ちゃん、忘我なんで技能は判定結果半減です
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] MP : 15 → 14<br>
+			[ 宮田二郎 ] 暴走率 : 93 → 94
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			あっはい
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 因子 : -6 → -5
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			じゃあもういいか……
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			哀しみ<br>
+			では戦闘開始ですか？
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			はい<br>
+			「ちょっとの間だけ……おとなしくしてていただきますよ、お客さん」＠
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			　いくつにも分かれた触腕が、一斉にあなたへと迫るでしょう。<br>
+			　まるでマナーを知らない稚児が、手づかみで食事を貪るように。＠rpend
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			というわけで戦闘開始……１Ｒ目！
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			行動値……1、ＡＥなし＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			宣言無し
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			二郎ちゃん何気に行動値2点あるのか、ならお客様より早い<br>
+			クリも同値だと思うので、そのまま宣言どうぞ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			Guki<br>
+			だめか<br>
+			１ｄ６ <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 3</span><br>
+			はい<br>
+			じゃあクリーチャーだけ行動ですよね
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			ですね
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			では【アブラ】！　AEはなし！＠
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] MP : 14 → 11<br>
+			[ 宮田二郎 ] 暴走率 : 94 → 97
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			対抗なし＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			２０＋２ｄ６ <br>
+			<span class="diceroll">DiceBot : (20+2D6) ＞ 20+6[3,3] ＞ 26</span>
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			3+1d6+3d6 回避+感覚型Lv&quot;6&quot; <br>
+			<span class="diceroll">DiceBot : (3+1D6+3D6) ＞ 3+2[2]+4[2,1,1] ＞ 9</span><br>
+			草<br>
+			ひでぇ出目だな<br>
+			9-2d6 <br>
+			<span class="diceroll">DiceBot : (9-2D6) ＞ 9-5[2,3] ＞ 4</span><br>
+			それはもう当たる
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			鎖でお客様を拘束します！
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			ではお客様は当然、拘束する鎖を引きちぎろうとします<br>
+			解除判定。ＡＥなし＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			まあ倍差じゃなければ良いからな宣言無し
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			では<br>
+			19+1d6+3+3d6 筋力+感覚型Lv&quot;6&quot; <br>
+			<span class="diceroll">DiceBot : (19+1D6+3+3D6) ＞ 19+6[6]+3+10[2,3,5] ＞ 38</span>
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			ああん？？
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			38+1d6 クリティカルロール <br>
+			<span class="diceroll">DiceBot : (38+1D6) ＞ 38+5[5] ＞ 43</span><br>
+			メリメリメリメリ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			１２＋１ｄ６ <br>
+			<span class="diceroll">DiceBot : (12+1D6) ＞ 12+5[5] ＞ 17</span>
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			ではそのまま鎖を引きちぎって動く<br>
+			choice[箸,二郎] <br>
+			<span class="diceroll">DiceBot : (CHOICE[箸,二郎]) ＞ 二郎</span>
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			宣言無し＠
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			あ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			早かった。まあどっちにしろないけど
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			失敬。忘れてたわ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			ん
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			オリジナル特性【玉虫色の悪臭】<br>
+			〇：このＮＰＣの格闘攻撃およびＡＥ【ホールド】は全体攻撃として扱う。<br>
+			こういうのを搭載していた
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			おう
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			choice[たいあたり,おしつぶす] なのでそもそも…… <br>
+			<span class="diceroll">DiceBot : (CHOICE[たいあたり,おしつぶす]) ＞ たいあたり</span>
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			まあどっちにしろなしで良いわ
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			こうだった。では命中判定
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			これは全体？
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			全体
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			はい
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			11+1d6+3d6 命中+感覚型Lv&quot;6&quot; <br>
+			<span class="diceroll">DiceBot : (11+1D6+3D6) ＞ 11+4[4]+9[6,2,1] ＞ 24</span><br>
+			24+1d6-1d6 クリティカルロール、ファンブルロール <br>
+			<span class="diceroll">DiceBot : (24+1D6-1D6) ＞ 24+3[3]-3[3] ＞ 24</span>
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			６＋４ｄ６ <br>
+			<span class="diceroll">DiceBot : (6+4D6) ＞ 6+13[1,4,5,3] ＞ 19</span>
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			おしい
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			１９－１ｄ６ <br>
+			<span class="diceroll">DiceBot : (19-1D6) ＞ 19-4[4] ＞ 15</span><br>
+			６＋２ｄ６ <br>
+			<span class="diceroll">DiceBot : (6+2D6) ＞ 6+3[2,1] ＞ 9</span><br>
+			はい
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			いやひでぇな本当<br>
+			まぁ元々回避絶望的だったから良いのか<br>
+			7d6+3d6 格闘攻撃+感覚型Lv&quot;6&quot; <br>
+			<span class="diceroll">DiceBot : (7D6+3D6) ＞ 30[5,6,5,4,5,2,3]+7[3,1,3] ＞ 37</span>
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			闘志だ闘志
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			1d6 箸には倍差 <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 3</span><br>
+			1d6どうぞ
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] HP : 8 → 1
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			１ｄ６ <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 6</span><br>
+			おっしゃ
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			お、
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>ハムトニーちゃん</b>
+			だめだ、原始時代わからん
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p5">
+			<b>？？？</b>
+			その質量からは想像できないほどの勢いで突っ込みます。勢い余って壁をぶち抜きます＠<br>
+			エンドフェイズー<br>
+			Ｂなし＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			とくになし
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			２Ｒ目
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			行動値1、ＡＥなし！＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			なし<br>
+			あｄ６<br>
+			あ？<br>
+			１ｄ６ <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 2</span><br>
+			よっしゃ！
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			お、成功
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			【アブラ】と【アブラマシ】のチェインてできます？<br>
+			敵を静止しつつ自分に静止トラップ
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			トラップは攻撃行動……つまり他者を目標とするアクションとの併用が禁止されているのだな
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			そうか
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			よってどっちかだけじゃ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			じゃあストレートに【アブラ】でいいや<br>
+			AEはなし
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] MP : 11 → 8<br>
+			[ 宮田二郎 ] 暴走率 : 97 → 100<br>
+			[ 宮田二郎 ] 因子 : -5 → -4<br>
+			[ 宮田二郎 ] 因子 : -4 → -3
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			タイコウナシ＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			２０＋４ｄ６ <br>
+			<span class="diceroll">DiceBot : (20+4D6) ＞ 20+13[1,4,2,6] ＞ 33</span><br>
+			３３＋１ｄ６－１ｄ６ <br>
+			<span class="diceroll">DiceBot : (33+1D6-1D6) ＞ 33+2[2]-5[5] ＞ 30</span>
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			3+1d6+3d6 回避+感覚型Lv&quot;6&quot; <br>
+			<span class="diceroll">DiceBot : (3+1D6+3D6) ＞ 3+2[2]+14[6,5,3] ＞ 19</span><br>
+			19+1d6 <br>
+			<span class="diceroll">DiceBot : (19+1D6) ＞ 19+1[1] ＞ 20</span><br>
+			当たる
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			おｋ
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			再び鎖で動きを制されます。だが当然大人しくしているわけもないのだ<br>
+			解除判定、ＡＥなし＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			２２と４ｄよね
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			せやな
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			３６として<br>
+			ここで最もいいのは！<br>
+			【画竜点睛】＋【ブースト1】！
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			ほう<br>
+			対抗なし、命中いきます<br>
+			命中？<br>
+			解除判定！<br>
+			19+1d6+3+3d6 筋力+感覚型Lv&quot;6&quot; <br>
+			<span class="diceroll">DiceBot : (19+1D6+3+3D6) ＞ 19+2[2]+3+7[4,2,1] ＞ 31</span><br>
+			おわ、ここでか
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			イケルで
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			31-1d6 <br>
+			<span class="diceroll">DiceBot : (31-1D6) ＞ 31-3[3] ＞ 28</span>
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			20＋４ｄ６ <br>
+			<span class="diceroll">DiceBot : (20+4D6) ＞ 20+15[2,5,2,6] ＞ 35</span><br>
+			３５＋１ｄ６ <br>
+			<span class="diceroll">DiceBot : (35+1D6) ＞ 35+4[4] ＞ 39</span><br>
+			よし<br>
+			これで後は亡我しようが解除で倍差だされなければ行けるはず！
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			力任せに拘束を振りほどこうとするがそれができない！<br>
+			エンドフェイズー
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] MP : 8 → 1<br>
+			[ 宮田二郎 ] 暴走率 : 100 → 107
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			Ｂなし　おまえに解除バーストを撃つ知性があれば……＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			ありません
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 因子 : -3 → -4<br>
+			[ 宮田二郎 ] 因子 : -4 → -2
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			運命の３Ｒ目。このラウンド終了時まで耐えればラーメンが来ます
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			いや、PP回復Bしとこかな
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			うい、どうぞ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			２ｄ６ <br>
+			<span class="diceroll">DiceBot : (2D6) ＞ 6[1,5] ＞ 6</span>
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] MP : 1 → 7<br>
+			[ 宮田二郎 ] 因子 : -2 → -4
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			おｋ<br>
+			イニシアは宣言無し
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			行動値1、ＡＥなし<br>
+			二郎からどうぞー
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			つってもな<br>
+			１ｄ６ <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 3</span><br>
+			はい
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			ではそのまま解除判定＠<br>
+			こっちはＡＥなし＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			110に突っ込むか否か<br>
+			いやコンセ2だな＠
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] MP : 7 → 5<br>
+			[ 宮田二郎 ] 暴走率 : 107 → 109
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			では<br>
+			19+1d6+3+3d6 筋力+感覚型Lv&quot;6&quot; <br>
+			<span class="diceroll">DiceBot : (19+1D6+3+3D6) ＞ 19+1[1]+3+10[1,4,5] ＞ 33</span>
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 因子 : -4 → -5<br>
+			[ 宮田二郎 ] 因子 : -5 → -3
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			33-2d6 <br>
+			<span class="diceroll">DiceBot : (33-2D6) ＞ 33-8[6,2] ＞ 25</span><br>
+			……ふむ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			１２＋３ｄ６ <br>
+			<span class="diceroll">DiceBot : (12+3D6) ＞ 12+6[2,2,2] ＞ 18</span><br>
+			よし！
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			いや……<br>
+			まだだね、【リテイク】
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			うごごご
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			19+1d6+3+3d6 筋力+感覚型Lv&quot;6&quot; <br>
+			<span class="diceroll">DiceBot : (19+1D6+3+3D6) ＞ 19+2[2]+3+10[2,2,6] ＞ 34</span><br>
+			34+1d6 <br>
+			<span class="diceroll">DiceBot : (34+1D6) ＞ 34+6[6] ＞ 40</span><br>
+			40+1d6 <br>
+			<span class="diceroll">DiceBot : (40+1D6) ＞ 40+3[3] ＞ 43</span>
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			嘘だろ承太郎！
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			再び拘束を振りほどき襲い掛かってくる<br>
+			choice[たいあたり,おしつぶす] <br>
+			<span class="diceroll">DiceBot : (CHOICE[たいあたり,おしつぶす]) ＞ たいあたり</span><br>
+			ここでたいあたり出るのか……
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			１１と４ｄね
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			ですな
+		</p>
+	</div>
+
+	<div class="tab t2">
+		<div class="tabtitle">雑談</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			おしつぶす（ホールド）なら事実上セーフだったんだが
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			素でいけばほぼ当たるから110行ったほうがまだ可能性があるな<br>
+			【画竜点睛】＋【ブースト1】
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>ハムトニーちゃん</b>
+			二郎くん…帰ってこれる…？
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p5">
+			<b>？？？</b>
+			回避自体はそこまで難しくないのよね　対抗なしでー<br>
+			11+1d6+3d6 命中+感覚型Lv&quot;6&quot; <br>
+			<span class="diceroll">DiceBot : (11+1D6+3D6) ＞ 11+4[4]+11[5,5,1] ＞ 26</span><br>
+			26-1d6 <br>
+			<span class="diceroll">DiceBot : (26-1D6) ＞ 26-3[3] ＞ 23</span><br>
+			回避判定どうぞ（リテイク構えながら）
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			20＋５ｄ６ <br>
+			<span class="diceroll">DiceBot : (20+5D6) ＞ 20+13[1,2,2,5,3] ＞ 33</span>
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			妖しい
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			３３－１ｄ６ <br>
+			<span class="diceroll">DiceBot : (33-1D6) ＞ 33-1[1] ＞ 32</span><br>
+			まあ、まあ
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p6">
+			<b>見学少女</b>
+			ゆ、夢オチに出来るし！
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p5">
+			<b>？？？</b>
+			踏ん張ったな……リテイク<br>
+			11+1d6+3d6 命中+感覚型Lv&quot;6&quot; <br>
+			<span class="diceroll">DiceBot : (11+1D6+3D6) ＞ 11+1[1]+15[4,6,5] ＞ 27</span>
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] MP : 5 → 0
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			うお<br>
+			27-1d6 ファンブルから <br>
+			<span class="diceroll">DiceBot : (27-1D6) ＞ 27-2[2] ＞ 25</span>
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 因子 : -3 → -4<br>
+			[ 宮田二郎 ] 因子 : -4 → -2<br>
+			[ 宮田二郎 ] 因子 : -2 → -1
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			25+1d6 クリティカルしなければセーフ <br>
+			<span class="diceroll">DiceBot : (25+1D6) ＞ 25+6[6] ＞ 31</span><br>
+			あっ<br>
+			31+1d6 <br>
+			<span class="diceroll">DiceBot : (31+1D6) ＞ 31+4[4] ＞ 35</span>
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			どんだけー
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			無慈悲<br>
+			7d6+3d6 格闘攻撃+感覚型Lv&quot;6&quot; <br>
+			<span class="diceroll">DiceBot : (7D6+3D6) ＞ 26[3,6,2,2,2,6,5]+14[4,5,5] ＞ 40</span>
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 暴走率 : 109 → 115
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			全体的に運が悪すぎる
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 暴走率 : 115 → 114<br>
+			[ 宮田二郎 ] 暴走率 : 114 → 115
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			因子に余裕があるなら復活Ｂしても良いが……
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			まあ失敗談だからな
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			どっちかというと復活後の臨界で死なないかが重要だなこれ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			とりあえず復活
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 因子 : -1 → -5
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			はいな。即死復活なので4d消費だ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			２ｄ６ <br>
+			<span class="diceroll">DiceBot : (2D6) ＞ 7[1,6] ＞ 7</span>
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] HP : 1 → 8<br>
+			[ 宮田二郎 ] HP : 8 → 7
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			１ｄ６ <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 4</span><br>
+			セーフ！！
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			わお
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			２ｄ６ <br>
+			<span class="diceroll">DiceBot : (2D6) ＞ 9[6,3] ＞ 9</span>
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] HP : 7 → 8<br>
+			[ 宮田二郎 ] MP : 0 → 9
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ではお客様が派手に暴れまわったせいで店は派手に穴が……というかもう半壊状態ですが
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「ぜー……ぜー……　流石にキッツいぜ……こいつはよぉ……」＠
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			――Tekeli-li ! Tekeli-li !
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			そんなあなたたちの都合も知らず、その大口であなたを平らげようとお客様は迫ってきます。あわやこれまで、と思われましたが……
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「――二郎！　でかした」
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>ハムトニーちゃん</b>
+			大将！！！！
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p4">
+			<b>大将</b>
+			「そして何よりお客さん、待たせちまったな……！」
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「師匠ォォォ……<br>
+			」＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			あらぶる”お客様”にも動じず、自信に満ちた足取りで歩み寄っていきます。<br>
+			「こいつが当店の裏の中の裏メニュー……」<br>
+			「ヘイッ！　【ごつ盛り全部乗せスペシャル】お待ちィィィィーーーーッ！」
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「へ……へへ……」<br>
+			「いっぺんやってみたかったんだよ……『あちらのお客様からです』ってな……　ま、今は……店員だけどよ……」と言ってへたり込みます＠
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			常軌を逸したサイズのどんぶりにありとあらゆる具が山のようにトッピングされたラーメンとライスと共に提供されます
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>ハムトニーちゃん</b>
+			感動的だなぁ
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p5">
+			<b>？？？</b>
+			　停止した&quot;お客様&quot;は、大将が作った渾身の一杯を目玉という目玉で見つめている。<br>
+			　果たして、お客様の答えは……
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			【幸運 - 25】でどうぞ＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			亡我……
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			……<br>
+			まぁ発動Ｂすれば……
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			ですよね<br>
+			つうかスペシャルメニューなんだから補正くださいよぉぉぉ～～～っ
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			今回は完成度関係ないからな……<br>
+			まぁでも+3
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			３……<br>
+			まあ期待値以上なら、か<br>
+			発動Bして
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 因子 : -5 → -6
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			１８＋３ｄ６ <br>
+			<span class="diceroll">DiceBot : (18+3D6) ＞ 18+11[6,3,2] ＞ 29</span><br>
+			２９＋１ｄ６ <br>
+			<span class="diceroll">DiceBot : (29+1D6) ＞ 29+1[1] ＞ 30</span><br>
+			あい
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			はい<br>
+			　では……お客様は、やはりこれまでと同じようにラーメンをまた器ごと口の中へ放り込んでしまうだろう。<br>
+			　一杯目とは比較にならぬサイズであったが、お客様の体躯からすれば誤差であったようだ。<br>
+			　飲み下すように身体を波打つと、彼は徐に大口を開く。<br>
+			　そして。
+		</p>
+		<p class="player p5">
+			<b>？？？</b>
+			――――――<br>
+			――――――████████████████████████<br>
+			█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			　放たれたのは、獣の咆哮か改造車のエンジンのような轟音、そして鼻の曲がるという表現すら生ぬるい刺激臭。<br>
+			　あまりの悪臭に、あなたは思考さえ数瞬停止してしまうかもしれない。<br>
+			　それが“お客様”のゲップだと理解する頃には――カウンター席はもぬけの殻だった。<br>
+			　……テーブルの上には、”お客様”の体液と思しき粘液の付着した、分厚い札束が置いてあった。＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「…………」　放心＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「……はぁ」<br>
+			「いや、面目ねぇ。結局、メチャメチャにされちまいました」＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「………………」<br>
+			「え？　あ、あぁ……いや……良いってことよ。それよりお前、怪我ねぇのか？」＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「体中ガッタガタでさぁ。でもまぁ、何とか生きてます」＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「そうか……休日出勤させた挙句悪かったな……」<br>
+			懐から診察代を手渡しつつ<br>
+			「もう上がって良いぞ。後片づけは俺がやっとくから、病院でも行ってこい……」＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「いやいや、こっちこそ変に刺激したせいで怒らせっちまって……」<br>
+			「病院、も大いに結構なんですがね。<br>
+			　もっと効くもんがあるんで、一つ我がまま言っていいスか」＠
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「あぁ？　なんだ、今は大して持ち合わせが……」＠
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			「とんこつ大盛り、ヤサイニンニクマシカタメでお願いします」＠RPEND
+		</p>
+		<p class="player p4">
+			<b>大将</b>
+			「…………」<br>
+			「……ったく、バカな野郎だ。適当に腰かけて待ってろ」　＠rpend
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			以上かな？
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			はい！
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			では【■■■■■■■■■■■■■■■■■■■■■■■■■■■】もとい<br>
+			【バイトのヘルプに駆け付けたら客席に玉虫色の塊が座ってた】、これにて終了となります<br>
+			乙した乙したｗｗｗｗｗｗ
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			お疲れ様でした！<br>
+			ここからが本当の地獄だ……
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 因子 : -6 → -5
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ではクリア処理になります
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 因子 : -5 → -6
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			1d6  <br>
+			<span class="diceroll">DiceBot : (1D6) ＞ 5</span><br>
+			ふむ<br>
+			10-1d6 暴発とその後の対応鑑みて <br>
+			<span class="diceroll">DiceBot : (10-1D6) ＞ 10-6[6] ＞ 4</span><br>
+			2d6 <br>
+			<span class="diceroll">DiceBot : (2D6) ＞ 4[2,2] ＞ 4</span><br>
+			9+5+4+4
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p6">
+			<b>見学少女</b>
+			おつ！！
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			なんなん
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			〇またのご来店をお待ちしております：【お客様】からお代を戴いた。⇒+2d<br>
+			×実は味とかよくわかってない（探索賞）：調理の達成値が累計で【４０】を越えた。⇒+1d<br>
+			〇お前に喰わせるラーメンは無ェ（バトル賞）：【お客様】に攻撃した。⇒+1d<br>
+			×お客様は神様です（ＲＰ賞）：【店員レベル】が【４０】を越えた。⇒+1d<br>
+			×これが本当のラーメンだ！（ＭＶＰ）：【店長】を調理した。⇒+2d<br>
+			〇これは気持ちの良い店員：【店員レベル】５点につき１Ｄ⇒22点、+4d<br>
+			×もしかして「そちら側」の人ですか？：全ての衝動チェックに成功した。⇒+1d<br>
+			×それができるから苦労もしない：【お客様】を倒した。⇒+2d<br>
+			7dかな
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			店長を調理した？？？
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			店長を調理した
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			まあええわ
+		</p>
+		<p class="player p2">
+			<b>system</b>
+			[ 宮田二郎 ] 因子 : -6 → 1
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p6">
+			<b>見学少女</b>
+			角煮はおめえだ！をする(店長を調理)
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			とりあえず生還で
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			失敗談使用ね、ＯＫ<br>
+			カルマはどうしますか<br>
+			夢オチにならないの初か
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			そうなんだ
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p3">
+			<b>ハムトニーちゃん</b>
+			店長を食うな<br>
+			食べられちゃったので…
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			軽く総評としては、ダイス運が酷い！！！あまりにもひどい！！！！でもそれっていつものさぼさん！！！！
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			【愚者】かな……オルレも持ってるし
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ほいさ<br>
+			失敗談だからこれで全部か！　速い！<br>
+			ひとまずお疲れさまでした<br>
+			あと１０分で来年
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			いやー我ながらひどかったな
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			感想等あればどうぞ　ネタバレ部屋には招待しておきました
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			クリア条件は何なんですか？？？
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			（総評続き）自分が何とかするのではなくあくまで大将にラーメンを作ってもらうというスタンスが新鮮で良し！！！！！　気付けまでの判断もスピーディで良かった<br>
+			「お客様からお代をもらう」、です<br>
+			そしてお客様が帰る条件は「２回料理を提供する」
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			なるほど<br>
+			普通にお代わり出しときゃそれで終わったのに……
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			本来ならあの後ショゴスが替え玉と角煮トッピングの食券を出してくるからそれに対処すれば終わりだった
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			二郎は自分はまだまだだという自覚があるので、大事な客ならなおさら店長にやってもらおうとするね<br>
+			角煮は多分家にあるから必要になるなら「急いで取ってきます！」ってやるつもりだった
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			ハムトニーちゃんは同じこと考えたけど大将を気付けすることがなかったから「今日は提供できません、ごめんなさいね～」って言ってお金払い戻して帰ってもらおうとしてた<br>
+			そのまま大将ごと喰われた
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			草<br>
+			しかし普通に狂人だなこいつ。自PCの中でもトップクラスに狂っている
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			「ミュータントだろうがなんだろうがカウンターに座ったら客だろうがラーメン出したらんかい！！！！！！！」
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			ちなみにCV若本です
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			！？
+		</p>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			いや元ネタグラブルのキャラなんだけどさ……<br>
+			ただのRキャラでレアでも強くもないのにCV若本なんだよ……<br>
+			狂ってるよね
+		</p>
+	</div>
+
+	<div class="tab t3">
+		<div class="tabtitle">見学席</div>
+		<p class="player p6">
+			<b>見学少女</b>
+			グラブルの中でも普通に好きなキャラです…
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">メイン</div>
+		<p class="player p1">
+			<b>宮田二郎</b>
+			ではお疲れさまでした
+		</p>
+		<p class="player p0">
+			<b>ＧＭ</b>
+			おつかれさまでしたー
+		</p>
+	</div>
+</body>
+</html>

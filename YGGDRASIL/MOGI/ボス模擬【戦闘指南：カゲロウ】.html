@@ -1,0 +1,1967 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='ja'>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <title>ボス模擬【戦闘指南：カゲロウ】</title>
+<script type="text/javascript">
+<!--
+function ShowHide(chkElm){
+	chkStat = chkElm.checked;
+	target = document.getElementsByClassName(chkElm.value);
+	for( ii=0; ii<target.length; ii++ ){
+		classNames = target[ii].className.split(" ");
+		chkStat = chkElm.checked;
+		for( jj=0; jj<classNames.length; jj++ ){
+			elm = document.getElementById(classNames[jj]);
+			if( !elm  ){
+				continue;
+			}
+			chkStat &= elm.checked;
+		}
+		stat = chkStat ? "" : "none";
+		target[ii].style.display = stat;
+	}
+}
+-->
+</script>
+	<style>
+	body{ margin:0; padding:0 20px; background:#fff;}
+	table {
+		border-collapse: collapse;
+	}
+	td {
+		border: none;
+		padding: 4px;
+	}
+	#main{ margin-left:210px; }
+	#sub{
+		background:#fff;
+		font-size:85%;
+		width:200px; position:fixed; top:0; left:10px;
+		border-radius:0 0 8px 8px; border:1px solid #999; }
+	#subTitle{
+		background:#999; font-weight:bold; color:#fff; text-align:center;
+	}
+	#colFilter{ background:#fff; position:fixed; width:100%;}
+	#filter{ padding:5px; }
+	</style>
+	</head>
+<body><table border=0 id="main">
+<tr id="colFilter">
+<td nowrap width="100"><label><input type="checkbox" id="tab0" value="tab0" onclick="ShowHide(this)" checked>[メイン]</label></td>
+<td nowrap width="100"><label><input type="checkbox" id="tab1" value="tab1" onclick="ShowHide(this)" checked>[会場]</label></td>
+<td nowrap width="100"><label><input type="checkbox" id="tab2" value="tab2" onclick="ShowHide(this)" checked>[雑談]</label></td>
+<td nowrap width="100"><label><input type="checkbox" id="tab3" value="tab3" onclick="ShowHide(this)" checked>[情報メモ]</label></td>
+<td nowrap width="100"><label><input type="checkbox" id="tab4" value="tab4" onclick="ShowHide(this)" checked>[見学席]</label></td>
+<td nowrap><label><input type="checkbox" id="tab5" value="tab5" onclick="ShowHide(this)" checked>[その他]</label></td>
+</tr>
+<tr>
+<td width="100"><BR></td><td width="100"><BR></td><td width="100"><BR></td><td width="100"><BR></td><td width="100"><BR></td><td><BR></td></tr>
+
+
+<tr class="tab0 char1"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>たいたい竹流(torgtaitai)</b>：どどんとふへようこそ！(Welcome to DodontoF !)</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>たいたい竹流(torgtaitai)</b>：操作方法が分からなくなったら、メニューの「ヘルプ」＝＞「マニュアル」を参照してみてください。</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#cc0066'><b>どどんとふ</b>：＝＝＝＝＝＝＝　プレイルーム　【　No.　1　】　へようこそ！　＝＝＝＝＝＝＝</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#00aa00'><b>どどんとふ</b>：「ＧＭ」がログインしました。</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#00aa00'><b>どどんとふ</b>：全セーブデータ読み込みに成功しました。</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#00aa00'><b>どどんとふ</b>：「ＧＭ」がログインしました。</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#00aa00'><b>どどんとふ</b>：「0」がログインしました。</font></br></td></tr>
+
+<tr class="tab3 char2"><td colspan="6" style="font-size:100%;background:#fff7ef;"><font color='#000000'><b>ＧＭ</b>：<br>
+【タイトル】戦闘指南：カゲロウ<br>
+【ＨＯ１】<br>
+　ある民家で、人質を取った立て籠もり事件が起こった。<br>
+　犯人は異能至上主義団体の者で、「少しでもＹＤＦやテセウスの気配があれば殺す！」という。<br>
+　……だが、ＹＤＦやテセウスが許してもこのメタルブレードが赦すかな！<br>
+　というわけで、単身になるがあなたは人質の救出に向かおうと思う。<br>
+　<br>
+【ＨＯ２】<br>
+　事件発生時、あなたはたまたま近くにいた。<br>
+　それは良いのだが、民家の中へ少女が１人、入り込むのをあなたは見てしまった。<br>
+　成程気付かれてはいないようだが、いくら何でも無謀だ。<br>
+　見て見ぬふりするわけにもいかないので、流儀ではないがあなたは事件へ首を突っ込むことにする。<br>
+<br>
+【適正人数】２人<br>
+【参加資格】ＰＬに【カゲロウ】を含むこと<br>
+【雰囲気】コミカル：シリアス＝６：４<br>
+【深刻度】ライト：ヘヴィ＝７：３<br>
+<br>
+【非推奨】制限系、無効化系：系統無効、無効化武装、ブレイク<br>
+【禁止】なし<br>
+【初期暴走】６Ｄ６以上で任意<br>
+【臨戦ラウンド】無制限（チャージカウント及びＡＥ【行動放棄】は禁止）<br>
+【持ち越し要素】全適用</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#00aa00'><b>どどんとふ</b>：「アマト」がログインしました。</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#00aa00'><b>どどんとふ</b>：「ゴミ箱」がログインしました。</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#00aa00'><b>どどんとふ</b>：「ヒナタ」がログインしました。</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：condと暴走チェック(今回は最低6d6)でどうぞ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#66cc00'><b>元加 枠</b>：cond<br>
+Yugudora : (COND) → HP3[2,1] 、 PP12[6,6]</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#669900'><b>元加 枠</b>：もうちょい暗くしよ　…しかし、ちょっと悩ましいな</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#669900'><b>元加 枠</b>：ここまで低いと流石に自縛ワンチャンで死が見えてくる…んー</font></br></td></tr>
+
+<tr class="tab4 char4"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#660000'><b>知り合いのお兄さん</b>：がんばるのですよ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#669900'><b>元加 枠</b>：全ては何とかなるやろの精神！これで</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#669900'><b>元加 枠</b>：元加 枠のHPを3回復（HP：8-&gt;11）</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#669900'><b>元加 枠</b>：元加 枠のPPが12増加（PP：20-&gt;32）</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#669900'><b>元加 枠</b>：元加 枠の暴走率が12増加（暴走率：17-&gt;29）</font></br></td></tr>
+
+<tr class="tab4 char5"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#666699'><b>ローブの男</b>：がんばってねえ</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#00aa00'><b>どどんとふ</b>：「ななしさんん」がログインしました。</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#669900'><b>元加 枠</b>：で、そうだな…7d6で</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#669900'><b>元加 枠</b>：7d6<br>
+Yugudora : (7D6) → 26[1,5,6,3,5,3,3] → 26</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#669900'><b>元加 枠</b>：元加 枠の暴走率が26増加（暴走率：29-&gt;55）</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#669900'><b>元加 枠</b>：ra50<br>
+Yugudora : (RA50) → [3] 高揚【1D6暴走率上昇】 ： 6[6] ％</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#669900'><b>元加 枠</b>：ガンガン吹っ飛んでいくな</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#669900'><b>元加 枠</b>：元加 枠の暴走率が6増加（暴走率：55-&gt;61）</font></br></td></tr>
+
+<tr class="tab0 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>ＧＭ</b>：【全ての人の魂の詩】</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：すいませェん　ゲームしてました</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：ヨカッタヨカッタ</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#669900'><b>元加 枠</b>：一方その頃暴走がえらいことになってます</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#669900'><b>元加 枠</b>：まあこうなると逆に戦闘前に７０踏みやすいから楽だな</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：cond<br>
+Yugudora : (COND) → HP9[3,6] 、 PP6[3,3]</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：メタっちと関わりのある名前が人形しかない</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：これで！</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#669900'><b>元加 枠</b>：そう、ra50や70が怖い人のなら戦闘前に処理してしまえば良いのだ　戦闘中に発生するよりは断然安心だからね</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>鋼音メタ</b>：【コンディションロール】鋼音メタ：HP+9（HP：6-&gt;15）</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>鋼音メタ</b>：【コンディションロール】鋼音メタ：PP+6（PP：28-&gt;34）</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>鋼音メタ</b>：【コンディションロール】鋼音メタ：暴走率+6（暴走率：24-&gt;30）</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：メタっちと関わったことのないPL、僕だけか</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：暴走チェック7D6で…</font></br></td></tr>
+
+<tr class="tab4 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#669900'><b>元加 枠</b>：ウルフってめったんと同卓したこと無くね？</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：7D6<br>
+Yugudora : (7D6) → 22[1,5,6,5,1,1,3] → 22</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>鋼音メタ</b>：鋼音メタの暴走率が22増加（暴走率：30-&gt;52）</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：ra50<br>
+Yugudora : (RA50) → [3] 高揚【1D6暴走率上昇】 ： 5[5] ％</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>鋼音メタ</b>：鋼音メタの暴走率が5増加（暴走率：52-&gt;57）</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#669900'><b>元加 枠</b>：お互いテンションたけーなオイ</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：テンション上がってきたな</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：私はづけさんともカゲさんとも同席したことないよ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#669900'><b>元加 枠</b>：すなわちスペックが１増えているということ…メタルストームに威力を加えたり命中を加えたりできるんだな</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：別にクリーチャー持ってないなら戦闘中に処理か、あるいは準備Rで色々やって暴走上げてもそこまで問題はない気がするけどな</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：GMとしては何度も関わってるから…</font></br></td></tr>
+
+<tr class="tab4 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#669900'><b>元加 枠</b>：大きな問題は起きづらいけど人数が少なければ少ないほど一つの暴走ロールで致命傷になるから…</font></br></td></tr>
+
+<tr class="tab4 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#339900'><b>元加 枠</b>：そしてもうちょっと見やすくしなくてはならんと思った</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：お待たせしました　枠くんのシートがこんがらがってた</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：odsじゃなくてxlsとかそれに準ずる拡張子にしていただけると主に私が助かります</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：odsにしたせいで……すまんやで</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：というわけでぼちぼち初めて生きたいと思います、よろしくお願いします</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：いっぱい学んでいってね！！！！！</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：エラーになってセーブぶっ飛んだ、絶対許さんからなって気持ちで挑みます</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：よろしくお願いしますしますしますしますします</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：よろしくお願いします！！</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：なんでodsにしたんだっけな…確か貼り付け用シートをするにはこっちのが良いかって作ってそのままだった気がする</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：さて、始める前にトレーラーを確認しておきます。主に枠くんです</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：枠くんは「ノーマル派の政治家から依頼を受け、異能主義団体の内情を探ることになりました」みたいな感じになります　よろしいでしょうか</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：はい</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>ＧＭ</b>：【Beneth the Mask】</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：では個別に処理していきましょう。まずめったん</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：はーい</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：枠くんもでいいや</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：えっ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：へい</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：あなたたち２人はなんやかんやとお昼時を過ごしていると思います。めったんについては恐らく学校は休日の想定になる</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：近くには住宅街がある感じの通りです。何でも良いんでぶらぶらすると良いと思います＠</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：いや……住宅街じゃないな</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：工場地帯があります！！！！！！！！！！！！！！！！＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：休日なら友達と遊んでるかなァ</font></br></td></tr>
+
+<tr class="tab0 char1"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#00aa00'><b>どどんとふ</b>：「プーレ・フーン・ポッ」がログインしました。</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：意外と姉卓ででてきた通りかもしれん　ヴァニラの店があるところ</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：友達とスタバ的なとこでお茶してていいですか！！＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「さて…この辺りが怪しいって情報はあるけど…」キョロキョロと辺りの様子を伺い、異能主義団体に繋がりそうな人とかを探してます＠</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：はい</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：ああ、あの美味しい夏ミカンアイスを売ってたところの…</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：ぶらぶらって書いてあったわ！！！！！！</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：美味しかったね！！</font></br></td></tr>
+
+<tr class="tab4 char8"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#ff3399'><b>喋る鶏肉</b>：人数多かったら、残りの人でカバーできたりしますからね…</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：もっと甘いタイプが良かった（本音）</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：じゃあなんか外が騒がしいです。そして人がある方角へ集まっているかのように思われます。</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：会計済ませて出てくるとこです(二転三転)</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：工場の方角ですね＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：（お、人が集まって行ってる…？…野次馬する側って警戒心薄れやすいし、野次馬側に目的の人物が居ると良いなぁ）<br>
+と集まっていく人の顔等を軽く見ながら自分もそっちに向かいます＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「なんだろうあれ、ちょっと見てくるよ」友達にそう言って人混みの方に行きます＠</font></br></td></tr>
+
+<tr class="tab1 char9"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>人だかり</b>：「…………これ、マジのやつ？　ドッキリじゃなくて？」</font></br></td></tr>
+
+<tr class="tab1 char9"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>人だかり</b>：「ヤバいだろ、警察呼んだら殺すって……」</font></br></td></tr>
+
+<tr class="tab1 char9"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>人だかり</b>：「スマホの充電の充電切れてる～。せっかく面白そうなのに……」</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：人だかりをかき分けながらあなたたちは進むでしょう。</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：（違う…違う……んー、違う………外れかな？）＠</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：えへへすいませんお待たせしました</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：お帰り</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：はい、工場の前にはですね。一人のミュータントがいました。拡声器持ってます。</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：私を待ってんのかと思った</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>ミュータント</b>：『――エヘン、エヘン』</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：よう考えたらこの事情で参加してると敵の人質とか別にどうでもいいな…</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：それとウルフは大丈夫か</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>ミュータント</b>：『要求を繰り返す！　我ら【ツークツワンク】は此処に、能力者の確固たる団結を促すものである！』</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>ミュータント</b>：『我々は能力者は先の大戦において敗れた、然しそれは無能力者｛マイナー｝共の傲岸不遜たる支配に膝を突いたことを意味しない！』</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>ミュータント</b>：『能力者｛メジャー｝の諸君、眠れる獅子は今覚醒の時を迎える！　武器を持て、新世界の創造は鉄と血によってのみ成されるのだ！』</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>ミュータント</b>：『穢れた無能力者｛マイナー｝共ッ、我々の要求はただ一つであるッ。能力者｛メジャー｝躍進のための偉大なる第一歩、その足掛かり、資金を我々は要求する』</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>ミュータント</b>：『現金５０００万クレジット、現金であるッ。それ以外は認めない。それを我々に奉ずるというならば、今この工場内で確保しているノーマルの婦人……これの命は助け、解放しようではないか！』</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>ミュータント</b>：『要求が受け入れられない場合は――婦人の生命は無いものと思え！』＠</font></br></td></tr>
+
+<tr class="tab0 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>ＧＭ</b>：【不穏】</font></br></td></tr>
+
+<tr class="tab4 char4"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#660000'><b>知り合いのお兄さん</b>：おやおや</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：たぶん２２時ぐらいまでレスポンス遅くなります、すいません</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：5000兆円ほしい！！！！</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「お…そっちが大当たりかぁ」声と姿を見て笑みを浮かべます<br>
+（さて…手早く話が終わりそうで何よりだ、今ここから撃って戦闘に入るなら、仲間が居る場合各個撃破が出来るけど…さて）＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：（何言ってるのか全然わかんない、けど見過ごすことは出来ない…！どこか侵入できそうなところは…）＠</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：元加さんはそう思うけどＨＯ見る限りめったんが隠密行動で入るだろうからそれ見掛けるまで殴りかかりはしません</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：裏口が空いてます。表に見張りが立ってる様子もないので人だかりに紛れて裏口まで行けそうです＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：（開いてる！ほんとはいけないけど…！）裏口からこっそりします＠</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>ミュータント</b>：『我々は新人類を手動する秩序ある組織である、だが愚断に対しては断固たる姿勢で臨む！』</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>ミュータント</b>：『ＹＤＦやオルレアンの招集は許されざるものだと認識していただこうッ、もしそのような気配があれば我々は即座に人質を殺す！』</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：視界の端に、明らかに別方向に移動してる人影（判定）が見え、ちらりとそっちに視線を向けると、どこかで見覚えのある姿の少女を見かけます<br>
+（あれ、あの子………んー、目的は一致しそうだし、人数が多い方がまだマシかな…？）とめったんに後ろから着いていきます＠</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：めったん枠くんのことなんて呼んでたっけ…</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：見てこよう</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>ミュータント</b>：『既にメールで伝達したが、我々の要求を呑む場合、あるいは何か通信を望む場合は、全て端末でのやり取りとする！　直接は認めない……』</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：元加さんって呼んでるのは「」外で…さて</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：とか何とか言ってますが、あなたたちはなんだかんだ潜入に成功します。</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：やっぱり元加さんって呼ばれてた</font></br></td></tr>
+
+<tr class="tab0 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>ＧＭ</b>：【疑惑】</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：さて、中には似たようなミュータントたちが大挙していますが……ちょっと様子がおかしい。</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：確認ありがとう！！</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：えーとリザードマンとシュリンカー…だっけ？なんだっけな……</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：おかしいというのは、みんな一斉に整列していて……ある人物のお話を聞いているのです。人間の姿をした女性です。</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：シュプリンガー</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：それだ！！</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：そしてこの女性以外に、表のトカゲが言ってたような「人質」の姿が見当たりません。</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「諸君……」</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「“我が親愛なる”同志諸君！」</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：エッガーはたぶんりゅうきへいかな…</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：そっちは知らないな…</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「計画は順調だ、愚かなる野次馬、ＹＤＦ、オルレアンの豚共はこの私を“哀れな人質”だと認識している」</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：絶対普通の人質じゃないんだろうなって思ってた</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「身代金引き渡しの連絡が来るのも時間の問題といえるだろう！」</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：普通の人質でも問題なかったので何も考えてなかった</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：…………</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「この計画は我らの崇高なる目的へ大きな飛躍となるだろう。私は引き渡された後、人質として油断を誘い……そのままターゲットを抹殺する！」</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：ＹＤＦやオルレアンの連中に集まるなって言ってるなら誰がどうやってどこから金を持ってくるんだ…？</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「かくして、穢れた怨敵を討つと共に我々は手にするのだ。新世界創造のための金を！」</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：そこいらの大金持ち？</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：そこいらの大金持ちさんだってそんなどこの誰だか知らん女一人のために金出すかって言われると…</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「劣等種に膺懲の一撃を、その瞬間はあと僅かである！　それまで一命に変えて任務を遂行せよ！」</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ミュータント</b>：「万歳｛メイト｝！」</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ミュータント</b>：「万歳｛メイト｝！」</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ミュータント</b>：「万歳｛メイト｝！」</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：そんな感じです＠</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：絶対出さないと思う</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：膺懲なんて初めて聞いた言葉！！！</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：やってて気づいたから、「コッソリ呼ぶな」の意だと思っといてください</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：はい</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：こまけえこたあいいんだよ！！</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：脅迫状とかは既に送り付けてあって連絡や金引き渡す段取りについては既に決めてあるんだと思います</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：それから外れた行動取ったら殺すと</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：ごめん！すげえどうでもいい事ではあったんだけどつい…つい関西人のツッコミたがりが……！</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：私も突っ込んでたし……</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：第一、人質として油断を誘うってこいつら誰を殺すつもりなんだ？？？</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「……いやぁ、人質が居ないなら、話はシンプルで助かるね、メタちゃん」小声で後ろから話しかけます＠</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：う、うーん……</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：こう…脅迫状送り付けたそこいらの金持ちとか…？</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：ＹＤＦの署長に個人的に用があるとかかな</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：仲間がやられたお礼参りとか……</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：革命のためなんだからもっと理性的に動け！！！</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：どう考えても悪い方向にしか進まなくて草でしかない</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「ひゃっ！？あれ元加さん…！？　う、うん…人質じゃなかったみたいだね」＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「僕、あの辺の連中に用があるんだよね……君も用があるのなら、一緒に戦わない？」＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「用…はないんですけど、いてもたってもいられなくて…うん、一緒に戦いましょう！」＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：現在位置関係ってどうなってます？不意撃てないかな的な意味で</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：奇襲、できないこともないけど難しそうですね　数がバカみたいに多いもんで</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：とても良く分かりました！</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：あと位置も良くない。別に高所取ったりしてるわけじゃなくて普通の裏口だから</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：つまりはうるせえ良いからとっとと対面で位置についてよーい殴れと言うことだなうん</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：ニッコリ</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：まぁ出てくる時に何人か蹴散らしていいですよエッガーとペロだけ残ってりゃ良いから</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：真ん中のミュータントちゃんは！？</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：こいつは交戦能力ないし……</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：模擬で探索めいた前置きがあるのアレだな、ハムベルト先生とネグマくんで行ったメタルギアライジングの模擬思い出すな</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：じゃあしょうがないな…</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：エッガーとペロどっちもDQ5の仲間になったシュプリンガーだったわ(ぐぐった)</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：懐かＣ</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：リメイクして今度やろうかしら</font></br></td></tr>
+
+<tr class="tab4 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#ff0000'><b>鋼音メタ</b>：ライジング！？</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「…ＯＫ、じゃあ……メタちゃん、今から僕が切り込むから後ろから援護してくれないかな？」木刀を荷物から取り出します＠</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：トイレ</font></br></td></tr>
+
+<tr class="tab4 char5"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#666699'><b>ローブの男</b>：シュプリンガー仲間にしたことねえなあ…</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：ソロだとキツいかなって感じだから２人用のボスにしてたな……<br>
+卓のボスにしても良いし、どうするか</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「わかった！」覚悟キメました＠</font></br></td></tr>
+
+<tr class="tab4 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#ff0000'><b>鋼音メタ</b>：シュプリンガーはスルーしがちだよね、なんか</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：戻り</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「……３、２、１……！」<br>
+バッと物陰から飛び出し、木刀の判定を急激に伸ばしながら近くのミュータントを薙ぎ払います＠</font></br></td></tr>
+
+<tr class="tab0 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>ＧＭ</b>：【Tokyo Emergency】</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ミュータント</b>：「ぎぃやああああああ！」</font></br></td></tr>
+
+<tr class="tab4 char5"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#666699'><b>ローブの男</b>：DQ５はいろんなの仲間にしても使うのはキラパンとスライムナイトってイメージ</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ミュータント</b>：「な、何者だ……グワーッ！」</font></br></td></tr>
+
+<tr class="tab4 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#339900'><b>元加 枠</b>：５、結局クリアしてねえなぁ…</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：後ろからメタブレ投げて援護します＠</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「ッ……!?　し、侵入者か！　おのれ、無能力者｛マイナー｝の屑共め！」</font></br></td></tr>
+
+<tr class="tab4 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#ff0000'><b>鋼音メタ</b>：ピエールゴレムスで最後までいけるでなあ</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「劣悪種の分際で、狡猾にして卑劣極まりないその所業！　神が赦すと思うな！」</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ミュータント</b>：「し、指揮官殿、ここは退却をッ……ぐうううッ……」</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「ぐ……」</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「ならぬ、ならぬ、ならぬ！　闘争にあるのは勝利か、さもなくば死だ！」</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「nextFrame！『一閃突き』！」木刀を槍のように構え、そこいらのミュータントを貫いたりします<br>
+「アッハッハ、これ見てノーマルだっていうのはちょっと画面見えてるか怪しいところあるよね！」＠</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「果敢なる同士諸君！　恐るるには足りない、彼奴らは２人、劣悪に魂を売り渡した敗北主義者共である！」</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「勇猛にして一騎当千たる諸君らが敗北する道理はない、殲滅だ！　その魂と血、せめてもの慈悲として主｛グランドマスター｝の身許へ送ってやるが良い！」</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ミュータント</b>：「万歳｛メイト｝！」</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ミュータント</b>：「万歳｛メイト｝！」</font></br></td></tr>
+
+<tr class="tab1 char10"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ミュータント</b>：「万歳｛メイト｝！」</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：そういうわけでミュータントたちが戦列を組んであなたたちへ詰め寄ります＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：血が付いた木刀を肩に担ぎつつ<br>
+「君たちにもこうする理由があるんだろうけどさ、君たちにとっては僕の理由はどうでも良いよね？……同じことだよ、君たちがどんな理由を持ってようがこっちには関係ない、僕の「理由」を押し通させてもらうよ！」と更に戦う姿勢を崩しません＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「何言ってるのかさっぱりわかんないけどあなた達が悪い事をしようとするならあたしが止める！！」出てきて元加さんと並びます＠</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「勝利万歳、栄光を我らが掌に！」</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「全隊員、進軍ッ――！」</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：雄叫びと共にミュータントの群れがあなたたちへ襲い掛かる＠rpend</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：と、いうわけで。臨戦ラウンドは無制限です。強度感知は【蓄積 - 25】。両方の情報が出ます</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：特にいう事もないんでRPENDです</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「ちょっとばかし久しぶりだね…『nextFrame』！存分に暴れさせてもらうよ！」＠rpend</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：感知成功で全員に因子あげるぅ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：やったぁ</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：はーい</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：そうだなー、めったんがやるかどうかはお任せで、俺はとりあえず一回はするよ</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：めったんの目の良さは6と5です</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：察知８と観察眼＋６技があります　なお観察眼５なので察知コンセ３と変わりません</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：1回はやるよ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：おｋ　じゃあ強度感知　観察眼５【判定の境界】で＋６します＠</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠のPPが4減少（PP：32-&gt;28）</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：どうぞ</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠の暴走率が4増加（暴走率：61-&gt;65）</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：cf5+6+1d6<br>
+Yugudora : (CF5+6+1D6) → 計【 15 】 ： 5 +6 +4[4]</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：じゃあこちらも強度感知、観察眼6コンセ3＠</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：どうぞ</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタのPPが4減少（PP：34-&gt;30）</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタの暴走率が4増加（暴走率：57-&gt;61）</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：cf6+3+1D6 観察眼<br>
+Yugudora : (CF6+3+1D6) → 計【 12 】 ： 6 +3 +3[3]</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：では因子どうぞ</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠の因子Dが1増加（因子D：5-&gt;6）</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタの因子Dが1増加（因子D：5-&gt;6）</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：モラウー</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：３点足りないかと思ってたら２５目標だったから足りてたわ</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：はい</font></br></td></tr>
+
+<tr class="tab3 char2"><td colspan="6" style="font-size:100%;background:#fff7ef;"><font color='#000000'><b>感知</b>：<br>
+【 エッガー＆ペロ 】<br>
+ 　筋13/耐2/知2/精6/器12/敏10/運2　cond(HP+12/PP+12)<br>
+<br>
+■ステータス<br>
+　HP：40　PP：30　暴走率：70%（覚醒型）<br>
+　防御：1　抵抗：3　行動値：5<br>
+　SS：5+1D6　命中：13+1D6　回避：11+1d6<br>
+　格闘：1D6+0　武器：3D6+3　能力：1D6+3<br>
+　精度：15　スペック：0　SPE：【熟練】　カルマ：【反撃者】<br>
+<br>
+■特性（0pt/3bp）：<br>
+　●因子覚醒<br>
+　（●ステータス変化系2pt）<br>
+<br>
+■補足：<br>
+　・能力概要は同一だが、応用技セットはそれぞれ異なる。</font></br></td></tr>
+
+<tr class="tab3 char2"><td colspan="6" style="font-size:100%;background:#fff7ef;"><font color='#000000'><b>ＧＭ</b>：能力攻撃力3D6+3でしたすいません　なんか能力攻撃力間違えてばっかだな</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：またしても反撃者！！！</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：反撃者大好き</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：相手に撃たれても？</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：相手には……撃たせないんでね（キメ顔）</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：はい</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：ぶっちゃけ全部ソリティアだからリセマラが加速するなーとしか考えた事ない</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：卓だと私一人が反撃者されたところで隣の２人も器運とか知器とかだし……<br>
+あ、今回はオーバーエフェクトはなしです</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：んじゃまあちょっと準備させてもらいますかね</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：オリジナル要素が一つもないという極めて珍しいウルフボスとなっております</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：どうぞどうぞ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：どっちが何を持ってるのか知らないけど多分どっちかは剣を使うでしょう、そして状況は屋内、となれば<br>
+【見えない迷路】インファイトトリガーの制止トラップをめったんに仕掛けます</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠のPPが4減少（PP：28-&gt;24）</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠の暴走率が4増加（暴走率：65-&gt;69）</font></br></td></tr>
+
+<tr class="tab3 char3"><td colspan="6" style="font-size:100%;background:#fff7ef;"><font color='#339900'><b>元加 枠</b>：めったんにインファイト制止トラップ　活性６０に付きＳＳ１１＋１ｄ６</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：柱の判定が横にギューンと広がります</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：めったん自体には何も影響は無いけどめったんに接近戦仕掛ける野郎が居たら動きを止めますよ、って技です</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：すごい！</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：次にめったんの回避を＋３するコンテ技を撃ちます　このタイミングでめったんが防御とか回避とか上げたいなって場合はどっちかすると良いですよ</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：工場らしい背景に変えた</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：【しゃがみ判定持続バグ】をめったんに撃ちます！</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：順番逆のが良かったなと今思ったけどまあ良いです！！</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：そうだった！【メタルステップ】で回避に+4します</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：cont<br>
+Yugudora : コンティニュー判定 → [1] 1R追加</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタのPPが1減少（PP：30-&gt;29）</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタの暴走率が1増加（暴走率：61-&gt;62）</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠のPPが3減少（PP：24-&gt;21）</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠の暴走率が3増加（暴走率：69-&gt;72）</font></br></td></tr>
+
+<tr class="tab3 char3"><td colspan="6" style="font-size:100%;background:#fff7ef;"><font color='#339900'><b>元加 枠</b>：０Ｒ　回避＋３　（１Ｒ追加）をめったんに撃つ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：そしてra70</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：じゃあめったんの回避力が合計＋７されています</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：ra70<br>
+Yugudora : (RA70) → [4] 連鎖【2D6暴走率上昇】 ： 6[4,2] ％</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠の暴走率が6増加（暴走率：72-&gt;78）</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：もう暴走しまくりです</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：あったまってんなァ！</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：まぁ正直枠くんの構築なら痛手じゃないというか何ならオイシイ展開</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：死んでないなら問題は無いからな</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：じゃあ戦闘開始かな</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：ＰＰＢとかあるなら最後にしていいけど</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：（エンドフェイズ）</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：一応シールド貼っていいですか…</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：ん…今撃つと回避が剥げます</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：そうなの！やめます</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：生憎だがエンドフェイズに技は撃てない</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：が、さっきの技にチェインしてた的なアレならＯＫ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：ああ、エンドフェイズって意味か、エンドフェイズには撃てませんね</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：いや、いいや</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：エンドフェイズ宣言なし</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：枠くんはどうしますか</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：エンドフェイズ時に技を撃ちたい場合はオートとかセミオートって言う「ＳＥ」を付ける必要があります<br>
+でも結構邪魔くさいＳＥなのよね</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：んー、宣言無しで</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：では</font></br></td></tr>
+
+<tr class="tab0 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>ＧＭ</b>：【Last Surprise】</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：１Ｒ目ー</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：「無能力者｛マイナー｝に魂を売り渡したか、敗北主義者め！」</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：「その愚かさ、そして同志を討った罪！　首で贖うが良い！」</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：行動値5、ＡＥなし＠</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：行動値5、ＡＥなし＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：行動値4宣言なし＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：行動値８　宣言無し＠</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：枠＞トカゲ共＞めったん</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：枠くんから宣言どうぞ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「うーん、すがすがしいほどどうでもいいなぁ！」自身の判定を縮めながら、木刀を振るいます<br>
+【詐欺判定】で自身の回避＋６しながらＡＥ【重撃】、武器攻撃でエッガー狙います＠</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠のPPが4減少（PP：21-&gt;17）</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠の暴走率が4増加（暴走率：78-&gt;82）</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：私デスカァ!?</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：対抗なし＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：では命中ロール</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：cf13+3+1d6<br>
+Yugudora : (CF13+3+1D6) → 計【 18 】 ： 13 +3 +2[2]</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：cf11+1d6 「グハハハハ！ 当たらぬわ小僧！」<br>
+Yugudora : (CF11+1D6) → 計【 11 】 ： 11 +1[1] (fa:1)-1[1]</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：おうそうだな</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：フフッ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：4d6<br>
+Yugudora : (4D6) → 5[1,2,1,1] → 5</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：しょっぺぇ！！！</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：ポコッ</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：防御1点、4点もらいます</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：盾で弾き飛ばします</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：「その程度か、我々も舐められたものだ――」</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：「ならばしかと味わうが良い、我らが未来を切り開く恐るべき刃、その一撃をな！」</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：一太刀入れようとするも、盾に当たり弾かれます<br>
+「……っと、当てどころが悪かったなー」＠</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：choice[枠くん,枠くん,めったん]<br>
+Yugudora : (CHOICE[枠くん,枠くん,めったん]) → 枠くん</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：まあそりゃそうだ</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：――エッガーは号令と共に斬りかかった！<br>
+応用技《いのちだいじに》<br>
+ＡＥ【武器重撃】（強化【回：１】　回復）@</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：回避＋６で反応型だから今１５＋３＋６なんすよね　宣言無し</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：＠</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：行くぞムシケラ！</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：cf13+1d6 「これぞ正義の鉄槌！」<br>
+Yugudora : (CF13+1D6) → 計【 16 】 ： 13 +3[3]</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：cf15+3+6+2d6 あと８０活性も<br>
+Yugudora : (CF15+3+6+2D6) → 計【 31 】 ： 15 +3 +6 +7[4,3]</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：あぶなっ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：惜しいなー</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：choice[めったん,めったん,枠くん]<br>
+Yugudora : (CHOICE[めったん,めったん,枠くん]) → めったん</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：おっとその前に</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：h3d6+3 回復ロール<br>
+Yugudora : (3D6+3) → 計【 7 】 ： 11[2,3,6] +3</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「その正義の鉄槌重そうだけどちょっと振りが遅いかなー」体をずらすだけでさらっとかわします＠</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：さっきの分のダメージが帳消しになる</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：カカッテコイッ</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：――ペロは号令と共に斬りかかった！<br>
+応用技《ガンガンいこうぜ》<br>
+ＡＥ【武器重撃】（強化【攻：１】【命：１】）@</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：で、トラップ起動かな</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：へえ、斬りかかったんですか</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「おっと、そうはさせないよ！nextFrameーー」柱の判定を操作して動きを止めようと試みます！<br>
+トラップ起動やね</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：「懺悔せよ小娘！　これこそ――ム!?」</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：制止トラップだ！でも攻撃発動は無いぞ！</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：トラップ、Ｂ等の宣言どうぞ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：宣言無し＠</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：対抗なし</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：来いッ</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠の因子Dが3増加（因子D：6-&gt;9）</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：ではＳＳ命中　６０活性で</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：cf9+2+1d6<br>
+Yugudora : (CF9+2+1D6) → 計【 13 】 ： 9 +2 +2[2]</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：cf5+1d6 SS<br>
+Yugudora : (CF5+1D6) → 計【 8 】 ： 5 +3[3]</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：振り下ろした刃が虚空で引っかかって停止します</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：トラップってのは設置時のステータスを参照します　俺が撃った時が６９なので８０活性じゃないわけですね</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：「なッ……何ィ～!?　何だこれは、一体何に引っかかっているのだ!?」</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：そうなんだ…混乱しそう</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：そのままめったんのターンどうぞ＠</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：メモが大切</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「『消し損ね判定』！さぁ、今だメタちゃん！」＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「…！？…今だ！」</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：【メタルブレード】+【アタックプラス】チェイン発動、エッガーに攻撃＠</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：メモってないと探索中にとりあえず仲間に設置しとけってしてた日にはいつ撃ったの…？ってなります</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：「に、2対１のつもりか!?　卑怯者め！」　対抗なし＠</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタのPPが2減少（PP：29-&gt;27）</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタの暴走率が2増加（暴走率：62-&gt;64）</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：一生懸命剣を抜こうとしています！＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「なるほど、こっちも援護するよ！」連携Ｂします</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：【エフェクト補正】で命中＋６だ！持っていけ！</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタの因子Dが1増加（因子D：6-&gt;7）</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠のPPが3減少（PP：17-&gt;14）</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠の暴走率が3増加（暴走率：82-&gt;85）</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠の因子Dを1消費（因子D：9-&gt;8）</font></br></td></tr>
+
+<tr class="tab3 char2"><td colspan="6" style="font-size:100%;background:#fff7ef;"><font color='#000000'><b>ＧＭ</b>：<br>
+▼連携バースト　/　因子ダイス－１<br>
+アクション・リアクション対象の味方に対して<br>
+回復や補正などの攻撃以外のサポートが可能。<br>
+能力による味方強化、回復や<br>
+消費アイテムを使用して回復をするなどのサポートができる。</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「ありがとう！覚悟ッ！」命中いくぞー</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：「ぬうううう……」　盾を構えて受け流す構え＠</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：こーい</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：cf14+6+1D6  命中<br>
+Yugudora : (CF14+6+1D6) → 計【 22 】 ： 14 +6 +2[2]</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：cf11+1d6+5 回避＋《いのちだいじに》<br>
+Yugudora : (CF11+1D6+5) → 計【 21 】 ： 11 +5[5] +5</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：ぐわああああああ足りねぇぇぇぇぇ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：あぶねえ！</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：せーーーふ！</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：ダメロどうぞ</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：3D6+5+4 ダメージくらえや<br>
+Yugudora : (3D6+5+4) → 12[3,5,4]+5+4 → 21</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：めっちゃ痛い！！！！</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：防御1点で20点ちょうどもらいます</font></br></td></tr>
+
+<tr class="tab0 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>ＧＭ</b>：エッガーに20のダメージ（HP：40-&gt;20）</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：「ぐッ……!?　貴様……貴様貴様ァァァ！　赦サンゾォォォ！」</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：そう、一見「命中と回避が３の差がある…行けるで！」と思ったらあの人回避＋５技撃ってたんですね…</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「当たれッ！」大量のメタブレをぶち当てます＠</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：――エッガーはさらに変身した！<br>
+性質系《ドラゴンタトゥー》<br>
+（性質【威力】【感覚】）@</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：ダメージロールが＋５されたりあと解除判定と行動値が＋５されたりいろいろ大変なことになります</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：あらやだ</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：性質と言うのは、自身のＨＰ半減あるいは暴走９０に達すると起動するブツなのです<br>
+「常に強化され続ける」ので実質強化形態です</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：感覚だからなぁ</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：エンドフェイズー</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：武装解除してるやんけ！！</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：えええええ！？？？！</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：こいつシーザーになりおったわ！</font></br></td></tr>
+
+<tr class="tab2 char13"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#999900'><b>エッガー</b>：『GGHHAAAAAAAAAA！』　鎧がはち切れ、見上げるような巨体となった竜が咆哮します＠</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：こっちに来ないで！！</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：宣言無し＠</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：雑談所で戦おうとは卑怯なり！！！！</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：宣言無し＠</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：ドラゴラムじゃねーか</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：『GGHHAAAAAAAAAA！』　こっちでもついでに吠えます＠</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：２Ｒ目ー</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：行動値5+5=10、ＡＥなし＠</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：行動値5、ＡＥなし＠</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：天空の剣でいてつくはどう出るのって５だっけ６だっけ</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：5</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：行動値８　宣言無し＠</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：たぶん共通で出る</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：４でも出るし</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：確か６はバイキルトだったよな</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：…いや６は違うわ、ラミアスの剣だった</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：行動値4宣言無し＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「おお、結構なデカブツになったね…でもそれって、当てやすいって事なんだよね！」＠</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：エッガー＞枠くん＞ペロ＞めったん</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「ひぇえ！こんなのゲームの中でしか見た事ないよぅ！」めったんはビビりです＠</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：choice[枠くん,枠くん,めったん]<br>
+Yugudora : (CHOICE[枠くん,枠くん,めったん]) → めったん</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：怒ってる</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：ぎゃー！</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：――エッガーは咆哮と共に炎を吐き出した！<br>
+応用技《いのちだいじに》<br>
+ＡＥ【武器重撃】（強化【回：１】　回復）@</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：炎吐きながら回避と回復するのかコイツ！！</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：なんか火を吐いてる内に傷が癒えています。自動回復的なアレなのかもしれません＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：ライズ使います！回避に！＠</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：はい</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：あ、そうそう…回避コンテはまだ生きてるはずです</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：生きてた！でも使う</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：せやな</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：たかだか＋３で同値にしかならないからね</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：対抗なし、ファイヤー</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：いや同値にもなってねえ</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：cf13+1d6 命中<br>
+Yugudora : (CF13+1D6) → 計【 13 】 ： 13 +1[1] (fa:1)-1[1]</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：cf8+8+1D6  回避<br>
+Yugudora : (CF8+8+1D6) → 計【 23 】 ： 8 +8 +6[6] (cr:1)+1[1] (cr:計1回)</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：こいつやる気あんのか</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：草</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：ふふーーーーん！！！！！</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：3d6+3+5 能力攻撃＋性質【威力】<br>
+Yugudora : (3D6+3+5) → 14[6,6,2]+3+5 → 22</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：11点回復</font></br></td></tr>
+
+<tr class="tab0 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>ＧＭ</b>：エッガーのHPを11回復（HP：20-&gt;31）</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：性質解けるけどこの段階だとあんまり意味がない</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：えらい回復しやがったなコイツ！！</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：次、枠くん＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：回復うぜ～～～～</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：『GGGHAHHAAAAAHHHH!!!!!』</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「う、うわああ！」とっさに横に飛び込んで避けました＠</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：辺りに頓着せず、炎を吐き散らしてめったんを襲います＠</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「あ、あわわわわ……エッガー軍曹が……」</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：『GGGHHHHH!!!!』</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「さて…動きが止まってるならどうにでも出来るよねぇ…『nextFrame』」懐から拳銃を取り出し、動けないミュータントの頭を狙います！<br>
+【詐欺判定】で回避＋６でＡＥ重撃、ＡＥヘッドショット、ハイウェイ使用、ダメージライズ、カルマ【殺し屋】でペロに攻撃＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：あ、いやハイウェイは無し　他はアリ</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「ひぃ……!?　た、隊員！　侵入者とついでにエッガー軍曹も何とかするのだ！」　炎が頭上を掠めます＠</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：対抗不可能なんだよなぁ</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：自動命中でダメージロールどうぞ</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠のPPが6減少（PP：14-&gt;8）</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「えっ何であなたがビックリしてるんですか！？」知らなかったんかい！＠</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠の暴走率が6増加（暴走率：85-&gt;91）</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：願いましては８０活性で＋１ｄ、ヘッショで＋１ｄ、殺し屋で＋２ｄ、ライズで＋５</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：4d6+1d6+1d6+2d6+5<br>
+Yugudora : (4D6+1D6+1D6+2D6+5) → 22[6,6,5,5]+4[4]+3[3]+6[1,5]+5 → 40</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：おっと惜しい……</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「お、愚か者！　能力の暴走が想定内であって溜まるか――――」</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：『GGGGGHHHAAAAAAAAAAAAAHHHH!!!!!!!!』</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「顔面…フッとべぇ！！」ガァン！と顔面に向けて放たれた弾丸の判定を拡大し、あわや即死、と言ったレベルの一撃を食らわせます＠</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：防御1点、39点もらいます</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：気絶無効じゃないじゃんこいつ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：無いんだなぁこれが</font></br></td></tr>
+
+<tr class="tab0 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>ＧＭ</b>：ペロに39のダメージ（HP：40-&gt;1）</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：down<br>
+Yugudora : 気絶判定 → [1] 気絶【1R行動不能】</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：やったぜ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：でもそれはそれとして</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：ra90<br>
+Yugudora : (RA90) → [1-3] 記憶異常【命中判定結果が半減する。知識の判定結果が半減】</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：ペロくん（体長4m）</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：アウチ</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：ンンー</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：じゃあ凶暴化してその辺で暴れてます＠</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「ひ、ひい……私の手にはもう負えぬ……」</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：で、ですね</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「ふぅー……おっと…」頭を軽く押さえます＠</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：相方が落ちたので因子覚醒：８０宣言＠</font></br></td></tr>
+
+<tr class="tab0 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>ＧＭ</b>：【Keeper of Lust】</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「こ、降参するなら今のうちですよ！」＠</font></br></td></tr>
+
+<tr class="tab0 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>ＧＭ</b>：エッガーの暴走率が10増加（暴走率：70-&gt;80）</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：『GGGGGHHHHAAAAAAAAAAAA!!!!!!』</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：『GGGGHHHAHHOOOHHH!!!!!!』</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「あわわわわわわわ……」</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：……女性の方が降参したくとも、部下の方がそういうわけにはいかなさそうです</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「さて、えーと……ああそうそうメタちゃん、もう一体は頼んだよー」＠</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：――ペロはさらに変身した！<br>
+性質系《竜の御守り》<br>
+（性質【耐性】【感覚】）@</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：落ちてるのか落ちてないのかハッキリしろ</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：一応起動中。さて、エッガーは気絶中なのでめったんどうぞ</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：気絶だからな</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：いや、１Ｒ継続の気絶か</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：今起きます</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「う、うん！頑張る！」＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：あと１点でも当てたら死ぬぞ！！</font></br></td></tr>
+
+<tr class="tab3 char2"><td colspan="6" style="font-size:100%;background:#fff7ef;"><font color='#000000'><b>ＧＭ</b>：<br>
+■１ラウンド維持 	<br>
+<br>
+●自分対象→次ラウンドの自プリアクションまで。<br>
+●他対象（行動前）→次ラウンドの対象プリアクションまで。<br>
+●他対象（行動済）→次ラウンドの対象ポストアクションまで。</font></br></td></tr>
+
+<tr class="tab3 char2"><td colspan="6" style="font-size:100%;background:#fff7ef;"><font color='#000000'><b>ＧＭ</b>：まだでした！！！！！！</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：どっち！！！！！！！！！！！！！！</font></br></td></tr>
+
+<tr class="tab3 char2"><td colspan="6" style="font-size:100%;background:#fff7ef;"><font color='#000000'><b>ＧＭ</b>：つまり次のラウンドの手番で起き上がってその場で行動する</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：今はダウンしてるらしいです</font></br></td></tr>
+
+<tr class="tab3 char3"><td colspan="6" style="font-size:100%;background:#fff7ef;"><font color='#339900'><b>元加 枠</b>：その前にトドメ刺したら駄目ですか？</font></br></td></tr>
+
+<tr class="tab3 char2"><td colspan="6" style="font-size:100%;background:#fff7ef;"><font color='#000000'><b>ＧＭ</b>：いいよ</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：はい！</font></br></td></tr>
+
+<tr class="tab3 char3"><td colspan="6" style="font-size:100%;background:#fff7ef;"><font color='#339900'><b>元加 枠</b>：やったぁ</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：ダウンしてるけどトドメ刺しても良いです</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：起きるなら眠らせてあげよう</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：平和のためならな～仕方ないな～</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：ちなみに描写上は暴走状態になって味方と敵の区別つかず蹴散らしまくってます</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：というわけでめったんどうぞ</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：70行っとくか…</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：【メタルブレード】＋【ロックプラス】チェイン発動命中コンセ2、ペロに攻撃＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：７０いかないわ</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタのPPが4減少（PP：27-&gt;23）</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタの暴走率が4増加（暴走率：64-&gt;68）</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：んー、死んでるから回避しないと思うんだな</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：せやな</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：そっか！</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：じゃあ普通に【メタルブレード】でペロに攻撃＠</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：近づいてＡボタン押せばデヤァァァァとか言って自動的にトドメ刺して終わりです</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタのPPが3増加（PP：23-&gt;26）</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタの暴走率が3回復（暴走率：68-&gt;65）</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：自動命中でダメロどうぞ＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：3D6+5 ダメージ おやすみ<br>
+Yugudora : (3D6+5) → 6[3,2,1]+5 → 11</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：防御1+性質【耐性】5=計6、5点もらいます＠</font></br></td></tr>
+
+<tr class="tab0 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>ＧＭ</b>：ペロに5のダメージ（HP：1-&gt;-4）</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：ＧＯ！</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：エンドフェイズ！</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：これといって宣言なし＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「……へぇ」＠</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：『GGRRRRR……？　GRGGGAAGGAAHHHHHHHH!!!!!』</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：どうせなら最初の暴走アップもっともっとけばよかったのう～</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：もしよろしければ寵愛をいただきたい気持ちがあるような気がします</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：エンドフェイズ宣言無し＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：！！！！！</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：宣言あｒます</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：トドメを刺しにやってくるめったんへその剛腕を振るいます＠</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：どうぞ</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：カルマ【寵愛】使います！＠</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：まぁい</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：はぁい</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：どうぞ</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：2D6<br>
+Yugudora : (2D6) → 8[3,5] → 8</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：うまぁい</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：美味しい！！！！</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：ありがとうございます！！</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠の暴走率が8回復（暴走率：91-&gt;83）</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠のPPが8増加（PP：8-&gt;16）</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：暴走が足りねえ～って思った場合は暴走を足りさせる方法を考えてみましょう</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：ではイニシアかな？</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタのPPが8増加（PP：26-&gt;34）</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタの暴走率が8回復（暴走率：65-&gt;57）</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：例えば…命中コンセ多めに積んで見るとか、ダメージコンセ多めに積んで見るとか、あるいは行動値にコンセ振って見るとか、回避コンセ増やしてみるとか…</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：じゃあこっちは宣言無しで＠</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：ならば３Ｒ目イニシアティブ</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：行動値5に戻っちゃったよ　宣言なし＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：じゃあ、行動値4、コンセ2するわ＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：行動値８　宣言無し＠</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタのPPが2減少（PP：34-&gt;32）</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：オラァ上等だ来いよ敗北主義者共！！！！</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタの暴走率が2増加（暴走率：57-&gt;59）</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：&gt;ペロ：トドメを刺しにやってくるめったんへその剛腕を振るいます＠<br>
+（多分これはトドメRPへの呼び水だったと思ふ）</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：こっちはまだ強化【回】残ってんだからな！！！！</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタの因子Dが1増加（因子D：7-&gt;8）</font></br></td></tr>
+
+<tr class="tab4 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#ff0000'><b>鋼音メタ</b>：進んじゃったからスルーしてしまった</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：私は基本的に処理優先で進めるのでＲＰは自由にやって良いよ</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：勝手に書いて勝手に流すぐらいで良い</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：後でエッガーへのトドメＲＰと同時にやるでも良いし</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：あ、進めていいですよ！！</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：枠くんです！</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「…ふぅ、さて、残り一体だね…！」木刀を構え直し、殴りに行きます！<br>
+【食らい判定拡大】回避ー６　とＡＥ【重撃】、更に命中コンセ２と命中バースト２＠</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：といれ</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠の因子Dが3増加（因子D：8-&gt;11）</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠の因子Dを3消費（因子D：11-&gt;8）</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠の因子Dが1増加（因子D：8-&gt;9）</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：対抗なし＠</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠のPPが6減少（PP：16-&gt;10）</font></br></td></tr>
+
+<tr class="tab0 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#339900'><b>元加 枠</b>：元加 枠の暴走率が6増加（暴走率：83-&gt;89）</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：cf13+3+2+2d6+2d6 反応活性、コンセ２、８０、バースト２<br>
+Yugudora : (CF13+3+2+2D6+2D6) → 計【 40 】 ： 13 +3 +2 +8[2,6] +10[4,6] (cr:2)+4[1,3] (cr:計2回)</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：オラァ死ね！！！！！！</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：cf11+1d6+1d6+5 回避＋80活性＋《いのちだいじに》<br>
+Yugudora : (CF11+1D6+1D6+5) → 計【 24 】 ： 11 +4[4] +4[4] +5</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：流石に無理！！！！</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：クリスマのみ！！</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：4d6+1d6+1d6<br>
+Yugudora : (4D6+1D6+1D6) → 17[6,1,6,4]+5[5]+2[2] → 24</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：防御1点、23点もらいます＠</font></br></td></tr>
+
+<tr class="tab0 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>ＧＭ</b>：エッガーに23のダメージ（HP：31-&gt;8）</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：いのちあぶない</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：ra90どうぞ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「行くぞぉ！『ドラゴンぎり』！」高く飛び上がり、袈裟懸けに木刀で打ち据えます！</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：んんー？ra90…？（暴走８９）</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：あらぁ</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：こっちだと92%だから3点ずれてるな</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：むむ？</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：連携Ｂとかかな</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：判定操作で木刀の当たり判定をドラゴンキラーみたく短くしてそう</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：進行表もこっちも合ってるはずなんだけどなぁ</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：ハイウェイはどうです？</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：ハイウェイ使ってないです</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：！！！！！！</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：ハイウェイ取りやめてたぞ</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：じゃあそれか</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：失礼しました。めったんＧＯ！</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：はい</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：それでも暴走２％上昇なのでもしかするとどっかで１％ミスってる可能性が無い事も無いかもしれない</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：【メタルブレード】+【アタックプラス】チェイン発動、命中コンセ5、エッガーに攻撃＠</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：『GGGGAAAHHAAGYAAAAAA!!!!!!』　耳をつんざくような悲鳴を上げながらもあくまであなたたちへ抵抗の姿勢を見せます＠対抗なし</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：…暴走２％と１ｄ６程度で命中回避＋３するって美味しくね？俺の気のせい？</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：命中こい</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタのPPが7減少（PP：32-&gt;25）</font></br></td></tr>
+
+<tr class="tab0 char6"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#ff0000'><b>鋼音メタ</b>：鋼音メタの暴走率が7増加（暴走率：59-&gt;66）</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：cf14+5+1D6  命中<br>
+Yugudora : (CF14+5+1D6) → 計【 22 】 ： 14 +5 +3[3]</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：もやしは1d6ですら致命傷になりうるんだよなぁ</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：cf11+1d6+1d6+5-6 回避＋80活性＋《いのちだいじに》＋《喰らい判定拡大》<br>
+Yugudora : (CF11+1D6+1D6+5-6) → 計【 16 】 ： 11 +1[1] +6[6] +5 -6 (fa:1)-6[6] (cr:1)+5[5] (cr:計1回)</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：つまり当たる</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：ちょうど打ち消した分なんだなぁこれが！！</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：3D6+5+4 ダメージ<br>
+Yugudora : (3D6+5+4) → 12[4,3,5]+5+4 → 21</font></br></td></tr>
+
+<tr class="tab0 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>ＧＭ</b>：エッガーに20のダメージ（HP：8-&gt;-12）</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：トドメＲＰありましたらどうぞ</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：シナプスは他の武装と比較して限定的に強いかもしれない</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：1Dの反動がネックだが</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「これ以上暴れないで！！」暴れまわる竜二体にメタブレを直撃させてトドメ！＠</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：他はだいたい元になる効果以上の暴走コストがかかったりするんだけどＨＰ反動があるとはいえ暴走コスト上昇が２％で済む（同じ効果を再現しようとすると３ｐｐかかる）のは優れている</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：うまい戦闘描写が全然思いつかないですね～</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：丸鋸が、二体の竜の喉元へ喰らいつくように飛んでいきます。傷口から噴き出すのは血ではなく煙。</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：戦闘描写は己の妄想を文章に起こすしか無いのでめったんが華麗にドラゴンをクビちょんぱしてる場面とかを想像するのだ<br>
+文章力は…俺も無い方だから……</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：『G……GAGHHAAAAAA……！　……ツ』</font></br></td></tr>
+
+<tr class="tab1 char13"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>エッガー</b>：『【ツークツワンク】……バンザイ……！』</font></br></td></tr>
+
+<tr class="tab1 char14"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#999900'><b>ペロ</b>：『能力者｛メジャー｝達ニ、栄光アレ……！』</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：巨体が呻いて、崩れ落ちます。</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：その鱗は、身体は、気化し掻き消え、縮んでいき……最後には、最初の時のような竜人の姿へ戻っていました。</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：武器もありませんし……もう戦う力は残っていないことでしょう。</font></br></td></tr>
+
+<tr class="tab0 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>ＧＭ</b>：【勝利】</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：というわけで勝利です。おめでとうございます＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：曲が負けてる定期</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：スマブラの囚われ……</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「ふう…お疲れー、結構動けるようになったねメタちゃん」と言いながら女性の動向を伺ってます＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「お姉さん、もう一度言います、降参するなら今です」＠</font></br></td></tr>
+
+<tr class="tab0 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>ＧＭ</b>：【Wicked Plan】</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「うぐ……ぐ……」</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「お、おのれ……どうなっている……有事の際は派遣されるという話だった【スヴァルト】の傭兵は、一体何をしているのだ……」</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「……か、考え直せ。能力者の諸君！」</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「切り捨てられたんじゃない？…聞く限りだと、すっごいガバガバな計画だった感じだしさ」</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「この島は最悪だ！　無能力者｛マイナー｝共が、自分の無能さを棚に上げて我が者顔で島を仕切っている！」</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「そんな島を我々は……否、大総帥は変えたいと、そう仰られているのだ！　これは云わば使命！」</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「我らの超能力は云わば神の御業、主｛グランドマスター｝よりの勅命なのだ！」</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：目の前で女性に攻撃加えてもめったんは大丈夫ですか？</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「虚飾の世界に目を向けるな！　信仰と殉教の中に生きる、真の英雄たれ！　決起の時だ、諸君！」　必死の演説＠</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：元加さんが</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：ちょっとまってね</font></br></td></tr>
+
+<tr class="tab2 char6"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#ff0000'><b>鋼音メタ</b>：あ～～うまくいいたいことがまとまらん</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：頑張れ～</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：がんばえ～～</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「あーはいはいそうだねー」と言いながら逃げれそうな場所の判定を操作して封鎖します＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「あたし、能力を持ってるからってそれを悪用なんてしたくない」</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「だからあなたたちの仲間になんて絶対なりませんから！」強く言い切ります＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「とりあえずYDFに連絡すればいいのかな…」＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：（ふーん…なるほどなるほど）<br>
+「だってさ、頼れる仲間は倒れてて、敵は寝返りそうに無いみたい、残念だったねー…さてと」</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：スッと距離を詰めて女性の顎を殴って気絶させようと試みます＠</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「あ、悪用だと!?　口を慎め小娘！　これは深甚なる……」　逃げ道を塞がれたのを見て息を呑みます</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「か、かくなる上は……グオオオオオオ！」</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：ニセたいこうじゃねえか！</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：雄叫びを上げて、女性自身も異形へ返事ます</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：変じます！</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：何ッ</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「【ツークツワンク】に栄光……ぐへっ」</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：……一撃をもらって呆気なく撃沈します＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「あ…まあいっか」</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：YDFにもしもししていいですか＠</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：じゃあ程なくしてＹＤＦが来ます</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：来た！</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：あ、生け捕りにしようとしてたんだけど…</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：まあいいや</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：連れて行っても良いですよ！</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：来る前にスタコラサッサしましょう</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：じゃあ女性を縛り倒して引きずって行きます！！！</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：めったんは現場に残るけど</font></br></td></tr>
+
+<tr class="tab1 char11"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#990000'><b>女性</b>：「うぐぐぐぐう……」　目を回して引きずられていく＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：「じゃ、僕はこの人に用があるんでそれじゃあね、お疲れ様ー」＠</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「うん！ありがとね！またね！」手を振ります＠</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：そういうわけで「内情」の情報そのものである女性を依頼人の元へ持っていきました<br>
+…それがその後どうなるのか、それで何が変わるのか、そんなことは依頼達成の前では全くもってどうでもいいことです＠ＲＰＥＮＤ</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：では</font></br></td></tr>
+
+<tr class="tab1 char15"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000099'><b>ＹＤＦ隊員</b>：「……動くな｛フリーズ｝！　武器を置いて！　手は後ろ！」</font></br></td></tr>
+
+<tr class="tab1 char16"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#3366ff'><b>スヴァリン隊員</b>：『はいはーい、お待たせしました、これから捜査なんでっ。関係者以外立ち入り禁止でお願いしますーーっ』</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：…………という感じで、ＹＤＦとスヴァリンが後始末に来るでしょう</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：まぁ、解決したのはあなたたちなんですけどね。その場にいない枠くんはともかく、めったんは報奨金がもらえたりもらえなかったりすれば良いと思います。</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：めで鯛＠rpend</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：スヴァリン初めてみた気がする</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：愛でたし愛でたし</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「あっ」何かを思い出したかのように</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：「あの子怒ってないといいな…」＠RPENDおしまい</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：ではお疲れさまでした</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：コメントあればどうぞ！！！！！！！！！！！</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：お疲れ様でした～</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：お疲れさまでした！<br>
+……これ戦闘訓練になりました？？俺が色々場を整えてただけな気がしてきてるんですけど</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：指南になってない気がするけど動き方はだいたいわかった</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：乙</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：まぁその辺ｽﾏさんに丸投げだったし……</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：えっ！！！！！</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：まあ相手の反応値の上取る動きができればなんでもいいから……</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：わりと強すぎたかもと思ってたけど別にそうでもなかった</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：とりあえずそうだな…チェインをちょくちょく撃ってていい感じでしたが、敵の「回避＋５」がちと見えてなかったりしたな、とは思いました<br>
+でもまあ足りないのなら元加さんが注ぎ込めばいいやって感じで構えてました</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：今言われてえ？ってなってるので見えてませんでした！！</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：まぁぶっちゃけめったんが数こなせれば何でもいいなって後半思ってた</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：例えば俺が制止したシュプリンガー、色々注ぎ込んでましたよね<br>
+「制止中は敵は防御も回避も増やせない」…ので、こういう場合はもう死ぬほど注ぎ込むとおいしいです　命中に振らずにダメージ全力って感じですね</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：製作中</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：もっと盛ることをしなくては…</font></br></td></tr>
+
+<tr class="tab4 char4"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#660000'><b>知り合いのお兄さん</b>：乙</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：まぁダメコンは燃費が悪いので一概には言えない</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：他ゲーしてても思うんだけどなんか遠慮しちゃうんだな</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：相手が死にかけの場合とかは押し込むためにダメコン積むのが良い</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：勿体ない症候群は治りづらいからなぁ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：ただそうだな…恐れずに一つ！一つ…言っても良いですかカゲさん！</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：はい！</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：勿体ない症候群でＰＰあんまり使わないとなるとＳＰＥは不屈じゃない方が良い気がしてます！！！！<br>
+不屈するほどＰＰが減らない！！！</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：草</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：それな～</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：確かに</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：やっぱ変えるか～</font></br></td></tr>
+
+<tr class="tab0 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0faff;"><font color='#000000'><b>ＧＭ</b>：【全ての人の魂の詩】</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：悪運にでもしましょう　めったんの場合は闘志のが似合うか</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：これはあんまり言っちゃ駄目かと思ってたけどどうしても思ってしまった！！<br>
+闘志とかなら合うと思いますよ</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：PP回復手段結構あるしな～</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：どうしても変えたくない拘りだとするなら良いんですけどね</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：どんどんいってください、言われないと自覚しない場合が多いので…</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：この際だし変えるかな～</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：カゲさん、ＰＰあんま使いたくないなら器敏とか向いてるかもなって思った</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：あ、それはそれとして今回の事は元加さんに記憶させます<br>
+ああ、首突っ込みたがりの善人なんだなぁってなります、ちったぁ覚悟は付いたなとは思います</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：まぁまた別のキャラ作ることになったらって話だけど</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：セーブされた！</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：激励とかどう思います？</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：強いんだけど単体で機能しないのがネックなんだよな</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：弱いはずが無い　ソロでは無意味と化すけど…</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：自分には使えないけど持ってたら役に立つ</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：激励最近見ないよな</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：自分じゃなくて味方が活かせるかどうか、って感じのＳＰＥになる</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：弱くはない　というか2回とも暴走に使うと因子換算で８Ｄ相当の回復量だからかなり強い部類</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：まあ、あとはキャラ無視で熟練</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：味方の暴走を合計4d6減らせるってことは因子換算で8個ぶんのアドなんだよなぁ聞いてんのか絆よぉ</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：熟練は覚醒型の現状だと過剰かなぁ</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：熟練はめったんが熟練してからならアリかなと思った</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：んーー闘志か激励だな</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：そこはお任せやな<br>
+激励は腐ることが一切ないし、闘志は保険になる</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：あと熟練、基礎性能を上げる感じの効果だから仮に積むならパラ振りを限界まで詰めてからになる</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：そういえばこの女性のキャラ画像どちらさんやろ</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：防衛本能もええぞ</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：全部偶数振りにして、合計点47ptの範囲でやれること探してそれでもまだ足りねぇ　スペックがあと1点あれば<br>
+って時に使うＳＰＥだから</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：そうでない限りははむさんが度々言ってるように独自の動きができるＳＰＥ使った方が良い</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：とあるのキャラだそうです</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：えーととあるのキャーリサだっけ</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：「キャーリサ」ちゃんだそうで</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：激励持ってる人見た事ない気がする</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：キリさん家のメイドが持ってたはず</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：キャーリサって検索のとこ打ち込んだ途端死亡って出てああ、うん、ってなった</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：そのぐらいか　他は記憶の限りいない</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：昔ハムトニーとか咲ちゃんとかがしてたようなしてないような…？寵愛の間違いかなぁ</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：男女平等パンチされただけで別に死んでは無いと思う</font></br></td></tr>
+
+<tr class="tab2 char2"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#000000'><b>ＧＭ</b>：思いっきり顔パンされてたけど</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：草</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：激励は昔田中が持ってた、あとミッチーが持ってなかったっけ…</font></br></td></tr>
+
+<tr class="tab2 char3"><td colspan="6" style="font-size:100%;background:#fff9fc;"><font color='#339900'><b>元加 枠</b>：あ、顎だから…カミジョーさんの真似はしてないから…</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：よく出すキャラで持ってたら便利かなって…</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：まあ便利ではあるけど似合うのは闘志かな</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：激励、シナリオ終了時まで残ってたら余ったから暴走回復したろｗｗｗｗｗってできるのが強い</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：闘志は名前もそうなんだけど、性質系と噛み合わせが良かったりするので逆境に強いキャラを表現する上で役立つ</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：やったか！？　まだ終わってない！はやりたいな</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：性質【威力】と組み合わせれば攻撃力＋１Ｄ６＋４になる　尤も、めったん自身はもやしだからあまり性質系との噛み合わせよくないが</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：いや精神を筋力に1点回せば問題なく使えるか</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：みたいな感じです　まぁその辺抜きにしても闘志かっこいいからオススメです<br>
+1出たら泣くしかないけど</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：1D6ターン行動を継続するって6出たら1D6殴り続けるの？</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：草</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：6ターン</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：そんなバーサーカーソウルみたいな効果ではない</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：それが出来たら俺もそれ使いたいです</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：要するに1d6振って</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：1d6<br>
+Yugudora : (1D6) → 5</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：書き方が悪いって言っていい？</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：５が出たので５回動ける、でも５回動いたら死ぬ</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：闘志、そういえばこれリアクション含むんだろうか</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：いやまあ…書き方は確かに悪いけど…</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：「ラウンド」じゃなくて「ターン」だから含むか</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：何度も勘違いしそうだから闘志やめたい…</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：攻撃したりされたりを出目の回数まで行うと死にます　要はタイムリミット付きの悪運です</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：その代わり火力が＋１Ｄ６されるし、ＨＰが１固定だからもやしでも性質系が使いやすくなると</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：「ターン」って普通に自ターンだけの話じゃないのか…？リアクションも「ターン」なのか？</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：やったか！？まだ終わってない！ってそういえばこの前の外壁卓で似たような事言ったな…</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：まぁ、キャラクター性との合致が気にならないのであれば逆転握ってるのが一番ありがたがられると思う</font></br></td></tr>
+
+<tr class="tab4 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#339900'><b>元加 枠</b>：俺は「ラウンド」の事だと思ってた</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：不屈全く使えてないから気にしてない</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：このゲームはラウンドとターンについては明確に区別してあるのでそこは間違いない</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：自分も今までラウンドで認識してた</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：要は自プリを迎えた回数であって攻撃された回数とかは関係なくないか？</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：逆転はまあ適当に何か邪魔したＲＰ程度でもいいのでやる側としても楽ではある</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：あとこう言っちゃなんだが逆転は味方が催促すると思う</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：なので忘れるってこともないはず</font></br></td></tr>
+
+<tr class="tab4 char4"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#660000'><b>知り合いのお兄さん</b>：逆転の話してます？</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：激励と逆転は「下さい！！！」って言うからな</font></br></td></tr>
+
+<tr class="tab4 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#339900'><b>元加 枠</b>：座れ</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：逆転の話してるけど逆転を使えないお前の話はしてない</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：やっぱ激励だな…！</font></br></td></tr>
+
+<tr class="tab4 char4"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#660000'><b>知り合いのお兄さん</b>：僕がカニドラシルで一番逆転振るってるのに…</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：瞬動<br>
+■効果 	/ 	自ターンで２回行動ができる。</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：「自」ターンだから恐らく自分のターンと他人のターンで区別がある<br>
+そこについての特記が無いからやっぱリアクション含むんちゃうか</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：ぜっっっっったい言葉の綾</font></br></td></tr>
+
+<tr class="tab4 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#339900'><b>元加 枠</b>：それは完全に同意するわ</font></br></td></tr>
+
+<tr class="tab4 char4"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#660000'><b>知り合いのお兄さん</b>：まーたルルブさん言葉がコロコロ変わる</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：別に闘志の書き方でも自ターンの事を指してると読めると思う</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：<br>
+▼操作系 　要スペック２　/　消費３ｐ　　●上書きルール【　無　】　●解除判定【　有　】<br>
+■効果 	対象の行動を操る。<br>
+操作可能タイミングは以下の通り<br>
+●使用者の自ターン<br>
+●操作対象ターン<br>
+●操作対象のリアクション<br>
+※カバーリングなどの操作は可能 </font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：そんなこと言ったら限界突破の「次ターンポストアクションまで」続くデメリットは自ターンが回って来なくても解除されるって認識でいいの？</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：しかし闘志でバーサーカーソウル発動できるんだったらもう火力全振りキャラがとんでもない事になるな…</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：強化【功】の攻撃しながら闘志発動して味方とかが回避落としてるだけでもう更に１～６回ぶん殴れるってぶっ壊れも良いところだぞ流石に</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：うーん、だって６Ｒも戦闘続くか……？</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：まぁその辺考えてないのがこのルルブか……</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：続くかもしれねーだろうが！！！！！！</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：瞬動くん泣いてる</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：なんならデオキシスで続いただろ…たしか</font></br></td></tr>
+
+<tr class="tab4 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#339900'><b>元加 枠</b>：追憶でも続いた気がするなぁ</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：ああそういえば今回の模擬、デオキシスになるかもみたいな話になったなならなくてよかったけど…</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：デオキシスにしていいですかって聞いたらダメだった</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：やっぱ、僕が開催したやつと紛らわしいし…</font></br></td></tr>
+
+<tr class="tab4 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#339900'><b>元加 枠</b>：やめろ元加さんがまたほとんど何もしてないも同然に死ぬ！！！！！！！！！！！！！！！！！！！！！！</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：同じ名前のボス大量発生させるか！</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：他特になければ締めます！！！！</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：特殊な価値観なんだよなぁ</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：質問とかでもいいですよ！！！！</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：こう、AE対抗とか臨機応変に対応できるようにいろいろとステータスを変化させるボスにしたかったみたいです</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：ないなー</font></br></td></tr>
+
+<tr class="tab4 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#339900'><b>元加 枠</b>：ノーティ３０００体出してオリジナル特性で自分以外の行動値全員９０００減らして９０００回動きながら殴ります</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：スヴァリン隊員誰？</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：ワンパンで全滅したら8999回行動放棄するのか……</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：デオキシス以外にそれっぽいのが浮かばなかったからシュプリンガーにするかー<br>
+シュプリンガーは群れで出てきてほしいから2体にするかーあー当初のコンセプトからずれてるーーまぁいいかもう</font></br></td></tr>
+
+<tr class="tab4 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#339900'><b>元加 枠</b>：ノーティは単独ではオルレが撃てないのでどうしても３回ぐらいは行動します８９９７回行動放棄ですね</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：みたいな</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：かわいい</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：初代お父さんです</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：…えっ？</font></br></td></tr>
+
+<tr class="tab4 char4"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#660000'><b>知り合いのお兄さん</b>：糞ー糞糞の糞と戦って臨機応変にいろいろ立ち回りを覚えるだって！？</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：身長18cmでロボットに乗ってます</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：バスターライラックだとおもってたわ</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：あ～～～～</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：こんな見た目だったっけって感覚でした！！！</font></br></td></tr>
+
+<tr class="tab4 char7"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>しゃべるゆかりさん人形</b>：何故か戦ってもらえないヤーナム</font></br></td></tr>
+
+<tr class="tab4 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#339900'><b>元加 枠</b>：糞ー糞糞の糞はクソ</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：ＹＤＦ、また事後に現れて無能としての評判を確立してしまった</font></br></td></tr>
+
+<tr class="tab4 char2"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000000'><b>ＧＭ</b>：楽しかったよ（4敗）</font></br></td></tr>
+
+<tr class="tab4 char17"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#000066'><b>超人オリオン</b>：許さない</font></br></td></tr>
+
+<tr class="tab4 char4"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#660000'><b>知り合いのお兄さん</b>：反応値を上回ったら上回ってくる糞</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：まためったんに呆れられてる…</font></br></td></tr>
+
+<tr class="tab4 char3"><td></td><td colspan="6" style="font-size:80%;background:#f0fff3;"><font color='#339900'><b>元加 枠</b>：先手取ってリソース削る４発食らわせてその上で更にトドメのオルレで華麗に躱してきやがってマジでクソ</font></br></td></tr>
+
+<tr class="tab1 char6"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#ff0000'><b>鋼音メタ</b>：今回は事前に呼んだらなんちゃらってあったから…なかったが</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：全く無視してリザードマン撃ちぬきに行ってたらどうなってました？</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：「あいつヤバいわ話通じねぇよ」ってシュプリンガーたちが逃げます</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：草</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：撤退するこいつらを追いかけての戦いになるんじゃないかな</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：話は通じてるけど聞く気が無いだけなのに…</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：あとＹＤＦに怒られる</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：その前にすたこらサッサだぜ！！！！</font></br></td></tr>
+
+<tr class="tab1 char3"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#339900'><b>元加 枠</b>：そういうわけでお疲れさまでした</font></br></td></tr>
+
+<tr class="tab1 char2"><td colspan="6" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ＧＭ</b>：乙した乙した</font></br></td></tr>
+
+
+  
+</table>
+<div id="sub">
+<div id="subTitle">発言者別フィルター</div>
+<div id="filter">
+<label><input type="checkbox" id="char1" value="char1" onclick="ShowHide(this)" checked>どどんとふ</label><br>
+<br>
+<label><input type="checkbox" id="char2" value="char2" onclick="ShowHide(this)" checked>ＧＭ</label><br>
+<br>
+<label><input type="checkbox" id="char6" value="char6" onclick="ShowHide(this)" checked>鋼音メタ</label><br>
+<label><input type="checkbox" id="char3" value="char3" onclick="ShowHide(this)" checked>元加 枠</label><br>
+<br>
+<label><input type="checkbox" id="char4" value="char4" onclick="ShowHide(this)" checked>知り合いのお兄さん</label><br>
+<label><input type="checkbox" id="char5" value="char5" onclick="ShowHide(this)" checked>ローブの男</label><br>
+<label><input type="checkbox" id="char7" value="char7" onclick="ShowHide(this)" checked>しゃべるゆかりさん人形</label><br>
+<label><input type="checkbox" id="char8" value="char8" onclick="ShowHide(this)" checked>喋る鶏肉</label><br>
+<label><input type="checkbox" id="char17" value="char17" onclick="ShowHide(this)" checked>超人オリオン</label><br>
+<br>
+<label><input type="checkbox" id="char9" value="char9" onclick="ShowHide(this)" checked>人だかり</label><br>
+<label><input type="checkbox" id="char11" value="char11" onclick="ShowHide(this)" checked>女性</label><br>
+<label><input type="checkbox" id="char10" value="char10" onclick="ShowHide(this)" checked>ミュータント</label><br>
+<label><input type="checkbox" id="char14" value="char14" onclick="ShowHide(this)" checked>ペロ</label><br>
+<label><input type="checkbox" id="char13" value="char13" onclick="ShowHide(this)" checked>エッガー</label><br>
+<label><input type="checkbox" id="char16" value="char16" onclick="ShowHide(this)" checked>スヴァリン隊員</label><br>
+<label><input type="checkbox" id="char15" value="char15" onclick="ShowHide(this)" checked>ＹＤＦ隊員</label><br>
+
+
+
+</div>
+</div>
+
+</body>
+</html>
