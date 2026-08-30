@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>輾転と町は</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>輾転と町は</h1>
+    <div class="meta">Fresh Meeting archive / room id: 202309f45a78ad / active</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=202309f45a78ad"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+</span></div>
+<!-- replay-links:begin -->
+<div class="replay-links-panel" style="margin-top:10px;padding:10px 12px;background:#eef8e8;border-left:4px solid #4b982a;overflow-wrap:anywhere">
+  <strong>セッションログ</strong>
+  <ul style="margin:6px 0 0 1.2em;padding:0">
+    <li><a href="https://amazugali.github.io/KaniTRPGROG/CoC/tenten/%E8%BC%BE%E8%BB%A2%E3%81%A8%E7%94%BA%E3%81%AF_%E3%81%A5%E3%81%91%E3%82%AB%E3%82%B2Imaji.html" target="_blank" rel="noopener">づけカゲまじ</a></li><li><a href="https://amazugali.github.io/KaniTRPGROG/CoC/tenten/%E8%BC%BE%E8%BB%A2%E3%81%A8%E7%94%BA%E3%81%AF_%E3%82%AD%E3%83%AA%E3%81%AF%E3%82%80%E3%83%81%E3%83%92.html" target="_blank" rel="noopener">キリはむチヒ</a></li>
+  </ul>
+</div>
+<!-- replay-links:end -->
+  </div>
+</header>
+<main>
+
+<div class="attachment-warning">
+  このログには Fresh Meeting 上の添付ファイル参照が 4 件あります。
+  HTML本文とは別に添付ファイル本体の保全が必要です。
+</div>
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした！</div>
+    <div class="message-time">1: 2023/9/29(金) 23:38:23</div>
+  </div>
+</article>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202309f45a78ad&amp;i=i14d2dcd3">📎 輾転と町は_キリはむチヒ.html</a> <span class="filesize">[230.6 KB]</span> を追加しました。</div>
+    <div class="message-time">2: 2023/9/29(金) 23:38:49</div>
+  </div>
+</article>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした！</div>
+    <div class="message-time">3: 2023/9/29(金) 23:38:54</div>
+  </div>
+</article>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした！</div>
+    <div class="message-time">4: 2023/9/29(金) 23:38:56</div>
+  </div>
+</article>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログありがとうございます！</div>
+    <div class="message-time">5: 2023/9/29(金) 23:39:10</div>
+  </div>
+</article>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">所要時間は大体２～３日ですかね</div>
+    <div class="message-time">6: 2023/9/29(金) 23:39:16</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ですね</div>
+    <div class="message-time">7: 2023/9/29(金) 23:39:28</div>
+  </div>
+</article>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">昨日は１時くらいまでやったけどガッツリ時間掛けたわけじゃないからボリュームは軽い方か</div>
+    <div class="message-time">8: 2023/9/29(金) 23:39:41</div>
+  </div>
+</article>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">RP増えたり、3日目行くと3日はかかりそう</div>
+    <div class="message-time">9: 2023/9/29(金) 23:39:48</div>
+  </div>
+</article>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202309f45a78ad&amp;i=id803a7f2" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202309f45a78ad&amp;i=id803a7f2" width="290" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202309f45a78ad&amp;i=id803a7f2">📎 2023-09-29.png</a> <span class="filesize">[461.7 KB, 1407x788px]</span> を追加しました。</div>
+    <div class="message-time">10: 2023/9/29(金) 23:40:46</div>
+  </div>
+</article>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">福田くん何の画像なん？</div>
+    <div class="message-time">11: 2023/9/29(金) 23:41:02</div>
+  </div>
+</article>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">仲良しおじさん達</div>
+    <div class="message-time">12: 2023/9/29(金) 23:41:07</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">福田君は3月のライオンの滑川臨也さんです</div>
+    <div class="message-time">13: 2023/9/29(金) 23:42:04</div>
+  </div>
+</article>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あー読んだことないや</div>
+    <div class="message-time">14: 2023/9/29(金) 23:42:30</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ほぼほぼシナリオの原文ママなんだけど、描写が上手すぎるんだよな……</div>
+    <div class="message-time">15: 2023/9/29(金) 23:59:40</div>
+  </div>
+</article><div class="elapsed"><span>19日 23時間 29分 経過</span></div>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202309f45a78ad&amp;i=ib67b6800">📎 輾転と町は_づけカゲImaji.html</a> <span class="filesize">[199.8 KB]</span> を追加しました。</div>
+    <div class="message-time">16: 2023/10/19(木) 23:29:00</div>
+  </div>
+</article>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした～</div>
+    <div class="message-time">17: 2023/10/19(木) 23:29:34</div>
+  </div>
+</article>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おつしたおつした</div>
+    <div class="message-time">18: 2023/10/19(木) 23:29:45</div>
+  </div>
+</article>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <span class="avatar avatar-fallback">I</span>
+    <strong>Imaji</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした。</div>
+    <div class="message-time">19: 2023/10/19(木) 23:29:48</div>
+  </div>
+</article>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202309f45a78ad&amp;i=i72d39fbe" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202309f45a78ad&amp;i=i72d39fbe" width="291" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202309f45a78ad&amp;i=i72d39fbe">📎 2023-10-19 (3).png</a> <span class="filesize">[324.7 KB, 1191x663px]</span> を追加しました。</div>
+    <div class="message-time">20: 2023/10/19(木) 23:30:11</div>
+  </div>
+</article>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でしたー！</div>
+    <div class="message-time">21: 2023/10/19(木) 23:30:16</div>
+  </div>
+</article>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れさまでした！</div>
+    <div class="message-time">22: 2023/10/19(木) 23:30:43</div>
+  </div>
+</article>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">驚きの生還率</div>
+    <div class="message-time">23: 2023/10/19(木) 23:30:48</div>
+  </div>
+</article>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">皆生きてんの！？</div>
+    <div class="message-time">24: 2023/10/19(木) 23:31:30</div>
+  </div>
+</article>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おっ前組も死者いない感じ？</div>
+    <div class="message-time">25: 2023/10/19(木) 23:31:58</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">真実は自分の目で確かめよう！</div>
+    <div class="message-time">26: 2023/10/19(木) 23:32:05</div>
+  </div>
+</article>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今から確かめるぜ</div>
+    <div class="message-time">27: 2023/10/19(木) 23:32:17</div>
+  </div>
+</article>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ近づかなきゃ全然安全（）なんだけどね</div>
+    <div class="message-time">28: 2023/10/19(木) 23:33:19</div>
+  </div>
+</article>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">安全（）</div>
+    <div class="message-time">29: 2023/10/19(木) 23:33:37</div>
+  </div>
+</article>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">もうやだこの街</div>
+    <div class="message-time">30: 2023/10/19(木) 23:33:45</div>
+  </div>
+</article>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まじめに「あーこれアカン奴や死んだらユグドラに転生か？」とか思ってたからなんで生きてるのか分からん</div>
+    <div class="message-time">31: 2023/10/19(木) 23:35:24</div>
+  </div>
+</article>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おれのウルトも気合の雄たけびかもしれん</div>
+    <div class="message-time">32: 2023/10/19(木) 23:36:32</div>
+  </div>
+</article>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">最後は攻撃されたら4d6ダメージ、幸運か回避で2d6ダメージにできるけど<br>うわさ失敗するまでチャレンジし続けないといけないので普通に死にます</div>
+    <div class="message-time">33: 2023/10/19(木) 23:36:43</div>
+  </div>
+</article>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">きつｗｗｗｗ</div>
+    <div class="message-time">34: 2023/10/19(木) 23:36:55</div>
+  </div>
+</article>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">無理wwww</div>
+    <div class="message-time">35: 2023/10/19(木) 23:38:00</div>
+  </div>
+</article>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ダメージがユグドラなんよ</div>
+    <div class="message-time">36: 2023/10/19(木) 23:38:40</div>
+  </div>
+</article>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <span class="avatar avatar-fallback">I</span>
+    <strong>Imaji</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">本当にあれは幸運でしたね</div>
+    <div class="message-time">37: 2023/10/19(木) 23:38:53</div>
+  </div>
+</article>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">鉄塔の能力攻撃じゃん</div>
+    <div class="message-time">38: 2023/10/19(木) 23:39:03</div>
+  </div>
+</article>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">[メイン] 福田聡蘭 : 花村？花森？<br><br>[メイン] 福田聡蘭 : 忘れました<br><br>草</div>
+    <div class="message-time">39: 2023/10/19(木) 23:41:43</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>

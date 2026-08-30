@@ -1,0 +1,1605 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>【赤信号みんなで渡れば】開発部屋</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>【赤信号みんなで渡れば】開発部屋</h1>
+    <div class="meta">Fresh Meeting archive / room id: 202506f27063a8 / ended</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=202506f27063a8"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+	<a href="https://www.freshmeeting.com/forumopen.php?f=202506f27063a8"><img src="https://www.freshmeeting.com/img/reopen.gif" alt="ミーティングを再開する"><span>ミーティングを再開する</span></a>
+</span>
+
+<p>
+	開発部屋<a href="https://chatgpt.com/share/684d6e77-d518-800a-a87a-2ded14e296d2" target="_blank">https:<wbr>/<wbr>/<wbr>chatgpt.<wbr>com/<wbr>share/<wbr>684d6e77-<wbr>d518-<wbr>800a-<wbr>a87a-<wbr>2ded14e296<wbr>d2</a><br><br>はむウル：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202506mohisignal/01_HmWl.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202506mohi<wbr>signal/<wbr>01_<wbr>HmWl.<wbr>html</a></p></div>
+<!-- replay-links:begin -->
+<div class="replay-links-panel" style="margin-top:10px;padding:10px 12px;background:#eef8e8;border-left:4px solid #4b982a;overflow-wrap:anywhere">
+  <strong>セッションログ</strong>
+  <ul style="margin:6px 0 0 1.2em;padding:0">
+    <li><a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202506mohisignal/01_HmWl.html" target="_blank" rel="noopener">はむウル</a></li><li><a href="https://www.freshmeeting.com/forumfile.php?f=202506f27063a8&amp;i=i37afa6a5" target="_blank" rel="noopener">カゲラバ.zip</a></li>
+  </ul>
+</div>
+<!-- replay-links:end -->
+  </div>
+</header>
+<main>
+
+<div class="attachment-warning">
+  このログには Fresh Meeting 上の添付ファイル参照が 6 件あります。
+  HTML本文とは別に添付ファイル本体の保全が必要です。
+</div>
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">&nbsp; &nbsp;【赤信号みんなで渡れば】<br>中層のウトガルド工業地帯にてモヒカン達による「集団赤信号無視事件」が頻発。<br>交通秩序は崩壊して事故多発地帯となり、YDFやスヴァリンは機能不全。<br>依頼を受けたあなたたちはこの事態を止めに行くことになる<br><br>【募集人数】１～２人<br>【参加資格】中層に来れるPCなら誰でも<br><br>＜シナリオ概要＞<br>　【開催日時】１日で終わるかも<br>　【開催場所】ユドナリウムリリィ<br>　【暴走チェック】最初に6D6以上<br>　【コメディ：シリアス】9:1<br>　【ライト：ヘヴィ】9:1<br>　【探索：戦闘】8:2<br>　【難易度】低い<br>　【補足】<br>　Chatアレクから出力したシンプルな卓となります。<br>　サプリメントの使用は自由。必要ならばGM裁量。</div>
+    <div class="message-time">1: 2025/6/14(土) 15:27:25</div>
+  </div>
+</article>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">2: 2025/6/14(土) 15:48:19</div>
+  </div>
+</article>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">赤鬼<br>最大HP:36 最大PP:21 初期暴走率:40%<br>攻撃力:4D6 防御力:2 精神抵抗:1 行動値:2<br>SS:9+2D6 命中:11+2D6 回避:5+2D6<br>発動スペック:4 能力精度:4 活性タイプ:反応型<br>SPE:【奥義】 カルマ:【道化師】2/2<br>特殊武装:【強化シナプス】【スモーク】【AIナビゲーション】【高出力ブースター】<br>筋:16 耐:4 知:2 精:2 器:6 敏:4 運:14<br>力:17 威:11 観:4 察:5 知:3 技:5<br>隠:6 俊:5 話:5 読:4 閃:10 幸:15<br><br>オリジナル特性<br>【赤は進め！】　制止系もしくは操作系の解除判定に失敗した時、格闘攻撃を一度行う。この攻撃時に付与効果は適用しない。<br>【哲学的暴走論】　HPが10を下回った場合、暴走率を100％まで上昇させる（暴走・臨界ロールは行わない）<br>【道化的運命論】　このエネミーはカルマ【道化師】を回避判定時のみ使用する。<br><br>SPE：奥義<br>消費：ＰＰ４点<br>以下の効果を適用した上で通常攻撃を行う。<br>このＳＰＥの宣言にはアクションフェイズを消費する。<br>●ペネトレイション<br>●能力攻撃力分のダメージボーナス</div>
+    <div class="message-time">3: 2025/6/14(土) 15:56:27</div>
+  </div>
+</article>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202506f27063a8&amp;i=id609372b" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202506f27063a8&amp;i=id609372b" width="84" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202506f27063a8&amp;i=id609372b">📎 モヒカンダック.png</a> <span class="filesize">[451.7 KB, 550x1100px]</span> を追加しました。</div>
+    <div class="message-time">4: 2025/6/14(土) 16:08:26</div>
+  </div>
+</article>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202506f27063a8&amp;i=i12a5044d" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202506f27063a8&amp;i=i12a5044d" width="57" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202506f27063a8&amp;i=i12a5044d">📎 モヒカンエース.png</a> <span class="filesize">[77.4 KB, 212x640px]</span> を追加しました。</div>
+    <div class="message-time">5: 2025/6/14(土) 16:08:40</div>
+  </div>
+</article><div class="elapsed"><span>5時間 36分 経過</span></div>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">シナリオ詳細はGPTくんのページ読んでね</div>
+    <div class="message-time">6: 2025/6/14(土) 21:44:43</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">正直一番やりやすかったのはトーチのクソみてえな対人態度です（小声）</div>
+    <div class="message-time">7: 2025/6/14(土) 22:00:09</div>
+  </div>
+</article>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">トーチはちょっとキリシロ味感じた</div>
+    <div class="message-time">8: 2025/6/14(土) 22:00:36</div>
+  </div>
+</article>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">9: 2025/6/14(土) 22:01:05</div>
+  </div>
+</article>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いつも食べてる料理の味が特に強いなって</div>
+    <div class="message-time">10: 2025/6/14(土) 22:01:16</div>
+  </div>
+</article>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">Chatアレクくんが胡散臭いカタコトキャラ提示してくれてたの忘れてた</div>
+    <div class="message-time">11: 2025/6/14(土) 22:01:43</div>
+  </div>
+</article>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうそうこの味この味って食べてました</div>
+    <div class="message-time">12: 2025/6/14(土) 22:01:59</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でもモヒカンとかもキリシロさんの味しましたよ。これほんとにインスタント麺なんですか？？</div>
+    <div class="message-time">13: 2025/6/14(土) 22:02:31</div>
+  </div>
+</article>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">Chatアレクくんのログ読んだらわかるよ<br>RPはまあ…基本私だけど…</div>
+    <div class="message-time">14: 2025/6/14(土) 22:03:07</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">■背景設定<br><br>舞台は中層【ミズガルズ】、ウトガルド工業地帯。<br>近ごろ、この一帯で「集団赤信号無視事件」が頻発。発端はある無名のモヒカン男が放った「青になったら止まれ」という哲学的な謎発言。<br>なぜかそれが暴走族たちの間でバズり、交通秩序は崩壊、事故多発地帯に。YDFやスヴァリンは機能不全。<br>だが、それはただの珍事ではなく、裏である企業が密かに「市民管理AI」のデモ実験を進めていたことが判明する。<br><br>モヒカン１人以上出してねと条件付けはしたけどそれでこれ出してくるの凄いだろ</div>
+    <div class="message-time">15: 2025/6/14(土) 22:04:28</div>
+  </div>
+</article><div class="elapsed"><span>3日 17時間 25分 経過</span></div>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういえば桑久保君はラインゴールドから中層の事件にルーンの企業が絡んでるんちゃうか？という密命とエレナを討伐するか見定める密命があったことにします。</div>
+    <div class="message-time">16: 2025/6/18(水) 15:29:54</div>
+  </div>
+</article>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">討伐されなくてよかった～</div>
+    <div class="message-time">17: 2025/6/18(水) 15:39:09</div>
+  </div>
+</article>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">描写されてないだけで後日談で本隊派遣されて討伐されたかもしれない</div>
+    <div class="message-time">18: 2025/6/18(水) 15:39:42</div>
+  </div>
+</article>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でも桑久保くんはエレナが成長できるって信じてるから…</div>
+    <div class="message-time">19: 2025/6/18(水) 15:41:33</div>
+  </div>
+</article>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">評価:保留</div>
+    <div class="message-time">20: 2025/6/18(水) 15:42:14</div>
+  </div>
+</article><div class="elapsed"><span>17日 9時間 41分 経過</span></div>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、写真撮ってないまま出ちゃった</div>
+    <div class="message-time">21: 2025/7/6(日) 1:23:29</div>
+  </div>
+</article>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れさまでした</div>
+    <div class="message-time">22: 2025/7/6(日) 1:23:31</div>
+  </div>
+</article>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした！</div>
+    <div class="message-time">23: 2025/7/6(日) 1:23:54</div>
+  </div>
+</article>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした～～～～</div>
+    <div class="message-time">24: 2025/7/6(日) 1:24:03</div>
+  </div>
+</article>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">トーチのクソ態度にこびへつらうの楽しかった～～～</div>
+    <div class="message-time">25: 2025/7/6(日) 1:24:24</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">結構困ったけど電車呼ぶって発言で助かった……助かってはない</div>
+    <div class="message-time">26: 2025/7/6(日) 1:25:08</div>
+  </div>
+</article>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">守銭奴はこれだから……（呆れ）</div>
+    <div class="message-time">27: 2025/7/6(日) 1:26:07</div>
+  </div>
+</article>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">すまない！！左沢は絶対ああするんだ！！</div>
+    <div class="message-time">28: 2025/7/6(日) 1:26:09</div>
+  </div>
+</article>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">わかってます！</div>
+    <div class="message-time">29: 2025/7/6(日) 1:26:20</div>
+  </div>
+</article>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">理解ある同行者</div>
+    <div class="message-time">30: 2025/7/6(日) 1:26:37</div>
+  </div>
+</article>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">頼む！金をばらまかないでくれ！！ばらまいた！！！！<br>寝返った！！！</div>
+    <div class="message-time">31: 2025/7/6(日) 1:27:07</div>
+  </div>
+</article>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お前！！金さえ貰えればなんでも良いのか！！</div>
+    <div class="message-time">32: 2025/7/6(日) 1:27:34</div>
+  </div>
+</article>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">金さえあれば何でも良いんだろ！！</div>
+    <div class="message-time">33: 2025/7/6(日) 1:28:28</div>
+  </div>
+</article>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オイラは金さえ貰えるなら何でもいいんすよ！！！！！</div>
+    <div class="message-time">34: 2025/7/6(日) 1:28:51</div>
+  </div>
+</article>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">100万あげるから！つって左沢オークションすればよかったな（？）</div>
+    <div class="message-time">35: 2025/7/6(日) 1:29:04</div>
+  </div>
+</article>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なびく</div>
+    <div class="message-time">36: 2025/7/6(日) 1:29:12</div>
+  </div>
+</article>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">トーチはヘイトモンスターだけど金出して終わる相手に金を出さないような奴でもないから…</div>
+    <div class="message-time">37: 2025/7/6(日) 1:29:15</div>
+  </div>
+</article>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">かしこい</div>
+    <div class="message-time">38: 2025/7/6(日) 1:29:36</div>
+  </div>
+</article>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">虹ちゃんに借金してる間は関係切れないしこれが最善だったな……（？？？）</div>
+    <div class="message-time">39: 2025/7/6(日) 1:30:07</div>
+  </div>
+</article>
+<article class="message" id="res40">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、内藤も左沢もオリ特性がどれくらいヤバいかな～ってのはまだ分かりませんでした！<br>二人とも特性の強さが暴走率に依存するのと、暴走が60止まりだったので！</div>
+    <div class="message-time">40: 2025/7/6(日) 1:30:32</div>
+  </div>
+</article>
+<article class="message" id="res41">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いきなり90からスタートしてませんか？って最初に言おうとしたけどやめました</div>
+    <div class="message-time">41: 2025/7/6(日) 1:31:02</div>
+  </div>
+</article>
+<article class="message" id="res42">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">キリ卓だぞ！！！通ったらどうする！！！！</div>
+    <div class="message-time">42: 2025/7/6(日) 1:31:16</div>
+  </div>
+</article>
+<article class="message" id="res43">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">通りそうだし50、70、90ガチャが一気に来るのはヤバイと思ったから飲み込んだ</div>
+    <div class="message-time">43: 2025/7/6(日) 1:31:49</div>
+  </div>
+</article>
+<article class="message" id="res44">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">90ガチャさえ突破出来るなら左沢のオリ特性ヤバそうなんだよな...</div>
+    <div class="message-time">44: 2025/7/6(日) 1:32:15</div>
+  </div>
+</article>
+<article class="message" id="res45">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はじまってもないのにボロボロスタートはさすがにってｗｗｗ</div>
+    <div class="message-time">45: 2025/7/6(日) 1:32:26</div>
+  </div>
+</article>
+<article class="message" id="res46">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、逃げたいって言ってた場面で内藤だけ逃げてたらどうなってました？</div>
+    <div class="message-time">46: 2025/7/6(日) 1:35:11</div>
+  </div>
+</article>
+<article class="message" id="res47">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">内藤から人を殴らないのはおいておいて、トーチだけ殴ろうにも虹くんが庇ってきそうだし<br>逃げるしかないかなって……</div>
+    <div class="message-time">47: 2025/7/6(日) 1:37:05</div>
+  </div>
+</article>
+<article class="message" id="res48">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">GM「いいよ」</div>
+    <div class="message-time">48: 2025/7/6(日) 1:38:21</div>
+  </div>
+</article>
+<article class="message" id="res49">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">逃げた後は卓中でも言った通り何も考えてなかったのであの展開でよかったのだ</div>
+    <div class="message-time">49: 2025/7/6(日) 1:39:49</div>
+  </div>
+</article>
+<article class="message" id="res50">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">スマートグラスを上手く持ち帰って公的機関なりで調べたらトーチの目論見を潰せます<br>左沢がどうなるかはまあ彼女の自己責任の範疇でしょう</div>
+    <div class="message-time">50: 2025/7/6(日) 1:40:09</div>
+  </div>
+</article>
+<article class="message" id="res51">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">依頼達成の電話かけろって言われてたからそうしたあとに署に帰還してメガネ調べてもらって終わりだったかも</div>
+    <div class="message-time">51: 2025/7/6(日) 1:42:36</div>
+  </div>
+</article>
+<article class="message" id="res52">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">これはどうでもいいことなのですが当初は土日までに同行者立候補がなかったらソロでよしくんと行くつもりでした</div>
+    <div class="message-time">52: 2025/7/6(日) 1:44:47</div>
+  </div>
+</article>
+<article class="message" id="res53">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それはそれで見たかったかも</div>
+    <div class="message-time">53: 2025/7/6(日) 2:09:47</div>
+  </div>
+</article><div class="elapsed"><span>6時間 45分 経過</span></div>
+<article class="message" id="res54">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202506f27063a8&amp;i=i37afa6a5">📎 赤信号卓 カゲラバ.zip</a> <span class="filesize">[4.8 MB]</span> を追加しました。</div>
+    <div class="message-time">54: 2025/7/6(日) 8:55:17</div>
+  </div>
+</article>
+<article class="message" id="res55">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あざっす！</div>
+    <div class="message-time">55: 2025/7/6(日) 9:19:04</div>
+  </div>
+</article>
+<article class="message" id="res56">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！</div>
+    <div class="message-time">56: 2025/7/6(日) 10:49:51</div>
+  </div>
+</article>
+<article class="message" id="res57">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういや依頼人が内藤にデートに誘われたら断ろうと考えたついでに依頼人の能力が決まってました<br>「相手が口にした望みが叶う確率を下げる運命操作能力」というアンノウンです</div>
+    <div class="message-time">57: 2025/7/6(日) 11:23:08</div>
+  </div>
+</article>
+<article class="message" id="res58">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そーなの！！！？</div>
+    <div class="message-time">58: 2025/7/6(日) 11:58:06</div>
+  </div>
+</article><div class="elapsed"><span>6時間 17分 経過</span></div>
+<article class="message" id="res59">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エレナ・“エルドリッチ”・ガルシア＝モンドラゴン<br>「オ～ッホッホッホ！　この私が来たからには安心安全ですわ～～！」　本来の受注者から依頼書を略奪してやってきました<br><br>ええ…</div>
+    <div class="message-time">59: 2025/7/6(日) 18:15:29</div>
+  </div>
+</article>
+<article class="message" id="res60">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">依頼人「で、そうね。依頼内容なんだけど…まあ、ここに来るまでに嫌と言うほど理解したと思うわ」<br>GM：あなた達はここに来るまでの間、信号無視仕放題のモヒカンたちを多数目撃しています<br>桑久保 頌太「あぁ確認させてもらった。あれは由々しき事態だ。」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「えぇ……あれほどモヒカンたちが荒れ狂う季節になりましたのね」<br>依頼人「季節関係なく暴れ狂ってると思うけど…」<br>桑久保 頌太「風物詩なのか。勉強不足だったな。」<br><br>草</div>
+    <div class="message-time">60: 2025/7/6(日) 18:16:33</div>
+  </div>
+</article>
+<article class="message" id="res61">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202506f27063a8&amp;i=iaa540b3e" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202506f27063a8&amp;i=iaa540b3e" width="270" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202506f27063a8&amp;i=iaa540b3e">📎 スクリーンショット (137).png</a> <span class="filesize">[95.5 KB, 532x320px]</span> を追加しました。</div>
+    <div class="message-time">61: 2025/7/6(日) 18:17:36</div>
+  </div>
+</article>
+<article class="message" id="res62">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">プロやな────</div>
+    <div class="message-time">62: 2025/7/6(日) 18:17:44</div>
+  </div>
+</article>
+<article class="message" id="res63">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">桑久保 頌太<br>「君の事は高貴な花のように丁重に扱おう。今日は君には怪我一つさせないとここに誓う。」<br><br>かっこいい</div>
+    <div class="message-time">63: 2025/7/6(日) 18:18:37</div>
+  </div>
+</article>
+<article class="message" id="res64">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エレナ・“エルドリッチ”・ガルシア＝モンドラゴン<br>「こら～～～～！」　どすどす走っていきます＠<br><br>おもそう</div>
+    <div class="message-time">64: 2025/7/6(日) 18:19:05</div>
+  </div>
+</article>
+<article class="message" id="res65">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">モブモヒカン「へっ、そんなわけで俺達は走ってるのさ！血の道をな！」<br>モブモヒカン：信号が赤になったので行ってしまいます＠<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン：その前に殺せませんか？<br>GM：いいよ<br><br>は！？</div>
+    <div class="message-time">65: 2025/7/6(日) 18:19:53</div>
+  </div>
+</article>
+<article class="message" id="res66">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いいよじゃないが</div>
+    <div class="message-time">66: 2025/7/6(日) 18:19:58</div>
+  </div>
+</article>
+<article class="message" id="res67">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202506f27063a8&amp;i=ib3fb6a64" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202506f27063a8&amp;i=ib3fb6a64" width="174" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202506f27063a8&amp;i=ib3fb6a64">📎 スクリーンショット (138).png</a> <span class="filesize">[84.7 KB, 454x426px]</span> を追加しました。</div>
+    <div class="message-time">67: 2025/7/6(日) 18:20:34</div>
+  </div>
+</article>
+<article class="message" id="res68">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">桑久保 頌太：能力を使ってモヒカンを殺させません<br>黄金郷の刺客：なにッ<br>桑久保 頌太：殺すな。殺すぞ<br><br>！！！！</div>
+    <div class="message-time">68: 2025/7/6(日) 18:21:14</div>
+  </div>
+</article>
+<article class="message" id="res69">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">やるな…</div>
+    <div class="message-time">69: 2025/7/6(日) 18:21:18</div>
+  </div>
+</article>
+<article class="message" id="res70">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">黄金郷の刺客：２ｔトラックぐらいの図体があります＠<br><br>でっっっっっっっか！！！！！！！</div>
+    <div class="message-time">70: 2025/7/6(日) 18:21:50</div>
+  </div>
+</article>
+<article class="message" id="res71">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ライオンくらいかと思ってたわ！！！！！！！</div>
+    <div class="message-time">71: 2025/7/6(日) 18:21:56</div>
+  </div>
+</article>
+<article class="message" id="res72">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">桑久保 頌太「ロシナンテか。なるほど。良い名だ。」 &nbsp; &nbsp;<br>桑久保 頌太「しかしだな。躾はしっかりとしておくべきだ。飼い主の品格が問われる問題だ。」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「あら……ロシナンテはお利口でしてよ？」 &nbsp; &nbsp;<br>桑久保 頌太「あぁ、それは俺も否定しない。」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「｜お手《¡Dame la pata!》！」<br>黄金郷の刺客：しばらくお嬢を見つめた後お嬢に噛みつきます<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン：鬣を引っ掴んでそのまま首をへし折ります<br>黄金郷の刺客：絶命します<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「不躾な野良猫ですわ～～～！」<br>桑久保 頌太：<br><br>草</div>
+    <div class="message-time">72: 2025/7/6(日) 18:23:36</div>
+  </div>
+</article>
+<article class="message" id="res73">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">終わってる</div>
+    <div class="message-time">73: 2025/7/6(日) 18:23:38</div>
+  </div>
+</article>
+<article class="message" id="res74">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">桑久保 頌太「エレナ。」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「？」＠ &nbsp; &nbsp;<br>桑久保 頌太「なぜロシナンテを殺した。」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「ペットには躾が大切ですわ？」 &nbsp; &nbsp;<br>桑久保 頌太「あぁ、そうだ。だが、死んでしまっては反省の機会がない。これは躾ではない。」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「？？？」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「獣畜生が反省……？」＠ &nbsp; &nbsp;<br>桑久保 頌太「君の立ち振る舞いは貴族だ。貴族たるもの、無暗な力の汎用は控えるべきだ。」 &nbsp; &nbsp;<br>桑久保 頌太「至らないものがいた場合、おおらかな心で許すべきだ。」<br>桑久保 頌太「俺だってこんなことは言いたくないが、君のためだ。」 &nbsp; &nbsp;<br>桑久保 頌太「反省しなさい！」＠ &nbsp; &nbsp;<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「！！！！！！！！！！！！！！！！！」<br><br>！！！！！！！！</div>
+    <div class="message-time">74: 2025/7/6(日) 18:25:33</div>
+  </div>
+</article>
+<article class="message" id="res75">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">強い</div>
+    <div class="message-time">75: 2025/7/6(日) 18:25:35</div>
+  </div>
+</article>
+<article class="message" id="res76">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">モヒカン：アワアワしてます＠<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「尋問ですわ～～～！」<br>桑久保 頌太「落ち着いて欲しい。別に取って食おうってわけじゃない。」<br><br>本当ですか？？隣の奴だいぶ危なそうですよ？？</div>
+    <div class="message-time">76: 2025/7/6(日) 18:26:39</div>
+  </div>
+</article>
+<article class="message" id="res77">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">桑久保 頌太<br>「そうか。希少な物なんだな。もう無くすんじゃないぞ。」と渡してあげます。<br><br>やさしい</div>
+    <div class="message-time">77: 2025/7/6(日) 18:27:22</div>
+  </div>
+</article>
+<article class="message" id="res78">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">モヒカン「えっ、い、いいんですかい…？」＠<br>桑久保 頌太「？」<br>桑久保 頌太「良いも何も、君たちの所持品だ。」<br>桑久保 頌太「ちゃんと先輩に届けるんだぞ」 &nbsp; &nbsp;<br>モヒカン「えっ？」 &nbsp; &nbsp;<br>桑久保 頌太「？」 &nbsp; &nbsp;<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「？」<br>モヒカン「俺が拾ったから俺のもんですけど…だってチーム世紀末の中でもそんな感じで色んな人の手に渡ってるし…」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「…………」<br><br>雲行きが怪しくなって草</div>
+    <div class="message-time">78: 2025/7/6(日) 18:28:39</div>
+  </div>
+</article>
+<article class="message" id="res79">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">殴っていいタイプのモヒカンのRPをするのが上手い</div>
+    <div class="message-time">79: 2025/7/6(日) 18:28:57</div>
+  </div>
+</article>
+<article class="message" id="res80">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「成程……」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「貴方……“同志コンキスタドール”ですわね？」<br>モヒカン「コン…？」＠<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「貴方はそのSenpaiとやらに自らの悲願を独占され、歯噛みしていた」<br>桑久保 頌太「？」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「しかしその悲願を、今あなたは自らの力で自分のものにしたというわけです」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「つまり……貴方の意思と力が……今、そのSenpaiとやらを越えたのです」<br><br>？</div>
+    <div class="message-time">80: 2025/7/6(日) 18:30:13</div>
+  </div>
+</article>
+<article class="message" id="res81">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この人は何を言ってるんですか？</div>
+    <div class="message-time">81: 2025/7/6(日) 18:30:18</div>
+  </div>
+</article>
+<article class="message" id="res82">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エレナ・“エルドリッチ”・ガルシア＝モンドラゴン：鎖を思いっきり引っ張って首をへし折ります＠<br>モヒカン「あびゃ」＠<br><br>うおおおおおおい！！！！！！！！！</div>
+    <div class="message-time">82: 2025/7/6(日) 18:30:47</div>
+  </div>
+</article>
+<article class="message" id="res83">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">桑久保 頌太：応用技でペッシを守れますか？ &nbsp; &nbsp; &nbsp; &nbsp;<br>GM：両極端な二人<br><br>なんですかこのペア</div>
+    <div class="message-time">83: 2025/7/6(日) 18:31:17</div>
+  </div>
+</article>
+<article class="message" id="res84">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんで殺すんですか</div>
+    <div class="message-time">84: 2025/7/6(日) 18:32:48</div>
+  </div>
+</article>
+<article class="message" id="res85">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんで？</div>
+    <div class="message-time">85: 2025/7/6(日) 18:32:57</div>
+  </div>
+</article>
+<article class="message" id="res86">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">殺すぞ</div>
+    <div class="message-time">86: 2025/7/6(日) 18:33:01</div>
+  </div>
+</article>
+<article class="message" id="res87">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「ふ～～～～ん！」　桑久保の言葉に対してぷいっとそっぽ向きます＠<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「どうせ私に行儀よく真面目なんて出来やしませんわ！」＠<br>桑久保 頌太「エレナ。」<br>桑久保 頌太「君ならできる。」<br>桑久保 頌太「俺はそう信じている。」<br><br>かっこいい</div>
+    <div class="message-time">87: 2025/7/6(日) 18:33:03</div>
+  </div>
+</article>
+<article class="message" id="res88">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エレナ・“エルドリッチ”・ガルシア＝モンドラゴン<br>「忌まわしき呪物め！」　癇癪を起したように（癇癪そのもの）眼鏡を投げ捨てます<br><br>草</div>
+    <div class="message-time">88: 2025/7/6(日) 18:33:43</div>
+  </div>
+</article>
+<article class="message" id="res89">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">癇癪を起したように（癇癪そのもの）すき</div>
+    <div class="message-time">89: 2025/7/6(日) 18:33:59</div>
+  </div>
+</article>
+<article class="message" id="res90">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">𝓡𝓮𝓭 𝓦𝓸𝓵𝓯：何なんだこのコンビ<br><br>ほぼアンタのせいだよ</div>
+    <div class="message-time">90: 2025/7/6(日) 18:34:34</div>
+  </div>
+</article>
+<article class="message" id="res91">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">桑久保 頌太：モヒーズに並走して聞き込みします &nbsp; &nbsp;<br>モブモヒカン「なんだあ！随分気合いの入ったマシンじゃねえか！」＠ &nbsp; &nbsp;<br>桑久保 頌太「エレナが用意したんだ。誉めてやってくれ。」<br>モブモヒカン「へえ～！凄えな～！」<br><br>草</div>
+    <div class="message-time">91: 2025/7/6(日) 18:35:41</div>
+  </div>
+</article>
+<article class="message" id="res92">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">モブモヒカン：もちろん青信号で止まって赤信号で進んでます<br>桑久保 頌太：赤信号で止まって青信号で進んで追いつきます<br><br>えらい</div>
+    <div class="message-time">92: 2025/7/6(日) 18:36:05</div>
+  </div>
+</article>
+<article class="message" id="res93">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「“赤は進め”こそがこの世のルール……貴方はそう言いましたね」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「そして貴方は赤い、故に進み続けていると……」 &nbsp; &nbsp; &nbsp; &nbsp;<br>赤鬼「信号は神じゃねぇ。なら、俺たちが赤を進む理由にならねぇか？」＠<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「ならば貴方には重大な誤謬があると言わねばなりませんわ！」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「それ即ち――」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「貴方の立ち絵は言うほど赤くありませんわ～～～～！！」＠<br>桑久保 頌太：<br> &nbsp; &nbsp; &nbsp; &nbsp;<br>赤鬼「……」 &nbsp; &nbsp; &nbsp; &nbsp;<br>赤鬼「フッ…」<br>赤鬼「言ったな…言いやがったな…」<br>赤鬼「ピクシブ百科事典のモヒカンキャラの一覧から適当にそれっぽいモヒカンを選んだってことを…」<br><br>草草の草</div>
+    <div class="message-time">93: 2025/7/6(日) 18:40:47</div>
+  </div>
+</article>
+<article class="message" id="res94">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なにこの会話</div>
+    <div class="message-time">94: 2025/7/6(日) 18:40:50</div>
+  </div>
+</article>
+<article class="message" id="res95">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">赤鬼「なんかノリの良い画像だったからいい感じじゃんって思ってチョイスされたことを…」<br>赤鬼「俺の対抗馬が金色のガッシュ！！のモヒカン・エースだったことを！」<br><br>あっ上の方にあるモヒカンエースそういうことなんだ！！！！！！</div>
+    <div class="message-time">95: 2025/7/6(日) 18:41:19</div>
+  </div>
+</article>
+<article class="message" id="res96">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">赤鬼「許せねえ…俺だって赤鬼になりたくてなったわけじゃねえ…YggGPTがそんな名前をつけたからってだけの話だ…」<br><br>AIが決めた名前だったのね！！！！！！</div>
+    <div class="message-time">96: 2025/7/6(日) 18:41:47</div>
+  </div>
+</article>
+<article class="message" id="res97">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">かわいそう</div>
+    <div class="message-time">97: 2025/7/6(日) 18:42:16</div>
+  </div>
+</article>
+<article class="message" id="res98">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">桑久保くん「？」</div>
+    <div class="message-time">98: 2025/7/6(日) 18:42:40</div>
+  </div>
+</article>
+<article class="message" id="res99">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「私の異能によって貴方を黄金へトランスし……」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「貴方の立ち絵も黄金色に塗り替えてさしあげましょう！」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「赤鬼とは贅沢な名です！　貴方の名は今日から金鬼……いや」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「｜金を被る者《エル・ドラード》ですわ～～～～！」＠<br><br>もっと贅沢になってない？</div>
+    <div class="message-time">99: 2025/7/6(日) 18:42:49</div>
+  </div>
+</article>
+<article class="message" id="res100">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202506f27063a8&amp;i=ie2806686" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202506f27063a8&amp;i=ie2806686" width="197" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202506f27063a8&amp;i=ie2806686">📎 スクリーンショット (140).png</a> <span class="filesize">[124.7 KB, 641x531px]</span> を追加しました。</div>
+    <div class="message-time">100: 2025/7/6(日) 18:43:35</div>
+  </div>
+</article>
+<article class="message" id="res101">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">草</div>
+    <div class="message-time">101: 2025/7/6(日) 18:43:38</div>
+  </div>
+</article>
+<article class="message" id="res102">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">こんなん笑うだろ</div>
+    <div class="message-time">102: 2025/7/6(日) 18:43:42</div>
+  </div>
+</article>
+<article class="message" id="res103">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、性能微妙に違うんだな</div>
+    <div class="message-time">103: 2025/7/6(日) 18:46:21</div>
+  </div>
+</article>
+<article class="message" id="res104">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ゴングを！って言われたらゴングやるしかないじゃん</div>
+    <div class="message-time">104: 2025/7/6(日) 18:46:21</div>
+  </div>
+</article>
+<article class="message" id="res105">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">普通はやらないよ</div>
+    <div class="message-time">105: 2025/7/6(日) 18:46:39</div>
+  </div>
+</article>
+<article class="message" id="res106">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カァーン！！！って言うかなって思ったらカァーン！！！って言った</div>
+    <div class="message-time">106: 2025/7/6(日) 18:46:42</div>
+  </div>
+</article>
+<article class="message" id="res107">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">桑久保くんはゴングを！って言われたらゴングやるよ</div>
+    <div class="message-time">107: 2025/7/6(日) 18:47:01</div>
+  </div>
+</article>
+<article class="message" id="res108">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だってゴングを求められてるしできるんだから</div>
+    <div class="message-time">108: 2025/7/6(日) 18:47:25</div>
+  </div>
+</article>
+<article class="message" id="res109">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">できる</div>
+    <div class="message-time">109: 2025/7/6(日) 18:49:12</div>
+  </div>
+</article>
+<article class="message" id="res110">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">赤鬼：だがここでオリジナル特性発動！<br>【赤は進め！】　制止系もしくは操作系の解除判定に失敗した時、格闘攻撃を一度行う。この攻撃時に付与効果は適用しない。<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン：クックック……<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン：回避放棄だ＠<br>桑久保 頌太：【防壁(ディフェンシブウォール)】PP9S3　付加発動　物理無効　【共鳴S】だ！！！<br>𝓡𝓮𝓭 𝓦𝓸𝓵𝓯：！！！！！！！　待て桑久保くん！<br>桑久保 頌太：なぜだ！<br>𝓡𝓮𝓭 𝓦𝓸𝓵𝓯：実験があるのだ！<br>𝓡𝓮𝓭 𝓦𝓸𝓵𝓯：科学が！<br>桑久保 頌太：俺はエレナ嬢に一切怪我をさせないという誓いを立てたのだ！<br>桑久保 頌太：紳士の誓いを<br>桑久保 頌太：従者としての役目を！<br><br>草</div>
+    <div class="message-time">110: 2025/7/6(日) 18:50:34</div>
+  </div>
+</article>
+<article class="message" id="res111">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ここのやりとり面白すぎる</div>
+    <div class="message-time">111: 2025/7/6(日) 18:50:41</div>
+  </div>
+</article>
+<article class="message" id="res112">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">0ダメージにしたい味方と新AE試したい味方</div>
+    <div class="message-time">112: 2025/7/6(日) 18:50:53</div>
+  </div>
+</article>
+<article class="message" id="res113">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エレナ・“エルドリッチ”・ガルシア＝モンドラゴン：<br>まずいったん、赤鬼の至近距離での一撃をまともにもらいます<br>巨体が浮き、よろめきます<br>（本当は全然喰らってないけどプロレスの美学なので）</div>
+    <div class="message-time">113: 2025/7/6(日) 18:52:45</div>
+  </div>
+</article>
+<article class="message" id="res114">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ここすき</div>
+    <div class="message-time">114: 2025/7/6(日) 18:52:48</div>
+  </div>
+</article>
+<article class="message" id="res115">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">巨体を浮かせる1ダメージ</div>
+    <div class="message-time">115: 2025/7/6(日) 18:52:58</div>
+  </div>
+</article>
+<article class="message" id="res116">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エレナ・“エルドリッチ”・ガルシア＝モンドラゴン：<br>回転を交えたパワーボムで赤鬼を地上に叩き伏せ、そのまま抑え込んで3カウントをとります＠<br>桑久保 頌太：盛大な拍手を送ります<br><br>いいやつ</div>
+    <div class="message-time">116: 2025/7/6(日) 18:54:02</div>
+  </div>
+</article>
+<article class="message" id="res117">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">GM：というわけで戦闘終了です！ &nbsp; &nbsp;<br>桑久保 頌太「エレナ！」 &nbsp; &nbsp;<br>桑久保 頌太「すまない！俺は君にけがをさせないと誓っていたのに。」と深く頭を下げ謝ります。<br>桑久保 頌太：救護セットを使ってエレナのかすり傷を治療します<br><br>ここすき</div>
+    <div class="message-time">117: 2025/7/6(日) 18:54:54</div>
+  </div>
+</article>
+<article class="message" id="res118">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">赤鬼「ぐ…お、俺の哲学が…間違ってたのか…」<br>赤鬼「赤で進んだら…でかい女に投げられる…」＠<br>桑久保 頌太「そうだ。」<br><br>そうなんだ</div>
+    <div class="message-time">118: 2025/7/6(日) 18:55:45</div>
+  </div>
+</article>
+<article class="message" id="res119">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">赤で進んでみようかなあ</div>
+    <div class="message-time">119: 2025/7/6(日) 18:55:49</div>
+  </div>
+</article>
+<article class="message" id="res120">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうだぞ</div>
+    <div class="message-time">120: 2025/7/6(日) 18:55:55</div>
+  </div>
+</article>
+<article class="message" id="res121">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エレナ・“エルドリッチ”・ガルシア＝モンドラゴン：桑久保を抱き寄せて頭を撫でています＠ &nbsp; &nbsp;<br>桑久保 頌太「！」抱き寄せられて頭を撫でられます<br>桑久保 頌太：特段抵抗はしません。なされるがままです<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン<br>「私どもに何のご用かしら？」　桑久保を撫でながらジュリアナ扇子をばさっと開く＠<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン：掌が桑久保の顔をまるまる包めるのではないかというぐらいデカいです＠<br><br>でかい</div>
+    <div class="message-time">121: 2025/7/6(日) 18:57:12</div>
+  </div>
+</article>
+<article class="message" id="res122">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">トーチ「まずそちらを回収させていただいても？」 &nbsp; &nbsp;<br>トーチ：赤鬼が落としたスマートグラスを指します＠ &nbsp; &nbsp; &nbsp; &nbsp;<br>GM：気づけばもう時間が無いな。コイツの話も巻くか &nbsp; &nbsp;<br>トーチ：っていうかもう拾います &nbsp; &nbsp;<br>トーチ：あなた達の許可なんて取る必要なかったわハハハ<br><br>草</div>
+    <div class="message-time">122: 2025/7/6(日) 18:58:22</div>
+  </div>
+</article>
+<article class="message" id="res123">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">かしこい</div>
+    <div class="message-time">123: 2025/7/6(日) 18:58:24</div>
+  </div>
+</article>
+<article class="message" id="res124">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんでこんなに時間がかかってんだろ</div>
+    <div class="message-time">124: 2025/7/6(日) 18:58:53</div>
+  </div>
+</article>
+<article class="message" id="res125">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">トーチ「先程こちらを装着したそちらの野蛮人…いえ、お嬢様ならおわかりでしょうが、これはサブリミナルで装着者の脳波に影響を与える装置でございます」<br>トーチ「これをサル共の群れ…もといチーム世紀末に少数配布いたしました」<br><br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「………………」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「？？？？？？？」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「さ……さぶ……？　サブリ……？」<br><br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「……そういう貴方は歯周病菌の学名を知っていますか!?」<br>「アクチノバシラス・アクチノミセテムコミタンス！　アクチノバシラス・アクチノミセテムコミタンスです！　知らなかったでしょう！」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「私の勝ちですわ！」なんかさっきから小難しい話でマウント取られている気がするので対抗します＠<br><br><br>草</div>
+    <div class="message-time">125: 2025/7/6(日) 19:00:18</div>
+  </div>
+</article>
+<article class="message" id="res126">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちいさい</div>
+    <div class="message-time">126: 2025/7/6(日) 19:00:21</div>
+  </div>
+</article>
+<article class="message" id="res127">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">桑久保 頌太「自白に感謝する。俺はグングニル所属の桑久保だ。」<br>トーチ「チーム世紀末のような低能の原始人…もとい単純な者たちを使ったのも、奴らは空気で動くバカの集まりだからです」<br>トーチ「ほう、グングニル…グングニル！？」<br><br>さすがの流石に取り乱してて笑う</div>
+    <div class="message-time">127: 2025/7/6(日) 19:01:46</div>
+  </div>
+</article>
+<article class="message" id="res128">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エレナ・“エルドリッチ”・ガルシア＝モンドラゴン：トーチを抱き上げます<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン：「パパー！　見て！　ワンちゃん！　ですわ～～！」<br>桑久保 頌太「犬じゃないぞ」<br><br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「ロシナンテ！　｜お手《¡Dame la pata!》！」&gt;トーチ　＠<br>トーチ「ええい離せ！野蛮ゴリラ！中層にいることすら烏滸がましい野生動物め！」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン：思いっきりビンタします<br>トーチ「貴様など獣の巣食う最下層で意地汚く汚水を啜っているのがお似合いだパァ！？！？」 &nbsp; &nbsp; &nbsp; &nbsp;<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「違う～～～！　お手！　お手～～～！💢💢」<br>桑久保 頌太「エレナ。その辺でやめるんだ。」 &nbsp; &nbsp;<br>トーチ「わ、私の美麗な手を貴様如き類人猿に預けるはずなど…」＠ &nbsp; &nbsp; &nbsp; &nbsp;<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「ロシナンテはお利口だからお手するんですわ～～～～！！！💢💢」　お手するまでビンタを繰り返します＠<br><br>トーチ：パンパンに腫れた顔をして &nbsp; &nbsp;<br>トーチ「………わん」 &nbsp; &nbsp; &nbsp; &nbsp;<br>トーチ：と小さく呟いてお手をします＠ &nbsp; &nbsp;<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「！！！！！！！！！！！」<br>エレナ・“エルドリッチ”・ガルシア＝モンドラゴン「偉いですわ～～～～～♥」　抱きしめます。トーチの身体からボキボキと音を立てながら＠<br>トーチ「おっぎゃあああああああ！！！」＠<br><br>草</div>
+    <div class="message-time">128: 2025/7/6(日) 19:04:15</div>
+  </div>
+</article>
+<article class="message" id="res129">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">地獄</div>
+    <div class="message-time">129: 2025/7/6(日) 19:04:17</div>
+  </div>
+</article>
+<article class="message" id="res130">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">面白すぎる</div>
+    <div class="message-time">130: 2025/7/6(日) 19:04:24</div>
+  </div>
+</article>
+<article class="message" id="res131">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ロシナンテでも犬でもないよ</div>
+    <div class="message-time">131: 2025/7/6(日) 19:04:40</div>
+  </div>
+</article>
+<article class="message" id="res132">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">読み終えました</div>
+    <div class="message-time">132: 2025/7/6(日) 19:06:21</div>
+  </div>
+</article>
+<article class="message" id="res133">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">面白かったです</div>
+    <div class="message-time">133: 2025/7/6(日) 19:06:25</div>
+  </div>
+</article>
+<article class="message" id="res134">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした</div>
+    <div class="message-time">134: 2025/7/6(日) 19:06:26</div>
+  </div>
+</article>
+<article class="message" id="res135">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます</div>
+    <div class="message-time">135: 2025/7/6(日) 19:06:30</div>
+  </div>
+</article>
+<article class="message" id="res136">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あっさり読めるだろうと思って読んだら濃厚でした</div>
+    <div class="message-time">136: 2025/7/6(日) 19:07:08</div>
+  </div>
+</article>
+<article class="message" id="res137">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">桑久保くん、次は心労が軽い相手と組んでね</div>
+    <div class="message-time">137: 2025/7/6(日) 19:08:02</div>
+  </div>
+</article>
+<article class="message" id="res138">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ミロードちゃんと組みましょう</div>
+    <div class="message-time">138: 2025/7/6(日) 19:08:22</div>
+  </div>
+</article>
+<article class="message" id="res139">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">桑久保くん「コラ！反省しなさい！」</div>
+    <div class="message-time">139: 2025/7/6(日) 19:13:32</div>
+  </div>
+</article>
+<article class="message" id="res140">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">一応PCがソウイルカンパニーに手を貸すルートもあるんだけど１走目がちょっと時間無かったので黒幕ぶん殴ってエンドでええかと考えた結果、<br>エレナ相手だしめっちゃ見下して挑発しとくかと思いっきりぶん殴れる系NPCと化したトーチ</div>
+    <div class="message-time">140: 2025/7/6(日) 19:19:06</div>
+  </div>
+</article><div class="elapsed"><span>178日 2時間 47分 経過</span></div>
+<article class="message" id="res141">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">このシナリオみんな回ってなくね？</div>
+    <div class="message-time">141: 2025/12/31(水) 22:06:27</div>
+  </div>
+</article>
+<article class="message" id="res142">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">実は...</div>
+    <div class="message-time">142: 2025/12/31(水) 23:07:50</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>

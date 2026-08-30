@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>壊胎</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>壊胎</h1>
+    <div class="meta">Fresh Meeting archive / room id: 202207b3d5cf5b / active</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=202207b3d5cf5b"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+</span></div>
+<!-- replay-links:begin -->
+<div class="replay-links-panel" style="margin-top:10px;padding:10px 12px;background:#eef8e8;border-left:4px solid #4b982a;overflow-wrap:anywhere">
+  <strong>セッションログ</strong>
+  <ul style="margin:6px 0 0 1.2em;padding:0">
+    <li><a href="https://www.freshmeeting.com/forumfile.php?f=202207b3d5cf5b&amp;i=i8b2b9f12" target="_blank" rel="noopener">キリＴ</a></li><li><a href="https://www.freshmeeting.com/forumfile.php?f=202207b3d5cf5b&amp;i=if12a2ce6" target="_blank" rel="noopener">キリＴ</a></li>
+  </ul>
+</div>
+<!-- replay-links:end -->
+  </div>
+</header>
+<main>
+
+<div class="attachment-warning">
+  このログには Fresh Meeting 上の添付ファイル参照が 8 件あります。
+  HTML本文とは別に添付ファイル本体の保全が必要です。
+</div>
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202207b3d5cf5b&amp;i=ic4e50309">📎 D-3基本ステータス.pdf</a> <span class="filesize">[1.5 MB]</span> を追加しました。</div>
+    <div class="message-time">1: 2022/7/9(土) 21:46:14</div>
+  </div>
+</article><div class="elapsed"><span>4時間 23分 経過</span></div>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202207b3d5cf5b&amp;i=if12a2ce6">📎 壊胎[all] (1).html</a> <span class="filesize">[404.8 KB]</span> を追加しました。</div>
+    <div class="message-time">2: 2022/7/10(日) 2:09:17</div>
+  </div>
+</article>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！</div>
+    <div class="message-time">3: 2022/7/10(日) 2:10:38</div>
+  </div>
+</article>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あざす</div>
+    <div class="message-time">4: 2022/7/10(日) 2:11:41</div>
+  </div>
+</article><div class="elapsed"><span>20時間 47分 経過</span></div>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202207b3d5cf5b&amp;i=i7d36774b">📎 D-4,人間基本ステータス(PL用).pdf</a> <span class="filesize">[1.4 MB]</span> を追加しました。</div>
+    <div class="message-time">5: 2022/7/10(日) 22:58:42</div>
+  </div>
+</article>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした！</div>
+    <div class="message-time">6: 2022/7/11(月) 1:04:51</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202207b3d5cf5b&amp;i=i8b2b9f12">📎 壊胎[all] (2).html</a> <span class="filesize">[601.8 KB]</span> を追加しました。</div>
+    <div class="message-time">7: 2022/7/11(月) 1:04:57</div>
+  </div>
+</article>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした！</div>
+    <div class="message-time">8: 2022/7/11(月) 1:05:19</div>
+  </div>
+</article>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おつや～～～</div>
+    <div class="message-time">9: 2022/7/11(月) 1:08:15</div>
+  </div>
+</article>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">SAN値44になったけどこれでも初期値より1低いくらいか……</div>
+    <div class="message-time">10: 2022/7/11(月) 1:08:50</div>
+  </div>
+</article>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ぜひやってもらいたいといった意味は分かっていただけたであろう……</div>
+    <div class="message-time">11: 2022/7/11(月) 1:09:12</div>
+  </div>
+</article>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202207b3d5cf5b&amp;i=i587d0327" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202207b3d5cf5b&amp;i=i587d0327" width="247" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202207b3d5cf5b&amp;i=i587d0327">📎 Tキリシロ懐胎.jpg</a> <span class="filesize">[109.0 KB, 963x632px]</span> を追加しました。</div>
+    <div class="message-time">12: 2022/7/11(月) 1:11:03</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">一応写真</div>
+    <div class="message-time">13: 2022/7/11(月) 1:11:08</div>
+  </div>
+</article>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">うん！！！！ものすごくわかった！！！！！！！！！！！！！！！！</div>
+    <div class="message-time">14: 2022/7/11(月) 1:11:17</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、忘れてた。ありがとう</div>
+    <div class="message-time">15: 2022/7/11(月) 1:11:22</div>
+  </div>
+</article>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とてつもなくわかった！！！！！！！！ありがとうございます！！！！！</div>
+    <div class="message-time">16: 2022/7/11(月) 1:11:48</div>
+  </div>
+</article>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">時間も遅いので明日以降でいいんですが、とりあえず蛇人間や三上周りの考察が合っていたのかと三上があの場にいた理由が知りたいですおやすみなさい！</div>
+    <div class="message-time">17: 2022/7/11(月) 1:12:06</div>
+  </div>
+</article>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ぶっちゃけ変身シーンのSE流したいという動機だけで開きました</div>
+    <div class="message-time">18: 2022/7/11(月) 1:12:09</div>
+  </div>
+</article>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そこ！？！！？！？！？</div>
+    <div class="message-time">19: 2022/7/11(月) 1:12:17</div>
+  </div>
+</article>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res12">&gt;&gt; 12</a> <br>ハッピーエンドで良かった良かった</div>
+    <div class="message-time">20: 2022/7/11(月) 1:12:20</div>
+  </div>
+</article>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カニドラでも流したいよねなんなら</div>
+    <div class="message-time">21: 2022/7/11(月) 1:12:31</div>
+  </div>
+</article>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">簡単に言うと考察はだいたいあってます。</div>
+    <div class="message-time">22: 2022/7/11(月) 1:12:36</div>
+  </div>
+</article>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ぶっちゃけると、<br>ありえないくらいシナリオが寄せてきたんで<br>特撮を知っているキャラクターで行ってはいけなかったなと思ってたんですけどクライマックスからの展開でやっぱ机でよかったなと思います</div>
+    <div class="message-time">23: 2022/7/11(月) 1:13:14</div>
+  </div>
+</article>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ他のキャラでも満足してたと思いますが</div>
+    <div class="message-time">24: 2022/7/11(月) 1:13:33</div>
+  </div>
+</article>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">D-4もといT-4の変身音ラップ系かあと思ったらBGMでした</div>
+    <div class="message-time">25: 2022/7/11(月) 1:13:35</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうか、元シナリオを我々は読めないのか……<br>それ読めばぜんぶわかるやろと思ってたが</div>
+    <div class="message-time">26: 2022/7/11(月) 1:14:04</div>
+  </div>
+</article>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">三上はイグにRIDEシステムを探してこいと言われて送り込まれていましたが、三上本人は別に人間嫌いでもないので<br>好意を抱きつつも途中で蛇人間を誘い込んだり協力ムーブをしたりしていました</div>
+    <div class="message-time">27: 2022/7/11(月) 1:14:23</div>
+  </div>
+</article>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そもそも三上は蛇側からも人間からも酷い扱いを受けてたので<br>普通に優しくしてくれるPCには非常に好感度が高いので、<br>蛇人間戦で致命傷を受けそうだと助けてくれたりします</div>
+    <div class="message-time">28: 2022/7/11(月) 1:15:49</div>
+  </div>
+</article>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ただこれ他の人がやってもありえないくらいぐいぐい寄せてるところに面食らわないか心配です</div>
+    <div class="message-time">29: 2022/7/11(月) 1:16:01</div>
+  </div>
+</article>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ライダー・リアリティ・ショックに耐えきれるか？</div>
+    <div class="message-time">30: 2022/7/11(月) 1:16:17</div>
+  </div>
+</article>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ知らなきゃ知らないでわりと普通のクローズドシナリオだから……変身するだけで</div>
+    <div class="message-time">31: 2022/7/11(月) 1:16:36</div>
+  </div>
+</article>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ただRIDEシステムを見つけられないとイグにまた虐待されるのでそこは逆らえなかった感じですね</div>
+    <div class="message-time">32: 2022/7/11(月) 1:17:07</div>
+  </div>
+</article>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この人めっちゃ絵うまいな～</div>
+    <div class="message-time">33: 2022/7/11(月) 1:17:44</div>
+  </div>
+</article>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">沼男もこの人なのか</div>
+    <div class="message-time">34: 2022/7/11(月) 1:18:00</div>
+  </div>
+</article>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">イラストは外注</div>
+    <div class="message-time">35: 2022/7/11(月) 1:18:59</div>
+  </div>
+</article>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、そうか、</div>
+    <div class="message-time">36: 2022/7/11(月) 1:19:22</div>
+  </div>
+</article>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">沼男は原作は別の人だけど、原作は情報スッカスカなんでこの人が誰でも回しやすいようにブラッシュアップしたものが今主流になってる感じ</div>
+    <div class="message-time">37: 2022/7/11(月) 1:20:09</div>
+  </div>
+</article>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">RIDEシステムのSEは最初にプレイした人が勝手に作って送りつけてきたらしい</div>
+    <div class="message-time">38: 2022/7/11(月) 1:20:54</div>
+  </div>
+</article>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ライダー好きな人そういうとこあるよ<br>そういうとこあるもん</div>
+    <div class="message-time">39: 2022/7/11(月) 1:21:11</div>
+  </div>
+</article>
+<article class="message" id="res40">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">変身音は命だから</div>
+    <div class="message-time">40: 2022/7/11(月) 1:21:40</div>
+  </div>
+</article>
+<article class="message" id="res41">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうなんだ……</div>
+    <div class="message-time">41: 2022/7/11(月) 1:21:56</div>
+  </div>
+</article>
+<article class="message" id="res42">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とるとるの変身音がめっちゃうるさいあたりそういうことです</div>
+    <div class="message-time">42: 2022/7/11(月) 1:22:22</div>
+  </div>
+</article>
+<article class="message" id="res43">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">タブードライバはもっと禍々しくてトルトルっぽい感じある</div>
+    <div class="message-time">43: 2022/7/11(月) 1:22:57</div>
+  </div>
+</article>
+<article class="message" id="res44">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202207b3d5cf5b&amp;i=if548613d">📎 05.Taboo待機音.mp3</a> <span class="filesize">[1.7 MB]</span> を追加しました。</div>
+    <div class="message-time">44: 2022/7/11(月) 1:23:13</div>
+  </div>
+</article>
+<article class="message" id="res45">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202207b3d5cf5b&amp;i=ia3f3dec9">📎 06.Taboo変身.mp3</a> <span class="filesize">[772.5 KB]</span> を追加しました。</div>
+    <div class="message-time">45: 2022/7/11(月) 1:23:21</div>
+  </div>
+</article>
+<article class="message" id="res46">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ライダー好きな人はむしろ暴走形態すきだから<br>機会があるならそっちを選ぶかもしれない<br>そういうとこあるよ</div>
+    <div class="message-time">46: 2022/7/11(月) 1:23:46</div>
+  </div>
+</article>
+<article class="message" id="res47">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">タブードライバをベルトに挿してたらどうなってたんだ？</div>
+    <div class="message-time">47: 2022/7/11(月) 1:24:21</div>
+  </div>
+</article>
+<article class="message" id="res48">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それは分かる……けど普通に死にかけるからなタブー使うと</div>
+    <div class="message-time">48: 2022/7/11(月) 1:24:32</div>
+  </div>
+</article>
+<article class="message" id="res49">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202207b3d5cf5b&amp;i=i9e808c22">📎 タブー基本ステータス.pdf</a> <span class="filesize">[1.2 MB]</span> を追加しました。</div>
+    <div class="message-time">49: 2022/7/11(月) 1:24:45</div>
+  </div>
+</article>
+<article class="message" id="res50">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あれベルトに挿して使うものじゃないよな多分</div>
+    <div class="message-time">50: 2022/7/11(月) 1:24:50</div>
+  </div>
+</article>
+<article class="message" id="res51">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でもベルトにも挿せるようになってるよな</div>
+    <div class="message-time">51: 2022/7/11(月) 1:25:01</div>
+  </div>
+</article>
+<article class="message" id="res52">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あれ、ベルトに挿して使うものだったのか</div>
+    <div class="message-time">52: 2022/7/11(月) 1:25:25</div>
+  </div>
+</article>
+<article class="message" id="res53">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">使いからは一緒よ</div>
+    <div class="message-time">53: 2022/7/11(月) 1:25:28</div>
+  </div>
+</article>
+<article class="message" id="res54">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">頭文字Tだし</div>
+    <div class="message-time">54: 2022/7/11(月) 1:25:58</div>
+  </div>
+</article>
+<article class="message" id="res55">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">タブーは戦闘が終わってもPCを攻撃しだすんで、それが止められないと世界が滅びます</div>
+    <div class="message-time">55: 2022/7/11(月) 1:27:25</div>
+  </div>
+</article>
+<article class="message" id="res56">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">新渡戸さんがワクチンこっちに向けてもういいだろぉ！！！してくれるから</div>
+    <div class="message-time">56: 2022/7/11(月) 1:27:58</div>
+  </div>
+</article>
+<article class="message" id="res57">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あとはそうだな……イグを普通に倒しちゃうと三上がイグになって再戦ですね</div>
+    <div class="message-time">57: 2022/7/11(月) 1:28:36</div>
+  </div>
+</article>
+<article class="message" id="res58">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">というか原作的にはG4が暴走ライダーだったから絶対その流れになるかと思ってた</div>
+    <div class="message-time">58: 2022/7/11(月) 1:28:41</div>
+  </div>
+</article>
+<article class="message" id="res59">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">下手に倒さなくてよかった、ほんとによかった</div>
+    <div class="message-time">59: 2022/7/11(月) 1:29:03</div>
+  </div>
+</article>
+<article class="message" id="res60">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">もう、戦闘でPC側にとって都合の悪い部分を全部スキップしたな</div>
+    <div class="message-time">60: 2022/7/11(月) 1:29:34</div>
+  </div>
+</article>
+<article class="message" id="res61">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">2回ファンブルとは……</div>
+    <div class="message-time">61: 2022/7/11(月) 1:30:33</div>
+  </div>
+</article>
+<article class="message" id="res62">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">10000回に1回に匹敵する確率なんだよなぁ</div>
+    <div class="message-time">62: 2022/7/11(月) 1:31:26</div>
+  </div>
+</article>
+<article class="message" id="res63">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">こっちがわのファンブルはたしかくまくまいないいないばぁだけだったし</div>
+    <div class="message-time">63: 2022/7/11(月) 1:32:02</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>

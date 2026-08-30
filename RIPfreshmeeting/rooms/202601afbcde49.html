@@ -1,0 +1,2036 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>開発室【偽りの正義】</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>開発室【偽りの正義】</h1>
+    <div class="meta">Fresh Meeting archive / room id: 202601afbcde49 / ended</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=202601afbcde49"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+	<a href="https://www.freshmeeting.com/forumopen.php?f=202601afbcde49"><img src="https://www.freshmeeting.com/img/reopen.gif" alt="ミーティングを再開する"><span>ミーティングを再開する</span></a>
+	<a href="https://www.freshmeeting.com/forumdel.php?f=202601afbcde49"><img src="https://www.freshmeeting.com/img/delete.gif" alt="削除する"><span>削除する</span></a>
+</span>
+
+<p>
+	さぼスマラバ：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202603hage/01_SvSmRb.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202603hage<wbr>/<wbr>01_<wbr>SvSmRb.<wbr>html</a></p></div>
+<!-- replay-links:begin -->
+<div class="replay-links-panel" style="margin-top:10px;padding:10px 12px;background:#eef8e8;border-left:4px solid #4b982a;overflow-wrap:anywhere">
+  <strong>セッションログ</strong>
+  <ul style="margin:6px 0 0 1.2em;padding:0">
+    <li><a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202603hage/01_SvSmRb.html" target="_blank" rel="noopener">さぼスマラバ</a></li>
+  </ul>
+</div>
+<!-- replay-links:end -->
+  </div>
+</header>
+<main>
+
+<div class="attachment-warning">
+  このログには Fresh Meeting 上の添付ファイル参照が 3 件あります。
+  HTML本文とは別に添付ファイル本体の保全が必要です。
+</div>
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">作るかあ</div>
+    <div class="message-time">1: 2026/1/29(木) 16:26:50</div>
+  </div>
+</article>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">遠見・ガトリング・隼人も出すかぁ</div>
+    <div class="message-time">2: 2026/1/29(木) 16:27:11</div>
+  </div>
+</article>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">&nbsp; &nbsp; <br>【タイトル】AI愛護団体ロボティクスハートライツ(RHR)<br>【分類】団体<br>【条件】AI愛護精神<br>【所在】本部(中層)支部(上層・中層)<br><br>人工知能を持つ機械の愛護保護を目的に活動する非営利団体<br>AIの権利向上、AIの虐待や搾取の防止や、適正な取り扱いの普及啓発を推進するために活動している。<br>業務は人工知能に対する悩みの相談や支援を行い、FF法による市民登録における手続の支援や身元保証。整備場への紹介仲介。AIの労働における契約交渉の維持・賃上げ・労働環境の向上の交渉などを行う。<br><br>相談所にはクラップトラップの行列ができている。</div>
+    <div class="message-time">3: 2026/1/29(木) 16:27:23</div>
+  </div>
+</article>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【タイトル】機巧排斥集団【ペイガン】<br>【分類】組織<br>【条件】なし<br>【所在】全層<br>　ＡＩを含むロボット技術を敵視する集団。下記するような主張の親和性から、【ネルトゥス】との関係も深い。<br>　「pagan」は「未開の地の異教徒」を意味する侮蔑語で、新技術やそれを使いこなす人々、そして新たな社会への憤慨から、彼ら自身が故意に名乗ったもの。<br><br>　主要な構成員はAIやロボットに雇用やアイデンティティを奪われた者たちだが、<br>　ロボットやAIが確立されて久しいユグドラシルにおいては技術過渡期の混乱によって生まれた運動というより、既に一般化された思想が先鋭化したものという側面が大きい。<br>　人間至上主義を主張の軸とし、「機械の時代」が人間の感情や精神性を蔑ろにし、それらを奪ったと主張する。<br><br>　主要な活動はロボットやAIの使用に対する抗議やデモ、あるいはそれらについて書かれたパンフレットの配布。<br>　一部の構成員はロボットへの暴力やクラッキングによる直接的な破壊に走る者もいる。<br>　クラップトラップが叩き壊されるぐらいはともかく、FF法によって人格が認められたロボットが襲われた際は大きなニュースになった。<br><br>　一個の組織というより多くの人間が参加する運動という側面が強いため、ロボット技術をどこまで否定/容認するかは個人差がある。<br>　異能に対する評価も真っ二つに分かれており、「得体の知れない存在」として異能者も排斥する者と、<br>　「何もしていない人間へ突如生じるものである以上、異能も自然の摂理の一部である」として排斥の対象外とする者の両方がいる。</div>
+    <div class="message-time">4: 2026/1/29(木) 16:27:38</div>
+  </div>
+</article>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">鉄屑の路上パフォーマンスしてるクラップトラップ出せるのでは？</div>
+    <div class="message-time">5: 2026/1/29(木) 17:37:59</div>
+  </div>
+</article>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">メカシドウは表向きには普通の獅童正義で（生存してた）<br>PCを騙して護衛を取り付ける</div>
+    <div class="message-time">6: 2026/1/29(木) 17:59:54</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">能力者解放戦線の面子からテロの予告受けてるから護衛しろとかにするか……</div>
+    <div class="message-time">7: 2026/1/29(木) 18:11:05</div>
+  </div>
+</article>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">で、その刺客としてガトリング斉</div>
+    <div class="message-time">8: 2026/1/29(木) 18:11:46</div>
+  </div>
+</article>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">遠見一族も異能主義だからそこの繋がりだったんだろうな</div>
+    <div class="message-time">9: 2026/1/29(木) 18:12:17</div>
+  </div>
+</article>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽物だけど</div>
+    <div class="message-time">10: 2026/1/29(木) 18:12:23</div>
+  </div>
+</article>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ヤフヤも偽物にしようかと思ったがあっちはネルトゥスの人だしなぁ</div>
+    <div class="message-time">11: 2026/1/29(木) 18:19:33</div>
+  </div>
+</article>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">偽ヤフヤを依頼人にしようかと思ったが、だな</div>
+    <div class="message-time">12: 2026/1/29(木) 18:20:15</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">解放戦線の人は普通にするか</div>
+    <div class="message-time">13: 2026/1/29(木) 18:27:41</div>
+  </div>
+</article>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エロいねーちゃんにしよう</div>
+    <div class="message-time">14: 2026/1/29(木) 18:28:19</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">たぶん作戦に参加しなかったジル一派の控え</div>
+    <div class="message-time">15: 2026/1/29(木) 18:29:20</div>
+  </div>
+</article>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">たぶん女戦士系</div>
+    <div class="message-time">16: 2026/1/29(木) 18:30:02</div>
+  </div>
+</article>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「自らが生命を擲ってなお革命を果たせなかった同志ジルたちの無念はいかほどばかりであったか！　この私が彼らの遺志を継ぎ、今度こそ革命を成す！」とか言ってる<br>それで呼んでくるのがガトリング斉なあたり、たぶんアホの子</div>
+    <div class="message-time">17: 2026/1/29(木) 18:34:12</div>
+  </div>
+</article>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">リアル獅童はサウナに行くのがルーティーンだけどメカになってるから行かない</div>
+    <div class="message-time">18: 2026/1/29(木) 18:37:14</div>
+  </div>
+</article>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">メカ獅童もメカ獅童でやべーやつにしたいんだけどどうしようかな</div>
+    <div class="message-time">19: 2026/1/29(木) 18:40:32</div>
+  </div>
+</article>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">別に獅童がメカ獅童だったところでPC視点怒る理由がないからなぁ</div>
+    <div class="message-time">20: 2026/1/29(木) 18:44:27</div>
+  </div>
+</article><div class="elapsed"><span>13時間 27分 経過</span></div>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">正体が割れたせいで口封じが必要になるとかそんな感じかな</div>
+    <div class="message-time">21: 2026/1/30(金) 8:11:31</div>
+  </div>
+</article><div class="elapsed"><span>4時間 18分 経過</span></div>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ヒューマノイド排斥派の議員をぶっ頃しに行けばいいのか！</div>
+    <div class="message-time">22: 2026/1/30(金) 12:29:39</div>
+  </div>
+</article>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アンオフィシャルな密会で議員をぶっ殺して、その罪をPCに擦り付ける</div>
+    <div class="message-time">23: 2026/1/30(金) 12:43:21</div>
+  </div>
+</article>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ただ、そこに至るまでの護衛任務はどうしようかな<br>まぁ仮面でも着けさせればいいか</div>
+    <div class="message-time">24: 2026/1/30(金) 12:48:00</div>
+  </div>
+</article>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">①：ノーマル主義者の議員として知られる『獅童 正義』から護衛依頼を受ける。<br>　　先日、能力者解放戦線のテロに巻き込まれたが無事だったようだ。<br>　　この時点での獅童はごく普通の人間に見えるが、実際はメカ獅童である。<br><br>②：下層→中層→上層と遊説で島を巡る。<br>　　この間、プレイヤーは（メカ）獅童の護衛にあたるが、「エクシードを護衛にしていると支持層の関係で心象が悪い」として、市民に正体が割れないように仮面を着用させられる。<br>　　（実際の目的はラストシーンにおける暗殺の犯人が同行していたと思われないようにするため）<br><br>③：その間、獅童の様子がおかしい場面がいくつかある（偽物では？とプレイヤーは疑う）<br><br>④：最後は別の議員と非公式な密会を行う。<br>　　この時は「密会だから世間に顔を晒す訳じゃないし、相手方への不信感に繋がるから仮面は外せ」と言われる。<br>　　密会の最中、メカ獅童は自爆することでその議員を殺害しようとする。<br>　　（対処できなければプレイヤーも巻き込まれる）<br><br>⑤：その後、予めバックアップの機体にデータを移していたメカ獅童が現れる。<br>　　今殺害しようとした議員は反ロボット主義者でもあり、自らの政策の邪魔になるということで殺害しようとしたのだという。<br>　　プレイヤーはその罪を擦り付けられる存在として呼ばれていた。<br>　　自爆にプレイヤーも巻き込んで殺せば、死人に口なしだからだ。<br><br>⑥：暗殺が失敗した以上、ここで議員やプレイヤーを逃がせば計画の破綻に繋がる。<br>　　プレイヤーの口を塞ぎつつスケープゴートを完遂するため、メカ獅童はプレイヤーを始末すべく交戦する<br>　　（ラストバトル）</div>
+    <div class="message-time">25: 2026/1/30(金) 13:21:20</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【タイトル】偽りの正義<br>【システム】鋼鉄のユグドラシル（v0.3-pre+B<wbr>P）<br>【概要/HO】<br>　あなたはノーマル主義者の代議士『獅童正義』から依頼を受ける。<br>　“先日、能力者解放戦線によるテロ事件に巻き込まれ”“辛うじて難を逃れた”彼は、現在は不屈の政治家として支持率が急増している。<br><br>　依頼の内容は「非公式な警備強化」。またテロに遭うのは御免被るとのこと。<br>　貧乏人だの化物だのこき下ろしながら体よく利用する気満々の獅童の態度に閉口しつつ、あなたは彼の依頼に臨む。<br>　金払いは良いから……。な？<br><br>【適正人数】3人<br>【参加資格】エクシードであること。なおかつ、極端に人目を引く外見をしていないこと。<br>【想定時間】10～15時間ぐらいじゃね？<br>【シリアス度】■■■□□（3/5、そこまでトンチキじゃない）<br>【ヘヴィ度】■■■■□（4/5、非公式とはいえ代議士の護衛ですからねぇ）<br>【暴走チェック】消費、初期暴走チェック6d<br>【抑制ロール】2回振り<br>【補足】<br>　* オリジナルデータあり。注意。</div>
+    <div class="message-time">26: 2026/1/30(金) 13:50:16</div>
+  </div>
+</article>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とりあえず下層と中層と上層のそれぞれで起きるイベント決めないとな</div>
+    <div class="message-time">27: 2026/1/30(金) 14:35:37</div>
+  </div>
+</article>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">かなり淡々とした進行になりそうだな、ほぼボス模擬というか</div>
+    <div class="message-time">28: 2026/1/30(金) 16:08:28</div>
+  </div>
+</article>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">せめてオープニング後は自由行動にして、翌日から遊説スタートにした方がいいかも</div>
+    <div class="message-time">29: 2026/1/30(金) 16:08:56</div>
+  </div>
+</article><div class="elapsed"><span>6日 19時間 7分 経過</span></div>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">遊説はインスタントダンジョン改編してプレイするか</div>
+    <div class="message-time">30: 2026/2/6(金) 11:16:10</div>
+  </div>
+</article>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">フロアカード【遊説ステージ】とかの効果にして</div>
+    <div class="message-time">31: 2026/2/6(金) 11:16:44</div>
+  </div>
+</article><div class="elapsed"><span>4日 5時間 2分 経過</span></div>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">32: 2026/2/10(火) 16:19:16</div>
+  </div>
+</article>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[そんな甘さで大国すら滅びる.png] </del></div>
+    <div class="message-time">33: 2026/2/10(火) 16:20:58</div>
+  </div>
+</article>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[私は、そういうミスは犯さない.png] </del></div>
+    <div class="message-time">34: 2026/2/10(火) 16:21:06</div>
+  </div>
+</article>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">35: 2026/2/10(火) 16:21:18</div>
+  </div>
+</article><div class="elapsed"><span>19日 10時間 53分 経過</span></div>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とりあえず<br>・１Rごとに、盤面（壇上、前列、後列）にランダムな聴衆カードを4枚置く（基本は前列or後列）<br>　聴衆カードは様々な効果を持ち、主に【支持率】を上げるか、【熱狂率】を下げる。<br>・盤面のカードは【熱狂率/10】を上限とし、熱狂率を下げることで削除が可能。<br>　熱狂率は【威圧】【話術】のどちらかを使った【応急処置判定】によって下がる。<br>・５Ｒ経過した時点で獅童の演説は終了。ステージクリアとなる。<br>　支持率は報酬に影響するが、低くてもステージクリアは可能。<br>・もし【熱狂率】が１００％を超えた状態で５Ｒ目終了を迎えてしまった場合は暴動が起き、暴徒と戦闘となってしまう。</div>
+    <div class="message-time">36: 2026/3/2(月) 3:14:52</div>
+  </div>
+</article>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">こんな感じ</div>
+    <div class="message-time">37: 2026/3/2(月) 3:14:57</div>
+  </div>
+</article>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">聴衆カードは毎ラウンド限界まで追加されて、PCの手番とエンドフェイズでそれぞれめくられるとかでもいいか</div>
+    <div class="message-time">38: 2026/3/2(月) 3:16:28</div>
+  </div>
+</article><div class="elapsed"><span>1日 11時間 12分 経過</span></div>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">反ロボット主義の議員外山恒一にするか</div>
+    <div class="message-time">39: 2026/3/3(火) 14:29:11</div>
+  </div>
+</article>
+<article class="message" id="res40">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res36">&gt;&gt; 36</a> <br>熱狂率の上昇は原則【カードの枚数】とイコールにしよう<br>一部のカードが「うおおお俺は三枚分としてカウントするぜ」って効果を持ってる扱い</div>
+    <div class="message-time">40: 2026/3/3(火) 15:49:23</div>
+  </div>
+</article><div class="elapsed"><span>2日 1時間 15分 経過</span></div>
+<article class="message" id="res41">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">別に外山の暗殺失敗後に獅童がそのままPCたち殺しに行かなくても良いか</div>
+    <div class="message-time">41: 2026/3/5(木) 17:05:17</div>
+  </div>
+</article>
+<article class="message" id="res42">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">PCがとっちめに行くもタダ働きか～って帰るも自由<br>どういう風に追い詰めるか知恵の働かせどころだろうし</div>
+    <div class="message-time">42: 2026/3/5(木) 17:06:12</div>
+  </div>
+</article><div class="elapsed"><span>17時間 9分 経過</span></div>
+<article class="message" id="res43">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">メロペと入れ替りでいきなりクビにされた秘書とかが襲った方が面白いか？</div>
+    <div class="message-time">43: 2026/3/6(金) 10:15:51</div>
+  </div>
+</article>
+<article class="message" id="res44">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">メロペが全部裏で糸引いてたことにすりゃいいな</div>
+    <div class="message-time">44: 2026/3/6(金) 12:11:09</div>
+  </div>
+</article>
+<article class="message" id="res45">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">人間ちゃんが幸せになってほしいから獅童に頑張ってほしかったけど獅童が死んじゃったので<br>じゃあロボ獅童に頑張ってもらうしかないねぇ</div>
+    <div class="message-time">45: 2026/3/6(金) 12:12:55</div>
+  </div>
+</article>
+<article class="message" id="res46">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">筋書きは出来てたんだけど獅童とメロペの立場が私の中でイーブンすぎてどっち主導なのか決めあぐねてた</div>
+    <div class="message-time">46: 2026/3/6(金) 12:14:06</div>
+  </div>
+</article>
+<article class="message" id="res47">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">思ったより獅童の好感度がPL視点高いっぽいので、<br>獅童はPCを利用してたけど獅童もメロペに利用されてましたっつって<br>「獅童がこうなるのはまぁ因果応報ではあるがそれはそれとしてお前（メロペ）は殺す」っていうエンヤ婆&amp;スティーリー・ダン√にするのが丸そう</div>
+    <div class="message-time">47: 2026/3/6(金) 12:16:42</div>
+  </div>
+</article><div class="elapsed"><span>3日 12時間 39分 経過</span></div>
+<article class="message" id="res48">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">演説ミニゲーム、わりと好評っぽくてほっとした</div>
+    <div class="message-time">48: 2026/3/10(火) 0:56:05</div>
+  </div>
+</article><div class="elapsed"><span>3日 10時間 50分 経過</span></div>
+<article class="message" id="res49">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">思ったより政治がガッツリ主題のシナリオになった感あるし<br>『悪魔の躍り方』がエンディングでいいかもな</div>
+    <div class="message-time">49: 2026/3/13(金) 11:46:21</div>
+  </div>
+</article><div class="elapsed"><span>5日 12時間 48分 経過</span></div>
+<article class="message" id="res50">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れさまでしたお疲れさまでしたお疲れさまでした（AI三回行動）</div>
+    <div class="message-time">50: 2026/3/19(木) 0:34:54</div>
+  </div>
+</article>
+<article class="message" id="res51">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした！！</div>
+    <div class="message-time">51: 2026/3/19(木) 0:43:57</div>
+  </div>
+</article>
+<article class="message" id="res52">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">乙した乙した<br><br>書き忘れたけど、獅童のコンセプトは「応用技使用以外は何でもする」でした</div>
+    <div class="message-time">52: 2026/3/19(木) 0:57:45</div>
+  </div>
+</article>
+<article class="message" id="res53">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした！！</div>
+    <div class="message-time">53: 2026/3/19(木) 0:58:22</div>
+  </div>
+</article>
+<article class="message" id="res54">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res52">&gt;&gt; 52</a> <br>なるほどな</div>
+    <div class="message-time">54: 2026/3/19(木) 0:59:23</div>
+  </div>
+</article>
+<article class="message" id="res55">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ハゲの好感度が高かったのは、単に珊瑚が難しい話に興味なかった……というか<br>「難しい話できる人すごい」って程度の認識だったというのもあるにはある</div>
+    <div class="message-time">55: 2026/3/19(木) 0:59:36</div>
+  </div>
+</article>
+<article class="message" id="res56">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">HP高い、反応値高い、暴走活性使う、因子覚醒もする<br>再行動する、武装使う、精神攻撃する、AE使う、SPEで連続攻撃する、カルマで疑似必中攻撃もする</div>
+    <div class="message-time">56: 2026/3/19(木) 0:59:38</div>
+  </div>
+</article>
+<article class="message" id="res57">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">帝王ヤバかった</div>
+    <div class="message-time">57: 2026/3/19(木) 0:59:54</div>
+  </div>
+</article>
+<article class="message" id="res58">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">帝王持つのにピッタリだから文句言えないし</div>
+    <div class="message-time">58: 2026/3/19(木) 1:00:08</div>
+  </div>
+</article>
+<article class="message" id="res59">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">内容はあまり理解してなかった</div>
+    <div class="message-time">59: 2026/3/19(木) 1:00:09</div>
+  </div>
+</article>
+<article class="message" id="res60">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">その代わり反動ダメージあるので実質HPは100ちょいに収まってる感じ</div>
+    <div class="message-time">60: 2026/3/19(木) 1:00:12</div>
+  </div>
+</article>
+<article class="message" id="res61">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">獅童単体だとかなりどうとでもなる感じだった</div>
+    <div class="message-time">61: 2026/3/19(木) 1:00:41</div>
+  </div>
+</article>
+<article class="message" id="res62">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">メロペを即倒してくれた元加さんに感謝</div>
+    <div class="message-time">62: 2026/3/19(木) 1:00:59</div>
+  </div>
+</article>
+<article class="message" id="res63">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いやー良かった良かった</div>
+    <div class="message-time">63: 2026/3/19(木) 1:01:32</div>
+  </div>
+</article>
+<article class="message" id="res64">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">100くらい削った珊瑚さんが居たからこそ言える余裕だなこれ？</div>
+    <div class="message-time">64: 2026/3/19(木) 1:01:37</div>
+  </div>
+</article>
+<article class="message" id="res65">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それはそう</div>
+    <div class="message-time">65: 2026/3/19(木) 1:01:46</div>
+  </div>
+</article>
+<article class="message" id="res66">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">実際は言うほどどうとでもはならないな？</div>
+    <div class="message-time">66: 2026/3/19(木) 1:01:47</div>
+  </div>
+</article>
+<article class="message" id="res67">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">獅童の高感度わりと上がっちゃったのどうしようと思ってたよ</div>
+    <div class="message-time">67: 2026/3/19(木) 1:02:01</div>
+  </div>
+</article>
+<article class="message" id="res68">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なにしてくれとんねん</div>
+    <div class="message-time">68: 2026/3/19(木) 1:02:07</div>
+  </div>
+</article>
+<article class="message" id="res69">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とりあえずメロペが仕組んだのは想定してたんだけど、<br>メロペが主導したのか獅童が死ぬ前からメロペに準備させてたのか決めあぐねてたから本当に困った</div>
+    <div class="message-time">69: 2026/3/19(木) 1:02:58</div>
+  </div>
+</article>
+<article class="message" id="res70">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いやまあ、メタ的にPLには偽物なのずっと伝わってるしPCとしても元加さんは知ってたわけだが</div>
+    <div class="message-time">70: 2026/3/19(木) 1:03:01</div>
+  </div>
+</article>
+<article class="message" id="res71">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">獅童はなんていうか……PL目線では別にそんな変なコト言うてへんなぁってのと<br>ちょっと横柄だけどまあちょっと上から目線なだけの依頼人と思えばやっぱり言うこと変でも無いなぁってなってたから<br>別段ヘイトを買う理由が無かった</div>
+    <div class="message-time">71: 2026/3/19(木) 1:03:21</div>
+  </div>
+</article>
+<article class="message" id="res72">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res69">&gt;&gt; 69</a> <br>ログ見たらすごいギリギリまで悩んでてウケる</div>
+    <div class="message-time">72: 2026/3/19(木) 1:03:31</div>
+  </div>
+</article>
+<article class="message" id="res73">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">僕はデニスに連れていかれたウォンのその後が気になるよ</div>
+    <div class="message-time">73: 2026/3/19(木) 1:04:32</div>
+  </div>
+</article>
+<article class="message" id="res74">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁどの獅童が嘘ってわけでもないと思います<br>電車卓のしょうもない獅童も、人種の垣根を越えてPCを有用な駒と認めたロボ獅童も、覇道のために手段を択ばないベリアルも、<br>全部シチュエーションと立場の違いであって</div>
+    <div class="message-time">74: 2026/3/19(木) 1:05:13</div>
+  </div>
+</article>
+<article class="message" id="res75">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ロボ獅童が一番好きです</div>
+    <div class="message-time">75: 2026/3/19(木) 1:05:49</div>
+  </div>
+</article>
+<article class="message" id="res76">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">卓名とは裏腹に、どの獅童も真実だったか...</div>
+    <div class="message-time">76: 2026/3/19(木) 1:06:16</div>
+  </div>
+</article>
+<article class="message" id="res77">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ああそうなんだ…どれも本音ではあるわけだ</div>
+    <div class="message-time">77: 2026/3/19(木) 1:06:29</div>
+  </div>
+</article>
+<article class="message" id="res78">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202601afbcde49&amp;i=i079ee0d8" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202601afbcde49&amp;i=i079ee0d8" width="242" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202601afbcde49&amp;i=i079ee0d8">📎 サボスマラバ組.png</a> <span class="filesize">[1.5 MB, 1282x862px]</span> を追加しました。</div>
+    <div class="message-time">78: 2026/3/19(木) 1:06:39</div>
+  </div>
+</article>
+<article class="message" id="res79">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">政治思想も裏でコチョコチョしつつも真面目にやるしかないかって妥協してるロボ獅童も<br>え？こんだけ強いんだから俺が無理やり覇権取ればよくない？って思ってるベリアルもね</div>
+    <div class="message-time">79: 2026/3/19(木) 1:06:39</div>
+  </div>
+</article>
+<article class="message" id="res80">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">へい</div>
+    <div class="message-time">80: 2026/3/19(木) 1:06:46</div>
+  </div>
+</article>
+<article class="message" id="res81">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あざすあざす</div>
+    <div class="message-time">81: 2026/3/19(木) 1:06:53</div>
+  </div>
+</article>
+<article class="message" id="res82">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">光速のログ</div>
+    <div class="message-time">82: 2026/3/19(木) 1:06:57</div>
+  </div>
+</article>
+<article class="message" id="res83">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、そのログは途中までです</div>
+    <div class="message-time">83: 2026/3/19(木) 1:07:09</div>
+  </div>
+</article>
+<article class="message" id="res84">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いや、このログ…少し前のログだ</div>
+    <div class="message-time">84: 2026/3/19(木) 1:07:12</div>
+  </div>
+</article>
+<article class="message" id="res85">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">正式版は後ほど</div>
+    <div class="message-time">85: 2026/3/19(木) 1:07:16</div>
+  </div>
+</article>
+<article class="message" id="res86">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なるほ</div>
+    <div class="message-time">86: 2026/3/19(木) 1:07:31</div>
+  </div>
+</article>
+<article class="message" id="res87">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そんだら今回はお願いしよう<br>一応俺も作れるようにはなりましたが</div>
+    <div class="message-time">87: 2026/3/19(木) 1:07:33</div>
+  </div>
+</article>
+<article class="message" id="res88">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res77">&gt;&gt; 77</a> <br>でも各々で記憶がリセットされてたり都合の悪い事憶えてなかったりするのはメロペの差し金なので枠くんワンチャンキレるなって思いながら回してた</div>
+    <div class="message-time">88: 2026/3/19(木) 1:08:27</div>
+  </div>
+</article>
+<article class="message" id="res89">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">うーん……なんというか……<br>元データからコピーされてるだけと考えるとリセットとはまた別物かなぁと思ってそこは悩んでた</div>
+    <div class="message-time">89: 2026/3/19(木) 1:10:01</div>
+  </div>
+</article>
+<article class="message" id="res90">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res78">&gt;&gt; 78</a> <br>ありがとうございます！</div>
+    <div class="message-time">90: 2026/3/19(木) 1:10:30</div>
+  </div>
+</article>
+<article class="message" id="res91">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">というかすべての真相がはっきりとした瞬間はもうアイツらぶっ壊してたしな</div>
+    <div class="message-time">91: 2026/3/19(木) 1:10:48</div>
+  </div>
+</article>
+<article class="message" id="res92">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ミニゲーム、この三人からは評価高いけどはむぱんさんがどう思うかだけ懸念してる</div>
+    <div class="message-time">92: 2026/3/19(木) 1:11:27</div>
+  </div>
+</article>
+<article class="message" id="res93">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でもそう考えると獅童（ほんもの）も世界は俺…というかAIに大体のことはやらせた方がええんちゃうの？って思ってるのかなぁ</div>
+    <div class="message-time">93: 2026/3/19(木) 1:11:45</div>
+  </div>
+</article>
+<article class="message" id="res94">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">リアル獅童は自分が舵取りたいと思ってるよ</div>
+    <div class="message-time">94: 2026/3/19(木) 1:12:13</div>
+  </div>
+</article>
+<article class="message" id="res95">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ロボ獅童たちは自分がマザーAIとしてアクセスできるからAIでええかって思ってるだけで<br>自分の当たり判定がでかくなってる感じ</div>
+    <div class="message-time">95: 2026/3/19(木) 1:13:03</div>
+  </div>
+</article>
+<article class="message" id="res96">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あー</div>
+    <div class="message-time">96: 2026/3/19(木) 1:13:09</div>
+  </div>
+</article>
+<article class="message" id="res97">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">最近カニドラでは機械系がだいぶやらかしてるな……いいことや（ロボボス好き</div>
+    <div class="message-time">97: 2026/3/19(木) 1:14:00</div>
+  </div>
+</article>
+<article class="message" id="res98">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ何から何までやるのは非現実的なのでAIの裁量に任せるところも大きくはなろうとは思うが</div>
+    <div class="message-time">98: 2026/3/19(木) 1:14:02</div>
+  </div>
+</article>
+<article class="message" id="res99">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ロボ獅童は自分がロボな自覚あるの？</div>
+    <div class="message-time">99: 2026/3/19(木) 1:16:39</div>
+  </div>
+</article>
+<article class="message" id="res100">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ベリアル含めて</div>
+    <div class="message-time">100: 2026/3/19(木) 1:16:46</div>
+  </div>
+</article>
+<article class="message" id="res101">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">一応ある</div>
+    <div class="message-time">101: 2026/3/19(木) 1:16:54</div>
+  </div>
+</article>
+<article class="message" id="res102">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">一応なんだ</div>
+    <div class="message-time">102: 2026/3/19(木) 1:17:06</div>
+  </div>
+</article>
+<article class="message" id="res103">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ベリアルはそうだろうけどロボ獅童もやっぱそうなんだ<br>自爆は…織り込み済みだったのか？いや、あのタイミング的に本人は分かってないか…</div>
+    <div class="message-time">103: 2026/3/19(木) 1:17:35</div>
+  </div>
+</article>
+<article class="message" id="res104">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">食事してなかったのはロボな自覚あったからなんですか？</div>
+    <div class="message-time">104: 2026/3/19(木) 1:18:06</div>
+  </div>
+</article>
+<article class="message" id="res105">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">自爆に関してはメロペの工作ですね<br>ロボ獅童自身はまさか自分が駒とは思ってなかったろう</div>
+    <div class="message-time">105: 2026/3/19(木) 1:18:22</div>
+  </div>
+</article>
+<article class="message" id="res106">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい<br>なので徹底して避けてたし、サウナも行かなかった</div>
+    <div class="message-time">106: 2026/3/19(木) 1:18:52</div>
+  </div>
+</article>
+<article class="message" id="res107">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">メロペ、余計な事さえしなければ……</div>
+    <div class="message-time">107: 2026/3/19(木) 1:19:17</div>
+  </div>
+</article>
+<article class="message" id="res108">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、サウナは行きたかったんだw</div>
+    <div class="message-time">108: 2026/3/19(木) 1:19:18</div>
+  </div>
+</article>
+<article class="message" id="res109">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ただね～<br>エクシードを手駒として認めた獅童をノーマルがどれくらい支持するかは気になるところ<br>自爆させたのは正解だったかもしれない</div>
+    <div class="message-time">109: 2026/3/19(木) 1:19:56</div>
+  </div>
+</article>
+<article class="message" id="res110">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あの心情に至った獅童では票を獲得出来なかったかも</div>
+    <div class="message-time">110: 2026/3/19(木) 1:20:13</div>
+  </div>
+</article>
+<article class="message" id="res111">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">難しいところやね</div>
+    <div class="message-time">111: 2026/3/19(木) 1:20:31</div>
+  </div>
+</article>
+<article class="message" id="res112">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">過激派からの支持が強いからねえ</div>
+    <div class="message-time">112: 2026/3/19(木) 1:20:47</div>
+  </div>
+</article>
+<article class="message" id="res113">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんというかアレクになりつつあった</div>
+    <div class="message-time">113: 2026/3/19(木) 1:20:48</div>
+  </div>
+</article>
+<article class="message" id="res114">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アレクも利用出来るなら利用する主義だもんね</div>
+    <div class="message-time">114: 2026/3/19(木) 1:21:08</div>
+  </div>
+</article>
+<article class="message" id="res115">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いや、政権取ったらそのままロボットで内外からクーデター起こすからあんま関係ない</div>
+    <div class="message-time">115: 2026/3/19(木) 1:21:09</div>
+  </div>
+</article>
+<article class="message" id="res116">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res115">&gt;&gt; 115</a> <br>草</div>
+    <div class="message-time">116: 2026/3/19(木) 1:21:15</div>
+  </div>
+</article>
+<article class="message" id="res117">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">終わりです</div>
+    <div class="message-time">117: 2026/3/19(木) 1:21:18</div>
+  </div>
+</article>
+<article class="message" id="res118">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">草</div>
+    <div class="message-time">118: 2026/3/19(木) 1:21:18</div>
+  </div>
+</article>
+<article class="message" id="res119">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カスがよ</div>
+    <div class="message-time">119: 2026/3/19(木) 1:21:22</div>
+  </div>
+</article>
+<article class="message" id="res120">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いい人になったかと思ったのにwwww</div>
+    <div class="message-time">120: 2026/3/19(木) 1:21:33</div>
+  </div>
+</article>
+<article class="message" id="res121">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">何故有能な人間である私が愚民に配慮して治世を進めねばならない？</div>
+    <div class="message-time">121: 2026/3/19(木) 1:21:54</div>
+  </div>
+</article>
+<article class="message" id="res122">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いい人かどうかはさておいてアレクになりつつあるんかなと思ったらやっぱり獅童はハゲだった</div>
+    <div class="message-time">122: 2026/3/19(木) 1:21:56</div>
+  </div>
+</article>
+<article class="message" id="res123">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">このハゲ！</div>
+    <div class="message-time">123: 2026/3/19(木) 1:22:05</div>
+  </div>
+</article>
+<article class="message" id="res124">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">…………………ぉぁ～～～～</div>
+    <div class="message-time">124: 2026/3/19(木) 1:23:19</div>
+  </div>
+</article>
+<article class="message" id="res125">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">余談も余談ですけど<br>今回のボスの元ネタのひとつであるアームストロング上院議員は<br>「金や保身のために思考放棄して誰かに隷従するんじゃなくて、ムカつく奴は自分の拳で殴ろうな」ってのを軸にした上で<br>「そのためには社会的なしがらみとか邪魔だから、社会秩序吹っ飛ばして弱肉強食の世界を作るからな」な思想なので<br>今回の獅童とは真逆でした</div>
+    <div class="message-time">125: 2026/3/19(木) 1:23:21</div>
+  </div>
+</article>
+<article class="message" id="res126">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんか………なんか違和感はあった……………あったんだ……………</div>
+    <div class="message-time">126: 2026/3/19(木) 1:23:42</div>
+  </div>
+</article>
+<article class="message" id="res127">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">無いじゃん…………終点行き最終列車のクリア処理の反映…………</div>
+    <div class="message-time">127: 2026/3/19(木) 1:24:33</div>
+  </div>
+</article>
+<article class="message" id="res128">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">やらかしました………</div>
+    <div class="message-time">128: 2026/3/19(木) 1:25:02</div>
+  </div>
+</article>
+<article class="message" id="res129">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res127">&gt;&gt; 127</a> <br>そーなの！？</div>
+    <div class="message-time">129: 2026/3/19(木) 1:25:25</div>
+  </div>
+</article>
+<article class="message" id="res130">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">草</div>
+    <div class="message-time">130: 2026/3/19(木) 1:25:43</div>
+  </div>
+</article>
+<article class="message" id="res131">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">しゃーない</div>
+    <div class="message-time">131: 2026/3/19(木) 1:25:49</div>
+  </div>
+</article>
+<article class="message" id="res132">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202601afbcde49&amp;i=i2cef386a" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202601afbcde49&amp;i=i2cef386a" width="288" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202601afbcde49&amp;i=i2cef386a">📎 1671889821304-VeCJ1nKhKj.jpg</a> <span class="filesize">[136.8 KB, 1280x720px]</span> を追加しました。</div>
+    <div class="message-time">132: 2026/3/19(木) 1:26:02</div>
+  </div>
+</article>
+<article class="message" id="res133">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202601afbcde49&amp;i=ibf0f36c2" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202601afbcde49&amp;i=ibf0f36c2" width="217" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202601afbcde49&amp;i=ibf0f36c2">📎 images(43).jpg</a> <span class="filesize">[17.8 KB, 516x387px]</span> を追加しました。</div>
+    <div class="message-time">133: 2026/3/19(木) 1:26:09</div>
+  </div>
+</article>
+<article class="message" id="res134">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんか厨二病取った記憶があるんだけどなぁ………って思ってたらまさにそのハゲ死んだ回で取ってたじゃねえか！！！<br>ボケ！！！カス！！！！ごめん！！！！！！！</div>
+    <div class="message-time">134: 2026/3/19(木) 1:26:19</div>
+  </div>
+</article>
+<article class="message" id="res135">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今回はカルマ何使ったっけ</div>
+    <div class="message-time">135: 2026/3/19(木) 1:26:39</div>
+  </div>
+</article>
+<article class="message" id="res136">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">勇猛</div>
+    <div class="message-time">136: 2026/3/19(木) 1:26:44</div>
+  </div>
+</article>
+<article class="message" id="res137">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ああ～</div>
+    <div class="message-time">137: 2026/3/19(木) 1:26:50</div>
+  </div>
+</article>
+<article class="message" id="res138">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ガッツリ使ってますな</div>
+    <div class="message-time">138: 2026/3/19(木) 1:26:56</div>
+  </div>
+</article>
+<article class="message" id="res139">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">上：原作におけるシャドウ・獅童<br>下：アームストロング上院議員<br><br>たぶんシャドウ・獅童の元ネタの一角が既にアームストロングなんだよな</div>
+    <div class="message-time">139: 2026/3/19(木) 1:27:08</div>
+  </div>
+</article>
+<article class="message" id="res140">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">暴走１０％持ち越します！！！！！</div>
+    <div class="message-time">140: 2026/3/19(木) 1:27:10</div>
+  </div>
+</article>
+<article class="message" id="res141">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ペナルティ</div>
+    <div class="message-time">141: 2026/3/19(木) 1:27:20</div>
+  </div>
+</article>
+<article class="message" id="res142">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁふしぎな力で暴走が回復したんでしょう</div>
+    <div class="message-time">142: 2026/3/19(木) 1:27:46</div>
+  </div>
+</article>
+<article class="message" id="res143">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res139">&gt;&gt; 139</a> <br>そーなの！？</div>
+    <div class="message-time">143: 2026/3/19(木) 1:27:47</div>
+  </div>
+</article>
+<article class="message" id="res144">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">不思議な力過ぎる………何もかもすまん……</div>
+    <div class="message-time">144: 2026/3/19(木) 1:28:09</div>
+  </div>
+</article>
+<article class="message" id="res145">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だからあれほど終わったらとっとと反映させろと</div>
+    <div class="message-time">145: 2026/3/19(木) 1:28:37</div>
+  </div>
+</article>
+<article class="message" id="res146">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">政治家が脱いだら筋骨隆々でしかもわりとちゃんとステゴロ強いってのはたぶんアームストロングリスペクトだと思う</div>
+    <div class="message-time">146: 2026/3/19(木) 1:28:51</div>
+  </div>
+</article>
+<article class="message" id="res147">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">脱いでムキムキになってついでに正体がロボ（みたいなもの）だと分かった時点で絶対アームストロングさんだ…ってなってた</div>
+    <div class="message-time">147: 2026/3/19(木) 1:29:44</div>
+  </div>
+</article>
+<article class="message" id="res148">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">リアルアームストロングはたぶん枠くんと仲良くなれそう</div>
+    <div class="message-time">148: 2026/3/19(木) 1:34:41</div>
+  </div>
+</article>
+<article class="message" id="res149">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">というか枠くんの思想わりとアームストロングとほぼイコールな気がするな<br>自由を他者に強いる点が違うけど</div>
+    <div class="message-time">149: 2026/3/19(木) 1:35:25</div>
+  </div>
+</article>
+<article class="message" id="res150">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあハイ</div>
+    <div class="message-time">150: 2026/3/19(木) 1:35:32</div>
+  </div>
+</article>
+<article class="message" id="res151">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">リアルアームストロングもそのうち出したいなと思いつつ、諸々のカード切っちゃったな……</div>
+    <div class="message-time">151: 2026/3/19(木) 1:36:20</div>
+  </div>
+</article>
+<article class="message" id="res152">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">隷属する自由も自死する自由もすべて認めた上で人を操るのだけちょっと（かなり（すごく））気にくわないから目の前にしたら怒るぐらいで</div>
+    <div class="message-time">152: 2026/3/19(木) 1:36:27</div>
+  </div>
+</article>
+<article class="message" id="res153">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">正直近似値なのかもしれないな</div>
+    <div class="message-time">153: 2026/3/19(木) 1:39:23</div>
+  </div>
+</article>
+<article class="message" id="res154">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アームストロングはそこは「操られて食い物にされる雑魚が悪いよなぁ」ってスタンスなんだけど<br>一方で自分に枠くんがこっちに刃向かってくるのは「ええ根性や！褒めたる！ぶち殺してわからせたるで！」ってなるし<br>万が一にも操られた民がそこから抜け出して自分に牙向けて来た時は「おお！？おまえしょうもない雑魚やと思ってたけどやるやん！お祝いにぶち殺したる！」<br>ってなります</div>
+    <div class="message-time">154: 2026/3/19(木) 1:39:32</div>
+  </div>
+</article>
+<article class="message" id="res155">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">草</div>
+    <div class="message-time">155: 2026/3/19(木) 1:39:53</div>
+  </div>
+</article>
+<article class="message" id="res156">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">支配欲は別に拗らせてなくて人類のキアイが見たい人なんだよなあいつ</div>
+    <div class="message-time">156: 2026/3/19(木) 1:40:25</div>
+  </div>
+</article>
+<article class="message" id="res157">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ、ファンが多いのも分かるわ<br>俺もやってたらファンになってたかもしれん</div>
+    <div class="message-time">157: 2026/3/19(木) 1:41:51</div>
+  </div>
+</article>
+<article class="message" id="res158">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">主人公に負けても<br>「野望が実現できないのは残念やが、おまえみたいに強くてキアイの入ったやつと建前なしで殴り合えて満足や！」<br>「これからも社会の荒波に負けず頑張れよ！おまえは俺の夢を引き継いでくれる、もう一人の俺や！」<br>って爽やかに死んでいったから</div>
+    <div class="message-time">158: 2026/3/19(木) 1:43:32</div>
+  </div>
+</article>
+<article class="message" id="res159">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">力でぶち殺したことこそが結局そいつの思想と同じ方向性のことをしてもうたってやつだ<br>…じゃあどうやったらアームストロングを本当の意味で完全敗北させれたんだろうなぁ…</div>
+    <div class="message-time">159: 2026/3/19(木) 1:44:39</div>
+  </div>
+</article>
+<article class="message" id="res160">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">論破は無理ってのが作中の結論だったかな</div>
+    <div class="message-time">160: 2026/3/19(木) 1:45:22</div>
+  </div>
+</article>
+<article class="message" id="res161">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">面倒くさすぎる……</div>
+    <div class="message-time">161: 2026/3/19(木) 1:46:31</div>
+  </div>
+</article>
+<article class="message" id="res162">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">主人公自身が元々暴力に揉まれながら、自らも暴力でのしあがってきたタイプの人間だから、否定材料がないんだよね<br>だからアームストロングの理想はわかる派なんだけど、<br>「でもやっぱり弱かった頃の俺みたいな弱者が踏み潰される世界なんかいたたまれねぇよ、つまりおまえは気に入らん」って個人的な感情でねじ伏せてた</div>
+    <div class="message-time">162: 2026/3/19(木) 1:50:32</div>
+  </div>
+</article>
+<article class="message" id="res163">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だから論破は無理なんだけど<br>別に論破できないからと言ってその理屈を採用する理由もないよねっていう</div>
+    <div class="message-time">163: 2026/3/19(木) 1:51:58</div>
+  </div>
+</article>
+<article class="message" id="res164">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なるほどなぁ</div>
+    <div class="message-time">164: 2026/3/19(木) 1:53:15</div>
+  </div>
+</article>
+<article class="message" id="res165">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、ちなみに獅童（ペルソナ5）については具体的な政治的思想は語られてません<br>ただの悪代官って感じでした</div>
+    <div class="message-time">165: 2026/3/19(木) 2:03:13</div>
+  </div>
+</article>
+<article class="message" id="res166">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そーなの！？</div>
+    <div class="message-time">166: 2026/3/19(木) 2:04:57</div>
+  </div>
+</article>
+<article class="message" id="res167">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なので九割ぐらいは私の全体趣味を流し込んででっち上げてます<br>まぁ一応、政治に対して本人なりの使命感もあったこととか、<br>国民を愚民呼ばわりしつつ「おまえらじゃまともな国は作れないから私が導いてやる」と宣言してるのは原作由来です</div>
+    <div class="message-time">167: 2026/3/19(木) 2:06:00</div>
+  </div>
+</article>
+<article class="message" id="res168">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ペルソナ5のテーマから考えると恐らく全体主義系だとは思うのだが</div>
+    <div class="message-time">168: 2026/3/19(木) 2:09:03</div>
+  </div>
+</article>
+<article class="message" id="res169">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res73">&gt;&gt; 73</a> <br>とりあえず自白するまで殴られてる</div>
+    <div class="message-time">169: 2026/3/19(木) 2:23:59</div>
+  </div>
+</article>
+<article class="message" id="res170">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">自白しても「どうせまだなんか隠してるだろ」って殴られてる</div>
+    <div class="message-time">170: 2026/3/19(木) 2:24:53</div>
+  </div>
+</article>
+<article class="message" id="res171">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">かわいそう</div>
+    <div class="message-time">171: 2026/3/19(木) 2:40:22</div>
+  </div>
+</article>
+<article class="message" id="res172">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どうして</div>
+    <div class="message-time">172: 2026/3/19(木) 2:40:28</div>
+  </div>
+</article>
+<article class="message" id="res173">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">下層だから………</div>
+    <div class="message-time">173: 2026/3/19(木) 2:41:14</div>
+  </div>
+</article>
+<article class="message" id="res174">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あれ料理屋に突っ込むのが規定路線だったらきなこさんの店に行ってたらＰＣ一人増えて戦ってたのでは？</div>
+    <div class="message-time">174: 2026/3/19(木) 2:42:05</div>
+  </div>
+</article>
+<article class="message" id="res175">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いや、というか下層だからってよりそもそもヤー公にお世話になってる店に突貫してんだからそりゃバキバキのボコボコにされてるわな…すまんな（すまんなとは思ってない</div>
+    <div class="message-time">175: 2026/3/19(木) 2:47:13</div>
+  </div>
+</article><div class="elapsed"><span>5時間 17分 経過</span></div>
+<article class="message" id="res176">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">操られてただけってわかったら「紛らわしい事してんじゃねぇクソ野郎」って蹴り出される</div>
+    <div class="message-time">176: 2026/3/19(木) 8:04:28</div>
+  </div>
+</article><div class="elapsed"><span>12時間 30分 経過</span></div>
+<article class="message" id="res177">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログサンクス</div>
+    <div class="message-time">177: 2026/3/19(木) 20:34:40</div>
+  </div>
+</article>
+<article class="message" id="res178">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今気づいたけど、本家は【　２オーバー　】<br>反動の命中＆回避－１Ｄ６<br>【　１ラウンド継続　】<br><br>だけどサプリでは　命中回避判定－２ｄ<br>（※１Ｒ継続）<br><br>になってるのは誤植？　厳しくしてる？</div>
+    <div class="message-time">178: 2026/3/19(木) 20:39:15</div>
+  </div>
+</article>
+<article class="message" id="res179">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">マジ？　それは誤記です</div>
+    <div class="message-time">179: 2026/3/19(木) 20:39:34</div>
+  </div>
+</article>
+<article class="message" id="res180">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">SO周りはいじってない</div>
+    <div class="message-time">180: 2026/3/19(木) 20:39:38</div>
+  </div>
+</article>
+<article class="message" id="res181">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">よかった</div>
+    <div class="message-time">181: 2026/3/19(木) 20:39:40</div>
+  </div>
+</article><div class="elapsed"><span>7時間 8分 経過</span></div>
+<article class="message" id="res182">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログセンキュー<br>そういえば…ボス獅童、OCアンプルシナプスを全力でぶん回してたけどアイツが振り回す分には故障判定無いんだな<br>無限スペックで無限個アンプルシナプス持ってるから省略してるだけか？</div>
+    <div class="message-time">182: 2026/3/20(金) 3:47:51</div>
+  </div>
+</article><div class="elapsed"><span>5時間 58分 経過</span></div>
+<article class="message" id="res183">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res182">&gt;&gt; 182</a> <br>省略してるだけやね</div>
+    <div class="message-time">183: 2026/3/20(金) 9:46:00</div>
+  </div>
+</article>
+<article class="message" id="res184">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そっかぁ</div>
+    <div class="message-time">184: 2026/3/20(金) 11:41:50</div>
+  </div>
+</article><div class="elapsed"><span>12日 23時間 16分 経過</span></div>
+<article class="message" id="res185">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">冷静に考えると衆議院議員って日本独自の言い回しだから、<br>下院議員とかそういう書き方のが良かったかもしれんな</div>
+    <div class="message-time">185: 2026/4/2(木) 10:58:31</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,4042 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>デスサウナ開発室</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>デスサウナ開発室</h1>
+    <div class="meta">Fresh Meeting archive / room id: 202404ceb97e08 / ended</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=202404ceb97e08"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+	<a href="https://www.freshmeeting.com/forumopen.php?f=202404ceb97e08"><img src="https://www.freshmeeting.com/img/reopen.gif" alt="ミーティングを再開する"><span>ミーティングを再開する</span></a>
+</span></div>
+<!-- replay-links:begin -->
+<div class="replay-links-panel" style="margin-top:10px;padding:10px 12px;background:#eef8e8;border-left:4px solid #4b982a;overflow-wrap:anywhere">
+  <strong>セッションログ</strong>
+  <ul style="margin:6px 0 0 1.2em;padding:0">
+    <li><a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202404deathsauna/3TAJ_deathsauna/%E3%82%A8%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%97%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%83%87%E3%82%B9%E3%82%B5%E3%82%A6%E3%83%8A%20T%E3%81%A5%E3%81%91%E3%82%A4%E3%83%9E%E3%82%B8.html" target="_blank" rel="noopener">Tづけイマジ</a></li>
+  </ul>
+</div>
+<!-- replay-links:end -->
+  </div>
+</header>
+<main>
+
+<div class="attachment-warning">
+  このログには Fresh Meeting 上の添付ファイル参照が 18 件あります。
+  HTML本文とは別に添付ファイル本体の保全が必要です。
+</div>
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【エスケープ・オブ・デスサウナ　～死のサウナを脱出せよ～】<br>あなた達はサウナにいた。理由はどうあれ高熱のサウナの中にいたのだ。<br>その時、サウナが突然デスサウナへと変形した！死で整う前に灼熱地獄から脱せるか！？<br><br>【募集人数】３人くらい？<br>【参加資格】誰でも良いです<br><br>＜シナリオ概要＞<br>　【開催日時】不明。多分３日もあれば多分終わる多分。最長１週間くらい？まあ１ヶ月もあれば終わる<br>　【開催場所】ユドナリウムリリィ<br>　【暴走チェック】サウナの熱のごとく上がっていきます。<br>　【コメディ：シリアス】10:0<br>　【ライト：ヘヴィ】9:1<br>　【探索：戦闘】8:2<br>　【難易度】高くはない<br>　【補足】<br>　※このシナリオは賀正卓などで用いられてたカードを使った探索っぽいシステムが使われそうです<br>　※シナリオ製作者はサウナについての知識が皆無のため、実際のサウナと異なる点があるかもしれません<br>　※瞬間移動能力などを用いてもデスサウナの外には出られません<br>　※サウナの中にいた理由は自由です。純粋に楽しんでいてもいいし、仕事でやってきてもいいし、<br>　　野良能力者であるバシ・ルーラのランダム転移能力でサウナにワープさせられてもいい<br>　※ユグドラシルのサウナ施設は種族性別問わず服装を着たまま楽しめるハイテクです。すごいですね<br>　※展開によってはNPCが命を落とす可能性があります</div>
+    <div class="message-time">1: 2024/4/5(金) 20:28:18</div>
+  </div>
+</article>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">導入シーン<br>サウナにいるPC達。突然大きな音がして備え付けのテレビに仮面の男が登場し、デスサウナと化したことを宣言。<br>扉を開けるとそこはデスサウナダンジョンへと変貌していた。</div>
+    <div class="message-time">2: 2024/4/5(金) 20:30:33</div>
+  </div>
+</article>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">探索シーン<br>戦闘ラウンドと同様の順番で行動する。<br>なお、処理の簡略化のために色々省略する。</div>
+    <div class="message-time">3: 2024/4/5(金) 20:34:26</div>
+  </div>
+</article>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">■特殊ルール【デスサウナ探索】<br>以降、戦闘ラウンド扱いで処理を開始します。<br>あなたたちは以下のいずれかを行うことができます。<br><br>- [警戒して進む]<br>【イベントカード】を１枚引きます。その後、そのエリアの進行度を【＋３】します。<br>エネミーが存在する場合、宣言できません。<br><br>- [急いで進む]<br>【イベントカード】を２枚引きます。その後、そのエリアの進行度を【＋５】します。<br>エネミーが存在する場合、宣言できません。<br><br>- [その他]<br>GM提案で探索やRPが行えます。</div>
+    <div class="message-time">4: 2024/4/5(金) 20:36:47</div>
+  </div>
+</article>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">≪進行度≫<br>[警戒して進む][急いで進む]によって進行度が上昇します。<br>　進行度が【９】に達した時点で、そのエリアごとの特殊イベントが発生して次のエリアへ進むことができます。<br>　今回のエリア数は【３】です。</div>
+    <div class="message-time">5: 2024/4/5(金) 20:37:28</div>
+  </div>
+</article>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エリア内容<br>【灼熱デスサウナ】【焦熱デスサウナ】【煉獄デスサウナ】</div>
+    <div class="message-time">6: 2024/4/5(金) 20:39:26</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">イベント１【偽りの水風呂】<br>熱が治まった部屋に出て、扉は自動で閉まりもう開かない。部屋の中には水の張った風呂が設定されている。<br>NPCが我先にと入ろうとするが、制止するRPがあれば大人しく従う。<br>【観察眼】【察知】などの技能で判定。目標値12<br>成功した場合、その風呂が水ではなくデス濃硫酸であることがわかる。入れば防御無視3D6ダメージ。<br>NPCが入ると死亡するため、制止されなければここで一人ロストする。</div>
+    <div class="message-time">7: 2024/4/5(金) 20:44:38</div>
+  </div>
+</article>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">技能失敗した場合、少なくとも常温の液体でありお湯ではないことがわかるが正体まではわからない。</div>
+    <div class="message-time">8: 2024/4/5(金) 20:45:47</div>
+  </div>
+</article>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">デス濃硫酸とわかると、黒幕の能力によって操作されデス濃硫酸が襲ってくる。<br>不意打ちで13+1D6でオルレ継続付与（3ダメージ）を行い、PC全員は強制的に回避判定。<br>解除判定は【耐久】だが、１ターン使って手当RPまたはAE【応急手当】を行えば治療し、継続を解除できる。<br>デス濃硫酸はどんどん水かさを増して溢れ出すため、次の【焦熱デスサウナ】へと強制的に移動。</div>
+    <div class="message-time">9: 2024/4/5(金) 20:49:28</div>
+  </div>
+</article>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">イベント２【疑心の給水】<br>再び扉は自動で閉まり開かなくなる。部屋の中にはクーラーボックスがありキンキンに冷えたボトルが10本入っている。<br>黒幕の映像が流れ、10本中1本はドリンクであることを明かす（シークレットダイスで決める）<br>1/10の確率で水分補給できると煽られ、NPCは僅かな可能性に掛けてドリンクを飲もうとする。<br>止める場合、【話術】【威圧】などで判定。目標値12。それまでにNPCに対して攻撃的行動等を行っていた場合、目標値は16となる。<br>成功したら大人しく引き下がる。失敗したら無理やり飲んで死亡。<br>拘束能力などで無理やり止めることも可能だが、ドリンクを捨てるなどしなければ部屋から出るまで飲むことを諦めない。<br>また、PCに不満を募らせる。</div>
+    <div class="message-time">10: 2024/4/5(金) 21:24:51</div>
+  </div>
+</article>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ドリンクについては【観察眼】などで目標値12の判定が可能。成功したら１つだけわかる。<br>飲めばHP・PP・暴走率が2D6回復（一括）、二人で分けるなら各自が1D6回復。NPCに渡すことも可能。</div>
+    <div class="message-time">11: 2024/4/5(金) 21:49:33</div>
+  </div>
+</article>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">毒を飲んだ場合、PCは5D6の防御不可ダメージを受ける。NPCなら死亡する。</div>
+    <div class="message-time">12: 2024/4/5(金) 22:23:31</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ドリンクに関するイベントが一通り終えると、NPCと黒幕がなんか色々話して正体判明。<br>黒幕が通信を切った後NPCから情報を聞けるが、やたら話が長かったり脱線するため【話術】か【威圧】で上手いことコントロールする必要がある。<br>失敗した場合、各PCが暴走率1D3上昇。情報自体は変わらない。</div>
+    <div class="message-time">13: 2024/4/5(金) 22:26:20</div>
+  </div>
+</article><div class="elapsed"><span>9時間 52分 経過</span></div>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">イベント３【デスサウナ対決】<br>黒幕が能力で自身の肉体をデスサウナに変換してバトル。撃破したら能力解除されてデスサウナがサウナに戻って脱出。<br>外に出たら冷風でととのい、PCの暴走率が1D10回復してクリア処理。</div>
+    <div class="message-time">14: 2024/4/6(土) 8:18:52</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">≪イベントカード≫<br>　カードにはそれぞれ効果があり、内容に応じた特殊効果を発生させます。<br>　上記の進行の度に引く他、エンドフェイズごとに１枚強制的に引きます。<br>　（山札がなくなった場合、2つ目の山札を用意して再開します）。<br>　不利な効果が基本ですが、何も起きない場合やPLに有利な効果もあります。</div>
+    <div class="message-time">15: 2024/4/6(土) 9:15:13</div>
+  </div>
+</article>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">○平穏<br>　（特殊効果なし）<br><br>◯遭遇<br>　エネミーが【１体】出現する。<br>　ダメージロールを行い、【10】以上が出ればエネミーを戦闘不能状態にする。<br>　【16】以上の場合、さらにこのエリアの進行度を【+1】する。<br><br>○奇襲<br>　エネミーが【１体】出現する。<br>　その後、該当エネミーによる【不意打ち】の処理を行う。<br><br>○包囲<br>　エネミーが【２体】出現する。<br>　該当エネミーが存在する限り進行度は上昇しない。<br><br>○通行止め<br>　オブジェクト【バリケード】を発生させる。<br>　このオブジェクトが存在する限り、あなたたちはエリアを進行できない。<br>　【バリケード】はダメージ蓄積【35】または目標値【14】の【力技】か【俊敏】によって消滅する。</div>
+    <div class="message-time">16: 2024/4/6(土) 10:54:11</div>
+  </div>
+</article>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">○火炎放射<br>　目標値【13】で回避判定を行う。<br>　失敗した場合、1d6ダメージ。<br>　AE回避放棄を宣言して受ける場合は1d3ダメージとなる。<br><br>○蒸気煙幕<br>　目標値【14】で【観察眼】か【察知】の技能判定を行う。<br>　失敗した場合、このエリアの進行度を【-3】する。倍差失敗の場合、進行度は【0】になる。<br><br>◯温度上昇<br>　エンドフェイズ、PC全員は暴走率を1d6上昇させる。<br>　この処理で暴走率が【5】以上上昇した場合、さらにHPを【-1】する。<br><br>○アクシデント<br>　この進行における進行度上昇は半分になる（小数点以下切り捨て）<br><br>○急展開<br>　イベントカードを追加で2枚引く。</div>
+    <div class="message-time">17: 2024/4/6(土) 10:54:30</div>
+  </div>
+</article>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">○発見<br>　1d6をロールし、合計が出目と同じになるよう消費アイテムを獲得する。<br><br>◯サウナテクニック<br>　目標値【14】で【知識】か【閃き】の技能判定を行う。<br>　成功した場合、各PCは自身の暴走率を1d6減少させることができる。<br>　減少させない場合、次に引いたカードの内1枚の効果を無視することができる。</div>
+    <div class="message-time">18: 2024/4/6(土) 10:54:42</div>
+  </div>
+</article>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">イベントカード…２４枚（仮）<br>平穏…１０枚　発見…３枚、遭遇…２枚、他各１枚（合計９枚）</div>
+    <div class="message-time">19: 2024/4/6(土) 10:56:49</div>
+  </div>
+</article>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">佐宇奈 死太郎（さうな ですたろう）<br>トランサー能力…蒸死風呂（デスサウナ・デッドヒート）<br>サウナをデスサウナに変異させる。<br><br>今回の事件の黒幕。過去にサウナが原因で父親が大怪我をしたことでサウナを憎むようになった男。<br>同時にサウナを楽しむ者たちも許せず、その怒りによって能力が覚醒。世界中のサウナをデスサウナにする計画を目論む。<br>デスサウナの持つ自己増殖・自己再生・自己進化能力の三大理論の新解釈により「デスサウナを作り出し操る自分もまたデスサウナである」という境地に辿り着き、<br>能力で自らをデスサウナと化すことができるようになった。</div>
+    <div class="message-time">20: 2024/4/6(土) 11:04:27</div>
+  </div>
+</article>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">佐宇奈 熱太郎（さうな ねつたろう）<br><br>死太郎の父親。自らサウナを開発するくらいのサウナ愛好者だったが、6000℃まで上昇するスーパーサウナの開発中にエンジンが爆発して大怪我。<br>二度とサウナに入れない体になってしまう。<br>今はエーリヴァーガルで漁師をやっている。息子の凶行については何も知らない。</div>
+    <div class="message-time">21: 2024/4/6(土) 11:10:29</div>
+  </div>
+</article>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">プロフェッサー・ウナ<br><br>熱太郎の友人。サウナ研究家でありデスサウナについても基礎的な知識くらいなら有している。<br>事件発生後に色々考えた末、シナリオ途中で黒幕の正体が死太郎であることを見抜く。</div>
+    <div class="message-time">22: 2024/4/6(土) 11:12:16</div>
+  </div>
+</article>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">メチャフ・ラグタ・ティールヤッツ<br>巻き込まれたNPC。デスサウナに巻き込まれた瞬間、めちゃくちゃ黒幕に反発する。<br>PCが制止しなければ見せしめとして殺されるが、このNPCのみクリア後報酬の「NPC生存」にはカウントしない。</div>
+    <div class="message-time">23: 2024/4/6(土) 11:17:32</div>
+  </div>
+</article>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">デスサウナ<br>サウナが発展する裏で産まれたサウナの負の側面が形を持ったもの。<br>ダンジョン形式で様々なギミックを取り揃えており、数多く存在するデスサウナに一つとして同じものは存在しない。<br>自己増殖・自己再生・自己進化能力の三大理論を性質として持っている。</div>
+    <div class="message-time">24: 2024/4/6(土) 11:21:44</div>
+  </div>
+</article>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">デスゴブリン<br>デスサウナの内部に生息するゴブリン。外敵を見つけると襲いかかる性質。<br>その正体はデスサウナが作り出したデストラップの一種である。<br>デスゴブリンに限らずデスゴーレム、デスビースト、デスドラゴンと様々な種類のモンスターが存在する。</div>
+    <div class="message-time">25: 2024/4/6(土) 11:24:10</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">デスサウナ空間<br>デスサウナが存在している異空間であり、出口以外は実世界と切り離されている。<br>そのためたとえデスサウナの壁を壊したとしても脱出できない。<br>また、サウナの中の温度計や時計に誤りがあるといけないように、デスサウナにある程度の公平性を担保させる異空間でもある。<br>死太郎がアナウンスで嘘偽りを発したり出口を封鎖して完全に閉じ込めたりできないのもそのため。</div>
+    <div class="message-time">26: 2024/4/6(土) 11:27:18</div>
+  </div>
+</article>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クリア報酬<br>シナリオクリア＋３ｄ６<br>NPCの生存人数×１ｄ６※ただしメチャフ・ラグタ・ティールヤッツはカウントしない<br>NPCの完全生存＋１ｄ６※ただしメチャフ・ラグタ・ティールヤッツはカウントしない<br>一度に25以上のダメージを与えた＋１ｄ６<br>なんか面白いことが起きた（GM裁量）＋１ｄ６</div>
+    <div class="message-time">27: 2024/4/6(土) 11:32:55</div>
+  </div>
+</article>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">巻き込まれたNPC…プロフェッサーとモブ×３、あとメチャフ・ラグタ・ティールヤッツ</div>
+    <div class="message-time">28: 2024/4/6(土) 11:33:48</div>
+  </div>
+</article>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">モブの死亡タイミング…硫酸風呂、毒ドリンク、？？？？？</div>
+    <div class="message-time">29: 2024/4/6(土) 11:35:47</div>
+  </div>
+</article>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">修正<br>イベント３【デスサウナ大決戦】<br>扉を開けると黒幕がいる。モブの一人が怒り心頭で殴り掛かろうとする。<br>【俊敏】などで判定を行い、制止しなければモブは返り討ちに遭って死亡する。<br>黒幕が能力で自身の肉体をデスサウナに変換してバトル。撃破したら能力解除されてデスサウナがサウナに戻って脱出。<br>外に出たら冷風でととのい、PCの暴走率が1D10回復してクリア処理。</div>
+    <div class="message-time">30: 2024/4/6(土) 11:38:19</div>
+  </div>
+</article>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">モブの名前<br>モブッソ・ノーイチ<br>モーブ・ソノーニ<br>モブシー</div>
+    <div class="message-time">31: 2024/4/6(土) 11:43:31</div>
+  </div>
+</article>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">修正<br>各イベントのモブを止める際、目標値12の判定を追加<br>RPなどで止めることもできるが、無理やり止めた場合不満が募ったという形で次回イベントの目標値を+3する</div>
+    <div class="message-time">32: 2024/4/6(土) 12:00:59</div>
+  </div>
+</article>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">イベントカードで登場するエネミー<br>火力…何発も当たりたくない程度（2D6+3）<br>耐久…１発で沈むが運が悪ければ生き残る程度（HP10、防御1、抵抗1）<br>反応…ちょっとコンセすれば十分避けられる程度（命中12+1D6、回避10+1D6、SS8+1D6）</div>
+    <div class="message-time">33: 2024/4/6(土) 12:08:03</div>
+  </div>
+</article>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">修正<br>エネミー火力2d6+1<br>（PCの元のHPをコンディション込みで15弱と想定し、期待値でHPの約半分を削る数値とする）</div>
+    <div class="message-time">34: 2024/4/6(土) 12:25:12</div>
+  </div>
+</article>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">イベントエネミーは気絶した場合、戦闘不能扱いとして盤面から取り除く</div>
+    <div class="message-time">35: 2024/4/6(土) 12:26:12</div>
+  </div>
+</article>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">イベントエネミーの行動値…4〜6を想定<br>不意打ち以外はエンドフェイズまで行動しない</div>
+    <div class="message-time">36: 2024/4/6(土) 12:27:01</div>
+  </div>
+</article><div class="elapsed"><span>4日 9時間 43分 経過</span></div>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">イベント修正<br>◯サウナテクニック<br>　目標値【14】で【知識】か【閃き】の技能判定を行う。<br>　成功した場合、各PCは自身の暴走率を1d6減少させることができる。<br>　減少させない場合、特殊アイテム【サウナテクニック】を得る。<br><br>　サウナテクニック<br>　自分または味方PCが引いたカードの内1枚の効果を無視することができる。<br>　この特殊アイテムはパーティで１つしか所持できず、２つ目以降は自動消滅する。</div>
+    <div class="message-time">37: 2024/4/10(水) 22:10:19</div>
+  </div>
+</article>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">NPC修正<br>メチャフ・ラグタ・ティールヤッツ<br>巻き込まれたNPC。デスサウナに巻き込まれた瞬間、めちゃくちゃ黒幕に反発する。<br>PCが制止しなければ見せしめとして殺されるが、このNPCのみクリア後報酬の「NPC生存」にはカウントしない。<br>生き残ってもその後、他のNPCと一緒に死にに向かうような行動ばかり取る。</div>
+    <div class="message-time">38: 2024/4/10(水) 22:10:59</div>
+  </div>
+</article>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ボス案（仮）<br>デスサウナ怪人<br>最大HP:50 最大PP:75 暴走率:70％固定<br>攻撃力:5D6 防御力:3 精神抵抗:5 行動値:3<br>SS:11+1D6 命中:17+1D6 回避:6+1D6<br>発動スペック:5 能力精度:12 活性タイプ:感覚型<br><br>SPE:奇跡1/1 カルマ:未定<br>筋:3 耐:6 知:8 精:10 器:14 敏:2 運:4<br>力:2 威:4 観:6 察:3 知:7 技:11<br>隠:7 俊:1 話:10 読:7 閃:4 幸:3<br><br>ボス特性<br>【HP+1～100】【PP+1～50】【因子覚醒】【操作無効】【発動スペック+2】<br><br>オリジナル特性<br>ルーラー・オブ・デスサウナ…自身のオールレンジ判定を自動成功させる<br><br>殺戮熱死線（デスサウナギミック） スペック3/PP13<br>　エンドフェイズオート発動<br>　PP10でクリーチャー【地獄熱気構】を創造</div>
+    <div class="message-time">39: 2024/4/10(水) 23:52:38</div>
+  </div>
+</article>
+<article class="message" id="res40">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">基本行動（AEは基本的に使用しない）<br>エンドフェイズにオート創造（PP13消費）<br>イニシアチブフェイズにクリーチャーはテリトリー宣言（回避減衰-4）<br>行動値10のクリーチャーが本体にバフ（攻撃+4、命中+4+1D6、防御+6）、本体はオルレ攻撃。クリーチャーが２体いる場合は通常の能力攻撃<br>解除判定時にのみSPE奇跡を使用<br>因子覚醒により暴走率は７０％固定、HPが１０を切ると９０％まで上げる</div>
+    <div class="message-time">40: 2024/4/10(水) 23:52:47</div>
+  </div>
+</article>
+<article class="message" id="res41">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">SPE奇跡は制止解除判定時にのみ使用</div>
+    <div class="message-time">41: 2024/4/10(水) 23:53:08</div>
+  </div>
+</article><div class="elapsed"><span>22時間 42分 経過</span></div>
+<article class="message" id="res42">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202404ceb97e08&amp;i=i7bd6f45b" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202404ceb97e08&amp;i=i7bd6f45b" width="116" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=i7bd6f45b">📎 サウナボス.png</a> <span class="filesize">[553.9 KB, 573x818px]</span> を追加しました。</div>
+    <div class="message-time">42: 2024/4/11(木) 22:35:52</div>
+  </div>
+</article>
+<article class="message" id="res43">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202404ceb97e08&amp;i=idafe80b7" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202404ceb97e08&amp;i=idafe80b7" width="193" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=idafe80b7">📎 サウナボスコマ.png</a> <span class="filesize">[250.9 KB, 387x327px]</span> を追加しました。</div>
+    <div class="message-time">43: 2024/4/11(木) 22:35:59</div>
+  </div>
+</article><div class="elapsed"><span>1日 0時間 4分 経過</span></div>
+<article class="message" id="res44">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ボスステータス修正<br>HP50→40<br>PCの攻撃力を4D6と仮定すると、期待値14に防御で-3して11ダメージ。4回攻撃して倒せる想定。<br>卓参加PCが3人であることとクリーチャーを先に倒すことを加味して約２ラウンドの戦闘となる。</div>
+    <div class="message-time">44: 2024/4/12(金) 22:40:06</div>
+  </div>
+</article>
+<article class="message" id="res45">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">2人の場合は30くらいに調整。</div>
+    <div class="message-time">45: 2024/4/12(金) 22:40:42</div>
+  </div>
+</article><div class="elapsed"><span>13時間 42分 経過</span></div>
+<article class="message" id="res46">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">シーンチェックはエリア開始時に2D6ずつ、合計6D6</div>
+    <div class="message-time">46: 2024/4/13(土) 12:23:01</div>
+  </div>
+</article>
+<article class="message" id="res47">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">プロフェッサーウナ、黒幕についてのセリフ<br>「あれは10年前のことだった…いや、30年前…20年前だったか。冬の海…春の川で私と彼は…夏の湖だ。とにかく秋の砂漠が彼との出会いだった。やはり15年前だな」<br>ここで判定を入れ、失敗なら以下のセリフ。成功なら短く纏める。<br>「もちろん出会いの場はサウナだった。いや酒場だった。サウナのことを調べるために図書館に行った時に彼と出会ったんだ。<br>あの時の私はサウナについてまだ駆け出しでね。博士号の勉強も始めたばかりだった。学会からも一目置かれていたよ。<br>ああそうだ彼の話だったな。そうだ、彼との出会いは森の中だった。サウナに使う薪や石炭を探していたんだ。洞窟で出会ったんだよ。<br>事故で怪我をした私を彼が助けてくれてね。軽く捻っただけとはいえなんとか一命は取り留めた。九死に一生だったよ。<br>それから彼と私は色んな話をした。ジャンルは多岐に渡り主にサウナのことだった。その日から私と彼の交流は始まったんだ。<br>まずは文通から始め翌日にはバーベキューに行った。気球に乗ってドライブをし、ハイウェイで釣りをした」</div>
+    <div class="message-time">47: 2024/4/13(土) 13:03:02</div>
+  </div>
+</article>
+<article class="message" id="res48">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クリーチャー<br>地獄熱気構（デスサウナ・システム）<br>使用PP10 速度型 攻撃力5D6 能力精度12 探索技能無し<br>【戦いの整い】 S5/PP6 攻撃力+4、命中+4+1D6、防御+6<br>【蒸熱大陸】 S3/PP4 回避-4 テリトリー</div>
+    <div class="message-time">48: 2024/4/13(土) 14:41:45</div>
+  </div>
+</article>
+<article class="message" id="res49">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ボス技一覧<br>【殺戮熱死線】 S3/PP13 タイミングトリガー（エンド） オート創造PP10<br>【雲龍炎熱波】 S1/PP1　中距離能力攻撃<br>【嘆悲狂熱砂漠亡者】 S2/PP4 オルレ攻撃</div>
+    <div class="message-time">49: 2024/4/13(土) 15:13:00</div>
+  </div>
+</article>
+<article class="message" id="res50">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">イベントエネミー<br>デスゴブリン（仮）<br>HP10 PP10 行動値5<br>攻撃力2D6+1 防御力1 精神抵抗1<br>命中12+1D6 回避10+1D6 SS8+1D6<br><br>各技能値<br>察知11 隠密13 俊敏11 その他一括で10</div>
+    <div class="message-time">50: 2024/4/13(土) 15:24:27</div>
+  </div>
+</article>
+<article class="message" id="res51">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">デスサウナ怪人<br>最大HP:40 最大PP:75 暴走率:70％固定<br>攻撃力:5D6 防御力:3 精神抵抗:5 行動値:3<br>SS:11+1D6 命中:17+1D6 回避:6+1D6<br>発動スペック:5 能力精度:12 活性タイプ:感覚型<br><br>SPE:奇跡1/1 カルマ:未定<br>筋:3 耐:6 知:8 精:10 器:14 敏:2 運:4<br>力:2 威:4 観:6 察:3 知:7 技:11<br>隠:7 俊:1 話:10 読:7 閃:4 幸:3<br><br>ボス特性<br>【HP+1～100】【PP+1～50】【因子覚醒】【操作無効】【発動スペック+2】<br><br>オリジナル特性<br>【極熱死配人】…自身のオールレンジ判定を自動成功させる<br><br>【殺戮熱死線】 S3/PP13 タイミングトリガー（エンド） オート創造PP10<br>【雲龍炎熱波】 S1/PP1　中距離能力攻撃<br>【嘆悲狂熱砂漠亡者】 S2/PP4 オルレ攻撃<br><br><br>クリーチャー<br>地獄熱気構（デスサウナ・システム）<br>使用PP10 速度型 攻撃力5D6 能力精度12 探索技能無し<br>【戦いの整い】 S5/PP6 攻撃力+4、命中+4+1D6、防御+6<br>【蒸熱大陸】 S3/PP4 回避-4 テリトリー</div>
+    <div class="message-time">51: 2024/4/13(土) 15:36:23</div>
+  </div>
+</article>
+<article class="message" id="res52">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">流れ纏め<br>PCが全員サウナにいる→大きな音を立ててサウナが変形→テレビに黒幕が映ってデスサウナと化したことを宣言→メチャフが死ぬ（仮）→探索開始<br>シーンチェック2D6<br>エリア１探索開始→進行度９でイベント発生（デス濃硫酸）、ウナが何かに勘付く<br>シーンチェック2D6<br>エリア２探索開始→進行度９でイベント発生（デスドリンク）、ウナが黒幕について話す<br>シーンチェック2D6<br>エリア３探索開始→進行度９でイベント、ボス戦→ED（整う）</div>
+    <div class="message-time">52: 2024/4/13(土) 17:11:11</div>
+  </div>
+</article><div class="elapsed"><span>4時間 46分 経過</span></div>
+<article class="message" id="res53">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">イベントカードに【奇襲】と【包囲】を１枚ずつ追加、全２６枚</div>
+    <div class="message-time">53: 2024/4/13(土) 21:58:04</div>
+  </div>
+</article>
+<article class="message" id="res54">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ボス難易度が低めなので道中の危険度が多少高くても大丈夫と想定。</div>
+    <div class="message-time">54: 2024/4/13(土) 22:00:10</div>
+  </div>
+</article><div class="elapsed"><span>16時間 2分 経過</span></div>
+<article class="message" id="res55">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">NPC名前変更<br>メチャフ・ラグタ・ティールヤッツ→志波田 立（しはた たてる）<br>死・旗立てる</div>
+    <div class="message-time">55: 2024/4/14(日) 14:02:19</div>
+  </div>
+</article>
+<article class="message" id="res56">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クリア報酬<br>シナリオクリア＋3D6<br>NPCの生存人数×1D6 ※ただし志波田 立はカウントしない<br>NPCの完全生存＋1D6 ※ただし志波田 立はカウントしない<br>NPCの全滅＋2D6 ※ただし志波田 立はカウントしない<br>一度に25以上のダメージを与えた＋1D6<br>なんか面白いことが起きた（GM裁量）＋1D6<br><br>オマケ<br>志波田 立の名前の由来を当てる＋1D6</div>
+    <div class="message-time">56: 2024/4/14(日) 14:13:32</div>
+  </div>
+</article><div class="elapsed"><span>2日 5時間 37分 経過</span></div>
+<article class="message" id="res57">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">イベント修正<br>プロフェッサーの長話判定は面倒くさいので削除。代わりに話の最中に黒幕から攻撃が来る。<br>庇うなどを宣言すればプロフェッサーを守れるが、自分は無事回避できたかどうか【敏捷】で判定が入る。目標値12。失敗で1D6ダメージ</div>
+    <div class="message-time">57: 2024/4/16(火) 19:51:23</div>
+  </div>
+</article>
+<article class="message" id="res58">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">NPC名前修正<br>モッブソ・ノーイチ→モブノ・ゴーレム（ラヴァゴーレム）<br>モーブ・ソノーニ→モマグ・マッグーブ（マグマッグ）<br>モブシー→燃 武（もえる たけし）（ファイアマン）</div>
+    <div class="message-time">58: 2024/4/16(火) 19:54:34</div>
+  </div>
+</article>
+<article class="message" id="res59">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ウナの回想<br>燃太郎「よし！完成したぞ最高6000℃のサウナが！」<br>ウナ「おお！これはすごい！」<br>燃太郎「こいつはギネス間違い無しだ！」<br>ウナ「ヒューヒュー！」<br>燃太郎「スイッチオン！」<br>（爆発）<br>燃太郎「ぐわああああ！！」<br>ウナ「燃太郎ォォ！！！」</div>
+    <div class="message-time">59: 2024/4/16(火) 19:58:14</div>
+  </div>
+</article><div class="elapsed"><span>1日 5時間 13分 経過</span></div>
+<article class="message" id="res60">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">世界一アホな会話としてギネスブックに乗るべき</div>
+    <div class="message-time">60: 2024/4/18(木) 1:11:35</div>
+  </div>
+</article>
+<article class="message" id="res61">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">濃厚なアホを摂取しました</div>
+    <div class="message-time">61: 2024/4/18(木) 1:12:11</div>
+  </div>
+</article>
+<article class="message" id="res62">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とんでもないアホ</div>
+    <div class="message-time">62: 2024/4/18(木) 1:14:32</div>
+  </div>
+</article>
+<article class="message" id="res63">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういえば卓内で出しそこねてた情報ですが<br>「サウナの中の温度計や時計に誤りがあるといけないように、デスサウナにある程度の公平性を担保させる異空間でもある。<br>死太郎がアナウンスで嘘偽りを発したり出口を封鎖して完全に閉じ込めたりできないのもそのため」<br>というのがありました</div>
+    <div class="message-time">63: 2024/4/18(木) 1:15:27</div>
+  </div>
+</article>
+<article class="message" id="res64">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">？？？？？？？？？？？？？？？？</div>
+    <div class="message-time">64: 2024/4/18(木) 1:15:46</div>
+  </div>
+</article>
+<article class="message" id="res65">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なので「いやアイツの言葉を信じられるわけねえだろ！」というご尤もな言葉にはプロフェッサーが「いやサウナなんだから信じられるが…？」と説明します</div>
+    <div class="message-time">65: 2024/4/18(木) 1:16:03</div>
+  </div>
+</article>
+<article class="message" id="res66">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">頭がおかしくなっちまうぜ！！！！！！！</div>
+    <div class="message-time">66: 2024/4/18(木) 1:16:18</div>
+  </div>
+</article>
+<article class="message" id="res67">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あまりにも詳しすぎて危うくテメーも仲間かコラァってなるところでした</div>
+    <div class="message-time">67: 2024/4/18(木) 1:17:01</div>
+  </div>
+</article>
+<article class="message" id="res68">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">半分仲間だった</div>
+    <div class="message-time">68: 2024/4/18(木) 1:17:13</div>
+  </div>
+</article>
+<article class="message" id="res69">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">しかし難易度調整とかロクに言えんな…カードの引きが多分かなり良かったと思うし</div>
+    <div class="message-time">69: 2024/4/18(木) 1:20:27</div>
+  </div>
+</article>
+<article class="message" id="res70">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあサウナボスが手強くてもなんか変だしいいんじゃないでしょうか</div>
+    <div class="message-time">70: 2024/4/18(木) 1:27:21</div>
+  </div>
+</article>
+<article class="message" id="res71">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちょっと強めにしたつもりだったけど案外サクサクやられるもんだなあと思いました</div>
+    <div class="message-time">71: 2024/4/18(木) 1:28:36</div>
+  </div>
+</article>
+<article class="message" id="res72">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">基準点が最近狂いすぎてたのはあるかなって思い直しました</div>
+    <div class="message-time">72: 2024/4/18(木) 1:29:56</div>
+  </div>
+</article>
+<article class="message" id="res73">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">想定としては毎ターン出てくるクリーチャーを倒さなきゃバフデバフ撒かれて命中固定値20超えのオルレを撃たれる</div>
+    <div class="message-time">73: 2024/4/18(木) 1:30:35</div>
+  </div>
+</article>
+<article class="message" id="res74">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">３人だからねぇ…二人ならそれぐらいかなって思わなくは無いんですけど</div>
+    <div class="message-time">74: 2024/4/18(木) 1:31:06</div>
+  </div>
+</article>
+<article class="message" id="res75">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ2〜3人の手数だしオルレ持ちなら処理できるし大丈夫だろ…くらいの感覚</div>
+    <div class="message-time">75: 2024/4/18(木) 1:31:25</div>
+  </div>
+</article>
+<article class="message" id="res76">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でもまあ趣味パで倒せるぐらいでも良いと思いますよ本当</div>
+    <div class="message-time">76: 2024/4/18(木) 1:31:53</div>
+  </div>
+</article>
+<article class="message" id="res77">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">かといってクリーチャーを常時2体展開は流石に急な対処求められるから面倒だなって</div>
+    <div class="message-time">77: 2024/4/18(木) 1:32:16</div>
+  </div>
+</article>
+<article class="message" id="res78">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">必要以上に難易度上げるつもりはないし基本的には据え置きでいいかな</div>
+    <div class="message-time">78: 2024/4/18(木) 1:32:38</div>
+  </div>
+</article>
+<article class="message" id="res79">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ええと思います</div>
+    <div class="message-time">79: 2024/4/18(木) 1:35:25</div>
+  </div>
+</article><div class="elapsed"><span>17時間 4分 経過</span></div>
+<article class="message" id="res80">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">やった、俺でもログを作れ…作……完全終了時のルームデータは取って無かった！！！</div>
+    <div class="message-time">80: 2024/4/18(木) 18:40:13</div>
+  </div>
+</article>
+<article class="message" id="res81">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんなら終了時のスクショも撮って無かった！！！</div>
+    <div class="message-time">81: 2024/4/18(木) 18:40:58</div>
+  </div>
+</article><div class="elapsed"><span>4時間 30分 経過</span></div>
+<article class="message" id="res82">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=ib95e99b2">📎 エスケープ・オブ・デスサウナ_log_全タブ_2024-04-18_0114.html</a> <span class="filesize">[243.6 KB]</span> を追加しました。</div>
+    <div class="message-time">82: 2024/4/18(木) 23:11:30</div>
+  </div>
+</article>
+<article class="message" id="res83">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とりあえず全ログだけ置いとこ</div>
+    <div class="message-time">83: 2024/4/18(木) 23:11:43</div>
+  </div>
+</article>
+<article class="message" id="res84">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">わーいあざます</div>
+    <div class="message-time">84: 2024/4/18(木) 23:18:39</div>
+  </div>
+</article><div class="elapsed"><span>15時間 21分 経過</span></div>
+<article class="message" id="res85">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">っていうかもしかしなくても誰も終了時のルームデータ持って無さそう…？</div>
+    <div class="message-time">85: 2024/4/19(金) 14:40:22</div>
+  </div>
+</article>
+<article class="message" id="res86">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アリマス</div>
+    <div class="message-time">86: 2024/4/19(金) 14:40:46</div>
+  </div>
+</article>
+<article class="message" id="res87">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">！！！</div>
+    <div class="message-time">87: 2024/4/19(金) 14:41:18</div>
+  </div>
+</article>
+<article class="message" id="res88">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202404ceb97e08&amp;i=i74dca7b5" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202404ceb97e08&amp;i=i74dca7b5" width="324" height="147"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=i74dca7b5">📎 デスサウナ SAVOスマチヒ.png</a> <span class="filesize">[1.3 MB, 1469x659px]</span> を追加しました。</div>
+    <div class="message-time">88: 2024/4/19(金) 14:43:05</div>
+  </div>
+</article>
+<article class="message" id="res89">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">容量制限に引っかかるな…</div>
+    <div class="message-time">89: 2024/4/19(金) 14:43:50</div>
+  </div>
+</article>
+<article class="message" id="res90">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=i15517c42">📎 エスケープ・オブ・デスサウナ SAVOスマチヒ.zip</a> <span class="filesize">[5.3 MB]</span> を追加しました。</div>
+    <div class="message-time">90: 2024/4/19(金) 14:47:13</div>
+  </div>
+</article>
+<article class="message" id="res91">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！！</div>
+    <div class="message-time">91: 2024/4/19(金) 14:48:02</div>
+  </div>
+</article>
+<article class="message" id="res92">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ルビが一部機能してないな…？</div>
+    <div class="message-time">92: 2024/4/19(金) 14:49:28</div>
+  </div>
+</article>
+<article class="message" id="res93">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">確かに…なんでだろ</div>
+    <div class="message-time">93: 2024/4/19(金) 14:50:36</div>
+  </div>
+</article>
+<article class="message" id="res94">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ずっと不謹慎だから言うまいと思ってたんですけど後続の人（特にはむさんが）絶対言うと思うんでもういっそ自分から言っちゃいますが<br>須磨の暴発起きたタイミングで結構な地震起きるのやめてくださいいや本当にシャレになんないんで</div>
+    <div class="message-time">94: 2024/4/19(金) 14:54:20</div>
+  </div>
+</article>
+<article class="message" id="res95">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">変に噛み合ったタイミングだな…とは思いました</div>
+    <div class="message-time">95: 2024/4/19(金) 14:55:15</div>
+  </div>
+</article>
+<article class="message" id="res96">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そんな噛み合い方せんでええねん！！</div>
+    <div class="message-time">96: 2024/4/19(金) 14:55:56</div>
+  </div>
+</article>
+<article class="message" id="res97">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202404ceb97e08&amp;i=i80a61146" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202404ceb97e08&amp;i=i80a61146" width="288" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=i80a61146">📎 発言まとめメーカー.png</a> <span class="filesize">[213.8 KB, 1280x720px]</span> を追加しました。</div>
+    <div class="message-time">97: 2024/4/19(金) 15:13:36</div>
+  </div>
+</article>
+<article class="message" id="res98">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログ読み返して個人的に好きなところを纏めました</div>
+    <div class="message-time">98: 2024/4/19(金) 15:14:13</div>
+  </div>
+</article>
+<article class="message" id="res99">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">改めて見て笑うしかない</div>
+    <div class="message-time">99: 2024/4/19(金) 15:14:32</div>
+  </div>
+</article>
+<article class="message" id="res100">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんならこの部屋に御三方招いた直後の&gt;&gt;60から始まる「アホ」三連発も好き</div>
+    <div class="message-time">100: 2024/4/19(金) 15:16:10</div>
+  </div>
+</article>
+<article class="message" id="res101">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だってアホすぎて面白過ぎましたよ</div>
+    <div class="message-time">101: 2024/4/19(金) 15:16:35</div>
+  </div>
+</article>
+<article class="message" id="res102">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">死太郎君の爆発の一番間近に居たはずのクイーンが逆に吹っ飛んで無いのできっと爆発が死太郎本体から後ろに向けて炸裂したので無事だったんだろうけど<br>結果として一番目前に居たクイーン（とNPC）以外が全員吹っ飛んでるんで突き出した拳の威力にしか見えないんだよな</div>
+    <div class="message-time">102: 2024/4/19(金) 15:18:00</div>
+  </div>
+</article>
+<article class="message" id="res103">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あの瞬間確実に吉本新喜劇並の状況になっちゃってた</div>
+    <div class="message-time">103: 2024/4/19(金) 15:19:19</div>
+  </div>
+</article>
+<article class="message" id="res104">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">何なら私が一番混乱してましたからね</div>
+    <div class="message-time">104: 2024/4/19(金) 18:00:37</div>
+  </div>
+</article><div class="elapsed"><span>2日 6時間 37分 経過</span></div>
+<article class="message" id="res105">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=ic96e8a5c">📎 エスケープ・オブ・デスサウナ_log_全タブ_2024-04-22_0037.html</a> <span class="filesize">[145.5 KB]</span> を追加しました。</div>
+    <div class="message-time">105: 2024/4/22(月) 0:38:05</div>
+  </div>
+</article>
+<article class="message" id="res106">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とりあえず２組目本日のリグ</div>
+    <div class="message-time">106: 2024/4/22(月) 0:38:15</div>
+  </div>
+</article>
+<article class="message" id="res107">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ヒドイ空気になってきたけど絶対的強者が居るかどうかでやっぱ変わってくるな…</div>
+    <div class="message-time">107: 2024/4/22(月) 0:42:10</div>
+  </div>
+</article><div class="elapsed"><span>22時間 54分 経過</span></div>
+<article class="message" id="res108">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">サウナ客Ω豆知識<br>最初は「このサウナから出たら裏金使った取引に行くんだ！」ってキャラでしたが直球に悪党だと死んだ方がいい判定受けそうだったので<br>全然人気が無くてバズるためならなんでもする迷惑系動画投稿者という形に落ち着きました</div>
+    <div class="message-time">108: 2024/4/22(月) 23:37:09</div>
+  </div>
+</article>
+<article class="message" id="res109">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それはそう<br>現状はどっか知らんところで死んでくれねえかなぐらいで、だからと言って目の前で死なれるのはうーんって悩むぐらいで済んでるね…</div>
+    <div class="message-time">109: 2024/4/22(月) 23:39:16</div>
+  </div>
+</article>
+<article class="message" id="res110">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res60">&gt;&gt;60</a>～&gt;&gt;62が僕らの感想です</div>
+    <div class="message-time">110: 2024/4/22(月) 23:52:21</div>
+  </div>
+</article>
+<article class="message" id="res111">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">来ました</div>
+    <div class="message-time">111: 2024/4/22(月) 23:55:08</div>
+  </div>
+</article>
+<article class="message" id="res112">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れさまでした</div>
+    <div class="message-time">112: 2024/4/22(月) 23:55:20</div>
+  </div>
+</article>
+<article class="message" id="res113">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res97">&gt;&gt; 97</a> <br>ログ読む前に見えたけどもう笑う</div>
+    <div class="message-time">113: 2024/4/23(火) 0:00:54</div>
+  </div>
+</article>
+<article class="message" id="res114">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">めちゃくちゃ気になるタイプの次回予告じゃん</div>
+    <div class="message-time">114: 2024/4/23(火) 0:01:18</div>
+  </div>
+</article>
+<article class="message" id="res115">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はぁいログ読みますわよ～</div>
+    <div class="message-time">115: 2024/4/23(火) 0:03:04</div>
+  </div>
+</article>
+<article class="message" id="res116">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【開催日時】不明。多分３日もあれば多分終わる多分。最長１週間くらい？まあ１ヶ月もあれば終わる<br><br>突っ込もうと思ってたよこれも</div>
+    <div class="message-time">116: 2024/4/23(火) 0:06:04</div>
+  </div>
+</article>
+<article class="message" id="res117">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド：ぽぽぽぽ<br><br>色のテストでぽぽぽぽって発言する人初めて見た</div>
+    <div class="message-time">117: 2024/4/23(火) 0:06:42</div>
+  </div>
+</article>
+<article class="message" id="res118">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">SAVO：こんばんｈ……なぜスネ夫？<br><br>前走でもそうなのかよ！！</div>
+    <div class="message-time">118: 2024/4/23(火) 0:07:05</div>
+  </div>
+</article>
+<article class="message" id="res119">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">八尺クイーン様</div>
+    <div class="message-time">119: 2024/4/23(火) 0:07:20</div>
+  </div>
+</article>
+<article class="message" id="res120">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド：カルマ須磨と被ってるｗｗｗ<br>スマブラの人：草<br><br>草</div>
+    <div class="message-time">120: 2024/4/23(火) 0:07:38</div>
+  </div>
+</article>
+<article class="message" id="res121">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄：筋知とかいうクソ構築です　対戦よろしくお願いします<br><br>筋知で卓に参加とかｗｗｗｗｗｗｗｗ</div>
+    <div class="message-time">121: 2024/4/23(火) 0:08:15</div>
+  </div>
+</article>
+<article class="message" id="res122">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド：なんかで割引券をもらったのでのこのこやってきました<br><br>さらっと良い理由思いつくなあ</div>
+    <div class="message-time">122: 2024/4/23(火) 0:08:55</div>
+  </div>
+</article>
+<article class="message" id="res123">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄：オフの日なので整いに来ました<br><br>行き慣れてて草</div>
+    <div class="message-time">123: 2024/4/23(火) 0:09:09</div>
+  </div>
+</article>
+<article class="message" id="res124">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路：サウナに居たかったわけじゃないんですが商品の納品に来てました<br>どうも一人ぐらいは職人も必要だったらしいので<br><br>ああ…仕事で……仕事で来てしまったんだなあ…</div>
+    <div class="message-time">124: 2024/4/23(火) 0:09:32</div>
+  </div>
+</article>
+<article class="message" id="res125">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド：（なんか変な人ばっかりだわ……タイミングミスったかしら）とか思ってます<br><br>多分最悪のタイミングで来ちゃったよ</div>
+    <div class="message-time">125: 2024/4/23(火) 0:09:56</div>
+  </div>
+</article>
+<article class="message" id="res126">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路：（……どうして業務時間中に俺はこんなところに…普通閉店後じゃないのか…？）<br>（クッ…最悪だ…早く仕事を終えて出たい…一刻も早く…）＠<br><br>それはそうだｗｗｗｗｗｗｗｗｗｗｗｗｗ</div>
+    <div class="message-time">126: 2024/4/23(火) 0:10:14</div>
+  </div>
+</article>
+<article class="message" id="res127">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路<br>（……しかも…とんでもない威圧感の女まで居る…なんだあの化け物は…！？あんな者が何故こんな場所に…！？<br>クソッ、周りの客もなんだか怪しく見えてくるが…自制心を試されているのか…俺は……）全くリラックスできません、早く出たい＠<br><br>可哀想；；</div>
+    <div class="message-time">127: 2024/4/23(火) 0:10:20</div>
+  </div>
+</article>
+<article class="message" id="res128">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">業務時間中に呼ばないでくれや</div>
+    <div class="message-time">128: 2024/4/23(火) 0:10:24</div>
+  </div>
+</article>
+<article class="message" id="res129">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">自制心を試されてるｗｗｗｗ</div>
+    <div class="message-time">129: 2024/4/23(火) 0:10:50</div>
+  </div>
+</article>
+<article class="message" id="res130">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">風呂屋で営業時間中にガラスの交換は見たことないなｗｗ</div>
+    <div class="message-time">130: 2024/4/23(火) 0:11:01</div>
+  </div>
+</article>
+<article class="message" id="res131">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=ie04564d1">📎 エスケープ・オブ・デスサウナ_log_全タブ_2024-04-23_0010.html</a> <span class="filesize">[242.5 KB]</span> を追加しました。</div>
+    <div class="message-time">131: 2024/4/23(火) 0:11:14</div>
+  </div>
+</article>
+<article class="message" id="res132">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とりあえずログだけ。部屋全体のログは明日</div>
+    <div class="message-time">132: 2024/4/23(火) 0:11:25</div>
+  </div>
+</article>
+<article class="message" id="res133">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路（そもそも、なんでまた俺がこんな場所で作業を……監視されている…？<br>あり得る、俺が『粗相』をするかどうか試されている…いや、そうだ、恐らくあの女は『後始末』のための要員……！）＠<br><br>真面目に仕事しないと潰されるってわけか…プチッと…</div>
+    <div class="message-time">133: 2024/4/23(火) 0:11:56</div>
+  </div>
+</article>
+<article class="message" id="res134">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄（この時間はいつも男ばかりなのに、女性がいるなんて珍しい…<br>いや、彼女なら大丈夫そう、かな。なんだかすごくすごそうだし）＠<br><br>すごくすごそう</div>
+    <div class="message-time">134: 2024/4/23(火) 0:12:15</div>
+  </div>
+</article>
+<article class="message" id="res135">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">強大さを悪意とか恐怖として認識してないから単に凄い人として見えてる！！？</div>
+    <div class="message-time">135: 2024/4/23(火) 0:12:45</div>
+  </div>
+</article>
+<article class="message" id="res136">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">GM：じゃあこの仕事の依頼人は｜無茶振《むちゃぶり》さんです<br><br>すぐこういうネーム思いつくじゃん</div>
+    <div class="message-time">136: 2024/4/23(火) 0:13:21</div>
+  </div>
+</article>
+<article class="message" id="res137">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路「………よし」（これで…出れる！急げ、この空間から…）<br>ガラスの取り付け作業が終わり、周囲に気を張った状態で点検を終えます<br>「作業は終了しました……失礼しました」とか言って足早に出ようとします＠<br>GM：はい、じゃあ須磨が出ようと思ったところで<br><br>かわいそう</div>
+    <div class="message-time">137: 2024/4/23(火) 0:13:51</div>
+  </div>
+</article>
+<article class="message" id="res138">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド：自分が開けようとして開けられなかった後に誰かが開けてしまうと困るので黙っています＠<br><br>そうだね…</div>
+    <div class="message-time">138: 2024/4/23(火) 0:14:20</div>
+  </div>
+</article>
+<article class="message" id="res139">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">始まったばかりなのにもう須磨くんがこんなにも可哀想</div>
+    <div class="message-time">139: 2024/4/23(火) 0:14:30</div>
+  </div>
+</article>
+<article class="message" id="res140">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄「わ、…私が、体当たり、してみます」＠<br>須磨 緑路：これは行けるやろ……<br><br>これは行けるやろ過ぎて草</div>
+    <div class="message-time">140: 2024/4/23(火) 0:14:48</div>
+  </div>
+</article>
+<article class="message" id="res141">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">謎の男「そいつは無理な相談だな！なぜならここはデスサウナ！お前たちはただ死を待つしかないのだ！」<br>サウナ客D「で…デスサウナじゃと！？」<br>サウナ客A「馬鹿な！デスサウナだって！？」<br>サウナ客B「そんな！デスサウナだなんて！」<br>サウナ客C「嘘だろ…デスサウナとは…」<br>サウナ客Ω「訳のわからねえことを言ってんじゃねえ！」＠<br><br>益 良雄：よかった、一人だけちゃんとわからない人がいた<br><br>草</div>
+    <div class="message-time">141: 2024/4/23(火) 0:16:27</div>
+  </div>
+</article>
+<article class="message" id="res142">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路（あの太った男…なんであの男は冷静で居られる…！？ダンジョン型…！？何を知っている…いや…まさか仲間…首謀者本人の可能性も高い…）<br>（そもそも、あの能力者と思しき存在の素顔を見せない出で立ちからして、中身がこの中に居ないとは限らない…！）もちろん疑いの眼です＠<br><br>そらそうなる</div>
+    <div class="message-time">142: 2024/4/23(火) 0:17:03</div>
+  </div>
+</article>
+<article class="message" id="res143">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">サウナ客Ω<br>「ケッ！俺はこの後LUNA隊の支部に潜入してアレコレ無断撮影してその動画でバズる予定があるんだ！このドアからさっさと脱出するぜ！」<br><br>よかったなこのあと和えるぞ</div>
+    <div class="message-time">143: 2024/4/23(火) 0:17:53</div>
+  </div>
+</article>
+<article class="message" id="res144">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">和えるな、会え</div>
+    <div class="message-time">144: 2024/4/23(火) 0:18:01</div>
+  </div>
+</article>
+<article class="message" id="res145">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路（この状況…監査の一環の可能性すらあるが…命の危機にそんなものを気にしている必要はない…！あるいは罠だったとしても…！）<br>「…あ、あなた…ええ…と…あなたの力ならあのドアも何とかなるのではないですか…？」と存在感が凄まじいクイーンに話しかけます＠<br>クイーン・ガーランド（は？　何とかなるわけないだろ）と思いますが、立ち上がって閉ざされた方のドアを開けに行ってみます。もちろん開かないが<br><br>は？なんとかなるわけないだろｗｗｗｗ</div>
+    <div class="message-time">145: 2024/4/23(火) 0:18:10</div>
+  </div>
+</article>
+<article class="message" id="res146">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">謎の男「おっと…喋りすぎたようだな。だが安心しろ、俺の復讐相手は個人ではない」<br>謎の男「全てのサウナ…そしてサウナを娯楽として楽しむ連中だ…！」<br>クイーン・ガーランド（ん？　思ったよりだいぶしょうもなさそうだぞ）と思います＠<br><br>思ったよりだいぶしょうもなさそうだぞｗｗｗｗｗｗ</div>
+    <div class="message-time">146: 2024/4/23(火) 0:19:22</div>
+  </div>
+</article>
+<article class="message" id="res147">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド<br>アホの邪悪龍</div>
+    <div class="message-time">147: 2024/4/23(火) 0:19:39</div>
+  </div>
+</article>
+<article class="message" id="res148">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">既に結構笑いすぎて苦しかったのにアホの邪悪龍でツボりすぎて死にそう</div>
+    <div class="message-time">148: 2024/4/23(火) 0:20:25</div>
+  </div>
+</article>
+<article class="message" id="res149">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄「さ、…サウナで無暗に暴れるのも危険です。それで、デスサウナ、というのは……」＠サウナ客Dを見ます<br>サウナ客D「うむ…サウナは古代から楽しまれた娯楽で、近年は特に発展しておる」<br>サウナ客D「しかし光があれば闇もあるように、サウナの発展の裏にはいくつもの負の側面がある。その概念が形を成したものがデスサウナじゃ」<br>サウナ客D「あらゆるギミックを多種多様に取り揃え、数多く存在するデスサウナに一つとして同じものはない」<br>須磨 緑路：真面目に受け取らなきゃならないんだけど真面目に受け取りたくない &nbsp; &nbsp;<br>クイーン・ガーランド：アホの邪悪龍<br><br>ｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</div>
+    <div class="message-time">149: 2024/4/23(火) 0:20:45</div>
+  </div>
+</article>
+<article class="message" id="res150">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">サウナ客D「ここがデスサウナならば外にはデスサウナ空間が広がり、実世界とは切り離されておる。たとえこの扉を破壊したとしても、脱出は不可能じゃろう」＠<br>益 良雄：なるほど？？？<br><br>ここまで共感出来る「なるほど？？？」もそうそうないよ</div>
+    <div class="message-time">150: 2024/4/23(火) 0:21:51</div>
+  </div>
+</article>
+<article class="message" id="res151">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202404ceb97e08&amp;i=i60805689" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202404ceb97e08&amp;i=i60805689" width="324" height="155"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=i60805689">📎 デスサウナ はむラバカゲ.png</a> <span class="filesize">[1.3 MB, 1577x747px]</span> を追加しました。</div>
+    <div class="message-time">151: 2024/4/23(火) 0:22:10</div>
+  </div>
+</article>
+<article class="message" id="res152">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">スクショありがとうございます！カワイイなオイ</div>
+    <div class="message-time">152: 2024/4/23(火) 0:22:38</div>
+  </div>
+</article>
+<article class="message" id="res153">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうかコマの高さ変えられるんだって気づいたので１組目の集合写真も後日調整します</div>
+    <div class="message-time">153: 2024/4/23(火) 0:22:41</div>
+  </div>
+</article>
+<article class="message" id="res154">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨くんって取り繕…敵対状態じゃないと敬語なんだな</div>
+    <div class="message-time">154: 2024/4/23(火) 0:23:12</div>
+  </div>
+</article>
+<article class="message" id="res155">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それは僕も驚いた</div>
+    <div class="message-time">155: 2024/4/23(火) 0:23:53</div>
+  </div>
+</article>
+<article class="message" id="res156">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄：ですね　PTの戦闘力には不安しかないですが、幸いにしてHPだけはあるので<br>須磨 緑路：おいやめろよ不安しか無いって事実言うの<br><br>考えてみたら不安しか無いPTだったわ</div>
+    <div class="message-time">156: 2024/4/23(火) 0:24:15</div>
+  </div>
+</article>
+<article class="message" id="res157">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄：イラストが遊戯王になってる！！！<br><br>立ち絵が遊戯王の人が！！！！</div>
+    <div class="message-time">157: 2024/4/23(火) 0:25:07</div>
+  </div>
+</article>
+<article class="message" id="res158">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路：煙幕持ちが居ないな？煙幕二つ握っておこう<br>あとはマグタフEX二個なら腐らんやろ思います<br><br>とりあえず煙幕はユグドラシルの常識</div>
+    <div class="message-time">158: 2024/4/23(火) 0:25:38</div>
+  </div>
+</article>
+<article class="message" id="res159">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄：私が持った方がいいか　暴走余裕あるし<br><br>筋知は暴走だけは余裕あるんだよな（その分PP無いけど）</div>
+    <div class="message-time">159: 2024/4/23(火) 0:26:15</div>
+  </div>
+</article>
+<article class="message" id="res160">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res154">&gt;&gt; 154</a> <br>推定敵である状態ならまずは取り繕わないと囲って全員からボコられる（と思ってる）からね…</div>
+    <div class="message-time">160: 2024/4/23(火) 0:26:32</div>
+  </div>
+</article>
+<article class="message" id="res161">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ああ…；；</div>
+    <div class="message-time">161: 2024/4/23(火) 0:26:51</div>
+  </div>
+</article>
+<article class="message" id="res162">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路（これは…煙幕に、マグタフＥＸ…よし、これで強襲されても……いや…待てよ……）<br>（自分一人で持つのは様々な理由で無い……ならば…）<br>「…使えそうな、煙幕が落ちてました…だ、だれか必要だったりしますか？」と差し出します＠<br>クイーン・ガーランド「わ、私は結構よ」<br>クイーン・ガーランド：立場上そんなものに頼るわけにはいかないのである<br>須磨 緑路：まあイメージってもんがあるしね…<br><br>大変だなあ…</div>
+    <div class="message-time">162: 2024/4/23(火) 0:27:15</div>
+  </div>
+</article>
+<article class="message" id="res163">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ここ正直ちょっとやっちゃったんですよね<br>須磨が落ちてるマグEXとか煙幕とか素直に取得するってもうちょっと捻らせた方が良かったんですけどPLが普通に嬉しくて普通に取っちゃいました</div>
+    <div class="message-time">163: 2024/4/23(火) 0:28:22</div>
+  </div>
+</article>
+<article class="message" id="res164">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄「い、いざという時は、私の後ろに……壁ぐらいには、なるので」＠<br>須磨 緑路「………いえ、そういうわけには」＠<br>サウナ客Ω「ほ、本当だな！いざとなったら俺は自分だけでも生き残るぞ！」<br><br>これ須磨も心の中の声が一致してたりしません？</div>
+    <div class="message-time">164: 2024/4/23(火) 0:28:29</div>
+  </div>
+</article>
+<article class="message" id="res165">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res163">&gt;&gt; 163</a> <br>ああ…そうか…</div>
+    <div class="message-time">165: 2024/4/23(火) 0:28:37</div>
+  </div>
+</article>
+<article class="message" id="res166">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ非常事態だｓ…須磨はいつも非常事態なのか</div>
+    <div class="message-time">166: 2024/4/23(火) 0:28:54</div>
+  </div>
+</article>
+<article class="message" id="res167">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res164">&gt;&gt; 164</a> <br>いざとなったら自分「だけでも」じゃなくて「俺は全員消して生き残るぞ」です</div>
+    <div class="message-time">167: 2024/4/23(火) 0:29:30</div>
+  </div>
+</article>
+<article class="message" id="res168">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド<br>「水に見せかけて硫酸だったりすんのよこういうのは」＠<br><br>かしこい</div>
+    <div class="message-time">168: 2024/4/23(火) 0:29:52</div>
+  </div>
+</article>
+<article class="message" id="res169">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res167">&gt;&gt; 167</a> <br>草</div>
+    <div class="message-time">169: 2024/4/23(火) 0:30:06</div>
+  </div>
+</article>
+<article class="message" id="res170">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド「水風呂……？　間違っても飛び込んではだめよ」＠<br>サウナ客Ω「み、水だあー！」 &nbsp; &nbsp;<br>サウナ客Ω：我先に入ろうとします＠<br>サウナ客A「あっ！待てお前！俺も！」 &nbsp; &nbsp;<br>サウナ客A：入ろうとします＠<br>クイーン・ガーランド「駄目といってるでしょうが」＠<br><br>ギャグだろもう</div>
+    <div class="message-time">170: 2024/4/23(火) 0:30:12</div>
+  </div>
+</article>
+<article class="message" id="res171">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202404ceb97e08&amp;i=i8429a26a" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202404ceb97e08&amp;i=i8429a26a" width="324" height="63"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=i8429a26a">📎 スクリーンショット (86).png</a> <span class="filesize">[33.5 KB, 582x108px]</span> を追加しました。</div>
+    <div class="message-time">171: 2024/4/23(火) 0:31:00</div>
+  </div>
+</article>
+<article class="message" id="res172">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちょうどいい差分があって草</div>
+    <div class="message-time">172: 2024/4/23(火) 0:31:06</div>
+  </div>
+</article>
+<article class="message" id="res173">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res168">&gt;&gt; 168</a> <br>かしこい</div>
+    <div class="message-time">173: 2024/4/23(火) 0:31:22</div>
+  </div>
+</article>
+<article class="message" id="res174">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド「ほほほほほらね！」まじかよと思いつつ＠<br><br>動揺するのかよｗｗ</div>
+    <div class="message-time">174: 2024/4/23(火) 0:31:52</div>
+  </div>
+</article>
+<article class="message" id="res175">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド：セリフでは焦ったりどもったりしますが他の人からは余裕ぶっこいて見えるでしょう<br><br>便利だなあ</div>
+    <div class="message-time">175: 2024/4/23(火) 0:32:10</div>
+  </div>
+</article>
+<article class="message" id="res176">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">弱さを見せられないという点ではどうなのかなあ</div>
+    <div class="message-time">176: 2024/4/23(火) 0:32:50</div>
+  </div>
+</article>
+<article class="message" id="res177">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路<br>必要とあらば発破します<br><br>あらまあ…</div>
+    <div class="message-time">177: 2024/4/23(火) 0:34:11</div>
+  </div>
+</article>
+<article class="message" id="res178">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄：ところで須磨くん　キミ濃硫酸を使った化学実験はしたことあるかい？ &nbsp; &nbsp;<br>須磨 緑路：えっ…？何々何の話？？<br>益 良雄：濃硫酸を希釈するとき、絶対にやってはいけないことはなーんだ &nbsp; &nbsp;<br>須磨 緑路：えっ……うーん…… &nbsp; &nbsp;<br>益 良雄：答えは　濃硫酸に水をいれること　だぞ（ハート） &nbsp; &nbsp;<br>須磨 緑路：そーなの！？ &nbsp; &nbsp;<br>益 良雄：爆発します<br>益 良雄：濃硫酸と水が結合することで発生する熱で、水が突沸して、周りの硫酸ごと飛び散ります<br>益 良雄：だから絶対こぼすなよ！　マジで絶対にこぼすなよ！！　フリじゃないからな！！！ &nbsp; &nbsp; &nbsp; &nbsp;<br>須磨 緑路：こんなところでやったら自分も巻き込まれるんだからやるわけねえじゃん（真顔 &nbsp; &nbsp;<br>益 良雄：でも水に振動予約しましたよね？？？ &nbsp; &nbsp;<br>須磨 緑路：ええ、皆に飲ませた水に &nbsp; &nbsp;<br>益 良雄：あぁ、体内爆破 &nbsp; &nbsp;<br>須磨 緑路：必要とあらば発破します<br><br>まーた罠仕掛けてるよ</div>
+    <div class="message-time">178: 2024/4/23(火) 0:35:06</div>
+  </div>
+</article>
+<article class="message" id="res179">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちょっと待て、この話を持ち出した人は濃硫酸を使った化学実験をしたことがあるってことに…</div>
+    <div class="message-time">179: 2024/4/23(火) 0:35:29</div>
+  </div>
+</article>
+<article class="message" id="res180">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">リアルサイエンスやめろ</div>
+    <div class="message-time">180: 2024/4/23(火) 0:36:31</div>
+  </div>
+</article>
+<article class="message" id="res181">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">サウナ客B「うおーっ！なんかよくわからないけどすごいぜーっ！」<br>益 良雄「あ、…ありがとう、ございます。すごく、すごかったです」＠<br><br>草</div>
+    <div class="message-time">181: 2024/4/23(火) 0:36:36</div>
+  </div>
+</article>
+<article class="message" id="res182">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">チヒロさんのパーフェクト科学教室</div>
+    <div class="message-time">182: 2024/4/23(火) 0:37:08</div>
+  </div>
+</article>
+<article class="message" id="res183">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">0時半なので僕は一旦中断して次回2つ目のエリアから読みます</div>
+    <div class="message-time">183: 2024/4/23(火) 0:37:17</div>
+  </div>
+</article>
+<article class="message" id="res184">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">乙や</div>
+    <div class="message-time">184: 2024/4/23(火) 0:37:29</div>
+  </div>
+</article>
+<article class="message" id="res185">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">&lt;BCDice：須磨 緑路&gt;<br>Yggdrasill<wbr> : (choice[ふざけんなスットコドッコイが,しゃーない])<br> → ふざけんなスットコドッコイが<br>GM<br>では不思議な力でイベントカードがスキップされました<br><br>choiceさんはいつだって正しいからな</div>
+    <div class="message-time">185: 2024/4/23(火) 0:39:52</div>
+  </div>
+</article>
+<article class="message" id="res186">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">サウナ客Ω<br>ちなみに再生数は4です<br><br>まあまあ見られるな</div>
+    <div class="message-time">186: 2024/4/23(火) 0:44:35</div>
+  </div>
+</article>
+<article class="message" id="res187">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いやみんあシーンチェック高すぎぃぃいいｗｗｗ</div>
+    <div class="message-time">187: 2024/4/23(火) 0:49:31</div>
+  </div>
+</article>
+<article class="message" id="res188">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">&lt;BCDice：クイーン・ガーランド&gt;<br>Yggdrasill<wbr> : (choice[クイーン,須磨,益,サウナ客A,B,C,D,Ω,デスゴブリン,サウナストーブ,未来の敵]) → Ω<br><br>あっ…まあいいか…</div>
+    <div class="message-time">188: 2024/4/23(火) 0:50:11</div>
+  </div>
+</article>
+<article class="message" id="res189">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあいいやあんな奴</div>
+    <div class="message-time">189: 2024/4/23(火) 0:50:23</div>
+  </div>
+</article>
+<article class="message" id="res190">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">サウナ客Ω<br>「ヒッ、ヒイッ！な、なななななんなりと！仰せのままに！」＠心が折れるし勢い余って今までアップした動画が削除されアカウントも消えるし撮影機材もぶっ壊れます<br><br>なんかすごいことになっちゃった</div>
+    <div class="message-time">190: 2024/4/23(火) 0:51:21</div>
+  </div>
+</article>
+<article class="message" id="res191">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路<br>すげぇ！流石クイーンさんだ！！</div>
+    <div class="message-time">191: 2024/4/23(火) 0:51:48</div>
+  </div>
+</article>
+<article class="message" id="res192">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">っぱクイーンさんはちげぇわ</div>
+    <div class="message-time">192: 2024/4/23(火) 0:52:20</div>
+  </div>
+</article>
+<article class="message" id="res193">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">くそどうでもいい話だけど没ったキャラシの中にファイアマンがいました</div>
+    <div class="message-time">193: 2024/4/23(火) 0:53:54</div>
+  </div>
+</article>
+<article class="message" id="res194">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そーなの！？</div>
+    <div class="message-time">194: 2024/4/23(火) 0:54:05</div>
+  </div>
+</article>
+<article class="message" id="res195">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">完全に忘れてたけど画像出てきて あ！ってなりました</div>
+    <div class="message-time">195: 2024/4/23(火) 0:55:11</div>
+  </div>
+</article>
+<article class="message" id="res196">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ひき運いいな</div>
+    <div class="message-time">196: 2024/4/23(火) 0:56:42</div>
+  </div>
+</article>
+<article class="message" id="res197">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">引き運が良すぎて須磨じゃない疑惑があります</div>
+    <div class="message-time">197: 2024/4/23(火) 0:57:06</div>
+  </div>
+</article>
+<article class="message" id="res198">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ダイス運は……いつも通りですね</div>
+    <div class="message-time">198: 2024/4/23(火) 0:58:36</div>
+  </div>
+</article>
+<article class="message" id="res199">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">私は最近人の事言えなくなってるけど…</div>
+    <div class="message-time">199: 2024/4/23(火) 0:58:55</div>
+  </div>
+</article>
+<article class="message" id="res200">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">謎の男<br>「そして！デスサウナのデスサウナの持つ自己増殖・自己再生・自己進化能力の三大理論の解釈次第では！」<br><br>デビルガンダムも「え？」ってなるよ</div>
+    <div class="message-time">200: 2024/4/23(火) 1:05:24</div>
+  </div>
+</article>
+<article class="message" id="res201">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">解釈で許される範疇にねえよ</div>
+    <div class="message-time">201: 2024/4/23(火) 1:06:39</div>
+  </div>
+</article>
+<article class="message" id="res202">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あーこの日でかめの地震来てたのか</div>
+    <div class="message-time">202: 2024/4/23(火) 1:08:31</div>
+  </div>
+</article>
+<article class="message" id="res203">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄<br>「例え肉が焼け落ちようと、患者自身の安全のため、手は緩めません・・・！」＠<br><br>かっこいい…！</div>
+    <div class="message-time">203: 2024/4/23(火) 1:11:01</div>
+  </div>
+</article>
+<article class="message" id="res204">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">スマブラの人<br>特撮怪人は何でも居るなぁ……<br><br>野球とか卓球とか…</div>
+    <div class="message-time">204: 2024/4/23(火) 1:12:41</div>
+  </div>
+</article>
+<article class="message" id="res205">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">読み終わった<br>筋力キャラが輝く卓だな</div>
+    <div class="message-time">205: 2024/4/23(火) 1:23:43</div>
+  </div>
+</article>
+<article class="message" id="res206">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">乙や<br>あんな振り方でも活躍出来る卓なんてあったんですねぇ</div>
+    <div class="message-time">206: 2024/4/23(火) 1:24:29</div>
+  </div>
+</article><div class="elapsed"><span>10時間 53分 経過</span></div>
+<article class="message" id="res207">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">デスサウナもモヒリティもPSY因子由来ではない概念という事実に今気付きました<br>多分今後もそういうの出てきます</div>
+    <div class="message-time">207: 2024/4/23(火) 12:17:48</div>
+  </div>
+</article>
+<article class="message" id="res208">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">犯行予告やめろ</div>
+    <div class="message-time">208: 2024/4/23(火) 12:38:07</div>
+  </div>
+</article><div class="elapsed"><span>7時間 24分 経過</span></div>
+<article class="message" id="res209">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">チンピラ辺り出してセルフデスサウナ走ってみようかと考えたけどギャグ全振りのシナリオを全て把握したうえでやるのなかなかハードル高いな…</div>
+    <div class="message-time">209: 2024/4/23(火) 20:02:55</div>
+  </div>
+</article>
+<article class="message" id="res210">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=ic7aa0219">📎 エスケープ・オブ・デスサウナ はむカゲラバ.zip</a> <span class="filesize">[10.3 MB]</span> を追加しました。</div>
+    <div class="message-time">210: 2024/4/23(火) 20:53:35</div>
+  </div>
+</article>
+<article class="message" id="res211">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログありがとうございます！</div>
+    <div class="message-time">211: 2024/4/23(火) 21:57:58</div>
+  </div>
+</article><div class="elapsed"><span>8日 21時間 51分 経過</span></div>
+<article class="message" id="res212">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路<br>サウナに居たかったわけじゃないんですが商品の納品に来てました<br>どうも一人ぐらいは職人も必要だったらしいので<br>須磨 緑路<br>（……どうして業務時間中に俺はこんなところに…普通閉店後じゃないのか…？）<br>（クッ…最悪だ…早く仕事を終えて出たい…一刻も早く…）＠<br><br>サウナ作動中に作業してる須磨に草</div>
+    <div class="message-time">212: 2024/5/2(木) 19:49:01</div>
+  </div>
+</article>
+<article class="message" id="res213">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路<br>（そもそも、なんでまた俺がこんな場所で作業を……監視されている…？あり得る、俺が『粗相』をするかどうか試されている…いや、そうだ、恐らくあの女は『後始末』のための要員……！）＠<br><br>なんだこいつ…</div>
+    <div class="message-time">213: 2024/5/2(木) 19:49:55</div>
+  </div>
+</article>
+<article class="message" id="res214">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ほぼ陰謀論者とか統合失調症患者の思考なんだよな…思考盗聴に気を付けてくださいね</div>
+    <div class="message-time">214: 2024/5/2(木) 19:51:06</div>
+  </div>
+</article>
+<article class="message" id="res215">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この島よく考えたらアリスに思考盗聴されてるのがデフォだわ</div>
+    <div class="message-time">215: 2024/5/2(木) 19:51:24</div>
+  </div>
+</article>
+<article class="message" id="res216">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド<br>自分が開けようとして開けられなかった後に誰かが開けてしまうと困るので<br>黙っています＠<br><br>草</div>
+    <div class="message-time">216: 2024/5/2(木) 19:53:24</div>
+  </div>
+</article>
+<article class="message" id="res217">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーンさんはそこそこイメージを自ら保とうともしてるタイプなのか</div>
+    <div class="message-time">217: 2024/5/2(木) 19:54:14</div>
+  </div>
+</article>
+<article class="message" id="res218">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーンさんが開けれなくて他の誰かがあけてしまっても能力的には何か理由があったに違いないとアクロバティックな好意的解釈をされてしまう感じだと思うけど</div>
+    <div class="message-time">218: 2024/5/2(木) 19:55:50</div>
+  </div>
+</article>
+<article class="message" id="res219">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">実況だ！！はむさんの実況だぞ！！</div>
+    <div class="message-time">219: 2024/5/2(木) 19:56:02</div>
+  </div>
+</article>
+<article class="message" id="res220">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res214">&gt;&gt; 214</a> <br>気を付けたいけどそんな事を気にするほど余裕のある時があまり無いです</div>
+    <div class="message-time">220: 2024/5/2(木) 19:57:29</div>
+  </div>
+</article>
+<article class="message" id="res221">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">頭にアルミホイル巻かないと…って思ったけど今日アルミホイル帽子が実は電波を防げずに5G電波を増幅する効果があったって記事見て笑ったわ</div>
+    <div class="message-time">221: 2024/5/2(木) 19:59:33</div>
+  </div>
+</article>
+<article class="message" id="res222">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アルミホイルぐらいで盗聴防げるわけねえだろバカか？それとも能力者アマく見とんのか？？だから…</div>
+    <div class="message-time">222: 2024/5/2(木) 20:00:19</div>
+  </div>
+</article>
+<article class="message" id="res223">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">電波防げねえのかよしかも</div>
+    <div class="message-time">223: 2024/5/2(木) 20:00:49</div>
+  </div>
+</article>
+<article class="message" id="res224">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄<br>（サウナでの閉じ込め！？ そんなの、本当に殺す気としかおもえない！）＠<br><br>本当にな！！</div>
+    <div class="message-time">224: 2024/5/2(木) 20:01:53</div>
+  </div>
+</article>
+<article class="message" id="res225">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄<br>そもそも我々はデスサウナについて知っているのですか？<br>クイーン・ガーランド<br>知っていたくないなぁ<br>GM<br>知らないのではないでしょうか<br>GM<br>知っていてもいいです<br>須磨 緑路<br>じゃあ知らねえ～<br>クイーン・ガーランド<br>私は知らないです<br>益 良雄<br>看護師とはいえ、医者じゃないので多分しらない<br>クイーン・ガーランド<br>医者だったら知ってるのか……？<br><br>医者だったら知ってるか…</div>
+    <div class="message-time">225: 2024/5/2(木) 20:03:49</div>
+  </div>
+</article>
+<article class="message" id="res226">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんせ医者だからな…</div>
+    <div class="message-time">226: 2024/5/2(木) 20:04:39</div>
+  </div>
+</article>
+<article class="message" id="res227">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">サウナ客D<br>「しかし光があれば闇もあるように、サウナの発展の裏にはいくつもの負の側面がある。その概念が形を成したものがデスサウナじゃ」<br><br>サウナに光も闇もあってたまるか</div>
+    <div class="message-time">227: 2024/5/2(木) 20:07:30</div>
+  </div>
+</article>
+<article class="message" id="res228">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路<br>【発見】と【平穏】か<br>…いや幸先良いな？<br><br>強い</div>
+    <div class="message-time">228: 2024/5/2(木) 20:11:13</div>
+  </div>
+</article>
+<article class="message" id="res229">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">このログだとチヒロさんが何引いたのか残ってないな、また発見と平穏だったのかな？</div>
+    <div class="message-time">229: 2024/5/2(木) 20:13:11</div>
+  </div>
+</article>
+<article class="message" id="res230">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい</div>
+    <div class="message-time">230: 2024/5/2(木) 20:13:30</div>
+  </div>
+</article>
+<article class="message" id="res231">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">能力で何とかしてたけど靉翁の引き運ゴミカスだったな…</div>
+    <div class="message-time">231: 2024/5/2(木) 20:14:00</div>
+  </div>
+</article>
+<article class="message" id="res232">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">GM<br>あなたたちが扉をくぐると、突然熱が治まる<br>益 良雄<br>む、ヒートショックはいかん<br><br>医療従事者の鏡</div>
+    <div class="message-time">232: 2024/5/2(木) 20:15:08</div>
+  </div>
+</article>
+<article class="message" id="res233">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益良雄さん、立ち絵差分だいぶあって笑う</div>
+    <div class="message-time">233: 2024/5/2(木) 20:16:21</div>
+  </div>
+</article>
+<article class="message" id="res234">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そんなに差分あるカードなの？？</div>
+    <div class="message-time">234: 2024/5/2(木) 20:16:47</div>
+  </div>
+</article>
+<article class="message" id="res235">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド<br>「水に見せかけて硫酸だったりすんのよこういうのは」＠<br>益 良雄<br>じゃあ包帯を水につけてみましょうか<br>GM<br>包帯が溶けます＠<br>益 良雄<br>「……どうやら、彼女の言う通りだったみたい、です」＠<br>クイーン・ガーランド<br>「ほほほほほらね！」まじかよと思いつつ＠<br>GM<br>益とクイーンは水風呂に見えるそれが冷水でなくデス濃硫酸ということを察せるでしょう<br><br>クイーンのデスサウナ学高い</div>
+    <div class="message-time">235: 2024/5/2(木) 20:18:43</div>
+  </div>
+</article>
+<article class="message" id="res236">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン…やはり全てを知って…</div>
+    <div class="message-time">236: 2024/5/2(木) 20:19:22</div>
+  </div>
+</article>
+<article class="message" id="res237">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">遊戯王　マッスラーで検索検索ゥ</div>
+    <div class="message-time">237: 2024/5/2(木) 20:19:34</div>
+  </div>
+</article>
+<article class="message" id="res238">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">震え声に聞こえるそれらも大気が恐れをなして声が振動して聞こえるだけだからな</div>
+    <div class="message-time">238: 2024/5/2(木) 20:20:04</div>
+  </div>
+</article>
+<article class="message" id="res239">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路<br>この中身の水に【予震】を仕掛けます　攻撃発動トラップです<br>須磨 緑路<br>「水でしたら、一応…あります、どうぞ」と皆さんに差し出します＠<br>サウナ客Ω<br>「はぁっ、はぁっ、水だッ！」＠半ば奪うような形で須磨の手にある水を取って飲みます<br><br>デスゲーム型のデスサウナ参加者？？？？</div>
+    <div class="message-time">239: 2024/5/2(木) 20:21:33</div>
+  </div>
+</article>
+<article class="message" id="res240">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">犯人がこの中に居るかもしれんし…</div>
+    <div class="message-time">240: 2024/5/2(木) 20:23:03</div>
+  </div>
+</article>
+<article class="message" id="res241">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄<br>ところで須磨くん　キミ濃硫酸を使った化学実験はしたことあるかい？<br>益 良雄<br>濃硫酸を希釈するとき、絶対にやってはいけないことはなーんだ<br>益 良雄<br>答えは　濃硫酸に水をいれること　だぞ（ハート）<br>益 良雄<br>爆発します &nbsp; &nbsp;<br>益 良雄<br>濃硫酸と水が結合することで発生する熱で、水が突沸して、周りの硫酸ごと飛び散ります<br>益 良雄<br>だから絶対こぼすなよ！　マジで絶対にこぼすなよ！！　フリじゃないからな！！！<br><br>リアルINT！！</div>
+    <div class="message-time">241: 2024/5/2(木) 20:24:11</div>
+  </div>
+</article>
+<article class="message" id="res242">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">濃硫酸を使った化学実験をやったことある人のほうが少ないだろ！！！！！！！！！</div>
+    <div class="message-time">242: 2024/5/2(木) 20:24:48</div>
+  </div>
+</article>
+<article class="message" id="res243">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それはそう</div>
+    <div class="message-time">243: 2024/5/2(木) 20:24:58</div>
+  </div>
+</article>
+<article class="message" id="res244">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路<br>「……そう、この手の事柄を楽しむような狂人は…いかにも飛びつきたくなるような物を餌にする……いかにもそれが救いと見せかける…」＠<br><br>いかにも飛びつきたくなるようなものに罠を設置して配った奴が…</div>
+    <div class="message-time">244: 2024/5/2(木) 20:25:41</div>
+  </div>
+</article>
+<article class="message" id="res245">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">楽しんでないからセーフ</div>
+    <div class="message-time">245: 2024/5/2(木) 20:26:05</div>
+  </div>
+</article>
+<article class="message" id="res246">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路<br>「───ッ…吹き飛べぇッ！」咄嗟に腕を大きく振り、触れた空気を次々振動させ、衝撃波を生み出しデス濃硫酸を吹き飛ばします！＠<br><br>そんな…須磨が他人を助けるなんて…</div>
+    <div class="message-time">246: 2024/5/2(木) 20:28:41</div>
+  </div>
+</article>
+<article class="message" id="res247">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res237">&gt;&gt; 237</a> <br>３種類は最低でもあるのね…</div>
+    <div class="message-time">247: 2024/5/2(木) 20:29:37</div>
+  </div>
+</article>
+<article class="message" id="res248">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド<br>CF6+2d6<br>&lt;BCDice：クイーン・ガーランド&gt;<br>Yggdrasill<wbr> : (CF6+2D6) → 計【 10 】 ： 6+6[5,1] (fa:1)-2[2<wbr>]<br>クイーン・ガーランド<br>はい<br>益 良雄<br>はい<br>須磨 緑路<br>はい<br><br><br>はい</div>
+    <div class="message-time">248: 2024/5/2(木) 20:30:57</div>
+  </div>
+</article>
+<article class="message" id="res249">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">よくよく考えたらSAVOさんとチヒロさんとスマさんだったのか…キリさんの卓でよかったな…</div>
+    <div class="message-time">249: 2024/5/2(木) 20:31:23</div>
+  </div>
+</article>
+<article class="message" id="res250">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オマケにマトモな戦力が普通にクイーンぐらいという</div>
+    <div class="message-time">250: 2024/5/2(木) 20:32:33</div>
+  </div>
+</article>
+<article class="message" id="res251">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">チヒロさんの行う科学実験、下ブレしてそうだけどデータとして信用できるんですか？</div>
+    <div class="message-time">251: 2024/5/2(木) 20:33:02</div>
+  </div>
+</article>
+<article class="message" id="res252">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">流石に酷すぎるだろ！！！</div>
+    <div class="message-time">252: 2024/5/2(木) 20:34:14</div>
+  </div>
+</article>
+<article class="message" id="res253">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でもサイコロ降って平均値をとる実験と化したら絶対したブレるじゃん！！</div>
+    <div class="message-time">253: 2024/5/2(木) 20:34:53</div>
+  </div>
+</article>
+<article class="message" id="res254">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">科学じゃないだろ！！！</div>
+    <div class="message-time">254: 2024/5/2(木) 20:35:19</div>
+  </div>
+</article>
+<article class="message" id="res255">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オカルト</div>
+    <div class="message-time">255: 2024/5/2(木) 20:35:25</div>
+  </div>
+</article>
+<article class="message" id="res256">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でもチヒロさんのダイスの荒ぶりって再現性があるので科学で証明できませんか？</div>
+    <div class="message-time">256: 2024/5/2(木) 20:36:25</div>
+  </div>
+</article>
+<article class="message" id="res257">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">再現性はあるけど原理が不明なので…</div>
+    <div class="message-time">257: 2024/5/2(木) 20:36:59</div>
+  </div>
+</article>
+<article class="message" id="res258">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">GM<br>ふざけるんじゃねえスットコドッコイがと言うならこのエンドフェイズだけスキップします。不手際なので<br>須磨 緑路<br>choice[ふざけんなスットコドッコイが,しゃーない]<br>&lt;BCDice：須磨 緑路&gt;<br>Yggdrasill<wbr> : (choice[ふざけんなスットコドッコイが,しゃーない]) → ふざけんなスットコドッコイが<br>GM<br>では不思議な力でイベントカードがスキップされました<br>GM<br>こういうこともあるのがデスサウナです<br><br><br>デスサウナについて詳しくなれるなぁ</div>
+    <div class="message-time">258: 2024/5/2(木) 20:39:33</div>
+  </div>
+</article>
+<article class="message" id="res259">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">次デスサウナに閉じ込められても何とかなりそうですね</div>
+    <div class="message-time">259: 2024/5/2(木) 20:40:07</div>
+  </div>
+</article>
+<article class="message" id="res260">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路<br>須磨どうしたん？また平穏なんだけど？<br>クイーン・ガーランド<br>貴様偽物か！？<br><br>偽須磨</div>
+    <div class="message-time">260: 2024/5/2(木) 20:40:34</div>
+  </div>
+</article>
+<article class="message" id="res261">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄<br>とりあえずバリケードをぶん殴りますね？<br><br>益 良雄<br>cf19+1d6<br>&lt;BCDice：益 良雄&gt;<br>Yggdrasill<wbr> : (CF19+1D6)<wbr> → 計【 30 】 ： 19+6[6] (cr:1)+5[5<wbr>] (cr:計1回)<br><br><br>強すぎる</div>
+    <div class="message-time">261: 2024/5/2(木) 20:42:07</div>
+  </div>
+</article>
+<article class="message" id="res262">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄<br>「む、…あれはクリーチャーでしょうか<br>抑えつけます」＠能力攻撃だけだとちょっと不安か？<br>益 良雄<br>【らせん帯】（能力攻撃）威力コンセ2ぐらいしておきましょうか＠<br>須磨 緑路<br>言うて１０点で殺せるからよっぽどのよっぽど腐らんと４ｄ６だったら…いや…うん……<br><br>4d6で10出すの不安になる人々</div>
+    <div class="message-time">262: 2024/5/2(木) 20:43:26</div>
+  </div>
+</article>
+<article class="message" id="res263">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">４ｄ６で８ぐらいしか出さんかったことあるし…</div>
+    <div class="message-time">263: 2024/5/2(木) 20:43:49</div>
+  </div>
+</article>
+<article class="message" id="res264">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路<br>デスサウナなんだからデスの名を冠するゴブリンが生息してて何ら変なことは無いだろう &nbsp; &nbsp;<br>須磨 緑路<br>何がだよ<br><br>草</div>
+    <div class="message-time">264: 2024/5/2(木) 20:44:52</div>
+  </div>
+</article>
+<article class="message" id="res265">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド<br>今気づいたけど、『デスサウナからの脱出』なら『エスケープフロムデスサウナ』が正しいのでは？<br><br>草</div>
+    <div class="message-time">265: 2024/5/2(木) 20:45:44</div>
+  </div>
+</article>
+<article class="message" id="res266">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">栗原ぁ！英訳おかしいぞ栗原ぁ！</div>
+    <div class="message-time">266: 2024/5/2(木) 20:47:04</div>
+  </div>
+</article>
+<article class="message" id="res267">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">このサウナ…なんか変…！</div>
+    <div class="message-time">267: 2024/5/2(木) 20:47:37</div>
+  </div>
+</article>
+<article class="message" id="res268">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">スマブラの人<br>しかしあの時はゲーム的にサラッとドロップアイテム拾ったけどコイツそれ使うのちょっと変だな……かといって今更渡すのもな…<br>益 良雄<br>偽造とすり替えの絶対にできない容器に入ったマグEXを信じろ<br><br>そういえばインドで水道水警戒してミネラルウォーター買ったら水道水に入れ替えられてて腹壊したとか見たな…</div>
+    <div class="message-time">268: 2024/5/2(木) 20:50:36</div>
+  </div>
+</article>
+<article class="message" id="res269">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">買った水すら信用できないの怖い</div>
+    <div class="message-time">269: 2024/5/2(木) 20:50:50</div>
+  </div>
+</article>
+<article class="message" id="res270">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この話須磨にして大丈夫だったかな？</div>
+    <div class="message-time">270: 2024/5/2(木) 20:51:12</div>
+  </div>
+</article>
+<article class="message" id="res271">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">………</div>
+    <div class="message-time">271: 2024/5/2(木) 20:51:25</div>
+  </div>
+</article>
+<article class="message" id="res272">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨本人は気付いてないからセーフ</div>
+    <div class="message-time">272: 2024/5/2(木) 20:51:37</div>
+  </div>
+</article>
+<article class="message" id="res273">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路<br>「……わざわざ人死にを狙っている黒幕が用意した物を…正気の沙汰じゃあない、こんなあからさまに怪しい物……氷すら口に含むのも理解に苦しむ……」<br><br>黒幕じゃないのに罠入りの怪しい水を飲ませた輩がこの辺に…</div>
+    <div class="message-time">273: 2024/5/2(木) 20:55:16</div>
+  </div>
+</article>
+<article class="message" id="res274">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">というか自分で罠水作れるんだから自分が飲む買った水も罠の可能性あるだろ！</div>
+    <div class="message-time">274: 2024/5/2(木) 20:56:10</div>
+  </div>
+</article>
+<article class="message" id="res275">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アイディアロール失敗須磨</div>
+    <div class="message-time">275: 2024/5/2(木) 20:56:53</div>
+  </div>
+</article>
+<article class="message" id="res276">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあその辺言ってったらキリ無いんで</div>
+    <div class="message-time">276: 2024/5/2(木) 20:57:09</div>
+  </div>
+</article>
+<article class="message" id="res277">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい</div>
+    <div class="message-time">277: 2024/5/2(木) 20:57:14</div>
+  </div>
+</article>
+<article class="message" id="res278">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路<br>「……ああっ…クソ……！」荷物の胃薬と精神安定剤を水で呷ります<br>「フー………早く…早く行きましょう……」＠<br><br>目の前で他人が飲もうとしてる水を破壊して手持ちの水をここぞと飲むの煽り成分高い</div>
+    <div class="message-time">278: 2024/5/2(木) 20:58:41</div>
+  </div>
+</article>
+<article class="message" id="res279">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">さっき水なら渡しただろ！！！文句言うな！！</div>
+    <div class="message-time">279: 2024/5/2(木) 20:59:21</div>
+  </div>
+</article>
+<article class="message" id="res280">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">サウナ客Ω<br>「ヒッ、ヒイッ！な、なななななんなりと！仰せのままに！」＠心が折れるし勢い余って今までアップした動画が削除されアカウントも消えるし撮影機材もぶっ壊れます<br><br>草</div>
+    <div class="message-time">280: 2024/5/2(木) 21:00:17</div>
+  </div>
+</article>
+<article class="message" id="res281">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">勢い余って？？？？？？？</div>
+    <div class="message-time">281: 2024/5/2(木) 21:00:34</div>
+  </div>
+</article>
+<article class="message" id="res282">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この組カード運いいなぁ</div>
+    <div class="message-time">282: 2024/5/2(木) 21:03:09</div>
+  </div>
+</article>
+<article class="message" id="res283">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド<br>CF20+2d6 &nbsp; &nbsp;<br>&lt;BCDice：クイーン・ガーランド&gt;<br>Yggdrasill<wbr> : (CF20+2D6)<wbr> → 計【 18 】 ： 20+2[1,1] (fa:2)-4[2<wbr>,2] &nbsp; &nbsp;<br>クイーン・ガーランド<br>は？<br><br>ほんとすごいダイスだな…</div>
+    <div class="message-time">283: 2024/5/2(木) 21:05:36</div>
+  </div>
+</article>
+<article class="message" id="res284">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">プレイヤー<br>choice[須磨,益,クイーン]<br>&lt;BCDice：プレイヤー&gt;<br>Yggdrasill<wbr> : (choice[須磨,益,クイーン]) → 益<br>益 良雄<br>一番マシ<br>須磨 緑路<br>俺じゃない！？バカな！？<br>須磨 緑路<br>そんな！？ここは俺に来るべき場所では！？<br><br>やっぱ偽物かぁ？</div>
+    <div class="message-time">284: 2024/5/2(木) 21:07:21</div>
+  </div>
+</article>
+<article class="message" id="res285">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい</div>
+    <div class="message-time">285: 2024/5/2(木) 21:07:51</div>
+  </div>
+</article>
+<article class="message" id="res286">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">謎の男<br>「父さんは…二度とサウナに入れない体になった…」 &nbsp; &nbsp;<br>クイーン・ガーランド<br>「生きとるんかい！！」<br>須磨 緑路<br>とうとう素で突っ込んじゃったよ<br><br>草</div>
+    <div class="message-time">286: 2024/5/2(木) 21:12:13</div>
+  </div>
+</article>
+<article class="message" id="res287">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路<br>八つ当たりで人様殺そうとするなんて本当なんてやつだ、人の風上にも置けやしない、つまり化け物であるQED<br>GM<br>棚～！<br>クイーン・ガーランド<br>自己紹介乙<br>益 良雄<br>須磨くんはさぁ<br><br>草</div>
+    <div class="message-time">287: 2024/5/2(木) 21:14:25</div>
+  </div>
+</article>
+<article class="message" id="res288">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">人の風上にも置けねえカスがよ</div>
+    <div class="message-time">288: 2024/5/2(木) 21:15:11</div>
+  </div>
+</article>
+<article class="message" id="res289">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄<br>愛媛6弱！？<br><br>あの時だったのか</div>
+    <div class="message-time">289: 2024/5/2(木) 21:16:25</div>
+  </div>
+</article>
+<article class="message" id="res290">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">平気でした</div>
+    <div class="message-time">290: 2024/5/2(木) 21:16:30</div>
+  </div>
+</article>
+<article class="message" id="res291">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨 緑路<br>3d6+11+1d6<wbr>　倍差分 &nbsp; &nbsp;<br>&lt;BCDice：須磨 緑路&gt;<br>Yggdrasill<wbr> : (3D6+11+1D<wbr>6) → 3[1,1,1]+1<wbr>1+5[5] → 19<br><br>このパーティのダイス…なんか変</div>
+    <div class="message-time">291: 2024/5/2(木) 21:19:16</div>
+  </div>
+</article>
+<article class="message" id="res292">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">栗原ァ！４ｄで８だぞォ！</div>
+    <div class="message-time">292: 2024/5/2(木) 21:20:09</div>
+  </div>
+</article>
+<article class="message" id="res293">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">別に栗原さんが怪異の原因ではないんだよな……</div>
+    <div class="message-time">293: 2024/5/2(木) 21:21:17</div>
+  </div>
+</article>
+<article class="message" id="res294">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">益 良雄<br>「雄オオオ！」雄たけびを上げながら2.2mの筋肉もりもりな巨漢が|患者怪人を取り押さえます＠<br>デスサウナ怪人<br>「何だとッ！？俺の体はデスサウナと化して高熱のはず…！」＠<br>益 良雄<br>「例え肉が焼け落ちようと、患者自身の安全のため、手は緩めません・・・！」＠<br>デスサウナ怪人<br>「何故だ！サウナに来るような奴が何故そこまで…！」＠<br><br>須磨 緑路<br>お前のサウナに対する情熱は何なんだよ<br>デスサウナ怪人<br>憎悪だよ<br>益 良雄<br>お前がただの患者だからだよ<br><br>熱い展開だ</div>
+    <div class="message-time">294: 2024/5/2(木) 21:22:18</div>
+  </div>
+</article>
+<article class="message" id="res295">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">物理的にも</div>
+    <div class="message-time">295: 2024/5/2(木) 21:22:23</div>
+  </div>
+</article>
+<article class="message" id="res296">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド<br>打点が5d＝17位として<br><br>ほんとぉ？</div>
+    <div class="message-time">296: 2024/5/2(木) 21:23:10</div>
+  </div>
+</article>
+<article class="message" id="res297">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド<br>８＋４D6+1d6+2d6<wbr><br>&lt;BCDice：クイーン・ガーランド&gt;<br>Yggdrasill<wbr> : (8+4D6+1D6<wbr>+2D6) → 8+21[4,5,6<wbr>,6]+1[1]+1<wbr>1[6,5] → 41<br>クイーン・ガーランド<br>あ？<br><br>強い</div>
+    <div class="message-time">297: 2024/5/2(木) 21:24:31</div>
+  </div>
+</article>
+<article class="message" id="res298">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン・ガーランド<br>「えい」コツン＠<br>デスサウナ怪人<br>精神ダメージで爆発しました＠<br>須磨 緑路<br>「うっ…！？ぐおおおおおっ！！？」爆風で吹き飛ばされます＠<br>クイーン・ガーランド<br>（何で爆発したの……？　知らんこわ）<br>益 良雄<br>「ぐぅ、うおおおっ！？」怪人の後ろにいたので同様に爆風で吹き飛びます＠<br>益 良雄<br>どう見ても軽く突き出した程度の挙動で|自分筋力20を振りほどくほどの怪人が爆発して周囲の人間が吹き飛ばされるってマジ？<br>クイーン・ガーランド<br>「……？」手を見る＠<br><br>クイーンさんのデスパンチこわ…</div>
+    <div class="message-time">298: 2024/5/2(木) 21:26:32</div>
+  </div>
+</article>
+<article class="message" id="res299">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あの瞬間突如として新喜劇の構文になった</div>
+    <div class="message-time">299: 2024/5/2(木) 21:27:17</div>
+  </div>
+</article>
+<article class="message" id="res300">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ホントに完全同時だったんだよな爆発エフェクトが</div>
+    <div class="message-time">300: 2024/5/2(木) 21:27:51</div>
+  </div>
+</article>
+<article class="message" id="res301">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「えい」コツン＠って出たのが見えた次の瞬間ドカーンですよ</div>
+    <div class="message-time">301: 2024/5/2(木) 21:28:40</div>
+  </div>
+</article>
+<article class="message" id="res302">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">読み終わりましたお疲れさまでした！</div>
+    <div class="message-time">302: 2024/5/2(木) 21:34:02</div>
+  </div>
+</article>
+<article class="message" id="res303">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れさまでした</div>
+    <div class="message-time">303: 2024/5/2(木) 21:34:21</div>
+  </div>
+</article>
+<article class="message" id="res304">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした</div>
+    <div class="message-time">304: 2024/5/2(木) 21:34:53</div>
+  </div>
+</article>
+<article class="message" id="res305">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます</div>
+    <div class="message-time">305: 2024/5/2(木) 21:35:44</div>
+  </div>
+</article>
+<article class="message" id="res306">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クイーン、当初の設定としては『無自覚な能力者で担ぎ上げられただけの人』だったけど、<br>卓を経て『いくら何でも能力には気付いたのでいっそ英雄の地位に甘んじることにした人』になりました</div>
+    <div class="message-time">306: 2024/5/2(木) 21:54:01</div>
+  </div>
+</article>
+<article class="message" id="res307">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">キングからサタンに近いキャラになった</div>
+    <div class="message-time">307: 2024/5/2(木) 21:54:39</div>
+  </div>
+</article>
+<article class="message" id="res308">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">……神経ジャマー使われたらどうなるんだろうなこのキャラ</div>
+    <div class="message-time">308: 2024/5/2(木) 22:01:05</div>
+  </div>
+</article>
+<article class="message" id="res309">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">威圧感がオフになる…？</div>
+    <div class="message-time">309: 2024/5/2(木) 22:05:48</div>
+  </div>
+</article>
+<article class="message" id="res310">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でも神経ジャマーの効力が切れると元通り勘違いされそう<br>さっきまで俺らの精神に作用するテリトリー受けてたからクイーンが普通の女の子にしか見えないぐらいに混濁していたとか言い出して</div>
+    <div class="message-time">310: 2024/5/2(木) 22:07:06</div>
+  </div>
+</article>
+<article class="message" id="res311">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">何やかんやでいい感じに解釈されるんだろうけど<br>本人のプレッシャーがヤバそう</div>
+    <div class="message-time">311: 2024/5/2(木) 22:09:29</div>
+  </div>
+</article>
+<article class="message" id="res312">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあこいつに対して「よーし神経ジャマー使おう！」ってなる敵が<br>いるとはあんまり思わないけどな</div>
+    <div class="message-time">312: 2024/5/2(木) 22:14:05</div>
+  </div>
+</article>
+<article class="message" id="res313">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エスパーと組むのは警戒してるかもな...</div>
+    <div class="message-time">313: 2024/5/2(木) 22:37:45</div>
+  </div>
+</article><div class="elapsed"><span>14日 0時間 51分 経過</span></div>
+<article class="message" id="res314">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=i17da567b">📎 須磨 緑路.xlsx</a> <span class="filesize">[481.3 KB]</span> を追加しました。</div>
+    <div class="message-time">314: 2024/5/16(木) 23:29:38</div>
+  </div>
+</article>
+<article class="message" id="res315">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">もはやいつ次コイツの出番あるか分かんねえので人物総評とキャラシ交換と技手直しとあとチラ裏を書けるだけ全部書いた</div>
+    <div class="message-time">315: 2024/5/16(木) 23:30:20</div>
+  </div>
+</article>
+<article class="message" id="res316">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">もしかしなくても自称生きがいが無い隼人君より何も無い人だった</div>
+    <div class="message-time">316: 2024/5/16(木) 23:33:04</div>
+  </div>
+</article>
+<article class="message" id="res317">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ただ生き残りたいが生き残れば生き残るほどしんどい人</div>
+    <div class="message-time">317: 2024/5/17(金) 0:20:36</div>
+  </div>
+</article>
+<article class="message" id="res318">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">生き残る＝やばいやつらの記憶に残るという悲しみ</div>
+    <div class="message-time">318: 2024/5/17(金) 0:24:13</div>
+  </div>
+</article>
+<article class="message" id="res319">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">生き地獄の体現者</div>
+    <div class="message-time">319: 2024/5/17(金) 0:25:03</div>
+  </div>
+</article><div class="elapsed"><span>29日 23時間 18分 経過</span></div>
+<article class="message" id="res320">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">須磨は「まさかまたこいつが出られるとはな」を繰り返すぐらいでちょうどいいのかもしれない</div>
+    <div class="message-time">320: 2024/6/15(土) 23:43:55</div>
+  </div>
+</article>
+<article class="message" id="res321">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まああんまり出すぎない方がきっといいんだろうな</div>
+    <div class="message-time">321: 2024/6/15(土) 23:45:27</div>
+  </div>
+</article><div class="elapsed"><span>1日 21時間 49分 経過</span></div>
+<article class="message" id="res322">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">すごい！今回は全員サウナの客だ！</div>
+    <div class="message-time">322: 2024/6/17(月) 21:35:03</div>
+  </div>
+</article>
+<article class="message" id="res323">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そんな客じゃなかったり仕事で来てたりした人が居たみたいなハハハ</div>
+    <div class="message-time">323: 2024/6/17(月) 21:51:38</div>
+  </div>
+</article>
+<article class="message" id="res324">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">シリアスって言うか……PCにとってはシリアスだけどPLからすればほぼ喜劇と言うか……</div>
+    <div class="message-time">324: 2024/6/17(月) 22:30:49</div>
+  </div>
+</article>
+<article class="message" id="res325">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いやPCからしてもツッコミどころが多すぎてシリアスになるかどうか……</div>
+    <div class="message-time">325: 2024/6/17(月) 22:31:17</div>
+  </div>
+</article>
+<article class="message" id="res326">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">向こうで言うとアドバイスになりかねないのでここで言うけど<br>警戒して進む<br>メリット→何も起きなければ３回カード引くだけで１エリア突破、かつ敵出現の包囲やダメージ系の致命的なカードに対しても一枚しか当たらないのでリカバリーが効きやすい<br>デメリット→リアル時間が掛かる可能性がある　ぶっちゃけ急いでと比べて１枚の差しかないとも言うし進行度半減等を引いたら結局エンドフェイズドローをさせられる<br><br>急いで進む<br>メリット→もちろんスピーディに話が進む、２回するだけで行ける可能性もあるし平穏率もそこそこ高いので分は悪くない<br>デメリット→２枚同時に引くので当然デメリットカードが同時に発動するし状況次第ではひどい目に遭うし進行度半減カード等で余分にカードを引くと何のために急ぐのだか…</div>
+    <div class="message-time">326: 2024/6/17(月) 22:52:53</div>
+  </div>
+</article>
+<article class="message" id="res327">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この辺の差を考えると次回このシステムを用いる時にもうちょいイジっていいかな</div>
+    <div class="message-time">327: 2024/6/17(月) 23:00:57</div>
+  </div>
+</article>
+<article class="message" id="res328">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ぶっちゃけ大きな差は無いだろって気はしてるんですよね現状<br>急いで進むに関してはデメリットが結構デカいからよく考えたらそれほど選ぶ理由が無いので逆に２枚引きにメリットを付けるようなカードがあれば……</div>
+    <div class="message-time">328: 2024/6/17(月) 23:02:44</div>
+  </div>
+</article>
+<article class="message" id="res329">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">Ωの言葉に罪悪感を抱くPCがいたらシリアス度が加速するんだな…無視していいのにな…</div>
+    <div class="message-time">329: 2024/6/17(月) 23:59:29</div>
+  </div>
+</article>
+<article class="message" id="res330">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">Ω、ただ憎まれ口叩きまくるだけのキャラなのになんで響動にこんなダメージ入ってんだよ</div>
+    <div class="message-time">330: 2024/6/18(火) 0:11:29</div>
+  </div>
+</article>
+<article class="message" id="res331">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">NPCザオリクは考慮してないんだよな…なんならΩはPCが見放したら即死レベルだし…</div>
+    <div class="message-time">331: 2024/6/18(火) 0:27:21</div>
+  </div>
+</article>
+<article class="message" id="res332">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=ie64a8a60">📎 エスケープ・オブ・デスサウナ_log_全タブ_2024-06-18_0029.html</a> <span class="filesize">[115.7 KB]</span> を追加しました。</div>
+    <div class="message-time">332: 2024/6/18(火) 0:30:21</div>
+  </div>
+</article>
+<article class="message" id="res333">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res329">&gt;&gt; 329</a> <br>っていうかぶっちゃけ「人の命が掛かっている」という状況だと「自分か他者の命を重きに置くキャラ」はまあどうしてもシリアスに突っ込んでいくというか…</div>
+    <div class="message-time">333: 2024/6/18(火) 0:45:38</div>
+  </div>
+</article><div class="elapsed"><span>2日 20時間 21分 経過</span></div>
+<article class="message" id="res334">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">もしかしてこの組運が悪いんじゃあないか？</div>
+    <div class="message-time">334: 2024/6/20(木) 21:06:58</div>
+  </div>
+</article>
+<article class="message" id="res335">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">立て続けにキツい足止めを食らってるせいで進行できてないけど逆に言えば後半は平穏カードがスイスイ出やすいから…</div>
+    <div class="message-time">335: 2024/6/20(木) 21:09:25</div>
+  </div>
+</article>
+<article class="message" id="res336">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">このシステム今後も使いたいし私なりに弄るかなあ</div>
+    <div class="message-time">336: 2024/6/20(木) 21:09:36</div>
+  </div>
+</article>
+<article class="message" id="res337">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今回はこれ見よがしな存在には須磨る方が正解なんだよな…</div>
+    <div class="message-time">337: 2024/6/20(木) 21:38:41</div>
+  </div>
+</article>
+<article class="message" id="res338">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今回デス濃硫酸風呂に桶が生えてきましたがデス濃硫酸に耐えられるデス桶ということにします</div>
+    <div class="message-time">338: 2024/6/20(木) 21:45:54</div>
+  </div>
+</article>
+<article class="message" id="res339">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">桶自体に死が付与されてるしこれNPCに持たせたらNPC死にませんか？</div>
+    <div class="message-time">339: 2024/6/20(木) 21:46:31</div>
+  </div>
+</article>
+<article class="message" id="res340">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">デス濃硫酸に耐えられるだけの桶なので特に問題ありません</div>
+    <div class="message-time">340: 2024/6/20(木) 21:48:19</div>
+  </div>
+</article>
+<article class="message" id="res341">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">バカな…桶がひとりでに動き出してNPCをボコボコにしてやがて死に至らせる桶じゃないのか…</div>
+    <div class="message-time">341: 2024/6/20(木) 21:49:01</div>
+  </div>
+</article>
+<article class="message" id="res342">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあでもその辺に落ちてる煙幕やマグタフEXとかも実は省略してるだけでデス着いてるか</div>
+    <div class="message-time">342: 2024/6/20(木) 21:49:47</div>
+  </div>
+</article>
+<article class="message" id="res343">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">シンプルに今回運が悪いぜこれー！</div>
+    <div class="message-time">343: 2024/6/20(木) 22:08:53</div>
+  </div>
+</article>
+<article class="message" id="res344">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">神社立てろー！</div>
+    <div class="message-time">344: 2024/6/20(木) 22:09:37</div>
+  </div>
+</article>
+<article class="message" id="res345">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">GMがデス神社で部屋を挟んでたりします？</div>
+    <div class="message-time">345: 2024/6/20(木) 22:10:05</div>
+  </div>
+</article>
+<article class="message" id="res346">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">俺らの時よく何とかなったなって見返したらこっちのオルレ判定だけで全てを吹き飛ばせてたし全員浴びても何とかなる連中だった</div>
+    <div class="message-time">346: 2024/6/20(木) 22:12:46</div>
+  </div>
+</article>
+<article class="message" id="res347">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どよむのリアクションによってΩの言動がクッソ腹立つな今回</div>
+    <div class="message-time">347: 2024/6/20(木) 22:30:06</div>
+  </div>
+</article>
+<article class="message" id="res348">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">（その分他のNPCがちょっと優しくなってる）</div>
+    <div class="message-time">348: 2024/6/20(木) 22:30:21</div>
+  </div>
+</article>
+<article class="message" id="res349">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ボス流石に弱くね？って思ってたけどキリさんはこうなる可能性を見据えて弱めにしていたんだな…流石GM慧眼が光る</div>
+    <div class="message-time">349: 2024/6/20(木) 22:33:47</div>
+  </div>
+</article>
+<article class="message" id="res350">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">残り17枚で罠5枚か…</div>
+    <div class="message-time">350: 2024/6/20(木) 22:47:54</div>
+  </div>
+</article>
+<article class="message" id="res351">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=i1efa3cb2">📎 エスケープ・オブ・デスサウナ_log_全タブ_2024-06-21_0042.html</a> <span class="filesize">[246.0 KB]</span> を追加しました。</div>
+    <div class="message-time">351: 2024/6/21(金) 0:43:56</div>
+  </div>
+</article><div class="elapsed"><span>11時間 21分 経過</span></div>
+<article class="message" id="res352">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res349">&gt;&gt; 349</a> <br>スマさんの言葉を受けてボーグバトル卓のボスが少し上方修正されることが決まりました<br>強いかな…と私が思うレベルにさらに下駄を履かせるくらいが良さそうなので</div>
+    <div class="message-time">352: 2024/6/21(金) 12:04:58</div>
+  </div>
+</article>
+<article class="message" id="res353">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そんな、俺のような戦闘狂の意見などデスサウナの燃料に焚べちゃって良いんですよ</div>
+    <div class="message-time">353: 2024/6/21(金) 14:07:59</div>
+  </div>
+</article>
+<article class="message" id="res354">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あと複数人卓の場合キャラが増えれば増えるほどやりたい放題になっていくのでそれにしてはちょっと弱いかなと思っただけで<br>ソロの卓だとちょっとの上方修正でヤバげになりかねないっす</div>
+    <div class="message-time">354: 2024/6/21(金) 14:14:55</div>
+  </div>
+</article>
+<article class="message" id="res355">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあキリ卓なら戦闘不能になっても「SPE闘志じゃないけどPCの燃え上がる闘志で起き上がれませんか！？」が通るだろうし...</div>
+    <div class="message-time">355: 2024/6/21(金) 15:32:33</div>
+  </div>
+</article><div class="elapsed"><span>3日 6時間 1分 経過</span></div>
+<article class="message" id="res356">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">（私が持たせてるSPE奇跡って基本的に解除判定用なんだよな…）</div>
+    <div class="message-time">356: 2024/6/24(月) 21:34:05</div>
+  </div>
+</article>
+<article class="message" id="res357">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だって持ってるってことはどう使われるか分かんないからね……</div>
+    <div class="message-time">357: 2024/6/24(月) 21:45:58</div>
+  </div>
+</article>
+<article class="message" id="res358">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それはそう（不意打ちを避けながら）</div>
+    <div class="message-time">358: 2024/6/24(月) 22:04:30</div>
+  </div>
+</article>
+<article class="message" id="res359">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そーなの！？</div>
+    <div class="message-time">359: 2024/6/24(月) 22:51:26</div>
+  </div>
+</article>
+<article class="message" id="res360">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おつやで～</div>
+    <div class="message-time">360: 2024/6/24(月) 22:53:18</div>
+  </div>
+</article>
+<article class="message" id="res361">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res350">&gt;&gt; 350</a> <br>罠/平穏が5/17になってたってｺﾄ！？</div>
+    <div class="message-time">361: 2024/6/24(月) 22:53:54</div>
+  </div>
+</article>
+<article class="message" id="res362">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">平穏と発見とサウナテクニックですね</div>
+    <div class="message-time">362: 2024/6/24(月) 22:54:45</div>
+  </div>
+</article>
+<article class="message" id="res363">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">運悪いなぁ…って思いながら見てました</div>
+    <div class="message-time">363: 2024/6/24(月) 22:58:28</div>
+  </div>
+</article>
+<article class="message" id="res364">
+  <aside class="speaker">
+    <span class="avatar avatar-fallback">I</span>
+    <strong>Imaji</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした</div>
+    <div class="message-time">364: 2024/6/24(月) 22:59:28</div>
+  </div>
+</article>
+<article class="message" id="res365">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れさまや</div>
+    <div class="message-time">365: 2024/6/24(月) 23:03:11</div>
+  </div>
+</article>
+<article class="message" id="res366">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おつや</div>
+    <div class="message-time">366: 2024/6/24(月) 23:05:20</div>
+  </div>
+</article>
+<article class="message" id="res367">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202404ceb97e08&amp;i=i8c84d75b" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202404ceb97e08&amp;i=i8c84d75b" width="212" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=i8c84d75b">📎 エスケープ・オブ・デスサウナづけTいまじ.jpg</a> <span class="filesize">[241.2 KB, 1064x821px]</span> を追加しました。</div>
+    <div class="message-time">367: 2024/6/24(月) 23:06:14</div>
+  </div>
+</article>
+<article class="message" id="res368">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=i785cacf3">📎 エスケープ・オブ・デスサウナ_log_全タブ_2024-06-24_2306.html</a> <span class="filesize">[301.9 KB]</span> を追加しました。</div>
+    <div class="message-time">368: 2024/6/24(月) 23:06:55</div>
+  </div>
+</article>
+<article class="message" id="res369">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おふろ入る為に立ち絵用意したのは流石に初めて</div>
+    <div class="message-time">369: 2024/6/24(月) 23:07:12</div>
+  </div>
+</article>
+<article class="message" id="res370">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=ied0dc4a0">📎 エスケープ・オブ・デスサウナ Tづけイマジ.zip</a> <span class="filesize">[11.5 MB]</span> を追加しました。</div>
+    <div class="message-time">370: 2024/6/24(月) 23:08:47</div>
+  </div>
+</article>
+<article class="message" id="res371">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res31">&gt;&gt;31</a><br>モブの名前<br>モブッソ・ノーイチ<br>モーブ・ソノーニ<br>モブシー<br><br>草</div>
+    <div class="message-time">371: 2024/6/24(月) 23:09:02</div>
+  </div>
+</article>
+<article class="message" id="res372">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">こうしてまた一つの卓が終わりを告げた…お疲れや</div>
+    <div class="message-time">372: 2024/6/24(月) 23:09:23</div>
+  </div>
+</article>
+<article class="message" id="res373">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログありがとう<br>でも写真撮影入れたいから入れていいかな</div>
+    <div class="message-time">373: 2024/6/24(月) 23:09:43</div>
+  </div>
+</article>
+<article class="message" id="res374">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういえば全員完走か</div>
+    <div class="message-time">374: 2024/6/24(月) 23:09:54</div>
+  </div>
+</article>
+<article class="message" id="res375">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おしまインザミラー</div>
+    <div class="message-time">375: 2024/6/24(月) 23:10:24</div>
+  </div>
+</article>
+<article class="message" id="res376">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いいですよ</div>
+    <div class="message-time">376: 2024/6/24(月) 23:10:31</div>
+  </div>
+</article>
+<article class="message" id="res377">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res371">&gt;&gt; 371</a> <br>NPC名前修正<br>モッブソ・ノーイチ→モブノ・ゴーレム（ラヴァゴーレム）<br>モーブ・ソノーニ→モマグ・マッグーブ（マグマッグ）<br>モブシー→燃 武（もえる たけし）（ファイアマン）<br>流石に変わってたわ</div>
+    <div class="message-time">377: 2024/6/24(月) 23:11:02</div>
+  </div>
+</article>
+<article class="message" id="res378">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202404ceb97e08&amp;i=i7759e060">📎 エスケープ・オブ・デスサウナ Tづけイマジ.zip</a> <span class="filesize">[11.7 MB]</span> を追加しました。</div>
+    <div class="message-time">378: 2024/6/24(月) 23:11:03</div>
+  </div>
+</article>
+<article class="message" id="res379">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ほい</div>
+    <div class="message-time">379: 2024/6/24(月) 23:11:08</div>
+  </div>
+</article>
+<article class="message" id="res380">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ﾃﾝｷｭ…♡</div>
+    <div class="message-time">380: 2024/6/24(月) 23:11:21</div>
+  </div>
+</article>
+<article class="message" id="res381">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">適当に名前や設定つけて後からぶん投げることは多い</div>
+    <div class="message-time">381: 2024/6/24(月) 23:11:35</div>
+  </div>
+</article>
+<article class="message" id="res382">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れさまでした。これできっとｔさんがデスサウナログ読みキャスしてくれることでしょう。</div>
+    <div class="message-time">382: 2024/6/24(月) 23:11:41</div>
+  </div>
+</article>
+<article class="message" id="res383">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">明日よむ（21時までに起きれれば）</div>
+    <div class="message-time">383: 2024/6/24(月) 23:12:11</div>
+  </div>
+</article>
+<article class="message" id="res384">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ﾔｯﾀｰ！</div>
+    <div class="message-time">384: 2024/6/24(月) 23:12:20</div>
+  </div>
+</article>
+<article class="message" id="res385">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いぇーい</div>
+    <div class="message-time">385: 2024/6/24(月) 23:13:04</div>
+  </div>
+</article><div class="elapsed"><span>22時間 19分 経過</span></div>
+<article class="message" id="res386">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">警戒して進むが＋３、急いで進むが＋５だから進行度目標値が１４～１５なら十分差別化できるかな<br>警戒×５、警戒×３＋急いで×１、警戒×２＋急いで×２、急いで×３のいずれかでドロー回数が３～５回という選択肢が出る<br>ただ今回の進行度９と比べて長くなるのでエリア数を２つにする、カードの内訳でメリット効果を多くする等の調整が必要そう</div>
+    <div class="message-time">386: 2024/6/25(火) 21:32:53</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>

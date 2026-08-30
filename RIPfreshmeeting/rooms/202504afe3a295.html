@@ -1,0 +1,1275 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>エモクロアTRPG【5㎠（ウルフ味）】</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>エモクロアTRPG【5㎠（ウルフ味）】</h1>
+    <div class="meta">Fresh Meeting archive / room id: 202504afe3a295 / active</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=202504afe3a295"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+	<a href="https://www.freshmeeting.com/forumdel.php?f=202504afe3a295"><img src="https://www.freshmeeting.com/img/delete.gif" alt="削除する"><span>削除する</span></a>
+</span>
+
+<p>
+	原典：<a href="https://talto.cc/projects/z_PNszL0ja2Ru3dB5cySk" target="_blank">https:<wbr>/<wbr>/<wbr>talto.<wbr>cc/<wbr>projects/<wbr>z_<wbr>PNszL0ja2R<wbr>u3dB5cySk</a></p></div>
+<!-- replay-links:begin -->
+<div class="replay-links-panel" style="margin-top:10px;padding:10px 12px;background:#eef8e8;border-left:4px solid #4b982a;overflow-wrap:anywhere">
+  <strong>セッションログ</strong>
+  <ul style="margin:6px 0 0 1.2em;padding:0">
+    <li><a href="https://amazugali.github.io/KaniTRPGROG/CoC/202105katasiro/%E3%82%A6%E3%83%AB%E3%83%95%E7%AF%87.html" target="_blank" rel="noopener">ccfolia - test</a></li><li><a href="https://www.freshmeeting.com/forumfile.php?f=202504afe3a295&amp;i=i3fdc46d9" target="_blank" rel="noopener">はむ【5㎠】.html</a></li>
+  </ul>
+</div>
+<!-- replay-links:end -->
+  </div>
+</header>
+<main>
+
+<div class="attachment-warning">
+  このログには Fresh Meeting 上の添付ファイル参照が 3 件あります。
+  HTML本文とは別に添付ファイル本体の保全が必要です。
+</div>
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">作ってなかったから作りました</div>
+    <div class="message-time">1: 2025/4/23(水) 23:19:10</div>
+  </div>
+</article>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">無かったんだ</div>
+    <div class="message-time">2: 2025/4/23(水) 23:19:37</div>
+  </div>
+</article>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログはまた後日貼ります</div>
+    <div class="message-time">3: 2025/4/23(水) 23:19:49</div>
+  </div>
+</article>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">シナリオの内容に目通してなかったわけじゃないんですが、シナリオに背景らしい背景がないってのをピンポイントで見落としてて「これは不味いぞ」ってなった</div>
+    <div class="message-time">4: 2025/4/23(水) 23:20:39</div>
+  </div>
+</article>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">PL側が深入りせずになんやったんやろうなぁで〆るのはあるにしてもシナリオ側が真相用意してませんだとなんやねん！！ってなるよ</div>
+    <div class="message-time">5: 2025/4/23(水) 23:24:56</div>
+  </div>
+</article>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">というか死にかけて生き残ってから、真相探しに入らずにシナリオ終わったらみんな「え！？！？ここからじゃないの！？」ってなる気がするんだけどどうなんだろう…</div>
+    <div class="message-time">6: 2025/4/23(水) 23:26:09</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">死にかけたけどこれ以上追及できずにシナリオ締められるの！？ってなる気がする</div>
+    <div class="message-time">7: 2025/4/23(水) 23:26:44</div>
+  </div>
+</article>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">解決しないとまた同じこと起きるじゃんって</div>
+    <div class="message-time">8: 2025/4/23(水) 23:27:08</div>
+  </div>
+</article>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">正直、普段は別のジャンルのシナリオ書いてるって話だから専門外の領域に触って事故った感じなんじゃないかと思う</div>
+    <div class="message-time">9: 2025/4/23(水) 23:38:59</div>
+  </div>
+</article>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">……いや、でもテストプレイしてんのかこのシナリオ<br>外だとそういうもんなのか？</div>
+    <div class="message-time">10: 2025/4/23(水) 23:40:55</div>
+  </div>
+</article>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁホラーの文脈としては真相不明みたいなのはあるにせよゲームとしてはスッキリしたい</div>
+    <div class="message-time">11: 2025/4/23(水) 23:44:21</div>
+  </div>
+</article><div class="elapsed"><span>14時間 55分 経過</span></div>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">女友達か……<br>どういう立ち位置にしよう</div>
+    <div class="message-time">12: 2025/4/24(木) 14:39:57</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">奥さんポジションを</div>
+    <div class="message-time">13: 2025/4/24(木) 14:40:04</div>
+  </div>
+</article>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202504afe3a295&amp;i=i231c1c7e" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202504afe3a295&amp;i=i231c1c7e" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202504afe3a295&amp;i=i231c1c7e">📎 kurosaki_yoshinobu.png</a> <span class="filesize">[611.5 KB, 1024x1536px]</span> を追加しました。</div>
+    <div class="message-time">14: 2025/4/24(木) 16:56:50</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202504afe3a295&amp;i=ic1c3c343" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202504afe3a295&amp;i=ic1c3c343" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202504afe3a295&amp;i=ic1c3c343">📎 kurosaki_sonoko.png</a> <span class="filesize">[637.2 KB, 1024x1536px]</span> を追加しました。</div>
+    <div class="message-time">15: 2025/4/24(木) 16:57:37</div>
+  </div>
+</article>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">・遺族役は【黒崎義信】【黒崎園子】の叔父夫婦<br>・夢乃はたぶん大学生ぐらいなので、両親の死後に一人で生きていくには基盤が脆弱であった。<br>　そこで親戚の叔父夫婦が面倒を見るために引き取った格好<br>・義信氏は実家の【箱】を幼少期に開封した経験があり、箱の異常性については信用していない<br>　妻の園子氏もそのことを承知しており、「主人の実家には奇妙な風習がある」という程度に理解している</div>
+    <div class="message-time">16: 2025/4/24(木) 17:01:53</div>
+  </div>
+</article>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">・義信氏と実家の関係は疎遠気味。悪感情があるわけではないが、箱に執着する実家の空気感に義信氏が馴染めず、家を出た。<br>・夢乃と叔父夫婦の関係自体は良好。</div>
+    <div class="message-time">17: 2025/4/24(木) 17:08:37</div>
+  </div>
+</article>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202504afe3a295&amp;i=i3fdc46d9">📎 はむ【5㎠】.html</a> <span class="filesize">[186.5 KB]</span> を追加しました。</div>
+    <div class="message-time">18: 2025/4/24(木) 17:10:01</div>
+  </div>
+</article>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">遺品引き取りに行く先、大学のサークルとかにするか<br>アニ研とか……</div>
+    <div class="message-time">19: 2025/4/24(木) 17:35:03</div>
+  </div>
+</article>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログあざます</div>
+    <div class="message-time">20: 2025/4/24(木) 17:44:08</div>
+  </div>
+</article><div class="elapsed"><span>7時間 18分 経過</span></div>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">影近　澪 - 今日 0:59<br>昨日買った服着て電車に身投げしてたらマジでキツすぎる<br><br>「死装束じゃん」って言いそうになって耐えました。<br>褒めてください</div>
+    <div class="message-time">21: 2025/4/25(金) 1:02:37</div>
+  </div>
+</article><div class="elapsed"><span>11時間 29分 経過</span></div>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">草</div>
+    <div class="message-time">22: 2025/4/25(金) 12:32:09</div>
+  </div>
+</article><div class="elapsed"><span>3日 12時間 28分 経過</span></div>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どうしようかな～<br>詰んでるよなぁ</div>
+    <div class="message-time">23: 2025/4/29(火) 1:00:45</div>
+  </div>
+</article>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">たぶん「そいつが思ったらそうなんだろう、そいつの中ではな」ってオチ自体がTRPGに向かないんだなって思った<br>箱を普通の怪異にするかー？？</div>
+    <div class="message-time">24: 2025/4/29(火) 1:03:07</div>
+  </div>
+</article>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">他の人間にも自殺が起きてたって情報を消して「開けたら不幸になる箱」ってことにすればいったん筋は通るが…<br>プレイヤーが襲われる理由なくなるけど</div>
+    <div class="message-time">25: 2025/4/29(火) 1:11:31</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうなると探偵がストーリーテリングしてるってギミックは消さんといかんな…</div>
+    <div class="message-time">26: 2025/4/29(火) 1:14:40</div>
+  </div>
+</article>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">見てないけど長引いてるな…</div>
+    <div class="message-time">27: 2025/4/29(火) 1:36:29</div>
+  </div>
+</article>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カゲさんが9割ぐらい判定失敗してるってのはある</div>
+    <div class="message-time">28: 2025/4/29(火) 1:37:42</div>
+  </div>
+</article>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">悲しみ</div>
+    <div class="message-time">29: 2025/4/29(火) 1:37:51</div>
+  </div>
+</article>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とはいえ成功してたらなんか変わったかっていうと別になあ</div>
+    <div class="message-time">30: 2025/4/29(火) 1:38:10</div>
+  </div>
+</article>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">コンセブーストできねぇルールはこれだから</div>
+    <div class="message-time">31: 2025/4/29(火) 1:38:16</div>
+  </div>
+</article>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">探索クリーチャー立てれねぇルールはこれだから</div>
+    <div class="message-time">32: 2025/4/29(火) 1:38:55</div>
+  </div>
+</article>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">結局「呼声と箱の因果関係は限定的である」ってのを示す客観的な手がかりがないし一番の証言者である友人が死んでるのが痛い</div>
+    <div class="message-time">33: 2025/4/29(火) 1:40:27</div>
+  </div>
+</article>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">法則からずれた時に「別に怪異なんだからそういうこともあるだろ」で片付いちゃうから<br>「認知に由来して異常を起こしてる」って推論をさせるのが無理筋なんだよな<br>破綻です</div>
+    <div class="message-time">34: 2025/4/29(火) 1:41:53</div>
+  </div>
+</article>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">反社おじさんも箱に関してはPLリモコンで死にたくねぇなら動けって操作した感はあるしな</div>
+    <div class="message-time">35: 2025/4/29(火) 1:42:14</div>
+  </div>
+</article>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">半分メタ認知で動いたし</div>
+    <div class="message-time">36: 2025/4/29(火) 1:43:01</div>
+  </div>
+</article>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">このシナリオはいったんたたんでテーマを引き継いだ全く別のシナリオにたぶん作り直した方がいい<br>泥舟は穴塞いだところで泥舟</div>
+    <div class="message-time">37: 2025/4/29(火) 1:43:29</div>
+  </div>
+</article>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">悲しみ</div>
+    <div class="message-time">38: 2025/4/29(火) 1:43:58</div>
+  </div>
+</article>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ユグドラシルの世界観やPC知識として超常現象（PSY）に説明や納得がある程度つくって動かしやすいんだな…というか超常現象自体に対してスポットを当てないシナリオにしてるから合理で動きやすいのがあるのかもしれん。</div>
+    <div class="message-time">39: 2025/4/29(火) 1:48:53</div>
+  </div>
+</article>
+<article class="message" id="res40">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ユグドラは別に犯行自体は異能一切絡んでないとかもザラだし</div>
+    <div class="message-time">40: 2025/4/29(火) 1:50:26</div>
+  </div>
+</article>
+<article class="message" id="res41">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">CoCやエモクロアは超常現象が秘匿されてるかつ、その超常現象自体にスポットがあたりがちで、実質なんでもありな超常現象をメインに据えると推理も合理も働かないからやりにくいって構図はある気がする</div>
+    <div class="message-time">41: 2025/4/29(火) 1:51:21</div>
+  </div>
+</article>
+<article class="message" id="res42">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">SCP財団とかメン・イン・ブラックみたいな、<br>怪異収容のスペシャリストたちの活動とかならやりやすいんだろうけど</div>
+    <div class="message-time">42: 2025/4/29(火) 1:53:46</div>
+  </div>
+</article>
+<article class="message" id="res43">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でも別にそれだとユグドラでいいからな…</div>
+    <div class="message-time">43: 2025/4/29(火) 1:53:58</div>
+  </div>
+</article>
+<article class="message" id="res44">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ユグドラはSF世界観でそれをネタにできるが、現代怪奇シナリオは舞台設定が平凡故に怪奇にスポットを当てざるを得ないとこあるしなぁ</div>
+    <div class="message-time">44: 2025/4/29(火) 1:54:27</div>
+  </div>
+</article>
+<article class="message" id="res45">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">巷で話題になるようなエモーショナルなシナリオは食指延びんしなぁ<br>だいたい隠しHOで大変だからやりたくないってのもあるが</div>
+    <div class="message-time">45: 2025/4/29(火) 1:55:40</div>
+  </div>
+</article>
+<article class="message" id="res46">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">エモーショナルシナリオ、シナリオ制作者による用意された既定路線関係性エモみたいなのが肌に合わない感じする（ド偏見）</div>
+    <div class="message-time">46: 2025/4/29(火) 1:58:14</div>
+  </div>
+</article>
+<article class="message" id="res47">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でも華やジンくんとやってる事同じか…？ならできるか…？いやでもなぁ</div>
+    <div class="message-time">47: 2025/4/29(火) 2:00:22</div>
+  </div>
+</article>
+<article class="message" id="res48">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ポチにできたり、暗黒ジンくんにできたり、PCの動きによって水面の波紋が変わるなら楽しめると思うけど、巷で話題になるようなエモーショナルなシナリオはたぶんそういうの許されないような気配がするから…（偏見による勝手なイメージ）</div>
+    <div class="message-time">48: 2025/4/29(火) 2:06:06</div>
+  </div>
+</article><div class="elapsed"><span>22時間 43分 経過</span></div>
+<article class="message" id="res49">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">超流し読みで追いついたけど一応終われそうじゃん</div>
+    <div class="message-time">49: 2025/4/30(水) 0:49:41</div>
+  </div>
+</article>
+<article class="message" id="res50">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ジェットコースターでなんとか誤魔化しました</div>
+    <div class="message-time">50: 2025/4/30(水) 0:51:28</div>
+  </div>
+</article>
+<article class="message" id="res51">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">和製ホラー、そういうとこある</div>
+    <div class="message-time">51: 2025/4/30(水) 0:52:02</div>
+  </div>
+</article>
+<article class="message" id="res52">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">意外と洋風ホラーのがロジカルだよなｗｗｗ</div>
+    <div class="message-time">52: 2025/4/30(水) 0:52:28</div>
+  </div>
+</article>
+<article class="message" id="res53">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">突然出てきた胡散臭い霊能力者のおっさんが推理して事件の全貌を解説するの、洒落怖感ある</div>
+    <div class="message-time">53: 2025/4/30(水) 0:54:46</div>
+  </div>
+</article>
+<article class="message" id="res54">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ…別に突然悪魔情報が現れて解決してもええか…</div>
+    <div class="message-time">54: 2025/4/30(水) 0:56:30</div>
+  </div>
+</article>
+<article class="message" id="res55">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">悪魔情報が解決する展開やりたくないんだけど情報をプレイヤーに拾わせる努力を怠ったので甘んじて悪魔情報になって石を投げられます</div>
+    <div class="message-time">55: 2025/4/30(水) 0:57:21</div>
+  </div>
+</article>
+<article class="message" id="res56">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">主役が幽霊じゃなくて殺人鬼とかサメなのもあるけど、恐怖が物理的な領域に収まってることが海外のホラーは多い</div>
+    <div class="message-time">56: 2025/4/30(水) 0:58:13</div>
+  </div>
+</article>
+<article class="message" id="res57">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">銃撃って爆発させて解決できない和ホラーが悪い</div>
+    <div class="message-time">57: 2025/4/30(水) 0:59:09</div>
+  </div>
+</article>
+<article class="message" id="res58">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">スマイルユーサノバビッチ！！！！！！！！！！</div>
+    <div class="message-time">58: 2025/4/30(水) 1:00:15</div>
+  </div>
+</article>
+<article class="message" id="res59">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ノウハウがない一般人が怪異解決の糸口にするのが信憑性のよくわからん古文書信じるか信憑性のよくわからん悪魔情報信じるかしかないのが悪い。やっぱ信用できるライフル協会が必要</div>
+    <div class="message-time">59: 2025/4/30(水) 1:01:09</div>
+  </div>
+</article>
+<article class="message" id="res60">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">教会に相談しに行って「フゥー！祝福されたロザリオを溶かして作った銀の弾丸だ！こいつを撃ち込めばモンスターはお陀仏だぜ！」ってハンドガン貰いましょう</div>
+    <div class="message-time">60: 2025/4/30(水) 1:04:40</div>
+  </div>
+</article>
+<article class="message" id="res61">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">……モンスターパニックだったら成立すんのかな？ｗ</div>
+    <div class="message-time">61: 2025/4/30(水) 1:07:13</div>
+  </div>
+</article>
+<article class="message" id="res62">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いや、でもモンスターパニックならユグドラでやりてぇよな！　没か……</div>
+    <div class="message-time">62: 2025/4/30(水) 1:07:30</div>
+  </div>
+</article>
+<article class="message" id="res63">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">怪異撃退テキスト情報とかも、SCP財団の蒐集院の記録で数百年前に同じ事例が起きてこの方法で解決できたみたいな再現性がありそうな記録なら信憑性ありそうなんだけど、なんかこう、神秘神秘しすぎてたり、相手側の記録とか、成功例があるわけじゃない何かだとかするとこれに縋るのか…？ってなるんだよな…</div>
+    <div class="message-time">63: 2025/4/30(水) 1:08:50</div>
+  </div>
+</article>
+<article class="message" id="res64">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">厳密に言うと悪魔情報が出るのはしょうがなくて、悪魔情報単体で解決できない理由付けをどうするかみたいなところはある</div>
+    <div class="message-time">64: 2025/4/30(水) 1:17:12</div>
+  </div>
+</article>
+<article class="message" id="res65">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">プレイヤーが一般人である以上、悪魔情報の協力者になっちゃうのはしょうがない気がする</div>
+    <div class="message-time">65: 2025/4/30(水) 1:17:43</div>
+  </div>
+</article>
+<article class="message" id="res66">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">悪魔情報がノウハウを持ってたとして、PC側が持ってる情報は体験ベースの当事者性だからそこを重要視させる必要はあるんだけど、結局あったことすべて話して悪魔情報が推理して終わりになる気がする。難しい構造だな…</div>
+    <div class="message-time">66: 2025/4/30(水) 1:19:50</div>
+  </div>
+</article>
+<article class="message" id="res67">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういや警察から電話しただろって言われたのは何だったんすか？</div>
+    <div class="message-time">67: 2025/4/30(水) 1:21:39</div>
+  </div>
+</article>
+<article class="message" id="res68">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">さぁ…………</div>
+    <div class="message-time">68: 2025/4/30(水) 1:22:07</div>
+  </div>
+</article>
+<article class="message" id="res69">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">えぇ………</div>
+    <div class="message-time">69: 2025/4/30(水) 1:22:15</div>
+  </div>
+</article>
+<article class="message" id="res70">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">塞ぎ損ねた泥船の穴の一つです</div>
+    <div class="message-time">70: 2025/4/30(水) 1:22:40</div>
+  </div>
+</article>
+<article class="message" id="res71">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">こういう合理じゃない和ホラー演出のせいでどの情報を信じていいのかわからなくさせるんだよぉー！！！</div>
+    <div class="message-time">71: 2025/4/30(水) 1:24:09</div>
+  </div>
+</article>
+<article class="message" id="res72">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">怪異なんだから謎とかホラー演出とかなんでもありだろではいいんだけど、そうすると全てなんでもありになって情報とかが何一つ信用できなくなるだろー！！！</div>
+    <div class="message-time">72: 2025/4/30(水) 1:32:17</div>
+  </div>
+</article>
+<article class="message" id="res73">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">万能能力者が万能性で変に凝った事してました、特に意味ないです。だとなんかこうすべての描写を推理する意味が無くなって馬鹿らしくなるんだよな…</div>
+    <div class="message-time">73: 2025/4/30(水) 1:56:12</div>
+  </div>
+</article>
+<article class="message" id="res74">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ウルフが回すシナリオは基本的にスタンド攻撃にするつもりです<br>警察の電話はポルポの指です</div>
+    <div class="message-time">74: 2025/4/30(水) 1:58:34</div>
+  </div>
+</article>
+<article class="message" id="res75">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">PL「スタンドは影がギミックだったんですけどなんでポルポが指食べてるけど食べてないって描写したんですか？？？」<br>GM「さぁ…………」<br>PL「殺すぞ」</div>
+    <div class="message-time">75: 2025/4/30(水) 2:01:28</div>
+  </div>
+</article>
+<article class="message" id="res76">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">瓢もスタンド攻撃だったし</div>
+    <div class="message-time">76: 2025/4/30(水) 2:02:17</div>
+  </div>
+</article>
+<article class="message" id="res77">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はむさんって怪異の発動条件とか解除方法には整合性や客観的裏付けがあってほしいけど<br>なぜそんなものがこの世に存在するのか自体はわりとどうでもいいって認識なんですけど合ってますよね？</div>
+    <div class="message-time">77: 2025/4/30(水) 2:03:57</div>
+  </div>
+</article>
+<article class="message" id="res78">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい</div>
+    <div class="message-time">78: 2025/4/30(水) 2:04:12</div>
+  </div>
+</article>
+<article class="message" id="res79">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ユグドラの超能力も根源的な由来はわからんわけだし</div>
+    <div class="message-time">79: 2025/4/30(水) 2:04:13</div>
+  </div>
+</article>
+<article class="message" id="res80">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">OK</div>
+    <div class="message-time">80: 2025/4/30(水) 2:04:17</div>
+  </div>
+</article>
+<article class="message" id="res81">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">存在するもんは存在するからしかたねぇだろ</div>
+    <div class="message-time">81: 2025/4/30(水) 2:04:26</div>
+  </div>
+</article>
+<article class="message" id="res82">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">じゃあ今後もスタンド攻撃をお届けします</div>
+    <div class="message-time">82: 2025/4/30(水) 2:04:39</div>
+  </div>
+</article>
+<article class="message" id="res83">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今回はちょっとスタンド攻撃なのか怪しかったので何とかします</div>
+    <div class="message-time">83: 2025/4/30(水) 2:04:59</div>
+  </div>
+</article>
+<article class="message" id="res84">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">重力が存在するのはもうそういうもんだから納得するけど落ちたリンゴが急に腐ったらそういうのも物理法則なのかなって思うけど怖がらせるための演出で意味ないですって言われるとキレます</div>
+    <div class="message-time">84: 2025/4/30(水) 2:06:17</div>
+  </div>
+</article>
+<article class="message" id="res85">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はむぱん学成功してた</div>
+    <div class="message-time">85: 2025/4/30(水) 2:06:50</div>
+  </div>
+</article>
+<article class="message" id="res86">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">落ちたら腐るまで観測できる能力なら落ちないようにしようと思うじゃん。腐るのはなんか腐っただけで本質は重力の方です。って言われるとなんやねんってなります。</div>
+    <div class="message-time">86: 2025/4/30(水) 2:08:47</div>
+  </div>
+</article>
+<article class="message" id="res87">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ポルポの指が食べたように見えたけど違ったならそういう幻覚を見せる法則があるのかなって思うだろ！！！！！！！！！</div>
+    <div class="message-time">87: 2025/4/30(水) 2:10:02</div>
+  </div>
+</article>
+<article class="message" id="res88">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">●怪異の情報は可能な限り客観的なものにしろ<br><br>●怪異の性質と矛盾する現象を起こすな<br><br>●悪魔情報が出張るのはわりとしょうがないから、せめて「悪魔情報にどうやって辿り着くか」と「悪魔情報にどうやって貢献するか」を詰めろ</div>
+    <div class="message-time">88: 2025/4/30(水) 2:10:12</div>
+  </div>
+</article>
+<article class="message" id="res89">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この辺が盤外談義の総括か</div>
+    <div class="message-time">89: 2025/4/30(水) 2:10:36</div>
+  </div>
+</article>
+<article class="message" id="res90">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうかも</div>
+    <div class="message-time">90: 2025/4/30(水) 2:10:43</div>
+  </div>
+</article>
+<article class="message" id="res91">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">盤内談義は「そもそも情報が少なすぎる」って話になるからな……</div>
+    <div class="message-time">91: 2025/4/30(水) 2:11:19</div>
+  </div>
+</article>
+<article class="message" id="res92">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">警官からの電話はポルポの指なので消して、<br>思い込みに由来する現象ってのを客観的に説明する上でノイズになる情報も消さんと……<br>外部の人間が呼ばれてるってのはノイズか</div>
+    <div class="message-time">92: 2025/4/30(水) 2:14:28</div>
+  </div>
+</article>
+<article class="message" id="res93">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「友人とプレイヤーの認識によって一時的に一人歩きした結果」って説明できるし実際そうしてたけど回りくどい</div>
+    <div class="message-time">93: 2025/4/30(水) 2:15:04</div>
+  </div>
+</article>
+<article class="message" id="res94">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">友人と通勤が同じ路線で名前も知らないけど顔だけよく見かけてた人が死んだとかなら友人との犠牲者の縁が繋がるし友人の思い込みも強くなるかも？</div>
+    <div class="message-time">94: 2025/4/30(水) 2:16:57</div>
+  </div>
+</article>
+<article class="message" id="res95">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">友人の思い込みだから友人との何かの縁での犠牲者とかのほうがプレイヤーが狙われる理由にもつながる気もする</div>
+    <div class="message-time">95: 2025/4/30(水) 2:18:42</div>
+  </div>
+</article>
+<article class="message" id="res96">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁそうか</div>
+    <div class="message-time">96: 2025/4/30(水) 2:20:04</div>
+  </div>
+</article>
+<article class="message" id="res97">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あーそうだ、外部の人間が呼ばれてるのは確定なんだわ<br>プレイヤーが探索する理由がなくなるから</div>
+    <div class="message-time">97: 2025/4/30(水) 2:20:45</div>
+  </div>
+</article>
+<article class="message" id="res98">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はむ案で行きます</div>
+    <div class="message-time">98: 2025/4/30(水) 2:20:57</div>
+  </div>
+</article>
+<article class="message" id="res99">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「あいつも呼ばれるかも…」って考えたことでターゲットになっちゃう格好</div>
+    <div class="message-time">99: 2025/4/30(水) 2:21:27</div>
+  </div>
+</article>
+<article class="message" id="res100">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">よかったよかった</div>
+    <div class="message-time">100: 2025/4/30(水) 2:21:54</div>
+  </div>
+</article>
+<article class="message" id="res101">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">友人の思い込みを自分の思い込みで上書きしましょう</div>
+    <div class="message-time">101: 2025/4/30(水) 2:22:22</div>
+  </div>
+</article>
+<article class="message" id="res102">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">プレイヤーが途中で遺族に箱の中身を見せられて<br>「ほな箱と呼声は無関係かぁ…」って思ったら箱が<br>「ほーん。ワイと呼声が無関係やったら納得するんやな？」と曲解して事象が継続するのは据え置きです</div>
+    <div class="message-time">102: 2025/4/30(水) 2:24:33</div>
+  </div>
+</article>
+<article class="message" id="res103">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「え？　なんだ、全部偶然だったの？」ぐらいの思考だったら流石に止まる</div>
+    <div class="message-time">103: 2025/4/30(水) 2:25:01</div>
+  </div>
+</article><div class="elapsed"><span>2日 11時間 57分 経過</span></div>
+<article class="message" id="res104">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カゲさんのログは！？</div>
+    <div class="message-time">104: 2025/5/2(金) 14:22:56</div>
+  </div>
+</article><div class="elapsed"><span>109日 7時間 26分 経過</span></div>
+<article class="message" id="res105">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そろそろこれ再始動させたいな</div>
+    <div class="message-time">105: 2025/8/19(火) 21:49:01</div>
+  </div>
+</article>
+<article class="message" id="res106">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あれ、ログあげてねぇのか<br>まぁ布団の中なのでそっちは明日</div>
+    <div class="message-time">106: 2025/8/19(火) 21:49:48</div>
+  </div>
+</article>
+<article class="message" id="res107">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうかそうか、テーマを汲んだ別シナリオにするって話になったんだっけ</div>
+    <div class="message-time">107: 2025/8/19(火) 21:53:10</div>
+  </div>
+</article><div class="elapsed"><span>5日 23時間 37分 経過</span></div>
+<article class="message" id="res108">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">明日がきてなくない？</div>
+    <div class="message-time">108: 2025/8/25(月) 21:30:51</div>
+  </div>
+</article>
+<article class="message" id="res109">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">！！！！！！！！！</div>
+    <div class="message-time">109: 2025/8/25(月) 21:35:47</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,1224 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>終末論</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>終末論</h1>
+    <div class="meta">Fresh Meeting archive / room id: 202607799c4844 / active</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=202607799c4844"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+</span>
+
+<p>
+	さぼキリ：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202607doomsday/01_SvKr.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202607doom<wbr>sday/<wbr>01_<wbr>SvKr.<wbr>html</a><br>ウルカゲ：<a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202607doomsday/02_WlKg.html" target="_blank">https:<wbr>/<wbr>/<wbr>amazugali.<wbr>github.<wbr>io/<wbr>KaniTRPGRO<wbr>G/<wbr>YGGDRASIL/<wbr>NOMAL/<wbr>202607doom<wbr>sday/<wbr>02_<wbr>WlKg.<wbr>html</a></p></div>
+<!-- replay-links:begin -->
+<div class="replay-links-panel" style="margin-top:10px;padding:10px 12px;background:#eef8e8;border-left:4px solid #4b982a;overflow-wrap:anywhere">
+  <strong>セッションログ</strong>
+  <ul style="margin:6px 0 0 1.2em;padding:0">
+    <li><a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202607doomsday/01_SvKr.html" target="_blank" rel="noopener">さぼキリ</a></li><li><a href="https://amazugali.github.io/KaniTRPGROG/YGGDRASIL/NOMAL/202607doomsday/02_WlKg.html" target="_blank" rel="noopener">ウルカゲ</a></li>
+  </ul>
+</div>
+<!-- replay-links:end -->
+  </div>
+</header>
+<main>
+
+<div class="attachment-warning">
+  このログには Fresh Meeting 上の添付ファイル参照が 27 件あります。
+  HTML本文とは別に添付ファイル本体の保全が必要です。
+</div>
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オートで因子崩壊するのでジャマーで暴走崩壊させる</div>
+    <div class="message-time">1: 2026/7/4(土) 1:51:17</div>
+  </div>
+</article><div class="elapsed"><span>2日 19時間 59分 経過</span></div>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">プロメテウスのばか<br><a href="https://www.youtube.com/watch?v=ZGWJtZfLGOM" target="_blank">https:<wbr>/<wbr>/<wbr>www.<wbr>youtube.<wbr>com/<wbr>watch?<wbr>v=<wbr>ZGWJtZfLGO<wbr>M</a></div>
+    <div class="message-time">2: 2026/7/6(月) 21:50:45</div>
+  </div>
+</article>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">3: 2026/7/6(月) 23:14:41</div>
+  </div>
+</article>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">シナリオ全体まとめ<br>仮題<br><br>候補はまだ仮。<br><br>「明日世界が滅ぶというのに」<br>「明日世界が滅ぶとしたら？」<br>「（なんかいい感じの慣用句）終末論」<br><br>中心モチーフは、<br>“明日世界が滅ぶ”という予言が毎日更新され、しかもなぜか信じられてしまう事件。</div>
+    <div class="message-time">4: 2026/7/6(月) 23:17:10</div>
+  </div>
+</article>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">1. 導入：終末論の流行<br><br>ユグドラシル内で、妙な終末論が広がっている。<br><br>内容は単純。<br><br>明日、世界が滅ぶ。<br><br>しかし翌日になっても世界は滅ばない。<br>普通なら「予言は外れた」で終わるはずだが、終末論者たちはまた同じように、<br><br>明日、世界が滅ぶ。<br><br>と信じ続ける。<br><br>しかも、終末の日付が更新されるたびに、なぜか新しい予言も信じられてしまう。<br><br>外から見れば、これは新興宗教かカルトが影響力を高めるために、終末予言を何度も更新しているように見える。</div>
+    <div class="message-time">5: 2026/7/6(月) 23:17:28</div>
+  </div>
+</article>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">2. 依頼<br><br>依頼元は、YDFかバスターライラック。<br><br>どちらの場合も、依頼内容はおおむね同じ。<br><br>最近、「明日世界が滅ぶ」という終末論が広がっている。<br>その影響でデモや自棄的な犯罪が増えている。<br>この終末論を誰が広めているのか、何の目的でこんなことをしているのかを調べてほしい。<br>できれば、この騒動そのものも解決してほしい。<br><br>YDF依頼なら、公的な治安維持案件になる。<br>バスターライラック依頼なら、民間警備・紛争解決の案件として始まる。</div>
+    <div class="message-time">6: 2026/7/6(月) 23:17:42</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">3. 序盤調査：終末論者たち<br><br>PCたちは、終末論を信じている人々に話を聞く。<br><br>彼らは「明日世界が滅ぶ」と確信している。<br>だが、情報源は曖昧。<br><br>人づてに聞いた<br>ネットで見た<br>誰かが言っていた<br>でも本当だと思う<br>なぜか信じるに値すると感じる<br><br>という状態。<br><br>PCが、<br><br>昨日も明日滅ぶと言っていた。<br>でも今日、世界は滅んでいない。<br><br>と矛盾を突くと、相手はうまく理解できない。<br><br>理屈ではおかしいと分かっても、感覚では新しい終末予言を信じてしまう。<br>追及すると混乱する。<br><br>ここから、単なるデマやカルトではなく、精神干渉や認知干渉を伴う異能事件だと分かってくる。</div>
+    <div class="message-time">7: 2026/7/6(月) 23:17:59</div>
+  </div>
+</article>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">4. 終末論の社会被害<br><br>終末論の影響で、島内には混乱が広がっている。<br><br>「どうせ明日終わる」と考えた者たちが、自棄的な行動に出る。<br><br>犯罪<br>暴走<br>略奪<br>破壊<br>デモ<br>グングニルへの抗議<br>世界の滅びを隠蔽しているという陰謀論<br><br>など。<br><br>ただし、全員が同じ方向に壊れているわけではない。<br><br>終末論の中心に近い者たちは、むしろ教義を理解している。<br>一方、教義を理解しない一般人には「明日滅ぶ」という恐怖だけが伝わり、悲観的・破滅的になっている。</div>
+    <div class="message-time">8: 2026/7/6(月) 23:18:28</div>
+  </div>
+</article>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">5. カルトの存在<br><br>調査を進めると、終末論を広めている新興宗教、あるいはカルトの存在に辿り着く。<br><br>その主が、予知能力者。<br><br>このカルトは、外から見ると非常に胡散臭い。<br><br>昨日も明日滅ぶと言っていた。<br>だが滅ばなかった。<br>なのに今日もまた明日滅ぶと言っている。<br>つまり、終末予言を更新し続けて信者を増やす詐欺ではないか。<br><br>そう見える。<br><br>しかし実際には、予知能力者は毎回本当に「明日世界が滅ぶ未来」を見ている。</div>
+    <div class="message-time">9: 2026/7/6(月) 23:18:42</div>
+  </div>
+</article>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">6. 予知能力者の設定<br><br>予知能力者は、新興宗教の主。<br>PCに対しては敵対的。<br>終末に対しても肯定的。<br><br>ただし、単純な破滅願望ではない。<br><br>彼は終末を予知した後、LUNA隊のタローマンに相談した。<br><br>その結果、タローマンから極端な思想を吹き込まれる。<br><br>内容は、要約するとこう。<br><br>明日世界が終わろうと、それでいい。<br>大切なのは今を一瞬一瞬、全力で生きること。<br>全力で生きているなら、次の瞬間に世界が滅んでも問題ない。<br>滅びが怖いのは、やり切っていないからだ。<br>死を恐れるな。生命を発散させろ。<br><br>この思想を受け、予知能力者はカルトを作ることを決意した。<br><br>教義は、悲観的な終末論ではない。<br><br>明日世界が滅ぶ。<br>だからこそ、今日を良く生きろ。<br><br>という、メメントモリに近いもの。</div>
+    <div class="message-time">10: 2026/7/6(月) 23:19:14</div>
+  </div>
+</article>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">7. 予知能力の性質<br><br>予知能力者の予知には、特殊な性質がある。<br><br>予知した情報を他者に伝えると、その情報に信憑性を抱かせる。<br><br>直接聞いた者ほど強く信じる。<br><br>予知能力者本人から聞く：強い<br>信者から聞く：やや弱い<br>噂やネットで知る：さらに弱い<br>二次・三次伝播：薄いが残る<br><br>このため、カルト信者は教義込みで終末を受け入れている。<br><br>一方、一般市民には教義が抜け落ち、<br>「明日世界が滅ぶ」という恐怖だけが広がる。<br><br>その結果、信者は全力で生きようとするが、非信者は悲観や暴走に走る。</div>
+    <div class="message-time">11: 2026/7/6(月) 23:19:25</div>
+  </div>
+</article>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">8. 予知能力者との対決<br><br>PCたちは、終末論と予知情報の流布を止めるために、予知能力者と対峙する。<br><br>予知能力者は、自分を悪とは思っていない。<br><br>彼の認識では、<br><br>終末は本当に来る。<br>ならば、それを隠す方が欺瞞だ。<br>世界が滅びるとしても、人々が良く生きられるように教えを広めている。<br><br>というもの。<br><br>しかしPC側から見れば、予知が本物だとしても、無制限に流布した結果、社会不安と犯罪を拡大させている。<br><br>そのため、PCはカルトと予知の流布を止めるために戦う。</div>
+    <div class="message-time">12: 2026/7/6(月) 23:19:39</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">9. 予知能力者を倒した後に分かること<br><br>PCが予知能力者に勝利すると、以下が判明する。<br><br>予知能力者はタローマンに思想を植え付けられていた<br>終末予知そのものは本物だった<br><br>終末の詳細は、<br><br>ゴミ捨て場から、一人の男を中心に世界が虚無に飲まれる<br>というもの<br><br>これにより、PCたちはゴミ捨て場へ向かう。</div>
+    <div class="message-time">13: 2026/7/6(月) 23:19:53</div>
+  </div>
+</article>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">10. ミロクの発見<br><br>ゴミ捨て場で、PCたちはミロクを発見する。<br><br>ミロクは、掌に何でも吸い込む穴を持つ能力者。<br><br>質量や空間を圧縮し、簡易的なブラックホールのような現象を起こす。<br>元ネタは『犬夜叉』の弥勒の風穴と、『呪術廻戦』の九十九由基の星の怒り《ボンバイエ》。<br><br>普段から完全には制御できておらず、腕に装着型のサイキックジャミングを付けることで疑似的に能力を抑えている。<br><br>しかし、掌の穴は少しずつ広がっている。<br><br>本来なら、いずれ暴走崩壊しても、半径数メートルを飲み込む程度で済むはずだった。</div>
+    <div class="message-time">14: 2026/7/6(月) 23:20:03</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">11. クリスによる先送り<br><br>ミロクは、過去に依頼の後で暴走崩壊しかけた。<br><br>その時、クリスという「負傷を先送りにする能力者」に命を救われた。<br><br>それ以後、ミロクとクリスは定期的に連絡を取り合い、ミロクの暴走崩壊を先送りにしている。<br><br>だが、これが事態を悪化させた。<br><br>ミロクの本来の暴走は、半径数メートルで済むはずだった。<br>しかしクリスが何度も暴走崩壊を先送りしたことで、負債が蓄積・乗算された。<br><br>その結果、今のミロクが暴走崩壊すると、ユグドラシル全体を飲み込むほどのブラックホールが瞬間的に発生する。<br>さらに太陽系の軌道にすら影響を与え、世界が滅ぶ。<br><br>予知能力者が見ていた「明日世界が滅ぶ」は、この未来。<br><br>そして毎日終末の日付が更新されていたのは、クリスが毎回ミロクの崩壊を先送りしていたから。</div>
+    <div class="message-time">15: 2026/7/6(月) 23:20:36</div>
+  </div>
+</article>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">12. ミロクの提案<br><br>PCが事情を話すと、ミロクは警戒しつつも納得する。<br><br>そして、自分からこう提案する。<br><br>自分が暴走崩壊する前に殺せば、能力は暴走せず解決できるはずだ。<br><br>ここで、PCは無抵抗のミロクを殺すことができる。<br><br>この場合、事件は解決する。<br><br>世界は救われる。<br>クリスに負荷もかからない。<br>だが、PCは無抵抗のミロクを殺す。</div>
+    <div class="message-time">16: 2026/7/6(月) 23:20:55</div>
+  </div>
+</article>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">13. PCが他の方法を探す場合<br><br>PCがミロクを殺さず、他の方法を探そうとすると、ミロクの暴走が始まる。<br><br>ミロクは、抑えている間にクリスを呼んでほしいと言う。<br><br>本来、今日もクリスと会う予定だった。<br>だが、クリスが遅れている。<br><br>クリスは別の依頼を受けており、それが長引いている。</div>
+    <div class="message-time">17: 2026/7/6(月) 23:21:11</div>
+  </div>
+</article>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">14. クリスの依頼<br><br>クリスが受けている依頼は、狂ったモヒカンからのもの。<br><br>依頼内容は、<br><br>俺を即死させてくれ！！<br><br>というトンチキ依頼。<br><br>このモヒカンは、データ的な即死、つまりHP-20まで到達するような大ダメージを与えない限り、ダメージを無効化する。<br><br>クリスは火力が足りず、倒し切れない。<br>逃げようとしても回り込まれて、逃げられなくなっている。<br><br>PCたちはクリスを見つけ、何らかの形でこの状況を処理する。<br><br>モヒカンを即死ラインまで削る<br>依頼を諦めさせる<br>クリスを連れ出す<br>モヒカンを拘束する<br>その他、PCの発想で突破する<br><br>ここは、シリアスな終末事件の中に挟まるトンチキな山場。</div>
+    <div class="message-time">18: 2026/7/6(月) 23:21:21</div>
+  </div>
+</article>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">15. クリスによる一時的な救命<br><br>PCがクリスをミロクの元へ連れてくると、クリスはミロクの暴走崩壊を一旦先送りできる。<br><br>これで即時の終末は回避される。<br><br>ただし、これは根本解決ではない。<br><br>さらに、クリスに大きな負荷をかければ、もっと遠い未来まで先送りにすることもできる。<br><br>だが、クリス自身もすでに自分の致命傷をいくつも先送りにしている。<br>無理をすれば、クリスの負債が一気に返り、クリスが暴走崩壊して死ぬ可能性がある。</div>
+    <div class="message-time">19: 2026/7/6(月) 23:21:42</div>
+  </div>
+</article>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">16. 根本解決のため医者へ<br><br>ミロクもクリスも犠牲にしない道を探す場合、PCたちはミロクの腕のサイキックジャミングをくれた医者に話を聞く。<br><br>医者は、フラメルに対能力ジャマーの専門家がいると教える。<br><br>そこでPCたちはフラメルへ向かう。</div>
+    <div class="message-time">20: 2026/7/6(月) 23:21:52</div>
+  </div>
+</article>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">17. フラメル到着<br><br>フラメルには二人の重要人物がいる。<br><br>能力嫌いのジャマージジイ<br><br>君の名物PC。<br>対能力ジャマーや能力抑制に詳しい。<br><br>ミロクとクリスの事情を聞くと、激しく悪態をつく。<br><br>理由は、<br><br>制御不能な能力を、さらに別の能力で先送りし続けた結果、世界滅亡級の非常事態にしたから。<br><br>彼から見れば、これは能力の乱用そのもの。<br><br>ただし、見捨てるわけではない。<br>フラメルの設備を使えば、ミロクの暴走を抑えられると提案する。<br><br>倫理観の薄いフラメル研究員<br><br>別部署所属。<br>たまたまその場にいた。<br><br>ジャマージジイたちの話を聞き、別の解決策を提案する。</div>
+    <div class="message-time">21: 2026/7/6(月) 23:22:12</div>
+  </div>
+</article>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">18. フラメルで提示される二つの処遇<br>案A：フラメル設備による隔離<br><br>ジャマージジイの案。<br><br>フラメルのジャマー設備を利用すれば、ミロクの暴走は抑えられる。<br><br>ただし、ミロクはその設備のある場所から離れられない。<br><br>つまり、ミロクは一生、実験室の中で暮らすような生活になる。<br><br>世界は救われる<br>ミロクは死なない<br>クリスにこれ以上の負荷はかからない<br>ただしミロクは自由を失う<br><br>安全だが、檻の中で生きる道。<br><br>案B：PSY負荷による能力変異<br><br>倫理観の薄い研究員の案。<br><br>ミロクのPSYに負荷を与え、能力変異を起こさせる。<br><br>うまくいけば、<br><br>先送りによる暴走負債が帳消しになる<br>能力が変化する<br>能力を失う可能性もある<br>今後、同じ問題に悩まなくて済む<br><br>ただし、リスクは非常に高い。<br><br>処置中に暴走崩壊する危険がある<br>確実に後遺症が残る<br>より困難な異能へ変化する可能性がある<br><br>能力嫌いのジャマージジイは、この案を激しく非難する。</div>
+    <div class="message-time">22: 2026/7/6(月) 23:22:35</div>
+  </div>
+</article>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">19. ミロクの態度<br><br>ミロクは、すでに死ぬ覚悟をしていた。<br><br>自分を殺せば世界が救われるなら、それでもいいと思っている。<br>だからフラメルで提示されるどちらの道も、受け入れるつもりでいる。<br><br>殺される<br>クリスに先送りされる<br>フラメルに隔離される<br>能力変異を受ける<br><br>どれでも、ミロクは強く拒まない。<br><br>つまり、最終判断はPCに委ねられる。</div>
+    <div class="message-time">23: 2026/7/6(月) 23:22:45</div>
+  </div>
+</article>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">20. 最終選択肢<br>A. ミロクを殺す<br><br>無抵抗のミロクを殺す。<br><br>結果：<br><br>世界は救われる<br>クリスに負荷はかからない<br>ミロクは死ぬ<br>PCは「世界のために一人を殺した」ことになる<br><br>最も確実で、最も冷たい解決。<br><br>B. クリスに先送りさせる<br><br>クリスにミロクの暴走崩壊をさらに未来へ先送りさせる。<br><br>結果：<br><br>ミロクは生きる<br>世界は当面救われる<br>クリスに大きな負荷がかかる<br>問題は未来に残る<br>クリスが危険になる可能性がある<br><br>一時的解決。<br><br>C. フラメル設備で隔離する<br><br>ジャマージジイの案を採用する。<br><br>結果：<br><br>ミロクは生きる<br>世界は救われる<br>クリスに負荷はかからない<br>ただしミロクはフラメルの設備から離れられない<br>一生、実験室の中で暮らすような生活になる<br><br>安全だが、自由を奪う解決。<br><br>D. PSY負荷で能力変異させる<br><br>倫理観の薄い研究員の案を採用する。<br><br>結果：<br><br>成功すれば根本解決<br>ミロクは自由を取り戻せる可能性がある<br>先送り負債が帳消しになる<br>ただし後遺症は確定<br>暴走崩壊の危険がある<br>能力がより危険なものへ変化する可能性もある<br><br>危険だが、ミロクの未来を残す解決。</div>
+    <div class="message-time">24: 2026/7/6(月) 23:23:08</div>
+  </div>
+</article>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">21. 能力変異時の処理<br><br>PSY負荷による能力変異を選んだ場合、クリア処理ルールに基づいて処理する。</div>
+    <div class="message-time">25: 2026/7/6(月) 23:23:25</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">22. PCが予知能力者だけ捕まえて終わった場合<br><br>PCが依頼だけに興味を持ち、予知能力者を捕まえて報告し、それ以上踏み込まなかった場合。<br><br>この場合、PCは一応依頼を達成している。<br><br>終末論を広めていた人物を特定した<br>目的も判明した<br>予知の流布も止めた<br><br>だが、ミロクには辿り着かない。<br>または、予知の詳細を聞いても、依頼人に報告して終わる。<br><br>その場合、依頼人がミロクを捕捉する。<br><br>そして、最も確実な方法として、ミロクを殺す。<br><br>これにより事件は解決する。<br><br>このルートでは、世界は救われる。<br>だがミロクは救われない。<br>クリスやフラメルの選択肢にも辿り着かない。</div>
+    <div class="message-time">26: 2026/7/6(月) 23:23:38</div>
+  </div>
+</article>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ミロクを因子変化させる場合は、暴走100以上になるとオートが連鎖して因子崩壊する。<br>ハム・タイプ（ジャマージジイ）のオリ特性で能力を封じてオートを起動させなくする。<br>そしてクリア処理に進むとミロクの因子変化ロール</div>
+    <div class="message-time">27: 2026/7/6(月) 23:27:34</div>
+  </div>
+</article>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">甲式特殊制限圧発生装置<br>【系統無効】系の特殊武装および消費武装を任意の数だけ消費して発動できる。<br>同シーンの全てのユニットはターン終了時まで、<br>【この効果を発動するために消費したアイテムの数】以下の消費スペックを持つ応用技を宣言できない。</div>
+    <div class="message-time">28: 2026/7/6(月) 23:34:12</div>
+  </div>
+</article>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><br>【サトリ】<br>HP：20/20　PP：30/30　暴走率：70%　所持因子：2d　活性タイプ：覚醒型<br>SS：12+1d6　命中力：12+1d6　回避力：11+1d6<br>防御力：0　精神抵抗：6　行動値：10<br>格闘攻撃1d6 武器攻撃1d6+1 能力攻撃3d6+5<br>SPE：【奇跡】　カルマ：【反撃者】<br>特殊武装：毒電波発生装置<br>消費アイテム：違法グレネード、違法グレネード、違法グレネード<br><br>能力：【サトリの大予言】(アンノウン)　能力制度：12スペック：1(3)<br>説明：末来を読み取る。その情報は信憑性を持つ性質がある。<br><br>【末来を見たいか？】PP2 S1 攻撃発動 精神発動 <br>【危機回避】PP7 S4　付加発動 強化【回】【回】　オート【タイミング：回避】<br><br><br>筋2 / 耐1 / 知6 / 精12 / 器12 / 敏8 / 運6<br>力2 / 威1 / 観6 / 察7 / 知6 / 技12 / 隠10 / 俊8 / 話9 / 読9 / 閃6 / 幸6<br><br>コンディション：(9.5)<br>基礎pt4　BP適応<br>暴走症固定：ra70【自制】ra90【視覚異常】<br>因子：追加獲得しない、最低値0<br>AE：補正系使用不可（コンセ、ブースト、エール、置き換え）</div>
+    <div class="message-time">29: 2026/7/7(火) 0:05:33</div>
+  </div>
+</article>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【ミロク】<br>HP：15/15　PP：40/40　暴走率：60%　所持因子：2d　活性タイプ：増強型<br>SS：13+1d6　命中力：16+1d6　回避力：7+1d6<br>防御力：1　精神抵抗：5　行動値：4<br>格闘攻撃1d6 武器攻撃1d6 能力攻撃5d6<br>SPE：【大器】　カルマ：【凡骨】<br>特殊武装：なし<br>消費アイテム：マグEX<br>能力：【Void】(アンノウン)　能力制度：12スペック：4<br>説明：何もかもを吸い込む穴を持つ<br><br>【風穴】PP7 S5 攻撃発動 付加発動 強化【攻】【攻】 ペネトレイション<br>【能力暴走1】PP10　S8　行為発動×7　オート【暴走：100％】<br>【能力暴走2】PP10　S8　行為発動×7　オート【暴走：110％】<br>【能力暴走3】PP10　S8　行為発動×7　オート【暴走：120％】<br>【能力暴走4】PP10　S8　行為発動×7　オート【暴走：130％】<br>【能力暴走5】PP10　S8　行為発動×7　オート【暴走：140％】<br><br>筋3 / 耐2 / 知8 / 精10 / 器14 / 敏2 / 運8<br>力3 / 威2 / 観7 / 察4 / 知8 / 技12 / 隠8 / 俊2 / 話11 / 読8 / 閃7 / 幸8<br><br>コンディション：(7.5)<br>基礎pt4　BP適応<br>暴走症固定：ra70【暴発】ra90【制御異常】<br>因子：追加獲得しない、最低値0<br>AE：使用制限なし</div>
+    <div class="message-time">30: 2026/7/7(火) 0:07:52</div>
+  </div>
+</article>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【信者】<br>HP：16/16　PP：15/25　暴走率：60%　所持因子：なし　活性タイプ：反応型<br>SS：7+1d6　命中力：10+1d6　回避力：7+1d6<br>防御力：3　精神抵抗：3　行動値：5<br>格闘攻撃1d6 武器攻撃1d6+4 能力攻撃1d6+5<br>SPE：【闘志】　カルマ：【守護者】<br>特殊武装：ショックバトン<br>消費アイテム：なし<br>能力：【なし】(ノーマル)　能力制度：6スペック：0(2)<br>応用技：なし<br><br>筋：4耐：6知：4精：6器：6敏：4運：4<br>力：3 威：4 観：3 察：3 知：3 技：5<br>隠：4 俊：3 話：4 読：4 閃：3 幸：3<br><br>コンディション：(2.4)<br>基礎pt2　BP適応<br>暴走症固定：ra50【発作】ra70【自爆】ra90【身体異常】<br>因子：獲得しない<br>AE：エール以外の補正系使用不可（コンセ、ブースト、置き換え）</div>
+    <div class="message-time">31: 2026/7/7(火) 0:12:55</div>
+  </div>
+</article>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">即死<br><a href="https://youtu.be/LuoTUR5hWng?si=lgLXCCQZggW6LxnQ" target="_blank">https:<wbr>/<wbr>/<wbr>youtu.<wbr>be/<wbr>LuoTUR5hWn<wbr>g?<wbr>si=<wbr>lgLXCCQZgg<wbr>W6LxnQ</a></div>
+    <div class="message-time">32: 2026/7/7(火) 0:14:42</div>
+  </div>
+</article>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">33: 2026/7/7(火) 0:48:01</div>
+  </div>
+</article>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【ダーウィン・ノースカット】<br>HP：24/24　PP39/39　暴走率：40%　所持因子：0d　活性タイプ：回復型<br>SS：12+1d6　命中力：13+1d6　回避力：7+1d6<br>防御力：2　精神抵抗：4　行動値：5<br>格闘攻撃1d6 武器攻撃1d6+1 能力攻撃4d6+1<br>SPE：【不屈】　カルマ：【癒し手】<br>特殊武装：なし<br>消費アイテム：マグEX×10<br><br>能力：【即死で頼むぜ！！！！】(アンノウン)　能力制度：9スペック：4<br>説明：自己回復能力<br><br>【痛いのはゴメンだ！！】PP7 S4 付加発動　回復　回復　継続【回復】<br>【苦しむのはヤダ！！！】PP7 S4　付加発動 回復　回復　オート【ヒットトリガー】<br>【入院したくない！！！！】PP7 S4　付加発動 回復　回復　オート【ダメージトリガー：20】<br>【ベッドで死にたくない！！】PP7 S4　付加発動 回復　回復　オート【ダメージトリガー：10】<br><br><br>筋4 / 耐4 / 知2 / 精8 / 器10 / 敏5 / 運14<br>力5 / 威5 / 観5 / 察6 / 知3 / 技10 / 隠8 / 俊6 / 話7 / 読8 / 閃11 / 幸15<br><br>コンディション：(12.12)<br>基礎pt4　BP適応<br>暴走症固定：ra70【自制】ra90【自制】ra110【超活性】ra120【超活性】ra130【超活性】ra140【超活性】<br>因子：追加獲得しない、最低値0<br>AE：ヘッショ宣言時、ダメージコンセ宣言時、強化【攻】付加状態→回避放棄</div>
+    <div class="message-time">34: 2026/7/7(火) 0:49:24</div>
+  </div>
+</article><div class="elapsed"><span>23時間 46分 経過</span></div>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【タイトル】終末は明日に延期されました<br>【システム】鋼鉄のユグドラシル<br><br>【概要/HO】<br>人工島ユグドラシルで、「数日以内に世界が滅ぶ」という終末論が流行している。<br>予言される日付は外れるたびに更新され、明日、三日後、今週末と形を変えて広がり続ける。<br>その影響でデモや暴動、自棄的な犯罪が増加し、YDFは対応に追われていた。<br>君たちはYDFから個人的な依頼を受け、終末論の出所と目的を調査し、可能なら騒動そのものを解決することになる。<br>終末は来なかった。ただ、また少し先へ延期されただけなのかもしれない。<br><br>【適正人数】1～3人<br>【参加資格】YDFから委託される人物<br>※YDF所属でなくても可。終末論の流布で困っている人物から依頼を受けられる立場なら参加可能。<br><br>【プレイ時間】2～4日想定<br>【シリアス度】■■■■□<br>【ヘヴィ度】■■■■□<br>【難易度】普通<br>【禁止】とくになし<br>【暴走チェック】消費、シーン制　2d6×3回<br>【探索：戦闘】6:4<br>【抑制ロール】2回振り、リテイク等なし<br><br>【補足】<br>・サプリメント「蟹」v0.3を使用。PCオリ特性とBPも適用。<br>・PCの選択により複数の結末が想定される。意志の統一、対話相談、必要に応じたPvPができるパーティが望ましい。</div>
+    <div class="message-time">35: 2026/7/8(水) 0:36:13</div>
+  </div>
+</article>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">【タイトル】終末は明日に延期されました。<br>【システム】鋼鉄のユグドラシル<br><br>【概要/HO】<br>ここ最近、「数日以内に世界が滅ぶ」という終末論が流行している。<br>予言される日付は外れるたびに更新され、明日、三日後、今週末と形を変えて広がり続ける。<br>その影響でデモや暴動、自棄的な犯罪が増加し、YDFは対応に追われていた。<br>君たちはYDFの一隊員から、通常の手続きでは対応しきれない案件として終末論の調査を依頼される。<br>終末論の出所と目的を調査し、可能なら騒動そのものを解決することになる。<br><br>終末は来なかった。ただ、また少し先へ延期されただけなのかもしれない。<br><br>【適正人数】1～3人<br>【参加資格】公機関所属、またはYDFから委託される人物<br>※依頼人がYDFでなくても可。終末論の流布で困っている人物から依頼を受けてもいい。要相談<br><br>【プレイ時間】2～4日想定<br>【シリアス度】■■■■□<br>【ヘヴィ度】■■■■□<br>【難易度】2人で普通<br>※人数による調整なし。1人なら難しめ、3人なら易しめ。<br>【禁止】とくになし<br>【暴走チェック】消費、シーン制　2d6×3回<br>【探索：戦闘】6:4<br>【抑制ロール】2回振り、リテイク等なし<br><br>【補足】<br>・サプリメント「蟹」（v0.3-pre6.<wbr>3）を使用。PCオリ特性とBPも適用。<br>・PCの選択により複数の結末が想定される。意志の統一、対話相談、必要に応じたPvPができるパーティが望ましい。</div>
+    <div class="message-time">36: 2026/7/8(水) 0:43:44</div>
+  </div>
+</article><div class="elapsed"><span>10時間 56分 経過</span></div>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=i8e7104fd" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=i8e7104fd" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i8e7104fd">📎 ChatGPT Image 2026年7月8日 11_36_19.png</a> <span class="filesize">[2.8 MB, 1024x1536px]</span> を追加しました。</div>
+    <div class="message-time">37: 2026/7/8(水) 11:40:41</div>
+  </div>
+</article>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=i75f35fcb" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=i75f35fcb" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i75f35fcb">📎 ChatGPT Image 2026年7月8日 11_36_27.png</a> <span class="filesize">[2.4 MB, 1024x1536px]</span> を追加しました。</div>
+    <div class="message-time">38: 2026/7/8(水) 11:40:48</div>
+  </div>
+</article>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=i53b7fe61" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=i53b7fe61" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i53b7fe61">📎 ChatGPT Image 2026年7月8日 11_36_40.png</a> <span class="filesize">[3.0 MB, 1024x1536px]</span> を追加しました。</div>
+    <div class="message-time">39: 2026/7/8(水) 11:40:56</div>
+  </div>
+</article>
+<article class="message" id="res40">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=iea1bc405" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=iea1bc405" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=iea1bc405">📎 ChatGPT Image 2026年7月8日 11_36_49.png</a> <span class="filesize">[1.9 MB, 1024x1536px]</span> を追加しました。</div>
+    <div class="message-time">40: 2026/7/8(水) 11:41:20</div>
+  </div>
+</article>
+<article class="message" id="res41">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=ie3e6ab76" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=ie3e6ab76" width="244" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=ie3e6ab76">📎 ChatGPT Image 2026年7月8日 11_37_06.png</a> <span class="filesize">[2.6 MB, 1535x1024px]</span> を追加しました。</div>
+    <div class="message-time">41: 2026/7/8(水) 11:43:10</div>
+  </div>
+</article>
+<article class="message" id="res42">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=iad395993" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=iad395993" width="244" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=iad395993">📎 ChatGPT Image 2026年7月8日 11_37_13.png</a> <span class="filesize">[2.4 MB, 1536x1024px]</span> を追加しました。</div>
+    <div class="message-time">42: 2026/7/8(水) 11:43:20</div>
+  </div>
+</article>
+<article class="message" id="res43">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=i71beda46" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=i71beda46" width="244" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i71beda46">📎 ChatGPT Image 2026年7月8日 11_37_21.png</a> <span class="filesize">[2.5 MB, 1535x1024px]</span> を追加しました。</div>
+    <div class="message-time">43: 2026/7/8(水) 11:43:27</div>
+  </div>
+</article>
+<article class="message" id="res44">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=idfd924cd" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=idfd924cd" width="244" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=idfd924cd">📎 ChatGPT Image 2026年7月8日 11_37_29.png</a> <span class="filesize">[2.2 MB, 1535x1024px]</span> を追加しました。</div>
+    <div class="message-time">44: 2026/7/8(水) 11:43:33</div>
+  </div>
+</article>
+<article class="message" id="res45">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=i4818c033" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=i4818c033" width="244" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i4818c033">📎 ChatGPT Image 2026年7月8日 11_37_43.png</a> <span class="filesize">[2.1 MB, 1536x1024px]</span> を追加しました。</div>
+    <div class="message-time">45: 2026/7/8(水) 11:43:39</div>
+  </div>
+</article>
+<article class="message" id="res46">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=i477ac732" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=i477ac732" width="244" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i477ac732">📎 ChatGPT Image 2026年7月8日 11_37_51.png</a> <span class="filesize">[1.8 MB, 1536x1024px]</span> を追加しました。</div>
+    <div class="message-time">46: 2026/7/8(水) 11:43:45</div>
+  </div>
+</article>
+<article class="message" id="res47">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=i2580a831" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=i2580a831" width="288" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i2580a831">📎 ChatGPT Image 2026年7月8日 11_38_04.png</a> <span class="filesize">[2.2 MB, 1672x941px]</span> を追加しました。</div>
+    <div class="message-time">47: 2026/7/8(水) 11:43:53</div>
+  </div>
+</article>
+<article class="message" id="res48">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=i6a770648" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=i6a770648" width="244" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i6a770648">📎 ChatGPT Image 2026年7月8日 11_38_09.png</a> <span class="filesize">[2.1 MB, 1536x1024px]</span> を追加しました。</div>
+    <div class="message-time">48: 2026/7/8(水) 11:44:00</div>
+  </div>
+</article>
+<article class="message" id="res49">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=if8661f0d" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=if8661f0d" width="244" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=if8661f0d">📎 ChatGPT Image 2026年7月8日 11_38_17.png</a> <span class="filesize">[2.0 MB, 1536x1024px]</span> を追加しました。</div>
+    <div class="message-time">49: 2026/7/8(水) 11:44:34</div>
+  </div>
+</article>
+<article class="message" id="res50">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=i336f797a" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=i336f797a" width="244" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i336f797a">📎 ChatGPT Image 2026年7月8日 11_38_23.png</a> <span class="filesize">[1.7 MB, 1536x1024px]</span> を追加しました。</div>
+    <div class="message-time">50: 2026/7/8(水) 11:44:41</div>
+  </div>
+</article>
+<article class="message" id="res51">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=i10f06b71" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=i10f06b71" width="244" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i10f06b71">📎 ChatGPT Image 2026年7月8日 11_38_32.png</a> <span class="filesize">[2.2 MB, 1536x1024px]</span> を追加しました。</div>
+    <div class="message-time">51: 2026/7/8(水) 11:44:48</div>
+  </div>
+</article>
+<article class="message" id="res52">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=ibc5a6e53" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=ibc5a6e53" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=ibc5a6e53">📎 ChatGPT Image 2026年7月8日 12_07_28.png</a> <span class="filesize">[2.5 MB, 1024x1536px]</span> を追加しました。</div>
+    <div class="message-time">52: 2026/7/8(水) 12:07:44</div>
+  </div>
+</article><div class="elapsed"><span>4日 23時間 48分 経過</span></div>
+<article class="message" id="res53">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">大団円実行委員会</div>
+    <div class="message-time">53: 2026/7/13(月) 11:56:07</div>
+  </div>
+</article><div class="elapsed"><span>1日 0時間 41分 経過</span></div>
+<article class="message" id="res54">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=i597e567e" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=i597e567e" width="124" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i597e567e">📎 ChatGPT Image 2026年7月14日 12_30_08.png</a> <span class="filesize">[1.3 MB, 1086x1448px]</span> を追加しました。</div>
+    <div class="message-time">54: 2026/7/14(火) 12:37:26</div>
+  </div>
+</article>
+<article class="message" id="res55">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=i9648e1c1" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=i9648e1c1" width="124" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i9648e1c1">📎 ChatGPT Image 2026年7月14日 12_32_57.png</a> <span class="filesize">[1.4 MB, 1086x1448px]</span> を追加しました。</div>
+    <div class="message-time">55: 2026/7/14(火) 12:37:32</div>
+  </div>
+</article>
+<article class="message" id="res56">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=ia95624d3" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=ia95624d3" width="124" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=ia95624d3">📎 ChatGPT Image 2026年7月14日 12_37_14.png</a> <span class="filesize">[1.9 MB, 1086x1448px]</span> を追加しました。</div>
+    <div class="message-time">56: 2026/7/14(火) 12:37:51</div>
+  </div>
+</article><div class="elapsed"><span>4時間 57分 経過</span></div>
+<article class="message" id="res57">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=i8919e5e4" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=i8919e5e4" width="124" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i8919e5e4">📎 ChatGPT Image 2026年7月14日 12_44_37.png</a> <span class="filesize">[1.5 MB, 1086x1448px]</span> を追加しました。</div>
+    <div class="message-time">57: 2026/7/14(火) 17:35:20</div>
+  </div>
+</article>
+<article class="message" id="res58">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=i1ab8c1a2" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=i1ab8c1a2" width="124" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i1ab8c1a2">📎 ChatGPT Image 2026年7月14日 17_03_19.png</a> <span class="filesize">[1.2 MB, 1086x1448px]</span> を追加しました。</div>
+    <div class="message-time">58: 2026/7/14(火) 17:35:26</div>
+  </div>
+</article>
+<article class="message" id="res59">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=i2fd8c4c3" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=i2fd8c4c3" width="110" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i2fd8c4c3">📎 ChatGPT Image 2026年7月14日 17_03_49.png</a> <span class="filesize">[2.4 MB, 1024x1536px]</span> を追加しました。</div>
+    <div class="message-time">59: 2026/7/14(火) 17:35:32</div>
+  </div>
+</article>
+<article class="message" id="res60">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=id9a9cef1" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=id9a9cef1" width="124" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=id9a9cef1">📎 ChatGPT Image 2026年7月14日 17_28_23.png</a> <span class="filesize">[1.5 MB, 1086x1448px]</span> を追加しました。</div>
+    <div class="message-time">60: 2026/7/14(火) 17:35:37</div>
+  </div>
+</article><div class="elapsed"><span>16時間 36分 経過</span></div>
+<article class="message" id="res61">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">終末安心センター<br>終末論に便乗し、防災用品・保存食・簡易シェルター・精神安定グッズを売りつける詐欺まがいの民間団体「終末安心センター」の営業員。<br>近未来サイバーパンク都市の市民向けセールスマン。終末を本気で信じているというより、市民の不安を商売に変えている。<br><br>世界終了反対同盟 <br>ユグドラTRPG用NPC立ち絵。<br>「世界の終末はグングニルや権力者が隠している」と主張する陰謀論デモ団体「世界終了反対同盟」の活動家。<br>終末論を恐怖と怒りに変え、デモや抗議行動を先導する市民運動家。<br><br>最後の日互助会 構成員<br>終末論に便乗して、市民に遺書作成、財産整理、個人情報登録、最後の連絡先リスト作成を勧める団体「最後の日互助会」の職員。<br>表向きは親切な終活支援。実態は個人情報と財産を吸い上げる危険な互助会。<br><br>エスケープ・アーク 構成員<br>「選ばれた者だけが終末から逃れられる避難区画」を売るシェルター商法団体「エスケープ・アーク」の勧誘員。<br>終末論を利用し、高額な避難権や会員資格を売りつける上品な詐欺師。<br><br>終末観測サロン 構成員<br>終末論をオカルト研究や疑似科学として扱う知識人風サークル「終末観測サロン」の会員。<br>予言、異能、統計、都市伝説を分析しているつもりだが、実態は終末論に取り憑かれた半端な研究者・評論家。</div>
+    <div class="message-time">61: 2026/7/15(水) 10:12:00</div>
+  </div>
+</article><div class="elapsed"><span>1日 9時間 42分 経過</span></div>
+<article class="message" id="res62">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=iaf860c6f" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=iaf860c6f" width="290" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=iaf860c6f">📎 ChatGPT Image 2026年7月16日 19_48_53.png</a> <span class="filesize">[1.2 MB, 1003x564px]</span> を追加しました。</div>
+    <div class="message-time">62: 2026/7/16(木) 19:54:52</div>
+  </div>
+</article>
+<article class="message" id="res63">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"># 『終末は明日に延期されました。』序盤の流れ<br><br>## 1. 導入：YDFからの依頼<br><br>ここ最近、ユグドラシル内で終末論が流行している。<br><br>「数日以内に世界が滅ぶ」<br>「次の週末で終わる」<br>「グングニルは真実を隠している」<br>「最後まで悔いなく生きろ」<br><br>そういった言説がネット、路上演説、デモ、配信、怪しい市民団体を通じて広がっている。<br><br>その影響で、暴動、自棄的犯罪、デモ、詐欺、集団騒動が増加。<br>YDFは現場対応に追われているが、終末論に関わる団体や発信者が多すぎて、どれが火元なのか整理できていない。<br><br>PCたちはYDFの一隊員から、通常の手続きでは対応しきれない案件として調査を依頼される。<br><br>依頼内容は、<br><br>* 終末論騒動の中心を突き止める<br>* 暴動やデモを煽っている勢力を調べる<br>* 可能なら騒動そのものを沈静化する<br><br>この時点でYDFは、**大団円実行委員会が本命だとは知らない**。<br>「終末論関係の連中が多すぎる。現場を見て切り分けてほしい」くらいの認識に留める。<br><br>---<br><br>## 2. 初期調査：終末論が乱立していると分かる<br><br>PCがネット調査、YDF資料確認、聞き込み、暴動現場調査などを行うと、まず分かるのはこれ。<br><br>**終末論は一枚岩ではない。**<br><br>複数の団体や個人が、それぞれ勝手に終末論を利用している。<br><br>例：<br><br>* **終末安心センター**<br> &nbsp;防災用品や避難グッズを売る終末商法。<br><br>* **世界終了反対同盟**<br> &nbsp;グングニルが終末を隠していると主張する陰謀論デモ団体。<br><br>* **最後の日互助会**<br> &nbsp;遺書、財産整理、連絡先整理を名目に個人情報を集める団体。<br><br>* **エスケープ・アーク**<br> &nbsp;「選ばれた者だけが助かる避難区画」を売るシェルター商法。<br><br>* **ニコニコ終末チャンネル**<br> &nbsp;終末論を面白がって拡散する迷惑配信者。<br><br>* **本日解放戦線**<br> &nbsp;「どうせ終わるなら我慢をやめろ」と暴走する過激派。<br><br>* **大団円実行委員会**<br> &nbsp;「終わりまで悔いなく生き切れ」と呼びかける市民活動団体。<br><br>ここでは、大団円実行委員会はあくまで候補の一つ。<br>むしろ暴力を直接煽っていない分、最初は比較的まともそうに見えてもいい。<br><br>---<br><br>## 3. 現場イベント：終末論による混乱<br><br>調査中、PCたちは終末論に影響された騒動に遭遇する。<br><br>場所は、中層の駅前広場、商店街、YDF庁舎前、工業地帯付近など。<br><br>起きていることは、単なる暴動だけではない。<br><br>* 終末商法に群がる市民<br>* グングニルへの抗議デモ<br>* 配信者が騒動を煽る<br>* 暴徒が店を襲う<br>* 「最後だから」と告白や復讐や破壊に走る市民<br>* 怯える市民へ声をかける大団円実行委員<br><br>ここで重要なのは、混乱の方向がバラバラなこと。<br><br>ある者は恐怖で暴れる。<br>ある者は陰謀論に怒る。<br>ある者は金儲けに走る。<br>ある者は欲望を解放する。<br>ある者は笑顔で「やり残すな」と言う。<br><br>街全体が、終末論をそれぞれ都合よく解釈している。<br><br>---<br><br>## 4. 調査の中で見えてくる違和感<br><br>PLが各団体や証言を追ううちに、少しずつ違和感が出る。<br><br>最初は、終末の日付が人によって食い違っているように見える。<br><br>「明日だ」<br>「三日後だ」<br>「週末だ」<br>「いや、更新された」<br>「また延びた」<br>「今度こそ本当だ」<br><br>だが、複数の情報を並べると、単なる食い違いではなく、**日付が更新されている**ように見える。<br><br>さらに、各団体の主張はバラバラなのに、あるタイミングから一斉に同じ終末予定日を使い始めている。<br><br>ここでPLが気づくべき構造は、<br><br>**終末論団体が多すぎるのではなく、どこかに“更新元”がある。<br>他の団体は、それを後追いで利用している。**<br><br>ということ。<br><br>---<br><br>## 5. 大団円実行委員会が浮上する<br><br>PCが時系列や証言を追うと、大団円実行委員会の周辺が妙に早いことが分かる。<br><br>たとえば、<br><br>* 終末安心センターは、大団円の発表後に商品宣伝を更新している<br>* ニコニコ終末チャンネルは、大団円関係者の発言を切り抜いている<br>* 世界終了反対同盟は、大団円の予言を「グングニル隠蔽の証拠」として使っている<br>* 暴徒の中に、大団円のしおりを持っている者がいる<br>* 大団円の小集会では、ネットに出る前の終末予定日が語られている<br><br>ここで大団円実行委員会が、乱立する終末論団体の一つではなく、**予言更新の一次ソースに近い存在**だと分かる。<br><br>ただし、彼らは表向きには暴力を命令していない。<br><br>大団円実行委員会の思想は、<br><br>「終わりが来るなら、我慢するな」<br>「欲望も未練も怒りも愛情も、全部出し切れ」<br>「やり残すな」<br>「最後まで自分の人生を燃やし切れ」<br><br>というもの。<br><br>これが、受け取る側によっては救いになり、別の者には暴動の燃料になる。<br><br>---<br><br>## 6. 大団円実行委員会への接触<br><br>PCは大団円実行委員会の活動場所へ向かう。<br><br>候補は、<br><br>* 路上演説<br>* しおり配布所<br>* 小集会<br>* 貸しホール<br>* 廃ビルのイベント会場<br>* 工業地帯近くの倉庫<br>* 終末不安相談会<br><br>雰囲気は、邪教儀式というより、文化祭実行委員会、自己啓発セミナー、市民活動、路上運動の混合。<br><br>信者たちは白や淡色のスタッフベスト、腕章、名札、しおり、チェックリスト、拡声器などを持つ。<br>彼らは笑顔で、人々に「悔いなくやりきれ」と語る。<br><br>優しい救済ではない。<br>むしろ、抑圧されていたものに火をつける。<br><br>---<br><br>## 7. 小集会・信者との対立<br><br>PCが集会に潜入、質問、説得、妨害、拘束などを行うと、信者たちと対立する可能性がある。<br><br>信者たちは、暴力団や軍人ではない。<br>多くは普通の市民。<br>だが、サトリの予言と大団円思想に強く染まっている。<br><br>彼らの主張はこう。<br><br>* 終末を知らずに終わる方が残酷だ<br>* 怯えて動けないまま終わるより、全部やりきるべきだ<br>* 我慢や後悔を抱えたまま死ぬな<br>* サトリは嘘をついていない<br>* 終わりは本当に来る<br>* だから大団円の準備が必要だ<br><br>ここで戦闘になってもいいし、交渉でサトリへの接触に進んでもいい。<br><br>---<br><br>## 8. サトリへの到達<br><br>信者の奥にいるのがサトリ。<br><br>サトリは大団円実行委員会の中心人物であり、終末予定日を語っている存在。<br>彼は単に人を騙しているのではなく、本当に未来を見ている。<br><br>サトリの能力は、未来を読み取ること。<br>そして、その予知を他者に伝えると、聞いた者はその情報に強い信憑性を抱く。<br><br>だから終末論は異常に広まった。<br>ただし、直接聞いた者ほど強く信じ、伝聞やネット越しでは弱まる。<br><br>ここでPCは、サトリと対話する。<br><br>サトリは破滅を望んでいるというより、終末を避けられないものとして受け入れ、その前に人々を「生き切らせよう」としている。<br><br>---<br><br>## 9. サトリ戦・前半の山場<br><br>PCがサトリを止めようとすると、サトリと信者たちとの戦闘になる。<br><br>この戦闘の意味は、「悪の教祖を倒す」ではなく、<br>**終末論の拡散源を止める**こと。<br><br>サトリは戦闘後、または撃破寸前に、重要な情報を残す。<br><br>* 自分は本当に終末を見ていた<br>* 終末予定日が変わるのは、誰かが終末を延期しているように見えたから<br>* 終末の中心は、ゴミ捨て場のような場所<br>* 一人の男を中心に、世界が虚無に飲まれていく<br>* 自分の思想は、ある人物との接触で強められた<br><br>ここで前半の調査は終わる。<br><br>---<br><br>## 10. 序盤から前半終了時点での反転<br><br>序盤の目的は、<br><br>**終末論騒動の中心を探すこと。**<br><br>だがサトリ撃破後に、シナリオの見え方が変わる。<br><br>終末論はただのデマではなかった。<br>サトリは嘘をついていなかった。<br>問題は、終末論そのものではなく、実際に終末を起こす何かが存在すること。<br><br>ここから後半の目的は、<br><br>**ゴミ処理場にいる“虚無の中心の男”を探すこと。**<br><br>つまり、ミロクへ向かう流れになる。</div>
+    <div class="message-time">63: 2026/7/16(木) 20:28:29</div>
+  </div>
+</article><div class="elapsed"><span>1日 1時間 20分 経過</span></div>
+<article class="message" id="res64">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">久保田旭FjX8UIjE20<wbr>26/7/17 21:47<br>「実はあの終末論って本当で、毎回世界は滅んでるんだけど、<br>　そのたびに私が一瞬で全部修復させてるのよね」と言いつつ行為発動します＠<br><br>惜しくて草</div>
+    <div class="message-time">64: 2026/7/17(金) 21:49:27</div>
+  </div>
+</article><div class="elapsed"><span>4日 3時間 2分 経過</span></div>
+<article class="message" id="res65">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ほぼGPTに相談して作ったからこっちはあんまり書いてないな、決まったこと投げたりしてるだけ</div>
+    <div class="message-time">65: 2026/7/22(水) 0:52:18</div>
+  </div>
+</article>
+<article class="message" id="res66">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">投げてないのも多いし</div>
+    <div class="message-time">66: 2026/7/22(水) 0:52:26</div>
+  </div>
+</article>
+<article class="message" id="res67">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=i48132f67" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=i48132f67" width="270" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i48132f67">📎 スクリーンショット 2026-07-22 005925.png</a> <span class="filesize">[1.6 MB, 1258x758px]</span> を追加しました。</div>
+    <div class="message-time">67: 2026/7/22(水) 1:00:13</div>
+  </div>
+</article>
+<article class="message" id="res68">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">月見さんはヤンキーみたいな想定だったけど割と真っ当な人間として動いてくれた感あるな<br>私刑アリ派だけど</div>
+    <div class="message-time">68: 2026/7/22(水) 1:07:37</div>
+  </div>
+</article>
+<article class="message" id="res69">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">わりとAIっぽいシナリオだなとは思っていた<br>自分が普段Chatgptにシナリオ案投げてそれ見てるからですけど</div>
+    <div class="message-time">69: 2026/7/22(水) 1:10:11</div>
+  </div>
+</article>
+<article class="message" id="res70">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i1fbf2792">📎 SAVOキリ終末論.zip</a> <span class="filesize">[10.9 MB]</span> を追加しました。</div>
+    <div class="message-time">70: 2026/7/22(水) 1:12:03</div>
+  </div>
+</article>
+<article class="message" id="res71">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">話の構造だけ決めて細部の設定とかをGPTに任せてるとこが多かったからそうかも</div>
+    <div class="message-time">71: 2026/7/22(水) 1:12:59</div>
+  </div>
+</article>
+<article class="message" id="res72">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">GPTがシナリオ作りにマジで便利</div>
+    <div class="message-time">72: 2026/7/22(水) 1:15:16</div>
+  </div>
+</article>
+<article class="message" id="res73">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">背景とかNPC画像とかそれっぽいのをすぐ用意してくれるのマジで助かる</div>
+    <div class="message-time">73: 2026/7/22(水) 1:17:09</div>
+  </div>
+</article>
+<article class="message" id="res74">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">数分GMから応答ない時はその場でGPTに画像でっち上げさせてるからです</div>
+    <div class="message-time">74: 2026/7/22(水) 1:17:33</div>
+  </div>
+</article>
+<article class="message" id="res75">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ画像検索して画像引っ張ってきてたのがGPTに変わっただけとも言えるが</div>
+    <div class="message-time">75: 2026/7/22(水) 1:18:08</div>
+  </div>
+</article>
+<article class="message" id="res76">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">AI、自分が興味なくてめんどくせぇって思ってる部分をそれっぽく補完してくれて自分がやりたいところに注力できるようにしてくれるのはかなり助かる</div>
+    <div class="message-time">76: 2026/7/22(水) 1:20:45</div>
+  </div>
+</article><div class="elapsed"><span>17日 20時間 25分 経過</span></div>
+<article class="message" id="res77">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今ようやくログ終えてるんですけどサトリ様と信者の出目弱くないですか？ナメてんの？</div>
+    <div class="message-time">77: 2026/8/8(土) 21:45:48</div>
+  </div>
+</article>
+<article class="message" id="res78">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あと未来を見たいかってこれタローマン…というより岡本太郎つながりだったのか…</div>
+    <div class="message-time">78: 2026/8/8(土) 21:46:19</div>
+  </div>
+</article>
+<article class="message" id="res79">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">へへっ</div>
+    <div class="message-time">79: 2026/8/8(土) 22:48:35</div>
+  </div>
+</article>
+<article class="message" id="res80">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=202607799c4844&amp;i=i95fc21da" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=202607799c4844&amp;i=i95fc21da" width="262" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=202607799c4844&amp;i=i95fc21da">📎 スクリーンショット 2026-08-08 234825.png</a> <span class="filesize">[1.1 MB, 1030x638px]</span> を追加しました。</div>
+    <div class="message-time">80: 2026/8/8(土) 23:48:43</div>
+  </div>
+</article>
+<article class="message" id="res81">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログはお願いしていいんでしょうか？</div>
+    <div class="message-time">81: 2026/8/8(土) 23:49:14</div>
+  </div>
+</article>
+<article class="message" id="res82">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">え？</div>
+    <div class="message-time">82: 2026/8/8(土) 23:49:41</div>
+  </div>
+</article>
+<article class="message" id="res83">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい</div>
+    <div class="message-time">83: 2026/8/8(土) 23:49:42</div>
+  </div>
+</article>
+<article class="message" id="res84">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">神様～</div>
+    <div class="message-time">84: 2026/8/8(土) 23:50:10</div>
+  </div>
+</article>
+<article class="message" id="res85">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">シュゴォォォォォ</div>
+    <div class="message-time">85: 2026/8/8(土) 23:50:19</div>
+  </div>
+</article>
+<article class="message" id="res86">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ</div>
+    <div class="message-time">86: 2026/8/8(土) 23:59:02</div>
+  </div>
+</article>
+<article class="message" id="res87">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">これは半分難癖なんですが、ミロクの表情差分とかあっても良かった気がします！</div>
+    <div class="message-time">87: 2026/8/8(土) 23:59:25</div>
+  </div>
+</article>
+<article class="message" id="res88">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">版権立ち絵ならその文脈で補完できるんだけど、<br>完全にAI絵で差分もないとなんか村人Aを救わされてる感じがあった</div>
+    <div class="message-time">88: 2026/8/9(日) 0:00:52</div>
+  </div>
+</article>
+<article class="message" id="res89">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">重要ＮＰＣ感薄いかったな</div>
+    <div class="message-time">89: 2026/8/9(日) 0:01:02</div>
+  </div>
+</article>
+<article class="message" id="res90">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なるほどね</div>
+    <div class="message-time">90: 2026/8/9(日) 0:01:04</div>
+  </div>
+</article>
+<article class="message" id="res91">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">NPCのグラ切り替えるのめんどくさいんだよな</div>
+    <div class="message-time">91: 2026/8/9(日) 0:01:38</div>
+  </div>
+</article>
+<article class="message" id="res92">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そのへんが甘えの結果です</div>
+    <div class="message-time">92: 2026/8/9(日) 0:02:17</div>
+  </div>
+</article>
+<article class="message" id="res93">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">私は普段この手の言説（立ち絵に力入れるべき）は嫌いなんですが、<br>それはそれとして今回はグラによる文脈の補完みたいな逃げ場もなかったなって感じがします</div>
+    <div class="message-time">93: 2026/8/9(日) 0:02:35</div>
+  </div>
+</article>
+<article class="message" id="res94">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そんなもんに拘ってる暇あったら卓の構造とかNPCの扱い方を凝れって思う派だから</div>
+    <div class="message-time">94: 2026/8/9(日) 0:03:16</div>
+  </div>
+</article>
+<article class="message" id="res95">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">構造主義の悪いところが出た気がします。枝葉を軽視しすぎ</div>
+    <div class="message-time">95: 2026/8/9(日) 0:03:48</div>
+  </div>
+</article>
+<article class="message" id="res96">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なんか前もそんな話あったなと思ったらかつ丼のレビューだわ</div>
+    <div class="message-time">96: 2026/8/9(日) 0:06:36</div>
+  </div>
+</article>
+<article class="message" id="res97">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">私がはむさんの作品を食う上でのアキレス腱なんだろうな</div>
+    <div class="message-time">97: 2026/8/9(日) 0:07:39</div>
+  </div>
+</article>
+<article class="message" id="res98">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">草</div>
+    <div class="message-time">98: 2026/8/9(日) 0:09:51</div>
+  </div>
+</article>
+<article class="message" id="res99">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おあがりよ！</div>
+    <div class="message-time">99: 2026/8/9(日) 0:15:16</div>
+  </div>
+</article>
+<article class="message" id="res100">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">神様～！</div>
+    <div class="message-time">100: 2026/8/9(日) 0:19:02</div>
+  </div>
+</article>
+<article class="message" id="res101">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ウルフ先生の講評、手を抜いてるところにちゃんと手を抜いてるってお叱りが飛んでくる</div>
+    <div class="message-time">101: 2026/8/9(日) 0:19:23</div>
+  </div>
+</article>
+<article class="message" id="res102">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いい環境よね</div>
+    <div class="message-time">102: 2026/8/9(日) 0:20:42</div>
+  </div>
+</article>
+<article class="message" id="res103">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">前もちらっと言ったけど大学時代に他人の作品にケチをつけることを生業にしてた期間があるので……</div>
+    <div class="message-time">103: 2026/8/9(日) 0:36:16</div>
+  </div>
+</article><div class="elapsed"><span>9日 15時間 8分 経過</span></div>
+<article class="message" id="res104">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ここまでの部分でいったんログ化します。</div>
+    <div class="message-time">104: 2026/8/18(火) 15:44:59</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>

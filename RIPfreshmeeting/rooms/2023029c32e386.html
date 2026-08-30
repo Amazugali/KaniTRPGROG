@@ -1,0 +1,2391 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>後悔の迷宮　クリア部屋</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>後悔の迷宮　クリア部屋</h1>
+    <div class="meta">Fresh Meeting archive / room id: 2023029c32e386 / active</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=2023029c32e386"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+</span></div>
+<!-- replay-links:begin -->
+<div class="replay-links-panel" style="margin-top:10px;padding:10px 12px;background:#eef8e8;border-left:4px solid #4b982a;overflow-wrap:anywhere">
+  <strong>セッションログ</strong>
+  <ul style="margin:6px 0 0 1.2em;padding:0">
+    <li><a href="https://amazugali.github.io/KaniTRPGROG/Other/%E5%BE%8C%E6%82%94%E3%81%AE%E8%BF%B7%E5%AE%AE/%E5%BE%8C%E6%82%94%E3%81%AE%E8%BF%B7%E5%AE%AE%2B%E3%83%81%E3%83%92%E3%81%A5%E3%81%91%E3%82%AB%E3%82%B2.html" target="_blank" rel="noopener">チヒづけカゲ</a></li><li><a href="https://amazugali.github.io/KaniTRPGROG/Other/%E5%BE%8C%E6%82%94%E3%81%AE%E8%BF%B7%E5%AE%AE/%E5%BE%8C%E6%82%94%E3%81%AE%E8%BF%B7%E5%AE%AE%E3%82%AD%E3%83%AA%E3%83%A9%E3%83%90SAVO.html" target="_blank" rel="noopener">キリラバSAVO</a></li>
+  </ul>
+</div>
+<!-- replay-links:end -->
+  </div>
+</header>
+<main>
+
+<div class="attachment-warning">
+  このログには Fresh Meeting 上の添付ファイル参照が 13 件あります。
+  HTML本文とは別に添付ファイル本体の保全が必要です。
+</div>
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">うおおおおおお！！！！</div>
+    <div class="message-time">1: 2023/2/18(土) 22:11:48</div>
+  </div>
+</article>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">1番目のコメントは頂いた</div>
+    <div class="message-time">2: 2023/2/18(土) 22:12:01</div>
+  </div>
+</article>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした！</div>
+    <div class="message-time">3: 2023/2/18(土) 22:12:04</div>
+  </div>
+</article>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[後悔の迷宮[all] (1).html] </del></div>
+    <div class="message-time">4: 2023/2/18(土) 22:12:20</div>
+  </div>
+</article>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">全タブ保存出来たんだ</div>
+    <div class="message-time">5: 2023/2/18(土) 22:12:33</div>
+  </div>
+</article>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ファイル名変えたほうがいいな</div>
+    <div class="message-time">6: 2023/2/18(土) 22:12:38</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=2023029c32e386&amp;i=ie50a6fb0">📎 後悔の迷宮キリラバSAVO.html</a> <span class="filesize">[208.0 KB]</span> を追加しました。</div>
+    <div class="message-time">7: 2023/2/18(土) 22:13:11</div>
+  </div>
+</article>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！</div>
+    <div class="message-time">8: 2023/2/18(土) 22:13:24</div>
+  </div>
+</article>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした！</div>
+    <div class="message-time">9: 2023/2/18(土) 22:14:09</div>
+  </div>
+</article>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログありがとうございます！</div>
+    <div class="message-time">10: 2023/2/18(土) 22:14:17</div>
+  </div>
+</article>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">解ける人が出るか気になるのはプレゼントと贈り物の問題</div>
+    <div class="message-time">11: 2023/2/18(土) 22:14:46</div>
+  </div>
+</article>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[画像_2023-02-18_221444752.png] </del></div>
+    <div class="message-time">12: 2023/2/18(土) 22:14:47</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あれヒント3つ貰いましたからね</div>
+    <div class="message-time">13: 2023/2/18(土) 22:15:07</div>
+  </div>
+</article>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=2023029c32e386&amp;i=ib7b31372" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=2023029c32e386&amp;i=ib7b31372" width="119" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=2023029c32e386&amp;i=ib7b31372">📎 2023-02-18.png</a> <span class="filesize">[832.8 KB, 605x840px]</span> を追加しました。</div>
+    <div class="message-time">14: 2023/2/18(土) 22:15:27</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">プレゼントだけダンチで難しかったな……</div>
+    <div class="message-time">15: 2023/2/18(土) 22:15:40</div>
+  </div>
+</article>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ハテナおじこそがラスボスだったかもしれない</div>
+    <div class="message-time">16: 2023/2/18(土) 22:16:11</div>
+  </div>
+</article>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">しばらくこれのリプレイ動画漁りで永遠に時間つぶせるな</div>
+    <div class="message-time">17: 2023/2/18(土) 22:17:27</div>
+  </div>
+</article>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">美野RPのお気に入りは最後に地元民かどうか聞かれてミステリアスに伏せた後、自転車（ママチャリ）で帰っていったどう考えても地元民なところです</div>
+    <div class="message-time">18: 2023/2/18(土) 22:17:53</div>
+  </div>
+</article>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いやあ…楽しかったっすね美野…</div>
+    <div class="message-time">19: 2023/2/18(土) 22:18:13</div>
+  </div>
+</article>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res18">&gt;&gt; 18</a> <br>ツッコめば良かったなあとちょっと思ってるけれどアレはアレで綺麗に終わったので後悔は無い</div>
+    <div class="message-time">20: 2023/2/18(土) 22:18:43</div>
+  </div>
+</article>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">オマケはオンセツール利用するギミックがあったしボイセ用、テキセ用、配信用があるのかな</div>
+    <div class="message-time">21: 2023/2/18(土) 22:20:50</div>
+  </div>
+</article>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">たしかに</div>
+    <div class="message-time">22: 2023/2/18(土) 22:21:53</div>
+  </div>
+</article>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">A面とB面があって、流れ自体は一緒だけど謎が違う<br>A面は配信OKでB面はNG</div>
+    <div class="message-time">23: 2023/2/18(土) 22:21:58</div>
+  </div>
+</article>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">やっぱ謎が違うんだ</div>
+    <div class="message-time">24: 2023/2/18(土) 22:22:19</div>
+  </div>
+</article>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">さすがに両面やることもないと思ったのでB面だけ買いました<br>A面は配信見れば楽しめます</div>
+    <div class="message-time">25: 2023/2/18(土) 22:22:49</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">何が違うんだろう、気になる</div>
+    <div class="message-time">26: 2023/2/18(土) 22:23:37</div>
+  </div>
+</article>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なるほどね</div>
+    <div class="message-time">27: 2023/2/18(土) 22:24:04</div>
+  </div>
+</article><div class="elapsed"><span>4時間 23分 経過</span></div>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">イブだったら正解扱いにしちゃおうっと</div>
+    <div class="message-time">28: 2023/2/19(日) 2:47:41</div>
+  </div>
+</article><div class="elapsed"><span>17時間 7分 経過</span></div>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういえば最後の15分制限についてはどうするつもりですか？<br>やはりテキセだと無茶なのであくまでも目標タイムにする感じで？</div>
+    <div class="message-time">29: 2023/2/19(日) 19:55:03</div>
+  </div>
+</article>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なくてもいいかな……</div>
+    <div class="message-time">30: 2023/2/19(日) 22:26:47</div>
+  </div>
+</article><div class="elapsed"><span>6日 23時間 15分 経過</span></div>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ふと思い出したけど後悔の気持ちが迷宮になってる云々で食糧でなく秘密とか言ったのはネウロネタです。<br>あれネウロが食糧にするエネルギーが悪意に入り込み、自分や宿主を守るために形成した『謎』を解体して食べるという設定なので。</div>
+    <div class="message-time">31: 2023/2/26(日) 21:41:49</div>
+  </div>
+</article>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ほう、１枚ずつ提示する形式にしたのですね</div>
+    <div class="message-time">32: 2023/2/26(日) 21:42:59</div>
+  </div>
+</article>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">提示でなく１問ずつ解く、か</div>
+    <div class="message-time">33: 2023/2/26(日) 21:43:45</div>
+  </div>
+</article>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういやタイトル画面に問題に関係するイラストありましたね。たすきを掛けた女の子とか</div>
+    <div class="message-time">34: 2023/2/26(日) 21:46:42</div>
+  </div>
+</article>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">さて紅白に気がつくかな</div>
+    <div class="message-time">35: 2023/2/26(日) 21:59:04</div>
+  </div>
+</article>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ～自分が既に解いた謎について他人が頭を捻る姿を見るの楽しい～！</div>
+    <div class="message-time">36: 2023/2/26(日) 22:01:59</div>
+  </div>
+</article>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">実際1000＝たいいいなのでNPC的に体育か…？とはなる<br>それを導くまでの閃きで迷う</div>
+    <div class="message-time">37: 2023/2/26(日) 22:11:39</div>
+  </div>
+</article>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">過程すっ飛ばして答え出してて草</div>
+    <div class="message-time">38: 2023/2/26(日) 22:13:02</div>
+  </div>
+</article>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">全員一人称がボク系！？</div>
+    <div class="message-time">39: 2023/2/26(日) 22:14:11</div>
+  </div>
+</article>
+<article class="message" id="res40">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">こうやって見てると仲間に助けられてたなあとつくづく感じる</div>
+    <div class="message-time">40: 2023/2/26(日) 22:15:22</div>
+  </div>
+</article>
+<article class="message" id="res41">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">へっへっへ…迷え迷え…菓子でも食べながら見学させてもらうさ…</div>
+    <div class="message-time">41: 2023/2/26(日) 22:15:55</div>
+  </div>
+</article>
+<article class="message" id="res42">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ギャンブル漫画に出てくる見物者ってこういう気持ちなんだろうなあ～！</div>
+    <div class="message-time">42: 2023/2/26(日) 22:19:05</div>
+  </div>
+</article>
+<article class="message" id="res43">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">答え速攻で導き出してたのに過程に悩んでるの面白いな</div>
+    <div class="message-time">43: 2023/2/26(日) 22:19:08</div>
+  </div>
+</article>
+<article class="message" id="res44">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ギャル文字ｗｗ</div>
+    <div class="message-time">44: 2023/2/26(日) 22:19:56</div>
+  </div>
+</article>
+<article class="message" id="res45">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ここキリさん居たから解けたけどSAVOキリ無しにソロでやれって言われてたら絶対僕解けてないよ</div>
+    <div class="message-time">45: 2023/2/26(日) 22:20:57</div>
+  </div>
+</article>
+<article class="message" id="res46">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">私も後々ソロじゃ出て来ない発想ありましたね…曇天とか最後の科目とか</div>
+    <div class="message-time">46: 2023/2/26(日) 22:24:00</div>
+  </div>
+</article>
+<article class="message" id="res47">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この卓だからとかじゃなくて、謎解き系ソロはやっぱり怖えや</div>
+    <div class="message-time">47: 2023/2/26(日) 22:24:20</div>
+  </div>
+</article>
+<article class="message" id="res48">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お、気付きそう</div>
+    <div class="message-time">48: 2023/2/26(日) 22:27:56</div>
+  </div>
+</article>
+<article class="message" id="res49">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">存在は認知している…さあどうなる</div>
+    <div class="message-time">49: 2023/2/26(日) 22:29:21</div>
+  </div>
+</article>
+<article class="message" id="res50">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">気付きそう気付きそう！！</div>
+    <div class="message-time">50: 2023/2/26(日) 22:30:06</div>
+  </div>
+</article>
+<article class="message" id="res51">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「はち」「いち」まで気づけたらあと少しだ！！</div>
+    <div class="message-time">51: 2023/2/26(日) 22:30:32</div>
+  </div>
+</article>
+<article class="message" id="res52">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">違う！垂直だからこそなんだ！</div>
+    <div class="message-time">52: 2023/2/26(日) 22:31:48</div>
+  </div>
+</article>
+<article class="message" id="res53">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＞泉　善康 - 今日 22:35<br>読むのは左側、ということは、<br>繋げた時に左右が存在する<br><br>そう！！！！！そうなんだよ！！！！</div>
+    <div class="message-time">53: 2023/2/26(日) 22:36:29</div>
+  </div>
+</article>
+<article class="message" id="res54">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">各問題にヒントは3つありますっての言ってもいいかもね</div>
+    <div class="message-time">54: 2023/2/26(日) 22:37:43</div>
+  </div>
+</article>
+<article class="message" id="res55">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">３つ目のヒントは紅白とはズバリこれだ！って教えてくれる感じなのかな</div>
+    <div class="message-time">55: 2023/2/26(日) 22:39:04</div>
+  </div>
+</article>
+<article class="message" id="res56">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">来た！！！！！！！！！！</div>
+    <div class="message-time">56: 2023/2/26(日) 22:39:06</div>
+  </div>
+</article>
+<article class="message" id="res57">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">来た！！！！！！！！！！！！！</div>
+    <div class="message-time">57: 2023/2/26(日) 22:39:08</div>
+  </div>
+</article>
+<article class="message" id="res58">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ウオオオオオ！</div>
+    <div class="message-time">58: 2023/2/26(日) 22:39:26</div>
+  </div>
+</article>
+<article class="message" id="res59">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res55">&gt;&gt; 55</a> <br>たしかに、見てないヒントもありましたね</div>
+    <div class="message-time">59: 2023/2/26(日) 22:39:30</div>
+  </div>
+</article>
+<article class="message" id="res60">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">よっしゃ！！！！！</div>
+    <div class="message-time">60: 2023/2/26(日) 22:40:14</div>
+  </div>
+</article>
+<article class="message" id="res61">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">これはイブどうなるか楽しみだなあ！（正解扱いにはなるけれど）</div>
+    <div class="message-time">61: 2023/2/26(日) 22:41:27</div>
+  </div>
+</article>
+<article class="message" id="res62">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カゲさんは「8」「1」まで気付いてたから惜しかったね</div>
+    <div class="message-time">62: 2023/2/26(日) 22:42:01</div>
+  </div>
+</article>
+<article class="message" id="res63">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＞泉　善康 - 今日 22:41<br>答えが分かってから答案にたどり着くまで長かった<br><br>答えが秒過ぎる</div>
+    <div class="message-time">63: 2023/2/26(日) 22:42:25</div>
+  </div>
+</article>
+<article class="message" id="res64">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＞蒲生 真昼 - 今日 22:42<br>後悔が生まれてて草<br><br>草</div>
+    <div class="message-time">64: 2023/2/26(日) 22:42:48</div>
+  </div>
+</article>
+<article class="message" id="res65">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">流石後悔の悪魔だぜ…</div>
+    <div class="message-time">65: 2023/2/26(日) 22:43:03</div>
+  </div>
+</article>
+<article class="message" id="res66">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＞剣 ジュン - 今日 22:44<br>あぶねえその程度で？とか体育会うざいって言おうとした<br>＞蒲生 真昼 - 今日 22:44<br>たいいくが嫌いそうなやつしかフィールドに存在しねえ！！！！<br><br>励ませつってんだろｗｗｗｗｗ</div>
+    <div class="message-time">66: 2023/2/26(日) 22:44:48</div>
+  </div>
+</article>
+<article class="message" id="res67">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">これマジで励ます気皆無だと逆にランが怒って「うるせえ俺は振り切ったぜ！」ってなるかもしれない</div>
+    <div class="message-time">67: 2023/2/26(日) 22:45:57</div>
+  </div>
+</article>
+<article class="message" id="res68">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">逆に脳筋ばっかりのパーティだったらどうなるか気になるな…<br>有名な「脳みそが筋肉、全身の筋肉が脳みそなので俺は頭がいい」理論の使い手ばっかで</div>
+    <div class="message-time">68: 2023/2/26(日) 22:47:06</div>
+  </div>
+</article>
+<article class="message" id="res69">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res67">&gt;&gt; 67</a> <br>それは確かにあるかも！</div>
+    <div class="message-time">69: 2023/2/26(日) 22:47:54</div>
+  </div>
+</article>
+<article class="message" id="res70">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">前回と励まし方が違う、こういうパターンもあるのか</div>
+    <div class="message-time">70: 2023/2/26(日) 22:48:06</div>
+  </div>
+</article>
+<article class="message" id="res71">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res68">&gt;&gt; 68</a> <br>大丈夫？「この問題は…こうじゃあああ！！！！！」って紙破って「解けた！」とか言わない？</div>
+    <div class="message-time">71: 2023/2/26(日) 22:48:47</div>
+  </div>
+</article>
+<article class="message" id="res72">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「ABC…これは間違いなく英語の問題じゃのう！」<br>「なあに勉強など大の得意じゃったわい！特に体育がのう！つまりこの紙を細く絞ってはちまきとたすきのどちらになるか調べろということじゃ！」<br>「ならワシはこの問題を解くとするか！つまり走れば解けるということじゃな！うははははは！」<br>「ぬう！ABCの他に＝まであるぞ！英語と数学の合せ技とはまるで大学受験じゃ！」</div>
+    <div class="message-time">72: 2023/2/26(日) 22:51:33</div>
+  </div>
+</article>
+<article class="message" id="res73">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はちまきとたすきまでは辿り着いたのかよｗｗｗｗ</div>
+    <div class="message-time">73: 2023/2/26(日) 22:52:19</div>
+  </div>
+</article>
+<article class="message" id="res74">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まるで大学受験じゃ！じゃないよ！！！！</div>
+    <div class="message-time">74: 2023/2/26(日) 22:52:39</div>
+  </div>
+</article>
+<article class="message" id="res75">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=2023029c32e386&amp;i=if594d851" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=2023029c32e386&amp;i=if594d851" width="138" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=2023029c32e386&amp;i=if594d851">📎 original_.jpg</a> <span class="filesize">[134.1 KB, 569x680px]</span> を追加しました。</div>
+    <div class="message-time">75: 2023/2/26(日) 22:52:46</div>
+  </div>
+</article>
+<article class="message" id="res76">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それ</div>
+    <div class="message-time">76: 2023/2/26(日) 22:53:11</div>
+  </div>
+</article>
+<article class="message" id="res77">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">男塾のメンツで行く後悔の迷宮、絶対ロクなことにならない</div>
+    <div class="message-time">77: 2023/2/26(日) 22:54:44</div>
+  </div>
+</article>
+<article class="message" id="res78">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">後悔の悪魔が「さっさと出ていってくれ…」ってなる奴</div>
+    <div class="message-time">78: 2023/2/26(日) 22:55:20</div>
+  </div>
+</article>
+<article class="message" id="res79">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">後悔解消トライスクアッド！？</div>
+    <div class="message-time">79: 2023/2/26(日) 22:56:02</div>
+  </div>
+</article>
+<article class="message" id="res80">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">スクワッド！</div>
+    <div class="message-time">80: 2023/2/26(日) 22:56:10</div>
+  </div>
+</article>
+<article class="message" id="res81">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どうでもいいことなんだけどみやぴ見た時「最近よく話題になるぼっちちゃんってキャラだ…」って思いました</div>
+    <div class="message-time">81: 2023/2/26(日) 22:56:17</div>
+  </div>
+</article>
+<article class="message" id="res82">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちがーう！！<br>いや僕もぼっち未視聴だから詳しくないけれど多分ちがーう！！！！</div>
+    <div class="message-time">82: 2023/2/26(日) 22:56:50</div>
+  </div>
+</article>
+<article class="message" id="res83">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">同じこと思ってる人が会場にも！！</div>
+    <div class="message-time">83: 2023/2/26(日) 22:57:15</div>
+  </div>
+</article>
+<article class="message" id="res84">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ひどくて草</div>
+    <div class="message-time">84: 2023/2/26(日) 22:58:28</div>
+  </div>
+</article>
+<article class="message" id="res85">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いい名前とか言えよ！！</div>
+    <div class="message-time">85: 2023/2/26(日) 22:58:42</div>
+  </div>
+</article>
+<article class="message" id="res86">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、みやびじゃなかったんだ</div>
+    <div class="message-time">86: 2023/2/26(日) 22:59:22</div>
+  </div>
+</article>
+<article class="message" id="res87">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今気づいた</div>
+    <div class="message-time">87: 2023/2/26(日) 22:59:24</div>
+  </div>
+</article>
+<article class="message" id="res88">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">みやぴ～</div>
+    <div class="message-time">88: 2023/2/26(日) 22:59:36</div>
+  </div>
+</article>
+<article class="message" id="res89">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">もやが耐えきれず出てきて草</div>
+    <div class="message-time">89: 2023/2/26(日) 23:00:42</div>
+  </div>
+</article>
+<article class="message" id="res90">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">後悔が膨らんだ</div>
+    <div class="message-time">90: 2023/2/26(日) 23:01:07</div>
+  </div>
+</article>
+<article class="message" id="res91">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お、黒板ギミックに気がついてる</div>
+    <div class="message-time">91: 2023/2/26(日) 23:02:24</div>
+  </div>
+</article>
+<article class="message" id="res92">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">最終問題なんとかなりそう</div>
+    <div class="message-time">92: 2023/2/26(日) 23:02:31</div>
+  </div>
+</article>
+<article class="message" id="res93">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">1回目のパーティって平和だったんだな（）</div>
+    <div class="message-time">93: 2023/2/26(日) 23:03:38</div>
+  </div>
+</article>
+<article class="message" id="res94">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">Q3、二回目なのに数秒悩んでた</div>
+    <div class="message-time">94: 2023/2/26(日) 23:04:45</div>
+  </div>
+</article>
+<article class="message" id="res95">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">視覚のマジックに踊らされた…</div>
+    <div class="message-time">95: 2023/2/26(日) 23:04:54</div>
+  </div>
+</article>
+<article class="message" id="res96">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なぜ全員コミュ障でくるのか</div>
+    <div class="message-time">96: 2023/2/26(日) 23:05:08</div>
+  </div>
+</article>
+<article class="message" id="res97">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">家系図まで来たら行けそう</div>
+    <div class="message-time">97: 2023/2/26(日) 23:06:14</div>
+  </div>
+</article>
+<article class="message" id="res98">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「なんとなく理科っぽい？」発言もこの後役に立つねえ～～</div>
+    <div class="message-time">98: 2023/2/26(日) 23:06:45</div>
+  </div>
+</article>
+<article class="message" id="res99">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">よく出来てる</div>
+    <div class="message-time">99: 2023/2/26(日) 23:06:48</div>
+  </div>
+</article>
+<article class="message" id="res100">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">これは来るぞ</div>
+    <div class="message-time">100: 2023/2/26(日) 23:07:58</div>
+  </div>
+</article>
+<article class="message" id="res101">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">やさしい悪魔で草</div>
+    <div class="message-time">101: 2023/2/26(日) 23:08:13</div>
+  </div>
+</article>
+<article class="message" id="res102">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">Q3は閃きが必要なタイプでしたね…下手すれば沼る</div>
+    <div class="message-time">102: 2023/2/26(日) 23:08:22</div>
+  </div>
+</article>
+<article class="message" id="res103">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">これも自ら気付いたはずの視点から他人が解き自分が解けなかったという後悔を植え付けるため…</div>
+    <div class="message-time">103: 2023/2/26(日) 23:08:54</div>
+  </div>
+</article>
+<article class="message" id="res104">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">RPあんま挟まないね</div>
+    <div class="message-time">104: 2023/2/26(日) 23:09:36</div>
+  </div>
+</article>
+<article class="message" id="res105">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">家系図と王冠に気がついたらもう少し…もう少しだ…</div>
+    <div class="message-time">105: 2023/2/26(日) 23:09:45</div>
+  </div>
+</article>
+<article class="message" id="res106">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">RPの割合ってPLごとの傾向が出やすい部分ですしね</div>
+    <div class="message-time">106: 2023/2/26(日) 23:10:21</div>
+  </div>
+</article>
+<article class="message" id="res107">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">王冠と家系図と同じ文字まで気がついてるんだ！色にも気がついてくれー！</div>
+    <div class="message-time">107: 2023/2/26(日) 23:10:30</div>
+  </div>
+</article>
+<article class="message" id="res108">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">家系図出てるから色には気がついてるか？</div>
+    <div class="message-time">108: 2023/2/26(日) 23:10:49</div>
+  </div>
+</article>
+<article class="message" id="res109">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">出た！！！！！！</div>
+    <div class="message-time">109: 2023/2/26(日) 23:11:04</div>
+  </div>
+</article>
+<article class="message" id="res110">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">チヒロさん知識が豊富すぎて深読みしやすい感じやな</div>
+    <div class="message-time">110: 2023/2/26(日) 23:11:06</div>
+  </div>
+</article>
+<article class="message" id="res111">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">沼ると抜け出にくいタイプなんですかね</div>
+    <div class="message-time">111: 2023/2/26(日) 23:11:41</div>
+  </div>
+</article>
+<article class="message" id="res112">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">PCも相まって天才ゆえの長考感あって好き</div>
+    <div class="message-time">112: 2023/2/26(日) 23:11:44</div>
+  </div>
+</article>
+<article class="message" id="res113">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">凡人の考える問題はDr.wellには解読に時間がかかるんだ</div>
+    <div class="message-time">113: 2023/2/26(日) 23:12:34</div>
+  </div>
+</article>
+<article class="message" id="res114">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">曇天一瞬で出てる！？</div>
+    <div class="message-time">114: 2023/2/26(日) 23:12:56</div>
+  </div>
+</article>
+<article class="message" id="res115">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はっや！？</div>
+    <div class="message-time">115: 2023/2/26(日) 23:13:09</div>
+  </div>
+</article>
+<article class="message" id="res116">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">沼らなかった時が早すぎる</div>
+    <div class="message-time">116: 2023/2/26(日) 23:13:22</div>
+  </div>
+</article>
+<article class="message" id="res117">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">さーーて</div>
+    <div class="message-time">117: 2023/2/26(日) 23:13:52</div>
+  </div>
+</article>
+<article class="message" id="res118">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">○口イ口さんの登場だ</div>
+    <div class="message-time">118: 2023/2/26(日) 23:14:10</div>
+  </div>
+</article>
+<article class="message" id="res119">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">！！！！！！！！！！！！</div>
+    <div class="message-time">119: 2023/2/26(日) 23:15:18</div>
+  </div>
+</article>
+<article class="message" id="res120">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はえーよ！！！！！！！</div>
+    <div class="message-time">120: 2023/2/26(日) 23:15:21</div>
+  </div>
+</article>
+<article class="message" id="res121">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">□じゃなくてちゃんと文字っぽいフォントになってる辺り親切</div>
+    <div class="message-time">121: 2023/2/26(日) 23:15:23</div>
+  </div>
+</article>
+<article class="message" id="res122">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">…いや！まだ解けてない！！まだ◯ロイロさんは負けてない！！</div>
+    <div class="message-time">122: 2023/2/26(日) 23:16:07</div>
+  </div>
+</article>
+<article class="message" id="res123">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">四角形ではなく文字と見たか</div>
+    <div class="message-time">123: 2023/2/26(日) 23:16:11</div>
+  </div>
+</article>
+<article class="message" id="res124">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だいぶ◯ロイロさんが押されてる</div>
+    <div class="message-time">124: 2023/2/26(日) 23:16:54</div>
+  </div>
+</article>
+<article class="message" id="res125">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">イロロローム！？</div>
+    <div class="message-time">125: 2023/2/26(日) 23:17:47</div>
+  </div>
+</article>
+<article class="message" id="res126">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ブロロロロロロロロローム</div>
+    <div class="message-time">126: 2023/2/26(日) 23:17:53</div>
+  </div>
+</article>
+<article class="message" id="res127">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おっと人偏で沼り掛けてる。気持ちはわかる。</div>
+    <div class="message-time">127: 2023/2/26(日) 23:18:02</div>
+  </div>
+</article>
+<article class="message" id="res128">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">よっしゃ沼った！！！（ギャンブル漫画に出てくる見物者の気分を味合う）</div>
+    <div class="message-time">128: 2023/2/26(日) 23:18:43</div>
+  </div>
+</article>
+<article class="message" id="res129">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ククク…もめろもめろ</div>
+    <div class="message-time">129: 2023/2/26(日) 23:19:20</div>
+  </div>
+</article>
+<article class="message" id="res130">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">23時から約束あるのにすっぽかして見学してて草</div>
+    <div class="message-time">130: 2023/2/26(日) 23:20:35</div>
+  </div>
+</article>
+<article class="message" id="res131">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">行ってきます！！！！</div>
+    <div class="message-time">131: 2023/2/26(日) 23:20:39</div>
+  </div>
+</article>
+<article class="message" id="res132">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">しかくとロのミスリードから抜け出さないとダメなのなかなか難しい</div>
+    <div class="message-time">132: 2023/2/26(日) 23:22:35</div>
+  </div>
+</article>
+<article class="message" id="res133">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アアーッ！ランが体育関連の問題を並べた事によって想定外のミスリードを食らってる！</div>
+    <div class="message-time">133: 2023/2/26(日) 23:23:40</div>
+  </div>
+</article>
+<article class="message" id="res134">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">答え出とる！！！！！！！！！！！</div>
+    <div class="message-time">134: 2023/2/26(日) 23:25:32</div>
+  </div>
+</article>
+<article class="message" id="res135">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ややこしい答えの出し方しよってからに</div>
+    <div class="message-time">135: 2023/2/26(日) 23:25:36</div>
+  </div>
+</article>
+<article class="message" id="res136">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">クロイロを先に言ってるあたり理由はわかってないな</div>
+    <div class="message-time">136: 2023/2/26(日) 23:26:26</div>
+  </div>
+</article>
+<article class="message" id="res137">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おっ、気が付いた</div>
+    <div class="message-time">137: 2023/2/26(日) 23:29:45</div>
+  </div>
+</article>
+<article class="message" id="res138">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＞ずっと漢字を書き連ねていた<br>自分もそうだったけどやっぱ「こういうことかな？」って考えに囚われると沼るんですよね</div>
+    <div class="message-time">138: 2023/2/26(日) 23:33:17</div>
+  </div>
+</article>
+<article class="message" id="res139">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">これさぁ、「こたえは」じゃなくて「ラストアンサー」になってんだよね</div>
+    <div class="message-time">139: 2023/2/26(日) 23:37:20</div>
+  </div>
+</article>
+<article class="message" id="res140">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ああ～！ヒントなのか！</div>
+    <div class="message-time">140: 2023/2/26(日) 23:37:35</div>
+  </div>
+</article>
+<article class="message" id="res141">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">訳せと！</div>
+    <div class="message-time">141: 2023/2/26(日) 23:37:41</div>
+  </div>
+</article>
+<article class="message" id="res142">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちゃんとヒントはあった</div>
+    <div class="message-time">142: 2023/2/26(日) 23:37:46</div>
+  </div>
+</article>
+<article class="message" id="res143">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ノートの罫線は私も何かあるのかと悩んだなあ</div>
+    <div class="message-time">143: 2023/2/26(日) 23:47:19</div>
+  </div>
+</article>
+<article class="message" id="res144">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ヒント２つは今までの答えだよ～っていうのと濁点に注目してね～ってことかな</div>
+    <div class="message-time">144: 2023/2/26(日) 23:50:58</div>
+  </div>
+</article>
+<article class="message" id="res145">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">緑色になってる部分があるよってこと</div>
+    <div class="message-time">145: 2023/2/26(日) 23:53:08</div>
+  </div>
+</article>
+<article class="message" id="res146">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そっちも出すべきだったか……？</div>
+    <div class="message-time">146: 2023/2/26(日) 23:53:25</div>
+  </div>
+</article>
+<article class="message" id="res147">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=2023029c32e386&amp;i=ifad813cf" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=2023029c32e386&amp;i=ifad813cf" width="190" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=2023029c32e386&amp;i=ifad813cf">📎 クリア済の卓を見学している時.JPG</a> <span class="filesize">[138.2 KB, 597x513px]</span> を追加しました。</div>
+    <div class="message-time">147: 2023/2/26(日) 23:56:09</div>
+  </div>
+</article><div class="elapsed"><span>1日 21時間 26分 経過</span></div>
+<article class="message" id="res148">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">さあて今宵も迷宮に挑む者たちが苦しむ姿を見せてもらうとしようか…（グラスに牛乳を注ぎながら）</div>
+    <div class="message-time">148: 2023/2/28(火) 21:22:34</div>
+  </div>
+</article>
+<article class="message" id="res149">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あら、仰向けを候補から外しちゃった<br>問題自体は面白いけどイラストから連想できる言葉が多すぎるな…</div>
+    <div class="message-time">149: 2023/2/28(火) 21:31:06</div>
+  </div>
+</article>
+<article class="message" id="res150">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">さあて、このQ3はマジでわからなかった問題だけど果たして解けるか</div>
+    <div class="message-time">150: 2023/2/28(火) 21:33:07</div>
+  </div>
+</article>
+<article class="message" id="res151">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">紫１ふ　２れ　３せ　４ん　５と<br>赤１ふ　２？　３？　４ん　５？<br>青１？　２？　３り　４？　５？<br><br>これスゴイな　かなり真実に迫っている</div>
+    <div class="message-time">151: 2023/2/28(火) 21:40:50</div>
+  </div>
+</article>
+<article class="message" id="res152">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">赤と青の関係性に気がつけるかなー</div>
+    <div class="message-time">152: 2023/2/28(火) 21:42:14</div>
+  </div>
+</article>
+<article class="message" id="res153">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">赤と青が別々の読みを表してるって自力で見抜くのはやはり難しいな…</div>
+    <div class="message-time">153: 2023/2/28(火) 21:50:34</div>
+  </div>
+</article>
+<article class="message" id="res154">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あっ、リボンに気が付いた</div>
+    <div class="message-time">154: 2023/2/28(火) 21:55:04</div>
+  </div>
+</article>
+<article class="message" id="res155">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">回せたのか！！！！</div>
+    <div class="message-time">155: 2023/2/28(火) 21:56:34</div>
+  </div>
+</article>
+<article class="message" id="res156">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あー！だから問題文後付なんだ！回転に巻き込まないために！！</div>
+    <div class="message-time">156: 2023/2/28(火) 21:57:02</div>
+  </div>
+</article>
+<article class="message" id="res157">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">これQ4の答えがQ3→Q2→Q1の順番なのも逆にしろというヒントの１つだったりするのかな</div>
+    <div class="message-time">157: 2023/2/28(火) 21:58:18</div>
+  </div>
+</article>
+<article class="message" id="res158">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ハテナが彼女持ちだったことにショック受けてるの笑う</div>
+    <div class="message-time">158: 2023/2/28(火) 22:00:21</div>
+  </div>
+</article>
+<article class="message" id="res159">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">加減乗除はっや！？</div>
+    <div class="message-time">159: 2023/2/28(火) 22:21:25</div>
+  </div>
+</article>
+<article class="message" id="res160">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">５、６分で解いてる！！！！</div>
+    <div class="message-time">160: 2023/2/28(火) 22:22:35</div>
+  </div>
+</article>
+<article class="message" id="res161">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">我々RPしてたから時間かかったね</div>
+    <div class="message-time">161: 2023/2/28(火) 22:24:00</div>
+  </div>
+</article>
+<article class="message" id="res162">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はっやぁい！！！</div>
+    <div class="message-time">162: 2023/2/28(火) 22:28:00</div>
+  </div>
+</article>
+<article class="message" id="res163">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カード回転させたしオマケもパッと解けそう</div>
+    <div class="message-time">163: 2023/2/28(火) 22:42:05</div>
+  </div>
+</article>
+<article class="message" id="res164">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした！</div>
+    <div class="message-time">164: 2023/2/28(火) 22:51:07</div>
+  </div>
+</article>
+<article class="message" id="res165">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=2023029c32e386&amp;i=ibe2dc8d7" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=2023029c32e386&amp;i=ibe2dc8d7" width="117" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=2023029c32e386&amp;i=ibe2dc8d7">📎 2023-02-28.png</a> <span class="filesize">[1.0 MB, 668x940px]</span> を追加しました。</div>
+    <div class="message-time">165: 2023/2/28(火) 22:53:18</div>
+  </div>
+</article>
+<article class="message" id="res166">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした！</div>
+    <div class="message-time">166: 2023/2/28(火) 22:53:52</div>
+  </div>
+</article>
+<article class="message" id="res167">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした！うえぇえい！</div>
+    <div class="message-time">167: 2023/2/28(火) 22:53:55</div>
+  </div>
+</article>
+<article class="message" id="res168">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=2023029c32e386&amp;i=if509c9b8">📎 後悔の迷宮 チヒづけカゲ.html</a> <span class="filesize">[195.5 KB]</span> を追加しました。</div>
+    <div class="message-time">168: 2023/2/28(火) 22:54:46</div>
+  </div>
+</article>
+<article class="message" id="res169">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おつかれさまでした！！あかしろが一番強敵だった</div>
+    <div class="message-time">169: 2023/2/28(火) 22:54:51</div>
+  </div>
+</article>
+<article class="message" id="res170">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした！</div>
+    <div class="message-time">170: 2023/2/28(火) 22:55:14</div>
+  </div>
+</article>
+<article class="message" id="res171">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">背景介入は未だに納得できてないから！！</div>
+    <div class="message-time">171: 2023/2/28(火) 22:55:55</div>
+  </div>
+</article>
+<article class="message" id="res172">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">くろいろしろいろも自分の中ではパッと出たんだけどさすがに違うかなってなっちゃってなあ<br>「し」か「く」に気付けなくて…</div>
+    <div class="message-time">172: 2023/2/28(火) 22:56:07</div>
+  </div>
+</article>
+<article class="message" id="res173">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">シロクロはひたすら□に入る文字と〇に入る文字を列挙してました</div>
+    <div class="message-time">173: 2023/2/28(火) 22:57:16</div>
+  </div>
+</article>
+<article class="message" id="res174">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">1組目とは引っかかる箇所がだいぶ違いましたねー</div>
+    <div class="message-time">174: 2023/2/28(火) 22:58:05</div>
+  </div>
+</article>
+<article class="message" id="res175">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログ読むか～…誰が誰？</div>
+    <div class="message-time">175: 2023/2/28(火) 22:58:28</div>
+  </div>
+</article>
+<article class="message" id="res176">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">美野です</div>
+    <div class="message-time">176: 2023/2/28(火) 22:58:55</div>
+  </div>
+</article>
+<article class="message" id="res177">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">夜賀です</div>
+    <div class="message-time">177: 2023/2/28(火) 22:59:13</div>
+  </div>
+</article>
+<article class="message" id="res178">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちなみに迷宮なのでミノタウロスから取って、下の名前は同じく牛関係の怪異である件から取りました</div>
+    <div class="message-time">178: 2023/2/28(火) 22:59:31</div>
+  </div>
+</article>
+<article class="message" id="res179">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なるほど！</div>
+    <div class="message-time">179: 2023/2/28(火) 22:59:44</div>
+  </div>
+</article>
+<article class="message" id="res180">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=2023029c32e386&amp;i=i26471318" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=2023029c32e386&amp;i=i26471318" width="183" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=2023029c32e386&amp;i=i26471318">📎 夜賀飯菜.png</a> <span class="filesize">[458.6 KB, 744x667px]</span> を追加しました。</div>
+    <div class="message-time">180: 2023/2/28(火) 23:00:02</div>
+  </div>
+</article>
+<article class="message" id="res181">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ずっと真夜中でいいのにのMVから持ってきたので「夜がいいな」です</div>
+    <div class="message-time">181: 2023/2/28(火) 23:00:40</div>
+  </div>
+</article>
+<article class="message" id="res182">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">かわいい</div>
+    <div class="message-time">182: 2023/2/28(火) 23:01:06</div>
+  </div>
+</article>
+<article class="message" id="res183">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=2023029c32e386&amp;i=i685e8faf" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=2023029c32e386&amp;i=i685e8faf" width="164" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=2023029c32e386&amp;i=i685e8faf">📎 美野 件.png</a> <span class="filesize">[147.6 KB, 600x600px]</span> を追加しました。</div>
+    <div class="message-time">183: 2023/2/28(火) 23:01:35</div>
+  </div>
+</article>
+<article class="message" id="res184">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ミステリアスキャラです</div>
+    <div class="message-time">184: 2023/2/28(火) 23:01:44</div>
+  </div>
+</article>
+<article class="message" id="res185">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">新しい人格生やす容量なかったからパラレルグレちゃんで言ったけど正解だった</div>
+    <div class="message-time">185: 2023/2/28(火) 23:02:50</div>
+  </div>
+</article>
+<article class="message" id="res186">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">行った！</div>
+    <div class="message-time">186: 2023/2/28(火) 23:03:00</div>
+  </div>
+</article>
+<article class="message" id="res187">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">がもうはマジで何も考えてないパッと見で性格つけた人です</div>
+    <div class="message-time">187: 2023/2/28(火) 23:06:02</div>
+  </div>
+</article>
+<article class="message" id="res188">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おれもはろ（便乗）</div>
+    <div class="message-time">188: 2023/2/28(火) 23:06:18</div>
+  </div>
+</article>
+<article class="message" id="res189">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=2023029c32e386&amp;i=icbe8ddcd" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=2023029c32e386&amp;i=icbe8ddcd" width="129" height="129"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=2023029c32e386&amp;i=icbe8ddcd">📎 蒲生真昼.png</a> <span class="filesize">[33.6 KB, 125x125px]</span> を追加しました。</div>
+    <div class="message-time">189: 2023/2/28(火) 23:06:59</div>
+  </div>
+</article>
+<article class="message" id="res190">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ココフォリアは駒画像と顔芸がのこらないのがねえ</div>
+    <div class="message-time">190: 2023/2/28(火) 23:07:43</div>
+  </div>
+</article>
+<article class="message" id="res191">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">せっかく面白かったのにもったいないねえ</div>
+    <div class="message-time">191: 2023/2/28(火) 23:08:07</div>
+  </div>
+</article>
+<article class="message" id="res192">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ドクターウェルは　シンフォギアシリーズに登場する博士です<br>「ならどうやって（うまくいくようにしたのか）」という質問に「愛、ですよ」と回答したり、顔芸したりする博士です</div>
+    <div class="message-time">192: 2023/2/28(火) 23:08:11</div>
+  </div>
+</article>
+<article class="message" id="res193">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">面白かったのに（10割泉）なんやかんややればつくらしいけど私は知りません</div>
+    <div class="message-time">193: 2023/2/28(火) 23:08:40</div>
+  </div>
+</article>
+<article class="message" id="res194">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なぜそこで愛！？は知ってる</div>
+    <div class="message-time">194: 2023/2/28(火) 23:08:58</div>
+  </div>
+</article>
+<article class="message" id="res195">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=2023029c32e386&amp;i=i24a2e181" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=2023029c32e386&amp;i=i24a2e181" width="290" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=2023029c32e386&amp;i=i24a2e181">📎 Dr_Well4.jpg</a> <span class="filesize">[25.1 KB, 450x253px]</span> を追加しました。</div>
+    <div class="message-time">195: 2023/2/28(火) 23:09:10</div>
+  </div>
+</article>
+<article class="message" id="res196">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、なぜそこで愛！？の元ネタなんだ</div>
+    <div class="message-time">196: 2023/2/28(火) 23:09:29</div>
+  </div>
+</article>
+<article class="message" id="res197">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なぜそこで愛！？ってこの人だったっけ…言おうと思ったけどネタ感増すからやめた</div>
+    <div class="message-time">197: 2023/2/28(火) 23:09:32</div>
+  </div>
+</article>
+<article class="message" id="res198">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はい、なぜそこで愛！？　って言われる側の人です</div>
+    <div class="message-time">198: 2023/2/28(火) 23:09:55</div>
+  </div>
+</article>
+<article class="message" id="res199">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、お風呂入ってる間に終わってる！！お疲れ様でした！</div>
+    <div class="message-time">199: 2023/2/28(火) 23:15:38</div>
+  </div>
+</article>
+<article class="message" id="res200">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちゃんとシンキングタイムにRPしてる・・・！</div>
+    <div class="message-time">200: 2023/2/28(火) 23:18:49</div>
+  </div>
+</article>
+<article class="message" id="res201">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">謎解きに集中しちゃった</div>
+    <div class="message-time">201: 2023/2/28(火) 23:19:54</div>
+  </div>
+</article>
+<article class="message" id="res202">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">とても偉い、すごい<br>答え考えることだけに集中してた</div>
+    <div class="message-time">202: 2023/2/28(火) 23:20:29</div>
+  </div>
+</article>
+<article class="message" id="res203">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=2023029c32e386&amp;i=i33a89e05" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=2023029c32e386&amp;i=i33a89e05" width="164" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=2023029c32e386&amp;i=i33a89e05">📎 安土小槌.png</a> <span class="filesize">[714.1 KB, 710x710px]</span> を追加しました。</div>
+    <div class="message-time">203: 2023/2/28(火) 23:21:57</div>
+  </div>
+</article>
+<article class="message" id="res204">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">キャラ画像はタイガーアンドバニー2の仙石昴です</div>
+    <div class="message-time">204: 2023/2/28(火) 23:22:32</div>
+  </div>
+</article>
+<article class="message" id="res205">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あー結局みてねえタイバニ２</div>
+    <div class="message-time">205: 2023/2/28(火) 23:22:53</div>
+  </div>
+</article>
+<article class="message" id="res206">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">タイバニのキャラなのか</div>
+    <div class="message-time">206: 2023/2/28(火) 23:22:54</div>
+  </div>
+</article>
+<article class="message" id="res207">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">名前は「あっち、こっち」を…なんか…こう…へえ～！</div>
+    <div class="message-time">207: 2023/2/28(火) 23:23:02</div>
+  </div>
+</article>
+<article class="message" id="res208">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=2023029c32e386&amp;i=i54984a7c" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=2023029c32e386&amp;i=i54984a7c" width="164" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=2023029c32e386&amp;i=i54984a7c">📎 剣 ジュン.jpg</a> <span class="filesize">[44.2 KB, 539x539px]</span> を追加しました。</div>
+    <div class="message-time">208: 2023/2/28(火) 23:23:29</div>
+  </div>
+</article>
+<article class="message" id="res209">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">空気を読んで貼る</div>
+    <div class="message-time">209: 2023/2/28(火) 23:23:44</div>
+  </div>
+</article>
+<article class="message" id="res210">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">たすかる</div>
+    <div class="message-time">210: 2023/2/28(火) 23:23:53</div>
+  </div>
+</article>
+<article class="message" id="res211">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ロボガZのオープニングで数カットだけ映る私服グレちゃんです</div>
+    <div class="message-time">211: 2023/2/28(火) 23:25:01</div>
+  </div>
+</article>
+<article class="message" id="res212">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">マニアックすぎる</div>
+    <div class="message-time">212: 2023/2/28(火) 23:25:42</div>
+  </div>
+</article>
+<article class="message" id="res213">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">全人類わかるとおもうけどがもうまひるはビルガモの怪獣娘なのでがもうまひるです<br>昼子にしようと思ってたけど異常に不吉だったのでやめました</div>
+    <div class="message-time">213: 2023/2/28(火) 23:27:58</div>
+  </div>
+</article>
+<article class="message" id="res214">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ヒルコはダメだｗｗ</div>
+    <div class="message-time">214: 2023/2/28(火) 23:29:55</div>
+  </div>
+</article>
+<article class="message" id="res215">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">全人類わかると思うけど（脅迫）</div>
+    <div class="message-time">215: 2023/2/28(火) 23:30:06</div>
+  </div>
+</article><div class="elapsed"><span>13日 23時間 35分 経過</span></div>
+<article class="message" id="res216">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=2023029c32e386&amp;i=ifec63477">📎 美野の一日.txt</a> <span class="filesize">[3.5 KB]</span> を追加しました。</div>
+    <div class="message-time">216: 2023/3/14(火) 23:05:43</div>
+  </div>
+</article>
+<article class="message" id="res217">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kr_icon.jpg" alt="">
+    <strong>キリシロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">美野の一日を書きました。なんで？</div>
+    <div class="message-time">217: 2023/3/14(火) 23:06:12</div>
+  </div>
+</article>
+<article class="message" id="res218">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">？？？？</div>
+    <div class="message-time">218: 2023/3/14(火) 23:10:42</div>
+  </div>
+</article>
+<article class="message" id="res219">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/dk_icon.jpg" alt="">
+    <strong>あさづけ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ミステリアスってなんだっけ</div>
+    <div class="message-time">219: 2023/3/14(火) 23:27:52</div>
+  </div>
+</article>
+<article class="message" id="res220">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あまりにも普通……すぎる……</div>
+    <div class="message-time">220: 2023/3/14(火) 23:42:19</div>
+  </div>
+</article><div class="elapsed"><span>1260日 16時間 34分 経過</span></div>
+<article class="message" id="res221">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/rb_icon.jpg" alt="">
+    <strong>ラバソ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ウルフさんを招待</div>
+    <div class="message-time">221: 2026/8/26(水) 16:16:54</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,2582 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>さよなら、ソルジャー　既クリア部屋</title>
+<style>
+:root {
+  color-scheme: light;
+  --green:#78bd45;
+  --green-dark:#4b982a;
+  --border:#d9ded5;
+  --muted:#737b73;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:#f3f5f1;
+  color:#242824;
+  font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65;
+}
+header {
+  border-top:6px solid var(--green);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.header-inner {
+  max-width:1100px;
+  margin:auto;
+  padding:18px 18px 15px;
+}
+h1 {
+  margin:0;
+  font-size:22px;
+  line-height:1.35;
+}
+.meta {
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+.intro {
+  margin-top:12px;
+  padding:10px 12px;
+  background:#f7fbf4;
+  border-left:4px solid var(--green);
+  overflow-wrap:anywhere;
+}
+main {
+  max-width:1100px;
+  margin:18px auto 50px;
+  padding:0 14px;
+}
+.attachment-warning {
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:#fff4d4;
+  border:1px solid #e2c36d;
+  border-radius:5px;
+  font-size:13px;
+}
+.message {
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:0;
+}
+.message:last-of-type { border-bottom:1px solid var(--border); }
+.message:target { outline:3px solid #f0cf50; outline-offset:-3px; }
+.speaker {
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:11px 10px;
+  background:#f6f8f4;
+  border-right:1px solid var(--border);
+  overflow-wrap:anywhere;
+}
+.avatar {
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  object-fit:cover;
+  border-radius:3px;
+}
+.avatar-fallback {
+  display:grid;
+  place-items:center;
+  background:#dce5d8;
+  color:#43503e;
+  font-weight:700;
+}
+.speaker strong {
+  padding-top:4px;
+  font-size:13px;
+}
+.message-main {
+  min-width:0;
+  padding:10px 12px 8px;
+}
+.message-body {
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.message-body img:not(.icon16) {
+  max-width:min(100%,720px);
+  height:auto;
+}
+.message-body a {
+  color:#075cbd;
+}
+.message-time {
+  margin-top:6px;
+  color:#7c847b;
+  font-size:11px;
+  text-align:right;
+}
+.elapsed {
+  text-align:center;
+  color:#8a9188;
+  font-size:11px;
+  margin:9px 0;
+}
+.elapsed span {
+  display:inline-block;
+  background:#e8ece6;
+  padding:2px 10px;
+  border-radius:999px;
+}
+.footer-note {
+  margin-top:18px;
+  color:#6f766e;
+  font-size:11px;
+}
+@media (max-width:650px) {
+  .message { grid-template-columns:1fr; }
+  .speaker {
+    border-right:0;
+    border-bottom:1px solid #e9ece7;
+    padding:7px 9px;
+    align-items:center;
+  }
+  .avatar { width:26px;height:26px;flex-basis:26px; }
+  .speaker strong { padding-top:0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>さよなら、ソルジャー　既クリア部屋</h1>
+    <div class="meta">Fresh Meeting archive / room id: 2021015b5e4282 / ended</div>
+    <div class="intro"></a> 
+ <a href="https://www.freshmeeting.com/forumminutefile.php?f=2021015b5e4282"><img src="https://www.freshmeeting.com/img/save.gif" class="icon"><span>テキスト出力</span></a>
+	<a href="https://www.freshmeeting.com/forumopen.php?f=2021015b5e4282"><img src="https://www.freshmeeting.com/img/reopen.gif" alt="ミーティングを再開する"><span>ミーティングを再開する</span></a>
+</span></div>
+<!-- replay-links:begin -->
+<div class="replay-links-panel" style="margin-top:10px;padding:10px 12px;background:#eef8e8;border-left:4px solid #4b982a;overflow-wrap:anywhere">
+  <strong>セッションログ</strong>
+  <ul style="margin:6px 0 0 1.2em;padding:0">
+    <li><a href="https://www.freshmeeting.com/forumfile.php?f=2021015b5e4282&amp;i=i0187d11a" target="_blank" rel="noopener">スマTカゲマモ【さよなら、ソルジャー】_v0.9.html</a></li><li><a href="https://www.freshmeeting.com/forumfile.php?f=2021015b5e4282&amp;i=ief48c67e" target="_blank" rel="noopener">はむチヒウル【さよなら、ソルジャー】_v0.91.html</a></li>
+  </ul>
+</div>
+<!-- replay-links:end -->
+  </div>
+</header>
+<main>
+
+<div class="attachment-warning">
+  このログには Fresh Meeting 上の添付ファイル参照が 7 件あります。
+  HTML本文とは別に添付ファイル本体の保全が必要です。
+</div>
+
+<article class="message" id="res1">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=2021015b5e4282&amp;i=i67d5fff3">📎 ハムチヒウルフ.html</a> <span class="filesize">[79.4 KB]</span> を追加しました。</div>
+    <div class="message-time">1: 2021/1/27(水) 23:01:31</div>
+  </div>
+</article>
+<article class="message" id="res2">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！</div>
+    <div class="message-time">2: 2021/1/27(水) 23:03:14</div>
+  </div>
+</article>
+<article class="message" id="res3">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ミッキーの色の視認性割っる！！</div>
+    <div class="message-time">3: 2021/1/27(水) 23:05:31</div>
+  </div>
+</article>
+<article class="message" id="res4">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">建て乙でごぜーます<br>セッキーときしやんのコンビ良いなぁ</div>
+    <div class="message-time">4: 2021/1/27(水) 23:05:53</div>
+  </div>
+</article>
+<article class="message" id="res5">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちょっといじってみます</div>
+    <div class="message-time">5: 2021/1/27(水) 23:06:02</div>
+  </div>
+</article>
+<article class="message" id="res6">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どういう基準で憑依体を選抜してるんですかね？</div>
+    <div class="message-time">6: 2021/1/27(水) 23:08:44</div>
+  </div>
+</article>
+<article class="message" id="res7">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[ハムチヒウル【さよなら、ソルジャー】.html] </del></div>
+    <div class="message-time">7: 2021/1/27(水) 23:09:37</div>
+  </div>
+</article>
+<article class="message" id="res8">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「とりあえず女性」<br>「いなかったらランダム」って聞いたような</div>
+    <div class="message-time">8: 2021/1/27(水) 23:10:09</div>
+  </div>
+</article>
+<article class="message" id="res9">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">はえー</div>
+    <div class="message-time">9: 2021/1/27(水) 23:10:24</div>
+  </div>
+</article>
+<article class="message" id="res10">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ありがとうございます！！</div>
+    <div class="message-time">10: 2021/1/27(水) 23:10:32</div>
+  </div>
+</article>
+<article class="message" id="res11">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">雑談灰色になってる</div>
+    <div class="message-time">11: 2021/1/27(水) 23:10:36</div>
+  </div>
+</article>
+<article class="message" id="res12">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">見づらいな、しばし待たれよ……</div>
+    <div class="message-time">12: 2021/1/27(水) 23:10:47</div>
+  </div>
+</article>
+<article class="message" id="res13">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">急にミッキーが気が狂ったと思ったけど操作されてたんだなぁ</div>
+    <div class="message-time">13: 2021/1/27(水) 23:14:54</div>
+  </div>
+</article>
+<article class="message" id="res14">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[ハムチヒウル【さよなら、ソルジャー】.html] </del></div>
+    <div class="message-time">14: 2021/1/27(水) 23:19:59</div>
+  </div>
+</article>
+<article class="message" id="res15">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">1日目までしかない説がある</div>
+    <div class="message-time">15: 2021/1/27(水) 23:20:24</div>
+  </div>
+</article>
+<article class="message" id="res16">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いつ憑依されるんだろうと見てるこっちがハラハラする</div>
+    <div class="message-time">16: 2021/1/27(水) 23:38:33</div>
+  </div>
+</article>
+<article class="message" id="res17">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">何のハラハラだよ</div>
+    <div class="message-time">17: 2021/1/27(水) 23:38:42</div>
+  </div>
+</article>
+<article class="message" id="res18">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">三木の台詞！！！！読みづらい！！！！！！！！</div>
+    <div class="message-time">18: 2021/1/27(水) 23:40:17</div>
+  </div>
+</article>
+<article class="message" id="res19">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">普通に喋れ！！！！！！<br>そして2回目チームはとうとう憑依の時間か</div>
+    <div class="message-time">19: 2021/1/27(水) 23:40:58</div>
+  </div>
+</article>
+<article class="message" id="res20">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おばさんのまま！！！！！！！！！！！！</div>
+    <div class="message-time">20: 2021/1/27(水) 23:43:16</div>
+  </div>
+</article>
+<article class="message" id="res21">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">また老女とババアとおばあさんとばあちゃんでややこしくなりますよ！</div>
+    <div class="message-time">21: 2021/1/27(水) 23:44:34</div>
+  </div>
+</article>
+<article class="message" id="res22">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">俺にはもう区別がつかないと思う</div>
+    <div class="message-time">22: 2021/1/27(水) 23:46:28</div>
+  </div>
+</article>
+<article class="message" id="res23">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">保護者に頭下げさせられるの新鮮で良いなｗｗｗｗ</div>
+    <div class="message-time">23: 2021/1/27(水) 23:50:01</div>
+  </div>
+</article>
+<article class="message" id="res24">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">よし子と蔦子まじでここしか出番ないからまぁ</div>
+    <div class="message-time">24: 2021/1/28(木) 0:03:44</div>
+  </div>
+</article>
+<article class="message" id="res25">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">操作されるの大変そうだなぁ</div>
+    <div class="message-time">25: 2021/1/28(木) 0:09:08</div>
+  </div>
+</article>
+<article class="message" id="res26">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">密話で指示受けてんのも共有しちゃダメなんだろうし</div>
+    <div class="message-time">26: 2021/1/28(木) 0:09:42</div>
+  </div>
+</article>
+<article class="message" id="res27">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">すぐバレると思ってたんだけどKPからの指示わりとバレないんだよな</div>
+    <div class="message-time">27: 2021/1/28(木) 0:10:22</div>
+  </div>
+</article>
+<article class="message" id="res28">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういう日とかと思ったんだもん…</div>
+    <div class="message-time">28: 2021/1/28(木) 0:10:49</div>
+  </div>
+</article>
+<article class="message" id="res29">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">人！</div>
+    <div class="message-time">29: 2021/1/28(木) 0:10:52</div>
+  </div>
+</article>
+<article class="message" id="res30">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">素行のせいで信用が無さすぎる！！！！！！</div>
+    <div class="message-time">30: 2021/1/28(木) 0:11:16</div>
+  </div>
+</article>
+<article class="message" id="res31">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">金　大地 - 今日 0:20<br>済まない…ほんの７割だけガチで狂人になったのかって疑ってしまって済まない……</div>
+    <div class="message-time">31: 2021/1/28(木) 0:23:37</div>
+  </div>
+</article>
+<article class="message" id="res32">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=2021015b5e4282&amp;i=i7ab1efee">📎 カタシロ（全ログ） (2).html</a> <span class="filesize">[190.1 KB]</span> を追加しました。</div>
+    <div class="message-time">32: 2021/1/28(木) 0:38:52</div>
+  </div>
+</article>
+<article class="message" id="res33">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログこっちだったわ</div>
+    <div class="message-time">33: 2021/1/28(木) 0:39:03</div>
+  </div>
+</article>
+<article class="message" id="res34">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ファイル名はカタシロだがカタシロではない</div>
+    <div class="message-time">34: 2021/1/28(木) 0:39:23</div>
+  </div>
+</article>
+<article class="message" id="res35">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">？？？？</div>
+    <div class="message-time">35: 2021/1/28(木) 0:53:29</div>
+  </div>
+</article>
+<article class="message" id="res36">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">部屋名がカタシロだからログ名もカタシロだった</div>
+    <div class="message-time">36: 2021/1/28(木) 1:00:16</div>
+  </div>
+</article>
+<article class="message" id="res37">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">なるほどね</div>
+    <div class="message-time">37: 2021/1/28(木) 1:01:26</div>
+  </div>
+</article>
+<article class="message" id="res38">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">使いまわしてるんだっけか</div>
+    <div class="message-time">38: 2021/1/28(木) 1:01:39</div>
+  </div>
+</article>
+<article class="message" id="res39">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうです</div>
+    <div class="message-time">39: 2021/1/28(木) 1:02:10</div>
+  </div>
+</article>
+<article class="message" id="res40">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[トラブルメーカー？.jpg] </del></div>
+    <div class="message-time">40: 2021/1/28(木) 1:19:50</div>
+  </div>
+</article>
+<article class="message" id="res41">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">描いてたら終わってた</div>
+    <div class="message-time">41: 2021/1/28(木) 1:19:59</div>
+  </div>
+</article>
+<article class="message" id="res42">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">空前のお絵かきブーム！！！</div>
+    <div class="message-time">42: 2021/1/28(木) 1:22:26</div>
+  </div>
+</article>
+<article class="message" id="res43">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=2021015b5e4282&amp;i=i327f1608" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=2021015b5e4282&amp;i=i327f1608" width="215" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=2021015b5e4282&amp;i=i327f1608">📎 トラブルメーカー？.jpg</a> <span class="filesize">[369.2 KB, 1000x759px]</span> を追加しました。</div>
+    <div class="message-time">43: 2021/1/28(木) 2:14:01</div>
+  </div>
+</article>
+<article class="message" id="res44">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">もうちょっとちゃんと塗りました<br>誤差レベル</div>
+    <div class="message-time">44: 2021/1/28(木) 2:14:16</div>
+  </div>
+</article><div class="elapsed"><span>20時間 39分 経過</span></div>
+<article class="message" id="res45">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">開いた！</div>
+    <div class="message-time">45: 2021/1/28(木) 22:53:49</div>
+  </div>
+</article>
+<article class="message" id="res46">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">葦珠が一番不思議体験してるんじゃ…</div>
+    <div class="message-time">46: 2021/1/28(木) 23:09:31</div>
+  </div>
+</article>
+<article class="message" id="res47">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">やっぱここやっていいのか？って思うよなぁ</div>
+    <div class="message-time">47: 2021/1/28(木) 23:29:39</div>
+  </div>
+</article>
+<article class="message" id="res48">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だって6割くらい連れていかれると思ってたもの</div>
+    <div class="message-time">48: 2021/1/28(木) 23:29:54</div>
+  </div>
+</article>
+<article class="message" id="res49">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ウィリアムがどれだけいい人感が手紙で出てようと、確実に別物に変わっててヤバい雰囲気だしてるので、実行=正解とは直で考えないかもしれないな…</div>
+    <div class="message-time">49: 2021/1/28(木) 23:32:13</div>
+  </div>
+</article>
+<article class="message" id="res50">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">緒範ちゃん！！</div>
+    <div class="message-time">50: 2021/1/28(木) 23:51:47</div>
+  </div>
+</article>
+<article class="message" id="res51">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">金　大地 - 今日 23:56<br>なんで覚悟決まってるのとバラエティ的に考えてる人が失敗してビビってる側二人がビビって無いの？？<br><br>前回のセッキーさんも…</div>
+    <div class="message-time">51: 2021/1/28(木) 23:58:09</div>
+  </div>
+</article>
+<article class="message" id="res52">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いい〆</div>
+    <div class="message-time">52: 2021/1/29(金) 0:07:28</div>
+  </div>
+</article>
+<article class="message" id="res53">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><br>葦珠　緒範 - 今日 0:14<br>全然気にかけてもらえてない旦那が割とかわいそうだった<br><br>わかる</div>
+    <div class="message-time">53: 2021/1/29(金) 0:17:24</div>
+  </div>
+</article>
+<article class="message" id="res54">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">くまぁ！</div>
+    <div class="message-time">54: 2021/1/29(金) 0:24:53</div>
+  </div>
+</article>
+<article class="message" id="res55">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">おつかぁ～</div>
+    <div class="message-time">55: 2021/1/29(金) 0:24:55</div>
+  </div>
+</article>
+<article class="message" id="res56">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res52">&gt;&gt;52</a>ありがとう！！！！！！！！！！！！！</div>
+    <div class="message-time">56: 2021/1/29(金) 0:25:40</div>
+  </div>
+</article>
+<article class="message" id="res57">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res43">&gt;&gt;43</a>！？</div>
+    <div class="message-time">57: 2021/1/29(金) 0:26:08</div>
+  </div>
+</article>
+<article class="message" id="res58">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res43">&gt;&gt;43</a>！？！？！？！？</div>
+    <div class="message-time">58: 2021/1/29(金) 0:26:14</div>
+  </div>
+</article>
+<article class="message" id="res59">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">くま！？！？！？！？？？？？？？？？？？？？</div>
+    <div class="message-time">59: 2021/1/29(金) 0:26:27</div>
+  </div>
+</article>
+<article class="message" id="res60">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=2021015b5e4282&amp;i=i11c0ebae">📎 スマTカゲマンモ.html</a> <span class="filesize">[301.6 KB]</span> を追加しました。</div>
+    <div class="message-time">60: 2021/1/29(金) 0:26:47</div>
+  </div>
+</article>
+<article class="message" id="res61">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れさまでした！！！<br>やっぱりあそこビビりますよね！？！？！？！？</div>
+    <div class="message-time">61: 2021/1/29(金) 0:26:58</div>
+  </div>
+</article>
+<article class="message" id="res62">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/mm_icon.jpg" alt="">
+    <strong>マンモーニ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お疲れ様でした！！！</div>
+    <div class="message-time">62: 2021/1/29(金) 0:27:02</div>
+  </div>
+</article>
+<article class="message" id="res63">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">実行すると憑依されてるＰＣ連れてかれませんかって不安でしたよ！？！？</div>
+    <div class="message-time">63: 2021/1/29(金) 0:27:22</div>
+  </div>
+</article>
+<article class="message" id="res64">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「海底、イイトコ、連レテク…」</div>
+    <div class="message-time">64: 2021/1/29(金) 0:27:39</div>
+  </div>
+</article>
+<article class="message" id="res65">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いやむしろ場合によっては邪神召喚の儀式でしょ</div>
+    <div class="message-time">65: 2021/1/29(金) 0:27:40</div>
+  </div>
+</article>
+<article class="message" id="res66">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういう二人の愛をコケにしたような罠ではないかなぁとはわかったけど、別の生物になって価値観が変化してたら愛の形も変わって連れてかれるか食われるかしそうってのは思ってた…</div>
+    <div class="message-time">66: 2021/1/29(金) 0:29:31</div>
+  </div>
+</article>
+<article class="message" id="res67">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">難しいなぁ</div>
+    <div class="message-time">67: 2021/1/29(金) 0:30:04</div>
+  </div>
+</article>
+<article class="message" id="res68">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res43">&gt;&gt; 43</a> <br>！！！！</div>
+    <div class="message-time">68: 2021/1/29(金) 0:30:04</div>
+  </div>
+</article>
+<article class="message" id="res69">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういう終わり方なのかなぁと思った<br>考えてみれば2割くらいエリー卓で人間不信になってたせいだわ</div>
+    <div class="message-time">69: 2021/1/29(金) 0:30:06</div>
+  </div>
+</article>
+<article class="message" id="res70">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">KP不信</div>
+    <div class="message-time">70: 2021/1/29(金) 0:30:21</div>
+  </div>
+</article>
+<article class="message" id="res71">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でも、今回の話はなんか机にとって救いだった<br>そしてそれが嬉しい。机で行ってよかった</div>
+    <div class="message-time">71: 2021/1/29(金) 0:31:01</div>
+  </div>
+</article>
+<article class="message" id="res72">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それは良かった</div>
+    <div class="message-time">72: 2021/1/29(金) 0:31:14</div>
+  </div>
+</article>
+<article class="message" id="res73">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumshowimage.php?f=2021015b5e4282&amp;i=ieaa525c0" target="_blank"><img src="https://www.freshmeeting.com/forumfileimg.php?f=2021015b5e4282&amp;i=ieaa525c0" width="279" height="164"></a><br><a href="https://www.freshmeeting.com/forumfile.php?f=2021015b5e4282&amp;i=ieaa525c0">📎 スマｔカゲマンモ.JPG</a> <span class="filesize">[108.7 KB, 1027x597px]</span> を追加しました。</div>
+    <div class="message-time">73: 2021/1/29(金) 0:31:24</div>
+  </div>
+</article>
+<article class="message" id="res74">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/mm_icon.jpg" alt="">
+    <strong>マンモーニ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">僕は、傷ついたよ、苦しんだよ、痛かったよ、だから、照子にも同じ思いを味わってもらう、それが愛し合うってことなんじゃないかなとか言い出す可能性もある</div>
+    <div class="message-time">74: 2021/1/29(金) 0:32:16</div>
+  </div>
+</article>
+<article class="message" id="res75">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ユベル！？</div>
+    <div class="message-time">75: 2021/1/29(金) 0:32:36</div>
+  </div>
+</article>
+<article class="message" id="res76">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">海底大祭り！みんなでわっしょいじゃなくて良かった～～～</div>
+    <div class="message-time">76: 2021/1/29(金) 0:32:38</div>
+  </div>
+</article>
+<article class="message" id="res77">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ほんと、継続PCはじめてだったけどこんな感じの話じゃなかったら机が再起不能になってた可能性もあるな………</div>
+    <div class="message-time">77: 2021/1/29(金) 0:33:48</div>
+  </div>
+</article>
+<article class="message" id="res78">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それくらいあの展開は胃が痛かった<br>不思議とPCとリンクした</div>
+    <div class="message-time">78: 2021/1/29(金) 0:34:14</div>
+  </div>
+</article>
+<article class="message" id="res79">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">多分変にＰＣを人間にしなければスパッと行けて良いような気もするけど<br>今まで人間にしてきたからただのコマにしたくないんでどうしてもその場で思いつく限りのことでうだうだしちゃう</div>
+    <div class="message-time">79: 2021/1/29(金) 0:34:48</div>
+  </div>
+</article>
+<article class="message" id="res80">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あと僕の役どころがダントツで美味しかった。ありがとうございます</div>
+    <div class="message-time">80: 2021/1/29(金) 0:35:03</div>
+  </div>
+</article>
+<article class="message" id="res81">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">女性キャラ一人で行くと自動的にこうなります</div>
+    <div class="message-time">81: 2021/1/29(金) 0:35:23</div>
+  </div>
+</article>
+<article class="message" id="res82">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">CoCは美少女に限るな！（ルッキズム）</div>
+    <div class="message-time">82: 2021/1/29(金) 0:35:41</div>
+  </div>
+</article>
+<article class="message" id="res83">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/mm_icon.jpg" alt="">
+    <strong>マンモーニ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">男だけのクルセイダースだとどうなります？</div>
+    <div class="message-time">83: 2021/1/29(金) 0:35:45</div>
+  </div>
+</article>
+<article class="message" id="res84">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">適当に選ぶ</div>
+    <div class="message-time">84: 2021/1/29(金) 0:35:58</div>
+  </div>
+</article>
+<article class="message" id="res85">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ミスタに入ったトリッシュみたいな感じでしょ</div>
+    <div class="message-time">85: 2021/1/29(金) 0:36:14</div>
+  </div>
+</article>
+<article class="message" id="res86">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">突然女言葉になるわなんだで怖すぎる</div>
+    <div class="message-time">86: 2021/1/29(金) 0:36:31</div>
+  </div>
+</article>
+<article class="message" id="res87">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ブ男が突撃しておばあさん口調をしゃべりだしたり髪をかき上げたりする</div>
+    <div class="message-time">87: 2021/1/29(金) 0:36:32</div>
+  </div>
+</article>
+<article class="message" id="res88">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">マジで取り憑かれてるの理解するの時間かかってしまった…</div>
+    <div class="message-time">88: 2021/1/29(金) 0:36:33</div>
+  </div>
+</article>
+<article class="message" id="res89">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ある程度までガチで引かれてたのは伝わった</div>
+    <div class="message-time">89: 2021/1/29(金) 0:36:58</div>
+  </div>
+</article>
+<article class="message" id="res90">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あと霊感があるとかの設定があるとか積極的に一人行動するキャラが居るとそっち優先するかも</div>
+    <div class="message-time">90: 2021/1/29(金) 0:37:02</div>
+  </div>
+</article>
+<article class="message" id="res91">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">三木が奇行に走ったと思って気が付かなかった</div>
+    <div class="message-time">91: 2021/1/29(金) 0:37:09</div>
+  </div>
+</article>
+<article class="message" id="res92">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">すんません７割ぐらい本気で狂人になったと思ってました</div>
+    <div class="message-time">92: 2021/1/29(金) 0:37:19</div>
+  </div>
+</article>
+<article class="message" id="res93">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">三木ってきしやんとうつみんの先輩だっけ？</div>
+    <div class="message-time">93: 2021/1/29(金) 0:37:33</div>
+  </div>
+</article>
+<article class="message" id="res94">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/ch_icon.jpg" alt="">
+    <strong>チヒロ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">三木さんは魔弾天翔の子ですね</div>
+    <div class="message-time">94: 2021/1/29(金) 0:37:59</div>
+  </div>
+</article>
+<article class="message" id="res95">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">トウモロコロシ農家の娘です！！</div>
+    <div class="message-time">95: 2021/1/29(金) 0:38:05</div>
+  </div>
+</article>
+<article class="message" id="res96">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あ、ごめんなさい</div>
+    <div class="message-time">96: 2021/1/29(金) 0:38:06</div>
+  </div>
+</article>
+<article class="message" id="res97">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">かなり適当言った</div>
+    <div class="message-time">97: 2021/1/29(金) 0:38:15</div>
+  </div>
+</article>
+<article class="message" id="res98">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/mm_icon.jpg" alt="">
+    <strong>マンモーニ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">僕もそういう流れだと発覚するまで狂人になったと思ってた</div>
+    <div class="message-time">98: 2021/1/29(金) 0:38:20</div>
+  </div>
+</article>
+<article class="message" id="res99">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">しゃーない</div>
+    <div class="message-time">99: 2021/1/29(金) 0:38:31</div>
+  </div>
+</article>
+<article class="message" id="res100">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">他PCをビックリさせるためにやってるみたいなとこあるからね</div>
+    <div class="message-time">100: 2021/1/29(金) 0:38:51</div>
+  </div>
+</article>
+<article class="message" id="res101">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いや机ちゃんならありそう…とか思ってました、ええ</div>
+    <div class="message-time">101: 2021/1/29(金) 0:39:06</div>
+  </div>
+</article>
+<article class="message" id="res102">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">多分乗ってくれるだろうと思って首根っこひっつかんでグイーしました</div>
+    <div class="message-time">102: 2021/1/29(金) 0:39:17</div>
+  </div>
+</article>
+<article class="message" id="res103">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">！？！？？？？？？？</div>
+    <div class="message-time">103: 2021/1/29(金) 0:39:19</div>
+  </div>
+</article>
+<article class="message" id="res104">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">僕はともかく机はもうちょっとまともな子なはずだけどな………</div>
+    <div class="message-time">104: 2021/1/29(金) 0:39:38</div>
+  </div>
+</article>
+<article class="message" id="res105">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そっちがその気ならこっちだってこうしてやらぁ！……え、まだ続ける！？本気！？ヤバい…手に負えない……どうしよ……<br>ってなりました</div>
+    <div class="message-time">105: 2021/1/29(金) 0:39:49</div>
+  </div>
+</article>
+<article class="message" id="res106">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まとも……？</div>
+    <div class="message-time">106: 2021/1/29(金) 0:40:02</div>
+  </div>
+</article>
+<article class="message" id="res107">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">くま狂のまともな子です</div>
+    <div class="message-time">107: 2021/1/29(金) 0:40:20</div>
+  </div>
+</article>
+<article class="message" id="res108">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">くまが好きなだけでまともですよ</div>
+    <div class="message-time">108: 2021/1/29(金) 0:41:32</div>
+  </div>
+</article>
+<article class="message" id="res109">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">今回は感動で泣けて良かった…</div>
+    <div class="message-time">109: 2021/1/29(金) 0:41:37</div>
+  </div>
+</article>
+<article class="message" id="res110">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁむしろドン引きしてもらえるようにPLもとぼけて狂人ムーブに徹した</div>
+    <div class="message-time">110: 2021/1/29(金) 0:42:36</div>
+  </div>
+</article>
+<article class="message" id="res111">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ユドナのせいでログに顔アイコンがないと少し物足りない</div>
+    <div class="message-time">111: 2021/1/29(金) 0:46:30</div>
+  </div>
+</article>
+<article class="message" id="res112">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">黄色系だとものすっごく見づらいな……ドラッグしながら見たらまだマシか</div>
+    <div class="message-time">112: 2021/1/29(金) 0:52:46</div>
+  </div>
+</article>
+<article class="message" id="res113">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">背景暗くできへんのかな</div>
+    <div class="message-time">113: 2021/1/29(金) 0:56:01</div>
+  </div>
+</article>
+<article class="message" id="res114">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res43">&gt;&gt;43</a><br>常にきぐるみより常にトロッコのがやばくないか！？</div>
+    <div class="message-time">114: 2021/1/29(金) 0:57:25</div>
+  </div>
+</article>
+<article class="message" id="res115">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">何言ってるんですか常にトロッコ乗ってる人なんて居るわけないでしょ常識的に考えてくださいよ</div>
+    <div class="message-time">115: 2021/1/29(金) 0:58:01</div>
+  </div>
+</article>
+<article class="message" id="res116">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">画像はイメージです</div>
+    <div class="message-time">116: 2021/1/29(金) 0:58:15</div>
+  </div>
+</article>
+<article class="message" id="res117">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でも田所は常に着ぐるみを着てる狂人です</div>
+    <div class="message-time">117: 2021/1/29(金) 0:58:30</div>
+  </div>
+</article>
+<article class="message" id="res118">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">？？？？？？？？？？？</div>
+    <div class="message-time">118: 2021/1/29(金) 0:58:52</div>
+  </div>
+</article>
+<article class="message" id="res119">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">前回の組も全員あの辺消極的！！！！！</div>
+    <div class="message-time">119: 2021/1/29(金) 0:59:00</div>
+  </div>
+</article>
+<article class="message" id="res120">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ウルフー！！！！気をしっかり持てウルフー！！！！！！</div>
+    <div class="message-time">120: 2021/1/29(金) 1:00:04</div>
+  </div>
+</article>
+<article class="message" id="res121">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">121: 2021/1/29(金) 1:01:24</div>
+  </div>
+</article>
+<article class="message" id="res122">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">乙でした</div>
+    <div class="message-time">122: 2021/1/29(金) 1:02:32</div>
+  </div>
+</article>
+<article class="message" id="res123">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">イラストはアナログで描いたんですか！？</div>
+    <div class="message-time">123: 2021/1/29(金) 1:02:46</div>
+  </div>
+</article>
+<article class="message" id="res124">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">アナログです</div>
+    <div class="message-time">124: 2021/1/29(金) 1:02:51</div>
+  </div>
+</article>
+<article class="message" id="res125">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">鉛筆と消しゴムを握ってたのしくお絵かきしました<br>二度とやりません</div>
+    <div class="message-time">125: 2021/1/29(金) 1:03:15</div>
+  </div>
+</article>
+<article class="message" id="res126">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ブームはお前が作るんだ</div>
+    <div class="message-time">126: 2021/1/29(金) 1:03:29</div>
+  </div>
+</article>
+<article class="message" id="res127">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ンン～～やっぱこのシナリオのエンディングいいな</div>
+    <div class="message-time">127: 2021/1/29(金) 1:06:31</div>
+  </div>
+</article>
+<article class="message" id="res128">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">旦那がかわいそうなのはそれはそう</div>
+    <div class="message-time">128: 2021/1/29(金) 1:06:39</div>
+  </div>
+</article>
+<article class="message" id="res129">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">分かるんだけどなぁ…分かるんだけどなぁ……</div>
+    <div class="message-time">129: 2021/1/29(金) 1:07:55</div>
+  </div>
+</article>
+<article class="message" id="res130">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">このシナリオのタイトル、シナリオのメインストーリーとはあんまり関係ないフレーズでどうなんだろうと思って仮題のつもりでつけたが実際やってみるとなかなか良いな</div>
+    <div class="message-time">130: 2021/1/29(金) 1:54:07</div>
+  </div>
+</article>
+<article class="message" id="res131">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/mm_icon.jpg" alt="">
+    <strong>マンモーニ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">例の闇の儀式を昼間に実行したらいるかがせめてきたぞっみたいな大騒ぎになりそう</div>
+    <div class="message-time">131: 2021/1/29(金) 3:03:55</div>
+  </div>
+</article><div class="elapsed"><span>4時間 43分 経過</span></div>
+<article class="message" id="res132">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">夏場の昼の海水浴場で！？</div>
+    <div class="message-time">132: 2021/1/29(金) 7:47:00</div>
+  </div>
+</article>
+<article class="message" id="res133">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">夜でよかった～</div>
+    <div class="message-time">133: 2021/1/29(金) 8:10:50</div>
+  </div>
+</article><div class="elapsed"><span>3時間 25分 経過</span></div>
+<article class="message" id="res134">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ人気のない海岸くらい見つかるよ</div>
+    <div class="message-time">134: 2021/1/29(金) 11:36:32</div>
+  </div>
+</article><div class="elapsed"><span>16日 8時間 1分 経過</span></div>
+<article class="message" id="res135">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">前の組のログが一日目までしかないデース！！！！！</div>
+    <div class="message-time">135: 2021/2/14(日) 19:37:57</div>
+  </div>
+</article>
+<article class="message" id="res136">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カタシロって名前のやつです</div>
+    <div class="message-time">136: 2021/2/14(日) 20:50:55</div>
+  </div>
+</article>
+<article class="message" id="res137">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まとめの奴が一日目までしかないって話では</div>
+    <div class="message-time">137: 2021/2/14(日) 20:52:34</div>
+  </div>
+</article>
+<article class="message" id="res138">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まとめの奴…？</div>
+    <div class="message-time">138: 2021/2/14(日) 20:53:31</div>
+  </div>
+</article>
+<article class="message" id="res139">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="#res14">&gt;&gt;14</a></div>
+    <div class="message-time">139: 2021/2/14(日) 20:54:22</div>
+  </div>
+</article>
+<article class="message" id="res140">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カタシロ全ログ(2)って名前のやつが1組目の最後まで全部入りだけど、ちゃんとした名前にして貼ったり整形したログとしてはないよ…</div>
+    <div class="message-time">140: 2021/2/14(日) 20:56:45</div>
+  </div>
+</article>
+<article class="message" id="res141">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それうちらの組の一日目かと思ってた</div>
+    <div class="message-time">141: 2021/2/14(日) 21:14:36</div>
+  </div>
+</article>
+<article class="message" id="res142">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">カタシロの方確認したらちゃんと全部入ってました<br>サンクス！</div>
+    <div class="message-time">142: 2021/2/14(日) 21:20:13</div>
+  </div>
+</article>
+<article class="message" id="res143">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[はむチヒウル【カタシロ】_v0.91.html] </del></div>
+    <div class="message-time">143: 2021/2/14(日) 21:21:25</div>
+  </div>
+</article>
+<article class="message" id="res144">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[はむチヒウル【さよなら、ソルジャー】_v0.91.html] </del></div>
+    <div class="message-time">144: 2021/2/14(日) 21:21:57</div>
+  </div>
+</article>
+<article class="message" id="res145">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">見やすい！！！！！！！！！！！！！！！！！</div>
+    <div class="message-time">145: 2021/2/14(日) 21:25:22</div>
+  </div>
+</article>
+<article class="message" id="res146">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">サンクス過ぎる……</div>
+    <div class="message-time">146: 2021/2/14(日) 21:25:40</div>
+  </div>
+</article>
+<article class="message" id="res147">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でも一番上のタイトルまちがってる！！！！！！！！！！</div>
+    <div class="message-time">147: 2021/2/14(日) 21:25:57</div>
+  </div>
+</article>
+<article class="message" id="res148">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">最後はキリラバづけ組になるけど怪しまずによっしゃ儀式したろってなるかな……</div>
+    <div class="message-time">148: 2021/2/14(日) 21:30:16</div>
+  </div>
+</article>
+<article class="message" id="res149">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ最悪KPが止めるから…</div>
+    <div class="message-time">149: 2021/2/14(日) 21:30:43</div>
+  </div>
+</article>
+<article class="message" id="res150">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いや、単純に興味として…</div>
+    <div class="message-time">150: 2021/2/14(日) 21:31:18</div>
+  </div>
+</article>
+<article class="message" id="res151">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">三木 柚穂<br>「あ、あくる、あくる朝ぁ、女中が……ぐすっ、ストーブの灰を……ひっく、かき出すとぉ……」　途中で号泣＠<br>「こ、こんな話悲しすぎるある……こんな話に誰がしたか……！」　ぷるぷる震える手で手紙取り出して読みます＠<br><br>これウルフもないてそう</div>
+    <div class="message-time">151: 2021/2/14(日) 21:32:18</div>
+  </div>
+</article>
+<article class="message" id="res152">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[スマTカゲマモ【さよなら、ソルジャー】.html] </del></div>
+    <div class="message-time">152: 2021/2/14(日) 21:33:46</div>
+  </div>
+</article>
+<article class="message" id="res153">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[はむチヒウル【さよなら、ソルジャー】_v0.91.html] </del></div>
+    <div class="message-time">153: 2021/2/14(日) 21:34:26</div>
+  </div>
+</article>
+<article class="message" id="res154">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=2021015b5e4282&amp;i=i0187d11a">📎 スマTカゲマモ【さよなら、ソルジャー】_v0.9.html</a> <span class="filesize">[200.5 KB]</span> を追加しました。</div>
+    <div class="message-time">154: 2021/2/14(日) 21:34:32</div>
+  </div>
+</article>
+<article class="message" id="res155">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">タカキも頑張ってるし、私も頑張らないと</div>
+    <div class="message-time">155: 2021/2/14(日) 21:34:45</div>
+  </div>
+</article>
+<article class="message" id="res156">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">素晴らしい！！！！！！！！</div>
+    <div class="message-time">156: 2021/2/14(日) 21:34:53</div>
+  </div>
+</article>
+<article class="message" id="res157">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">でも一番上のタイトルまちがってる！！！！！！！！！！！！！！！！！！！！！</div>
+    <div class="message-time">157: 2021/2/14(日) 21:35:01</div>
+  </div>
+</article>
+<article class="message" id="res158">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">マジ？</div>
+    <div class="message-time">158: 2021/2/14(日) 21:35:07</div>
+  </div>
+</article>
+<article class="message" id="res159">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">んん……？</div>
+    <div class="message-time">159: 2021/2/14(日) 21:35:36</div>
+  </div>
+</article>
+<article class="message" id="res160">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[はむチヒウル【さよなら、ソルジャー】_v0.91.html] </del></div>
+    <div class="message-time">160: 2021/2/14(日) 21:35:40</div>
+  </div>
+</article>
+<article class="message" id="res161">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">よし</div>
+    <div class="message-time">161: 2021/2/14(日) 21:35:50</div>
+  </div>
+</article>
+<article class="message" id="res162">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">これは直りません。仕様です（諦め）</div>
+    <div class="message-time">162: 2021/2/14(日) 21:36:03</div>
+  </div>
+</article>
+<article class="message" id="res163">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうか、元の部屋設定の仕様なのか</div>
+    <div class="message-time">163: 2021/2/14(日) 21:36:18</div>
+  </div>
+</article>
+<article class="message" id="res164">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><del>[はむチヒウル【さよなら、ソルジャー】_v0.91.html] </del></div>
+    <div class="message-time">164: 2021/2/14(日) 21:37:17</div>
+  </div>
+</article>
+<article class="message" id="res165">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">一組目二日目からSAVOさんの密話の文字色が黒になってるので、ドラッグしないと見えないっす</div>
+    <div class="message-time">165: 2021/2/14(日) 21:38:29</div>
+  </div>
+</article>
+<article class="message" id="res166">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それもいじったつもりだったんだけどな……直します</div>
+    <div class="message-time">166: 2021/2/14(日) 21:38:56</div>
+  </div>
+</article>
+<article class="message" id="res167">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">タイトルも修正したつもりだったんだけど直んないんだよな</div>
+    <div class="message-time">167: 2021/2/14(日) 21:39:17</div>
+  </div>
+</article>
+<article class="message" id="res168">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">祟りあるよ………</div>
+    <div class="message-time">168: 2021/2/14(日) 21:39:38</div>
+  </div>
+</article>
+<article class="message" id="res169">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">＞三木 柚穂うわうわうわうわ<br>海の中からなんか出てくるんだよな～こっから……<br>いや～～～<br>も～～～～<br>ひ～～～～<br><br>改めて見てもここで吹いた</div>
+    <div class="message-time">169: 2021/2/14(日) 21:40:19</div>
+  </div>
+</article>
+<article class="message" id="res170">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">呪う殺すされるあるか！？　勘弁よ！！！</div>
+    <div class="message-time">170: 2021/2/14(日) 21:40:35</div>
+  </div>
+</article>
+<article class="message" id="res171">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">波のSEがわりとマジでキツかった</div>
+    <div class="message-time">171: 2021/2/14(日) 21:41:00</div>
+  </div>
+</article>
+<article class="message" id="res172">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ざこい</div>
+    <div class="message-time">172: 2021/2/14(日) 21:41:13</div>
+  </div>
+</article>
+<article class="message" id="res173">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><a href="https://www.freshmeeting.com/forumfile.php?f=2021015b5e4282&amp;i=ief48c67e">📎 はむチヒウル【さよなら、ソルジャー】_v0.91.html</a> <span class="filesize">[130.7 KB]</span> を追加しました。</div>
+    <div class="message-time">173: 2021/2/14(日) 21:41:25</div>
+  </div>
+</article>
+<article class="message" id="res174">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">どうだ</div>
+    <div class="message-time">174: 2021/2/14(日) 21:41:29</div>
+  </div>
+</article>
+<article class="message" id="res175">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">背景たしかに怖かった</div>
+    <div class="message-time">175: 2021/2/14(日) 21:41:34</div>
+  </div>
+</article>
+<article class="message" id="res176">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">頑なに0.91なんやな</div>
+    <div class="message-time">176: 2021/2/14(日) 21:41:39</div>
+  </div>
+</article>
+<article class="message" id="res177">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">もういいだろｗｗｗｗｗｗｗ</div>
+    <div class="message-time">177: 2021/2/14(日) 21:41:53</div>
+  </div>
+</article>
+<article class="message" id="res178">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">お、完璧に直った</div>
+    <div class="message-time">178: 2021/2/14(日) 21:42:01</div>
+  </div>
+</article>
+<article class="message" id="res179">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">乙や</div>
+    <div class="message-time">179: 2021/2/14(日) 21:42:20</div>
+  </div>
+</article>
+<article class="message" id="res180">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">タカキも頑張ってるから……</div>
+    <div class="message-time">180: 2021/2/14(日) 21:42:26</div>
+  </div>
+</article>
+<article class="message" id="res181">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">タカキもう休め</div>
+    <div class="message-time">181: 2021/2/14(日) 21:42:44</div>
+  </div>
+</article>
+<article class="message" id="res182">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">関根公雄<br>実行したらワンチャン乗り移られてるミッキーが連れて行かれそうってのと、実行しなかったら奥様にミッキーが祟られるか、操作権奪われて一人で実行してほんとに連れていかれるんだと思う<br>三木 柚穂<br>なまじ生還者が集まってるが故にみんな消極的で草 <br><br><br>まぁ確かに全員初PCだったらもうちょっと躊躇なくいけたかもしれんな</div>
+    <div class="message-time">182: 2021/2/14(日) 21:44:08</div>
+  </div>
+</article>
+<article class="message" id="res183">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">新規でもそうでなくても平等にビビるし…</div>
+    <div class="message-time">183: 2021/2/14(日) 21:46:27</div>
+  </div>
+</article>
+<article class="message" id="res184">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">三木は酒でも煽ってから行けば良かった</div>
+    <div class="message-time">184: 2021/2/14(日) 21:46:41</div>
+  </div>
+</article>
+<article class="message" id="res185">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">酔っ払いが夜の海岸行くのは死亡フラグですよ</div>
+    <div class="message-time">185: 2021/2/14(日) 21:47:17</div>
+  </div>
+</article>
+<article class="message" id="res186">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">私は常に酔っぱらっている……？</div>
+    <div class="message-time">186: 2021/2/14(日) 21:47:59</div>
+  </div>
+</article>
+<article class="message" id="res187">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">？？？？？？？</div>
+    <div class="message-time">187: 2021/2/14(日) 21:48:08</div>
+  </div>
+</article>
+<article class="message" id="res188">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そういう事になるな……</div>
+    <div class="message-time">188: 2021/2/14(日) 21:48:23</div>
+  </div>
+</article>
+<article class="message" id="res189">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いや、転落して溺れる可能性あるから……リアルな意味で……</div>
+    <div class="message-time">189: 2021/2/14(日) 21:48:36</div>
+  </div>
+</article>
+<article class="message" id="res190">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">死因が転落ならまだ持ち堪えたみたいなところある</div>
+    <div class="message-time">190: 2021/2/14(日) 21:49:17</div>
+  </div>
+</article>
+<article class="message" id="res191">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">昼の海ならまだゲロ吐かずに済みましたか？</div>
+    <div class="message-time">191: 2021/2/14(日) 21:50:13</div>
+  </div>
+</article>
+<article class="message" id="res192">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あー三木って酒入るとなんか変わるんだっけ…？</div>
+    <div class="message-time">192: 2021/2/14(日) 21:50:40</div>
+  </div>
+</article>
+<article class="message" id="res193">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">作ってるときはそこでダメージ入る人がいるとか全く思いつかずに作ってました</div>
+    <div class="message-time">193: 2021/2/14(日) 21:51:13</div>
+  </div>
+</article>
+<article class="message" id="res194">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁいいんじゃないいつも他の人苦しめてるんだから（鼻をほじ）</div>
+    <div class="message-time">194: 2021/2/14(日) 21:51:42</div>
+  </div>
+</article>
+<article class="message" id="res195">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">世の中何が怖いって思う人が居るか分からんからな…</div>
+    <div class="message-time">195: 2021/2/14(日) 21:51:51</div>
+  </div>
+</article>
+<article class="message" id="res196">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ぶっちゃけCoCはコズミックホラーの象徴として海洋の恐怖を扱ってるところがあるからシステム単位で特攻なんだよな</div>
+    <div class="message-time">196: 2021/2/14(日) 21:53:29</div>
+  </div>
+</article>
+<article class="message" id="res197">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ホラー自体も苦手だし</div>
+    <div class="message-time">197: 2021/2/14(日) 21:53:50</div>
+  </div>
+</article>
+<article class="message" id="res198">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ルルイエのイメージ出た時点で詰むからな……</div>
+    <div class="message-time">198: 2021/2/14(日) 21:54:21</div>
+  </div>
+</article>
+<article class="message" id="res199">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">完走した感想としてはやっぱりGMの介入なしで石を投げる√にするのは難しい気がします！！！</div>
+    <div class="message-time">199: 2021/2/14(日) 21:55:37</div>
+  </div>
+</article>
+<article class="message" id="res200">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">むしろ、メタ要素抜きで介入する為の何かを入れた方がいいんじゃあないだろうか………</div>
+    <div class="message-time">200: 2021/2/14(日) 21:56:44</div>
+  </div>
+</article>
+<article class="message" id="res201">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">むぅ</div>
+    <div class="message-time">201: 2021/2/14(日) 21:56:59</div>
+  </div>
+</article>
+<article class="message" id="res202">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">俺はそもそも疑心暗鬼族だから一般的な意見にならないのでノーコメントです</div>
+    <div class="message-time">202: 2021/2/14(日) 21:58:00</div>
+  </div>
+</article>
+<article class="message" id="res203">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">憑依楽しいよね、何も知らない愚かな他PLが肝を潰すのが見られて</div>
+    <div class="message-time">203: 2021/2/14(日) 21:58:00</div>
+  </div>
+</article>
+<article class="message" id="res204">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">神話的な現象を信じて自発的に行うって難易度高いのはある</div>
+    <div class="message-time">204: 2021/2/14(日) 21:58:20</div>
+  </div>
+</article>
+<article class="message" id="res205">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">何を根拠に安全だと信じればええんヤッてなるし</div>
+    <div class="message-time">205: 2021/2/14(日) 21:58:33</div>
+  </div>
+</article>
+<article class="message" id="res206">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">手紙読んでアイデアで「害意がないことが読み取れます」とか出たとしてもSIREN的思考の可能性もあるしなぁ</div>
+    <div class="message-time">206: 2021/2/14(日) 21:58:57</div>
+  </div>
+</article>
+<article class="message" id="res207">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">憑依を解かなきゃいけないってんで動機づけは出来てると思ってたんだけどなぁ</div>
+    <div class="message-time">207: 2021/2/14(日) 21:59:15</div>
+  </div>
+</article>
+<article class="message" id="res208">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">石を投げ入れなきゃ憑依が解除されないっていう情報はGMが直接喋る以外に出てこないし</div>
+    <div class="message-time">208: 2021/2/14(日) 21:59:57</div>
+  </div>
+</article>
+<article class="message" id="res209">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">憑依されてるそいつごと持ってかれそうなイメージがどうしても強い</div>
+    <div class="message-time">209: 2021/2/14(日) 22:00:07</div>
+  </div>
+</article>
+<article class="message" id="res210">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁいっそ憑依してる照子が行きたそうな意思を見せるくらいはあっても良いんじゃあないだろうか<br>信用できるかは別として</div>
+    <div class="message-time">210: 2021/2/14(日) 22:01:05</div>
+  </div>
+</article>
+<article class="message" id="res211">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">もうひとりのボク！</div>
+    <div class="message-time">211: 2021/2/14(日) 22:01:15</div>
+  </div>
+</article>
+<article class="message" id="res212">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">照子が意思表示しないことについて、「ハイライトをKPに任せるのはちょっと」と仰っていましたが<br>KPがチャット欄で直接指示するよりかは、作中要素で何か促した方が良いのではないでしょうかと思います</div>
+    <div class="message-time">212: 2021/2/14(日) 22:04:16</div>
+  </div>
+</article>
+<article class="message" id="res213">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">それはそう</div>
+    <div class="message-time">213: 2021/2/14(日) 22:04:41</div>
+  </div>
+</article>
+<article class="message" id="res214">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">（すごい関係ない話）三木って酒飲んだらどうなるんだっけ…と思って魔弾天翔読んだけど博物学って強いのか……知識の下位互換かと</div>
+    <div class="message-time">214: 2021/2/14(日) 22:19:09</div>
+  </div>
+</article>
+<article class="message" id="res215">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちょいちょいちょい確か魔弾天翔やるとかどうとかなんか話無かったか</div>
+    <div class="message-time">215: 2021/2/14(日) 22:19:40</div>
+  </div>
+</article>
+<article class="message" id="res216">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そうだっけか…？まぁ大した情報じゃあないかと</div>
+    <div class="message-time">216: 2021/2/14(日) 22:20:14</div>
+  </div>
+</article>
+<article class="message" id="res217">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ちゃうかったっけ……</div>
+    <div class="message-time">217: 2021/2/14(日) 22:20:47</div>
+  </div>
+</article>
+<article class="message" id="res218">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">この世の全て概ね博物学の範疇だからな……</div>
+    <div class="message-time">218: 2021/2/14(日) 22:20:59</div>
+  </div>
+</article>
+<article class="message" id="res219">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ビブリオだと知識ロールで全て解決したからなぁ</div>
+    <div class="message-time">219: 2021/2/14(日) 22:21:17</div>
+  </div>
+</article>
+<article class="message" id="res220">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">博物館が弱いと言うより知識が身もふたもない</div>
+    <div class="message-time">220: 2021/2/14(日) 22:21:39</div>
+  </div>
+</article>
+<article class="message" id="res221">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">あれで解決できちゃうと知識系技能全部いらないんだよな<br>ユグドラの幸運みたいなもん</div>
+    <div class="message-time">221: 2021/2/14(日) 22:22:04</div>
+  </div>
+</article>
+<article class="message" id="res222">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあ知識ってだけで「知識」だもんな……</div>
+    <div class="message-time">222: 2021/2/14(日) 22:22:09</div>
+  </div>
+</article>
+<article class="message" id="res223">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">手紙に博物学50持たせてコイントス感覚でいろいろなこと分かるの面白そうと思って入れたんだけど、まぁそういうことならよかったね</div>
+    <div class="message-time">223: 2021/2/14(日) 22:22:10</div>
+  </div>
+</article>
+<article class="message" id="res224">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">魔弾天翔は（いろいろな意味で）面白かったから部室でも引用して話題にしちゃったからなぁ…カゲさんもづけさんも発掘時に読んじゃったかも</div>
+    <div class="message-time">224: 2021/2/14(日) 22:24:10</div>
+  </div>
+</article>
+<article class="message" id="res225">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">うむ……知識についての基本ルルブの記述読んだけどマジで知識だけで良いわこれ<br>これといって効能に制約が書かれていない。実質強欲な壺</div>
+    <div class="message-time">225: 2021/2/14(日) 22:25:12</div>
+  </div>
+</article>
+<article class="message" id="res226">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sm_icon.jpg" alt="">
+    <strong>スマブラの人</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">うんまあ…俺も相当話題にしたわ<br>言うてもしゃあないのはしゃあないんやけどつい言ってしまったすまん</div>
+    <div class="message-time">226: 2021/2/14(日) 22:25:15</div>
+  </div>
+</article>
+<article class="message" id="res227">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">新しい卓いっぱいあるしもう古い卓をリバイバルしなくていいんちゃうかなって…</div>
+    <div class="message-time">227: 2021/2/14(日) 22:25:29</div>
+  </div>
+</article>
+<article class="message" id="res228">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まあだからKPが-補正いれるけどね</div>
+    <div class="message-time">228: 2021/2/14(日) 22:25:33</div>
+  </div>
+</article>
+<article class="message" id="res229">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">いや、名言集に貼っただけだっけ？まぁそれもそうか</div>
+    <div class="message-time">229: 2021/2/14(日) 22:25:37</div>
+  </div>
+</article>
+<article class="message" id="res230">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">÷２ぐらいで相当なんじゃないかってレベル</div>
+    <div class="message-time">230: 2021/2/14(日) 22:25:49</div>
+  </div>
+</article>
+<article class="message" id="res231">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/hm_icon.jpg" alt="">
+    <strong>はむぱん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ログ解放してない卓もあるしそっちすればいい</div>
+    <div class="message-time">231: 2021/2/14(日) 22:25:57</div>
+  </div>
+</article>
+<article class="message" id="res232">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">だってボス戦面白すぎるもん………マジ好き</div>
+    <div class="message-time">232: 2021/2/14(日) 22:26:54</div>
+  </div>
+</article>
+<article class="message" id="res233">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/kg_icon.jpg" alt="">
+    <strong>カゲロウ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">ぜーんぜんログ読んでません</div>
+    <div class="message-time">233: 2021/2/14(日) 22:27:02</div>
+  </div>
+</article>
+<article class="message" id="res234">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/wl_icon.jpg" alt="">
+    <strong>ウルフ</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">知識がそもそも低い場合を除けば、知識と専門知識で両方振れるようにするとかその程度の使い道か<br>上昇効率が高すぎるんだよなぁ、×5て</div>
+    <div class="message-time">234: 2021/2/14(日) 22:27:40</div>
+  </div>
+</article>
+<article class="message" id="res235">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body"><span class="greyout">(削除されました)</span></div>
+    <div class="message-time">235: 2021/2/14(日) 22:28:17</div>
+  </div>
+</article>
+<article class="message" id="res236">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">まぁ魔弾天翔の話題は解禁してほしい</div>
+    <div class="message-time">236: 2021/2/14(日) 22:30:54</div>
+  </div>
+</article><div class="elapsed"><span>1098日 2時間 3分 経過</span></div>
+<article class="message" id="res237">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">シナリオの清書してて気づいたけど、最後に敬礼して海に帰っていくのアドリブだなこれ……</div>
+    <div class="message-time">237: 2024/2/18(日) 0:34:53</div>
+  </div>
+</article>
+<article class="message" id="res238">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/tt_icon.jpg" alt="">
+    <strong>超たくあん</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">そーなの！？（1098日 2時間 3分 経過）</div>
+    <div class="message-time">238: 2024/2/18(日) 0:38:57</div>
+  </div>
+</article>
+<article class="message" id="res239">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">「深きものと接触する」で終わってるもん書いてたシナリオ</div>
+    <div class="message-time">239: 2024/2/18(日) 0:40:54</div>
+  </div>
+</article>
+<article class="message" id="res240">
+  <aside class="speaker">
+    <img class="avatar" src="../_assets/sv_icon.jpg" alt="">
+    <strong>SAVOIA</strong>
+  </aside>
+  <div class="message-main">
+    <div class="message-body">こんな短くて簡単なシナリオなのに他人が回すことを想定して書くの<br>めんど～～～～くせぇ～～～～なぁ～～～</div>
+    <div class="message-time">240: 2024/2/18(日) 1:31:06</div>
+  </div>
+</article>
+<div class="footer-note">
+  Fresh Meetingから保存した原本HTMLを、閲覧用に再構成したコピーです。原本HTMLは別途保管してください。
+</div>
+</main>
+</body>
+</html>
